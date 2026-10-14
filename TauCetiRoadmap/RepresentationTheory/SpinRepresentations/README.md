@@ -35,9 +35,11 @@ action through the Clifford algebra** (the quadratic realization of `𝔰𝔬(V,
 so no homomorphism `𝔤 → 𝔰𝔬(V, Q)` makes a Clifford module a `𝔤`-module), and **no Kostant
 `ρ`-decomposition corollary** (the Clifford algebra of a semisimple Lie algebra with its Killing form,
 under left multiplication by the quadratic lift of the adjoint representation, is isotypic for the
-half-sum of positive roots). (The word "spin" does
-not occur elsewhere in these roadmaps except inside "spine", and "Clifford" elsewhere always means
-[Clifford theory over a normal subgroup](../InductionRestriction/README.md); the two are unrelated.)
+half-sum of positive roots). The geometric negative-metric/Hermitian and chirality comparisons, smooth
+Clifford bundles, spin structures and Dirac operators are owned by
+[SpinGeometry G1–G6](../../SpinGeometry/README.md), consuming this roadmap's
+algebraic/Fock/real-group APIs. Clifford theory over a normal subgroup in
+[InductionRestriction](../InductionRestriction/README.md) is a different subject.
 
 This roadmap builds that theory, ending at the spin and half-spin representations as the fundamental
 representations of types `Bₗ` and `Dₗ`, the low-dimensional exceptional isomorphisms, triality for
@@ -45,8 +47,11 @@ representations of types `Bₗ` and `Dₗ`, the low-dimensional exceptional isom
 form. It rests on [the classical-groups roadmap](../ClassicalGroups/README.md) for the standard
 representation and the orthogonal group, on [the highest-weight roadmap](../LieHighestWeight/README.md) for
 the theorem of the highest weight and the fundamental weights (and, for Layer 9, its reductive `gl_n`
-layer and decomposition toolkit), and on
-[the root-systems roadmap](../RootSystems/README.md) for the `Bₗ`/`Dₗ` root data and the outer-automorphism
+layer and decomposition toolkit), on
+[DGFloer Layer1 item2](../../DGFloer/README.md) for the bundle homotopy
+sequence and [UniversalCovers](../../../Completed/UniversalCovers/README.md)
+for the universal-cover characterization used by the compact-real L7 topology,
+and on [the root-systems roadmap](../RootSystems/README.md) for the `Bₗ`/`Dₗ` root data and the outer-automorphism
 graph symmetry that underlies triality. Suggested home:
 `TauCeti/LinearAlgebra/CliffordAlgebra/` (the structure theory, the double covers, and the real
 classification, none of which mention spin representations) and
@@ -353,13 +358,16 @@ module simple.
   `Spin(V)` is *the* universal cover of `SO(V)` is topological and is split by case, out of the main
   dependency chain of the representation theory:
     - **compact real case:** `Spin(n) → SO(n)` is the universal covering for `n ≥ 3` (`Spin(n)` connected
-      for `n ≥ 2`, simply connected for `n ≥ 3`), proved from path-connectedness of the sphere; this belongs
-      with the real forms of Layer 7;
+      for `n ≥ 2`, simply connected for `n ≥ 3`), with simple-connectivity
+      proved by the sphere-bundle homotopy sequence;
+      consume native compact-real covering and path-connectedness from
+      `Topology/Algebra/CliffordAlgebra/Spin/{Covering,Compact,Connected}`; Layer7
+      supplies the remaining simple-connectivity/universal-cover comparison;
     - **complex algebraic case:** `Spin(V)` over `ℂ` is the **algebraically** simply connected group with root
       datum of type `Bₗ`/`Dₗ`, which is a statement about the algebraic fundamental group, distinct from
       topological simple-connectivity of the complex points;
     - **indefinite real case:** connectivity of `Spin(p, q)` for `p, q > 0` has its own subtleties and is
-      deferred to a later topology roadmap.
+      outside this representation roadmap's topology scope.
   None of these is needed to construct the spin representations, which only use the double cover as an
   abstract group extension.
 
@@ -505,11 +513,52 @@ representation landing in that group; it needs three explicit milestones per cas
   `SO(p, q)` from Layer 2 applied to the real form; the compact `Spin(n) = spinPQ n 0` and the split and
   Lorentzian forms `Spin(p, q)`. The real double cover of `SO(p, q)` carries the component qualifications of
   the general-field statement.
-- **Connectivity of the compact spin group.** For the compact `Spin(n)`, prove `Spin(n)` connected for
-  `n ≥ 2` and simply connected for `n ≥ 3`, so `Spin(n) → SO(n)` is the universal covering, from
-  path-connectedness of the sphere in `ℝⁿ`. The indefinite `Spin(p, q)` (both `p, q > 0`) has its own
-  connectivity subtleties and is deferred to a later topology roadmap; it is not a prerequisite for the
-  representation theory.
+- **Topology of the compact spin group.** Consume native
+  `pathConnectedSpace_realCliffordSpinGroupZero_add_two` for n≥2, the native
+  compactness and `isCoveringMap_realCliffordSpinDoubleCoverZero_rightHom`.
+  Prove simple-connectivity for n≥3 and identify this map as the universal
+  covering. For n=3 consume the native real Hamilton specialization
+  `TauCeti.realSpinThreeEquivQuaternionUnitary` in
+  `LinearAlgebra/CliffordAlgebra/Spin/Real/Three.lean`. Prove continuity from its native algebra-map formulas and use
+  compact-to-Hausdorff to upgrade the continuous group isomorphism to a
+  homeomorphism. Compare unitary Hamilton quaternions with their unit
+  norm sphere, then apply the native sphere theorem directly to ℍ[ℝ].
+  Consume native `TauCeti.simplyConnectedSpace_sphere`
+  and `simplyConnectedSpace_sphere_euclideanSpace` in
+  `AlgebraicTopology/Sphere/SimplyConnected.lean`.
+  Consume `CliffordAlgebra.realCliffordUnitLevelHomeomorphSphere` and
+  `realCliffordUnitLevelHomeomorphSubtype` in
+  `Topology/Algebra/CliffordAlgebra/Spin/Real/UnitLevel.lean`;
+  the quadratic unit level is thereby compared to the Euclidean sphere,
+  not the sup-norm sphere on `Fin n → ℝ`. Consume the orbit declarations
+  `realCliffordSpinOrbitMap`, its surjectivity/quotient-map theorems,
+  `realCliffordSpinOrbitHomeomorph`, `realCliffordSpinLastStabilizer`,
+  `realCliffordSpinContinuousMulEquivLastStabilizer` and
+  `realCliffordSpinStabilizerInclusion_surjective`. Own the comparison
+  of that comap stabilizer with `MulAction.stabilizer` on the unit level.
+  For m≥2 take base `realCliffordUnitLevel (m+1)` and its pole
+  `e=Pi.single (Fin.last m) 1`, as a point of that native unit level.
+  Precompose native `realCliffordSpinLastLocalSection` with
+  `realCliffordUnitLevelHomeomorphSubtype (m+1)` to place it on this base.
+  Translate it by the group action
+  to cover this base, consume `Subgroup.localSectionTrivialization`,
+  and assemble a `FiberPrebundle` on the fibre family
+  `E x = {g : Spin(m+1) // g • e = x}`. Change its model fibre to Spin(m)
+  through the native continuous stabilizer equivalence and prove the chart
+  compatibility/covering axioms, then obtain native `FiberBundle` instances
+  on `Bundle.TotalSpace Spin(m) E`, using that prebundle's
+  `totalSpaceTopology` and `toFiberBundle`. Own the homeomorphism of this
+  total space with Spin(m+1), over the unit-level orbit projection, and
+  transport the lifting/LES data through it. Transport the base through
+  `realCliffordUnitLevelHomeomorphSphere` for the sphere comparison;
+  the fibre sequence is Spin(m)→Spin(m+1)→S^m.
+  Apply [DGFloer Layer1 item2](../../DGFloer/README.md)'s bundle homotopy sequence and native sphere
+  simple-connectivity of S^m for m≥3 to complete the induction.
+  [SpinGeometry G1.1/G4.1](../../SpinGeometry/README.md) owns
+  the negative-form algebraic comparison and its smooth/frame refinement,
+  independently of these remaining topological conclusions. The indefinite `Spin(p, q)` (both `p, q > 0`) has its own
+  connectivity subtleties and is outside this representation roadmap's topology scope; it is not a
+  prerequisite for the representation theory.
 
 ### Layer 8: triality for `Spin₈`
 
@@ -638,6 +687,13 @@ here. Independent of Layers 6-8.
 
 ## Ordering
 
+Native compact-real covering, compactness and path-connectedness precede
+Layer7's bundle assembly and remaining simple-connectivity/universal-cover
+comparison, consuming DGFloer1.2 and UniversalCovers.
+[SpinGeometry G1.1/G4.1](../../SpinGeometry/README.md) supplies the algebraic
+negative-form map and its smooth/frame refinement independently. The complex algebraic covering
+and representation theory remain independent of that geometric refinement.
+
 The **core summit** of this roadmap is the complex spin representation theory: the hyperbolic Clifford module
 `⋀·W` (Layer 4), the `𝔰𝔬(V)`-action through bivectors (Layer 3), irreducibility and the half-spin splitting
 (Layer 4), and the highest weights for `Bₗ`/`Dₗ` (Layer 5). The real forms and Bott periodicity (Layer 7),
@@ -715,5 +771,3 @@ the CAR instance is a self-contained claimable unit needing only the abstract re
   the modern textbook account of the quadratic realization and the Kostant theory.
 - D. Shlyakhtenko, arXiv:2606.28648 - the CAR-matrix analysis whose `gl_N` representation theory is
   the motivating application of the Layer 9 worked instance.
-</content>
-</invoke>

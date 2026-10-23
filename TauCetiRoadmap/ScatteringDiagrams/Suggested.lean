@@ -1620,6 +1620,10 @@ structure ChamberTrivialization [FiniteDimensional ℝ V] {ι : Type*}
     𝔇.IsAdmissiblePolygon (k + 1) ![meridian j 0, meridian j 1, meridian j 2, meridian j 0] ∧
     ∀ 𝔡 ∈ walls, (convexHull ℝ (Set.range (meridian j)) ∩ 𝔡.carrier).Nonempty →
       j.carrier ⊆ 𝔡.carrier
+  /-- The filled meridian isolates its joint. Incidence only with walls containing the joint
+  does not exclude enclosing a second endpoint of the same wall. -/
+  meridian_isolates : ∀ j ∈ joints, ∀ j' ∈ joints,
+    (convexHull ℝ (Set.range (meridian j)) ∩ j'.carrier).Nonempty → j' = j
 
 namespace ChamberTrivialization
 

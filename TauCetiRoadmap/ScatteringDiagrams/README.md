@@ -640,6 +640,8 @@ crossing time. For an arbitrary finite wall family, simultaneous coplanar crossi
 are a single event recording the finite signed set of incident wall indices. A small
 loop around a joint `j` is the boundary of a small positively
 oriented transverse triangle that meets `j` once and meets only walls containing `j`.
+Its filled triangle avoids every other codimension-two cell of the adapted complex
+and the relative boundary of `j`.
 
 *Targets.*
 - Admissible paths cross finitely: each segment meets each wall in at most one
@@ -749,8 +751,10 @@ orientation.
   `d∘d = 0`, lineality allowed.
 - The *intersectionPairing* with a *TransverseAffineTest* is the sum over the finitely
   many zero-dimensional preimages of the coefficient times the orientation sign of the
-  normal-quotient map, with no determinant magnitude; it is invariant under the cochain
-  relations and under subdivision of the parameter simplex. A cochain on which every
+  normal-quotient map, with no determinant magnitude. Cochain relations preserve the
+  pairing when the test is transverse to both representatives; parameter subdivisions
+  preserve it when all pieces are transverse tests. In particular, new parameter faces
+  must avoid the intersections being counted. A cochain on which every
   sufficiently small transverse test vanishes is zero, coincident coplanar contributions
   being combined first. `⟨dC,τ⟩=⟨C,∂τ⟩`, `∂τ=Σ_l(−1)^lτ∘δ_l`, for a codimension-`k`
   cochain `C` and an affine `(k+1)`-simplex `τ` in general position for `dC` whose faces
@@ -762,8 +766,11 @@ orientation.
 - Coefficient maps commute with `d`, the intersection pairing and `S_n`, which are
   `R`-linear on their domains for `R`-module coefficients.
 
-*Route:* Prove the sweep homotopy by the Stokes identity for prisms with `T` beyond
-every hitting time, retaining every side face, and the vanishing criterion for tests.
+*Route:* Transversality identifies a swept generator with `P × ℝ_{≥0}`. Its facets
+are the base `P` and the sweeps of the facets of `P`. Compute their conormal orientations
+to prove `dS_n(P,o,c) = -(P,o,c) - S_nd(P,o,c)`, retaining every side facet, and descend
+through the subdivision relations. Develop the intersection pairing, its detection
+theorem and Stokes identity as the accompanying geometric API.
 
 **Checks.**
 - The half-plane `{y≥0}` with coefficient `c` has coboundary `({y=0},+dy,c)`;
@@ -1174,6 +1181,10 @@ The sweeps along `ρ(n)` and `ρ(w)` have the same support and outgoingness.
 
 - *exists_outgoingCompletion*: every input `𝔇_in` has an outgoing completion,
   assembled from finite order-`k` completions compatible in `k`.
+- *exists_chamberTrivialization*: construct an adapted finite complex, chamber
+  lifts, oriented crossings and isolating joint meridians for every diagram consistent
+  through order `k−1`. The lifts come from lower-order path independence and the
+  surjective truncation map; the meridians satisfy §1.2's local isolation conditions.
 - For every *ChamberTrivialization*, `ζ_k=dA_k`, hence `dζ_k=0`. For an
   *IsCorrectionStage k* diagram, the degree-`n` component at a joint of direction
   `W` is zero when `i(ρ(n))∈W`; otherwise it lies in the wall space whose

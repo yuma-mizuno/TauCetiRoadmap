@@ -1,7 +1,7 @@
 import TauCetiRoadmap.ScatteringDiagrams.Formalized.RankTwoSweepConnection
 
 /-!
-# Geometric tests for two specification boundaries
+# Tests of locality, subdivision and generality in the source interfaces
 
 The source simplex definitions are used directly. A positively oriented triangle
 can contain both endpoints of a wall segment while its boundary misses the wall.
@@ -11,6 +11,9 @@ witness; it does not construct a complete `ChamberTrivialization` countermodel.
 
 Cutting a transverse interval at its intersection with a point also shows why
 subdivision invariance must be restricted to subdivisions in general position.
+
+The final tests separate transfer maps from joint injectivity and allow disjoint
+degenerate test simplices, using the revised source interfaces.
 -/
 
 set_option autoImplicit false
@@ -79,7 +82,8 @@ theorem triangle_transverse_point {N : Type*} [AddCommGroup N] {i : N →+ Plane
     (σ : OrientedCell i 2) {r : ℝ} (hσ : σ.carrier = {joint r})
     (h0 : 0 ≤ r) (h1 : r ≤ 1) : IsTransverseSimplex triangle σ := by
   constructor
-  · rw [triangle_edges_span, sup_top_eq]
+  · intro _
+    rw [triangle_edges_span, sup_top_eq]
   · intro t ht hz hp
     rw [hσ, Set.mem_singleton_iff] at hp
     exact triangle_faces_avoid_wall ht hz (hp ▸ joint_in_wall h0 h1)
@@ -123,5 +127,61 @@ theorem cut_tests_not_transverse {N : Type*} [AddCommGroup N] {i : N →+ ℝ}
     exact h.faces_avoid _ hL ⟨0, rfl⟩ (by rw [heL, hσ]; exact Set.mem_singleton 0)
   · intro h
     exact h.faces_avoid _ hR ⟨1, rfl⟩ (by rw [heR, hσ]; exact Set.mem_singleton 0)
+
+/-- A disjoint constant interval needs no surjectivity onto the normal quotient. -/
+theorem disjoint_constant_transverse {N : Type*} [AddCommGroup N] {i : N →+ ℝ}
+    (σ : OrientedCell i 1) (hσ : σ.carrier = {0}) :
+    IsTransverseSimplex ![(1 : ℝ), 1] σ := by
+  have hmap (t : Fin 2 → ℝ) (ht : t ∈ paramSimplex 1) :
+      simplexMap ![(1 : ℝ), 1] t = 1 := by
+    simpa [simplexMap, Fin.sum_univ_succ] using ht.2
+  constructor
+  · rintro ⟨t, ht, hp⟩
+    simp [hmap t ht, hσ] at hp
+  · intro t ht _
+    simp [hmap t ht, hσ]
+  · simp [hσ, intrinsicFrontier_singleton]
+
+/-- The disjoint example fails the former unconditional rank condition. -/
+theorem constant_edges_not_spanning :
+    Submodule.span ℝ (Set.range (edgeVectors ![(1 : ℝ), 1])) ≠ ⊤ := by
+  have he : edgeVectors ![(1 : ℝ), 1] = fun _ : Fin 1 => (0 : ℝ) := by
+    funext j
+    fin_cases j
+    norm_num [edgeVectors]
+  rw [he]
+  simp
+
+section Correspondences
+
+variable {Γ : Type*} (𝒜 : Γ → Submodule ℚ ℚ)
+
+/-- Both projections forget the second coordinate, but their selected lifts are valid. -/
+def redundantSpan : GradedCorrespondence 𝒜 𝒜 (ℚ × ℚ) where
+  left := LinearMap.fst ℚ ℚ ℚ
+  right := LinearMap.fst ℚ ℚ ℚ
+  admissibleLeft := Set.univ
+  liftLeft γ _ := (𝒜 γ).subtype.prod 0
+  left_lift _ _ _ := rfl
+  admissibleRight := Set.univ
+  liftRight γ _ := (𝒜 γ).subtype.prod 0
+  right_lift _ _ _ := rfl
+
+theorem redundantSpan_not_jointlyInjective :
+    ¬ Function.Injective ((redundantSpan 𝒜).left.prod (redundantSpan 𝒜).right) := by
+  intro h
+  have he := h (a₁ := (0, 0)) (a₂ := (0, 1)) rfl
+  have hc := congrArg Prod.snd he
+  norm_num at hc
+
+/-- Its actual source transfer equals that of the identity graph, for any grading. -/
+theorem redundantSpan_transfer [DecidableEq Γ] [DirectSum.Decomposition 𝒜]
+    (γ η : Γ) :
+    (redundantSpan 𝒜).transferLeft γ (Set.mem_univ _) η =
+      (GradedCorrespondence.graph 𝒜 𝒜 (LinearEquiv.refl ℚ ℚ)).transferLeft
+        γ (Set.mem_univ _) η := by
+  rfl
+
+end Correspondences
 
 end TauCetiRoadmap.ScatteringDiagrams.Formalized.SpecificationStress

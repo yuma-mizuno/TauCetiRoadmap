@@ -74,6 +74,27 @@ do not settle the existence, uniqueness or theta-transport arguments as a whole.
    `ChamberTrivialization` to the defect identity does not build this connection.
    Its existence proof and the general defect identity remain open in the test.
 
+5. **Construction hypotheses must be separated from uniqueness (§§0.8, 1.4).**
+   `GradedCorrespondence` now carries the span and admissible lifts; joint
+   injectivity is a separate hypothesis for unique common lifts and matching
+   families, including refinement comparisons and global theta gluing; it is not
+   required in the definition of a based coefficient diagram.
+   `SpecificationStress.redundantSpan` uses both projections
+   `(x,y)↦x` on `ℚ²`. It is not jointly injective, but its actual transfer maps
+   equal those of the identity graph for any coefficient grading. The same file
+   proves that the constant interval at `1` is transverse to the point `0` under
+   the intersection-local rank condition, while its edge vectors do not span `ℝ`.
+   Face and frontier avoidance remain required. These tests use the revised
+   source definitions without admitted results.
+
+   The README also allows initial families finite at each order (§3.3) and states
+   finite-sum gluing before its theta application (§5.7). These are theorem targets,
+   not new completed proofs. The closed degeneration charts of §5.3 remain a
+   sufficient geometric construction supplying the gluing hypotheses.
+
+   The all-rank positivity route uses vanishing for directions tangent to the
+   joint (§3.3), not merely the special case of zero spatial direction.
+
 ### Connections checked against actual definitions
 
 | Precise connection | Complete proof and finding | Limit of the test |
@@ -202,9 +223,10 @@ The original 2026-10-22 audit checked 147 declarations. The connection-test
 build now imports the prototype and consequently reports its existing `sorry`
 warnings; those warnings do not certify the new tests. Acceptance requires the
 separate transitive-dependency audit to pass for every new declaration.
-The completed specification-test build on 2026-10-22 passed that audit for 333
-declarations, the negative control, and the rational-sweep signature comparison.
-All new proof modules compiled without warnings. These counts identify the
+The specification-test build on 2026-10-22 passed that audit for 333 declarations.
+The 2026-10-23 generality revision passed for 339 declarations, including the
+negative control and rational-sweep signature comparison. All new proof modules
+compiled without warnings. These counts identify the
 checked artifact and do not measure coverage of the roadmap.
 
 The original README and Suggested sources were backed up under
@@ -214,4 +236,5 @@ up under `.lake/scattering-backups/20261022-connection-stress/`, together with
 the Git revision and status. Before the specification corrections, README,
 Suggested, the test root and this report were backed up under
 `.lake/scattering-backups/20261022-specification-audit/`, with the Git status.
+The state before the README generality revision is committed as `9b9115dc`.
 No unrelated worktree files were edited.

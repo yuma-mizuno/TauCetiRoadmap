@@ -1,0 +1,17 @@
+name = "TauCetiRoadmap"
+defaultTargets = ["TauCetiRoadmap"]
+buildDir = ".lake/build-library"
+
+[[require]]
+name = "TauCeti"
+git = "https://github.com/TauCetiProject/TauCeti"
+rev = "main"
+
+# The same sources and manifest as the roadmap package, checked with the
+# production library options. Build artifacts are isolated; imports are ordinary
+# Lake imports, with no external project artifacts or generated import overrides.
+[[lean_lib]]
+name = "TauCetiRoadmap"
+roots = ["TauCetiRoadmap.ClusterAlgebras", "TauCetiRoadmap.LaurentPhenomenon"]
+globs = ["TauCetiRoadmap.ClusterAlgebras.*", "TauCetiRoadmap.LaurentPhenomenon.*"]
+leanOptions = { weak.linter.mathlibStandardSet = true, weak.linter.style.longFile = 1500, weak.linter.style.longFileDefValue = 1500, weak.linter.style.header = true, warningAsError = true }

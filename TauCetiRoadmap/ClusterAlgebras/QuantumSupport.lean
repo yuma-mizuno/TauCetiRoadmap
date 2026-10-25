@@ -15,19 +15,20 @@ exchanges use the same two-coordinate multiplication and divisibility lemmas.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := u₀) D row)
 
 noncomputable section
 
-/-- The `Zv`-span of the monomials `M(a)` with `a p = m` and `n ≤ a q`. -/
-def twoCoordinateSpan (p q : M) (m n : ℤ) : Submodule Zv D :=
-  Submodule.span Zv (s.monomial '' {a | a p = m ∧ n ≤ a q})
+/-- The `R₀`-span of the monomials `M(a)` with `a p = m` and `n ≤ a q`. -/
+def twoCoordinateSpan (p q : M) (m n : ℤ) : Submodule R₀ D :=
+  Submodule.span R₀ (s.monomial '' {a | a p = m ∧ n ≤ a q})
 
 theorem monomial_mem_twoCoordinateSpan {p q : M} {m n : ℤ} {a : M → ℤ} (hp : a p = m)
     (hq : n ≤ a q) : s.monomial a ∈ s.twoCoordinateSpan p q m n :=
@@ -57,9 +58,9 @@ theorem monomial_mem_skewPolyRing {p q : M} {b : M → ℤ} (hp : b p = 0)
   set T := skewPolyRing (s.pairRing p q) (s.coordinate q : D)
   have h := s.monomial_mul_monomial (b - b q • Pi.single q 1) (b q • Pi.single q 1)
   rw [sub_add_cancel, s.monomial_zsmul_single] at h
-  have h' : s.monomial b = algebraMap Zv D
-      (((vUnit ^ matrixForm s.form (b - b q • Pi.single q 1) (b q • Pi.single q 1))⁻¹ : Zvˣ) :
-        Zv) * (s.monomial (b - b q • Pi.single q 1) * (s.coordinate q : D) ^ b q) := by
+  have h' : s.monomial b = algebraMap R₀ D
+      (((u₀ ^ matrixForm s.form (b - b q • Pi.single q 1) (b q • Pi.single q 1))⁻¹ : R₀ˣ) :
+        R₀) * (s.monomial (b - b q • Pi.single q 1) * (s.coordinate q : D) ^ b q) := by
     rw [h, ← mul_assoc, ← map_mul, Units.inv_mul, map_one, one_mul]
   have hpow : (s.coordinate q : D) ^ b q ∈ T := by
     obtain ⟨n, hn⟩ := Int.eq_ofNat_of_zero_le hq
@@ -79,7 +80,7 @@ theorem inv_mul_mem_skewPolyRing {p q : M} (hpq : p ≠ q) {z : D}
     (hz : z ∈ s.twoCoordinateSpan p q 0 1) :
     (s.coordinate q : D)⁻¹ * z ∈ skewPolyRing (s.pairRing p q) (s.coordinate q : D) := by
   set T := skewPolyRing (s.pairRing p q) (s.coordinate q : D)
-  let S : Submodule Zv D :=
+  let S : Submodule R₀ D :=
     { carrier := {z | (s.coordinate q : D)⁻¹ * z ∈ T}
       add_mem' := fun ha hb ↦ by
         simp only [Set.mem_ofPred_eq, mul_add] at ha hb ⊢
@@ -150,12 +151,12 @@ theorem pairRing_le_otherRing {a b : M} (hba : b ≠ a) : s.pairRing a b ≤ s.o
 /-- A normalized monomial with nonnegative `c`-exponent lies in a subring containing the
 scalars, `X_c` and the monomial with the `c`-exponent removed. -/
 theorem monomial_mem_of_nonneg {T : Subring D} {c : M} {e : M → ℤ}
-    (hscal : ∀ r : Zv, algebraMap Zv D r ∈ T) (hc : (s.coordinate c : D) ∈ T)
+    (hscal : ∀ r : R₀, algebraMap R₀ D r ∈ T) (hc : (s.coordinate c : D) ∈ T)
     (he' : s.monomial (e - e c • Pi.single c 1) ∈ T) (he : 0 ≤ e c) : s.monomial e ∈ T := by
   have h := s.monomial_mul_monomial (e - e c • Pi.single c 1) (e c • Pi.single c 1)
   rw [sub_add_cancel, s.monomial_zsmul_single] at h
-  have h' : s.monomial e = algebraMap Zv D
-      (((vUnit ^ matrixForm s.form (e - e c • Pi.single c 1) (e c • Pi.single c 1))⁻¹ : Zvˣ) : Zv) *
+  have h' : s.monomial e = algebraMap R₀ D
+      (((u₀ ^ matrixForm s.form (e - e c • Pi.single c 1) (e c • Pi.single c 1))⁻¹ : R₀ˣ) : R₀) *
         (s.monomial (e - e c • Pi.single c 1) * (s.coordinate c : D) ^ e c) := by
     rw [h, ← mul_assoc, ← map_mul, Units.inv_mul, map_one, one_mul]
   have hpow : (s.coordinate c : D) ^ e c ∈ T := by
@@ -169,15 +170,15 @@ theorem monomial_mem_of_nonneg {T : Subring D} {c : M} {e : M → ℤ}
 theorem coordinate_conj_coordinate (a b : M) :
     (s.coordinate a : D) * s.coordinate b * (s.coordinate a : D)⁻¹ =
       s.coordinate b *
-        algebraMap Zv D ((vUnit ^ (2 * matrixForm s.form (Pi.single a 1) (Pi.single b 1)) : Zvˣ) :
-          Zv) := by
+        algebraMap R₀ D ((u₀ ^ (2 * matrixForm s.form (Pi.single a 1) (Pi.single b 1)) : R₀ˣ) :
+          R₀) := by
   rw [s.quasiCommuting a b, Algebra.smul_def, mul_assoc, mul_assoc,
     mul_inv_cancel₀ (Units.ne_zero _), mul_one, Algebra.commutes]
 
 /-- Removing a summand with coefficient one leaves the prescribed support
 bound whenever every other summand satisfies it. -/
 theorem sum_smul_monomial_sub_mem_twoCoordinateSpan {ι : Type*}
-    (S : Finset ι) (c : ι → Zv) (a : ι → M → ℤ) {k : ι} (hk : k ∈ S)
+    (S : Finset ι) (c : ι → R₀) (a : ι → M → ℤ) {k : ι} (hk : k ∈ S)
     (hc : c k = 1) {p q : M} {m n : ℤ}
     (ha : ∀ l ∈ S, l ≠ k → a l p = m ∧ n ≤ a l q) :
     (∑ l ∈ S, c l • s.monomial (a l)) - s.monomial (a k) ∈
@@ -191,4 +192,4 @@ theorem sum_smul_monomial_sub_mem_twoCoordinateSpan {ι : Type*}
 
 
 end
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

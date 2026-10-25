@@ -5,22 +5,19 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumLaurent
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSpecialization
+public import TauCetiRoadmap.ClusterAlgebras.GeometricLaurent
 public import TauCetiRoadmap.ClusterAlgebras.PrincipalGeometricComparison
 public import TauCetiRoadmap.ClusterAlgebras.FrozenWeight
 
 /-! The principal-coefficient Laurent theorem with integral coefficients and
-no negative frozen exponents (L5). Its proof is the classical limit `v = 1` of the
-integral quantum Laurent phenomenon for the principal compatible pair, which in
-turn rests on mutation invariance of finite quantum upper bounds. -/
+no negative frozen exponents (L5). The principal full-rank geometric seed is
+the unit-parameter instance of the common polynomial Laurent proof. -/
 
 @[expose] public section
 
 noncomputable section
 namespace TauCeti.Cluster
 open TauCeti.Laurent
-open UpperBound
 variable {I : Type*} [Fintype I] [DecidableEq I]
 
 theorem principalGeometricWord_laurent (d : I → ℤ) (hd : ∀ i, 0 < d i)
@@ -28,8 +25,12 @@ theorem principalGeometricWord_laurent (d : I → ℤ) (hd : ∀ i, 0 < d i)
     (w : List I) (a : I ⊕ I) :
     (geometricWordData d hd B hB w).2 a ∈
       chartRing (Int.castRingHom (PrincipalGeometricField I)).range
-        (rationalLaurentCoordinates (I ⊕ I)) :=
-  principalGeometricWord_laurent_of_quantum d hd B hB w a
+        (rationalLaurentCoordinates (I ⊕ I)) := by
+  have h := (principalInitialGeometricSeed d hd B hB).laurent hd w a
+  have hc := congrArg Prod.snd (principalSeed_mutateWord_data d hd B hB w)
+  change _ = (geometricWordData d hd B hB w).2 at hc
+  rw [← congrFun hc a]
+  exact h
 
 omit [Fintype I] in
 /-- The principal Laurent representation is in the integral source ring,

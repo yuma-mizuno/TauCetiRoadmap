@@ -19,13 +19,14 @@ the finite replacement identity, rather than assuming their compatibility.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
@@ -165,4 +166,4 @@ theorem mutated_coefficient_vector_pos {i j : K} (hij : i ≠ j)
   module
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

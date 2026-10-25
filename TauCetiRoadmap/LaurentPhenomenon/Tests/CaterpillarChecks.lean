@@ -6,19 +6,17 @@ Authors: Tau Ceti contributors
 module
 
 public import TauCetiRoadmap.LaurentPhenomenon.PositiveCaterpillarRealization
+public import TauCetiRoadmap.LaurentPhenomenon.PositiveLaurentTheorem
 public import Mathlib.Algebra.Group.PUnit
-public import TauCetiRoadmap.ClusterAlgebras.NormalizedPattern
-public import TauCetiRoadmap.ClusterAlgebras.Laurent
 
 /-! # Caterpillar Checks -/
 
 @[expose] public section
 
 open TauCeti.Laurent
-open TauCeti.Cluster
 
 noncomputable section
-namespace TauCeti.Cluster.Examples
+namespace TauCeti.Laurent.CaterpillarChecks
 open scoped BigOperators
 
 /-- Four alternating rank-two mutations, beyond all C3 base lengths. -/
@@ -255,108 +253,7 @@ example : repeatedLabelPath.firstLabel (by decide) = repeatedLabelPath.thirdLabe
 
 example : detourPath.firstLabel (by decide) ≠ detourPath.thirdLabel (by decide) := by decide
 
-section NormalizedFixtures
-/-- The one-element coefficient semifield, with its unique multiplication and auxiliary addition. -/
-local instance trivialCoefficientSemifield : CoefficientSemifield PUnit where
-  toCommGroup := inferInstance
-  toAddCommSemigroup := inferInstance
-  left_distrib _ _ _ := rfl
-  right_distrib _ _ _ := rfl
 
-/-- The skew-symmetric rank-two A2 exchange matrix. -/
-def a2Matrix (h k : Bool) : ℤ := if h = k then 0 else if h then -1 else 1
-/-- The normalized two-direction A2 mutation data, with trivial coefficients. -/
-def normalizedA2Local (i j : Bool) (hij : i ≠ j) : NormalizedLocalMutation PUnit Bool i j where
-  distinct := hij
-  before := a2Matrix
-  after h k := -a2Matrix h k
-  coefficient _ := 1
-  coefficientAfter _ := 1
-  diagonal k := by simp [a2Matrix]
-  diagonalAfter k := by simp [a2Matrix]
-  signSkew h k := by cases h <;> cases k <;> simp [SignSkewAt, a2Matrix]
-  matrixLaw := by
-    funext h k
-    cases i <;> cases j <;> cases h <;> cases k <;>
-      simp_all [a2Matrix, matrixMutation, positivePart]
-  coefficientLaw := Subsingleton.elim _ _
-
-/-- Commuting rank-two local mutation data with the zero exchange matrix. -/
-def normalizedZeroLocal : NormalizedLocalMutation PUnit Bool false true where
-  distinct := by decide
-  before _ _ := 0
-  after _ _ := 0
-  coefficient _ := 1
-  coefficientAfter _ := 1
-  diagonal _ := rfl
-  diagonalAfter _ := rfl
-  signSkew _ _ := Or.inl ⟨rfl, rfl⟩
-  matrixLaw := by funext h k; simp [matrixMutation, positivePart]
-  coefficientLaw := Subsingleton.elim _ _
-
-/-- Exact normalized C8 correction exists in the negative-entry orientation. -/
-example : ∃ H : PositiveLaurent (Additive PUnit) Bool, H ≠ 0 ∧ PositiveIndependent H false ∧
-    PositiveNonnegativeAt H true ∧
-    seedExchange (1 : PUnit) (fun h => -a2Matrix h false) =
-      positivePropagate H (seedExchange 1 (fun h => a2Matrix h false))
-        (positiveSetZero (seedExchange 1 (fun h => a2Matrix h true)) false) true :=
-  (normalizedA2Local false true (by decide)).correction_exists
-
-/-- The opposite orientation exercises the positive-entry branch. -/
-example : ∃ H : PositiveLaurent (Additive PUnit) Bool, H ≠ 0 ∧ PositiveIndependent H true ∧
-    PositiveNonnegativeAt H false ∧
-    seedExchange (1 : PUnit) (fun h => -a2Matrix h true) =
-      positivePropagate H (seedExchange 1 (fun h => a2Matrix h true))
-        (positiveSetZero (seedExchange 1 (fun h => a2Matrix h false)) true) false :=
-  (normalizedA2Local true false (by decide)).correction_exists
-
-/-- Zero matrix entries exercise the separate H=1 branch. -/
-example : ∃ H : PositiveLaurent (Additive PUnit) Bool, H ≠ 0 ∧ PositiveIndependent H false ∧
-    PositiveNonnegativeAt H true ∧
-    seedExchange (1 : PUnit) (fun _ : Bool => 0) =
-      positivePropagate H (seedExchange 1 (fun _ : Bool => 0))
-        (positiveSetZero (seedExchange 1 (fun _ : Bool => 0)) false) true :=
-  normalizedZeroLocal.correction_exists
-
-/-- Rank-two skew-symmetrizable matrices of types A2, B2 and G2. -/
-def rankTwoMatrix (n : ℤ) (h k : Bool) : ℤ :=
-  if h = k then 0 else if h then -n else 1
-
-/-- Rank-two normalized mutation data with a positive integer exchange multiplicity. -/
-def normalizedRankTwoLocal (n : ℤ) (hn : 0 < n) (i j : Bool) (hij : i ≠ j) :
-    NormalizedLocalMutation PUnit Bool i j where
-  distinct := hij
-  before := rankTwoMatrix n
-  after h k := -rankTwoMatrix n h k
-  coefficient _ := 1
-  coefficientAfter _ := 1
-  diagonal k := by simp [rankTwoMatrix]
-  diagonalAfter k := by simp [rankTwoMatrix]
-  signSkew h k := by
-    cases h <;> cases k <;> simp [SignSkewAt, rankTwoMatrix] <;> omega
-  matrixLaw := by
-    funext h k
-    cases i <;> cases j <;> cases h <;> cases k <;>
-      simp_all [rankTwoMatrix, matrixMutation, positivePart] <;> omega
-  coefficientLaw := Subsingleton.elim _ _
-
-/-- Each rank-two magnitude and both signs produce an actual positive correction. -/
-theorem rankTwo_correction (n : ℤ) (hn : 0 < n) (i j : Bool) (hij : i ≠ j) :
-    ∃ H : PositiveLaurent (Additive PUnit) Bool, H ≠ 0 ∧ PositiveIndependent H i ∧
-      PositiveNonnegativeAt H j ∧
-      seedExchange (1 : PUnit) (fun h => -rankTwoMatrix n h i) =
-        positivePropagate H (seedExchange 1 (fun h => rankTwoMatrix n h i))
-          (positiveSetZero (seedExchange 1 (fun h => rankTwoMatrix n h j)) i) j :=
-  (normalizedRankTwoLocal n hn i j hij).correction_exists
-
-example := rankTwo_correction 1 (by decide) false true (by decide)
-example := rankTwo_correction 1 (by decide) true false (by decide)
-example := rankTwo_correction 2 (by decide) false true (by decide)
-example := rankTwo_correction 2 (by decide) true false (by decide)
-example := rankTwo_correction 3 (by decide) false true (by decide)
-example := rankTwo_correction 3 (by decide) true false (by decide)
-
-end NormalizedFixtures
 /-- The nonconstant A2 fixture reaches the final public Laurent theorem. -/
 theorem a2_laurent (k : Bool) :
     a2PositiveCaterpillar.value (canonicalMap (G := PUnit.{1}) (I := Bool))
@@ -392,4 +289,4 @@ example (k : Bool) := constantTwo_laurent a2Path k
 example (k : Bool) := constantTwo_laurent repeatedLabelPath k
 example (k : Fin 3) := constantTwo_laurent detourPath k
 
-end TauCeti.Cluster.Examples
+end TauCeti.Laurent.CaterpillarChecks

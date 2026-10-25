@@ -5,14 +5,18 @@ both the upper-bound and Caterpillar proofs. It is independent of cluster exchan
 coefficient semifields. The cluster roadmap remains in
 [ClusterAlgebras](../ClusterAlgebras/README.md); this document describes the
 implementation boundary, not completion of that roadmap.
-The cluster implementation derives classical Laurentness from integral quantum
-Laurentness and a proved `v=1` map. The quantum and classical implementations
+The cluster implementation obtains classical and quantum Laurentness from one
+polynomial exchange proof, using zero form and parameter one for the classical case.
+A proved `v=1` map separately compares integral quantum and classical representatives. The quantum and classical implementations
 and their consumers are ordinary source modules in this checkout. Their shared
 interfaces, production build profile and verification boundaries are recorded in
 [ClusterAlgebras/FORMALIZATION.md](../ClusterAlgebras/FORMALIZATION.md).
 
 Import `TauCetiRoadmap.LaurentPhenomenon` for the public library. Declarations live
 in `TauCeti.Laurent`. Tests are separate imports under `LaurentPhenomenon.Tests`.
+The generic Caterpillar development is independent of the cluster Laurent route.
+The former normalized cluster application is preserved separately on
+`codex/caterpillar-proof-route`.
 
 ## Shared algebra for the upper-bound proof
 
@@ -49,8 +53,8 @@ separation; these generic algebra modules do not import that layer.
 `UpperBoundPattern` for its subring-pattern argument, used by quantum and classical
 upper bounds. The polynomial quantum calculation constructs the finite ordered premise
 directly from the actual seed; the binary calculation is its degree-one instance.
-The independent classical local replacement also uses the singleton instance
-`ReplacementPremise.zss_mem`.
+The classical local and global theorems use the same polynomial proof at unit
+parameter and zero form; no separate classical replacement proof remains.
 `PolynomialExchange` itself accepts arbitrary polynomials and a degree bound;
 it does not require monicity, reciprocal coefficients or positivity. Its signed
 three-term consumer checks a local replacement, not a global generalized seed

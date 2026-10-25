@@ -17,29 +17,11 @@ premise: `x` and `z` normalize `C`, `(x*) ^ r x ^ r - g₀ ∈ z C[z]` for some 
 `g₀ x^{-r} m₁ n₁⁻¹ x ^ r n₂ = m₂`. Then `ReplacementPremise.zss_eq` writes `z**` explicitly and
 `ReplacementPremise.zss_mem` places it in `C⟨x*, z*, z⟩`. The order of the summands of the two
 relations is immaterial (rewrite with `add_comm`).
-`inf_inf_eq_of_inf_eq` assembles three-chart equalities from two-chart intersections.
 -/
 
 @[expose] public section
 
 namespace TauCeti.Laurent
-
-section Ring
-
-variable {R : Type*} [Ring R]
-
-/-- Three-chart assembly: if both triple intersections reduce to the same rank-two
-intersection, they agree. This is the hypothesis shape of
-`TauCeti.Cluster.upperBound_mutation_of_three_chart`. -/
-theorem inf_inf_eq_of_inf_eq {T₀ T₁ T₂ T₁₂ Hi Hj Hij Hi' Hj' Hij' : Subring R}
-    (hi : T₀ ⊓ T₁ = Hi) (hj : T₀ ⊓ T₂ = Hj) (hij : Hi ⊓ Hj = Hij)
-    (hi' : T₁ ⊓ T₀ = Hi') (hj' : T₁ ⊓ T₁₂ = Hj') (hij' : Hi' ⊓ Hj' = Hij')
-    (h : Hij = Hij') :
-    T₀ ⊓ T₁ ⊓ T₂ = T₁ ⊓ T₀ ⊓ T₁₂ := by
-  rw [inf_assoc, inf_inf_distrib_left, hi, hj, hij, inf_assoc, inf_inf_distrib_left, hi', hj',
-    hij', h]
-
-end Ring
 
 section DivisionRing
 

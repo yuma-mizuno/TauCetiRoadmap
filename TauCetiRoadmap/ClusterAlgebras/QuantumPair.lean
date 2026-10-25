@@ -5,34 +5,35 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
-public import TauCetiRoadmap.ClusterAlgebras.UpperBoundLocal
+public import TauCetiRoadmap.ClusterAlgebras.ExchangeFrame
+public import TauCetiRoadmap.LaurentPhenomenon.ExchangeRings
 
 /-!
 # Two mutable directions of a quantum seed
 
 For distinct mutable directions `i, j` of a quantum seed, `pairRing` is the chart ring of the
 coordinates other than `X_i, X_j`, and `fourRing` is `C⟨X_i, X'_i, X_j, X'_j⟩` inside the
-ambient division ring, the four-generator ring `UpperBound.fourRing` of the classical route.
+ambient division ring, the four-generator ring `TauCeti.Laurent.fourRing` of the classical route.
 The two-direction comparison (Q2) identifies `fourRing` with the intersection of the two
 adjacent one-exchange intersections.
 -/
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := u₀) D row)
 
 /-- The chart ring of the coordinates other than `a` and `b`. -/
 noncomputable def pairRing (a b : M) : Subring D :=
-  Laurent.chartRing (algebraMap Zv D).range (fun j : {j // j ≠ a ∧ j ≠ b} ↦ (s.coordinate j : D))
+  Laurent.chartRing (algebraMap R₀ D).range (fun j : {j // j ≠ a ∧ j ≠ b} ↦ (s.coordinate j : D))
 
-theorem algebraMap_mem_pairRing (a b : M) (r : Zv) : algebraMap Zv D r ∈ s.pairRing a b :=
+theorem algebraMap_mem_pairRing (a b : M) (r : R₀) : algebraMap R₀ D r ∈ s.pairRing a b :=
   coefficient_mem_chartRing _ _ ⟨r, rfl⟩
 
 /-- A normalized monomial without `X_a` and `X_b` lies in `pairRing a b`. -/
@@ -59,14 +60,14 @@ theorem monomial_mem_pairRing {a b : M} {e : M → ℤ} (ha : e a = 0) (hb : e b
 /-- Every coordinate normalizes `pairRing a b`. -/
 theorem coordinate_normalizes_pairRing (a b c : M) :
     Normalizes (s.pairRing a b) (s.coordinate c : D) := by
-  have h := normalizes_closure (R := Zv) (C := (algebraMap Zv D).range)
+  have h := normalizes_closure (R := R₀) (C := (algebraMap R₀ D).range)
     (T := Set.range (fun j : {j // j ≠ a ∧ j ≠ b} ↦ (s.coordinate j : D)) ∪
       Set.range (fun j : {j // j ≠ a ∧ j ≠ b} ↦ (s.coordinate j : D)⁻¹))
     (normalizes_algebraMap_range (Units.ne_zero (s.coordinate c))) (fun r ↦ ⟨r, rfl⟩) ?_
   · rwa [← Set.union_assoc] at h
   rintro g (⟨j, rfl⟩ | ⟨j, rfl⟩)
   · exact ⟨_, by rw [s.quasiCommuting c j, Algebra.smul_def]⟩
-  · refine ⟨vUnit ^ (2 * matrixForm s.form (Pi.single c 1) (-Pi.single (j : M) 1)), ?_⟩
+  · refine ⟨u₀ ^ (2 * matrixForm s.form (Pi.single c 1) (-Pi.single (j : M) 1)), ?_⟩
     dsimp only
     rw [← s.monomial_neg_single, ← s.monomial_single c, monomial_mul_monomial_comm]
 
@@ -96,7 +97,7 @@ variable [Fintype K] [DecidableEq K]
 
 /-- `C⟨X_i, X'_i, X_j, X'_j⟩` for mutable directions `i, j`. -/
 noncomputable def fourRing (i j : K) : Subring D :=
-  UpperBound.fourRing (s.pairRing (row i) (row j)) (s.coordinate (row i) : D)
+  TauCeti.Laurent.fourRing (s.pairRing (row i) (row j)) (s.coordinate (row i) : D)
     (s.exchangeCoordinate i) (s.coordinate (row j) : D) (s.exchangeCoordinate j)
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

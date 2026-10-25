@@ -19,7 +19,7 @@ results and proof ingredients; their historical encodings do not prescribe the A
 |---|---|---|
 | 0 | Coefficients, based quantum tori, Laurent charts and local algebra | Mathlib; shared twisted algebra |
 | 1 | Classical and quantum seeds, mutation words and cluster algebras | 0 |
-| 2 | Quantum upper bounds; classical Laurentness by specialization; separation | 0–1 |
+| 2 | Common polynomial upper bounds; quantum and classical Laurentness; separation | 0–1 |
 | 3 | Lattice formalism, cluster varieties and convention transports | 0–2; scheme gluing |
 | 4 | Classical upper-bound structure and acyclic presentations | 0–2 |
 | 5 | Finite-type classification and root parametrizations | 0–2; RootSystems |
@@ -307,6 +307,27 @@ not a commutativity assumption on the quantum ambient ring. Polynomial and quant
 seed instances construct all displayed identities from their exchange data;
 no seed stores these local conclusions or Laurent membership as fields.
 
+Construct the chart, polynomial mutation, Q1, Q2 and upper-bound invariance over
+a commutative factorial domain R with a chosen central unit `q∈Rˣ`, in a
+possibly noncommutative division R-algebra. Do not require q to have infinite
+order. The ordinary quantum case is `R=Z_v`, `q=v`; the classical case is
+`q=1`, retaining its integral or field coefficient subring. Define binary
+mutation by the degree-one polynomial construction, and derive its faithfulness,
+involutivity and local comparisons from that construction.
+
+In the common frame, separate the matrix's positive symmetrizer d from the
+integral diagonal form weights w. Require independent exchange columns and
+`B̃ᵀΛ=(diag(w) 0)`, with no sign or nonvanishing hypothesis on w. Prove that
+matrix and form mutation preserve these conditions, retaining w. Ordinary
+quantum compatibility is the case `w=d`; derive column independence from it.
+Classical full-column-rank seeds use `q=1`, `Λ=0`, `w=0` and their original d.
+Construct their faithful charts over the original coefficient ring, and identify
+all coordinate words and chart rings with the independently defined classical
+ones. Prove independence from the choice of any unit-parameter form realization.
+Derive classical local comparisons and upper-bound invariance from the same
+polynomial theorem. A classical seed has no auxiliary quantization as input,
+and coefficient specialization is not assumed to commute with intersections.
+
 ## Layer 1: classical and quantum seeds and mutation
 
 **1.1 Exchange matrices.** A symmetrizer of `B : Matrix K K ℤ` is `s : K → ℤ` with
@@ -440,22 +461,25 @@ which the mutated seed in `D` does not provide. If `ι(A)` contains every `X_{k;
 the induced seed (all reachable `t`), construct the injective `A_{v,∅}→A` inverting
 `ι`; membership of the one-step variables `X'_k` alone is not assumed to imply this.
 
-## Layer 2: quantum Laurentness and classical specialization
+## Layer 2: shared Laurent proof and classical specialization
 
 There are two public statements, with one proof chain. For a compatible quantum
 seed, every reachable variable lies in every integral quantum chart `T_t`.
 For a classical seed over an arbitrary coefficient semifield P, every reachable
 variable lies in every `L_{ℤ[P],t}`, with no full-rank or coprimality premise on
-that seed. The second statement is derived from the first using a principal lift,
-`v=1`, and normalized coefficient specialization. Neither statement uses positivity
+that seed. Both use the common polynomial theorem of §0.7: ordinary quantum
+seeds have `R=Z_v`, `q=v`, `w=d`, while full-rank classical seeds have `q=1`,
+`Λ=0`, `w=0`. The classical statement for arbitrary P uses a principal lift and
+normalized coefficient specialization. The `v=1` theorem separately compares
+the quantum and classical representatives. Neither statement uses positivity
 of Laurent coefficients, sign-coherence or the classical structural results of Layer 4.
 
 | Milestone | Output | Uses |
 |---|---|---|
 | Q1 | Integral one-exchange normal forms and divisibility | §0.5, §1.5 |
 | Q2 | Two-direction intersections and replacement | Q1, §§0.6–0.7, compatibility |
-| Q3 | Quantum upper-bound invariance and Laurent expansions | Q2, shared intersection/word API |
-| L5 | Classical principal Laurentness via `v=1` | Q3, principal compatible pair |
+| Q3 | Common upper-bound invariance and Laurent expansions, including quantum seeds | Q2, shared intersection/word API |
+| L5 | Classical principal Laurentness at unit parameter; quantum comparison via `v=1` | Common Q3, principal full-rank seed; quantum Q3 for comparison |
 | L6 | Frozen orders, polynomial expansions and principal degrees | L5, support/positive evaluation |
 | L7 | Normalized specialization and separation | Seed identities, L5–L6 |
 | L8 | Arbitrary-semifield Laurentness and expansion maps | L7 |
@@ -521,8 +545,14 @@ Source: BZ, §5, Lemmas 5.4–5.6, Proposition 5.7, Lemma 5.8 and Corollary 5.2.
 
 ### 2.2 Classical limit, principal coefficients and frozen orders
 
-**L5 — classical principal Laurentness.** For a finite free lattice `L` and an integral
-alternating form `Λ`, construct `sp:T(Z_v,v,Λ)→ℤ[L]` as §0.4's coefficient change along
+**L5 — classical principal Laurentness and quantum comparison.** Apply the common
+polynomial Q3 theorem directly to §1.4's full-column-rank principal geometric seed
+using §0.7's unit-parameter zero-form construction over ℤ. Identify every coordinate
+word and chart, obtaining integral principal Laurentness without an auxiliary
+quantization or a quantum-specialization theorem. Derive the arbitrary-semifield
+statement through L7–L8 from this direct instance.
+
+Separately, for a finite free lattice `L` and an integral alternating form `Λ`, construct `sp:T(Z_v,v,Λ)→ℤ[L]` as §0.4's coefficient change along
 `Z_v→ℤ`, `v↦1`, followed by §0.4's identification `T(ℤ,1,Λ)≃ℤ[L]`. Prove
 `sp(cX^a)=c(1)X^a`, surjectivity and `ker sp=(v-1)T(Z_v,v,Λ)`. For a commutative ring `R`
 construct the regrouping `L(R,K⊔J)≃ₐ[R]L(L(R,J),K)`. Let `s` be a compatible quantum
@@ -535,9 +565,12 @@ chart sends to `X_{j;t}` (Q3). For algebraically independent `ε(X_i)` the nonva
 holds (§1.4). The proof uses neither classical Laurentness nor an extension of `sp` to
 the skew field.
 
-For every exchange matrix `B₀` on `K`, apply this to §1.5's principal pair with `ε` the
-inclusion of `ℤ[ℤ^{K⊔K}]` in its fraction field, writing the frozen variables as `u_i`
-(`i∈K`): by the regrouping each principal variable has a unique expansion
+For every exchange matrix `B₀` on `K`, compare §1.5's principal quantum pair with
+the zero-form principal geometric seed, taking `ε` to be the inclusion of
+`ℤ[ℤ^{K⊔K}]` in its fraction field and writing frozen variables as `u_i` (`i∈K`).
+The comparison identifies the specialized quantum representative with the
+independently constructed classical representative. By regrouping each principal
+variable has a unique expansion
 `X_{j;t}(x,u)∈ℤ[u_i^{±1}][x_i^{±1}]`. Prove that §1.4's transport identifies this
 geometric pattern with the normalized pattern over `Trop(K)` with initial coefficients
 `u`. Define `C_t` as the frozen block of the mutated principal matrix `B̃_t`, and the
@@ -750,8 +783,14 @@ existence or mutation theorem is assumed or requested. Sources: BZ §§3–6; KK
 
 ### 2.6 Polynomial quantum exchanges
 
-Use the based quantum torus, charts, normalizers, §0.5–§0.7 and Q3's pattern
-theorem for this sector as well. Fix degrees `r_k>0` such that `r_k` divides
+Use §0.7's common scalar-ring construction, with independent columns and
+separate form weights, as the proof owner for P1–P3 and Q1–Q3. The statements
+below describe its ordinary quantum sector `R=Z_v`, `q=v`, `w=d`. Obtain
+binary mutation and its Laurent theorem as degree-one instances; no binary
+Laurent theorem is an input to the polynomial proof. The same construction
+at `q=1`, `Λ=0`, `w=0` gives the classical polynomial sector directly.
+Reuse the based torus, charts, normalizers, §§0.5–0.7 and the seed-free
+Q3 pattern theorem. Fix degrees `r_k>0` such that `r_k` divides
 every entry of column k of B̃, and put `β_k=b_{•k}/r_k`. The degree is distinct
 from the compatible pair's positive symmetrizer `s_k`. Fix polynomials
 `H_k(T)=Σ_{l=0}^{r_k}h_{k,l}T^l` over `Z_v` with
@@ -1211,9 +1250,12 @@ Every carrier has the extensionality, reindexing, evaluation and compatibility l
 consumers here use; definition-only files do not finish a layer. The Laurent theorem and
 finite-type classification hold for arbitrary coefficient semifields; geometric
 constructions and integral positivity keep their stated scope. The Laurent theorem gives
-finite expansions with uniqueness and coefficient transport laws, via Q1–Q3 over
-`ℤ[v,v⁻¹]`, L5 at `v=1`, then L6–L8 for every `P`. Transitively, L8 and Somos-4
-integrality depend on Q3 through L5, and Q1–Q3 do not depend on L5–L8, Layer 4,
+finite expansions with uniqueness and coefficient transport laws, via the common
+polynomial Q1–Q3: use `ℤ[v,v⁻¹]` and the positive compatible form for quantum
+seeds, and the integral unit-parameter zero-form principal seed for L5, then
+L6–L8 for every `P`. Transitively, L8 and Somos-4 integrality depend on this same
+common Q3 through the direct classical L5 instance, without the `v=1` comparison.
+Q1–Q3 do not depend on L5–L8, Layer 4,
 positivity or categorification. U1–U4 are delivered for their own consumers. There is one
 public Laurent engine, sharing §§0.5–0.7 and Q3; its representatives equal the public
 expansion maps' values. The targets use neither unique factorization of `ℤ[P]` nor

@@ -5,8 +5,7 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.GeometricInteracting
-public import TauCetiRoadmap.ClusterAlgebras.GeometricCommuting
+public import TauCetiRoadmap.ClusterAlgebras.GeometricFrame
 public import TauCetiRoadmap.ClusterAlgebras.GeometricLaurentBase
 
 /-! Laurentness for full-column-rank geometric seeds by mutation invariance
@@ -38,10 +37,9 @@ theorem three_chart (hd : ∀ i, 0 < d i)
       chartRing (geometricIntegerRing F) (s.mutate hd i).1.coordinate ⊓
         chartRing (geometricIntegerRing F) s.1.coordinate ⊓
         chartRing (geometricIntegerRing F) ((s.mutate hd i).mutate hd j).1.coordinate := by
-  by_cases hcomm : s.1.exchange (row j) i = 0
-  · exact geometric_commuting_three_charts row d hd s hij hcomm
-  · exact geometric_interacting_three_chart (geometricIntegerRing F)
-      integerRing_le_rational row d hd s.1 i j hij hcomm
+  let := geometricIntegerRing_uniqueFactorizationMonoid (F := F)
+  exact s.three_chart_unitParameter (geometricIntegerRing F) integerRing_le_rational
+    hd s.1.independent i j hij
 
 /-- The integral finite upper bound is invariant under every mutation. -/
 theorem upperBound_mutation (hd : ∀ i, 0 < d i)
@@ -61,14 +59,10 @@ Laurent expansion in the initial total coordinates. -/
 theorem laurent (hd : ∀ i, 0 < d i)
     (s : FullRankGeometricSeed (F := F) row d) (w : List K) (a : M) :
     (mutateWord (fun i t => mutate hd t i) w s).1.coordinate a ∈
-      chartRing (geometricIntegerRing F) s.1.coordinate :=
-  laurent_of_upperBound_invariant (V := FullRankGeometricSeed (F := F) row d)
-    (I := K) (J := M) (geometricIntegerRing F)
-    (fun t : FullRankGeometricSeed (F := F) row d => t.1.coordinate)
-    (fun i t => mutate hd t i)
-    (fun i t => mutate_involutive hd t i)
-    (fun t i a => mutate_coordinate_mem_chart hd (geometricIntegerRing F) t i a)
-    (fun t i => upperBound_mutation hd t i) s w a
+      chartRing (geometricIntegerRing F) s.1.coordinate := by
+  let := geometricIntegerRing_uniqueFactorizationMonoid (F := F)
+  exact s.coordinate_mem_chart_unitParameter (geometricIntegerRing F)
+    integerRing_le_rational hd s.1.independent [] w a
 
 /-- The infinite intersection of reachable charts is already the finite
 upper bound; this equality is proved, rather than assumed in seed data. -/
@@ -111,9 +105,7 @@ theorem three_chart_of_independent (C : Subring F) [UniqueFactorizationMonoid C]
         chartRing C (s.mutate hd j).1.coordinate =
       chartRing C (s.mutate hd i).1.coordinate ⊓ chartRing C s.1.coordinate ⊓
         chartRing C ((s.mutate hd i).mutate hd j).1.coordinate := by
-  by_cases hcomm : s.1.exchange (row j) i = 0
-  · exact geometric_commuting_three_charts_of_rank C hC row d hd s.1 hAI s.2 hij hcomm
-  · exact geometric_interacting_three_chart_of_independent C hC row d hd s.1 hAI i j hij hcomm
+  exact s.three_chart_unitParameter C hC hd hAI i j hij
 
 /-- The upper bound over `C` is invariant under each mutation at every seed reached from `s`. -/
 theorem upperBound_mutation_of_independent (C : Subring F) [UniqueFactorizationMonoid C]

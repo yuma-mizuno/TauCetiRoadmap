@@ -23,70 +23,75 @@ finite upper bound. Everything is proved from the compatible seed data alone.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.Laurent
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D]
   {M K : Type*} [Fintype M] [DecidableEq M] [Fintype K] [DecidableEq K]
-  {row : K ↪ M} (s : QuantumSeed D row)
+  {row : K ↪ M} (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- **Q2.** The two adjacent one-exchange intersections meet in `C⟨X_i, X'_i, X_j, X'_j⟩`. -/
 theorem inf_inf_eq_fourRing {i j : K} (hij : i ≠ j) :
     (s.chartRing ⊓ (s.mutate i).chartRing) ⊓ (s.chartRing ⊓ (s.mutate j).chartRing) =
       s.fourRing i j := by
   have h := s.polynomialSeed.inf_inf_eq_fourRing hij
-  simpa only [polynomialSeed_mutate, polynomialSeed_toQuantumSeed,
+  simpa only [polynomialSeed_mutate, polynomialSeed_toExchangeFrame,
     polynomialSeed_fourRing] using h
 
 /-- The three-chart equality behind upper-bound invariance. -/
 theorem three_chart (i j : K) (hji : j ≠ i) :
     s.chartRing ⊓ (s.mutate i).chartRing ⊓ (s.mutate j).chartRing =
       (s.mutate i).chartRing ⊓ s.chartRing ⊓ ((s.mutate i).mutate j).chartRing := by
-  have hij : i ≠ j := hji.symm
-  have h' := (s.mutate i).inf_inf_eq_fourRing hij
-  rw [s.mutate_mutate i, s.fourRing_mutate hij] at h'
-  exact inf_inf_eq_of_inf_eq rfl rfl (s.inf_inf_eq_fourRing hij) rfl rfl h' rfl
+  have h := s.polynomialSeed.three_chart i j hji
+  simpa only [polynomialSeed_mutate, polynomialSeed_toExchangeFrame] using h
+
+/-- The finite upper bound agrees with the degree-one polynomial upper bound. -/
+theorem polynomialSeed_upperBound : s.polynomialSeed.upperBound = s.upperBound := by
+  simp only [PolynomialExchangeSeed.upperBound, upperBound, TauCeti.Cluster.upperBound,
+    polynomialSeed_mutate]
+  rfl
 
 /-- **Q3.** The finite quantum upper bound is the same at every seed reached from `s`. -/
-theorem upperBound_eq_of_reachable {t : QuantumSeed D row}
+theorem upperBound_eq_of_reachable {t : ExchangeFrame (u₀ := vUnit) D row}
     (ht : s.Reachable t) :
     t.upperBound = s.upperBound :=
   s.upperBound_eq_of_three_chart (fun u _ i j hji ↦ u.three_chart i j hji) ht
 
 /-- **Q3.** The finite quantum upper bound is invariant under mutation. -/
-theorem upperBound_mutate (k : K) : (s.mutate k).upperBound = s.upperBound :=
-  s.upperBound_eq_of_reachable ⟨[k], rfl⟩
+theorem upperBound_mutate (k : K) : (s.mutate k).upperBound = s.upperBound := by
+  have h := s.polynomialSeed.upperBound_mutate k
+  simpa only [polynomialSeed_mutate, polynomialSeed_upperBound] using h
 
 /-- **The quantum Laurent phenomenon.** Every quantum cluster variable reached from `s` by a
 mutation word lies in the integral quantum torus of every seed reached from `s`. -/
 theorem coordinate_mutateWord_mem_mutateWord_chartRing (u w : List K) (j : M) :
-    ((mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j : D) ∈
-      (mutateWord (fun k t ↦ QuantumSeed.mutate t k) u s).chartRing :=
-  s.coordinate_mem_chartRing_of_upperBound_mutate (fun t _ k ↦ t.upperBound_mutate k)
-    ⟨w, rfl⟩ ⟨u, rfl⟩ j
+    ((mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j : D) ∈
+      (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) u s).chartRing := by
+  have h := s.polynomialSeed.coordinate_mutateWord_mem_mutateWord_chartRing u w j
+  simpa only [polynomialSeed_mutateWord, polynomialSeed_toExchangeFrame] using h
 
 /-- **The quantum Laurent phenomenon.** Every quantum cluster variable reached from `s` by a
 mutation word lies in the integral quantum torus `T_s` of `s`. -/
 theorem coordinate_mutateWord_mem_chartRing (w : List K) (j : M) :
-    ((mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j : D) ∈ s.chartRing :=
+    ((mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j : D) ∈ s.chartRing :=
   s.coordinate_mutateWord_mem_mutateWord_chartRing [] w j
 
 /-- The quantum upper cluster algebra `⋂_t T_t` equals the finite upper bound at `s`. -/
 theorem upperClusterRing_eq_upperBound :
     TauCeti.Cluster.upperClusterRing (algebraMap Zv D).range
-        (fun t : QuantumSeed D row ↦ fun i ↦ (t.coordinate i : D))
+        (fun t : ExchangeFrame (u₀ := vUnit) D row ↦ fun i ↦ (t.coordinate i : D))
         (fun k t ↦ t.mutate k) s = s.upperBound :=
   s.upperClusterRing_eq_upperBound_of_upperBound_mutate fun t _ k ↦ t.upperBound_mutate k
 
 /-- The quantum cluster algebra is contained in the quantum upper cluster algebra. -/
 theorem clusterRing_le_upperClusterRing :
     TauCeti.Cluster.clusterRing (algebraMap Zv D).range
-        (fun t : QuantumSeed D row ↦ fun i ↦ (t.coordinate i : D))
+        (fun t : ExchangeFrame (u₀ := vUnit) D row ↦ fun i ↦ (t.coordinate i : D))
         (fun k t ↦ t.mutate k) s ≤
       TauCeti.Cluster.upperClusterRing (algebraMap Zv D).range
-        (fun t : QuantumSeed D row ↦ fun i ↦ (t.coordinate i : D))
+        (fun t : ExchangeFrame (u₀ := vUnit) D row ↦ fun i ↦ (t.coordinate i : D))
         (fun k t ↦ t.mutate k) s :=
   s.clusterRing_le_upperClusterRing_of_upperBound_mutate fun t _ k ↦ t.upperBound_mutate k
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

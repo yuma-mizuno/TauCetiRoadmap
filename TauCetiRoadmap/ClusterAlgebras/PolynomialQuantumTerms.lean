@@ -16,13 +16,14 @@ summands. The new monomial is computed from the constructed mutated chart.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
@@ -42,7 +43,7 @@ theorem matrixForm_endpoint_eq (k : K) {a : M → ℤ} (ha : a (row k) = 0) :
 theorem mutateChart_monomial_split_left (k : K) (n : ℕ) {a : M → ℤ}
     (ha : a (row k) = n) :
     s.mutateChart k (monomial a) = s.exchangeCoordinate k ^ n *
-      scaledMonomial s.toQuantumSeed.chart
+      scaledMonomial s.toExchangeFrame.chart
         ((n : ℤ) * matrixForm s.form (a - (n : ℤ) • Pi.single (row k) 1)
           (exchangeExponentPos row s.exchange.matrix k))
         (a - (n : ℤ) • Pi.single (row k) 1) := by
@@ -54,27 +55,27 @@ theorem mutateChart_monomial_split_left (k : K) (n : ℕ) {a : M → ℤ}
     rw [(s.alternating.formMutation k 1).matrixForm_swap,
       formMutation_matrixForm_zsmul_single s.form (s.exchange.diagonal k) hb,
       s.matrixForm_endpoint_eq k hb]
-  have h := congrArg (s.mutateChart k) (monomial_mul_monomial (R := Zv) (u := vUnit)
+  have h := congrArg (s.mutateChart k) (monomial_mul_monomial (R := R₀) (u := u₀)
     (Λ := matrixForm (formMutation row s.exchange.matrix s.form k 1))
     ((n : ℤ) • Pi.single (row k) 1) b)
   have he : (n : ℤ) • Pi.single (row k) 1 + b = a := by dsimp [b]; abel
-  rw [map_mul, map_smul, Algebra.smul_def (R := Zv) (A := D), he,
+  rw [map_mul, map_smul, Algebra.smul_def (R := R₀) (A := D), he,
     s.mutateChart_monomial_power, s.mutateChart_monomial_of_apply_eq_zero k hb, hform] at h
   let t := (n : ℤ) * matrixForm s.form b (exchangeExponentPos row s.exchange.matrix k)
   change s.mutateChart k (monomial a) = s.exchangeCoordinate k ^ n *
-    (algebraMap Zv D ((vUnit ^ t : Zvˣ) : Zv) * s.toQuantumSeed.monomial b)
+    (algebraMap R₀ D ((u₀ ^ t : R₀ˣ) : R₀) * s.toExchangeFrame.monomial b)
   calc
-    s.mutateChart k (monomial a) = algebraMap Zv D ((vUnit ^ t : Zvˣ) : Zv) *
-        (algebraMap Zv D ((vUnit ^ (-t) : Zvˣ) : Zv) * s.mutateChart k (monomial a)) := by
+    s.mutateChart k (monomial a) = algebraMap R₀ D ((u₀ ^ t : R₀ˣ) : R₀) *
+        (algebraMap R₀ D ((u₀ ^ (-t) : R₀ˣ) : R₀) * s.mutateChart k (monomial a)) := by
       rw [← mul_assoc, ← map_mul, ← Units.val_mul, ← zpow_add, add_neg_cancel]
       simp
-    _ = algebraMap Zv D ((vUnit ^ t : Zvˣ) : Zv) *
-        (s.exchangeCoordinate k ^ n * s.toQuantumSeed.monomial b) := by rw [← h]
+    _ = algebraMap R₀ D ((u₀ ^ t : R₀ˣ) : R₀) *
+        (s.exchangeCoordinate k ^ n * s.toExchangeFrame.monomial b) := by rw [← h]
     _ = _ := by rw [← mul_assoc, Algebra.commutes, mul_assoc]
 
 theorem original_exchange_term (i j : K) (l : ℕ) :
-    (algebraMap Zv D ((s.polynomial j).coeff l) *
-      s.toQuantumSeed.monomial (s.exchangeExponent j l)) * s.coordinate (row j) =
+    (algebraMap R₀ D ((s.polynomial j).coeff l) *
+      s.toExchangeFrame.monomial (s.exchangeExponent j l)) * s.coordinate (row j) =
       (s.coordinate (row i) : D) ^ s.replacementExponent i j l *
         s.replacementCoefficient i j l := by
   let e : M → ℤ := Pi.single (row i) 1
@@ -85,10 +86,10 @@ theorem original_exchange_term (i j : K) (l : ℕ) :
       (l : ℤ) • s.dividedColumn j =
       (s.replacementOriginalBase j + (l : ℤ) • s.dividedColumn j) - Pi.single (row j) 1
     abel
-  rw [mul_assoc, ← s.toQuantumSeed.monomial_single (row j),
-    s.toQuantumSeed.monomial_mul_monomial, hα, sub_add_cancel]
-  change algebraMap Zv D ((s.polynomial j).coeff l) *
-    scaledMonomial s.toQuantumSeed.chart (matrixForm s.form (V - f) f) V = _
+  rw [mul_assoc, ← s.toExchangeFrame.monomial_single (row j),
+    s.toExchangeFrame.monomial_mul_monomial, hα, sub_add_cancel]
+  change algebraMap R₀ D ((s.polynomial j).coeff l) *
+    scaledMonomial s.toExchangeFrame.chart (matrixForm s.form (V - f) f) V = _
   rw [scaledMonomial_split _ _ _ ((s.replacementExponent i j l : ℤ) • e),
     s.scaledMonomial_coordinate_power]
   rw [← mul_assoc, Algebra.commutes, mul_assoc]
@@ -112,8 +113,8 @@ theorem mutated_exchangeExponent_row_left {i j : K} (hij : i ≠ j)
 coordinate power in each mutated exchange summand. -/
 theorem mutated_exchange_term_pos {i j : K} (hij : i ≠ j)
     (hpos : 0 < s.exchange.matrix (row i) j) {l : ℕ} (hl : l ≤ s.degree j) :
-    (algebraMap Zv D (((s.mutate i).polynomial j).coeff l) *
-      (s.mutate i).toQuantumSeed.monomial ((s.mutate i).exchangeExponent j l)) *
+    (algebraMap R₀ D (((s.mutate i).polynomial j).coeff l) *
+      (s.mutate i).toExchangeFrame.monomial ((s.mutate i).exchangeExponent j l)) *
         (s.mutate i).coordinate (row j) =
       s.exchangeCoordinate i ^ (s.replacementDegree i j - s.replacementExponent i j l) *
         s.replacementMutatedCoefficient i j l := by
@@ -129,18 +130,19 @@ theorem mutated_exchange_term_pos {i j : K} (hij : i ≠ j)
     s.mutate_monomial, s.mutateChart_monomial_split_left i m
       (s.mutated_exchangeExponent_row_left hij hpos hl), hv]
   simp only [mul_assoc]
-  rw [← mul_assoc (algebraMap Zv D ((s.polynomial j).coeff l)) (s.exchangeCoordinate i ^ m),
+  rw [← mul_assoc (algebraMap R₀ D ((s.polynomial j).coeff l)) (s.exchangeCoordinate i ^ m),
     Algebra.commutes ((s.polynomial j).coeff l) (s.exchangeCoordinate i ^ m), mul_assoc]
   congr 1
-  have hf : (s.coordinate (row j) : D) = scaledMonomial s.toQuantumSeed.chart 0 f := by
+  have hf : (s.coordinate (row j) : D) = scaledMonomial s.toExchangeFrame.chart 0 f := by
     simp only [scaledMonomial, zpow_zero, Units.val_one, map_one, one_mul]
-    exact (s.toQuantumSeed.monomial_single (row j)).symm
+    exact (s.toExchangeFrame.monomial_single (row j)).symm
   rw [hf]
-  change algebraMap Zv D ((s.polynomial j).coeff l) *
-    (scaledMonomial s.toQuantumSeed.chart _ (V - f) * scaledMonomial s.toQuantumSeed.chart 0 f) = _
+  change algebraMap R₀ D ((s.polynomial j).coeff l) *
+    (scaledMonomial s.toExchangeFrame.chart _ (V - f) * scaledMonomial s.toExchangeFrame.chart 0
+      f) = _
   rw [scaledMonomial_mul, sub_add_cancel, add_zero]
   dsimp only [replacementMutatedCoefficient, m]
   rw [Nat.cast_sub (s.replacementExponent_le hpos hl)]
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

@@ -16,11 +16,9 @@ after every mutation word, without user-supplied mutation laws.
 The proof term of `initial_seed_laurent_representative`, followed through every constant of
 this project, uses only the axioms `propext`, `Classical.choice` and `Quot.sound`; uses
 `MatrixSeed.cluster_laurent_unique`, the general and principal Laurent theorems, the classical
-limit `principalGeometricWord_laurent_of_quantum` and `QuantumSeed.upperBound_mutate`; uses no
-constant whose name contains `Caterpillar`, `universalLaurent` or `sorryAx`; and does not use
-the classical full-rank theorem `FullRankGeometricSeed.laurent`,
-`FullRankGeometricSeed.upperBound_mutation`, `UpperBound.geometric_commuting_three_charts` or
-`UpperBound.geometric_interacting_three_chart`. -/
+unit-parameter construction and `PolynomialExchangeSeed.upperBound_mutate`; uses no
+constant whose name contains `Caterpillar`, `universalLaurent` or `sorryAx`; and uses no
+quantum word specialization, coefficient map `sp`, or auxiliary positive compatible form. -/
 
 @[expose] public section
 noncomputable section

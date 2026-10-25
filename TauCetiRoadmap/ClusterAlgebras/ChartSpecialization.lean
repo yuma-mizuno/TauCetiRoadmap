@@ -5,7 +5,7 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
+public import TauCetiRoadmap.ClusterAlgebras.ExchangeFrame
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.Specialization
 
 /-!
@@ -131,11 +131,11 @@ end ChartSpecializes
 
 /-- A normalized monomial with nonnegative exponents of a quantum seed whose coordinates have
 classical limits `g_i` has classical limit `∏ g_i^{m_i}`: the scalar is a power of `v`. -/
-theorem QuantumSeed.chartSpecializes_monomial {M K : Type*} [Fintype M]
-    [DecidableEq M] {row : K ↪ M} (t : QuantumSeed D row) {g : M → F}
+theorem ExchangeFrame.chartSpecializes_monomial {M K : Type*} [Fintype M]
+    [DecidableEq M] {row : K ↪ M} (t : ExchangeFrame (u₀ := vUnit) D row) {g : M → F}
     (hg : ∀ i, ChartSpecializes χ ε (t.coordinate i : D) (g i)) {m : M → ℤ}
     (hm : ∀ i, 0 ≤ m i) : ChartSpecializes χ ε (t.monomial m) (∏ i, g i ^ m i) := by
-  rw [QuantumSeed.monomial, QuantumSeed.chart, lift_monomial, normalizedProd, Algebra.smul_def,
+  rw [ExchangeFrame.monomial, ExchangeFrame.chart, lift_monomial, normalizedProd, Algebra.smul_def,
     ← Finset.prod_map_toList]
   exact (ChartSpecializes.orderedProd hg hm _).vUnit_zpow_mul _
 

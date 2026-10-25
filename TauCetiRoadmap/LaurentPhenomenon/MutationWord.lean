@@ -31,6 +31,14 @@ theorem mutateWord_append (mutation : I → V → V) (u w : List I) (s : V) :
   | nil => rfl
   | cons i u ih => exact ih (mutation i s)
 
+/-- A map commuting with elementary mutations commutes with every mutation word. -/
+theorem mutateWord_map {W : Type*} (mutation : I → V → V) (mutation' : I → W → W)
+    (f : V → W) (hf : ∀ i s, f (mutation i s) = mutation' i (f s))
+    (w : List I) (s : V) : f (mutateWord mutation w s) = mutateWord mutation' w (f s) := by
+  induction w generalizing s with
+  | nil => rfl
+  | cons i w ih => rw [mutateWord_cons, ih, hf, mutateWord_cons]
+
 theorem mutateWord_cancel (mutation : I → V → V)
     (hinv : ∀ i, Function.Involutive (mutation i)) (i : I) (w : List I) (s : V) :
     mutateWord mutation (i :: i :: w) s = mutateWord mutation w s := by

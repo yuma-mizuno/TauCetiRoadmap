@@ -3,44 +3,41 @@ Copyright (c) 2026 Tau Ceti contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Tau Ceti contributors
 -/
-import TauCetiRoadmap.ClusterAlgebras
+
 import TauCetiRoadmap.ClusterAlgebras.ChartSpecialization
+import TauCetiRoadmap.ClusterAlgebras.ClassicalFrame
 import TauCetiRoadmap.ClusterAlgebras.Coefficients
-import TauCetiRoadmap.ClusterAlgebras.CommutingCoprimality
 import TauCetiRoadmap.ClusterAlgebras.CoordinateSeparation
-import TauCetiRoadmap.ClusterAlgebras.Examples.CaterpillarChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.InitialSeedConsumer
 import TauCetiRoadmap.ClusterAlgebras.Examples.PolynomialQuantum
 import TauCetiRoadmap.ClusterAlgebras.Examples.PolynomialSeedChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.QuantumChecks
+import TauCetiRoadmap.ClusterAlgebras.Examples.ScalarSpecializationChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Audit
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Pattern
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Sequence
+import TauCetiRoadmap.ClusterAlgebras.ExchangeFrame
 import TauCetiRoadmap.ClusterAlgebras.ExchangeMatrix
 import TauCetiRoadmap.ClusterAlgebras.ExpressionCoordinates
 import TauCetiRoadmap.ClusterAlgebras.ExtendedRank
 import TauCetiRoadmap.ClusterAlgebras.FrozenWeight
 import TauCetiRoadmap.ClusterAlgebras.GeometricClusterAlgebra
-import TauCetiRoadmap.ClusterAlgebras.GeometricCommuting
 import TauCetiRoadmap.ClusterAlgebras.GeometricCoordinates
-import TauCetiRoadmap.ClusterAlgebras.GeometricExchangePair
-import TauCetiRoadmap.ClusterAlgebras.GeometricInteracting
+import TauCetiRoadmap.ClusterAlgebras.GeometricFrame
 import TauCetiRoadmap.ClusterAlgebras.GeometricLaurent
 import TauCetiRoadmap.ClusterAlgebras.GeometricLaurentBase
+import TauCetiRoadmap.ClusterAlgebras.GeometricPattern
 import TauCetiRoadmap.ClusterAlgebras.GeometricSeed
 import TauCetiRoadmap.ClusterAlgebras.HatY
 import TauCetiRoadmap.ClusterAlgebras.InitialLaurent
 import TauCetiRoadmap.ClusterAlgebras.InitialSeed
-import TauCetiRoadmap.ClusterAlgebras.Laurent
 import TauCetiRoadmap.ClusterAlgebras.LaurentFaithfulness
 import TauCetiRoadmap.ClusterAlgebras.MatrixConvention
 import TauCetiRoadmap.ClusterAlgebras.MatrixMutation
 import TauCetiRoadmap.ClusterAlgebras.MutationPattern
 import TauCetiRoadmap.ClusterAlgebras.Normalization
-import TauCetiRoadmap.ClusterAlgebras.NormalizedCaterpillar
-import TauCetiRoadmap.ClusterAlgebras.NormalizedPattern
-import TauCetiRoadmap.ClusterAlgebras.NormalizedWord
+import TauCetiRoadmap.ClusterAlgebras.PolynomialExchangeSeed
 import TauCetiRoadmap.ClusterAlgebras.PolynomialGeometricPattern
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumAlgebra
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumCentralFactors
@@ -56,7 +53,6 @@ import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumMutation
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumOpposite
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumPair
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumReplacement
-import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumSeed
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumSpecialization
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumTerms
 import TauCetiRoadmap.ClusterAlgebras.PositiveSemifieldEvaluation
@@ -71,36 +67,29 @@ import TauCetiRoadmap.ClusterAlgebras.QuantumClassicalLimit
 import TauCetiRoadmap.ClusterAlgebras.QuantumCommuting
 import TauCetiRoadmap.ClusterAlgebras.QuantumCompatible
 import TauCetiRoadmap.ClusterAlgebras.QuantumExpansion
+import TauCetiRoadmap.ClusterAlgebras.QuantumFrameDivision
+import TauCetiRoadmap.ClusterAlgebras.QuantumFrameSign
 import TauCetiRoadmap.ClusterAlgebras.QuantumInteracting
 import TauCetiRoadmap.ClusterAlgebras.QuantumLaurent
+import TauCetiRoadmap.ClusterAlgebras.QuantumOpposite
 import TauCetiRoadmap.ClusterAlgebras.QuantumPair
 import TauCetiRoadmap.ClusterAlgebras.QuantumPairChart
 import TauCetiRoadmap.ClusterAlgebras.QuantumPolynomial
 import TauCetiRoadmap.ClusterAlgebras.QuantumRealization
 import TauCetiRoadmap.ClusterAlgebras.QuantumReplacement
 import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
-import TauCetiRoadmap.ClusterAlgebras.QuantumSeedDivision
-import TauCetiRoadmap.ClusterAlgebras.QuantumSeedSign
 import TauCetiRoadmap.ClusterAlgebras.QuantumSpecialization
 import TauCetiRoadmap.ClusterAlgebras.QuantumSubsetRing
 import TauCetiRoadmap.ClusterAlgebras.QuantumSupport
 import TauCetiRoadmap.ClusterAlgebras.SeedBinomial
 import TauCetiRoadmap.ClusterAlgebras.SeedCompatibility
-import TauCetiRoadmap.ClusterAlgebras.SeedCoordinates
 import TauCetiRoadmap.ClusterAlgebras.SeedEvaluation
 import TauCetiRoadmap.ClusterAlgebras.UniversalY
 import TauCetiRoadmap.ClusterAlgebras.UpperBound
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCharts
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCoefficients
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCommuting
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundInteracting
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundLocal
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundRankTwo
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundRegroup
 import TauCetiRoadmap.ClusterAlgebras.UpperLaurent
 import TauCetiRoadmap.ClusterAlgebras.UpperSpecialization
 import TauCetiRoadmap.ClusterAlgebras.WordCoordinates
-import TauCetiRoadmap.LaurentPhenomenon
+import TauCetiRoadmap.ClusterAlgebras
 import TauCetiRoadmap.LaurentPhenomenon.AlgebraicCaterpillar
 import TauCetiRoadmap.LaurentPhenomenon.BinomialCorrection
 import TauCetiRoadmap.LaurentPhenomenon.Birational
@@ -114,6 +103,7 @@ import TauCetiRoadmap.LaurentPhenomenon.CoordinateWeight
 import TauCetiRoadmap.LaurentPhenomenon.Denominator
 import TauCetiRoadmap.LaurentPhenomenon.DenominatorPatching
 import TauCetiRoadmap.LaurentPhenomenon.ExchangePattern
+import TauCetiRoadmap.LaurentPhenomenon.ExchangeRings
 import TauCetiRoadmap.LaurentPhenomenon.FactorialTheorem
 import TauCetiRoadmap.LaurentPhenomenon.FiniteCaterpillar
 import TauCetiRoadmap.LaurentPhenomenon.FiniteExchangeReplacement
@@ -126,8 +116,8 @@ import TauCetiRoadmap.LaurentPhenomenon.FreeDivisibility
 import TauCetiRoadmap.LaurentPhenomenon.FreshParameter
 import TauCetiRoadmap.LaurentPhenomenon.GenericChart
 import TauCetiRoadmap.LaurentPhenomenon.GenericCoprimality
-import TauCetiRoadmap.LaurentPhenomenon.GroupRing
 import TauCetiRoadmap.LaurentPhenomenon.GroupedLocalAlgebra
+import TauCetiRoadmap.LaurentPhenomenon.GroupRing
 import TauCetiRoadmap.LaurentPhenomenon.IntegerEvaluation
 import TauCetiRoadmap.LaurentPhenomenon.IntegerSpecialization
 import TauCetiRoadmap.LaurentPhenomenon.Intersection
@@ -144,6 +134,7 @@ import TauCetiRoadmap.LaurentPhenomenon.LocalCancellation
 import TauCetiRoadmap.LaurentPhenomenon.LocalCoprimality
 import TauCetiRoadmap.LaurentPhenomenon.LocalModel
 import TauCetiRoadmap.LaurentPhenomenon.LocalStep
+import TauCetiRoadmap.LaurentPhenomenon.MatrixColumns
 import TauCetiRoadmap.LaurentPhenomenon.MixedLaurent
 import TauCetiRoadmap.LaurentPhenomenon.Mutation
 import TauCetiRoadmap.LaurentPhenomenon.MutationWord
@@ -194,6 +185,7 @@ import TauCetiRoadmap.LaurentPhenomenon.SkewPatching
 import TauCetiRoadmap.LaurentPhenomenon.SkewReplacement
 import TauCetiRoadmap.LaurentPhenomenon.SpecializationDescent
 import TauCetiRoadmap.LaurentPhenomenon.Tests.AlgebraicExamples
+import TauCetiRoadmap.LaurentPhenomenon.Tests.CaterpillarChecks
 import TauCetiRoadmap.LaurentPhenomenon.Tests.QuantumChecks
 import TauCetiRoadmap.LaurentPhenomenon.Tests.QuantumExamples
 import TauCetiRoadmap.LaurentPhenomenon.Tests.ReusableAPIAudit
@@ -201,6 +193,7 @@ import TauCetiRoadmap.LaurentPhenomenon.Tests.UpperBoundLibraryAudit
 import TauCetiRoadmap.LaurentPhenomenon.UniversalDeformation
 import TauCetiRoadmap.LaurentPhenomenon.UniversalInduction
 import TauCetiRoadmap.LaurentPhenomenon.UpperBoundPattern
+import TauCetiRoadmap.LaurentPhenomenon
 
 /-! Whole-library audit in a legacy driver: imports include the private olean
 parts, so private declarations and actual proof values remain visible.
@@ -373,34 +366,30 @@ run_cmd do
 -- Standard-axiom checks for the cluster endpoints.
 run_cmd do
   for root in #[``TauCeti.Laurent.PositiveCaterpillar.laurent,
-      ``TauCeti.Cluster.NormalizedCaterpillar.canonical_laurent,
-      ``TauCeti.Cluster.NormalizedMutationPattern.laurent_word,
-      ``TauCeti.Cluster.NormalizedMutationPattern.laurent_word_of_injective,
       ``TauCeti.Laurent.PositiveCaterpillar.deform_first_intersection,
-      ``TauCeti.Cluster.NormalizedLocalMutation.correction_exists,
       ``TauCeti.Laurent.PositiveCaterpillar.deform_chart_descent] do
     assertAxiomsStandard root
 
 -- Finite replacement in the ordinary quantum Laurent proof.
 run_cmd do
   let env ← getEnv
-  let root := ``TauCeti.Cluster.QuantumSeed.coordinate_mutateWord_mem_chartRing
+  let root := ``TauCeti.Cluster.ExchangeFrame.coordinate_mutateWord_mem_chartRing
   assertAxiomsStandard root
   assertTransitiveDependency env root ``TauCeti.Laurent.FiniteReplacementPremise.zss_mem
 
--- The quantum-first upper-bound and classical-specialization route.
+-- Quantum and classical public endpoints use the common polynomial proof.
 run_cmd do
   let env ← getEnv
-  let quantum := ``TauCeti.Cluster.QuantumSeed.coordinate_mutateWord_mem_chartRing
+  let quantum := ``TauCeti.Cluster.ExchangeFrame.coordinate_mutateWord_mem_chartRing
   assertTransitiveDependency env quantum ``TauCeti.Laurent.FiniteReplacementPremise.zss_mem
   assertTransitiveDependency env quantum ``TauCeti.Laurent.UpperBoundPattern.upperBound_le_mutation
   assertTransitiveDependency env quantum ``TauCeti.Module.exists_mul_smul_of_flat
   let geometric := ``TauCeti.Cluster.FullRankGeometricSeed.laurent
   let principal := ``TauCeti.Cluster.principalWord_integral_laurent
   let general := ``TauCeti.Cluster.matrixSeed_integral_laurent
-  let limit := ``TauCeti.Cluster.QuantumSeed.mutateWord_chartSpecializes
-  let laurent := ``TauCeti.Cluster.QuantumSeed.algebraMap_sp_eq_geometricPattern
-  let algebra := ``TauCeti.Cluster.QuantumSeed.range_classicalLimit
+  let limit := ``TauCeti.Cluster.ExchangeFrame.mutateWord_chartSpecializes
+  let laurent := ``TauCeti.Cluster.ExchangeFrame.algebraMap_sp_eq_geometricPattern
+  let algebra := ``TauCeti.Cluster.ExchangeFrame.range_classicalLimit
   let endpoints := #[quantum, geometric, limit, laurent, algebra, principal, general,
     ``TauCeti.Cluster.principalWord_polynomial_frozen,
     ``TauCeti.Cluster.matrixSeed_polynomial_frozen]
@@ -408,72 +397,130 @@ run_cmd do
     assertAxiomsStandard root
     assertNoForbiddenDependencies env root
   for (root, target) in #[
-    (quantum, ``TauCeti.Cluster.QuantumSeed.upperBound_mutate),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.inf_mutate_inf_inf_mutate_eq_fourRing),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.inf_mutate_inf_inf_mutate_eq_fourRing_of_eq_zero),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.fourRing_mutate),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.chartRing_inf_mutate_chartRing),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.mem_mutate_chartRing_iff),
-    (quantum, ``TauCeti.Cluster.PolynomialQuantumSeed.mem_chartRing_exchangeCoordinate_iff),
-    (geometric, ``TauCeti.Cluster.FullRankGeometricSeed.upperBound_mutation),
-    (limit, quantum),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.upperBound_mutate),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.inf_mutate_inf_inf_mutate_eq_fourRing),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.inf_mutate_inf_inf_mutate_eq_fourRing_of_eq_zero),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.fourRing_mutate),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.chartRing_inf_mutate_chartRing),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.mem_mutate_chartRing_iff),
+    (quantum, ``TauCeti.Cluster.PolynomialExchangeSeed.mem_chartRing_exchangeCoordinate_iff),
+    (geometric, ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_mutateWord_chartRing),
+    (limit, ``TauCeti.Cluster.PolynomialExchangeSeed.mutateWord_chartSpecializes),
     (laurent, limit),
     (algebra, limit),
     (algebra, quantum),
     (principal, ``TauCeti.Cluster.principalGeometricWord_laurent),
-    (principal, ``TauCeti.Cluster.principalGeometricWord_laurent_of_quantum),
-    (principal, limit),
-    (principal, ``TauCeti.QuantumTorus.sp),
-    (principal, quantum),
+    (principal, ``TauCeti.Cluster.FullRankGeometricSeed.laurent),
+    (principal, ``TauCeti.Cluster.commutativeFrame),
+    (principal, ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_mutateWord_chartRing),
     (general, principal),
-    (general, quantum),
+    (general, ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_mutateWord_chartRing),
     (general, ``TauCeti.Cluster.principal_coordinate_separation)] do
     assertTransitiveDependency env root target
   let classical := #[geometric,
     ``TauCeti.Cluster.FullRankGeometricSeed.upperBound_mutation,
-    ``TauCeti.Cluster.UpperBound.geometric_commuting_three_charts,
-    ``TauCeti.Cluster.UpperBound.geometric_interacting_three_chart]
-  for root in #[quantum, limit, laurent, algebra, principal, general] do
+    ``TauCeti.Cluster.FullRankGeometricSeed.three_chart_unitParameter]
+  for root in #[quantum, limit, laurent, algebra] do
     for target in classical do
+      assertNoTransitiveDependency env root target
+  for root in #[geometric, principal, general] do
+    for target in #[limit, ``TauCeti.QuantumTorus.sp,
+        ``TauCeti.Cluster.IsCompatiblePair.independent_columns] do
       assertNoTransitiveDependency env root target
 
 -- The all-rank polynomial theorem constructs its local inputs from actual seed data.
 run_cmd do
   let env ← getEnv
-  let root := ``TauCeti.Cluster.PolynomialQuantumSeed.coordinate_mutateWord_mem_chartRing
-  let limit := ``TauCeti.Cluster.PolynomialQuantumSeed.mutateWord_chartSpecializes_of_independent
-  let ordinary := ``TauCeti.Cluster.QuantumSeed.coordinate_mutateWord_mem_chartRing
+  let root := ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_chartRing
+  let limit := ``TauCeti.Cluster.PolynomialExchangeSeed.mutateWord_chartSpecializes_of_independent
+  let ordinary := ``TauCeti.Cluster.ExchangeFrame.coordinate_mutateWord_mem_chartRing
   for n in #[root, limit,
-      ``TauCeti.Cluster.PolynomialQuantumSeed.clusterAlgebra_le_upperAlgebra,
-      ``TauCeti.Cluster.PolynomialQuantumSeed.classicalLimitOnto_surjective,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.clusterAlgebra_le_upperAlgebra,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.classicalLimitOnto_surjective,
       ``TauCeti.Examples.PolynomialSeedChecks.cubicSeed_laurent,
       ``TauCeti.Examples.PolynomialSeedChecks.cubicSeed_classical_word] do
     assertAxiomsStandard n
     assertNoForbiddenDependencies env n
   for target in #[
-      ``TauCeti.Cluster.PolynomialQuantumSeed.finiteReplacement_pos,
-      ``TauCeti.Cluster.PolynomialQuantumSeed.replacementCoefficient_compat_pos,
-      ``TauCeti.Cluster.PolynomialQuantumSeed.replacement_defect_mem_pos,
-      ``TauCeti.Cluster.PolynomialQuantumSeed.mutated_exchange_term_pos,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.finiteReplacement_pos,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.replacementCoefficient_compat_pos,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.replacement_defect_mem_pos,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.mutated_exchange_term_pos,
       ``TauCeti.QuantumTorus.exists_eq_mul_aeval_mul_aeval,
       ``TauCeti.QuantumTorus.algHom_injective_of_coordinate_free,
       ``TauCeti.Laurent.UpperBoundPattern.upperBound_le_mutation] do
     assertTransitiveDependency env root target
   assertTransitiveDependency env limit root
   assertTransitiveDependency env limit
-    ``TauCeti.Cluster.PolynomialQuantumSeed.classicalExchangePolynomial_ne_zero
+    ``TauCeti.Cluster.PolynomialExchangeSeed.classicalExchangePolynomial_ne_zero
   assertTransitiveDependency env ordinary
-    ``TauCeti.Cluster.PolynomialQuantumSeed.inf_inf_eq_fourRing
-  assertTransitiveDependency env ordinary ``TauCeti.Cluster.QuantumSeed.polynomialSeed_mutate
+    ``TauCeti.Cluster.PolynomialExchangeSeed.inf_inf_eq_fourRing
+  assertTransitiveDependency env ordinary ``TauCeti.Cluster.ExchangeFrame.polynomialSeed_mutate
   assertNoTransitiveDependency env root ordinary
   assertNoTransitiveDependency env root ``TauCeti.Cluster.FullRankGeometricSeed.laurent
   assertTransitiveDependency env
     ``TauCeti.Examples.PolynomialSeedChecks.cubicSeed_laurent
-    ``TauCeti.Cluster.PolynomialQuantumSeed.coordinate_mutateWord_mem_mutateWord_chartRing
+    ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_mutateWord_chartRing
   assertTransitiveDependency env
     ``TauCeti.Examples.PolynomialSeedChecks.cubicSeed_classical_word limit
 
 -- Proof audit for ClusterAlgebras/Examples/InitialSeedConsumer.lean
+-- Both sectors instantiate one polynomial proof; the classical constructor
+-- uses zero form, independently certified columns and the original coefficient ring.
+run_cmd do
+  let env ← getEnv
+  let core := ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_chartRing
+  let classical := ``TauCeti.Cluster.FullRankGeometricSeed.three_chart_unitParameter
+  let zeroCase := ``TauCeti.Examples.ScalarSpecializationChecks.classicalCubicSeed_laurent
+  for root in #[``TauCeti.Cluster.QuantumSeed.coordinate_mutateWord_mem_chartRing,
+      ``TauCeti.Cluster.PolynomialQuantumSeed.coordinate_mutateWord_mem_chartRing,
+      zeroCase] do
+    assertTransitiveDependency env root
+      ``TauCeti.Cluster.PolynomialExchangeSeed.coordinate_mutateWord_mem_mutateWord_chartRing
+    assertAxiomsStandard root
+    assertNoForbiddenDependencies env root
+  assertTransitiveDependency env classical ``TauCeti.Cluster.PolynomialExchangeSeed.three_chart
+  assertTransitiveDependency env classical
+    ``TauCeti.Cluster.PolynomialExchangeSeed.independent_dividedColumns
+  assertTransitiveDependency env classical ``TauCeti.Cluster.commutativeFrame
+  assertTransitiveDependency env classical ``TauCeti.Cluster.unitParameterChart_injective
+  assertTransitiveDependency env ``TauCeti.Cluster.ExchangeFrame.mutate
+    ``TauCeti.Cluster.PolynomialExchangeSeed.mutate
+  assertTransitiveDependency env ``TauCeti.Cluster.ExchangeFrame.mutate_mutate
+    ``TauCeti.Cluster.PolynomialExchangeSeed.mutate_mutate
+  assertTransitiveDependency env ``TauCeti.Cluster.ExchangeFrame.chartRing_inf_mutate_chartRing
+    ``TauCeti.Cluster.PolynomialExchangeSeed.chartRing_inf_mutate_chartRing
+  for (binary, polynomial) in #[
+    (``TauCeti.Cluster.ExchangeFrame.exchangeCoordinate_pow,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.exchangeCoordinate_pow),
+    (``TauCeti.Cluster.ExchangeFrame.exchangeData_subsetRing,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.exchangeData_subsetRing),
+    (``TauCeti.Cluster.ExchangeFrame.mem_mutate_chartRing_iff,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.mem_mutate_chartRing_iff),
+    (``TauCeti.Cluster.ExchangeFrame.commute_centralProduct,
+      ``TauCeti.Cluster.PolynomialExchangeSeed.commute_centralProduct)] do
+    assertTransitiveDependency env binary polynomial
+  assertTransitiveDependency env ``TauCeti.Cluster.QuantumSeed.ofCompatible
+    ``TauCeti.Cluster.IsCompatiblePair.independent_columns
+  assertNoTransitiveDependency env core ``TauCeti.Cluster.IsCompatiblePair.independent_columns
+  for target in #[``TauCeti.Cluster.ExchangeFrame.mutate,
+      ``TauCeti.Cluster.ExchangeFrame.coordinate_mutateWord_mem_chartRing,
+      ``TauCeti.Cluster.ExchangeFrame.upperBound_mutate,
+      ``TauCeti.Cluster.FullRankGeometricSeed.laurent] do
+    assertNoTransitiveDependency env core target
+  assertNoTransitiveDependency env zeroCase
+    ``TauCeti.Cluster.PolynomialExchangeSeed.mutateWord_chartSpecializes
+  assertNoTransitiveDependency env zeroCase ``TauCeti.Cluster.IsCompatiblePair.independent_columns
+  assertNoTransitiveDependency env ``TauCeti.Cluster.commutativeFrame core
+  for old in #[`TauCeti.Cluster.principalGeometricWord_laurent_of_quantum,
+      `TauCeti.Cluster.exists_integral_compatible_extension,
+      `TauCeti.Cluster.ExchangeFrame.mutateChart_injective,
+      `TauCeti.Cluster.PolynomialExchangeSeed.columnWeight_ne_zero,
+      `TauCeti.Cluster.UpperBound.geometric_commuting_three_charts,
+      `TauCeti.Cluster.UpperBound.geometric_interacting_three_chart,
+      `TauCeti.Cluster.NormalizedMutationPattern.laurent_word] do
+    if env.contains old then throwError "Obsolete specialized proof still present: {old}"
+
 run_cmd do
   let env ← getEnv
   let root := ``TauCeti.Examples.Somos4.initial_seed_laurent_representative
@@ -482,14 +529,12 @@ run_cmd do
     ``TauCeti.Cluster.MatrixSeed.cluster_laurent_unique,
     ``TauCeti.Cluster.matrixSeed_integral_laurent,
     ``TauCeti.Cluster.principalWord_integral_laurent,
-    ``TauCeti.Cluster.principalGeometricWord_laurent_of_quantum,
-    ``TauCeti.Cluster.QuantumSeed.upperBound_mutate] do
+    ``TauCeti.Cluster.principalGeometricWord_laurent,
+    ``TauCeti.Cluster.PolynomialExchangeSeed.upperBound_mutate] do
     assertTransitiveDependency env root target
   assertNoForbiddenDependencies env root
-  for target in #[``TauCeti.Cluster.FullRankGeometricSeed.laurent,
-    ``TauCeti.Cluster.FullRankGeometricSeed.upperBound_mutation,
-    ``TauCeti.Cluster.UpperBound.geometric_commuting_three_charts,
-    ``TauCeti.Cluster.UpperBound.geometric_interacting_three_chart] do
+  for target in #[``TauCeti.Cluster.ExchangeFrame.mutateWord_chartSpecializes,
+    ``TauCeti.QuantumTorus.sp, ``TauCeti.Cluster.IsCompatiblePair.independent_columns] do
     assertNoTransitiveDependency env root target
 
 -- Proof audit for ClusterAlgebras/Examples/PolynomialQuantum.lean
@@ -500,7 +545,7 @@ run_cmd do
   assertAxiomsStandard ``replacement
   assertAxiomsStandard ``xy_ne_yx
   assertTransitiveDependency env ``replacement ``FiniteReplacementPremise.zss_mem
-  assertNoTransitiveDependency env ``replacement ``QuantumSeed.replacement_mem
+  assertNoTransitiveDependency env ``replacement ``ExchangeFrame.replacement_mem
   assertNoTransitiveDependency env ``replacement ``ReplacementPremise.zss_mem
 
 end TauCeti.Examples.PolynomialQuantum
@@ -511,22 +556,21 @@ run_cmd do
   let roots := #[``TauCeti.Examples.Somos4.sequence_integral,
     ``TauCeti.Examples.Somos4.integral_of_recurrence,
     ``TauCeti.Examples.Somos4.sequence_positive_integral]
-  let classical := #[``TauCeti.Cluster.FullRankGeometricSeed.laurent,
-    ``TauCeti.Cluster.FullRankGeometricSeed.upperBound_mutation,
-    ``TauCeti.Cluster.UpperBound.geometric_commuting_three_charts,
-    ``TauCeti.Cluster.UpperBound.geometric_interacting_three_chart]
+  let excluded := #[``TauCeti.Cluster.ExchangeFrame.mutateWord_chartSpecializes,
+    ``TauCeti.QuantumTorus.sp,
+    ``TauCeti.Cluster.IsCompatiblePair.independent_columns]
   for root in roots do
     assertAxiomsStandard root
     assertNoForbiddenDependencies env root
-    for target in classical do
+    for target in excluded do
       assertNoTransitiveDependency env root target
   let root := ``TauCeti.Examples.Somos4.sequence_integral
   for target in #[
     ``TauCeti.Cluster.MatrixSeed.cluster_laurent_unique,
     ``TauCeti.Cluster.matrixSeed_integral_laurent,
     ``TauCeti.Cluster.principalWord_integral_laurent,
-    ``TauCeti.Cluster.principalGeometricWord_laurent_of_quantum,
-    ``TauCeti.Cluster.QuantumSeed.upperBound_mutate] do
+    ``TauCeti.Cluster.principalGeometricWord_laurent,
+    ``TauCeti.Cluster.PolynomialExchangeSeed.upperBound_mutate] do
     assertTransitiveDependency env root target
 
 -- Both binary and commutative-polynomial adapters use the finite replacement core.

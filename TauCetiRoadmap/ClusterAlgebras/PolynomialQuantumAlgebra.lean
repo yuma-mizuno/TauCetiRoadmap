@@ -7,7 +7,7 @@ module
 
 public import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumClassical
 public import TauCetiRoadmap.ClusterAlgebras.QuantumExpansion
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeedDivision
+public import TauCetiRoadmap.ClusterAlgebras.QuantumFrameDivision
 
 /-!
 # Polynomial quantum cluster algebras and their classical limits
@@ -19,7 +19,7 @@ are frozen, while every chart in the upper intersection inverts all coordinates.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
@@ -27,10 +27,10 @@ noncomputable section
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D]
   {M K : Type*} [Fintype M] [DecidableEq M] [Fintype K] [DecidableEq K]
-  {row : K ↪ M} (s : PolynomialQuantumSeed D row)
+  {row : K ↪ M} (s : PolynomialExchangeSeed (u₀ := vUnit) D row)
 
 theorem mutateWord_coordinate_of_notMem (w : List K) {a : M} (ha : a ∉ Set.range row) :
-    (mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s).coordinate a =
+    (mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s).coordinate a =
       s.coordinate a := by
   induction w generalizing s with
   | nil => rfl
@@ -40,14 +40,14 @@ theorem mutateWord_coordinate_of_notMem (w : List K) {a : M} (ha : a ∉ Set.ran
 /-- All reachable coordinates and the chosen initial inverses generate the cluster algebra. -/
 def clusterGenerators (S : Set M) : Set D :=
   {y | ∃ w : List K, ∃ a, y =
-    ((mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s).coordinate a : D)} ∪
+    ((mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s).coordinate a : D)} ∪
   (fun a ↦ (s.coordinate a : D)⁻¹) '' S
 
 /-- The polynomial quantum cluster algebra with inverses in the frozen subset `S`. -/
 def clusterAlgebra (S : Set M) : Subalgebra Zv D := Algebra.adjoin Zv (s.clusterGenerators S)
 
 theorem coordinate_mutateWord_mem_clusterAlgebra (S : Set M) (w : List K) (a : M) :
-    ((mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s).coordinate a : D) ∈
+    ((mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s).coordinate a : D) ∈
       s.clusterAlgebra S := Algebra.subset_adjoin (Or.inl ⟨w, a, rfl⟩)
 
 theorem inv_coordinate_mem_clusterAlgebra {S : Set M} {a : M} (ha : a ∈ S) :
@@ -57,26 +57,26 @@ theorem inv_coordinate_mem_clusterAlgebra {S : Set M} {a : M} (ha : a ∈ S) :
 /-- The intersection of all reachable integral chart subalgebras. -/
 def upperAlgebra : Subalgebra Zv D :=
   ⨅ w : List K,
-    (mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s).toQuantumSeed.chartAlgebra
+    (mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s).toExchangeFrame.chartAlgebra
 
 /-- The finite upper bound as an integral subalgebra. -/
 def upperBoundAlgebra : Subalgebra Zv D :=
-  s.toQuantumSeed.chartAlgebra ⊓ ⨅ k, (s.mutate k).toQuantumSeed.chartAlgebra
+  s.toExchangeFrame.chartAlgebra ⊓ ⨅ k, (s.mutate k).toExchangeFrame.chartAlgebra
 
 theorem upperAlgebra_eq_upperBoundAlgebra : s.upperAlgebra = s.upperBoundAlgebra := by
   apply Subalgebra.toSubring_injective
   have hU : s.upperAlgebra.toSubring =
       TauCeti.Cluster.upperClusterRing (algebraMap Zv D).range
-        (fun t : PolynomialQuantumSeed D row ↦ fun a ↦ (t.coordinate a : D))
+        (fun t : PolynomialExchangeSeed (u₀ := vUnit) D row ↦ fun a ↦ (t.coordinate a : D))
         (fun k t ↦ t.mutate k) s := by
     ext y
     simp only [Subalgebra.mem_toSubring, upperAlgebra, Algebra.mem_iInf,
-      QuantumSeed.mem_chartAlgebra, mem_upperClusterRing]
+      ExchangeFrame.mem_chartAlgebra, mem_upperClusterRing]
     rfl
   have hB : s.upperBoundAlgebra.toSubring = s.upperBound := by
     ext y
     simp only [Subalgebra.mem_toSubring, upperBoundAlgebra, Algebra.mem_inf,
-      Algebra.mem_iInf, QuantumSeed.mem_chartAlgebra, upperBound, mem_upperBound]
+      Algebra.mem_iInf, ExchangeFrame.mem_chartAlgebra, upperBound, mem_upperBound]
     rfl
   rw [hU, hB, s.upperClusterRing_eq_upperBound]
 
@@ -85,31 +85,31 @@ theorem clusterAlgebra_le_upperAlgebra {S : Set M} (hS : S ⊆ (Set.range row)�
   apply Algebra.adjoin_le
   rintro y (⟨w, a, rfl⟩ | ⟨a, ha, rfl⟩)
   · exact Algebra.mem_iInf.mpr fun u ↦ by
-      rw [QuantumSeed.mem_chartAlgebra]
+      rw [ExchangeFrame.mem_chartAlgebra]
       exact s.coordinate_mutateWord_mem_mutateWord_chartRing u w a
   · apply Algebra.mem_iInf.mpr
     intro w
-    rw [QuantumSeed.mem_chartAlgebra]
+    rw [ExchangeFrame.mem_chartAlgebra]
     dsimp only
     rw [← s.mutateWord_coordinate_of_notMem w (hS ha)]
     exact inverse_mem_chartRing _ _ a
 
 theorem clusterAlgebra_le_chartAlgebra {S : Set M} (hS : S ⊆ (Set.range row)ᶜ) :
-    s.clusterAlgebra S ≤ s.toQuantumSeed.chartAlgebra := fun _ hy ↦
+    s.clusterAlgebra S ≤ s.toExchangeFrame.chartAlgebra := fun _ hy ↦
   (Algebra.mem_iInf.mp (s.clusterAlgebra_le_upperAlgebra hS hy)) []
 
 /-- Polynomial mutation preserves the division subring generated by the chart. -/
 theorem mutate_subfield (k : K) :
-    (s.mutate k).toQuantumSeed.subfield = s.toQuantumSeed.subfield := by
-  have hle : ∀ t : PolynomialQuantumSeed D row,
-      (t.mutate k).toQuantumSeed.subfield ≤ t.toQuantumSeed.subfield := by
+    (s.mutate k).toExchangeFrame.subfield = s.toExchangeFrame.subfield := by
+  have hle : ∀ t : PolynomialExchangeSeed (u₀ := vUnit) D row,
+      (t.mutate k).toExchangeFrame.subfield ≤ t.toExchangeFrame.subfield := by
     intro t
     apply Subfield.closure_le.mpr
     apply Set.union_subset
     · rintro _ ⟨c, rfl⟩
-      exact t.toQuantumSeed.algebraMap_mem_subfield c
+      exact t.toExchangeFrame.algebraMap_mem_subfield c
     · rintro _ ⟨a, rfl⟩
-      exact t.toQuantumSeed.chartRing_le_subfield (t.coordinate_mutate_mem_chartRing k a)
+      exact t.toExchangeFrame.chartRing_le_subfield (t.coordinate_mutate_mem_chartRing k a)
   apply le_antisymm (hle s)
   have h := hle (s.mutate k)
   rwa [s.mutate_mutate] at h
@@ -129,17 +129,17 @@ variable (ε : AddMonoidAlgebra ℤ (M → ℤ) →+* F) {S : Set M}
 /-- Integral expansion, followed by `v=1` and evaluation in the classical initial chart. -/
 def classicalLimit : s.clusterAlgebra S →+* F :=
   (ε.comp (sp _)).comp
-    (s.toQuantumSeed.expansion.toAlgHom.toRingHom.comp
+    (s.toExchangeFrame.expansion.toAlgHom.toRingHom.comp
       (Subalgebra.inclusion (s.clusterAlgebra_le_chartAlgebra hS)).toRingHom)
 
 variable {s ε hS}
 
 theorem classicalLimit_eq_of_chartSpecializes {y : s.clusterAlgebra S} {z : F}
-    (h : ChartSpecializes s.toQuantumSeed.chart ε (y : D) z) :
+    (h : ChartSpecializes s.toExchangeFrame.chart ε (y : D) z) :
     s.classicalLimit ε hS y = z := by
   obtain ⟨f, hf, rfl⟩ := h
-  change ε (sp _ (s.toQuantumSeed.expansion _)) = _
-  rw [s.toQuantumSeed.expansion_eq_iff.mpr hf]
+  change ε (sp _ (s.toExchangeFrame.expansion _)) = _
+  rw [s.toExchangeFrame.expansion_eq_iff.mpr hf]
 
 theorem classicalLimit_algebraMap (c : Zv) :
     s.classicalLimit ε hS (algebraMap Zv (s.clusterAlgebra S) c) = (evalOne c : F) :=
@@ -158,7 +158,7 @@ theorem classicalLimit_coordinate (a : M) :
     s.classicalLimit ε hS ⟨s.coordinate a,
       s.coordinate_mutateWord_mem_clusterAlgebra S [] a⟩ = x a :=
   classicalLimit_eq_of_chartSpecializes
-    ⟨monomial (Pi.single a 1), s.toQuantumSeed.monomial_single a, by rw [sp_monomial, hε]⟩
+    ⟨monomial (Pi.single a 1), s.toExchangeFrame.monomial_single a, by rw [sp_monomial, hε]⟩
 
 theorem classicalLimit_inv_coordinate {a : M} (ha : a ∈ S) :
     s.classicalLimit ε hS ⟨(s.coordinate a : D)⁻¹,
@@ -219,4 +219,4 @@ theorem classicalLimitOnto_surjective :
   exact ⟨z, rfl⟩
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

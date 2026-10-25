@@ -7,6 +7,7 @@ module
 
 public import TauCetiRoadmap.ClusterAlgebras.PrincipalRank
 public import TauCetiRoadmap.ClusterAlgebras.GeometricSeed
+public import TauCetiRoadmap.LaurentPhenomenon.MatrixColumns
 public import Mathlib.LinearAlgebra.Matrix.BilinearForm
 public import Mathlib.Tactic
 
@@ -176,11 +177,16 @@ variable [DecidableEq M]
 def compatibilityMatrix (row : K ↪ M) (d : K → ℤ) : Matrix K M ℤ :=
   fun k l => if l = row k then d k else 0
 
-/-- `(B_ext, Λ)` is a **compatible pair**: `B_extᵀ Λ = (D_s 0)` for the symmetrizer `s` carried
-  by `B_ext`,
-where the mutable index `k` sits in row `row k`. Alternation of `Λ` is a separate hypothesis. -/
-def IsCompatiblePair {row : K ↪ M} (B : ExtendedExchangeMatrix row) (Λ : Matrix M M ℤ) : Prop :=
-  ∀ k l, ∑ i, B.matrix i k * Λ i l = if l = row k then B.symmetrizer k else 0
+/-- Column compatibility with integral form weights `w`: `B_extᵀ Λ = (diag(w) 0)`.
+The weights may vanish and are separate from the matrix's positive symmetrizer.
+Alternation and column independence are separate hypotheses. -/
+def IsColumnCompatible {row : K ↪ M} (B : ExtendedExchangeMatrix row)
+    (Λ : Matrix M M ℤ) (w : K → ℤ) : Prop :=
+  ∀ k l, ∑ i, B.matrix i k * Λ i l = if l = row k then w k else 0
+
+/-- Ordinary quantum compatibility uses the positive symmetrizer as its form weight. -/
+abbrev IsCompatiblePair {row : K ↪ M} (B : ExtendedExchangeMatrix row)
+    (Λ : Matrix M M ℤ) : Prop := IsColumnCompatible B Λ B.symmetrizer
 
 omit [Fintype M] [DecidableEq M] in
 theorem isAlternatingMatrix_iff_transpose {Λ : Matrix M M ℤ} :
@@ -194,9 +200,9 @@ theorem isAlternatingMatrix_iff_transpose {Λ : Matrix M M ℤ} :
     simp only [transpose_apply, neg_apply] at this
     rw [this]
 
-theorem isCompatiblePair_iff_transpose_mul {row : K ↪ M} {B : ExtendedExchangeMatrix row}
-    {Λ : Matrix M M ℤ} :
-    IsCompatiblePair B Λ ↔ B.matrixᵀ * Λ = compatibilityMatrix row B.symmetrizer := by
+theorem isColumnCompatible_iff_transpose_mul {row : K ↪ M} {B : ExtendedExchangeMatrix row}
+    {Λ : Matrix M M ℤ} {w : K → ℤ} :
+    IsColumnCompatible B Λ w ↔ B.matrixᵀ * Λ = compatibilityMatrix row w := by
   constructor
   · intro h
     ext k l
@@ -204,6 +210,11 @@ theorem isCompatiblePair_iff_transpose_mul {row : K ↪ M} {B : ExtendedExchange
   · intro h k l
     have := congrFun (congrFun h k) l
     simpa [Matrix.mul_apply, compatibilityMatrix] using this
+
+theorem isCompatiblePair_iff_transpose_mul {row : K ↪ M} {B : ExtendedExchangeMatrix row}
+    {Λ : Matrix M M ℤ} :
+    IsCompatiblePair B Λ ↔ B.matrixᵀ * Λ = compatibilityMatrix row B.symmetrizer :=
+  isColumnCompatible_iff_transpose_mul
 
 theorem compatibilityMatrix_mul {N : Type*} (row : K ↪ M) (d : K → ℤ) (X : Matrix M N ℤ)
     (k : K) (l : N) : (compatibilityMatrix row d * X) k l = d k * X (row k) l := by
@@ -295,33 +306,78 @@ theorem isCompatiblePair_ofCompatible {row : K ↪ M} (B : Matrix M K ℤ) {Λ :
     IsCompatiblePair (ExtendedExchangeMatrix.ofCompatible B d hd hΛ h) Λ :=
   isCompatiblePair_iff_transpose_mul.2 h
 
-namespace IsCompatiblePair
+namespace IsColumnCompatible
 
-variable {row : K ↪ M} {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ}
+variable {row : K ↪ M} {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ} {w : K → ℤ}
 
-theorem transpose_mul (hc : IsCompatiblePair B Λ) :
-    B.matrixᵀ * Λ = compatibilityMatrix row B.symmetrizer :=
-  isCompatiblePair_iff_transpose_mul.1 hc
+theorem transpose_mul (hc : IsColumnCompatible B Λ w) :
+    B.matrixᵀ * Λ = compatibilityMatrix row w :=
+  isColumnCompatible_iff_transpose_mul.1 hc
 
-theorem matrixForm_col_single (hc : IsCompatiblePair B Λ) (k : K) (l : M) :
+theorem matrixForm_col_single (hc : IsColumnCompatible B Λ w) (k : K) (l : M) :
     matrixForm Λ (fun i => B.matrix i k) (Pi.single l 1) =
-      if l = row k then B.symmetrizer k else 0 := by
+      if l = row k then w k else 0 := by
   rw [matrixForm_single_right]
   exact hc k l
 
 /-- The form against a column of `B_ext` reads off one coordinate. -/
-theorem matrixForm_col (hc : IsCompatiblePair B Λ) (k : K) (b : M → ℤ) :
-    matrixForm Λ (fun i => B.matrix i k) b = B.symmetrizer k * b (row k) :=
+theorem matrixForm_col (hc : IsColumnCompatible B Λ w) (k : K) (b : M → ℤ) :
+    matrixForm Λ (fun i => B.matrix i k) b = w k * b (row k) :=
   matrixForm_col_of_transpose_mul_eq hc.transpose_mul k b
 
-theorem matrixForm_col_right (hc : IsCompatiblePair B Λ) (hΛ : IsAlternatingMatrix Λ)
+theorem matrixForm_col_right (hc : IsColumnCompatible B Λ w) (hΛ : IsAlternatingMatrix Λ)
     (k : K) (a : M → ℤ) :
-    matrixForm Λ a (fun i => B.matrix i k) = -(B.symmetrizer k * a (row k)) := by
+    matrixForm Λ a (fun i => B.matrix i k) = -(w k * a (row k)) := by
   rw [hΛ.matrixForm_swap, hc.matrixForm_col]
 
-theorem neg (hc : IsCompatiblePair B Λ) : IsCompatiblePair B.neg (-Λ) := by
+theorem neg (hc : IsColumnCompatible B Λ w) : IsColumnCompatible B.neg (-Λ) w := by
   intro k l
   simpa [neg_mul_neg] using hc k l
+
+/-- The two exchange vectors `-e_k + [±b_{•k}]_+` pair equally with every `e_j`, `j ≠ row k`:
+they differ by the column `b_{•k}`. -/
+theorem matrixForm_exchange_pos_eq_neg (hc : IsColumnCompatible B Λ w) {k : K} {j : M}
+    (hj : j ≠ row k) :
+    matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (B.matrix i k))
+        (Pi.single j 1) =
+      matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (-B.matrix i k))
+        (Pi.single j 1) := by
+  have hv : (-(Pi.single (row k) 1) + fun i => positivePart (B.matrix i k)) =
+      (-(Pi.single (row k) 1) + fun i => positivePart (-B.matrix i k)) +
+        fun i => B.matrix i k := by
+    funext i
+    have := positivePart_sub_positivePart_neg (B.matrix i k)
+    simp only [Pi.add_apply, Pi.neg_apply]
+    omega
+  rw [hv, map_add, LinearMap.add_apply, hc.matrixForm_col_single]
+  simp [hj]
+
+end IsColumnCompatible
+
+namespace IsCompatiblePair
+variable {row : K ↪ M} {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ}
+
+/-- Positive ordinary compatibility implies column independence, without a
+finiteness assumption on the mutable index type. -/
+theorem independent_columns (hc : IsCompatiblePair B Λ) :
+    LinearIndependent ℚ (fun k ↦ fun a ↦ (B.matrix a k : ℚ)) := by
+  classical
+  rw [linearIndependent_iff']
+  intro S c h k hk
+  let f : (M → ℚ) →ₗ[ℚ] ℚ :=
+    { toFun := fun v ↦ ∑ a, v a * (Λ a (row k) : ℚ)
+      map_add' := fun v w ↦ by simp [add_mul, Finset.sum_add_distrib]
+      map_smul' := fun r v ↦ by simp [smul_eq_mul, mul_assoc, Finset.mul_sum] }
+  have hcol (j : K) : f (fun a ↦ (B.matrix a j : ℚ)) =
+      if row k = row j then (B.symmetrizer j : ℚ) else 0 := by
+    change (∑ a, (B.matrix a j : ℚ) * (Λ a (row k) : ℚ)) = _
+    exact_mod_cast hc j (row k)
+  have hv := congrArg f h
+  simp only [map_sum, map_smul, map_zero] at hv
+  have hz : c k * (B.symmetrizer k : ℚ) = 0 := by
+    simpa [hcol, row.injective.eq_iff, hk, smul_eq_mul] using hv
+  exact (mul_eq_zero.mp hz).resolve_right
+    (by exact_mod_cast (B.symmetrizer_pos k).ne')
 
 theorem col_ne_zero (hc : IsCompatiblePair B Λ) (k : K) : (fun i => B.matrix i k) ≠ 0 := by
   intro h
@@ -371,25 +427,9 @@ theorem rank_rat [Fintype K] (hc : IsCompatiblePair B Λ) :
     (injective_iff_map_eq_zero _).mpr fun c hc' => hc.mulVec_rat_eq_zero hc'
   rw [Matrix.rank, LinearMap.finrank_range_of_inj hinj, Module.finrank_fintype_fun_eq_card]
 
-/-- The two exchange vectors `-e_k + [±b_{•k}]_+` pair equally with every `e_j`, `j ≠ row k`:
-they differ by the column `b_{•k}`. -/
-theorem matrixForm_exchange_pos_eq_neg (hc : IsCompatiblePair B Λ) {k : K} {j : M}
-    (hj : j ≠ row k) :
-    matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (B.matrix i k))
-        (Pi.single j 1) =
-      matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (-B.matrix i k))
-        (Pi.single j 1) := by
-  have hv : (-(Pi.single (row k) 1) + fun i => positivePart (B.matrix i k)) =
-      (-(Pi.single (row k) 1) + fun i => positivePart (-B.matrix i k)) +
-        fun i => B.matrix i k := by
-    funext i
-    have := positivePart_sub_positivePart_neg (B.matrix i k)
-    simp only [Pi.add_apply, Pi.neg_apply]
-    omega
-  rw [hv, map_add, LinearMap.add_apply, hc.matrixForm_col_single]
-  simp [hj]
 
 end IsCompatiblePair
+
 
 /-- **Full rank from compatibility.** If `B_extᵀΛ = (diag(d) 0)` with `Λ` alternating and `d`
 positive, then `rank_ℚ B_ext = |K|`. -/
@@ -512,11 +552,11 @@ end Mutation
 
 /-! ### Mutation of compatible pairs -/
 
-namespace IsCompatiblePair
+namespace IsColumnCompatible
 
-variable {row : K ↪ M} {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ} {k : K}
+variable {row : K ↪ M} {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ} {w : K → ℤ} {k : K}
 
-theorem matrixForm_exchange_sign (hc : IsCompatiblePair B Λ) {ε : ℤ} (hε : ε = 1 ∨ ε = -1)
+theorem matrixForm_exchange_sign (hc : IsColumnCompatible B Λ w) {ε : ℤ} (hε : ε = 1 ∨ ε = -1)
     {j : M} (hj : j ≠ row k) :
     matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (-ε * B.matrix i k))
         (Pi.single j 1) =
@@ -528,7 +568,7 @@ theorem matrixForm_exchange_sign (hc : IsCompatiblePair B Λ) {ε : ℤ} (hε : 
   · simp only [neg_neg, one_mul]
 
 /-- The entry `(row k, j)` of the mutated form is `Λ(-e_k + [b_{•k}]_+, e_j)`. -/
-theorem formMutation_apply_row_left_pos (hc : IsCompatiblePair B Λ) {ε : ℤ}
+theorem formMutation_apply_row_left_pos (hc : IsColumnCompatible B Λ w) {ε : ℤ}
     (hε : ε = 1 ∨ ε = -1) {j : M} (hj : j ≠ row k) :
     formMutation row B.matrix Λ k ε (row k) j =
       matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (B.matrix i k))
@@ -537,14 +577,14 @@ theorem formMutation_apply_row_left_pos (hc : IsCompatiblePair B Λ) {ε : ℤ}
     hc.matrixForm_exchange_sign hε hj]
 
 /-- The entry `(row k, j)` of the mutated form is `Λ(-e_k + [-b_{•k}]_+, e_j)`. -/
-theorem formMutation_apply_row_left_neg (hc : IsCompatiblePair B Λ) {ε : ℤ}
+theorem formMutation_apply_row_left_neg (hc : IsColumnCompatible B Λ w) {ε : ℤ}
     (hε : ε = 1 ∨ ε = -1) {j : M} (hj : j ≠ row k) :
     formMutation row B.matrix Λ k ε (row k) j =
       matrixForm Λ (-(Pi.single (row k) 1) + fun i => positivePart (-B.matrix i k))
         (Pi.single j 1) := by
   rw [hc.formMutation_apply_row_left_pos hε hj, hc.matrixForm_exchange_pos_eq_neg hj]
 
-theorem formMutation_eq_one (hc : IsCompatiblePair B Λ) (hΛ : IsAlternatingMatrix Λ) {ε : ℤ}
+theorem formMutation_eq_one (hc : IsColumnCompatible B Λ w) (hΛ : IsAlternatingMatrix Λ) {ε : ℤ}
     (hε : ε = 1 ∨ ε = -1) :
     formMutation row B.matrix Λ k ε = formMutation row B.matrix Λ k 1 := by
   have h1 : (1 : ℤ) = 1 ∨ (1 : ℤ) = -1 := Or.inl rfl
@@ -561,28 +601,27 @@ theorem formMutation_eq_one (hc : IsCompatiblePair B Λ) (hΛ : IsAlternatingMat
       formMutation_apply_of_ne row B.matrix Λ k 1 hi hj]
 
 /-- The mutated form does not depend on the sign `ε`. -/
-theorem formMutation_sign_eq (hc : IsCompatiblePair B Λ) (hΛ : IsAlternatingMatrix Λ)
+theorem formMutation_sign_eq (hc : IsColumnCompatible B Λ w) (hΛ : IsAlternatingMatrix Λ)
     {ε ε' : ℤ} (hε : ε = 1 ∨ ε = -1) (hε' : ε' = 1 ∨ ε' = -1) :
     formMutation row B.matrix Λ k ε = formMutation row B.matrix Λ k ε' := by
   rw [hc.formMutation_eq_one hΛ hε, hc.formMutation_eq_one hΛ hε']
 
 /-- Mutation preserves compatibility, with the same symmetrizer. -/
-theorem mutation [Finite K] [DecidableEq K] (hc : IsCompatiblePair B Λ) {ε : ℤ}
+theorem mutation [Finite K] [DecidableEq K] (hc : IsColumnCompatible B Λ w)
+    (hΛ : IsAlternatingMatrix Λ) {ε : ℤ}
     (hε : ε = 1 ∨ ε = -1) :
-    IsCompatiblePair (B.mutate k) (formMutation row B.matrix Λ k ε) := by
+    IsColumnCompatible (B.mutate k) (formMutation row B.matrix Λ k ε) w := by
   let : Fintype K := Fintype.ofFinite K
   have hdiag := B.diagonal k
-  have hsym := B.symmetrized
-  have hd := B.symmetrizer_pos
+  have hsym := symmetrized_of_transpose_mul_eq hΛ hc.transpose_mul
   have hmat := hc.transpose_mul
-  rw [isCompatiblePair_iff_transpose_mul, ExtendedExchangeMatrix.mutate_matrix,
-    ExtendedExchangeMatrix.mutate_symmetrizer,
+  rw [isColumnCompatible_iff_transpose_mul, ExtendedExchangeMatrix.mutate_matrix,
     extendedMatrixMutation_factorization row B.matrix k ε hε hdiag, formMutation]
   have hEE : (mutationLeft row B.matrix k ε)ᵀ * (mutationLeft row B.matrix k ε)ᵀ = 1 := by
     rw [← Matrix.transpose_mul, mutationLeft_involutive, transpose_one]
   have hred : (mutationLeft row B.matrix k ε * B.matrix * mutationRight row B.matrix k ε)ᵀ *
       ((mutationLeft row B.matrix k ε)ᵀ * Λ * mutationLeft row B.matrix k ε) =
-      ((compatibilityMatrix row B.symmetrizer * mutationLeft row B.matrix k ε)ᵀ *
+      ((compatibilityMatrix row w * mutationLeft row B.matrix k ε)ᵀ *
         mutationRight row B.matrix k ε)ᵀ := by
     rw [← hmat]
     simp only [Matrix.transpose_mul, transpose_transpose, Matrix.mul_assoc]
@@ -592,11 +631,27 @@ theorem mutation [Finite K] [DecidableEq K] (hc : IsCompatiblePair B Λ) {ε : �
   ext a l
   rw [transpose_apply, mul_mutationRight]
   simp only [transpose_apply, compatibilityMatrix_mul]
-  have key : B.symmetrizer a * positivePart (-ε * B.matrix (row a) k) =
-      B.symmetrizer k * positivePart (ε * B.matrix (row k) a) := by
-    rw [mul_positivePart_of_nonneg (hd a).le, mul_positivePart_of_nonneg (hd k).le]
-    congr 1
-    linear_combination (-ε) * hsym a k
+  have key : w a * positivePart (-ε * B.matrix (row a) k) =
+      w k * positivePart (ε * B.matrix (row k) a) := by
+    have hsign := signSkew_of_positive_symmetrizer
+      (fun i j ↦ B.matrix (row i) j) B.symmetrizer B.symmetrizer_pos B.symmetrized a k
+    rcases hε with rfl | rfl
+    · simp only [one_mul, neg_mul]
+      rcases hsign with ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩
+      · simp [hx, hy, positivePart]
+      · simp [positivePart, max_eq_right (by omega : -B.matrix (row a) k ≤ 0),
+          max_eq_right hy.le]
+      · rw [positivePart, max_eq_left (by omega : 0 ≤ -B.matrix (row a) k),
+          positivePart, max_eq_left hy.le]
+        linear_combination -(hsym a k)
+    · simp only [neg_neg, one_mul, neg_mul]
+      rcases hsign with ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩
+      · simp [hx, hy, positivePart]
+      · rw [positivePart, max_eq_left hx.le, positivePart,
+          max_eq_left (by omega : 0 ≤ -B.matrix (row k) a)]
+        linear_combination hsym a k
+      · simp [positivePart, max_eq_right hx.le,
+          max_eq_right (by omega : -B.matrix (row k) a ≤ 0)]
   simp only [neg_mul] at key
   by_cases hak : a = k
   · subst hak
@@ -615,7 +670,7 @@ theorem mutation [Finite K] [DecidableEq K] (hc : IsCompatiblePair B Λ) {ε : �
       · simp [mutationLeft, compatibilityMatrix, hak, hl, Ne.symm hl, hla, Ne.symm hla]
 
 /-- Mutating the pair at `k` and then the form again at `k` returns `Λ`. -/
-theorem formMutation_involutive [Finite K] [DecidableEq K] (hc : IsCompatiblePair B Λ)
+theorem formMutation_involutive [Finite K] [DecidableEq K] (hc : IsColumnCompatible B Λ w)
     (hΛ : IsAlternatingMatrix Λ) {ε ε' : ℤ} (hε : ε = 1 ∨ ε = -1) (hε' : ε' = 1 ∨ ε' = -1) :
     formMutation row (B.mutate k).matrix (formMutation row B.matrix Λ k ε) k ε' = Λ := by
   let : Fintype K := Fintype.ofFinite K
@@ -634,14 +689,14 @@ theorem formMutation_involutive [Finite K] [DecidableEq K] (hc : IsCompatiblePai
     _ = Λ := by rw [hEE, hE, Matrix.one_mul, Matrix.mul_one]
 
 /-- The sign transport commutes with mutation of the form. -/
-theorem formMutation_neg (hc : IsCompatiblePair B Λ) (hΛ : IsAlternatingMatrix Λ) {ε : ℤ}
+theorem formMutation_neg (hc : IsColumnCompatible B Λ w) (hΛ : IsAlternatingMatrix Λ) {ε : ℤ}
     (hε : ε = 1 ∨ ε = -1) :
     formMutation row B.neg.matrix (-Λ) k ε = -formMutation row B.matrix Λ k ε := by
   have hε' : -ε = 1 ∨ -ε = -1 := by omega
   rw [ExtendedExchangeMatrix.neg_matrix, TauCeti.Cluster.formMutation_neg,
     hc.formMutation_sign_eq hΛ hε' hε]
 
-end IsCompatiblePair
+end IsColumnCompatible
 
 /-! ### The principal pair -/
 

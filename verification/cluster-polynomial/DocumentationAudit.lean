@@ -3,44 +3,41 @@ Copyright (c) 2026 Tau Ceti contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Tau Ceti contributors
 -/
-import TauCetiRoadmap.ClusterAlgebras
+
 import TauCetiRoadmap.ClusterAlgebras.ChartSpecialization
+import TauCetiRoadmap.ClusterAlgebras.ClassicalFrame
 import TauCetiRoadmap.ClusterAlgebras.Coefficients
-import TauCetiRoadmap.ClusterAlgebras.CommutingCoprimality
 import TauCetiRoadmap.ClusterAlgebras.CoordinateSeparation
-import TauCetiRoadmap.ClusterAlgebras.Examples.CaterpillarChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.InitialSeedConsumer
 import TauCetiRoadmap.ClusterAlgebras.Examples.PolynomialQuantum
 import TauCetiRoadmap.ClusterAlgebras.Examples.PolynomialSeedChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.QuantumChecks
+import TauCetiRoadmap.ClusterAlgebras.Examples.ScalarSpecializationChecks
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Audit
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Pattern
 import TauCetiRoadmap.ClusterAlgebras.Examples.Somos4Sequence
+import TauCetiRoadmap.ClusterAlgebras.ExchangeFrame
 import TauCetiRoadmap.ClusterAlgebras.ExchangeMatrix
 import TauCetiRoadmap.ClusterAlgebras.ExpressionCoordinates
 import TauCetiRoadmap.ClusterAlgebras.ExtendedRank
 import TauCetiRoadmap.ClusterAlgebras.FrozenWeight
 import TauCetiRoadmap.ClusterAlgebras.GeometricClusterAlgebra
-import TauCetiRoadmap.ClusterAlgebras.GeometricCommuting
 import TauCetiRoadmap.ClusterAlgebras.GeometricCoordinates
-import TauCetiRoadmap.ClusterAlgebras.GeometricExchangePair
-import TauCetiRoadmap.ClusterAlgebras.GeometricInteracting
+import TauCetiRoadmap.ClusterAlgebras.GeometricFrame
 import TauCetiRoadmap.ClusterAlgebras.GeometricLaurent
 import TauCetiRoadmap.ClusterAlgebras.GeometricLaurentBase
+import TauCetiRoadmap.ClusterAlgebras.GeometricPattern
 import TauCetiRoadmap.ClusterAlgebras.GeometricSeed
 import TauCetiRoadmap.ClusterAlgebras.HatY
 import TauCetiRoadmap.ClusterAlgebras.InitialLaurent
 import TauCetiRoadmap.ClusterAlgebras.InitialSeed
-import TauCetiRoadmap.ClusterAlgebras.Laurent
 import TauCetiRoadmap.ClusterAlgebras.LaurentFaithfulness
 import TauCetiRoadmap.ClusterAlgebras.MatrixConvention
 import TauCetiRoadmap.ClusterAlgebras.MatrixMutation
 import TauCetiRoadmap.ClusterAlgebras.MutationPattern
 import TauCetiRoadmap.ClusterAlgebras.Normalization
-import TauCetiRoadmap.ClusterAlgebras.NormalizedCaterpillar
-import TauCetiRoadmap.ClusterAlgebras.NormalizedPattern
-import TauCetiRoadmap.ClusterAlgebras.NormalizedWord
+import TauCetiRoadmap.ClusterAlgebras.PolynomialExchangeSeed
 import TauCetiRoadmap.ClusterAlgebras.PolynomialGeometricPattern
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumAlgebra
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumCentralFactors
@@ -56,7 +53,6 @@ import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumMutation
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumOpposite
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumPair
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumReplacement
-import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumSeed
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumSpecialization
 import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumTerms
 import TauCetiRoadmap.ClusterAlgebras.PositiveSemifieldEvaluation
@@ -71,36 +67,29 @@ import TauCetiRoadmap.ClusterAlgebras.QuantumClassicalLimit
 import TauCetiRoadmap.ClusterAlgebras.QuantumCommuting
 import TauCetiRoadmap.ClusterAlgebras.QuantumCompatible
 import TauCetiRoadmap.ClusterAlgebras.QuantumExpansion
+import TauCetiRoadmap.ClusterAlgebras.QuantumFrameDivision
+import TauCetiRoadmap.ClusterAlgebras.QuantumFrameSign
 import TauCetiRoadmap.ClusterAlgebras.QuantumInteracting
 import TauCetiRoadmap.ClusterAlgebras.QuantumLaurent
+import TauCetiRoadmap.ClusterAlgebras.QuantumOpposite
 import TauCetiRoadmap.ClusterAlgebras.QuantumPair
 import TauCetiRoadmap.ClusterAlgebras.QuantumPairChart
 import TauCetiRoadmap.ClusterAlgebras.QuantumPolynomial
 import TauCetiRoadmap.ClusterAlgebras.QuantumRealization
 import TauCetiRoadmap.ClusterAlgebras.QuantumReplacement
 import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
-import TauCetiRoadmap.ClusterAlgebras.QuantumSeedDivision
-import TauCetiRoadmap.ClusterAlgebras.QuantumSeedSign
 import TauCetiRoadmap.ClusterAlgebras.QuantumSpecialization
 import TauCetiRoadmap.ClusterAlgebras.QuantumSubsetRing
 import TauCetiRoadmap.ClusterAlgebras.QuantumSupport
 import TauCetiRoadmap.ClusterAlgebras.SeedBinomial
 import TauCetiRoadmap.ClusterAlgebras.SeedCompatibility
-import TauCetiRoadmap.ClusterAlgebras.SeedCoordinates
 import TauCetiRoadmap.ClusterAlgebras.SeedEvaluation
 import TauCetiRoadmap.ClusterAlgebras.UniversalY
 import TauCetiRoadmap.ClusterAlgebras.UpperBound
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCharts
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCoefficients
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundCommuting
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundInteracting
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundLocal
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundRankTwo
-import TauCetiRoadmap.ClusterAlgebras.UpperBoundRegroup
 import TauCetiRoadmap.ClusterAlgebras.UpperLaurent
 import TauCetiRoadmap.ClusterAlgebras.UpperSpecialization
 import TauCetiRoadmap.ClusterAlgebras.WordCoordinates
-import TauCetiRoadmap.LaurentPhenomenon
+import TauCetiRoadmap.ClusterAlgebras
 import TauCetiRoadmap.LaurentPhenomenon.AlgebraicCaterpillar
 import TauCetiRoadmap.LaurentPhenomenon.BinomialCorrection
 import TauCetiRoadmap.LaurentPhenomenon.Birational
@@ -114,6 +103,7 @@ import TauCetiRoadmap.LaurentPhenomenon.CoordinateWeight
 import TauCetiRoadmap.LaurentPhenomenon.Denominator
 import TauCetiRoadmap.LaurentPhenomenon.DenominatorPatching
 import TauCetiRoadmap.LaurentPhenomenon.ExchangePattern
+import TauCetiRoadmap.LaurentPhenomenon.ExchangeRings
 import TauCetiRoadmap.LaurentPhenomenon.FactorialTheorem
 import TauCetiRoadmap.LaurentPhenomenon.FiniteCaterpillar
 import TauCetiRoadmap.LaurentPhenomenon.FiniteExchangeReplacement
@@ -126,8 +116,8 @@ import TauCetiRoadmap.LaurentPhenomenon.FreeDivisibility
 import TauCetiRoadmap.LaurentPhenomenon.FreshParameter
 import TauCetiRoadmap.LaurentPhenomenon.GenericChart
 import TauCetiRoadmap.LaurentPhenomenon.GenericCoprimality
-import TauCetiRoadmap.LaurentPhenomenon.GroupRing
 import TauCetiRoadmap.LaurentPhenomenon.GroupedLocalAlgebra
+import TauCetiRoadmap.LaurentPhenomenon.GroupRing
 import TauCetiRoadmap.LaurentPhenomenon.IntegerEvaluation
 import TauCetiRoadmap.LaurentPhenomenon.IntegerSpecialization
 import TauCetiRoadmap.LaurentPhenomenon.Intersection
@@ -144,6 +134,7 @@ import TauCetiRoadmap.LaurentPhenomenon.LocalCancellation
 import TauCetiRoadmap.LaurentPhenomenon.LocalCoprimality
 import TauCetiRoadmap.LaurentPhenomenon.LocalModel
 import TauCetiRoadmap.LaurentPhenomenon.LocalStep
+import TauCetiRoadmap.LaurentPhenomenon.MatrixColumns
 import TauCetiRoadmap.LaurentPhenomenon.MixedLaurent
 import TauCetiRoadmap.LaurentPhenomenon.Mutation
 import TauCetiRoadmap.LaurentPhenomenon.MutationWord
@@ -194,6 +185,7 @@ import TauCetiRoadmap.LaurentPhenomenon.SkewPatching
 import TauCetiRoadmap.LaurentPhenomenon.SkewReplacement
 import TauCetiRoadmap.LaurentPhenomenon.SpecializationDescent
 import TauCetiRoadmap.LaurentPhenomenon.Tests.AlgebraicExamples
+import TauCetiRoadmap.LaurentPhenomenon.Tests.CaterpillarChecks
 import TauCetiRoadmap.LaurentPhenomenon.Tests.QuantumChecks
 import TauCetiRoadmap.LaurentPhenomenon.Tests.QuantumExamples
 import TauCetiRoadmap.LaurentPhenomenon.Tests.ReusableAPIAudit
@@ -201,7 +193,7 @@ import TauCetiRoadmap.LaurentPhenomenon.Tests.UpperBoundLibraryAudit
 import TauCetiRoadmap.LaurentPhenomenon.UniversalDeformation
 import TauCetiRoadmap.LaurentPhenomenon.UniversalInduction
 import TauCetiRoadmap.LaurentPhenomenon.UpperBoundPattern
-
+import TauCetiRoadmap.LaurentPhenomenon
 
 /-! Required documentation and linter-exemption audit in a legacy environment. -/
 
@@ -252,7 +244,7 @@ run_meta do
   unless scanned > 0 ∧ documented > 0 do
     throwError "Docstring scan has empty coverage"
   for sentinel in #[``TauCeti.Laurent.FiniteReplacementPremise,
-      ``TauCeti.Cluster.QuantumSeed] do
+      ``TauCeti.Cluster.ExchangeFrame] do
     unless (← Lean.findDocString? env sentinel).isSome do
       throwError "Documented sentinel is invisible: {sentinel}"
   let mut seenNolints : Nat := 0

@@ -23,9 +23,9 @@ through `A_{v,S} / (v - 1) A_{v,S}`; injectivity of the induced map is not claim
 On §1.4's carriers: for a geometric seed `g` (`GeometricSeed`) with the extended matrix of `s` and
 values `ε(x^{e_a})`, `geometricClusterRing` is `A_{R_S}` of `g` (`GeometricSeed.clusterAlgebra`
 over the image of `R_S = ℤ[z_j][z_s⁻¹ : s ∈ S]`), so the image of `A_{v,S}` is `A_{R_S}`
-(`QuantumSeed.range_classicalLimit_eq_clusterAlgebra`) and it generates `A_{𝕜_S}` over a field
-`𝕜` (`QuantumSeed.coe_adjoin_range_classicalLimit`); the classical limit is a surjection
-`A_{v,S} → A_{R_S}` (`QuantumSeed.classicalLimitToClusterAlgebra`) factoring through
+(`ExchangeFrame.range_classicalLimit_eq_clusterAlgebra`) and it generates `A_{𝕜_S}` over a field
+`𝕜` (`ExchangeFrame.coe_adjoin_range_classicalLimit`); the classical limit is a surjection
+`A_{v,S} → A_{R_S}` (`ExchangeFrame.classicalLimitToClusterAlgebra`) factoring through
 `A_{v,S} / (v - 1) A_{v,S}`. It sends `X_j` to `z_j` and `X_s⁻¹` to `z_s⁻¹`, so it maps the
 coefficients of `A_{v,S}` onto `R_S`.
 -/
@@ -97,9 +97,9 @@ variable {D : Type*} [DivisionRing D] [Algebra Zv D]
   {M K : Type*} [Fintype M] [DecidableEq M] [Fintype K] [DecidableEq K]
   {row : K ↪ M} {F : Type*} [Field F]
 
-namespace QuantumSeed
+namespace ExchangeFrame
 
-variable (s : QuantumSeed D row) {S : Set M}
+variable (s : ExchangeFrame (u₀ := vUnit) D row) {S : Set M}
   (hS : S ⊆ (Set.range row)ᶜ) (ε : AddMonoidAlgebra ℤ (M → ℤ) →+* F)
 
 /-- **The classical limit on `A_{v,S}`**: expansion in the chart of `s`, then `sp`, then `ε`. -/
@@ -171,7 +171,7 @@ include hx
 geometric variable `x_{j;w}` with the same word and label. -/
 theorem classicalLimit_coordinate_mutateWord (w : List K) (j : M) :
     s.classicalLimit hS ε
-      ⟨(mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j,
+      ⟨(mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j,
         (reachable_mutateWord s w).coordinate_mem_clusterAlgebra S j⟩ =
       (geometricPattern row s.exchange.matrix x w).2 j :=
   classicalLimit_eq_of_chartSpecializes
@@ -231,7 +231,7 @@ theorem range_classicalLimitQuotient :
   · rintro ⟨y, rfl⟩
     exact ⟨Ideal.Quotient.mk _ y, rfl⟩
 
-end QuantumSeed
+end ExchangeFrame
 
 end Limit
 
@@ -266,9 +266,9 @@ theorem geometricClusterRing_eq_clusterAlgebra [Finite K] (g : GeometricSeed (F 
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D]
 
-namespace QuantumSeed
+namespace ExchangeFrame
 
-variable {s : QuantumSeed D row} {S : Set M} {hS : S ⊆ (Set.range row)ᶜ}
+variable {s : ExchangeFrame (u₀ := vUnit) D row} {S : Set M} {hS : S ⊆ (Set.range row)ᶜ}
   {ε : AddMonoidAlgebra ℤ (M → ℤ) →+* F} {g : GeometricSeed (F := F) row s.exchange.symmetrizer}
   (hg : g.exchange = s.exchange.matrix)
   (hεg : ∀ a, ε (AddMonoidAlgebra.single (Pi.single a 1) 1) = g.coordinate a)
@@ -278,7 +278,7 @@ include hg hεg
 with the same word and label of the geometric seed `g` with the extended matrix of `s`. -/
 theorem classicalLimit_coordinate_mutateWord_geometricSeed (w : List K) (j : M) :
     s.classicalLimit hS ε
-      ⟨(mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j,
+      ⟨(mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j,
         (reachable_mutateWord s w).coordinate_mem_clusterAlgebra S j⟩ =
       (mutateWord (fun k t ↦ t.mutate s.exchange.symmetrizer_pos k) w g).coordinate j :=
   classicalLimit_eq_of_chartSpecializes (mutateWord_chartSpecializes_geometricSeed ε hg hεg w j)
@@ -338,7 +338,7 @@ theorem classicalLimitQuotientToClusterAlgebra_surjective :
   obtain ⟨y, rfl⟩ := classicalLimitToClusterAlgebra_surjective (hS := hS) hg hεg z
   exact ⟨Ideal.Quotient.mk _ y, rfl⟩
 
-end QuantumSeed
+end ExchangeFrame
 
 end GeometricSeed
 

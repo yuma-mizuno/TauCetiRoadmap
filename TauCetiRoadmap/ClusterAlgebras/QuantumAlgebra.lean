@@ -22,15 +22,15 @@ exponents outside `S`; they lie in `A_{v,S}` and are carried along reindexing an
 From the quantum Laurent phenomenon (Q3), `A_{v,S} ≤ U_v = UB_v(s)` for every `S`.
 
 Seeds are transported along relabellings `σ : M ≃ M'`, `τ : K ≃ K'` compatible with `row`, which
-relabel the symmetrizer (`QuantumSeed.reindex`, through the lattice reindexing
+relabel the symmetrizer (`ExchangeFrame.reindex`, through the lattice reindexing
 `QuantumTorus.domCongr`), and along `Zv`-algebra maps of division rings
-    (`QuantumSeed.map`). Both commute with mutation, and
+    (`ExchangeFrame.map`). Both commute with mutation, and
 `A_{v,S}` and `U_v` are carried to the corresponding algebras of the transported seed.
 -/
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.Laurent TauCeti.QuantumTorus
 
@@ -44,7 +44,7 @@ variable {D : Type*} [DivisionRing D] [Algebra Zv D]
 
 section Chart
 
-variable (s : QuantumSeed D row)
+variable (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- The integral quantum torus `T_s = Zv[X_i^{±1}]` as a `Zv`-subalgebra: the range of the
 chart. -/
@@ -69,27 +69,29 @@ end Chart
 section Reachable
 
 /-- Mutation does not change the frozen coordinates. -/
-theorem mutateWord_coordinate_of_notMem (s : QuantumSeed D row) (w : List K) {j : M}
+theorem mutateWord_coordinate_of_notMem (s : ExchangeFrame (u₀ := vUnit) D row) (w : List K) {j : M}
     (hj : j ∉ Set.range row) :
-    (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j = s.coordinate j := by
+    (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j = s.coordinate j := by
   induction w generalizing s with
   | nil => rfl
   | cons k w ih =>
     rw [mutateWord_cons, ih, mutate_coordinate_of_ne _ _ fun h ↦ hj ⟨k, h.symm⟩]
 
-theorem Reachable.coordinate_of_notMem {s t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.coordinate_of_notMem {s t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
     {j : M} (hj : j ∉ Set.range row) : t.coordinate j = s.coordinate j := by
   obtain ⟨w, rfl⟩ := h
   exact mutateWord_coordinate_of_notMem s w hj
 
 /-- **Quantum Laurentness between reachable seeds.** Every coordinate of a seed reachable from
 `s` lies in the integral quantum torus `T_s`. -/
-theorem Reachable.coordinate_mem_chartRing {s t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.coordinate_mem_chartRing {s t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable
+  s t)
     (j : M) : (t.coordinate j : D) ∈ s.chartRing := by
   obtain ⟨w, rfl⟩ := h
   exact s.coordinate_mutateWord_mem_chartRing w j
 
-theorem Reachable.coordinate_mem_chartAlgebra {s t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.coordinate_mem_chartAlgebra {s t : ExchangeFrame (u₀ := vUnit) D row} (h :
+  Reachable s t)
     (j : M) : (t.coordinate j : D) ∈ s.chartAlgebra :=
   s.mem_chartAlgebra.2 (h.coordinate_mem_chartRing j)
 
@@ -99,7 +101,7 @@ end Reachable
 
 section ClusterAlgebra
 
-variable (s : QuantumSeed D row)
+variable (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- The reachable mutable quantum cluster variables `X_{k;t}`. -/
 def clusterVariables : Set D :=
@@ -119,11 +121,12 @@ def clusterAlgebra (S : Set M) : Subalgebra Zv D :=
 
 variable {s}
 
-theorem coordinate_mem_clusterVariables {t : QuantumSeed D row} (h : Reachable s t) (k : K) :
+theorem coordinate_mem_clusterVariables {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
+  (k : K) :
     (t.coordinate (row k) : D) ∈ s.clusterVariables :=
   ⟨t, h, k, rfl⟩
 
-theorem Reachable.clusterVariables_eq {t : QuantumSeed D row} (h : Reachable s t) :
+theorem Reachable.clusterVariables_eq {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t) :
     t.clusterVariables = s.clusterVariables := by
   ext x
   constructor
@@ -132,7 +135,7 @@ theorem Reachable.clusterVariables_eq {t : QuantumSeed D row} (h : Reachable s t
   · rintro ⟨u, hu, k, rfl⟩
     exact ⟨u, h.symm.trans hu, k, rfl⟩
 
-theorem Reachable.clusterGenerators_eq {t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.clusterGenerators_eq {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
     {S : Set M} (hS : S ⊆ (Set.range row)ᶜ) :
     t.clusterGenerators S = s.clusterGenerators S := by
   have hfr : ∀ j ∈ (Set.range row)ᶜ, (t.coordinate j : D) = s.coordinate j := fun j hj ↦ by
@@ -145,7 +148,7 @@ theorem Reachable.clusterGenerators_eq {t : QuantumSeed D row} (h : Reachable s 
   · exact Set.image_congr fun j hj ↦ congrArg (·⁻¹) (hfr j (hS hj))
 
 /-- **Re-rooting.** `A_{v,S}` does not change when `s` is replaced by a reachable seed. -/
-theorem Reachable.clusterAlgebra_eq {t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.clusterAlgebra_eq {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
     {S : Set M} (hS : S ⊆ (Set.range row)ᶜ) : t.clusterAlgebra S = s.clusterAlgebra S := by
   rw [clusterAlgebra, clusterAlgebra, h.clusterGenerators_eq hS]
 
@@ -166,7 +169,8 @@ theorem inv_coordinate_mem_clusterAlgebra {S : Set M} {j : M} (hj : j ∈ S) :
 variable {s}
 
 /-- Every coordinate of a reachable seed lies in `A_{v,S}`. -/
-theorem Reachable.coordinate_mem_clusterAlgebra {t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.coordinate_mem_clusterAlgebra {t : ExchangeFrame (u₀ := vUnit) D row} (h :
+  Reachable s t)
     (S : Set M) (j : M) : (t.coordinate j : D) ∈ s.clusterAlgebra S := by
   by_cases hj : j ∈ Set.range row
   · obtain ⟨k, rfl⟩ := hj
@@ -186,7 +190,7 @@ variable (s)
 theorem toSubring_clusterAlgebra_empty :
     (s.clusterAlgebra ∅).toSubring =
       TauCeti.Cluster.clusterRing (algebraMap Zv D).range
-        (fun t : QuantumSeed D row ↦ fun i ↦ (t.coordinate i : D))
+        (fun t : ExchangeFrame (u₀ := vUnit) D row ↦ fun i ↦ (t.coordinate i : D))
         (fun k t ↦ t.mutate k) s := by
   rw [clusterAlgebra, Algebra.adjoin_eq_ring_closure, TauCeti.Cluster.clusterRing]
   apply le_antisymm
@@ -209,7 +213,7 @@ end ClusterAlgebra
 
 section ClusterMonomial
 
-variable (s : QuantumSeed D row)
+variable (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- **Quantum cluster monomials** of `A_{v,S}`: the normalized monomials `M_t(a)` of reachable
 seeds `t` with nonnegative mutable exponents and nonnegative frozen exponents outside `S`. -/
@@ -219,7 +223,7 @@ def IsClusterMonomial (S : Set M) (x : D) : Prop :=
 
 variable {s}
 
-theorem Reachable.isClusterMonomial_iff {t : QuantumSeed D row} (h : Reachable s t)
+theorem Reachable.isClusterMonomial_iff {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
     {S : Set M} {x : D} : t.IsClusterMonomial S x ↔ s.IsClusterMonomial S x := by
   constructor
   · rintro ⟨u, hu, rest⟩
@@ -227,7 +231,7 @@ theorem Reachable.isClusterMonomial_iff {t : QuantumSeed D row} (h : Reachable s
   · rintro ⟨u, hu, rest⟩
     exact ⟨u, h.symm.trans hu, rest⟩
 
-theorem isClusterMonomial_coordinate {t : QuantumSeed D row} (h : Reachable s t)
+theorem isClusterMonomial_coordinate {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t)
     (S : Set M) (k : K) : s.IsClusterMonomial S (t.coordinate (row k)) := by
   refine ⟨t, h, Pi.single (row k) 1, fun l ↦ ?_, fun j _ ↦ ?_, (t.monomial_single _).symm⟩
   · by_cases hl : row l = row k
@@ -276,12 +280,12 @@ end ClusterMonomial
 
 section UpperAlgebra
 
-variable (s : QuantumSeed D row)
+variable (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- **The quantum upper cluster algebra** `U_v = ⋂_t T_t`, over all seeds `t` reachable from
 `s`, as an intersection of `Zv`-subalgebras. -/
 def upperAlgebra : Subalgebra Zv D :=
-  ⨅ w : List K, (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).chartAlgebra
+  ⨅ w : List K, (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).chartAlgebra
 
 /-- The finite quantum upper bound `UB_v(s) = T_s ∩ ⋂_k T_{μ_k(s)}` as a `Zv`-subalgebra. -/
 def upperBoundAlgebra : Subalgebra Zv D :=
@@ -311,7 +315,7 @@ theorem toSubring_upperBoundAlgebra : (s.upperBoundAlgebra).toSubring = s.upperB
 theorem toSubring_upperAlgebra :
     (s.upperAlgebra).toSubring =
       TauCeti.Cluster.upperClusterRing (algebraMap Zv D).range
-        (fun t : QuantumSeed D row ↦ fun i ↦ (t.coordinate i : D))
+        (fun t : ExchangeFrame (u₀ := vUnit) D row ↦ fun i ↦ (t.coordinate i : D))
         (fun k t ↦ t.mutate k) s :=
   SetLike.ext fun _ ↦ by
     rw [Subalgebra.mem_toSubring, TauCeti.Cluster.mem_upperClusterRing, upperAlgebra,
@@ -330,18 +334,19 @@ theorem upperAlgebra_le_chartAlgebra : s.upperAlgebra ≤ s.chartAlgebra := fun 
 variable {s}
 
 /-- **Re-rooting.** `U_v` does not change when `s` is replaced by a reachable seed. -/
-theorem Reachable.upperAlgebra_eq {t : QuantumSeed D row} (h : Reachable s t) :
+theorem Reachable.upperAlgebra_eq {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t) :
     t.upperAlgebra = s.upperAlgebra := by
   ext x
   simp only [mem_upperAlgebra]
   exact ⟨fun H u hu ↦ H u (h.symm.trans hu), fun H u hu ↦ H u (h.trans hu)⟩
 
-theorem Reachable.upperBoundAlgebra_eq {t : QuantumSeed D row} (h : Reachable s t) :
+theorem Reachable.upperBoundAlgebra_eq {t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable s t) :
     t.upperBoundAlgebra = s.upperBoundAlgebra := by
   rw [← upperAlgebra_eq_upperBoundAlgebra, ← upperAlgebra_eq_upperBoundAlgebra,
     h.upperAlgebra_eq]
 
-theorem Reachable.upperAlgebra_le_chartAlgebra {t : QuantumSeed D row} (h : Reachable s t) :
+theorem Reachable.upperAlgebra_le_chartAlgebra {t : ExchangeFrame (u₀ := vUnit) D row} (h :
+  Reachable s t) :
     s.upperAlgebra ≤ t.chartAlgebra := by
   rw [← h.upperAlgebra_eq]
   exact t.upperAlgebra_le_chartAlgebra
@@ -375,7 +380,7 @@ end UpperAlgebra
 
 end
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame
 
 /-! ### Reindexing of exchange data -/
 
@@ -448,13 +453,14 @@ def ExtendedExchangeMatrix.reindex (B : ExtendedExchangeMatrix row) :
 @[simp] theorem ExtendedExchangeMatrix.reindex_symmetrizer (B : ExtendedExchangeMatrix row) :
     (B.reindex σ τ hrow).symmetrizer = B.symmetrizer ∘ τ.symm := rfl
 
-theorem IsCompatiblePair.reindex [Fintype M] [DecidableEq M] [Fintype M'] [DecidableEq M']
-    {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ} (hc : IsCompatiblePair B Λ) :
-    IsCompatiblePair (B.reindex σ τ hrow) (Λ.reindex σ σ) := by
+theorem IsColumnCompatible.reindex [Fintype M] [DecidableEq M] [Fintype M'] [DecidableEq M']
+    {B : ExtendedExchangeMatrix row} {Λ : Matrix M M ℤ} {w : K → ℤ}
+    (hc : IsColumnCompatible B Λ w) :
+    IsColumnCompatible (B.reindex σ τ hrow) (Λ.reindex σ σ) (w ∘ τ.symm) := by
   intro k' l'
   obtain ⟨k, rfl⟩ := τ.surjective k'
   obtain ⟨l, rfl⟩ := σ.surjective l'
-  simp only [ExtendedExchangeMatrix.reindex_matrix, ExtendedExchangeMatrix.reindex_symmetrizer,
+  simp only [ExtendedExchangeMatrix.reindex_matrix,
     Function.comp_apply, Matrix.reindex_apply, Matrix.submatrix_apply, Equiv.symm_apply_apply]
   rw [Equiv.sum_comp σ.symm (fun i ↦ B.matrix i k * Λ i l), hc k l]
   simp only [hrow, σ.injective.eq_iff]
@@ -512,7 +518,7 @@ end Reindex
 
 end TauCeti.Cluster
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.Laurent TauCeti.QuantumTorus
 
@@ -527,7 +533,7 @@ section Reindex
 
 variable {M' K' : Type*} [Fintype M'] [DecidableEq M'] {row' : K' ↪ M'}
   (σ : M ≃ M') (τ : K ≃ K') (hrow : ∀ k, row' (τ k) = σ (row k))
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := vUnit) D row)
 
 theorem isQuasiCommuting_reindex :
     IsQuasiCommuting vUnit (matrixForm (s.form.reindex σ σ)) (s.coordinate ∘ σ.symm) := by
@@ -554,11 +560,16 @@ theorem lift_reindex :
 
 /-- **Reindexing** of a quantum seed along `σ : M ≃ M'` and `τ : K ≃ K'` with
 `row' ∘ τ = σ ∘ row`: `B_ext`, its symmetrizer and `Λ` are relabelled and `X'_{σ i} = X_i`. -/
-def reindex : QuantumSeed D row' where
+def reindex : ExchangeFrame (u₀ := vUnit) D row' where
   exchange := s.exchange.reindex σ τ hrow
   form := s.form.reindex σ σ
   alternating := s.alternating.reindex σ
+  formWeight := s.formWeight ∘ τ.symm
   compatible := s.compatible.reindex σ τ hrow
+  independentColumns := by
+    let e := LinearEquiv.piCongrLeft' ℚ (fun _ : M ↦ ℚ) σ
+    convert! (s.independentColumns.map' e.toLinearMap
+      (LinearMap.ker_eq_bot.mpr e.injective)).comp τ.symm τ.symm.injective using 1
   coordinate := s.coordinate ∘ σ.symm
   quasiCommuting := s.isQuasiCommuting_reindex σ
   faithful := by
@@ -615,7 +626,7 @@ variable [Fintype K] [DecidableEq K] [Fintype K'] [DecidableEq K']
 /-- Reindexing commutes with mutation. -/
 theorem reindex_mutate (k : K) :
     (s.mutate k).reindex σ τ hrow = (s.reindex σ τ hrow).mutate (τ k) := by
-  refine QuantumSeed.ext (ExtendedExchangeMatrix.ext ?_ rfl) ?_ ?_
+  refine ExchangeFrame.ext (ExtendedExchangeMatrix.ext ?_ rfl) ?_ ?_
   · exact (extendedMatrixMutation_reindex σ τ hrow s.exchange.matrix k).symm
   · exact (formMutation_reindex σ τ hrow s.exchange.matrix s.form k 1).symm
   · funext i'
@@ -630,8 +641,8 @@ theorem reindex_mutate (k : K) :
         reindex_coordinate]
 
 theorem reindex_mutateWord (w : List K) :
-    (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).reindex σ τ hrow =
-      mutateWord (fun k t ↦ QuantumSeed.mutate t k) (w.map τ) (s.reindex σ τ hrow) := by
+    (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).reindex σ τ hrow =
+      mutateWord (fun k t ↦ ExchangeFrame.mutate t k) (w.map τ) (s.reindex σ τ hrow) := by
   induction w generalizing s with
   | nil => rfl
   | cons k w ih => rw [List.map_cons, mutateWord_cons, mutateWord_cons, ih, reindex_mutate]
@@ -639,7 +650,7 @@ theorem reindex_mutateWord (w : List K) :
 variable {σ τ hrow}
 
 /-- The seeds reachable from a reindexed seed are the reindexings of the reachable seeds. -/
-theorem reachable_reindex_iff {t' : QuantumSeed D row'} :
+theorem reachable_reindex_iff {t' : ExchangeFrame (u₀ := vUnit) D row'} :
     Reachable (s.reindex σ τ hrow) t' ↔
       ∃ t, Reachable s t ∧ t.reindex σ τ hrow = t' := by
   constructor
@@ -717,7 +728,7 @@ end Reindex
 section Map
 
 variable {D' : Type*} [DivisionRing D'] [Algebra Zv D'] (φ : D →ₐ[Zv] D')
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := vUnit) D row)
 
 theorem isQuasiCommuting_map :
     IsQuasiCommuting vUnit (matrixForm s.form)
@@ -735,11 +746,13 @@ theorem lift_map :
 
 /-- **Ambient transport** of a quantum seed along a `Zv`-algebra map of division rings, which is
 injective. -/
-def map : QuantumSeed D' row where
+def map : ExchangeFrame (u₀ := vUnit) D' row where
   exchange := s.exchange
   form := s.form
   alternating := s.alternating
+  formWeight := s.formWeight
   compatible := s.compatible
+  independentColumns := s.independentColumns
   coordinate i := Units.map (φ : D →* D') (s.coordinate i)
   quasiCommuting := s.isQuasiCommuting_map φ
   faithful := by
@@ -771,7 +784,7 @@ variable [Fintype K] [DecidableEq K]
 /-- Ambient transport commutes with mutation. -/
 theorem map_mutate (k : K) :
     (s.mutate k).map φ = (s.map φ).mutate k := by
-  refine QuantumSeed.ext rfl rfl ?_
+  refine ExchangeFrame.ext rfl rfl ?_
   funext i
   apply Units.ext
   rw [map_coordinate]
@@ -781,8 +794,8 @@ theorem map_mutate (k : K) :
   · rw [mutate_coordinate_of_ne _ _ hi, mutate_coordinate_of_ne _ _ hi, map_coordinate]
 
 theorem map_mutateWord (w : List K) :
-    (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).map φ =
-      mutateWord (fun k t ↦ QuantumSeed.mutate t k) w (s.map φ) := by
+    (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).map φ =
+      mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w (s.map φ) := by
   induction w generalizing s with
   | nil => rfl
   | cons k w ih => rw [mutateWord_cons, mutateWord_cons, ih, map_mutate]
@@ -790,7 +803,7 @@ theorem map_mutateWord (w : List K) :
 variable {φ}
 
 /-- The seeds reachable from a transported seed are the transports of the reachable seeds. -/
-theorem reachable_map_iff {t' : QuantumSeed D' row} :
+theorem reachable_map_iff {t' : ExchangeFrame (u₀ := vUnit) D' row} :
     Reachable (s.map φ) t' ↔ ∃ t, Reachable s t ∧ t.map φ = t' := by
   constructor
   · rintro ⟨w, rfl⟩
@@ -842,4 +855,4 @@ end Map
 
 end
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

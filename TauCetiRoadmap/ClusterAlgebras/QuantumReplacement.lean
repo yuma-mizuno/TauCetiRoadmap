@@ -16,13 +16,13 @@ There is one coefficient/defect proof engine, in the polynomial development.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.Laurent
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D]
   {M K : Type*} [Fintype M] [DecidableEq M] [Fintype K] [DecidableEq K]
-  {row : K ↪ M} (s : QuantumSeed D row)
+  {row : K ↪ M} (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- Noninteracting exchanges are unchanged by the other mutation. -/
 theorem mutate_exchangeCoordinate_of_eq_zero {i j : K} (hij : i ≠ j)
@@ -34,11 +34,11 @@ theorem mutate_exchangeCoordinate_of_eq_zero {i j : K} (hij : i ≠ j)
 /-- Ordinary replacement, as the degree-one polynomial replacement theorem. -/
 theorem replacement_mem {i j : K} (hij : i ≠ j) :
     (s.mutate i).exchangeCoordinate j ∈
-      UpperBound.generated (s.pairRing (row i) (row j))
+      TauCeti.Laurent.generated (s.pairRing (row i) (row j))
         {s.exchangeCoordinate i, s.exchangeCoordinate j, (s.coordinate (row j) : D)} := by
   have h := s.polynomialSeed.replacement_mem hij
   simpa only [polynomialSeed_mutate, polynomialSeed_exchangeCoordinate,
-    polynomialSeed_toQuantumSeed] using h
+    polynomialSeed_toExchangeFrame] using h
 
 /-- The four-generator ring is unchanged by ordinary mutation. -/
 theorem fourRing_mutate {i j : K} (hij : i ≠ j) :
@@ -46,4 +46,4 @@ theorem fourRing_mutate {i j : K} (hij : i ≠ j) :
   have h := s.polynomialSeed.fourRing_mutate hij
   simpa only [polynomialSeed_mutate, polynomialSeed_fourRing] using h
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

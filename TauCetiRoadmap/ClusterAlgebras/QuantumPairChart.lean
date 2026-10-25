@@ -16,15 +16,16 @@ The restricted lattice chart is faithful and its image is the pair coordinate ri
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
 noncomputable section
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := u₀) D row)
 
 /-! ### `pairRing` as the ring of a set of coordinates -/
 
@@ -62,7 +63,7 @@ def pairTorusForm (a b : M) : LinearMap.BilinForm ℤ (pairLattice a b) :=
 /-- The chart of the quantum torus on `pairLattice a b`, `X ^ e ↦ M(e)`. It is injective
 (`pairTorusChart_injective`) with image `pairRing a b` (`pairTorusChart_mem_pairRing`,
 `exists_pairTorusChart_eq`). -/
-def pairTorusChart (a b : M) : quantumTorus Zv vUnit (s.pairTorusForm a b) →ₐ[Zv] D :=
+def pairTorusChart (a b : M) : quantumTorus R₀ u₀ (s.pairTorusForm a b) →ₐ[R₀] D :=
   TwistedMonoidAlgebra.lift
     (fun g ↦ s.monomial ((Multiplicative.toAdd g : pairLattice a b) : M → ℤ))
     (by simp) (fun g h ↦ by rw [monomial_mul_monomial, Algebra.smul_def]; rfl)
@@ -79,7 +80,7 @@ theorem pairTorusChart_injective (a b : M) : Function.Injective (s.pairTorusChar
   funext x
   exact s.pairTorusChart_monomial a b x
 
-theorem pairTorusChart_mem_pairRing (a b : M) (x : quantumTorus Zv vUnit (s.pairTorusForm a b)) :
+theorem pairTorusChart_mem_pairRing (a b : M) (x : quantumTorus R₀ u₀ (s.pairTorusForm a b)) :
     s.pairTorusChart a b x ∈ s.pairRing a b := by
   rw [← sum_coeff_smul_monomial x, map_sum]
   refine Subring.sum_mem _ fun e _ ↦ ?_
@@ -91,7 +92,7 @@ theorem exists_pairTorusChart_eq (a b : M) {c : D} (hc : c ∈ s.pairRing a b) :
   have hle : s.pairRing a b ≤ (s.pairTorusChart a b).range.toSubring := by
     refine chartRing_le ?_ (fun l ↦ ?_) (fun l ↦ ?_)
     · rintro _ ⟨r, rfl⟩
-      exact ⟨algebraMap Zv _ r, AlgHom.commutes _ r⟩
+      exact ⟨algebraMap R₀ _ r, AlgHom.commutes _ r⟩
     · refine ⟨QuantumTorus.monomial ⟨Pi.single (l : M) 1, ?_, ?_⟩, ?_⟩
       · simp [Ne.symm l.2.1]
       · simp [Ne.symm l.2.2]
@@ -108,4 +109,4 @@ theorem exists_pairTorusChart_eq (a b : M) {c : D} (hc : c ∈ s.pairRing a b) :
 
 end
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

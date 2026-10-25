@@ -497,7 +497,7 @@ section Zv
 theorem uniqueFactorizationMonoid_Zv : UniqueFactorizationMonoid Zv :=
   Laurent.laurent_uniqueFactorizationMonoid
 
-attribute [local instance] uniqueFactorizationMonoid_Zv
+attribute [instance] uniqueFactorizationMonoid_Zv
 
 variable {p q : L}
 

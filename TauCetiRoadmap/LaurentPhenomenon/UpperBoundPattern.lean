@@ -19,6 +19,19 @@ an arbitrary ring, with no commutativity or finite-rank assumption.
 
 @[expose] public section
 
+namespace TauCeti.Laurent
+
+/-- Assemble three-chart equalities from two adjacent pairwise intersections. -/
+theorem inf_inf_eq_of_inf_eq {A : Type*} [SemilatticeInf A]
+    {T₀ T₁ T₂ T₁₂ Hi Hj Hij Hi' Hj' Hij' : A}
+    (hi : T₀ ⊓ T₁ = Hi) (hj : T₀ ⊓ T₂ = Hj) (hij : Hi ⊓ Hj = Hij)
+    (hi' : T₁ ⊓ T₀ = Hi') (hj' : T₁ ⊓ T₁₂ = Hj') (hij' : Hi' ⊓ Hj' = Hij')
+    (h : Hij = Hij') : T₀ ⊓ T₁ ⊓ T₂ = T₁ ⊓ T₀ ⊓ T₁₂ := by
+  rw [inf_assoc, inf_inf_distrib_left, hi, hj, hij, inf_assoc, inf_inf_distrib_left,
+    hi', hj', hij', h]
+
+end TauCeti.Laurent
+
 namespace TauCeti.Laurent.UpperBoundPattern
 
 variable {A S I : Type*} [CompleteLattice A]

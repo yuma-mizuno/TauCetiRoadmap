@@ -6,7 +6,6 @@ Authors: Tau Ceti contributors
 module
 
 public import TauCetiRoadmap.ClusterAlgebras.GeometricSeed
-public import TauCetiRoadmap.ClusterAlgebras.GeometricExchangePair
 public import TauCetiRoadmap.ClusterAlgebras.UpperBound
 public import TauCetiRoadmap.LaurentPhenomenon.LaurentChart
 

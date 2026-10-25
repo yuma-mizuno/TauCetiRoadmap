@@ -17,13 +17,14 @@ actual compatible matrix pair. The coefficient relation is not seed data.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
@@ -37,8 +38,8 @@ def replacementCoefficient (i j : K) (l : ℕ) : D :=
   let f : M → ℤ := Pi.single (row j) 1
   let V := s.replacementOriginalBase j + (l : ℤ) • s.dividedColumn j
   let n : ℤ := s.replacementExponent i j l
-  algebraMap Zv D ((s.polynomial j).coeff l) *
-    scaledMonomial s.toQuantumSeed.chart
+  algebraMap R₀ D ((s.polynomial j).coeff l) *
+    scaledMonomial s.toExchangeFrame.chart
       (matrixForm s.form (V - f) f - matrixForm s.form (n • e) (V - n • e)) (V - n • e)
 
 variable [Fintype K] [DecidableEq K]
@@ -51,8 +52,8 @@ def replacementMutatedCoefficient (i j : K) (l : ℕ) : D :=
   let n : ℤ := s.replacementExponent i j l
   let N : ℤ := s.replacementDegree i j
   let V := s.replacementBase i j + (l : ℤ) • s.dividedColumn j + n • A
-  algebraMap Zv D ((s.polynomial j).coeff l) *
-    scaledMonomial s.toQuantumSeed.chart
+  algebraMap R₀ D ((s.polynomial j).coeff l) *
+    scaledMonomial s.toExchangeFrame.chart
       ((N - n) * matrixForm s.form (V - f) A + matrixForm s.form (V - f) f) V
 
 /-- The explicit constant part of the first exchange power times the old coordinate power. -/
@@ -60,17 +61,17 @@ def replacementConstant (i j : K) (l : ℕ) : D :=
   let e : M → ℤ := Pi.single (row i) 1
   let A := exchangeExponentPos row s.exchange.matrix i
   let n : ℤ := s.replacementExponent i j l
-  scaledMonomial s.toQuantumSeed.chart (matrixForm s.form (n • A) (n • e)) (n • A + n • e)
+  scaledMonomial s.toExchangeFrame.chart (matrixForm s.form (n • A) (n • e)) (n • A + n • e)
 
 omit [Fintype K] [DecidableEq K] in
 theorem replacementCoefficient_zero (i j : K) :
-    s.replacementCoefficient i j 0 = scaledMonomial s.toQuantumSeed.chart
+    s.replacementCoefficient i j 0 = scaledMonomial s.toExchangeFrame.chart
       (matrixForm s.form (s.replacementOriginalBase j - Pi.single (row j) 1)
         (Pi.single (row j) 1)) (s.replacementOriginalBase j) := by
   simp [replacementCoefficient, replacementExponent, s.constant_one]
 
 theorem replacementMutatedCoefficient_zero (i j : K) :
-    s.replacementMutatedCoefficient i j 0 = scaledMonomial s.toQuantumSeed.chart
+    s.replacementMutatedCoefficient i j 0 = scaledMonomial s.toExchangeFrame.chart
       ((s.replacementDegree i j : ℤ) * matrixForm s.form
           (s.replacementBase i j - Pi.single (row j) 1)
           (exchangeExponentPos row s.exchange.matrix i) +
@@ -80,11 +81,11 @@ theorem replacementMutatedCoefficient_zero (i j : K) :
 
 omit [Fintype K] [DecidableEq K] in
 theorem scaledMonomial_coordinate_power (i : K) (n : ℕ) :
-    scaledMonomial s.toQuantumSeed.chart 0 ((n : ℤ) • Pi.single (row i) 1) =
+    scaledMonomial s.toExchangeFrame.chart 0 ((n : ℤ) • Pi.single (row i) 1) =
       (s.coordinate (row i) : D) ^ n := by
-  rw [scaledMonomial_nat_smul _ s.toQuantumSeed.isAlt]
-  change s.toQuantumSeed.monomial (Pi.single (row i) 1) ^ n = _
-  rw [s.toQuantumSeed.monomial_single]
+  rw [scaledMonomial_nat_smul _ s.toExchangeFrame.isAlt]
+  change s.toExchangeFrame.monomial (Pi.single (row i) 1) ^ n = _
+  rw [s.toExchangeFrame.monomial_single]
 
 /-- The finite replacement compatibility relation is proved for every intermediate
 coefficient of every positively interacting pair, without reciprocity. -/
@@ -108,7 +109,7 @@ theorem replacementCoefficient_compat_pos {i j : K} (hij : i ≠ j)
   have hU : U (row j) = 0 := by
     simp [U, replacementOriginalBase, s.exchange.diagonal j, positivePart]
   have hZ : Z (row j) = 0 := s.replacementBase_row_right hij
-  have h := polynomialReplacement_coefficient s.toQuantumSeed.chart s.toQuantumSeed.isAlt
+  have h := polynomialReplacement_coefficient s.toExchangeFrame.chart s.toExchangeFrame.isAlt
     e f A U Z J (s.replacementDegree i j : ℤ) (s.replacementExponent i j l : ℤ) (l : ℤ)
     (s.matrixForm_dividedColumn_of_apply_eq_zero j he)
     (s.matrixForm_dividedColumn_of_apply_eq_zero j hA)
@@ -116,15 +117,15 @@ theorem replacementCoefficient_compat_pos {i j : K} (hij : i ≠ j)
     (s.matrixForm_dividedColumn_of_apply_eq_zero j hZ)
   rw [s.scaledMonomial_coordinate_power,
     ← s.replacementCoefficient_zero i j, ← s.replacementMutatedCoefficient_zero i j] at h
-  change scaledMonomial s.toQuantumSeed.chart _ _ =
+  change scaledMonomial s.toExchangeFrame.chart _ _ =
     s.replacementConstant i j l * _ * _ * _ * _ at h
   let T := s.replacementConstant i j l *
     ((s.coordinate (row i) : D) ^ s.replacementExponent i j l)⁻¹ *
       (s.replacementMutatedCoefficient i j 0 * (s.replacementCoefficient i j 0)⁻¹) *
       (s.coordinate (row i) : D) ^ s.replacementExponent i j l
-  change algebraMap Zv D ((s.polynomial j).coeff l) * _ =
-    T * (algebraMap Zv D ((s.polynomial j).coeff l) * _)
+  change algebraMap R₀ D ((s.polynomial j).coeff l) * _ =
+    T * (algebraMap R₀ D ((s.polynomial j).coeff l) * _)
   rw [h, ← mul_assoc, Algebra.commutes ((s.polynomial j).coeff l) T, mul_assoc]
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

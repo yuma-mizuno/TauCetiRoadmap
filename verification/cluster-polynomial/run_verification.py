@@ -222,7 +222,16 @@ def main():
                   exact_symbolic_cases=dict(rank_two=12, frozen=6, principal=12, reversal=3),
                   generalized_all_rank_implementation=True,
                   polynomial_wordwise_classical_specialization=True,
-                  polynomial_exchange_scope="monic central Zv; constant term one; reversal mutation")
+                  shared_scalar_parameter_framework=True,
+                  separate_form_weights_and_column_independence=True,
+                  classical_zero_form_direct_instance=True,
+                  classical_public_proof_excludes_quantum_specialization=True,
+                  binary_mutation_defined_by_polynomial_mutation=True,
+                  binary_one_exchange_formulas_from_polynomial=True,
+                  standard_quantum_positive_compatibility_retained=True,
+                  polynomial_exchange_scope=("monic central polynomials; constant term one; "
+                      "reversal mutation; factorial scalar domain; arbitrary central unit; "
+                      "independent exchange columns and column-compatible form"))
     result_file.write_text(json.dumps(report, indent=2), encoding='utf-8')
     print(f'Passed: {len(files)} modules, {match[1]} axiom-audited declarations, '
           'copyright headers, exact symbolic checks.', flush=True)

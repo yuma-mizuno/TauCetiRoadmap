@@ -12,12 +12,12 @@ public import TauCetiRoadmap.ClusterAlgebras.QuantumAlgebra
 
 The chart `T(Zv,v,Λ) → D` of a quantum seed `s` is injective, so its inverse on the range
 `T_s` gives every element of `T_s` a unique finite expansion `Σ_a c_a M(a)` in the normalized
-monomials of `s`, with coefficients `c_a ∈ Zv` (`QuantumSeed.expansion`). Expanding and then
+monomials of `s`, with coefficients `c_a ∈ Zv` (`ExchangeFrame.expansion`). Expanding and then
 evaluating is the inclusion `T_s → D`.
 
 By the quantum Laurent phenomenon every coordinate of a seed `t` reachable from `u` lies in
-`T_u`; `QuantumSeed.variableExpansion` is its expansion in the chart of `u`, and
-`QuantumSeed.laurentExpansion` is the expansion of the variable reached by a mutation word.
+`T_u`; `ExchangeFrame.variableExpansion` is its expansion in the chart of `u`, and
+`ExchangeFrame.laurentExpansion` is the expansion of the variable reached by a mutation word.
 We prove the laws of these expansions:
 
 * evaluation: the chart sends the expansion back to the variable;
@@ -30,7 +30,7 @@ We prove the laws of these expansions:
 
 @[expose] public section
 
-namespace TauCeti.Cluster.QuantumSeed
+namespace TauCeti.Cluster.ExchangeFrame
 
 open TauCeti TauCeti.Laurent TauCeti.QuantumTorus
 
@@ -43,7 +43,7 @@ variable {D : Type*} [DivisionRing D] [Algebra Zv D]
 
 section Expansion
 
-variable (s : QuantumSeed D row)
+variable (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- The **expansion** in the chart of `s`: the inverse of the injective chart on its range
 `T_s`. -/
@@ -131,17 +131,17 @@ variable [Fintype K] [DecidableEq K]
 
 /-- The expansion of the coordinate `X_{j;t}` of a seed `t` reachable from `u` in the chart of
 `u`; it exists by the quantum Laurent phenomenon. -/
-def variableExpansion {u t : QuantumSeed D row} (h : Reachable u t) (j : M) :
+def variableExpansion {u t : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable u t) (j : M) :
     quantumTorus Zv vUnit (matrixForm u.form) :=
   u.expansion ⟨t.coordinate j, h.coordinate_mem_chartAlgebra j⟩
 
 /-- The Laurent expansion in the chart of `s` of the variable `X_{j;w}` of the seed reached
 from `s` by the word `w`. -/
-def laurentExpansion (s : QuantumSeed D row) (w : List K) (j : M) :
+def laurentExpansion (s : ExchangeFrame (u₀ := vUnit) D row) (w : List K) (j : M) :
     quantumTorus Zv vUnit (matrixForm s.form) :=
   variableExpansion (reachable_mutateWord s w) j
 
-variable {u t : QuantumSeed D row}
+variable {u t : ExchangeFrame (u₀ := vUnit) D row}
 
 /-- **Evaluation.** -/
 @[simp] theorem chart_variableExpansion (h : Reachable u t) (j : M) :
@@ -154,7 +154,7 @@ theorem variableExpansion_eq_iff (h : Reachable u t) (j : M)
   u.expansion_eq_iff
 
 /-- The expansion depends only on the seeds, not on the reachability witness. -/
-theorem variableExpansion_congr {t' : QuantumSeed D row} (h : Reachable u t)
+theorem variableExpansion_congr {t' : ExchangeFrame (u₀ := vUnit) D row} (h : Reachable u t)
     (h' : Reachable u t') (ht : t = t') (j : M) :
     variableExpansion h j = variableExpansion h' j := by
   subst ht
@@ -170,15 +170,15 @@ theorem variableExpansion_of_notMem (h : Reachable u t) {j : M} (hj : j ∉ Set.
   rw [variableExpansion_eq_iff, h.coordinate_of_notMem hj]
   exact u.monomial_single j
 
-theorem chart_laurentExpansion (s : QuantumSeed D row) (w : List K) (j : M) :
+theorem chart_laurentExpansion (s : ExchangeFrame (u₀ := vUnit) D row) (w : List K) (j : M) :
     s.chart (s.laurentExpansion w j) =
-      (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w s).coordinate j :=
+      (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w s).coordinate j :=
   chart_variableExpansion _ j
 
 /-- **Re-rooting.** For `t = μ_w(s)` and `u = μ_{w'}(s)`, the expansion of `X_{j;t}` in the
 chart of `u` is the Laurent expansion from the root `u` along `w'⁻¹ w`. -/
-theorem laurentExpansion_reroot (s : QuantumSeed D row) (w w' : List K) (j : M) :
-    (mutateWord (fun k t ↦ QuantumSeed.mutate t k) w' s).laurentExpansion
+theorem laurentExpansion_reroot (s : ExchangeFrame (u₀ := vUnit) D row) (w w' : List K) (j : M) :
+    (mutateWord (fun k t ↦ ExchangeFrame.mutate t k) w' s).laurentExpansion
         (w'.reverse ++ w) j =
       variableExpansion ((reachable_mutateWord s w').symm.trans (reachable_mutateWord s w))
         j :=
@@ -193,7 +193,7 @@ section Reindex
 
 variable {M' K' : Type*} [Fintype M'] [DecidableEq M'] {row' : K' ↪ M'}
   (σ : M ≃ M') (τ : K ≃ K') (hrow : ∀ k, row' (τ k) = σ (row k))
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- **Reindexing.** The expansion in the chart of the relabelled seed is the lattice
 reindexing of the expansion in the chart of `s`. -/
@@ -221,7 +221,7 @@ end Reindex
 section Map
 
 variable {D' : Type*} [DivisionRing D'] [Algebra Zv D'] (φ : D →ₐ[Zv] D')
-  (s : QuantumSeed D row)
+  (s : ExchangeFrame (u₀ := vUnit) D row)
 
 theorem map_mem_chartAlgebra {x : D} (hx : x ∈ s.chartAlgebra) :
     φ x ∈ (s.map φ).chartAlgebra := by
@@ -250,4 +250,4 @@ end Map
 
 end
 
-end TauCeti.Cluster.QuantumSeed
+end TauCeti.Cluster.ExchangeFrame

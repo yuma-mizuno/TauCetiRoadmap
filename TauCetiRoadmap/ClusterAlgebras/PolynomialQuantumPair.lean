@@ -17,13 +17,14 @@ replacement on both sides gives the four-generator equality.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] [Fintype K] [DecidableEq K]
-  {row : K ↪ M} (s : PolynomialQuantumSeed D row)
+  {row : K ↪ M} (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
@@ -55,26 +56,26 @@ theorem mutate_exchangeCoordinate_of_eq_zero {i j : K} (hij : i ≠ j)
     dividedColumn, positivePart]
 
 theorem pairRing_mutate (i : K) (b : M) :
-    (s.mutate i).toQuantumSeed.pairRing (row i) b = s.toQuantumSeed.pairRing (row i) b := by
-  simp only [QuantumSeed.pairRing]
+    (s.mutate i).toExchangeFrame.pairRing (row i) b = s.toExchangeFrame.pairRing (row i) b := by
+  simp only [ExchangeFrame.pairRing]
   congr 1
   funext a
   rw [s.mutate_coordinate_of_ne i a.2.1]
 
 /-- The polynomial exchange pair ring in two directions. -/
 def fourRing (i j : K) : Subring D :=
-  UpperBound.fourRing (s.toQuantumSeed.pairRing (row i) (row j)) (s.coordinate (row i) : D)
+  TauCeti.Laurent.fourRing (s.toExchangeFrame.pairRing (row i) (row j)) (s.coordinate (row i) : D)
     (s.exchangeCoordinate i) (s.coordinate (row j) : D) (s.exchangeCoordinate j)
 
 /-- Full polynomial quantum replacement, constructed from the seed alone. -/
 theorem replacement_mem {i j : K} (hij : i ≠ j) :
-    (s.mutate i).exchangeCoordinate j ∈ UpperBound.generated
-      (s.toQuantumSeed.pairRing (row i) (row j))
+    (s.mutate i).exchangeCoordinate j ∈ TauCeti.Laurent.generated
+      (s.toExchangeFrame.pairRing (row i) (row j))
       {s.exchangeCoordinate i, s.exchangeCoordinate j, (s.coordinate (row j) : D)} := by
   rcases lt_trichotomy (s.exchange.matrix (row i) j) 0 with h | h | h
   · exact s.replacement_mem_neg hij h
   · rw [s.mutate_exchangeCoordinate_of_eq_zero hij h]
-    exact UpperBound.generator_mem_generated _ _ (by simp)
+    exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
   · exact s.replacement_mem_pos hij h
 
 /-- The four-generator ring is unchanged by mutation, for arbitrary exchange degrees. -/
@@ -88,17 +89,17 @@ theorem fourRing_mutate {i j : K} (hij : i ≠ j) :
   simp only [fourRing]
   rw [pairRing_mutate, mutate_coordinate_row, mutate_exchangeCoordinate,
     mutate_coordinate_of_ne _ i hqj]
-  refine UpperBound.generated_eq_of_mem _ (fun a ha ↦ ?_) (fun a ha ↦ ?_)
+  refine TauCeti.Laurent.generated_eq_of_mem _ (fun a ha ↦ ?_) (fun a ha ↦ ?_)
   · rcases ha with rfl | rfl | rfl | rfl
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp) h1
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp) h1
   · rcases ha with rfl | rfl | rfl | rfl
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generator_mem_generated _ _ (by simp)
-    · exact UpperBound.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp) h2
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+    · exact TauCeti.Laurent.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp) h2
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

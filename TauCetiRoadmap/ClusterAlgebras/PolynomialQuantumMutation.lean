@@ -5,7 +5,7 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumSeed
+public import TauCetiRoadmap.ClusterAlgebras.PolynomialExchangeSeed
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.ChangeChart
 
 /-!
@@ -18,64 +18,65 @@ The matrix and form mutation are the ordinary compatible-pair constructions.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
 theorem coordinate_mul_exchangeCoordinate (k : K) {j : M} (hj : j ≠ row k) :
     s.coordinate j * s.exchangeCoordinate k =
-      algebraMap Zv D ((vUnit ^ (2 * matrixForm s.form (Pi.single j 1)
-        (exchangeExponentPos row s.exchange.matrix k)) : Zvˣ) : Zv) *
+      algebraMap R₀ D ((u₀ ^ (2 * matrixForm s.form (Pi.single j 1)
+        (exchangeExponentPos row s.exchange.matrix k)) : R₀ˣ) : R₀) *
         (s.exchangeCoordinate k * s.coordinate j) := by
   rw [s.alternating.matrixForm_swap (Pi.single j 1), mul_neg]
   calc
     (s.coordinate j : D) * s.exchangeCoordinate k =
-        algebraMap Zv D ((vUnit ^ (-(2 * matrixForm s.form
-          (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1))) : Zvˣ) : Zv) *
-        (algebraMap Zv D ((vUnit ^ (2 * matrixForm s.form
-          (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1)) : Zvˣ) : Zv) *
+        algebraMap R₀ D ((u₀ ^ (-(2 * matrixForm s.form
+          (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1))) : R₀ˣ) : R₀) *
+        (algebraMap R₀ D ((u₀ ^ (2 * matrixForm s.form
+          (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1)) : R₀ˣ) : R₀) *
           (s.coordinate j * s.exchangeCoordinate k)) := by
       rw [← mul_assoc, ← map_mul, ← Units.val_mul, ← zpow_add, neg_add_cancel]
       simp
     _ = _ := by rw [← s.exchangeCoordinate_mul_coordinate k hj]
 
 theorem exchangeCoordinate_normalizes (k : K) :
-    Normalizes (s.toQuantumSeed.otherRing (row k)) (s.exchangeCoordinate k) :=
-  s.toQuantumSeed.normalizes_otherRing (s.exchangeCoordinate_ne_zero k)
-    (fun j ↦ vUnit ^ (2 * matrixForm s.form (exchangeExponentPos row s.exchange.matrix k)
+    Normalizes (s.toExchangeFrame.otherRing (row k)) (s.exchangeCoordinate k) :=
+  s.toExchangeFrame.normalizes_otherRing (s.exchangeCoordinate_ne_zero k)
+    (fun j ↦ u₀ ^ (2 * matrixForm s.form (exchangeExponentPos row s.exchange.matrix k)
       (Pi.single j 1))) (fun _ hj ↦ s.exchangeCoordinate_mul_coordinate k hj)
 
 theorem exchangeCoordinate_mul_coordinate_mem (k : K) :
-    s.exchangeCoordinate k * s.coordinate (row k) ∈ s.toQuantumSeed.otherRing (row k) := by
+    s.exchangeCoordinate k * s.coordinate (row k) ∈ s.toExchangeFrame.otherRing (row k) := by
   rw [exchangeCoordinate, Finset.sum_mul]
   apply Subring.sum_mem
   intro l _
-  rw [mul_assoc, ← s.toQuantumSeed.monomial_single, s.toQuantumSeed.monomial_mul_monomial]
+  rw [mul_assoc, ← s.toExchangeFrame.monomial_single, s.toExchangeFrame.monomial_mul_monomial]
   apply Subring.mul_mem
-  · exact s.toQuantumSeed.algebraMap_mem_otherRing _ _
+  · exact s.toExchangeFrame.algebraMap_mem_otherRing _ _
   · apply Subring.mul_mem
-    · exact s.toQuantumSeed.algebraMap_mem_otherRing _ _
-    · exact s.toQuantumSeed.monomial_mem_otherRing (by
+    · exact s.toExchangeFrame.algebraMap_mem_otherRing _ _
+    · exact s.toExchangeFrame.monomial_mem_otherRing (by
         simp [s.exchangeExponent_row])
 
 /-- Polynomial exchange constructs all hypotheses of the seed-free one-exchange theorem. -/
 theorem exchangeData (k : K) :
-    SkewExchange.ExchangeData (s.toQuantumSeed.otherRing (row k)) (s.coordinate (row k) : D)
+    SkewExchange.ExchangeData (s.toExchangeFrame.otherRing (row k)) (s.coordinate (row k) : D)
       (s.exchangeCoordinate k * s.coordinate (row k)) where
-  x_normalizes := s.toQuantumSeed.coordinate_normalizes (row k)
-  x_leftFree := s.toQuantumSeed.leftFree_coordinate (row k)
+  x_normalizes := s.toExchangeFrame.coordinate_normalizes (row k)
+  x_leftFree := s.toExchangeFrame.leftFree_coordinate (row k)
   E_mem := s.exchangeCoordinate_mul_coordinate_mem k
   E_normalizes := (s.exchangeCoordinate_normalizes k).mul
-    (s.toQuantumSeed.coordinate_normalizes (row k))
+    (s.toExchangeFrame.coordinate_normalizes (row k))
 
 theorem exchangeCoordinate_leftFree (k : K) :
-    SkewExchange.LeftFree (s.toQuantumSeed.otherRing (row k)) (s.exchangeCoordinate k) := by
+    SkewExchange.LeftFree (s.toExchangeFrame.otherRing (row k)) (s.exchangeCoordinate k) := by
   simpa only [mul_inv_cancel_right₀ (Units.ne_zero (s.coordinate (row k)))] using
     (s.exchangeData k).y_leftFree
 
@@ -92,7 +93,7 @@ theorem mutateCoordinate_of_ne (k : K) {j : M} (hj : j ≠ row k) :
     s.mutateCoordinate k j = s.coordinate j := Function.update_of_ne hj _ _
 
 theorem mutateCoordinate_quasiCommuting (k : K) :
-    IsQuasiCommuting vUnit (matrixForm (formMutation row s.exchange.matrix s.form k 1))
+    IsQuasiCommuting u₀ (matrixForm (formMutation row s.exchange.matrix s.form k 1))
       (s.mutateCoordinate k) := by
   have hrow : ∀ {j}, j ≠ row k → formMutation row s.exchange.matrix s.form k 1 (row k) j =
       matrixForm s.form (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1) :=
@@ -116,14 +117,14 @@ theorem mutateCoordinate_quasiCommuting (k : K) :
 
 /-- The constructed chart for the mutated alternating form. -/
 def mutateChart (k : K) :
-    quantumTorus Zv vUnit (matrixForm (formMutation row s.exchange.matrix s.form k 1)) →ₐ[Zv] D :=
+    quantumTorus R₀ u₀ (matrixForm (formMutation row s.exchange.matrix s.form k 1)) →ₐ[R₀] D :=
   QuantumTorus.lift (s.alternating.formMutation k 1).isAlt (s.mutateCoordinate k)
     (s.mutateCoordinate_quasiCommuting k)
 
 theorem mutateChart_monomial_of_apply_eq_zero (k : K) {a : M → ℤ}
     (ha : a (row k) = 0) :
-    s.mutateChart k (QuantumTorus.monomial a) = s.toQuantumSeed.monomial a := by
-  refine (lift_monomial_congr s.toQuantumSeed.isAlt _ s.quasiCommuting _
+    s.mutateChart k (QuantumTorus.monomial a) = s.toExchangeFrame.monomial a := by
+  refine (lift_monomial_congr s.toExchangeFrame.isAlt _ s.quasiCommuting _
     (fun i hi ↦ ?_) (fun p q hp hq ↦ ?_)).symm
   · refine (s.mutateCoordinate_of_ne k ?_).symm
     rintro rfl
@@ -133,10 +134,10 @@ theorem mutateChart_monomial_of_apply_eq_zero (k : K) {a : M → ℤ}
 /-- Faithfulness is deduced from the constructed one-exchange data, for arbitrary degree. -/
 theorem mutateChart_injective (k : K) : Function.Injective (s.mutateChart k) := by
   apply algHom_injective_of_coordinate_free (s.alternating.formMutation k 1).isAlt
-    s.toQuantumSeed.chart (s.mutateChart k) s.toQuantumSeed.chart_injective
-    (row k) (s.toQuantumSeed.otherRing (row k))
-    (s.toQuantumSeed.algebraMap_mem_otherRing _) (fun _ ha ↦
-      s.toQuantumSeed.monomial_mem_otherRing ha)
+    s.toExchangeFrame.chart (s.mutateChart k) s.toExchangeFrame.chart_injective
+    (row k) (s.toExchangeFrame.otherRing (row k))
+    (s.toExchangeFrame.algebraMap_mem_otherRing _) (fun _ ha ↦
+      s.toExchangeFrame.monomial_mem_otherRing ha)
     (fun _ ha ↦ s.mutateChart_monomial_of_apply_eq_zero k ha)
   simpa only [mutateChart, lift_monomial_single, mutateCoordinate_row] using
     s.exchangeCoordinate_leftFree k
@@ -145,7 +146,7 @@ variable [Fintype K] [DecidableEq K]
 
 /-- Reverse the coefficient list in the mutated direction. The reciprocal case
 is exactly the case in which this update fixes the exchange polynomials. -/
-def mutatePolynomial (k : K) : K → Polynomial Zv :=
+def mutatePolynomial (k : K) : K → Polynomial R₀ :=
   Function.update s.polynomial k (s.polynomial k).reverse
 
 omit [Fintype K] in
@@ -171,12 +172,22 @@ theorem degree_dvd_mutation (k : K) (a : M) (j : K) :
       (dvd_mul_of_dvd_right (hmax (dvd_neg.mpr (s.degree_dvd (row k) j))) _)
 
 /-- Polynomial mutation uses the existing compatible-pair mutation and the proved new chart. -/
-def mutate (k : K) : PolynomialQuantumSeed D row where
-  toQuantumSeed := {
+def mutate (k : K) : PolynomialExchangeSeed (u₀ := u₀) D row where
+  toExchangeFrame := {
     exchange := s.exchange.mutate k
     form := formMutation row s.exchange.matrix s.form k 1
     alternating := s.alternating.formMutation k 1
-    compatible := s.compatible.mutation (Or.inl rfl)
+    formWeight := s.formWeight
+    compatible := s.compatible.mutation s.alternating (Or.inl rfl)
+    independentColumns := by
+      change LinearIndependent ℚ
+        (fun j ↦ fun a ↦ ((extendedMatrixMutation row s.exchange.matrix k) a j : ℚ))
+      apply (linearIndependent_columns_iff_rank
+        ((extendedMatrixMutation row s.exchange.matrix k).map (Int.castRingHom ℚ))).2
+      exact (extendedMatrixMutation_rank_map row s.exchange.matrix k (s.exchange.diagonal k)
+        ℚ (Int.castRingHom ℚ)).trans
+        ((linearIndependent_columns_iff_rank
+          (s.exchange.matrix.map (Int.castRingHom ℚ))).1 s.independentColumns)
     coordinate := s.mutateCoordinate k
     quasiCommuting := s.mutateCoordinate_quasiCommuting k
     faithful := s.mutateChart_injective k }
@@ -199,4 +210,4 @@ def mutate (k : K) : PolynomialQuantumSeed D row where
   degree_dvd a j := by rw [s.mutatePolynomial_degree]; exact s.degree_dvd_mutation k a j
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

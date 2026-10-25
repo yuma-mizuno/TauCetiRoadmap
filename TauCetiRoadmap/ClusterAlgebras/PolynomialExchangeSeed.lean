@@ -5,13 +5,13 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
+public import TauCetiRoadmap.ClusterAlgebras.ExchangeFrame
 public import Mathlib.Algebra.Polynomial.Reverse
 
 /-!
-# Polynomial quantum seeds
+# Polynomial exchange seeds
 
-The underlying compatible pair and faithful chart are the existing `QuantumSeed`
+The underlying compatible pair and faithful chart are the existing `ExchangeFrame`
 data. Only the monic exchange polynomials with constant coefficient one are added.
 Their degree divides the extended
 matrix column. No mutation, new-chart faithfulness or Laurent property is input.
@@ -23,26 +23,28 @@ namespace TauCeti.Cluster
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
 
 /-- A compatible faithful quantum chart with monic central exchange polynomials.
 The degree is positive and divides every entry of its extended exchange column. -/
-structure PolynomialQuantumSeed (D : Type*) [DivisionRing D] [Algebra Zv D]
+structure PolynomialExchangeSeed {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+    (D : Type*) [DivisionRing D] [Algebra R₀ D]
     {M K : Type*} [Fintype M] [DecidableEq M] (row : K ↪ M)
-    extends QuantumSeed D row where
+    extends ExchangeFrame (u₀ := u₀) D row where
   /-- The exchange polynomial in each mutable direction. -/
-  polynomial : K → Polynomial Zv
+  polynomial : K → Polynomial R₀
   constant_one : ∀ k, (polynomial k).coeff 0 = 1
   monic : ∀ k, (polynomial k).Monic
   degree_pos : ∀ k, 0 < (polynomial k).natDegree
   degree_dvd : ∀ i k, ((polynomial k).natDegree : ℤ) ∣ exchange.matrix i k
 
-namespace PolynomialQuantumSeed
+namespace PolynomialExchangeSeed
 
 noncomputable section
 
-variable (s : PolynomialQuantumSeed D row)
+variable (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 /-- The exchange degree, independent of the symmetrizer of the compatible pair. -/
 def degree (k : K) : ℕ := (s.polynomial k).natDegree
@@ -61,7 +63,20 @@ theorem dividedColumn_ne_zero (k : K) : s.dividedColumn k ≠ 0 := by
   intro h
   have := s.degree_mul_dividedColumn k
   rw [h, smul_zero] at this
-  exact s.compatible.col_ne_zero k this.symm
+  exact s.toExchangeFrame.column_ne_zero k this.symm
+
+/-- Dividing nonzero exchange degrees preserves independence of all columns. -/
+theorem independent_dividedColumns :
+    LinearIndependent ℚ (fun k ↦ fun a ↦ (s.dividedColumn k a : ℚ)) := by
+  have hd (k : K) : (s.degree k : ℚ) ≠ 0 := by
+    exact_mod_cast (Nat.ne_of_gt (s.degree_pos k))
+  convert s.independentColumns.units_smul
+    (fun k ↦ Units.mk0 ((s.degree k : ℚ)⁻¹) (inv_ne_zero (hd k))) using 1
+  funext k a
+  change (s.dividedColumn k a : ℚ) = (s.degree k : ℚ)⁻¹ * (s.exchange.matrix a k : ℚ)
+  have h : (s.degree k : ℚ) * (s.dividedColumn k a : ℚ) = (s.exchange.matrix a k : ℚ) := by
+    exact_mod_cast congrFun (s.degree_mul_dividedColumn k) a
+  rw [← h, ← mul_assoc, inv_mul_cancel₀ (hd k), one_mul]
 
 theorem dividedColumn_row (k : K) : s.dividedColumn k (row k) = 0 := by
   simp [dividedColumn, s.exchange.diagonal]
@@ -115,11 +130,13 @@ theorem leadingCoeff_eq_one (k : K) : (s.polynomial k).leadingCoeff = 1 := by
 
 theorem polynomial_reverse_natDegree (k : K) :
     (s.polynomial k).reverse.natDegree = (s.polynomial k).natDegree := by
+  let := (algebraMap R₀ D).domain_nontrivial
   rw [Polynomial.reverse_natDegree,
     Polynomial.natTrailingDegree_eq_zero.mpr (Or.inr (by rw [s.constant_one]; exact one_ne_zero)),
     Nat.sub_zero]
 
 theorem polynomial_reverse_monic (k : K) : (s.polynomial k).reverse.Monic := by
+  let := (algebraMap R₀ D).domain_nontrivial
   change (s.polynomial k).reverse.leadingCoeff = 1
   rw [Polynomial.reverse_leadingCoeff, Polynomial.trailingCoeff,
     Polynomial.natTrailingDegree_eq_zero.mpr (Or.inr (by rw [s.constant_one]; exact one_ne_zero)),
@@ -132,7 +149,7 @@ theorem polynomial_reverse_reverse (k : K) : (s.polynomial k).reverse.reverse = 
 
 theorem matrixForm_dividedColumn_single {k : K} {j : M} (hj : j ≠ row k) :
     matrixForm s.form (s.dividedColumn k) (Pi.single j 1) = 0 := by
-  have h := s.toQuantumSeed.compatible.matrixForm_col k (Pi.single j 1)
+  have h := s.toExchangeFrame.compatible.matrixForm_col k (Pi.single j 1)
   rw [← s.degree_mul_dividedColumn, map_zsmul, LinearMap.smul_apply, smul_eq_mul] at h
   have hr : (s.degree k : ℤ) ≠ 0 := by
     have := s.degree_pos k
@@ -152,15 +169,16 @@ theorem matrixForm_exchangeExponent_single {k : K} {j : M} (hj : j ≠ row k) (l
 /-- The actual polynomial exchange coordinate in the ambient division ring. -/
 def exchangeCoordinate (k : K) : D :=
   ∑ l ∈ Finset.range (s.degree k + 1),
-    algebraMap Zv D ((s.polynomial k).coeff l) * s.toQuantumSeed.monomial
+    algebraMap R₀ D ((s.polynomial k).coeff l) * s.toExchangeFrame.monomial
       (s.exchangeExponent k l)
 
 theorem exchangeCoordinate_ne_zero (k : K) : s.exchangeCoordinate k ≠ 0 := by
+  let := (algebraMap R₀ D).domain_nontrivial
   intro h
   have hsum : (∑ l ∈ Finset.range (s.degree k + 1),
       (s.polynomial k).coeff l • (QuantumTorus.monomial (s.exchangeExponent k l) :
-        quantumTorus Zv vUnit (matrixForm s.form))) = 0 := by
-    apply s.toQuantumSeed.chart_injective
+        quantumTorus R₀ u₀ (matrixForm s.form))) = 0 := by
+    apply s.toExchangeFrame.chart_injective
     rw [map_sum, map_zero]
     change (∑ l ∈ Finset.range (s.degree k + 1), _) = 0
     convert h using 1
@@ -177,21 +195,21 @@ theorem exchangeCoordinate_ne_zero (k : K) : s.exchangeCoordinate k ≠ 0 := by
   · simp
 
 theorem exchangeCoordinate_mem_chartRing (k : K) :
-    s.exchangeCoordinate k ∈ s.toQuantumSeed.chartRing := by
+    s.exchangeCoordinate k ∈ s.toExchangeFrame.chartRing := by
   apply Subring.sum_mem
   intro l _
   exact Subring.mul_mem _ (coefficient_mem_chartRing _ _ ⟨_, rfl⟩)
-    (s.toQuantumSeed.monomial_mem_chartRing _)
+    (s.toExchangeFrame.monomial_mem_chartRing _)
 
 theorem exchangeCoordinate_mul_coordinate (k : K) {j : M} (hj : j ≠ row k) :
     s.exchangeCoordinate k * s.coordinate j =
-      algebraMap Zv D ((vUnit ^ (2 * matrixForm s.form
-        (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1)) : Zvˣ) : Zv) *
+      algebraMap R₀ D ((u₀ ^ (2 * matrixForm s.form
+        (exchangeExponentPos row s.exchange.matrix k) (Pi.single j 1)) : R₀ˣ) : R₀) *
         (s.coordinate j * s.exchangeCoordinate k) := by
   simp only [exchangeCoordinate, Finset.sum_mul, Finset.mul_sum]
   apply Finset.sum_congr rfl
   intro l _
-  rw [mul_assoc, s.toQuantumSeed.monomial_mul_coordinate,
+  rw [mul_assoc, s.toExchangeFrame.monomial_mul_coordinate,
     s.matrixForm_exchangeExponent_single hj, ← mul_assoc, ← map_mul,
     mul_comm ((s.polynomial k).coeff l), map_mul, mul_assoc]
   congr 1
@@ -199,5 +217,5 @@ theorem exchangeCoordinate_mul_coordinate (k : K) {j : M} (hj : j ≠ row k) :
     (s.coordinate j : D)), mul_assoc]
 
 end
-end PolynomialQuantumSeed
+end PolynomialExchangeSeed
 end TauCeti.Cluster

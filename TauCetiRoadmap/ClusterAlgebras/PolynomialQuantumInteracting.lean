@@ -17,24 +17,25 @@ exchanges computes the intersection, for arbitrary polynomial degrees.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
 theorem exchangeCoordinate_negative_remainder {i j : K} (hij : i ≠ j)
     (hneg : s.exchange.matrix (row i) j < 0) :
-    s.exchangeCoordinate i - s.toQuantumSeed.monomial
+    s.exchangeCoordinate i - s.toExchangeFrame.monomial
         (exchangeExponentNeg row s.exchange.matrix i) ∈
-      s.toQuantumSeed.twoCoordinateSpan (row i) (row j) (-1) 1 := by
+      s.toExchangeFrame.twoCoordinateSpan (row i) (row j) (-1) 1 := by
   rw [exchangeCoordinate, ← s.exchangeExponent_zero i]
-  simp_rw [← Algebra.smul_def (R := Zv) (A := D)]
-  apply s.toQuantumSeed.sum_smul_monomial_sub_mem_twoCoordinateSpan _ _ _
+  simp_rw [← Algebra.smul_def (R := R₀) (A := D)]
+  apply s.toExchangeFrame.sum_smul_monomial_sub_mem_twoCoordinateSpan _ _ _
     (Finset.mem_range.mpr (by omega : 0 < s.degree i + 1)) (s.constant_one i)
   intro l _ hl0
   refine ⟨s.exchangeExponent_row i l, ?_⟩
@@ -60,39 +61,39 @@ theorem exchangeCoordinate_negative_remainder {i j : K} (hij : i ≠ j)
 unit-constant-term input of noncommutative patching. -/
 theorem unitConstantTerm_of_exchange_remainder {i j : K} (hij : i ≠ j)
     (a : M → ℤ) (ha : a (row i) = -1) (hb : a (row j) = 0)
-    (hR : s.exchangeCoordinate i - s.toQuantumSeed.monomial a ∈
-      s.toQuantumSeed.twoCoordinateSpan (row i) (row j) (-1) 1) :
-    UnitConstantTerm (s.toQuantumSeed.pairRing (row i) (row j)) (s.coordinate (row j) : D)
+    (hR : s.exchangeCoordinate i - s.toExchangeFrame.monomial a ∈
+      s.toExchangeFrame.twoCoordinateSpan (row i) (row j) (-1) 1) :
+    UnitConstantTerm (s.toExchangeFrame.pairRing (row i) (row j)) (s.coordinate (row j) : D)
       ((s.coordinate (row i) : D) * s.exchangeCoordinate i) := by
   let x : D := s.coordinate (row i)
   let y : D := s.coordinate (row j)
   let e : M → ℤ := Pi.single (row i) 1
-  let a0 := x * s.toQuantumSeed.monomial a
-  let R := x * (s.exchangeCoordinate i - s.toQuantumSeed.monomial a)
-  have ha0 : a0 = scaledMonomial s.toQuantumSeed.chart (matrixForm s.form e a) (e + a) := by
+  let a0 := x * s.toExchangeFrame.monomial a
+  let R := x * (s.exchangeCoordinate i - s.toExchangeFrame.monomial a)
+  have ha0 : a0 = scaledMonomial s.toExchangeFrame.chart (matrixForm s.form e a) (e + a) := by
     dsimp [a0, x, e]
-    rw [← s.toQuantumSeed.monomial_single, s.toQuantumSeed.monomial_mul_monomial]
+    rw [← s.toExchangeFrame.monomial_single, s.toExchangeFrame.monomial_mul_monomial]
     rfl
   have hvp : (e + a) (row i) = 0 := by simp [e, ha]
   have hvq : (e + a) (row j) = 0 := by simp [e, hb, row.injective.ne hij.symm]
-  have haC : a0 ∈ s.toQuantumSeed.pairRing (row i) (row j) := by
+  have haC : a0 ∈ s.toExchangeFrame.pairRing (row i) (row j) := by
     rw [ha0]
     exact s.scaledMonomial_mem_pairRing i j _ hvp hvq
   have ha0ne : a0 ≠ 0 := by
     rw [ha0]
-    exact scaledMonomial_ne_zero _ s.toQuantumSeed.isAlt _ _
-  have hai : a0⁻¹ ∈ s.toQuantumSeed.pairRing (row i) (row j) := by
-    rw [ha0, scaledMonomial_inv _ s.toQuantumSeed.isAlt]
+    exact scaledMonomial_ne_zero _ s.toExchangeFrame.isAlt _ _
+  have hai : a0⁻¹ ∈ s.toExchangeFrame.pairRing (row i) (row j) := by
+    rw [ha0, scaledMonomial_inv _ s.toExchangeFrame.isAlt]
     exact s.scaledMonomial_mem_pairRing i j _ (by simp [hvp]) (by simp [hvq])
-  have hx : x ∈ s.toQuantumSeed.twoCoordinateSpan (row i) (row j) 1 0 := by
+  have hx : x ∈ s.toExchangeFrame.twoCoordinateSpan (row i) (row j) 1 0 := by
     change (s.coordinate (row i) : D) ∈ _
-    rw [← s.toQuantumSeed.monomial_single]
-    exact s.toQuantumSeed.monomial_mem_twoCoordinateSpan (by simp)
+    rw [← s.toExchangeFrame.monomial_single]
+    exact s.toExchangeFrame.monomial_mem_twoCoordinateSpan (by simp)
       (by simp [row.injective.ne hij.symm])
-  have hR' : R ∈ s.toQuantumSeed.twoCoordinateSpan (row i) (row j) 0 1 :=
-    s.toQuantumSeed.mul_mem_twoCoordinateSpan hx hR (by norm_num) (by norm_num)
-  have hw := s.toQuantumSeed.inv_mul_mem_skewPolyRing (row.injective.ne hij) hR'
-  have h := unitConstantTerm_add (s.toQuantumSeed.coordinate_normalizes_pairRing _ _ _)
+  have hR' : R ∈ s.toExchangeFrame.twoCoordinateSpan (row i) (row j) 0 1 :=
+    s.toExchangeFrame.mul_mem_twoCoordinateSpan hx hR (by norm_num) (by norm_num)
+  have hw := s.toExchangeFrame.inv_mul_mem_skewPolyRing (row.injective.ne hij) hR'
+  have h := unitConstantTerm_add (s.toExchangeFrame.coordinate_normalizes_pairRing _ _ _)
     haC ha0ne hai hw
   have he : a0 + y * (y⁻¹ * R) = x * s.exchangeCoordinate i := by
     rw [mul_inv_cancel_left₀ (Units.ne_zero (s.coordinate (row j)))]
@@ -102,7 +103,7 @@ theorem unitConstantTerm_of_exchange_remainder {i j : K} (hij : i ≠ j)
 
 theorem unitConstantTerm_coordinate_mul_exchangeCoordinate {i j : K}
     (hb : s.exchange.matrix (row j) i ≠ 0) :
-    UnitConstantTerm (s.toQuantumSeed.pairRing (row i) (row j)) (s.coordinate (row j) : D)
+    UnitConstantTerm (s.toExchangeFrame.pairRing (row i) (row j)) (s.coordinate (row j) : D)
       ((s.coordinate (row i) : D) * s.exchangeCoordinate i) := by
   have hij : i ≠ j := by rintro rfl; exact hb (s.exchange.diagonal i)
   have hbij : s.exchange.matrix (row i) j ≠ 0 := by
@@ -130,46 +131,46 @@ theorem unitConstantTerm_coordinate_mul_exchangeCoordinate {i j : K}
     · exact s.exchangeCoordinate_positive_remainder hij h
 
 theorem fourRing_comm (i j : K) : s.fourRing i j = s.fourRing j i := by
-  rw [fourRing, fourRing, s.toQuantumSeed.pairRing_comm, UpperBound.fourRing_comm]
+  rw [fourRing, fourRing, s.toExchangeFrame.pairRing_comm, TauCeti.Laurent.fourRing_comm]
 
 /-- `y = X_j` normalizes `C⟨X_i, X'_i, X_j⟩`. -/
 theorem coordinate_normalizes_closure_pair {i j : K} (hij : i ≠ j) :
-    Normalizes (UpperBound.generated (s.toQuantumSeed.pairRing (row i) (row j))
+    Normalizes (TauCeti.Laurent.generated (s.toExchangeFrame.pairRing (row i) (row j))
         {(s.coordinate (row i) : D), s.exchangeCoordinate i, (s.coordinate (row j) : D)})
       (s.coordinate (row j) : D) := by
   have hji : row j ≠ row i := row.injective.ne hij.symm
-  refine normalizes_closure (s.toQuantumSeed.coordinate_normalizes_pairRing _ _ _)
-    (s.toQuantumSeed.algebraMap_mem_pairRing _ _) ?_
+  refine normalizes_closure (s.toExchangeFrame.coordinate_normalizes_pairRing _ _ _)
+    (s.toExchangeFrame.algebraMap_mem_pairRing _ _) ?_
   rintro g (rfl | rfl | rfl)
   · exact ⟨_, by rw [s.quasiCommuting, Algebra.smul_def]⟩
   · exact ⟨_, s.coordinate_mul_exchangeCoordinate i hji⟩
   · exact ⟨1, by simp⟩
 
 theorem closure_pair_le_fourRing (i j : K) :
-    UpperBound.generated (s.toQuantumSeed.pairRing (row i) (row j))
+    TauCeti.Laurent.generated (s.toExchangeFrame.pairRing (row i) (row j))
         {(s.coordinate (row i) : D), s.exchangeCoordinate i, (s.coordinate (row j) : D)} ≤
       s.fourRing i j :=
-  UpperBound.generated_mono _ fun g hg ↦ by rcases hg with rfl | rfl | rfl <;> simp
+  TauCeti.Laurent.generated_mono _ fun g hg ↦ by rcases hg with rfl | rfl | rfl <;> simp
 
 variable [Fintype K] [DecidableEq K]
 
 /-- Regrouping `T_s ∩ T_{μ_i(s)} = C⟨X_i, X'_i⟩` around a second coordinate:
 `T_s ∩ T_{μ_i(s)} = C'⟨X_j, X_j⁻¹, X_i, X'_i⟩` with `C' = pairRing (row i) (row j)`. -/
 theorem inf_mutate_eq_closure_pair {i j : K} (hij : i ≠ j) :
-    s.toQuantumSeed.chartRing ⊓ (s.mutate i).toQuantumSeed.chartRing =
-      UpperBound.generated (s.toQuantumSeed.pairRing (row i) (row j))
+    s.toExchangeFrame.chartRing ⊓ (s.mutate i).toExchangeFrame.chartRing =
+      TauCeti.Laurent.generated (s.toExchangeFrame.pairRing (row i) (row j))
         {(s.coordinate (row j) : D), (s.coordinate (row j) : D)⁻¹,
           (s.coordinate (row i) : D), s.exchangeCoordinate i} := by
   have hji : row j ≠ row i := row.injective.ne hij.symm
-  rw [s.chartRing_inf_mutate_chartRing i, s.toQuantumSeed.otherRing_eq_regroup hji]
+  rw [s.chartRing_inf_mutate_chartRing i, s.toExchangeFrame.otherRing_eq_regroup hji]
   apply le_antisymm
   · refine Subring.closure_le.2 ?_
     rintro g (hg | hg)
-    · refine chartRing_le (fun c hc ↦ UpperBound.coefficient_mem_generated _ _ hc)
-        (fun _ ↦ UpperBound.generator_mem_generated _ _ (by simp))
-        (fun _ ↦ UpperBound.generator_mem_generated _ _ (by simp)) hg
-    · rcases hg with rfl | rfl <;> exact UpperBound.generator_mem_generated _ _ (by simp)
-  · refine UpperBound.generated_le _ _ _
+    · refine chartRing_le (fun c hc ↦ TauCeti.Laurent.coefficient_mem_generated _ _ hc)
+        (fun _ ↦ TauCeti.Laurent.generator_mem_generated _ _ (by simp))
+        (fun _ ↦ TauCeti.Laurent.generator_mem_generated _ _ (by simp)) hg
+    · rcases hg with rfl | rfl <;> exact TauCeti.Laurent.generator_mem_generated _ _ (by simp)
+  · refine TauCeti.Laurent.generated_le _ _ _
       (fun c hc ↦ Subring.subset_closure (Or.inl (coefficient_mem_chartRing _ _ hc))) ?_
     intro g hg
     · rcases hg with rfl | rfl | rfl | rfl
@@ -182,20 +183,20 @@ theorem inf_mutate_eq_closure_pair {i j : K} (hij : i ≠ j) :
 
 /-- `C⟨X_i, X'_i, X_j, X'_j⟩ ⊆ T_s ∩ T_{μ_i(s)}`. -/
 theorem fourRing_le_inf_mutate {i j : K} (hij : i ≠ j) :
-    s.fourRing i j ≤ s.toQuantumSeed.chartRing ⊓ (s.mutate i).toQuantumSeed.chartRing := by
+    s.fourRing i j ≤ s.toExchangeFrame.chartRing ⊓ (s.mutate i).toExchangeFrame.chartRing := by
   have hji : row j ≠ row i := row.injective.ne hij.symm
   rw [s.chartRing_inf_mutate_chartRing i]
-  set T := Subring.closure ((s.toQuantumSeed.otherRing (row i) : Set D) ∪
+  set T := Subring.closure ((s.toExchangeFrame.otherRing (row i) : Set D) ∪
     {(s.coordinate (row i) : D), s.exchangeCoordinate i})
-  have hO : s.toQuantumSeed.otherRing (row i) ≤ T := fun _ h ↦ Subring.subset_closure (Or.inl h)
+  have hO : s.toExchangeFrame.otherRing (row i) ≤ T := fun _ h ↦ Subring.subset_closure (Or.inl h)
   have hx : (s.coordinate (row i) : D) ∈ T := Subring.subset_closure (Or.inr (by simp))
-  have hmon : ∀ e : M → ℤ, 0 ≤ e (row i) → s.toQuantumSeed.monomial e ∈ T := fun e he ↦
-    s.toQuantumSeed.monomial_mem_of_nonneg
-      (fun r ↦ hO (s.toQuantumSeed.algebraMap_mem_otherRing _ r)) hx
-      (hO (s.toQuantumSeed.monomial_mem_otherRing (by simp))) he
+  have hmon : ∀ e : M → ℤ, 0 ≤ e (row i) → s.toExchangeFrame.monomial e ∈ T := fun e he ↦
+    s.toExchangeFrame.monomial_mem_of_nonneg
+      (fun r ↦ hO (s.toExchangeFrame.algebraMap_mem_otherRing _ r)) hx
+      (hO (s.toExchangeFrame.monomial_mem_otherRing (by simp))) he
   refine Subring.closure_le.2 ?_
   rintro g (hg | hg)
-  · exact hO (s.toQuantumSeed.pairRing_le_otherRing hji hg)
+  · exact hO (s.toExchangeFrame.pairRing_le_otherRing hji hg)
   · rcases hg with rfl | rfl | rfl | rfl
     · exact hx
     · exact Subring.subset_closure (Or.inr (by simp))
@@ -204,48 +205,48 @@ theorem fourRing_le_inf_mutate {i j : K} (hij : i ≠ j) :
     · rw [exchangeCoordinate]
       apply T.sum_mem
       intro l hl
-      apply T.mul_mem (hO (s.toQuantumSeed.algebraMap_mem_otherRing _ _))
+      apply T.mul_mem (hO (s.toExchangeFrame.algebraMap_mem_otherRing _ _))
       exact hmon _ (s.exchangeExponent_nonneg_of_ne j hji.symm (by
         have := Finset.mem_range.mp hl; omega))
 
 /-- Right denominators: every `f ∈ T_s ∩ T_{μ_i(s)}` has `f X_j ^ n ∈ C⟨X_i, X'_i, X_j⟩`. -/
 theorem exists_mul_pow_mem_of_mem_inf_mutate {i j : K} (hij : i ≠ j) {f : D}
-    (hf : f ∈ s.toQuantumSeed.chartRing ⊓ (s.mutate i).toQuantumSeed.chartRing) :
+    (hf : f ∈ s.toExchangeFrame.chartRing ⊓ (s.mutate i).toExchangeFrame.chartRing) :
     ∃ n : ℕ, f * (s.coordinate (row j) : D) ^ n ∈
-      UpperBound.generated (s.toQuantumSeed.pairRing (row i) (row j))
+      TauCeti.Laurent.generated (s.toExchangeFrame.pairRing (row i) (row j))
         {(s.coordinate (row i) : D), s.exchangeCoordinate i, (s.coordinate (row j) : D)} := by
-  set H := UpperBound.generated (s.toQuantumSeed.pairRing (row i) (row j))
+  set H := TauCeti.Laurent.generated (s.toExchangeFrame.pairRing (row i) (row j))
     {(s.coordinate (row i) : D), s.exchangeCoordinate i, (s.coordinate (row j) : D)}
-  have hyH : (s.coordinate (row j) : D) ∈ H := UpperBound.generator_mem_generated _ _ (by simp)
+  have hyH : (s.coordinate (row j) : D) ∈ H := TauCeti.Laurent.generator_mem_generated _ _ (by simp)
   refine exists_mul_pow_mem_of_mem_closure (s.coordinate_normalizes_closure_pair hij) hyH ?_
   rw [s.inf_mutate_eq_closure_pair hij] at hf
   refine Subring.closure_mono ?_ hf
   rintro g (hg | hg)
-  · exact Or.inl (UpperBound.coefficient_mem_generated _ _ hg)
+  · exact Or.inl (TauCeti.Laurent.coefficient_mem_generated _ _ hg)
   · rcases hg with rfl | rfl | rfl | rfl
     · exact Or.inl hyH
     · exact Or.inr rfl
-    · exact Or.inl (UpperBound.generator_mem_generated _ _ (by simp))
-    · exact Or.inl (UpperBound.generator_mem_generated _ _ (by simp))
+    · exact Or.inl (TauCeti.Laurent.generator_mem_generated _ _ (by simp))
+    · exact Or.inl (TauCeti.Laurent.generator_mem_generated _ _ (by simp))
 
 /-- **Q2, interacting case.** If `b_{row j, i} ≠ 0`, then
 `(T_s ∩ T_{μ_i(s)}) ∩ (T_s ∩ T_{μ_j(s)}) = C⟨X_i, X'_i, X_j, X'_j⟩`. -/
 theorem inf_mutate_inf_inf_mutate_eq_fourRing {i j : K} (hij : i ≠ j)
     (hb : s.exchange.matrix (row j) i ≠ 0) :
-    (s.toQuantumSeed.chartRing ⊓ (s.mutate i).toQuantumSeed.chartRing) ⊓
-        (s.toQuantumSeed.chartRing ⊓ (s.mutate j).toQuantumSeed.chartRing) =
+    (s.toExchangeFrame.chartRing ⊓ (s.mutate i).toExchangeFrame.chartRing) ⊓
+        (s.toExchangeFrame.chartRing ⊓ (s.mutate j).toExchangeFrame.chartRing) =
       s.fourRing i j := by
-  have hC : s.toQuantumSeed.pairRing (row i) (row j) ≤ s.fourRing i j :=
-    fun _ h ↦ UpperBound.coefficient_mem_fourRing _ _ _ _ _ h
-  refine inf_eq_of_unitConstantTerm (C := s.toQuantumSeed.pairRing (row i) (row j))
+  have hC : s.toExchangeFrame.pairRing (row i) (row j) ≤ s.fourRing i j :=
+    fun _ h ↦ TauCeti.Laurent.coefficient_mem_fourRing _ _ _ _ _ h
+  refine inf_eq_of_unitConstantTerm (C := s.toExchangeFrame.pairRing (row i) (row j))
     (x := (s.coordinate (row i) : D)) (y := (s.coordinate (row j) : D))
-    (xs := s.exchangeCoordinate i) (s.toQuantumSeed.coordinate_normalizes_pairRing _ _ _)
-    (s.toQuantumSeed.coordinate_normalizes_pairRing _ _ _)
-    (s.toQuantumSeed.algebraMap_mem_pairRing _ _ _)
-    (s.toQuantumSeed.coordinate_conj_coordinate _ _)
+    (xs := s.exchangeCoordinate i) (s.toExchangeFrame.coordinate_normalizes_pairRing _ _ _)
+    (s.toExchangeFrame.coordinate_normalizes_pairRing _ _ _)
+    (s.toExchangeFrame.algebraMap_mem_pairRing _ _ _)
+    (s.toExchangeFrame.coordinate_conj_coordinate _ _)
     (s.unitConstantTerm_coordinate_mul_exchangeCoordinate hb)
-    (skewPolyRing_le hC (UpperBound.y_mem_fourRing _ _ _ _ _))
-    (UpperBound.xs_mem_fourRing _ _ _ _ _)
+    (skewPolyRing_le hC (TauCeti.Laurent.y_mem_fourRing _ _ _ _ _))
+    (TauCeti.Laurent.xs_mem_fourRing _ _ _ _ _)
     (s.fourRing_le_inf_mutate hij)
     (s.fourRing_comm i j ▸ s.fourRing_le_inf_mutate hij.symm)
     (fun f hf ↦ ?_) (fun f hf ↦ ?_)
@@ -256,4 +257,4 @@ theorem inf_mutate_inf_inf_mutate_eq_fourRing {i j : K} (hij : i ≠ j)
 
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

@@ -6,7 +6,7 @@ Authors: Tau Ceti contributors
 module
 
 public import TauCetiRoadmap.ClusterAlgebras.QuantumAlgebra
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeedSign
+public import TauCetiRoadmap.ClusterAlgebras.QuantumFrameSign
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.Ore
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.Specialization
 
@@ -76,11 +76,13 @@ theorem integralChart_eq_lift :
 
 /-- The quantum seed of a compatible pair in `Frac T(ℚ(v), v, Λ)`. -/
 def integralSeed (E : ExtendedExchangeMatrix row) (hc : IsCompatiblePair E Λ) :
-    QuantumSeed (IntegralField Λ) row where
+    ExchangeFrame (u₀ := vUnit) (IntegralField Λ) row where
   exchange := E
   form := Λ
   alternating := hΛ
+  formWeight := E.symmetrizer
   compatible := hc
+  independentColumns := hc.independent_columns
   coordinate := integralCoordinate hΛ
   quasiCommuting := integralCoordinate_quasiCommuting hΛ
   faithful := by
@@ -98,7 +100,7 @@ end IntegralSeed
 section Generic
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D] {M K : Type*} [Fintype M] [DecidableEq M]
-  {row : K ↪ M} (s : QuantumSeed D row)
+  {row : K ↪ M} (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-- `v ^ n` in `D`. -/
 abbrev vpow (D : Type*) [Ring D] [Algebra Zv D] (n : ℤ) : D :=
@@ -181,7 +183,8 @@ theorem rankOneForm_isAlternating : IsAlternatingMatrix rankOneForm :=
   principalPairForm_isAlternating _ _ fun _ _ ↦ by simp
 
 /-- The rank-one seed in `Frac T(ℚ(v), v, Λ)`. -/
-abbrev s₁ : QuantumSeed (IntegralField rankOneForm) (Function.Embedding.inl : Unit ↪ Unit ⊕ Unit) :=
+abbrev s₁ : ExchangeFrame (u₀ := vUnit) (IntegralField rankOneForm) (Function.Embedding.inl : Unit
+  ↪ Unit ⊕ Unit) :=
   integralSeed rankOneForm_isAlternating rankOneExchange
     (principalPair_isCompatible 0 1 (fun _ ↦ one_pos) (fun _ _ ↦ by simp))
 
@@ -190,7 +193,7 @@ theorem s₁_data :
     s₁.form (Sum.inl ()) (Sum.inl ()) = 0 ∧ s₁.form (Sum.inl ()) (Sum.inr ()) = -1 ∧
       s₁.form (Sum.inr ()) (Sum.inl ()) = 1 ∧ s₁.form (Sum.inr ()) (Sum.inr ()) = 0 ∧
       s₁.exchange.matrix (Sum.inl ()) () = 0 ∧ s₁.exchange.matrix (Sum.inr ()) () = 1 ∧
-      s₁.exchange.symmetrizer () = 1 := by
+      s₁.exchange.symmetrizer () = 1 ∧ s₁.formWeight () = 1 := by
   simp [s₁, integralSeed, rankOneExchange]
 
 local notation "D₁" => IntegralField rankOneForm
@@ -220,7 +223,7 @@ theorem s₁_exchangeExponentNeg :
 theorem s₁_exchangeCoordinate :
     X'₁ = s₁.monomial (-Pi.single (Sum.inl ()) 1 + Pi.single (Sum.inr ()) 1) +
       s₁.monomial (-Pi.single (Sum.inl ()) 1) := by
-  unfold X'₁ QuantumSeed.exchangeCoordinate
+  unfold X'₁ ExchangeFrame.exchangeCoordinate
   rw [s₁_exchangeExponentPos, s₁_exchangeExponentNeg]
 
 theorem s₁_form_apply (a b : Unit ⊕ Unit → ℤ) :
@@ -250,7 +253,7 @@ theorem s₁_coordinate_mul_exchangeCoordinate : X₁ * X'₁ = 1 + vpow D₁ (-
       (Sum.inr ()) = 1 := by simp
   have h₀ : (-Pi.single (Sum.inl ()) 1 : Unit ⊕ Unit → ℤ) (Sum.inr ()) = 0 := by simp
   rw [s₁_exchangeCoordinate, mul_add, s₁_coordinate_mul_monomial, s₁_coordinate_mul_monomial,
-    add_neg_cancel_left, add_neg_cancel, QuantumSeed.monomial_zero, QuantumSeed.monomial_single,
+    add_neg_cancel_left, add_neg_cancel, ExchangeFrame.monomial_zero, ExchangeFrame.monomial_single,
     h₁, h₀, neg_zero, vpow_zero, mul_one, add_comm]
 
 /-- **Q1 check.** `X'_1 X_1 = 1 + v X_2`. -/
@@ -261,7 +264,7 @@ theorem s₁_exchangeCoordinate_mul_coordinate : X'₁ * X₁ = 1 + vpow D₁ 1 
   have hs : (-Pi.single (Sum.inl ()) 1 + Pi.single (Sum.inr ()) 1 + Pi.single (Sum.inl ()) 1 :
       Unit ⊕ Unit → ℤ) = Pi.single (Sum.inr ()) 1 := by abel
   rw [s₁_exchangeCoordinate, add_mul, s₁_monomial_mul_coordinate, s₁_monomial_mul_coordinate, hs,
-    neg_add_cancel, QuantumSeed.monomial_zero, QuantumSeed.monomial_single, h₁, h₀, vpow_zero,
+    neg_add_cancel, ExchangeFrame.monomial_zero, ExchangeFrame.monomial_single, h₁, h₀, vpow_zero,
     mul_one, add_comm]
 
 /-- The torus `T(Zv, v, Λ)` of the rank-one seed. -/
@@ -277,7 +280,7 @@ theorem s₁_coordinate_mul_exchangeCoordinate_sp :
       sp _ (1 + (LaurentPolynomial.T (-1) : Zv) • (monomial e₂ : T₁)) =
         1 + AddMonoidAlgebra.single e₂ 1 := by
   refine ⟨?_, ?_⟩
-  · rw [map_add, map_one, chart_vpow_smul_monomial, QuantumSeed.monomial_single,
+  · rw [map_add, map_one, chart_vpow_smul_monomial, ExchangeFrame.monomial_single,
       s₁_coordinate_mul_exchangeCoordinate]
   · rw [map_add, map_one, sp_smul_monomial, evalOne_T]
 
@@ -288,7 +291,7 @@ theorem s₁_exchangeCoordinate_mul_coordinate_sp :
       sp _ (1 + (LaurentPolynomial.T 1 : Zv) • (monomial e₂ : T₁)) =
         1 + AddMonoidAlgebra.single e₂ 1 := by
   refine ⟨?_, ?_⟩
-  · rw [map_add, map_one, chart_vpow_smul_monomial, QuantumSeed.monomial_single,
+  · rw [map_add, map_one, chart_vpow_smul_monomial, ExchangeFrame.monomial_single,
       s₁_exchangeCoordinate_mul_coordinate]
   · rw [map_add, map_one, sp_smul_monomial, evalOne_T]
 
@@ -299,11 +302,11 @@ theorem s₁_exchangeCoordinate_sq :
   have hcol : (fun l ↦ s₁.exchange.matrix l ()) = Pi.single (Sum.inr ()) 1 := by
     funext l
     rcases l with l | l <;> simp [s₁, integralSeed, rankOneExchange]
-  rw [s₁.exchangeCoordinate_pow, s₁_exchangeExponentNeg, QuantumSeed.monomial_neg_single,
-    QuantumSeed.centralProduct]
-  simp only [List.range_succ, List.range_zero, List.nil_append, mul_one,
-    QuantumSeed.binomialFactor, hcol,
-    QuantumSeed.monomial_single, vpow_eq, s₁_data]
+  rw [s₁.exchangeCoordinate_pow, s₁_exchangeExponentNeg, ExchangeFrame.monomial_neg_single,
+    ExchangeFrame.centralProduct]
+  simp only [List.range_succ, List.range_zero, List.nil_append,
+    ExchangeFrame.binomialFactor, hcol,
+    ExchangeFrame.monomial_single, vpow_eq, s₁_data.2.2.2.2.2.2.2]
   norm_num
 
 end RankOne
@@ -343,7 +346,8 @@ theorem zeroForm_isAlternating : IsAlternatingMatrix zeroForm :=
 
 /-- The principal seed of `B = 0` on `Fin 2`: `X_1 = X_{inl 0}`, `X_2 = X_{inl 1}` mutable and
 `X_3 = X_{inr 0}`, `X_4 = X_{inr 1}` frozen. -/
-abbrev s₂ : QuantumSeed (IntegralField zeroForm) (Function.Embedding.inl : Fin 2 ↪ Fin 2 ⊕ Fin 2) :=
+abbrev s₂ : ExchangeFrame (u₀ := vUnit) (IntegralField zeroForm) (Function.Embedding.inl : Fin 2 ↪
+  Fin 2 ⊕ Fin 2) :=
   integralSeed zeroForm_isAlternating zeroExchange
     (principalPair_isCompatible 0 1 (fun _ ↦ one_pos) (fun _ _ ↦ by simp))
 
@@ -372,8 +376,8 @@ theorem s₂_inf_eq_fourRing :
 /-- **Q2 check.** `X'_1 X'_2 ∈ H_12`. -/
 theorem s₂_exchangeCoordinate_mul_mem_fourRing :
     s₂.exchangeCoordinate 0 * s₂.exchangeCoordinate 1 ∈ s₂.fourRing 0 1 :=
-  mul_mem (UpperBound.generator_mem_generated _ _ (by simp))
-    (UpperBound.generator_mem_generated _ _ (by simp))
+  mul_mem (TauCeti.Laurent.generator_mem_generated _ _ (by simp))
+    (TauCeti.Laurent.generator_mem_generated _ _ (by simp))
 
 theorem s₂_form_inl_one_inr_zero : s₂.form (Sum.inl 1) (Sum.inr 0) = 0 := by
   simp [s₂, integralSeed]
@@ -383,15 +387,15 @@ abbrev c₀ : D₂ := (Y (Sum.inl 0))⁻¹ * (1 + vpow D₂ (-1) * Y (Sum.inr 0)
 
 theorem c₀_mem_otherRing : c₀ ∈ s₂.otherRing (Sum.inl 1) := by
   refine mul_mem ?_ (add_mem (one_mem _) (mul_mem (s₂.algebraMap_mem_otherRing _ _) ?_))
-  · rw [Y, ← QuantumSeed.monomial_neg_single]
+  · rw [Y, ← ExchangeFrame.monomial_neg_single]
     exact s₂.monomial_mem_otherRing (by simp)
-  · rw [Y, ← QuantumSeed.monomial_single]
+  · rw [Y, ← ExchangeFrame.monomial_single]
     exact s₂.monomial_mem_otherRing (by simp)
 
 theorem c₀_eq_chart : c₀ =
     s₂.chart (monomial (-Pi.single (Sum.inl 0) 1) *
       (1 + (LaurentPolynomial.T (-1) : Zv) • monomial (Pi.single (Sum.inr 0) 1))) := by
-  rw [map_mul, map_add, map_one, chart_vpow_smul_monomial, QuantumSeed.monomial_single]
+  rw [map_mul, map_add, map_one, chart_vpow_smul_monomial, ExchangeFrame.monomial_single]
   exact congrArg (· * _) (s₂.monomial_neg_single _).symm
 
 /-- `P_{2,1} = 1 + v X_4`, as the image of `1 + v X^{e_4}`. -/
@@ -401,9 +405,9 @@ theorem s₂_centralProduct_one :
   have hcol : (fun l ↦ s₂.exchange.matrix l 1) = Pi.single (Sum.inr 1) 1 := by
     funext l
     rcases l with l | l <;> fin_cases l <;> simp [s₂_matrix]
-  rw [map_add, map_one, chart_vpow_smul_monomial, QuantumSeed.centralProduct]
+  rw [map_add, map_one, chart_vpow_smul_monomial, ExchangeFrame.centralProduct]
   simp only [List.range_one, List.map_cons, List.map_nil, List.prod_cons, List.prod_nil,
-    mul_one, QuantumSeed.binomialFactor, hcol, vpow_eq]
+    mul_one, ExchangeFrame.binomialFactor, hcol, vpow_eq]
   simp [s₂, integralSeed, zeroExchange]
 
 /-- In the integral torus, `X^{-e_1}(1 + v⁻¹ X^{e_3})` is not a left multiple of `1 + v X^{e_4}`:
@@ -488,7 +492,8 @@ def rankTwoExchange (ε : Bool) :
 
 /-- The principal seed of `B = ε((0,b),(-c,0))`. -/
 abbrev rankTwoSeed (ε : Bool) :
-    QuantumSeed (IntegralField (principalPairForm (rankTwoMatrix ε b c) (rankTwoSymmetrizer b c)))
+    ExchangeFrame (u₀ := vUnit) (IntegralField (principalPairForm (rankTwoMatrix ε b c)
+      (rankTwoSymmetrizer b c)))
       (Function.Embedding.inl : Fin 2 ↪ Fin 2 ⊕ Fin 2) :=
   integralSeed (principalPairForm_isAlternating _ _ (rankTwo_symmetrized ε b c))
     (rankTwoExchange hb hc ε)
@@ -503,10 +508,11 @@ theorem rankTwoSeed_b₁₂ (ε : Bool) :
 omit hb hc
 
 /-- The constructed finite replacement premise and membership for a pos interaction. -/
-theorem replacement_check_pos {D : Type*} [DivisionRing D] [Algebra Zv D] (s : QuantumSeed D ι)
+theorem replacement_check_pos {D : Type*} [DivisionRing D] [Algebra Zv D] (s : ExchangeFrame (u₀ :=
+  vUnit) D ι)
     {b : ℕ} (hb : 0 < b) (h : s.exchange.matrix (ι 0) 1 = b) :
     let p := s.polynomialSeed
-    FiniteReplacementPremise (p.toQuantumSeed.pairRing (ι 0) (ι 1))
+    FiniteReplacementPremise (p.toExchangeFrame.pairRing (ι 0) (ι 1))
       (p.coordinate (ι 0)) (p.exchangeCoordinate 0) (p.coordinate (ι 1))
       (p.exchangeCoordinate 1) ((p.mutate 0).exchangeCoordinate 1)
       (p.replacementMutatedCoefficient 0 1 0 * (p.replacementCoefficient 0 1 0)⁻¹)
@@ -520,14 +526,15 @@ theorem replacement_check_pos {D : Type*} [DivisionRing D] [Algebra Zv D] (s : Q
   · change 0 < s.exchange.matrix (ι 0) 1
     rw [h]
     omega
-  · exact UpperBound.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp)
+  · exact TauCeti.Laurent.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp)
       (s.replacement_mem (i := 0) (j := 1) (by decide))
 
 /-- The constructed finite replacement premise and membership for a neg interaction. -/
-theorem replacement_check_neg {D : Type*} [DivisionRing D] [Algebra Zv D] (s : QuantumSeed D ι)
+theorem replacement_check_neg {D : Type*} [DivisionRing D] [Algebra Zv D] (s : ExchangeFrame (u₀ :=
+  vUnit) D ι)
     {b : ℕ} (hb : 0 < b) (h : s.exchange.matrix (ι 0) 1 = -b) :
     let p := s.polynomialSeed.opposite
-    FiniteReplacementPremise (p.toQuantumSeed.pairRing (ι 0) (ι 1))
+    FiniteReplacementPremise (p.toExchangeFrame.pairRing (ι 0) (ι 1))
       (p.coordinate (ι 0)) (p.exchangeCoordinate 0) (p.coordinate (ι 1))
       (p.exchangeCoordinate 1) ((p.mutate 0).exchangeCoordinate 1)
       (p.replacementMutatedCoefficient 0 1 0 * (p.replacementCoefficient 0 1 0)⁻¹)
@@ -541,7 +548,7 @@ theorem replacement_check_neg {D : Type*} [DivisionRing D] [Algebra Zv D] (s : Q
   · change 0 < -s.exchange.matrix (ι 0) 1
     rw [h]
     omega
-  · exact UpperBound.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp)
+  · exact TauCeti.Laurent.generated_mono _ (by rintro z (rfl | rfl | rfl) <;> simp)
       (s.replacement_mem (i := 0) (j := 1) (by decide))
 
 /-! The ten principal seeds `B = ±((0,b),(-c,0))`, `(b,c) = (1,1),(1,2),(2,1),(1,3),(3,1)`. -/
@@ -587,7 +594,7 @@ theorem frozenForm_isAlternating : IsAlternatingMatrix (0 : Matrix (Fin 1) (Fin 
   simp
 
 /-- The quantum seed with one frozen variable `X_1` and no mutable variable, `Λ = 0`. -/
-abbrev s₀ : QuantumSeed (IntegralField (0 : Matrix (Fin 1) (Fin 1) ℤ)) frozenRow :=
+abbrev s₀ : ExchangeFrame (u₀ := vUnit) (IntegralField (0 : Matrix (Fin 1) (Fin 1) ℤ)) frozenRow :=
   integralSeed frozenForm_isAlternating frozenExchange fun k ↦ k.elim
 
 local notation "D₀" => IntegralField (0 : Matrix (Fin 1) (Fin 1) ℤ)
@@ -597,7 +604,7 @@ abbrev X₀ : D₀ := s₀.coordinate 0
 
 theorem s₀_clusterVariables : s₀.clusterVariables = ∅ := by
   ext x
-  simp [QuantumSeed.clusterVariables]
+  simp [ExchangeFrame.clusterVariables]
 
 theorem s₀_range_row_compl : (Set.range frozenRow)ᶜ = Set.univ := by
   ext j
@@ -610,7 +617,7 @@ theorem s₀_coordinate_image_univ : (fun j ↦ (s₀.coordinate j : D₀)) '' S
 
 /-- **Q3 check.** `A_{v,∅} = Zv[X_1]`. -/
 theorem s₀_clusterAlgebra_empty : s₀.clusterAlgebra ∅ = Algebra.adjoin Zv {X₀} := by
-  rw [QuantumSeed.clusterAlgebra, QuantumSeed.clusterGenerators, s₀_clusterVariables,
+  rw [ExchangeFrame.clusterAlgebra, ExchangeFrame.clusterGenerators, s₀_clusterVariables,
     s₀_range_row_compl, s₀_coordinate_image_univ, Set.image_empty, Set.union_empty,
     Set.empty_union]
 
@@ -621,13 +628,13 @@ theorem s₀_clusterAlgebra_univ :
     ext x
     simp only [Set.image_univ, Set.mem_range, Set.mem_singleton_iff, Fin.exists_fin_one]
     exact eq_comm
-  rw [QuantumSeed.clusterAlgebra, QuantumSeed.clusterGenerators, s₀_clusterVariables,
+  rw [ExchangeFrame.clusterAlgebra, ExchangeFrame.clusterGenerators, s₀_clusterVariables,
     s₀_range_row_compl, s₀_coordinate_image_univ, hinv, Set.empty_union, Set.singleton_union,
     Set.pair_comm, Set.insert_eq, Set.union_comm, ← Set.insert_eq, Set.pair_comm]
 
 theorem s₀_chartAlgebra : s₀.chartAlgebra = Algebra.adjoin Zv {X₀, X₀⁻¹} := by
   apply Subalgebra.toSubring_injective
-  rw [QuantumSeed.toSubring_chartAlgebra, Algebra.adjoin_eq_ring_closure, QuantumSeed.chartRing,
+  rw [ExchangeFrame.toSubring_chartAlgebra, Algebra.adjoin_eq_ring_closure, ExchangeFrame.chartRing,
     Laurent.chartRing]
   congr 1
   ext x
@@ -638,7 +645,7 @@ theorem s₀_chartAlgebra : s₀.chartAlgebra = Algebra.adjoin Zv {X₀, X₀⁻
 
 /-- **Q3 check.** `U_v = Zv[X_1^{±1}]`: the only reachable seed is `s₀`. -/
 theorem s₀_upperAlgebra : s₀.upperAlgebra = Algebra.adjoin Zv {X₀, X₀⁻¹} := by
-  rw [← s₀_chartAlgebra, QuantumSeed.upperAlgebra]
+  rw [← s₀_chartAlgebra, ExchangeFrame.upperAlgebra]
   refine le_antisymm (iInf_le_of_le [] le_rfl) (le_iInf fun w ↦ ?_)
   cases w with
   | nil => exact le_rfl

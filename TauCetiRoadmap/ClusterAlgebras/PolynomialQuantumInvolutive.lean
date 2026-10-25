@@ -17,15 +17,16 @@ the same skew one-exchange theorem used in the ordinary quantum theory.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
 
-@[ext] theorem ext {s t : PolynomialQuantumSeed D row}
-    (hframe : s.toQuantumSeed = t.toQuantumSeed) (hpoly : s.polynomial = t.polynomial) :
+@[ext] theorem ext {s t : PolynomialExchangeSeed (u₀ := u₀) D row}
+    (hframe : s.toExchangeFrame = t.toExchangeFrame) (hpoly : s.polynomial = t.polynomial) :
     s = t := by
   cases s
   cases t
@@ -35,7 +36,7 @@ variable {D : Type*} [DivisionRing D] [Algebra Zv D]
 
 noncomputable section
 
-variable (s : PolynomialQuantumSeed D row)
+variable (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 theorem matrixForm_dividedColumn_of_apply_eq_zero (k : K) {a : M → ℤ}
     (ha : a (row k) = 0) : matrixForm s.form (s.dividedColumn k) a = 0 := by
@@ -64,9 +65,9 @@ theorem exchangeExponent_phase (k : K) (l : ℕ) :
 theorem mutateChart_monomial_mul_exchangeCoordinate (k : K) {a : M → ℤ}
     (ha : a (row k) = -1) :
     s.mutateChart k (QuantumTorus.monomial a) * s.exchangeCoordinate k =
-      algebraMap Zv D ((vUnit ^ matrixForm s.form (a + Pi.single (row k) 1)
-        (exchangeExponentNeg row s.exchange.matrix k) : Zvˣ) : Zv) *
-        s.toQuantumSeed.monomial (a + Pi.single (row k) 1) := by
+      algebraMap R₀ D ((u₀ ^ matrixForm s.form (a + Pi.single (row k) 1)
+        (exchangeExponentNeg row s.exchange.matrix k) : R₀ˣ) : R₀) *
+        s.toExchangeFrame.monomial (a + Pi.single (row k) 1) := by
   have ha0 : (a + Pi.single (row k) 1 : M → ℤ) (row k) = 0 := by simp [ha]
   have hform : matrixForm (formMutation row s.exchange.matrix s.form k 1)
       a (Pi.single (row k) 1) =
@@ -76,9 +77,9 @@ theorem mutateChart_monomial_mul_exchangeCoordinate (k : K) {a : M → ℤ}
       (k := k) s.form (s.exchange.diagonal k) ha0 1
     simpa only [one_zsmul, one_mul, map_add, LinearMap.add_apply,
       (s.alternating.formMutation k 1).matrixForm_self, add_zero] using h
-  have h := congrArg (s.mutateChart k) (monomial_mul_monomial (R := Zv) (u := vUnit)
+  have h := congrArg (s.mutateChart k) (monomial_mul_monomial (R := R₀) (u := u₀)
     (Λ := matrixForm (formMutation row s.exchange.matrix s.form k 1)) a (Pi.single (row k) 1))
-  rw [map_mul, map_smul, Algebra.smul_def (R := Zv) (A := D), hform,
+  rw [map_mul, map_smul, Algebra.smul_def (R := R₀) (A := D), hform,
     s.mutateChart_monomial_of_apply_eq_zero k ha0] at h
   simpa only [mutateChart, lift_monomial_single, mutateCoordinate_row] using h
 
@@ -106,7 +107,7 @@ theorem mutate_coordinate_of_ne (k : K) {j : M} (hj : j ≠ row k) :
     (s.mutate k).coordinate j = s.coordinate j := s.mutateCoordinate_of_ne k hj
 
 theorem mutate_monomial (k : K) (a : M → ℤ) :
-    (s.mutate k).toQuantumSeed.monomial a = s.mutateChart k (QuantumTorus.monomial a) := rfl
+    (s.mutate k).toExchangeFrame.monomial a = s.mutateChart k (QuantumTorus.monomial a) := rfl
 
 theorem mutate_dividedColumn (k : K) : (s.mutate k).dividedColumn k = -s.dividedColumn k := by
   have hr : (s.degree k : ℤ) ≠ 0 := by
@@ -152,16 +153,16 @@ theorem mutate_exchangeCoordinate (k : K) :
     s.mutate_monomial, s.mutateChart_monomial_mul_exchangeCoordinate k
       (s.exchangeExponent_row k l), s.exchangeExponent_phase]
   conv_rhs =>
-    rw [← s.toQuantumSeed.monomial_single (row k), ← mul_assoc,
+    rw [← s.toExchangeFrame.monomial_single (row k), ← mul_assoc,
       ← Algebra.commutes ((s.polynomial k).coeff l)
-        (s.toQuantumSeed.monomial (Pi.single (row k) 1)),
-      mul_assoc, s.toQuantumSeed.monomial_mul_monomial]
+        (s.toExchangeFrame.monomial (Pi.single (row k) 1)),
+      mul_assoc, s.toExchangeFrame.monomial_mul_monomial]
   rw [add_comm (s.exchangeExponent k l)]
 
 /-- Polynomial mutation is an involution on the original seed data. -/
 theorem mutate_mutate (k : K) : (s.mutate k).mutate k = s := by
   refine ext (s := (s.mutate k).mutate k) (t := s) ?_ ?_
-  · apply QuantumSeed.ext (s.exchange.mutate_mutate k)
+  · apply ExchangeFrame.ext (s.exchange.mutate_mutate k)
       (s.compatible.formMutation_involutive s.alternating (Or.inl rfl) (Or.inl rfl))
     funext j
     by_cases hj : j = row k
@@ -177,19 +178,19 @@ theorem mutate_mutate (k : K) : (s.mutate k).mutate k = s := by
     · simp only [mutate_polynomial, mutatePolynomial, Function.update_of_ne hj]
 
 theorem mutate_involutive (k : K) :
-    Function.Involutive (fun s : PolynomialQuantumSeed D row ↦ s.mutate k) :=
+    Function.Involutive (fun s : PolynomialExchangeSeed (u₀ := u₀) D row ↦ s.mutate k) :=
   fun s ↦ s.mutate_mutate k
 
 /-- Q1 for polynomial exchanges, from the shared skew one-exchange theorem. -/
 theorem chartRing_inf_mutate_chartRing (k : K) :
-    s.toQuantumSeed.chartRing ⊓ (s.mutate k).toQuantumSeed.chartRing =
-      Subring.closure ((s.toQuantumSeed.otherRing (row k) : Set D) ∪
+    s.toExchangeFrame.chartRing ⊓ (s.mutate k).toExchangeFrame.chartRing =
+      Subring.closure ((s.toExchangeFrame.otherRing (row k) : Set D) ∪
         {(s.coordinate (row k) : D), s.exchangeCoordinate k}) := by
-  rw [s.toQuantumSeed.chartRing_eq_regroup (row k),
-    (s.mutate k).toQuantumSeed.chartRing_eq_regroup (row k)]
-  have ho : (s.mutate k).toQuantumSeed.otherRing (row k) =
-      s.toQuantumSeed.otherRing (row k) := by
-    unfold QuantumSeed.otherRing OneExchange.otherCoordinateRing
+  rw [s.toExchangeFrame.chartRing_eq_regroup (row k),
+    (s.mutate k).toExchangeFrame.chartRing_eq_regroup (row k)]
+  have ho : (s.mutate k).toExchangeFrame.otherRing (row k) =
+      s.toExchangeFrame.otherRing (row k) := by
+    unfold ExchangeFrame.otherRing OneExchange.otherCoordinateRing
     congr 1
     funext j
     dsimp only
@@ -199,4 +200,4 @@ theorem chartRing_inf_mutate_chartRing (k : K) :
   simpa only [mul_inv_cancel_right₀ (Units.ne_zero (s.coordinate (row k)))] using he
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

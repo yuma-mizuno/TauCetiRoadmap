@@ -49,8 +49,8 @@ theorem cubicPolynomial_monic : cubicPolynomial.Monic := by
   monicity!
 
 /-- The actual nonreciprocal seed in the faithful generic quantum torus's skew field. -/
-def cubicSeed : PolynomialQuantumSeed D (Function.Embedding.refl (Fin 2)) where
-  toQuantumSeed := integralSeed omega_alt cubicExchange cubicCompatible
+def cubicSeed : PolynomialExchangeSeed (u₀ := vUnit) D (Function.Embedding.refl (Fin 2)) where
+  toExchangeFrame := integralSeed omega_alt cubicExchange cubicCompatible
   polynomial := fun _ ↦ cubicPolynomial
   constant_one := fun _ ↦ by simp [cubicPolynomial]
   monic := fun _ ↦ cubicPolynomial_monic
@@ -86,9 +86,9 @@ theorem cubicSeed_mutate_mutate : (cubicSeed.mutate 0).mutate 0 = cubicSeed :=
 
 /-- Every mutation word of the nonreciprocal seed is Laurent in every reachable chart. -/
 theorem cubicSeed_laurent (u w : List (Fin 2)) (a : Fin 2) :
-    ((mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w cubicSeed).coordinate a : D) ∈
-      (mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) u
-        cubicSeed).toQuantumSeed.chartRing :=
+    ((mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w cubicSeed).coordinate a : D) ∈
+      (mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) u
+        cubicSeed).toExchangeFrame.chartRing :=
   cubicSeed.coordinate_mutateWord_mem_mutateWord_chartRing u w a
 
 /-- The independent classical cubic pattern is the wordwise specialization of this seed. -/
@@ -96,8 +96,8 @@ theorem cubicSeed_classical_word {F : Type*} [Field F] [Algebra ℚ F]
     (ε : AddMonoidAlgebra ℤ (Fin 2 → ℤ) →+* F) {x : Fin 2 → F}
     (hε : ∀ a, ε (AddMonoidAlgebra.single (Pi.single a 1) 1) = x a)
     (hx : AlgebraicIndependent ℚ x) (w : List (Fin 2)) (a : Fin 2) :
-    ChartSpecializes cubicSeed.toQuantumSeed.chart ε
-      ((mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w cubicSeed).coordinate a : D)
+    ChartSpecializes cubicSeed.toExchangeFrame.chart ε
+      ((mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w cubicSeed).coordinate a : D)
       ((polynomialGeometricPattern (Function.Embedding.refl (Fin 2)) cubicSeed.degree
         (cubicSeed.classicalData x) w).coordinate a) :=
   cubicSeed.mutateWord_chartSpecializes_of_independent ε hε hx w a

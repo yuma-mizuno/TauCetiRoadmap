@@ -6,7 +6,7 @@ Authors: Tau Ceti contributors
 module
 
 public import TauCetiRoadmap.ClusterAlgebras.PolynomialQuantumReplacement
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeedSign
+public import TauCetiRoadmap.ClusterAlgebras.QuantumOpposite
 public import Mathlib.Algebra.Ring.Subring.MulOpposite
 
 /-!
@@ -19,19 +19,20 @@ negative interaction without a second coefficient calculation.
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent MulOpposite
 
-variable {D : Type*} [DivisionRing D] [Algebra Zv D]
+variable {R₀ : Type*} [CommRing R₀] {u₀ : R₀ˣ}
+  {D : Type*} [DivisionRing D] [Algebra R₀ D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := u₀) D row)
 
 noncomputable section
 
 /-- The existing opposite quantum frame, with all exchange coefficient lists reversed. -/
-def opposite : PolynomialQuantumSeed Dᵐᵒᵖ row where
-  toQuantumSeed := s.toQuantumSeed.opposite
+def opposite : PolynomialExchangeSeed (u₀ := u₀) Dᵐᵒᵖ row where
+  toExchangeFrame := s.toExchangeFrame.opposite
   polynomial k := (s.polynomial k).reverse
   constant_one k := by rw [Polynomial.coeff_zero_reverse]; exact s.monic k
   monic := s.polynomial_reverse_monic
@@ -49,8 +50,8 @@ theorem opposite_coordinate (a : M) : (s.opposite.coordinate a : Dᵐᵒᵖ) = o
   rfl
 
 theorem opposite_monomial (a : M → ℤ) :
-    s.opposite.toQuantumSeed.monomial a = op (s.toQuantumSeed.monomial a) :=
-  s.toQuantumSeed.opposite_monomial a
+    s.opposite.toExchangeFrame.monomial a = op (s.toExchangeFrame.monomial a) :=
+  s.toExchangeFrame.opposite_monomial a
 
 theorem opposite_dividedColumn (k : K) : s.opposite.dividedColumn k = -s.dividedColumn k := by
   have hr : (s.degree k : ℤ) ≠ 0 := by
@@ -90,20 +91,20 @@ theorem opposite_exchangeCoordinate (k : K) :
   simp only [Nat.add_sub_cancel, s.opposite_polynomial_coeff_reflect k hle]
   rw [s.opposite_exchangeExponent k (Nat.sub_le _ _), Nat.sub_sub_self hle,
     s.opposite_monomial]
-  change op (algebraMap Zv D ((s.polynomial k).coeff l)) *
-    op (s.toQuantumSeed.monomial (s.exchangeExponent k l)) = _
+  change op (algebraMap R₀ D ((s.polynomial k).coeff l)) *
+    op (s.toExchangeFrame.monomial (s.exchangeExponent k l)) = _
   rw [← op_mul, Algebra.commutes]
 
 theorem opposite_pairRing (a b : M) :
-    s.opposite.toQuantumSeed.pairRing a b = (s.toQuantumSeed.pairRing a b).op := by
-  have hR : (algebraMap Zv Dᵐᵒᵖ).range = (algebraMap Zv D).range.op := by
+    s.opposite.toExchangeFrame.pairRing a b = (s.toExchangeFrame.pairRing a b).op := by
+  have hR : (algebraMap R₀ Dᵐᵒᵖ).range = (algebraMap R₀ D).range.op := by
     ext z
     constructor
     · rintro ⟨r, rfl⟩
       exact ⟨r, rfl⟩
     · rintro ⟨r, hr⟩
-      exact ⟨r, by change op (algebraMap Zv D r) = z; rw [hr, op_unop]⟩
-  simp only [QuantumSeed.pairRing, Laurent.chartRing, hR, Subring.op_closure]
+      exact ⟨r, by change op (algebraMap R₀ D r) = z; rw [hr, op_unop]⟩
+  simp only [ExchangeFrame.pairRing, Laurent.chartRing, hR, Subring.op_closure]
   congr 1
   ext z
   obtain ⟨d, rfl⟩ := op_surjective z
@@ -114,7 +115,7 @@ variable [Fintype K] [DecidableEq K]
 
 theorem opposite_mutate (k : K) : s.opposite.mutate k = (s.mutate k).opposite := by
   refine ext ?_ ?_
-  · refine QuantumSeed.ext (s.exchange.neg_mutate k)
+  · refine ExchangeFrame.ext (s.exchange.neg_mutate k)
       (s.compatible.formMutation_neg s.alternating (Or.inl rfl)) (funext fun a ↦ Units.ext ?_)
     by_cases ha : a = row k
     · subst a
@@ -134,7 +135,7 @@ by passing to the opposite algebra. -/
 theorem replacement_mem_neg {i j : K} (hij : i ≠ j)
     (hneg : s.exchange.matrix (row i) j < 0) :
     (s.mutate i).exchangeCoordinate j ∈
-      Subring.closure ((s.toQuantumSeed.pairRing (row i) (row j) : Set D) ∪
+      Subring.closure ((s.toExchangeFrame.pairRing (row i) (row j) : Set D) ∪
         {s.exchangeCoordinate i, s.exchangeCoordinate j, (s.coordinate (row j) : D)}) := by
   have hp : 0 < s.opposite.exchange.matrix (row i) j := by
     change 0 < -s.exchange.matrix (row i) j
@@ -143,9 +144,9 @@ theorem replacement_mem_neg {i j : K} (hij : i ≠ j)
   rw [s.opposite_mutate, (s.mutate i).opposite_exchangeCoordinate,
     s.opposite_pairRing, s.opposite_exchangeCoordinate, s.opposite_exchangeCoordinate,
     s.opposite_coordinate] at h
-  let T := Subring.closure ((s.toQuantumSeed.pairRing (row i) (row j) : Set D) ∪
+  let T := Subring.closure ((s.toExchangeFrame.pairRing (row i) (row j) : Set D) ∪
     {s.exchangeCoordinate i, s.exchangeCoordinate j, (s.coordinate (row j) : D)})
-  have hle : Subring.closure (((s.toQuantumSeed.pairRing (row i) (row j)).op : Set Dᵐᵒᵖ) ∪
+  have hle : Subring.closure (((s.toExchangeFrame.pairRing (row i) (row j)).op : Set Dᵐᵒᵖ) ∪
       {op (s.exchangeCoordinate i), op (s.exchangeCoordinate j), op (s.coordinate (row j) : D)}) ≤
       T.op := by
     apply Subring.closure_le.mpr
@@ -156,4 +157,4 @@ theorem replacement_mem_neg {i j : K} (hij : i ≠ j)
   exact hle h
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

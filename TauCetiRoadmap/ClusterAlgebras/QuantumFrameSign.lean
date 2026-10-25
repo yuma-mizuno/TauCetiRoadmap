@@ -5,7 +5,7 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
+public import TauCetiRoadmap.ClusterAlgebras.QuantumPolynomial
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.Sign
 
 /-!
@@ -18,13 +18,13 @@ Two comparisons send a quantum seed with data `(v, Λ, B_ext)` to a quantum seed
 * the **coefficient-semilinear comparison**, from the bar isomorphism
   `QuantumTorus.barEquiv : T(Zv,v,Λ) ≃+* T(Zv,v,-Λ)`, semilinear along `v ↦ v⁻¹`: along any ring
   map `φ : D →+* D'` with `φ (r • 1) = r_bar • 1`, the chart of the transported seed is
-  `φ ∘ chart ∘ barEquiv⁻¹` (`QuantumSeed.barChart_apply`) and the elements `φ X_i` form a seed
-  (`QuantumSeed.barMap`); `QuantumSeed.bar` is the case of `D` itself with the twisted
+  `φ ∘ chart ∘ barEquiv⁻¹` (`ExchangeFrame.barChart_apply`) and the elements `φ X_i` form a seed
+  (`ExchangeFrame.barMap`); `ExchangeFrame.bar` is the case of `D` itself with the twisted
   `Zv`-algebra structure `BarTwist D`;
 * the **opposite-algebra comparison**, from `QuantumTorus.opAlgEquiv :
   T(Zv,v,Λ)ᵐᵒᵖ ≃ₐ[Zv] T(Zv,v,-Λ)`: the chart of the opposite seed is `chartᵒᵖ ∘ opAlgEquiv⁻¹`
-  (`QuantumSeed.oppositeChart_apply`) and the elements `op X_i` form a seed of `Dᵐᵒᵖ`
-  (`QuantumSeed.opposite`).
+  (`ExchangeFrame.oppositeChart_apply`) and the elements `op X_i` form a seed of `Dᵐᵒᵖ`
+  (`ExchangeFrame.opposite`).
 
 In both cases the transported pair is compatible with the same symmetrizer, the normalized
 monomials are the images of the old ones (`barMap_monomial`, `opposite_monomial`), the two exchange
@@ -40,23 +40,7 @@ open TauCeti TauCeti.QuantumTorus TauCeti.Laurent MulOpposite
 
 /-! ### Exponents and scalars -/
 
-section Vectors
 
-variable {M K : Type*} [DecidableEq M] (row : K ↪ M) (B : Matrix M K ℤ) (k : K)
-
-/-- Negating `B_ext` turns the first exchange exponent into the second. -/
-theorem exchangeExponentPos_neg :
-    exchangeExponentPos row (-B) k = exchangeExponentNeg row B k := by
-  funext i
-  simp [exchangeExponentPos, exchangeExponentNeg]
-
-/-- Negating `B_ext` turns the second exchange exponent into the first. -/
-theorem exchangeExponentNeg_neg :
-    exchangeExponentNeg row (-B) k = exchangeExponentPos row B k := by
-  funext i
-  simp [exchangeExponentPos, exchangeExponentNeg]
-
-end Vectors
 
 theorem vUnit_zpow_val (n : ℤ) : ((vUnit ^ n : Zvˣ) : Zv) = LaurentPolynomial.T n := by
   have h : ∀ m : ℕ, ((vUnit ^ m : Zvˣ) : Zv) = LaurentPolynomial.T m := fun m ↦ by
@@ -106,12 +90,12 @@ theorem toBarTwist_algebraMap (r : Zv) :
 
 end BarTwist
 
-namespace QuantumSeed
+namespace ExchangeFrame
 
 noncomputable section
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D] {M K : Type*} [Fintype M] [DecidableEq M]
-  {row : K ↪ M} (s : QuantumSeed D row)
+  {row : K ↪ M} (s : ExchangeFrame (u₀ := vUnit) D row)
 
 /-! ### The coefficient-semilinear comparison -/
 
@@ -198,11 +182,14 @@ theorem barChart_injective : Function.Injective (s.barChart φ hφ) := by
 /-- **The coefficient-semilinear comparison** `(v, Λ, B_ext) ↦ (v⁻¹, -Λ, -B_ext)`. Along a ring map
 `φ : D →+* D'` with `φ (r • 1) = r_bar • 1`, the elements `φ X_i` form a quantum seed of `D'` with
 form `-Λ`, extended matrix `-B_ext` and the same symmetrizer. -/
-def barMap : QuantumSeed D' row where
+def barMap : ExchangeFrame (u₀ := vUnit) D' row where
   exchange := s.exchange.neg
   form := -s.form
   alternating := s.alternating.neg
+  formWeight := s.formWeight
   compatible := s.compatible.neg
+  independentColumns := by
+    convert! s.independentColumns.neg using 1
   coordinate := s.barCoordinate φ
   quasiCommuting := s.barCoordinate_quasiCommuting φ hφ
   faithful := s.barChart_injective φ hφ
@@ -237,7 +224,7 @@ theorem barMap_exchangeCoordinate (k : K) :
 /-- **Mutation commutes with the coefficient-semilinear comparison.** -/
 theorem barMap_mutate [Fintype K] [DecidableEq K] (k : K) :
     (s.barMap φ hφ).mutate k = (s.mutate k).barMap φ hφ := by
-  refine QuantumSeed.ext (s.exchange.neg_mutate k)
+  refine ExchangeFrame.ext (s.exchange.neg_mutate k)
     (s.compatible.formMutation_neg s.alternating (Or.inl rfl)) (funext fun j ↦ Units.ext ?_)
   by_cases hj : j = row k
   · subst hj
@@ -250,7 +237,7 @@ end Bar
 
 /-- **The coefficient-semilinear comparison in `D` itself**: the coordinates of `s` form a
 quantum seed for `(-Λ, -B_ext)` when `Zv` acts on `D` through the bar involution. -/
-def bar : QuantumSeed (BarTwist D) row :=
+def bar : ExchangeFrame (u₀ := vUnit) (BarTwist D) row :=
   s.barMap (BarTwist.toBarTwist D).toRingHom BarTwist.toBarTwist_algebraMap
 
 @[simp] theorem bar_exchange : s.bar.exchange.matrix = -s.exchange.matrix := rfl
@@ -272,119 +259,10 @@ theorem bar_mutate [Fintype K] [DecidableEq K] (k : K) :
 
 /-! ### The opposite-algebra comparison -/
 
-section Opposite
 
-/-- The coordinates `op X_i` of `Dᵐᵒᵖ`. -/
-def oppositeCoordinate (i : M) : (Dᵐᵒᵖ)ˣ := Units.opEquiv.symm (op (s.coordinate i))
-@[simp] theorem val_oppositeCoordinate (i : M) :
-    (s.oppositeCoordinate i : Dᵐᵒᵖ) = op (s.coordinate i : D) :=
-  rfl
-
-theorem oppositeCoordinate_quasiCommuting :
-    IsQuasiCommuting vUnit (matrixForm (-s.form)) s.oppositeCoordinate := by
-  intro i j
-  rw [val_oppositeCoordinate, val_oppositeCoordinate, ← op_mul, s.quasiCommuting j i, op_smul,
-    op_mul, matrixForm_neg, matrixForm_single_single, matrixForm_single_single,
-    s.alternating i j, neg_neg]
-
-/-- The chart of the opposite seed, `X ^ a ↦ M'(a)` for `(v, -Λ)` in `Dᵐᵒᵖ`. -/
-def oppositeChart : quantumTorus Zv vUnit (matrixForm (-s.form)) →ₐ[Zv] Dᵐᵒᵖ :=
-  QuantumTorus.lift s.alternating.neg.isAlt s.oppositeCoordinate
-    s.oppositeCoordinate_quasiCommuting
-
-/-- The opposite isomorphism `T(Zv,v,Λ)ᵐᵒᵖ ≃ₐ[Zv] T(Zv,v,-Λ)` of the form of `s`. -/
-def formOpEquiv :
-    (quantumTorus Zv vUnit (matrixForm s.form))ᵐᵒᵖ ≃ₐ[Zv]
-      quantumTorus Zv vUnit (matrixForm (-s.form)) :=
-  QuantumTorus.opAlgEquiv fun a b ↦ by
-    rw [matrixForm_neg, s.alternating.matrixForm_swap a b, neg_neg]
-
-@[simp] theorem formOpEquiv_symm_monomial (a : M → ℤ) :
-    s.formOpEquiv.symm (QuantumTorus.monomial a) = op (QuantumTorus.monomial a) :=
-  opAlgEquiv_symm_monomial _ a
-
-/-- **The opposite chart is derived from the opposite isomorphism**:
-`oppositeChart = chartᵒᵖ ∘ opAlgEquiv⁻¹`. -/
-theorem oppositeChart_eq :
-    s.oppositeChart = (AlgHom.op s.chart).comp s.formOpEquiv.symm.toAlgHom :=
-  algHom_ext_single s.alternating.neg.isAlt fun i ↦ by
-    change _ = AlgHom.op s.chart (s.formOpEquiv.symm (QuantumTorus.monomial (Pi.single i 1)))
-    rw [oppositeChart, lift_monomial_single, formOpEquiv_symm_monomial, AlgHom.op_apply_apply,
-      unop_op, val_oppositeCoordinate, show s.chart (QuantumTorus.monomial (Pi.single i 1)) =
-        s.monomial (Pi.single i 1) from rfl, monomial_single]
-
-theorem oppositeChart_apply (x : quantumTorus Zv vUnit (matrixForm (-s.form))) :
-    s.oppositeChart x = op (s.chart (unop (s.formOpEquiv.symm x))) := by
-  rw [oppositeChart_eq]
-  rfl
-
-/-- **The cocycle check.** The normalized monomials of the opposite seed are the opposites of the
-normalized monomials of `s`. -/
-theorem oppositeChart_monomial (a : M → ℤ) :
-    s.oppositeChart (QuantumTorus.monomial a) = op (s.monomial a) := by
-  rw [oppositeChart_apply, formOpEquiv_symm_monomial, unop_op]
-  rfl
-
-theorem oppositeChart_injective : Function.Injective s.oppositeChart := by
-  intro x y h
-  rw [oppositeChart_apply, oppositeChart_apply] at h
-  exact s.formOpEquiv.symm.injective (unop_injective (s.chart_injective (op_injective h)))
-
-/-- **The opposite-algebra comparison** `(Λ, B_ext) ↦ (-Λ, -B_ext)` with `v` fixed: the elements
-`op X_i` form a quantum seed of `Dᵐᵒᵖ` with form `-Λ`, extended matrix `-B_ext` and the same
-symmetrizer. -/
-def opposite : QuantumSeed Dᵐᵒᵖ row where
-  exchange := s.exchange.neg
-  form := -s.form
-  alternating := s.alternating.neg
-  compatible := s.compatible.neg
-  coordinate := s.oppositeCoordinate
-  quasiCommuting := s.oppositeCoordinate_quasiCommuting
-  faithful := s.oppositeChart_injective
-
-@[simp] theorem opposite_exchange : s.opposite.exchange.matrix = -s.exchange.matrix := rfl
-@[simp] theorem opposite_form : s.opposite.form = -s.form := rfl
-@[simp] theorem val_opposite_coordinate (i : M) :
-    (s.opposite.coordinate i : Dᵐᵒᵖ) = op (s.coordinate i : D) := rfl
-
-@[simp] theorem opposite_monomial (a : M → ℤ) : s.opposite.monomial a = op (s.monomial a) :=
-  s.oppositeChart_monomial a
-
-/-- The first exchange summand of the opposite seed is the opposite of the second summand of
-`s`. -/
-theorem opposite_monomial_exchangeExponentPos (k : K) :
-    s.opposite.monomial (exchangeExponentPos row s.opposite.exchange.matrix k) =
-      op (s.monomial (exchangeExponentNeg row s.exchange.matrix k)) := by
-  rw [opposite_exchange, exchangeExponentPos_neg, opposite_monomial]
-
-/-- The second exchange summand of the opposite seed is the opposite of the first summand of
-`s`. -/
-theorem opposite_monomial_exchangeExponentNeg (k : K) :
-    s.opposite.monomial (exchangeExponentNeg row s.opposite.exchange.matrix k) =
-      op (s.monomial (exchangeExponentPos row s.exchange.matrix k)) := by
-  rw [opposite_exchange, exchangeExponentNeg_neg, opposite_monomial]
-
-theorem opposite_exchangeCoordinate (k : K) :
-    s.opposite.exchangeCoordinate k = op (s.exchangeCoordinate k) := by
-  rw [exchangeCoordinate, s.opposite_monomial_exchangeExponentPos,
-    s.opposite_monomial_exchangeExponentNeg, exchangeCoordinate, op_add, add_comm]
-
-/-- **Mutation commutes with the opposite-algebra comparison.** -/
-theorem opposite_mutate [Fintype K] [DecidableEq K] (k : K) :
-    s.opposite.mutate k = (s.mutate k).opposite := by
-  refine QuantumSeed.ext (s.exchange.neg_mutate k)
-    (s.compatible.formMutation_neg s.alternating (Or.inl rfl)) (funext fun j ↦ Units.ext ?_)
-  by_cases hj : j = row k
-  · subst hj
-    rw [mutate_coordinate_row, val_opposite_coordinate, mutate_coordinate_row,
-      opposite_exchangeCoordinate]
-  · rw [mutate_coordinate_of_ne _ _ hj, val_opposite_coordinate, val_opposite_coordinate,
-      mutate_coordinate_of_ne _ _ hj]
-
-end Opposite
 
 end
 
-end QuantumSeed
+end ExchangeFrame
 
 end TauCeti.Cluster

@@ -22,13 +22,11 @@ following checks on the proof terms of `sequence_integral`, `integral_of_recurre
 
 * each uses only the axioms `propext`, `Classical.choice` and `Quot.sound`;
 * each uses no constant whose name contains `Caterpillar`, `universalLaurent` or `sorryAx`;
-* none uses the classical full-rank theorem `FullRankGeometricSeed.laurent`, its invariance
-  step `FullRankGeometricSeed.upperBound_mutation`, or the classical three-chart equalities
-  `UpperBound.geometric_commuting_three_charts` and
-  `UpperBound.geometric_interacting_three_chart`;
+* none uses quantum word specialization, the map `sp`, or an auxiliary positive
+  compatible form;
 * `sequence_integral` uses `MatrixSeed.cluster_laurent_unique`, the general and principal
-  Laurent theorems, the classical limit `principalGeometricWord_laurent_of_quantum` and quantum
-  upper-bound invariance `QuantumSeed.upperBound_mutate`.
+  Laurent theorems, the zero-form unit-parameter construction, and the common polynomial
+  upper-bound theorem `PolynomialExchangeSeed.upperBound_mutate`.
 -/
 open TauCeti.Examples.Somos4
 

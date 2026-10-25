@@ -19,7 +19,7 @@ independence propagates, and denominators in wordwise specialization are nonzero
 
 @[expose] public section
 
-namespace TauCeti.Cluster.PolynomialQuantumSeed
+namespace TauCeti.Cluster.PolynomialExchangeSeed
 
 open TauCeti TauCeti.QuantumTorus TauCeti.Laurent
 
@@ -27,7 +27,7 @@ noncomputable section
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D]
   {M K : Type*} [Fintype M] [DecidableEq M] {row : K ↪ M}
-  (s : PolynomialQuantumSeed D row)
+  (s : PolynomialExchangeSeed (u₀ := vUnit) D row)
 
 /-- Natural exponent vector of a homogeneous exchange summand. -/
 def numeratorDegree (k : K) (l : ℕ) : M →₀ ℕ :=
@@ -110,7 +110,7 @@ theorem algebraicIndependent_polynomialGeometricPattern [Finite K] {x : M → F}
   induction w using List.reverseRecOn with
   | nil => exact hx
   | append_singleton w k ih =>
-    set t := mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s
+    set t := mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s
     set p := polynomialGeometricPattern row s.degree (s.classicalData x) w
     have hmeta := s.mutateWord_classicalData x w
     change t.exchange.matrix = p.exchange ∧
@@ -135,11 +135,11 @@ theorem mutateWord_chartSpecializes_of_independent
     (ε : AddMonoidAlgebra ℤ (M → ℤ) →+* F) {x : M → F}
     (hε : ∀ a, ε (AddMonoidAlgebra.single (Pi.single a 1) 1) = x a)
     (hx : AlgebraicIndependent ℚ x) (w : List K) (a : M) :
-    ChartSpecializes s.toQuantumSeed.chart ε
-      ((mutateWord (fun k t ↦ PolynomialQuantumSeed.mutate t k) w s).coordinate a : D)
+    ChartSpecializes s.toExchangeFrame.chart ε
+      ((mutateWord (fun k t ↦ PolynomialExchangeSeed.mutate t k) w s).coordinate a : D)
       ((polynomialGeometricPattern row s.degree (s.classicalData x) w).coordinate a) :=
   mutateWord_chartSpecializes ε hε w
     (fun u k _ ↦ (s.algebraicIndependent_polynomialGeometricPattern hx u).ne_zero (row k)) a
 
 end
-end TauCeti.Cluster.PolynomialQuantumSeed
+end TauCeti.Cluster.PolynomialExchangeSeed

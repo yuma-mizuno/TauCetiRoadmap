@@ -5,6 +5,8 @@ Authors: Tau Ceti contributors
 -/
 module
 
+public import TauCetiRoadmap.LaurentPhenomenon.ExchangeRings
+public import TauCetiRoadmap.LaurentPhenomenon.MatrixColumns
 public import TauCetiRoadmap.LaurentPhenomenon.UpperBoundPattern
 public import TauCetiRoadmap.LaurentPhenomenon.DenominatorPatching
 public import TauCetiRoadmap.LaurentPhenomenon.PolynomialExchange

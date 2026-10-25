@@ -5,7 +5,7 @@ Authors: Tau Ceti contributors
 -/
 module
 
-public import TauCetiRoadmap.ClusterAlgebras.QuantumAlgebra
+public import TauCetiRoadmap.ClusterAlgebras.QuantumSeed
 public import TauCetiRoadmap.LaurentPhenomenon.Quantum.Subalgebra
 
 /-!
@@ -32,7 +32,7 @@ divisibility witness in `A`. A mutation at `k` in `A` is such a witness `y ∈ A
 
 Consumer theorem: when all reachable mutable variables (and the frozen variables) of a seed lie
 in the image of an injective `ι : A → D`, restricting the inverse of `ι` gives an injective
-algebra map `A_{v,∅} → A` (`QuantumSeed.clusterAlgebraLift`). No assertion is made that one-step
+algebra map `A_{v,∅} → A` (`ExchangeFrame.clusterAlgebraLift`). No assertion is made that one-step
 membership implies membership at later seeds.
 -/
 
@@ -220,14 +220,10 @@ variable {K : Type*} {row : K ↪ M}
 
 /-- The quantum seed in `D` of a realization of a compatible pair `(B_ext, Λ)` in `A ⊆ D`; its
 coordinates are the images of the generators. -/
-def toSeed (B : ExtendedExchangeMatrix row) (hc : IsCompatiblePair B Λ) : QuantumSeed D row where
-  exchange := B
-  form := Λ
-  alternating := hΛ
-  compatible := hc
-  coordinate := r.unitGenerator ι hι
-  quasiCommuting := r.isQuasiCommuting_unitGenerator hΛ ι hι
-  faithful := r.torusChart_injective hΛ ι hι
+def toSeed (B : ExtendedExchangeMatrix row) (hc : IsCompatiblePair B Λ) :
+    ExchangeFrame (u₀ := vUnit) D row :=
+  (QuantumSeed.ofCompatible B Λ hΛ hc (r.unitGenerator ι hι)
+    (r.isQuasiCommuting_unitGenerator hΛ ι hι) (r.torusChart_injective hΛ ι hι)).1
 
 @[simp] theorem toSeed_coordinate (B : ExtendedExchangeMatrix row) (hc : IsCompatiblePair B Λ)
     (i : M) :
@@ -242,10 +238,10 @@ end PolynomialRealization
 
 /-! ### The map `A_{v,∅} → A` -/
 
-namespace QuantumSeed
+namespace ExchangeFrame
 
 variable {D : Type*} [DivisionRing D] [Algebra Zv D] {K : Type*} [Fintype K] [DecidableEq K]
-  {row : K ↪ M} (s : QuantumSeed D row) (ι : A →ₐ[Zv] D)
+  {row : K ↪ M} (s : ExchangeFrame (u₀ := vUnit) D row) (ι : A →ₐ[Zv] D)
 
 /-- If the reachable mutable variables and the frozen variables lie in `ι(A)`, so does
 `A_{v,∅}`. -/
@@ -281,7 +277,7 @@ theorem clusterAlgebraLift_injective (h : s.clusterAlgebra ∅ ≤ ι.range) :
   Subtype.ext ((s.apply_clusterAlgebraLift ι hι h x).symm.trans
     ((congrArg ι e).trans (s.apply_clusterAlgebraLift ι hι h y)))
 
-end QuantumSeed
+end ExchangeFrame
 
 namespace PolynomialRealization
 
@@ -295,7 +291,7 @@ variable {D : Type*} [DivisionRing D] [Algebra Zv D] {K : Type*} [Fintype K] [De
 theorem clusterAlgebra_le_range
     (hmut : (r.toSeed hΛ ι hι B hc).clusterVariables ⊆ ι.range) :
     (r.toSeed hΛ ι hι B hc).clusterAlgebra ∅ ≤ ι.range :=
-  QuantumSeed.clusterAlgebra_empty_le_range _ ι hmut fun j _ ↦ ⟨r.generator j, rfl⟩
+  ExchangeFrame.clusterAlgebra_empty_le_range _ ι hmut fun j _ ↦ ⟨r.generator j, rfl⟩
 
 /-- **The consumer map `A_{v,∅} → A`.** If every reachable mutable variable of the seed of a
 realization lies in `A`, restricting the inverse of the faithful realization gives an injective
@@ -310,12 +306,12 @@ theorem apply_clusterAlgebraToRealization
     (hmut : (r.toSeed hΛ ι hι B hc).clusterVariables ⊆ ι.range)
     (x : (r.toSeed hΛ ι hι B hc).clusterAlgebra ∅) :
     ι (r.clusterAlgebraToRealization hΛ ι hι B hc hmut x) = x :=
-  QuantumSeed.apply_clusterAlgebraLift _ ι hι _ x
+  ExchangeFrame.apply_clusterAlgebraLift _ ι hι _ x
 
 theorem clusterAlgebraToRealization_injective
     (hmut : (r.toSeed hΛ ι hι B hc).clusterVariables ⊆ ι.range) :
     Function.Injective (r.clusterAlgebraToRealization hΛ ι hι B hc hmut) :=
-  QuantumSeed.clusterAlgebraLift_injective _ ι hι _
+  ExchangeFrame.clusterAlgebraLift_injective _ ι hι _
 
 theorem clusterAlgebraToRealization_frozen
     (hmut : (r.toSeed hΛ ι hι B hc).clusterVariables ⊆ ι.range) {j : M}
@@ -323,7 +319,7 @@ theorem clusterAlgebraToRealization_frozen
     r.clusterAlgebraToRealization hΛ ι hι B hc hmut
         ⟨_, (r.toSeed hΛ ι hι B hc).coordinate_mem_clusterAlgebra_of_notMem ∅ hj⟩ =
       r.generator j :=
-  (QuantumSeed.clusterAlgebraLift_eq_iff _ ι hι _ _ _).2 rfl
+  (ExchangeFrame.clusterAlgebraLift_eq_iff _ ι hι _ _ _).2 rfl
 
 end PolynomialRealization
 
@@ -343,7 +339,7 @@ def IsMutation (k : K) (y : A) : Prop :=
 
 theorem isMutation_iff (k : K) (y : A) :
     r.IsMutation hΛ ι hι B hc k y ↔ ι y = (r.toSeed hΛ ι hι B hc).exchangeCoordinate k := by
-  rw [IsMutation, QuantumSeed.mutate_coordinate_row]
+  rw [IsMutation, ExchangeFrame.mutate_coordinate_row]
 
 variable {r hΛ ι hι B hc} in
 /-- A mutation in `A` is unique. -/
@@ -369,7 +365,7 @@ theorem apply_update_generator (i : M) :
   · subst hi
     rw [Function.update_self]
     exact hy
-  · rw [Function.update_of_ne hi, QuantumSeed.mutate_coordinate_of_ne _ _ hi, toSeed_coordinate]
+  · rw [Function.update_of_ne hi, ExchangeFrame.mutate_coordinate_of_ne _ _ hi, toSeed_coordinate]
 
 /-- The mutated generators quasi-commute for the mutated form `Λ'`. -/
 theorem isQuasiCommutingFamily_update :
@@ -418,7 +414,7 @@ theorem toSeed_mutate (hΛ' : IsAlternatingMatrix (formMutation row B.matrix Λ 
     (hc' : IsCompatiblePair (B.mutate k) (formMutation row B.matrix Λ k 1)) :
     (r.mutate hΛ ι hι B hc hy).toSeed hΛ' ι hι (B.mutate k) hc' =
       (r.toSeed hΛ ι hι B hc).mutate k := by
-  refine QuantumSeed.ext rfl rfl (funext fun i ↦ Units.ext ?_)
+  refine ExchangeFrame.ext rfl rfl (funext fun i ↦ Units.ext ?_)
   rw [toSeed_coordinate, mutate_generator]
   exact r.apply_update_generator hΛ ι hι B hc hy i
 

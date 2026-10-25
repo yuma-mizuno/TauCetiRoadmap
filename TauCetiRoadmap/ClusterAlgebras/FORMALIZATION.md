@@ -36,15 +36,51 @@ and a chosen set of frozen inverses. Its public statements are
 `QuantumSeed.clusterAlgebra_le_upperAlgebra` and
 `QuantumSeed.upperAlgebra_eq_upperBoundAlgebra`.
 
-The ordinary public proof now uses the polynomial Q2 theorem through the actual
-degree-one seed and word comparison in `QuantumPolynomial`. The shared route
-runs Q1–Q3, then the proved `v=1` specialization, principal coefficients,
-normalized coefficient separation and the general classical Laurent theorem.
-The legacy driver `verification/cluster-polynomial/LibraryAudit.lean` checks
-the actual proof-term dependencies of the quantum and classical endpoints,
-including the initial-seed and Somos-4 consumers. Quantum Laurentness does not depend on the independent
-classical upper-bound or Caterpillar proofs. The public classical Laurent theorem
-uses the quantum theorem through the proved specialization.
+The common proof carrier is `ExchangeFrame`, over a commutative scalar ring
+`R` and a central unit `q : Rˣ`. It records a symmetrizable exchange matrix,
+independent rational columns, an alternating integral commutation form `Λ`,
+and diagonal form weights `w` satisfying `BᵀΛ=(diag(w) 0)`. These form weights
+are distinct from the matrix's positive symmetrizer and may be zero or negative.
+The faithful chart is into a possibly noncommutative division `R`-algebra.
+The parameter need not have infinite order. The commuting Q2 and global
+Laurent theorem require the scalar ring to be a factorial domain.
+
+`PolynomialExchangeSeed` adds normalized monic central polynomial exchanges.
+It owns mutation, faithfulness of the changed chart, involutivity, Q1, Q2,
+upper-bound invariance and all-word Laurentness. Binary frame mutation is defined
+by its degree-one instance in `QuantumPolynomial`; it has no separate mutation
+or one-exchange proof engine. The explicit binary central products, their power
+and centrality formulas, and the coefficient criteria also use the common
+polynomial proofs; they retain no separate binary power induction.
+
+`QuantumSeed` and `PolynomialQuantumSeed` retain the ordinary positive quantum
+compatibility condition as subtypes of the common frames with `R=Zv`, `q=v`
+and `w` equal to the positive matrix symmetrizer. Their constructors derive
+column independence from ordinary compatibility. Their mutation and public
+Laurent statements use the common construction and proof.
+
+`commutativeFrame` uses literal `q=1`, `Λ=0` and `w=0`, retaining
+its original integral or field coefficient subring and positive matrix symmetrizer.
+`GeometricFrame` obtains column independence directly from full rank and identifies
+all coordinate words and chart rings with the independent classical definitions.
+The classical upper-bound theorem consequently invokes the same polynomial Q2.
+It requires no auxiliary quantization, no positive form weights, and no commutation
+of coefficient specialization with intersections. Coordinate words and chart rings
+at unit parameter are proved independent of the auxiliary form representation.
+
+The general classical Laurent route applies that same common theorem directly to
+the zero-form principal seed, then uses normalized coefficient separation. Its
+proof term, including the initial-seed and Somos-4 consumers, uses no quantum
+specialization theorem or auxiliary positive compatible form. The proved `v=1`
+map on integral Laurent representatives remains a separate comparison API.
+Its binary comparison is a degree-one instance of the polynomial comparison,
+not a second word induction. The verification checks these actual dependencies.
+
+The cluster-specific normalized Caterpillar route and the former classical local
+commuting, interacting and rank-two proof files are removed from this integration.
+Their passed source snapshot, applications and checks are preserved separately on
+`codex/caterpillar-proof-route` at `6bebb4edc0769ec5867f20d946561f46cc91940e`.
+Generic Caterpillar mathematics has its independent `LaurentPhenomenon` entry point.
 
 ## Actual shared-library integration
 
@@ -53,8 +89,8 @@ division ring. It imports only the seed-free normalizer and polynomial-defect
 algebra. `SkewReplacement` constructs its singleton instance and proves the
 existing binary theorem from it; there is no alternative `_via_finite` theorem.
 `ClusterAlgebras.PolynomialQuantumReplacement` constructs its finite premise;
-`QuantumReplacement` is its degree-one specialization. The classical
-`UpperBoundLocal.replacement_forward` uses the singleton theorem. The obsolete
+`QuantumReplacement` is its degree-one specialization. Classical seed comparisons
+use the zero-form unit-parameter case of the common polynomial seed. The obsolete
 binary coefficient and defect engine is removed, and its concrete premise
 consumers now test the finite construction.
 
@@ -62,8 +98,8 @@ consumers now test the finite construction.
 premise for arbitrary commutative polynomials using their power corrections.
 This does not impose commutativity on the finite replacement theorem or on its
 quantum consumer. `FlatDivisibility` supplies simultaneous divisibility for flat
-modules. The classical commuting calculation and the quantum central calculation
-both use it; a basis supplies the free, hence flat, instance in the latter.
+modules. Both seed sectors use its common central calculation, with a basis
+supplying the free, hence flat, instance.
 
 `Examples.PolynomialQuantum` proves the displayed trinomial replacement in the
 faithful generic quantum torus, including `xy ≠ yx` and constructed defects. Its
@@ -72,8 +108,8 @@ ordinary source modules and are built by Lake.
 
 ## Polynomial seed verification
 
-`PolynomialQuantumSeed` adds monic central `Zv` exchange polynomials with
-constant coefficient one to the existing faithful compatible quantum frame.
+`PolynomialExchangeSeed` adds monic central scalar exchange polynomials with
+constant coefficient one to the faithful column-compatible exchange frame.
 Positive exchange degrees divide the extended columns. Mutation reverses the
 selected polynomial, and preserves the others. Reciprocity is not an input.
 `PolynomialQuantumMutation` constructs the mutated faithful chart, and
@@ -116,6 +152,12 @@ with the nonreciprocal cubic `1+2T+T³`, its coefficient reversal, involutivity,
 all-word Laurentness and wordwise classical specialization. This supplements
 the explicit noncommutative trinomial coefficient checks; it is not the proof
 of the general theorem.
+
+`Examples.ScalarSpecializationChecks` constructs a nonreciprocal cubic over `ℤ`
+with parameter one, zero form and zero form weights in an ordinary rational
+Laurent fraction field. Its integral all-word Laurent theorem invokes the same
+polynomial proof directly, without a faithful `Zv` chart or the wordwise
+specialization theorem.
 
 The full polynomial principal-lift API, general relabelling and ambient transport,
 and the complete polynomial expansion API remain roadmap implementation targets.

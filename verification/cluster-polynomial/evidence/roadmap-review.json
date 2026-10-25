@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "scope": "roadmap contracts, structure and exact algebraic checks",
+  "base_commit": "192ba6a680de7b34292432aa986c2aeae027c69e",
+  "lean_contract_probe": true,
+  "critical_contract_axiom_audit": true,
+  "lean_contract_command": [
+    "C:\\Users\\mizun\\.elan\\bin\\lake.EXE",
+    "-f",
+    "lakefile.library.toml",
+    "env",
+    "lean",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DwarningAsError=true",
+    "verification\\cluster-polynomial\\evidence\\RoadmapInterfaces.lean"
+  ],
+  "contract_source_sha256": "861cff8b5e2ddafc49bc2df5b4284521b85a621576b1efe73f41433b456d3311",
+  "audit_script_sha256": "833c386ce3ad3eb117faae2d02f9f214fa912d921a9e7337a20b3b5841000b78",
+  "nonreciprocal_fixed_rule_counterexample": true,
+  "fixed_rule_word": [
+    0,
+    0
+  ],
+  "unchanged_lean_modules": 190,
+  "dependency_pins_unchanged": true,
+  "changed_original_verification_inputs": [
+    "TauCetiRoadmap/ClusterAlgebras/README.md"
+  ],
+  "unchanged_unrelated_layers": [
+    3,
+    5,
+    6,
+    7
+  ],
+  "ordered_milestones": [
+    "**P1 \u2014",
+    "**Q1 \u2014",
+    "**P2 / Q2 \u2014",
+    "**Q3 \u2014",
+    "**L5 \u2014",
+    "**P3 \u2014"
+  ],
+  "local_links_checked": 7,
+  "timeless_content_checks": true,
+  "balanced_markdown_and_display_math": true,
+  "frozen_inversion_boundary": {
+    "matrix_rank": 2,
+    "identities": true,
+    "generator_degrees_after_z_zero": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "candidate_degrees": [
+      -1,
+      -1
+    ],
+    "nonmembership_reason": "Every polynomial in the specialized generators has nonnegative total degree."
+  },
+  "divided_column_mutation_identity_cases": 48,
+  "roadmap_sha256": "e1e0b16521e74fb80a2a56f6ad3a29f6d2e018d5fa0b7cd6746529665019665d",
+  "prior_production_proof_record": "verification/cluster-polynomial/evidence/unified-result.json",
+  "prior_production_proof_record_sha256": "8a90b323931b6e132f61700afc22fb52187fdc2ba9458af8591c8c8fd0258223"
+}

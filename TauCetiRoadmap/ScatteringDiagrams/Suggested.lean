@@ -1970,7 +1970,8 @@ theorem finite_affineDecoratedTypes {w : ℕ} (walls : Fin w → DirectedWall hi
       b.decoratedType).Finite := by
   sorry
 
-/-- The endpoint and discrete type determine the realized line (`README §5.3`). -/
+/-- The endpoint and discrete type determine the realized line (`README §5.2`).
+Together with finite types, this gives finite evaluation fibers without genericity. -/
 theorem affineBrokenLine_type_endpoint_injective {w : ℕ}
     (walls : Fin w → DirectedWall hi ρ D wallGroup) (action : G →* (A ≃ₗ[R] A))
     (k : ℕ) {p : L} (a : A) (ha : a ∈ 𝒜 p) :
@@ -2194,7 +2195,8 @@ theorem probeLabel_spec {K' : OrderFiltration (probeGroup action)} {ι' : Type*}
     IsProbeLabelRep action p 𝔇' k Q (probeLabel action p 𝔇' k Q hQ) := hQ.choose_spec
 
 /-- The sum of final decorations of order-`k` affine broken lines ending at `Q` (`README §5.2`).
-`finsum` returns zero on an infinite fiber; §5.3 proves finiteness at generic endpoints. -/
+`finsum` returns zero on an infinite fiber; §5.2 requires finiteness at every admissible
+endpoint, and §5.3 supplies the realization domains and generic stability. -/
 noncomputable def DirectedDiagram.thetaSum {ι : Type*} (𝔇 : DirectedDiagram hi ρ D wallGroup K ι)
     (k : ℕ) (a : A) (ha : a ∈ 𝒜 p) (_hp : ρ p ≠ 0) (Q : V) : A :=
   ∑ᶠ b : {b : AffineBrokenLine hi ρ D wallGroup 𝒜 (𝔇.activeFamily k) action k a ha // b.endpoint = Q},

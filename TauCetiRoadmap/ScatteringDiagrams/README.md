@@ -1395,6 +1395,15 @@ polynomial and Laurent polynomial algebras. Sources: GS §2.3; GHS Definitions
 
 ## Layer 5: broken lines, general position and theta transport
 
+**Construction dependencies.** The affine ordinary-wall instance of §§5.2–5.3
+constructs decorated lines, finite evaluation fibers and weighted evaluation
+before adding realization-domain charts and degeneration families. The affine
+and general-base constructions share the component propagation and subdivision
+contract below; prove that the general construction specializes to the affine
+one on a single chart with ordinary walls. General-base chart/deck descent and
+slab propagation remain required targets, with the additional dependencies
+specified in each section.
+
 ### 5.1 Graded actions and shifted coefficient modules
 
 Let `R` be a commutative `ℚ`-algebra and `A=⊕_{p∈Γ}A_p` an associative,
@@ -1426,13 +1435,18 @@ degree lattice and projection, and §4.3's inner action on twisted group algebra
 - Realize each order-`k` shifted module as one of §0.8's graded modules `M_u`, with
   ordinary-wall correspondences given by the identity and the signed group action.
 
-*Needs:* §§0.1–0.6, 0.8, §3.1 and Layer 4; `GradedAlgebra`, `GradedLieModule`.
+*Needs:* §§0.1–0.6, 0.8 and 3.1 for the action and module constructions;
+§§4.1–4.3 for verification of the named instances. `GradedAlgebra`, `GradedLieModule`.
 Sources: MAN §2.1 and Definition 2.10.
 
 ### 5.2 Decorated broken lines
 
-Use §1.5's base and incoming datum `(s,a)`, with the chamber modules `M_u` and the
-face correspondences of its regular coefficient tower over a semiring. Fix an order
+The affine ordinary-wall construction uses §5.1's shifted modules on one affine
+chart, with a fixed homogeneous incoming coefficient and source datum; the
+admitted tail's affine position varies with the realization.
+For the general-base construction, use §1.5's base and incoming datum `(s,a)`,
+with the chamber modules `M_u` and the face correspondences of its regular
+coefficient tower over a semiring. Fix an order
 `k` and an endpoint `Q` in a chamber.
 
 A *BrokenLine* is a proper continuous path `β:(−∞,0]→B₀` ending at `Q`, with
@@ -1456,12 +1470,28 @@ positions belong only to them.
 
 *Targets.*
 
+- *affineBrokenLine*: construct the one-chart, ordinary-wall instance with fixed
+  nonzero incoming `a∈A_p`, `ρ(p)≠0`, and finite cutoff `k`. Combine the finite
+  affine ray, complete encounter record and nonzero homogeneous decorations,
+  and prove equivalence with the path-and-decoration conditions above, including
+  incoming admission and singular avoidance. Group simultaneous regular wall
+  incidences into one event and use a whole homogeneous component of the combined
+  signed action, without extra intermediate component choices.
 - Path evaluation, the map to *DecoratedType*, initial and final decorations, and the
   component propagation maps, with their subdivision and truncation laws.
 - In §5.1's affine instance, every nonidentity component shift lies in `P\{0}`
   and raises relative degree. At order `k` there are at most `k` such changes and
   finitely many realized *DecoratedType*s across all endpoints for a fixed initial
-  decoration. Identity components fix the decoration; shifts in `ker ρ` are recorded.
+  decoration. Prove a bound on complete encounter histories using the finite
+  active wall family and the bound on degree changes: on each constant-degree
+  straight run, each transverse wall is met at most once. Finite cutoff degrees
+  and deterministic component propagation then give finite decorated types.
+  Identity components fix the decoration; shifts in `ker ρ` are recorded.
+- *affineEvaluationFinite*: prove that endpoint and complete decorated type
+  determine a line, including its decorations and admitted incoming tail.
+  Inject each evaluation fiber into the finite set of realized types to obtain
+  finiteness at every transverse admissible endpoint, without genericity or
+  closed degeneration charts.
 - At finite order, *weightedEvaluation* sums final decorations over an evaluation
   fiber when it is finite. The completed theta series is the inverse limit of these
   finite-order sums.
@@ -1482,7 +1512,10 @@ positions belong only to them.
   decoration `x`, the possible next decorations are exactly `x` and `tx`,
   both with velocity `−1`.
 
-*Needs:* §§0.8, 1.1–1.3, 1.5, 3.2 and 5.1.
+*Needs:* For the affine ordinary-wall instance, §§0.8, 1.1–1.2, 3.2 and 5.1,
+and §1.5's one-chart incoming tails. General bases additionally use §1.5's
+coefficient tower, chart/deck identifications and slab propagation. Endpoint
+families use §1.3 through §5.3.
 Sources: MAN Definition 2.10 and Proposition 2.13; GHKK Definitions 3.1–3.3 and
 Proposition 3.4; GHS Definitions 3.1–3.3.
 
@@ -1526,7 +1559,12 @@ codimension at least two.
   chart per *DecoratedType* and convex piece of its valid endpoint domain. Each domain
   is a finite disjoint union of *LocallyClosedPolyhedron* sets. The family *IsFiniteBranch*:
   endpoint and type determine a transverse line and its individual incoming tail by
-  backward propagation, with no genericity hypothesis.
+  backward propagation, with no genericity hypothesis. For every type, prove an
+  equivalence between its actual decorated realizations and its valid endpoint
+  domain, including coefficient propagation, incoming admission and avoidance.
+  This identifies §5.2's finite fibers and *weightedEvaluation* with the
+  endpoint-domain presentation. Construct the affine family without assuming
+  a *FiniteClosedTypeFamily* as input.
 - *endpointDiscriminant*: `Δ(a,k)` is an *ExceptionalArrangement* containing
   all domain frontiers and degenerations: zero-length segments and encounters with
   wall boundaries, joints or singular points. Under the annihilation condition,
@@ -1565,7 +1603,9 @@ closed degeneration charts and §1.3 give properness, stability and genericity.
 - The arrangements `{x=1/(j+1)}` in `ℝ` have common generic point `0`, but no
   neighborhood of `0` is generic for all of them.
 
-*Needs:* §§1.2–1.3, 1.5, 4.4 and 5.2.
+*Needs:* The affine ordinary-wall family uses §§1.2–1.3, §1.5's one-chart incoming
+tails and §5.2. General-base families additionally use the remaining §1.5 data;
+the positive-kink construction uses §4.4.
 Sources: CPS Proposition 4.4 and Definition 4.6; N23 Definition 7.2 and the proof of
 Proposition 7.6; GHS Proposition 3.5, Remark 3.6 and Lemma 3.7.
 
@@ -1682,6 +1722,14 @@ module walls. Write `Θ_Q` for *weightedEvaluation* at `Q`.
   `T` the component `F_q(Q+Ti(ρ(q)))` is `a` if `n=0` and `0`
   otherwise. Components with `ρ(q)=0` have these same constant values by
   *zeroDirectionComponent*.
+- *brokenLineRecursion*: for the actual finite fibers constructed in §§5.2–5.3,
+  prove the displayed last-positive-degree-change recursion below with `Θ` in
+  place of `F`, by decomposing and reconstructing decorated lines. Retain
+  identity encounters and positive-degree shifts in `ker ρ`.
+- *probeCoefficientRecursion*: prove that the probe field satisfies that same
+  recursion from its transport and incoming asymptotics, independently of the
+  broken-line comparison. The two recursions and *zeroDirectionComponent*
+  give *probeWall_eq_brokenLineSum* by degree induction.
 - *probeWall_eq_brokenLineSum*: `F(Q)=Θ_Q` off `Δ_pr(a,k)`. These values
   extend uniquely over `V∖Δ(a,k)` and equal *weightedEvaluation* there.
 - *affineLocalResolution*: construct §5.4's certificate for every incoming homogeneous

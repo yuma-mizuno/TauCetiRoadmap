@@ -1,300 +1,173 @@
-# Mei migration to the unified broken-line and theta constructions
+# Mei implementation requirements for scattering diagrams
 
-This plan guides work in [Mei](https://github.com/yuma-mizuno-lean/Mei) against
-the scattering specification in [README.md](README.md). It is maintained on the
-`mei` branch of this roadmap repository. The `scattering-rev` branch retains
-the mathematical specification without this implementation plan.
+[README.md](README.md) specifies the mathematics. The requirements here identify
+which constructions the affine, slab and focus-focus implementations in
+[Mei](https://github.com/yuma-mizuno-lean/Mei) share, and which comparison theorems
+connect their presentations. The hypotheses, scope and Checks are those of the
+cited README sections. No additional mathematical objects are specified here.
 
-All mathematical requirements below come from that README. This document maps
-them to existing Mei code and records the order and completion conditions for
-the migration. It introduces no mathematical definitions or additional targets.
-Names from the README remain suggested names, as stated in its conventions.
+## Broken lines and coefficient propagation
 
-## Baseline and use
+Use [§5.2's broken line](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#52-decorated-broken-lines)
+for both ordinary walls and slab faces. Ordinary wall actions give graph
+correspondences; slab faces give §0.8 correspondences with admissible lifts.
+Affine ray coordinates and explicit slab enumerations must represent this same
+construction.
 
-The specification baseline is
-[`1d8aa579`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/1d8aa57956348365b1bf67de9b16e83c9d6ee244),
-“Unify broken-line and theta roadmap constructions”.
-The implementation survey below reads Mei at
-[`280b2262`](https://github.com/yuma-mizuno-lean/Mei/tree/280b226248836604caa2517e217e6b320c9b3ce6),
-on 31 October 2026. It checks source definitions and theorem statements; it
-does not certify a new build or the completion of any roadmap layer.
-Refresh the implementation survey against current Mei `main` before selecting work.
+Prove the correspondence between each presentation and the common broken-line
+construction. It must preserve the whole path and incoming tail, the selected
+incoming record, chamber and face encounters, degrees, decorations and endpoint.
+Include the README's coordinate identifications and artificial subdivisions.
+Retain simultaneous events, unchanged-degree encounters, nonzero degree shifts
+with zero spatial projection, and constant incoming sections.
 
-Use the existing roadmap authoring, CI, review and repair workflow.
-The author reads this plan with the README, checks current `main` and open PRs,
-and selects one unmet item whose prerequisites are on `main`.
-An item can require several independent, complete PRs. Give each prerequisite
-its actual consumer; start dependent work after its prerequisite merges.
-Existing general results remain available to unrelated roadmap work.
+Define weighted evaluation on the common finite endpoint fiber. Evaluation
+formulas in a computational presentation follow by reindexing through the
+proved correspondence. Geometric parameterizations, classification results and
+computable formulas remain useful presentations; repeated propagation and
+evaluation definitions are expressed through the common API.
 
-Each implementation PR names its migration item and exact README target,
-lists the old declarations it changes, and states what remains.
-Use the existing `Roadmap: ScatteringDiagrams` attribution and target-marker
-conventions. Run the project's required build, axiom, import and lint checks.
-Reviewers check both the mathematical target and the replacement conditions below.
-After merge, the maintainer records the PR and verifies the resulting `main`
-before marking an item complete. An open PR is work in progress.
+Use [§0.8's finite component expansion](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#08-homogeneous-coefficient-correspondences)
+for compositions of transfers, including final projection, regrouping,
+identity insertion, concatenation and zero extension on inadmissible pieces.
+Keep its uniform finite-support hypothesis for identities of linear maps and
+its semiring scope. BCH component identities are applications of this expansion.
 
-## What counts as replacement
+For coefficient comparisons, distinguish §5.2's embedding theorem from the
+general weighted identity. Injective chamber maps and degree isomorphisms give
+the stated bijection under the common face, velocity, admissibility and incoming
+data. General coefficient maps give equality after grouping histories and
+discarding zero components. All comparisons respect the README's subdivision,
+composition and truncation laws.
 
-Give each mathematical construction one public definition. An affine endpoint
-parameterization or an explicit slab enumeration can remain as a computational
-presentation when its correspondence with the common construction is proved.
-Such a correspondence must preserve the whole path, incoming tail, encounter
-data and final weight; agreement of final formulas alone is insufficient.
+## Finite type families and local resolutions
 
-For each migrated part, update its callers and imports and remove the superseded
-definition or repeated proof. Keep useful geometric bounds, normal forms,
-computable operations and additional generality. Do not retain a second public
-construction solely to preserve an old name. During a multi-PR migration,
-identify every remaining independent construction and its consumers explicitly.
+Obtain affine and single-face families through
+[§5.3's bounded-itinerary construction](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#53-endpoint-evaluation-closed-families-and-general-position).
+Separate the construction from the encounter-bound argument. Use
+`filtrationEncounterBound` for the affine relative-degree and positive-kink
+instances, with their stated hypotheses.
 
-The README's hypotheses and Checks remain the acceptance criteria. In particular:
+Relate computational endpoint charts to this family, preserving the complete
+types, weights and incoming histories. Prove exhaustivity, fixed-type
+uniqueness, common-refinement and cover compatibility, and the prescribed
+codimension-one boundary classification. Closed-chart extensions retain
+collapsed and singular degenerations; these extensions are distinct from
+admissible paths in the open family.
 
-- A coefficient embedding can give a bijection of broken lines under §5.2's
-  hypotheses. A general coefficient map gives a grouped identity of weighted
-  sums; it need not give a bijection.
-- Reflecting a terminal certificate through an embedding also requires the
-  specified preimage of its face lift.
-- Closed boundary charts retain degenerations. They do not make a singular or
-  nontransverse boundary path an admissible broken line.
-- Restriction of a theta section retains its global incoming histories,
-  including tails and bends outside the restricted endpoint domain.
+Use [§5.4's local resolutions](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#54-local-resolutions-and-gluing-of-sections)
+for graph and slab correspondences. Apply finite component expansion to the
+histories selected by the geometric incidence inequalities. Retain uniform
+finite contributing support on the input module and the README's finite-input
+test for arbitrary source modules.
 
-## Work items
+At a terminal face, require a common lift of the two total chamber maps;
+individual summands need not have lifts. Joint injectivity supplies uniqueness.
+Reflecting a certificate through a coefficient embedding also requires the
+specified preimage of its terminal face lift. Prove the concatenation,
+subdivision, coefficient and cover comparisons required in §5.4.
 
-The dependency column names the suppliers to use. It does not require finishing
-every application in an earlier item before using one of its merged theorems.
-For example, single-face work in M06 and M08 needs M03's single-face family,
-not its positive-kink application. Work on M01 and M04 can start independently.
+## Theta sections and their presentations
 
-| Item | Result | Prerequisites | Verified completion |
-|---|---|---|---|
-| M01 | Finite component expansion and nilpotent recursion | Existing linear algebra | Open |
-| M02 | Common broken lines and coefficient comparisons | M01 for weighted comparisons | Open |
-| M03 | Bounded itineraries and closed type families | M02 | Open |
-| M04 | Relative abelian completion | Existing Layers 0–3 suppliers | Open |
-| M05 | Probe with one auxiliary spatial coordinate | M04 | Open |
-| M06 | Local resolutions and common theta gluing | M01–M03 | Open |
-| M07 | Affine probe comparison and theta sections | M01–M03, M05–M06 | Open |
-| M08 | Focus-focus as a single-face specialization | M01–M03, M06; §6.3 datum | Open |
+Use [§5.4's `finiteSum_matchingFamily`](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#54-local-resolutions-and-gluing-of-sections)
+to glue the weighted evaluations of a closed family with a local resolution
+certificate. The affine and slab theta sections must be instances of
+`globalThetaSection`, with its transport, linearity, naturality and truncation
+laws. Restriction retains whole global incoming histories, including tails and
+bends outside the endpoint domain.
 
-“Open” means that the migration acceptance conditions have not been certified
-here. It does not mean that all of the required mathematics is absent.
-Reuse the baseline suppliers listed at the end of this document.
+Express [§5.6's monomial sums](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#56-monomial-presentations-and-comparison-of-theta-constructions)
+in these same weighted evaluations. Use the common family and certificate
+comparisons for
+[affine covariance](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#61-integral-affine-covariance)
+and [descent](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#62-descent-of-coefficient-diagrams-and-transport).
+The positive global sections of
+[§7.7](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#77-positive-formal-theta-coefficients)
+use this gluing construction together with that section's positivity hypotheses.
 
-### M01. Finite component expansion and recursion
+For [§6.3's focus-focus datum](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#63-worked-example-the-focus-focus-slab-and-its-theta-basis),
+apply the coefficient-embedding theorem to the displayed span comparison.
+Check its degree maps, admissible lifts, incoming records and terminal-lift
+preimages. Obtain the closed family and certificate from
+`singleFaceBrokenLines` and `singleFaceResolution`.
 
-**Target:** [§0.8](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#08-homogeneous-coefficient-correspondences),
-finite component expansion and finite recursion.
+Identify its global theta sections with the nodal algebra's monomial normal
+forms by `slabTheta_normalForm`. Derive the basis, binomial multiplication,
+scalar-change and completion statements from the
+[§4.4 slab algebra](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#44-weight-zero-function-walls-and-face-algebras).
+Preserve the explicit branch enumeration as a computation of the common
+evaluation. The completion retains precisely the coefficient families with
+finite support at each order, as required in §5.4.
 
-Use the existing homogeneous-history API to supply §0.8's finite component
-expansion for the correspondence data. Cover final projection, regrouping,
-identity insertion, concatenation, zero extension on inadmissible degrees and
-coefficient intertwining. State linear-map identities under uniform finite
-support on the input submodule. The current globally finite grading-support
-theorem is a supplier, rather than a replacement for this hypothesis.
+## Relative completion and the module probe
 
-Prove uniqueness and the finite-sum formula for `x = a + U(x)` when `U^r = 0`,
-over the semimodules required in §0.8. Reuse the filtration-raising nilpotence
-results where their ring hypotheses apply; preserve the semiring scope.
+Use [§3.3's `relativeAbelianCompletion`](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#33-local-scattering-and-existence-of-completion)
+with [§3.4's uniqueness and naturality](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#34-uniqueness-and-compatibility).
+Keep the lifted consistent quotient diagram fixed. Its supports may be
+arbitrary §3.2 supports; the incoming ideal walls are full hyperplanes.
+The outgoing ideal corrections have the specified pure birth logs and
+truncation compatibility.
 
-**Complete when:** the shared statements supply both variable-input component
-identities for local resolutions and the finite recursion used in M07.
-Keep BCH-specific results as applications of this API.
+The [§5.5 probe](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#55-module-probes-and-affine-theta-transport)
+uses degree group `Γ × ℤ`, tangent lattice `Λ × ℤ`, and spatial projection
+`ρ_ext(x,c) = (ρ(x),0)`. The charge is a grading coordinate. There is one
+auxiliary spatial coordinate, `z`, and the probe wall is `z = 0`.
+State the probe grading, wall spaces, cylinders, coefficient extraction and
+transport over these carriers.
 
-### M02. One broken-line construction
+Apply relative abelian completion with the cylinder diagram as fixed quotient.
+Prove the regular-crossing, far-ray and zero-spatial-direction assertions
+using this projection. The finite-order and completed coefficient maps must
+satisfy the stated cutoff and conjugation identities.
 
-**Target:** [§5.2](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#52-decorated-broken-lines),
-including `brokenLine_coefficientEmbedding`.
+Use §5.5's common backward-ray operator for the independently proved probe and
+broken-line recursions. Apply §0.8's finite-recursion uniqueness to identify
+their solutions. Include auxiliary-arrangement independence, generic
+stability and zero-spatial-direction components.
 
-Use §5.2's broken line as the common construction for chamber/face
-correspondences, chart data and incoming data. Ordinary walls use graph
-correspondences. Its type, endpoint, decorations, finite-fiber weighted
-evaluation and subdivision/truncation laws are the ones required there.
+Use `operatorProbe` and the incident tangent diagram for
+`affineLocalResolution`; relative completion must accept these supports.
+The affine theta section is then the §5.4 section of its closed family and
+certificate. A probe-derived coefficient field supplies the comparison
+theorem's probe side; the equality with the weighted path sum is proved by
+the two recursions.
 
-Relate `CutoffDecoratedRay` to the affine specialization using its actual
-encounter and incoming data. Account for simultaneous events, unchanged-degree
-encounters and nonzero shifts in the kernel of the spatial projection.
-Include constant incoming sections. Prove the coefficient-embedding comparison
-and the separate grouped weighted comparison for general coefficient maps.
+## Dependencies and completion
 
-**Complete when:** the affine public construction and evaluation use the common
-definition or its proved computational presentation, and all affected callers
-use that API. The same interface must accept slab correspondences; its
-focus-focus instance is completed in M08.
+The component expansion supplies weighted coefficient comparisons and local
+resolution identities. The broken-line correspondence supplies the
+computational presentations of closed type families. These families and their
+certificates supply the common theta construction.
 
-### M03. Construct closed families from encounter bounds
+The single-face specialization uses its encounter bound and common face
+lifts. The affine specialization uses relative completion, the probe comparison
+and the operator-probe certificate. The single-face construction does not
+require the affine probe comparison.
 
-**Target:** [§5.3](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#53-endpoint-evaluation-closed-families-and-general-position),
-especially `boundedItineraries_finiteClosedTypeFamily`,
-`filtrationEncounterBound` and `singleFaceBrokenLines`.
+For each common construction, prove its defining comparisons and all induced
+evaluation, coefficient, coordinate and truncation equations. Express its
+consumers through these comparisons and remove superseded public definitions
+and repeated proofs. Preserve useful additional generality, geometric results
+and computable operations.
 
-Separate the general finite-tree/backward-reconstruction construction from the
-proof of an encounter bound. With filtration length `r` and at most `h`
-unmarked encounters between marked steps, prove the stated bound
-`r h + r - 1`. Apply it to affine relative degree and to positive-kink data.
+Apply the README's completion criteria and Checks to the resulting common
+constructions and their specializations. Formula agreement without the
+specified path, incoming-data and section comparisons does not discharge
+these requirements.
 
-Reuse the affine polyhedral charts and continuous closed-chart extensions.
-Complete the boundary-event classification, exhaustion, subdivision, common
-refinement and endpoint-cover comparisons required by the README.
-Construct the single-face family with its full half-space incoming data.
+## Provenance: source presentations
 
-**Complete when:** affine and single-face families are instances of the same
-construction, with the README's finite fibers, genericity and boundary
-conditions proved. Existing closed charts alone do not close this item.
+The links below identify source declarations for reuse and comparison.
+They are secondary to the intrinsic requirements above and the README;
+their names and file layout do not prescribe the resulting public API.
 
-### M04. Complete an abelian ideal over a fixed diagram
-
-**Targets:** [§3.3](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#33-local-scattering-and-existence-of-completion)
-and [§3.4](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#34-uniqueness-and-compatibility),
-`relativeAbelianCompletion` and its uniqueness and naturality.
-
-For the split extension in the README, keep the lifted consistent quotient
-diagram fixed. Its supports may be arbitrary §3.2 supports. Add the incoming
-full-hyperplane ideal walls and construct outgoing ideal corrections with pure
-birth logs, compatibly with truncation.
-
-**Complete when:** the relative existence theorem, uniqueness and naturality
-have these hypotheses. Re-running full-hyperplane completion on the entire
-quotient diagram does not establish this result. Reuse the existing
-obstruction, cochain and sweep arguments to prove the relative statement.
-
-### M05. Replace the old probe geometry
-
-**Target:** [§5.5](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#55-module-probes-and-affine-theta-transport),
-`moduleProbe`, `probeCompletion` and `probeTransport`.
-
-Replace the degree group `Γ × ℤ × ℤ` by `Γ × ℤ` and the two auxiliary
-spatial coordinates by the single coordinate `z`.
-The spatial projection is `ρ_ext(x,c) = (ρ(x),0)`; charge is a grading
-coordinate and supplies no auxiliary spatial motion.
-
-Migrate grading, wall spaces, cylinders, probe walls, coefficient extraction,
-transport and their consumers. Obtain the completion from M04 with the
-prescribed cylinder diagram fixed. Prove the far-ray and zero-spatial-direction
-statements using the new geometry.
-
-**Complete when:** the canonical probe API has the new carriers and hypotheses,
-its callers have migrated, and the old height-selection construction has been
-removed. Projecting away a coordinate from the old proofs is insufficient:
-their direction, outgoingness and regularity assertions must hold for the new
-projection.
-
-### M06. Local resolutions and one gluing theorem
-
-**Target:** [§5.4](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#54-local-resolutions-and-gluing-of-sections).
-
-Construct `localResolution_expansion` from the closed charts in M03.
-Retain the incidence inequalities selecting the realized histories when using
-M01; equality of unrestricted operator words alone does not classify geometric
-resolutions. Prove subdivision, concatenation, coefficient and cover
-compatibility. Construct `singleFaceResolution` for graph and slab spans.
-
-Assemble `finiteSum_matchingFamily` from the existing facet-descent and
-multispan theorems. Apply it to a closed family with a certificate to obtain
-`globalThetaSection`, its transport, linearity, naturality and completion.
-Only the sums require common face lifts; do not require lifts for every branch.
-
-**Complete when:** the general gluing theorem, the single-face construction and
-their stated compatibility laws are proved. M07 then applies this theorem to
-the affine certificate. Place work formerly attributed to §5.7 here; the
-current README has no §5.7. Derive `slabTheta_normalForm` using §4.4's normal
-forms, products and coefficient maps.
-
-### M07. Identify the affine probe and broken-line sums
-
-**Target:** [§5.5](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#55-module-probes-and-affine-theta-transport),
-from `backwardRayOperator` through `theta_coeffMap`.
-
-Use the migrated probe to construct the common filtration-raising backward-ray
-operator. Prove the broken-line and probe recursions independently, including
-identity encounters, zero outputs and shifts of zero spatial direction.
-Use M01's uniqueness theorem to identify their solutions and prove independence
-of the auxiliary arrangement and incoming-point choices.
-
-Construct `operatorProbe` and the incident tangent-diagram comparison needed
-for `affineLocalResolution`. M04 must apply to these supports.
-Then define the affine theta section by M06's `globalThetaSection`.
-
-**Complete when:** `probeWall_eq_brokenLineSum`, the affine certificate,
-theta transport and coefficient/truncation compatibility are proved.
-Probe-derived parallel fields alone do not establish this identification.
-
-### M08. Recover focus-focus from the single-face construction
-
-**Targets:** [§4.4](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#44-weight-zero-function-walls-and-face-algebras),
-[§5.4](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#54-local-resolutions-and-gluing-of-sections)
-and [§6.3](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#63-worked-example-the-focus-focus-slab-and-its-theta-basis).
-
-Use the existing nodal algebra normal forms, signed-monomial basis and product,
-and the focus-focus span comparison. Verify the coefficient embeddings, degree
-isomorphisms, admissible lifts, incoming records and the preimages of terminal
-lifts required to transfer M02, M03 and M06 to this datum.
-
-Replace the independent meaning of `SlabBrokenLine` and
-`slabThetaEvaluation` by the common specialization or its proved explicit
-enumeration. Define the geometric focus-focus theta sections through
-`globalThetaSection`. Retain algebraic theta monomials as normal forms and
-identify them with these sections using `slabTheta_normalForm`.
-
-**Complete when:** the global closed family, certificate, theta basis,
-multiplication, scalar change and completion are obtained through the common
-construction, including the §6.3 Checks. Preserve the existing binomial
-enumeration and algebraic formulas as computational consequences.
-
-## Other consumers of the migrated constructions
-
-The revision also changes how existing roadmap targets consume the common
-constructions. Include these uses when checking the migration:
-
-- [§5.6](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#56-monomial-presentations-and-comparison-of-theta-constructions):
-  monomial theta sums express the common weighted evaluation in a basis;
-  presentation invariance uses the affine comparison in M07.
-- [§6.1](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#61-integral-affine-covariance)
-  and [§6.2](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#62-descent-of-coefficient-diagrams-and-transport):
-  covariance and descent transport the common families and certificates and
-  apply M06's gluing theorem, retaining whole global incoming histories.
-- [§7.7](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/mei/TauCetiRoadmap/ScatteringDiagrams/README.md#77-positive-formal-theta-coefficients):
-  the positive global section is the section of §5.4. Update uses of the former
-  §5.7 construction without treating positivity itself as proved by this migration.
-
-## Implementation evidence at the baseline
-
-These are source locations for reuse, not prescribed final file names.
-
-- [History expansion](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/LinearAlgebra/GradedModule/History/Expansion.lean)
-  supplies `sum_homogeneousHistory_eq_prod` under globally finite grading
-  support. [Filtered nilpotence](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/LinearAlgebra/ModuleFiltration/Nilpotent.lean)
-  works over rings. [BCH resolution identities](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Algebra/Lie/Graded/Shifted/Resolution.lean)
-  already consume the expansion and explicitly separate algebraic histories
-  from geometric realizations.
-- [Affine itineraries](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Itineraries.lean)
-  define `CutoffDecoratedRay`.
-  [Charts](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Charts.lean)
-  and [degenerations](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Degeneration.lean)
-  supply finite closed endpoint charts.
-  [Coefficient comparison](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/CoefficientMap.lean)
-  proves a grouped weighted identity for a fixed itinerary.
-- [Probe degrees](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/Degree.lean)
-  use `Γ × ℤ × ℤ`.
-  [Initial probe walls](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/Initial.lean)
-  use two auxiliary spatial directions and full-hyperplane input for the
-  existing completion route.
-  [Backward recursion](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/BackwardRecursion.lean)
-  supplies a probe-side recursion in that geometry.
-- [Facet descent](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Topology/Sheaves/LocallyConstant/FacetDescent/Hom.lean)
-  extends morphisms from an input object.
-  [Sheaf multispans](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Topology/Sheaves/Multispan.lean)
-  assemble linear chamber maps from local common face lifts.
-- [Signed monomials](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/RingTheory/Node/SignedMonomial.lean)
-  already give the nodal basis and multiplication.
-  [Slab decorated rays](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Decorated.lean)
-  and [their closed charts](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Family.lean)
-  provide explicit single-face computations.
-  [Evaluation](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Evaluation.lean)
-  identifies chamber sums with algebraic theta monomials and explicitly
-  excludes a construction of sheaf sections or local resolution certificates.
-  [The span comparison](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Comparison/Diagram.lean)
-  supplies the natural transformation between the nodal and Laurent diagrams.
+| Source | Role |
+|---|---|
+| [Homogeneous-history expansion](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/LinearAlgebra/GradedModule/History/Expansion.lean), [filtered nilpotence](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/LinearAlgebra/ModuleFiltration/Nilpotent.lean), [BCH component identities](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Algebra/Lie/Graded/Shifted/Resolution.lean) | Algebraic suppliers for finite component expansion and recursion. Check their support and scalar hypotheses when applying them. |
+| [`CutoffDecoratedRay`](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Itineraries.lean), [charts](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Charts.lean), [degenerations](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/Degeneration.lean) | Affine ray and closed-chart presentations to identify with the common broken lines and type families. |
+| [Coefficient comparison](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/BrokenLine/CoefficientMap.lean) | Fixed-itinerary weighted comparison to connect to the common coefficient-morphism statements. |
+| [Probe degrees](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/Degree.lean), [initial walls](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/Initial.lean), [backward recursion](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/ModuleProbe/BackwardRecursion.lean) | Probe algebra and transport proofs to express on §5.5's degree and spatial carriers, checking the geometric assertions for its projection. |
+| [Facet descent](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Topology/Sheaves/LocallyConstant/FacetDescent/Hom.lean), [sheaf multispans](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Topology/Sheaves/Multispan.lean) | Suppliers for extension of total chamber maps and reconstruction of matching families from common face lifts. |
+| [Signed monomials](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/RingTheory/Node/SignedMonomial.lean) | Algebraic normal forms, basis and products used to compute the common slab theta sections. |
+| [`SlabBrokenLine`](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Decorated.lean), [slab families](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Family.lean), [`slabThetaEvaluation`](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Evaluation.lean) | Explicit slab paths and evaluations to identify with the common single-face family and weighted evaluation. |
+| [Focus-focus span comparison](https://github.com/yuma-mizuno-lean/Mei/blob/280b226248836604caa2517e217e6b320c9b3ce6/Mei/Geometry/ScatteringDiagram/FocusFocus/Comparison/Diagram.lean) | Coefficient-diagram comparison used to transfer families, certificates and theta sections through the specified embeddings and face isomorphism. |

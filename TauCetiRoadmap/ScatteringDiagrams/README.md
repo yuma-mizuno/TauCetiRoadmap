@@ -2374,12 +2374,14 @@ A layer is complete when its constructions, theorems, worked examples and Checks
 are proved in Lean with the stated hypotheses. General components must be usable
 independently of scattering; the finite-order constructions must yield the completed ones.
 
-## Mei implementation requirements
+## Mei implementation migration
 
-The [Mei implementation requirements](MIGRATION.md) specify the shared constructions
-and comparison theorems connecting the affine, slab and focus-focus presentations.
-Their source correspondence is recorded in a secondary provenance section.
-This README remains the mathematical specification.
+For implementations in Mei, the [migration targets](MIGRATION.md) are part of this
+roadmap. They specify the shared constructions, the comparisons connecting affine,
+slab and focus-focus presentations, their prerequisites and completion conditions.
+Use these targets for integration and refactoring; their secondary provenance table
+identifies source APIs and the precise replacement or reuse required for each.
+The mathematical definitions, hypotheses and Checks remain those of §§0–7 above.
 
 ## References
 

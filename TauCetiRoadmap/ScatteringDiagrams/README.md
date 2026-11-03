@@ -78,6 +78,17 @@ scattering-specific carriers belong in
 Use Mathlib and Tau Ceti suppliers with their existing meanings and public interfaces;
 each section lists its dependencies under *Needs*.
 
+## Mei implementation migration
+
+Prioritize the Mei implementation migration described in this section.
+
+For implementations in Mei, the [migration targets](MIGRATION.md) are part of this
+roadmap. They specify the shared constructions, the comparisons connecting affine,
+slab and focus-focus presentations, their prerequisites and completion conditions.
+Use these targets for integration and refactoring; their secondary provenance table
+identifies source APIs and the precise replacement or reuse required for each.
+The mathematical definitions, hypotheses and Checks remain those of §§0–7 below.
+
 ## Layer 0: positive gradings, completions and actions
 
 ### 0.1 Positive degree data
@@ -2373,15 +2384,6 @@ exponent zero. Positivity survives these finite operations and the inverse limit
 A layer is complete when its constructions, theorems, worked examples and Checks
 are proved in Lean with the stated hypotheses. General components must be usable
 independently of scattering; the finite-order constructions must yield the completed ones.
-
-## Mei implementation migration
-
-For implementations in Mei, the [migration targets](MIGRATION.md) are part of this
-roadmap. They specify the shared constructions, the comparisons connecting affine,
-slab and focus-focus presentations, their prerequisites and completion conditions.
-Use these targets for integration and refactoring; their secondary provenance table
-identifies source APIs and the precise replacement or reuse required for each.
-The mathematical definitions, hypotheses and Checks remain those of §§0–7 above.
 
 ## References
 

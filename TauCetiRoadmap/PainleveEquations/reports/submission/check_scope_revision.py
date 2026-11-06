@@ -19,9 +19,12 @@ FILES = {"README.md", "README.ja.md", "Suggested.lean", "metadata.toml",
          "design/reuse_graph.json", "design/reuse_registry.json"}
 
 
-def scope_inputs(root, math_spans):
+def scope_inputs(root, math_spans, current_inputs=None):
     record = json.loads((root / "reports/submission/scope_revision.json").read_text(encoding="utf-8"))
     checks, previous = [], {}
+
+    def read_current(name):
+        return (current_inputs or {}).get(name, (root / name).read_text(encoding="utf-8"))
 
     def check(name, ok):
         checks.append({"check": "scope: " + name, "passed": bool(ok)})
@@ -36,7 +39,7 @@ def scope_inputs(root, math_spans):
         previous[name] = subprocess.check_output(
             ["git", "show", BASELINE + ":TauCetiRoadmap/PainleveEquationsAndFunctions/" + name],
             cwd=root.parents[1]).decode("utf-8")
-        current = (root / name).read_text(encoding="utf-8")
+        current = read_current(name)
         hashes = record["files"][name]
         check(name + " baseline fingerprint", sha(previous[name]) == hashes["before_sha256"])
         check(name + " current fingerprint", sha(current) == hashes["after_sha256"])
@@ -45,7 +48,7 @@ def scope_inputs(root, math_spans):
         return {t["id"]: t for layer in plan["layers"] for t in layer["targets"]}
 
     before = targets(json.loads(previous["design/plan.json"]))
-    plan = json.loads((root / "design/plan.json").read_text(encoding="utf-8"))
+    plan = json.loads(read_current("design/plan.json"))
     after = targets(plan)
     check("57 surviving target identities", set(after) == set(before) - REMOVED and len(after) == 57)
     check("current counts", record["retained_counts"] == plan["counts"])
@@ -80,7 +83,7 @@ def scope_inputs(root, math_spans):
 
     for name in ("README.md", "README.ja.md"):
         old_bodies = bodies(previous[name])
-        text = (root / name).read_text(encoding="utf-8")
+        text = read_current(name)
         new_bodies = bodies(text)
         check(name + " exact target scope", set(new_bodies) == set(after))
         for tid in after:
@@ -90,5 +93,5 @@ def scope_inputs(root, math_spans):
         check(name + " no deleted target anchors",
               all('id="target-' + tid.replace(".", "-") + '"' not in text for tid in REMOVED))
     for name in ("Suggested.lean", "metadata.toml"):
-        check(name + " unchanged", (root / name).read_text(encoding="utf-8") == previous[name])
+        check(name + " unchanged", read_current(name) == previous[name])
     return previous, checks

@@ -1,11 +1,11 @@
 {
-  "roadmap": "PainleveEquationsAndFunctions",
+  "roadmap": "PainleveEquations",
   "parts": [
     {
       "id": "nonlinear_connections",
       "title": "Nonlinear connections, transport, observations and comparison",
       "scope_role": "framework",
-      "owner": "PainleveEquationsAndFunctions:nonlinear_connections",
+      "owner": "PainleveEquations:nonlinear_connections",
       "target_ids": [
         "0.1",
         "0.2",
@@ -21,7 +21,7 @@
       "id": "connection_moduli",
       "title": "Meromorphic-connection moduli and isomonodromic connections",
       "scope_role": "framework",
-      "owner": "PainleveEquationsAndFunctions:connection_moduli",
+      "owner": "PainleveEquations:connection_moduli",
       "target_ids": [
         "1.1",
         "1.2",
@@ -41,7 +41,7 @@
       "id": "analytic_theory",
       "title": "Holomorphic Fredholm determinant lines",
       "scope_role": "framework",
-      "owner": "PainleveEquationsAndFunctions:analytic_theory",
+      "owner": "PainleveEquations:analytic_theory",
       "target_ids": [
         "6.1"
       ]
@@ -50,7 +50,7 @@
       "id": "painleve",
       "title": "Painlevé equations",
       "scope_role": "application",
-      "owner": "PainleveEquationsAndFunctions:painleve",
+      "owner": "PainleveEquations:painleve",
       "target_ids": [
         "3.1",
         "3.2",

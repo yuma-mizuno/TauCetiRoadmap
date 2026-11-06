@@ -18,7 +18,7 @@ General definitions, hypotheses, API items and prerequisite lists of the retaine
 | 3.8 | Direct coefficient-boundary comparison to 7.3 and remove the confluence reference. |
 | 7.3 | Remove the conditional comparison of limiting initial data in a geometric degeneration; retain coefficient classification, boundary integrations and their domains. |
 
-The retained target bodies have identical ordered TeX payloads to the preceding specification in both languages. Summary prose, scope tables, bibliography and ownership lists are synchronized. The registries drop six unused sources and nine unused contracts. `Suggested.lean` and `metadata.toml` are unchanged.
+The retained target bodies have identical ordered TeX payloads to the preceding specification in both languages. Summary prose, scope tables, bibliography and ownership lists are synchronized. The registries drop six unused sources and nine unused contracts. At the scope-reduction snapshot, `Suggested.lean` and `metadata.toml` were unchanged; the subsequent directory rename also renames the Lean namespace.
 
 ## Current structure
 
@@ -37,13 +37,13 @@ The plan has 21 general targets, 36 application targets, 154 API items, 181 diag
 
 ## Current verification
 
-[validation.json](validation.json) records 6,105 passing mechanical checks and no failures. These cover document/plan correspondence, target ownership, counts, prerequisite resolution and order, acyclicity, general/application boundaries, supplier paths, source records, Markdown math forms, table structure and local links. The scope audit checks each retained target against the pinned preceding specification, including the complete declared field-edit inventory and formula preservation in both languages.
+[validation.json](validation.json) records 6,135 passing mechanical checks and no failures. These cover document/plan correspondence, target ownership, counts, prerequisite resolution and order, acyclicity, general/application boundaries, supplier paths, source records, Markdown math forms, table structure and local links. The scope audit checks each retained target against the pinned preceding specification, including the complete declared field-edit inventory and formula preservation in both languages.
 
 The validator separately checks the historical preservation chain against its original inputs. The historical 78-target bijection is not asserted of the current scope. The optional original and pre-numbering plan inputs were supplied for this validation run.
 
 These are consistency and preservation checks, not theorem proofs, source-scope certification or human approval. The all-classical irregular proper-RH theorem in 4.4, the global comparisons in 5.2, and the resonant/ramified index-zero RHP adapters in 6.3 remain substantive construction and proof targets.
 
-No Lean build was rerun. The representative `Suggested.lean` is unchanged and contains four `sorry` declarations. The earlier full repository build was cancelled at the user's request and was not restarted. No new browser rendering inspection is claimed; current formula syntax and payload checks are separate from historical visual receipts.
+No full repository build was rerun. The representative `Suggested.lean` contains four `sorry` declarations; its only source change is the namespace rename. The earlier full repository build was cancelled at the user's request and was not restarted. No new browser rendering inspection is claimed; current formula syntax and payload checks are separate from historical visual receipts.
 
 ## Historical evidence
 
@@ -60,6 +60,14 @@ They are historical evidence, not fresh reviews of the current files. The full p
 
 ## Submission boundary
 
-The branch is `codex/painleve-roadmap-submission`, based on upstream `main` at `ffac5139fe4794a132eb540a89e1b973070aad69`. Its diff remains confined to `TauCetiRoadmap/PainleveEquationsAndFunctions/`. No PR or external review request is created by this revision.
+The branch is `codex/painleve-roadmap-submission`, based on upstream `main` at `ffac5139fe4794a132eb540a89e1b973070aad69`. Its diff remains confined to `TauCetiRoadmap/PainleveEquations/`. No PR or external review request is created by this revision.
 
 The mathematical specification and scope revision were prepared with AI assistance from Codex. Human review and the eventual PR/CI steps are separate from these local checks.
+
+## Directory name and arXiv classification
+
+The directory, active roadmap identifiers, proof-owner prefixes and Lean namespace are renamed from `PainleveEquationsAndFunctions` to `PainleveEquations`. [naming_revision.json](naming_revision.json) checks exact identifier substitution against commit `f05568ae46e28030502b460d64a7b95e760fafc0`. Historical receipts and commit-specific URLs retain their original paths and names.
+
+The primary topic remains `math.AG`. The closest moduli/isomonodromy and initial-condition-space sources are primary AG: [van der Put–Saito](https://arxiv.org/abs/0902.1702v5) (cross-listed CA), [Inaba](https://arxiv.org/abs/2108.09667), [Inaba–Iwasaki–Saito](https://arxiv.org/abs/math/0501007v2) (cross-listed DS), and [Saito–Takebe–Terajima](https://arxiv.org/abs/math/0006026v2). Analytic treatments have other primary topics: [Steinmetz](https://arxiv.org/abs/1601.04031) is CV and [Dereziński–Ishkhanyan–Latosiński](https://arxiv.org/abs/2007.05698) is CA. This is a comparison of selected close sources, not a statistical survey. Retaining AG for the present moduli-based construction is an editorial judgement informed by those registrations.
+
+The renamed representative Lean file was submitted to a direct type check, which stopped at the first import because the existing dependency checkout lacks `TauCeti.Geometry.Manifold.Submersion.olean`. No proof-body error was reached, and no full build was started. [namespace_check.json](namespace_check.json) records the failed check; the current namespace has not been certified by Lean.

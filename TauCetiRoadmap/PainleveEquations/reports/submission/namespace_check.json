@@ -1,0 +1,11 @@
+{
+  "meaning": "Attempted recheck of the representative interfaces after the namespace rename; not a full repository build.",
+  "command": "lake env lean D:/Documents/math/TauCetiRoadmap/.lake/worktrees/painleve-organization/TauCetiRoadmap/PainleveEquations/Suggested.lean",
+  "cwd": "D:/Documents/math/TauCetiRoadmap",
+  "exit_code": 1,
+  "status": "not_typechecked_missing_dependency_object",
+  "diagnostic": "TauCeti.Geometry.Manifold.Submersion has no compiled Submersion.olean in the existing dependency checkout.",
+  "suggested_sha256": "d910df12b2db44c9efe6ded57928d784e1b5a68903d23f92ec3cb2810399af5d",
+  "full_build_started": false,
+  "namespace_only_source_change": true
+}

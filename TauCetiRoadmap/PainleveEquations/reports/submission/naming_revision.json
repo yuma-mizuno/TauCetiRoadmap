@@ -1,0 +1,45 @@
+{
+  "schema": "tauceti-roadmap/naming-revision-v1",
+  "baseline_commit": "f05568ae46e28030502b460d64a7b95e760fafc0",
+  "previous_directory": "PainleveEquationsAndFunctions",
+  "current_directory": "PainleveEquations",
+  "meaning": "Directory, roadmap identifiers, proof owners and Lean namespace follow the title Painlevé equations. Mathematical specifications and the arXiv topic are unchanged.",
+  "files": {
+    "README.md": {
+      "before_sha256": "23a9140bf8e395fd9defa82ba88f46fb418cba3e2474685677ec09ecfdd47305",
+      "after_sha256": "23a9140bf8e395fd9defa82ba88f46fb418cba3e2474685677ec09ecfdd47305"
+    },
+    "README.ja.md": {
+      "before_sha256": "b9628de687c8fe2a52932c726782029c6e81b5d219327fcd58ca048089182a8e",
+      "after_sha256": "b9628de687c8fe2a52932c726782029c6e81b5d219327fcd58ca048089182a8e"
+    },
+    "Suggested.lean": {
+      "before_sha256": "6736c8039a5355435033b4ceaf7e13df9276f5080578b32d1ff6678d377560e8",
+      "after_sha256": "d910df12b2db44c9efe6ded57928d784e1b5a68903d23f92ec3cb2810399af5d"
+    },
+    "metadata.toml": {
+      "before_sha256": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+      "after_sha256": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81"
+    },
+    "sources.toml": {
+      "before_sha256": "bd96dcd816c165ff14625042c61d60b50331ac3be2a9c593446f50624bcd0e0b",
+      "after_sha256": "2fc291880abb2cd907611a44eeb73aee4325be0091a2e31324535d66b356b88c"
+    },
+    "design/plan.json": {
+      "before_sha256": "9685172ba526be8cca1fc259187a73ed23c52836625260272f6a7590dc81e18e",
+      "after_sha256": "b8a6f9365441737cd50577910bac988adf92aeb7a318b73f940f001979d6706a"
+    },
+    "design/dependencies.json": {
+      "before_sha256": "96d16a39b5f2aae2c3792f1a7b14427a04a3ffb6f28650074831d2ed4af41d7a",
+      "after_sha256": "96d16a39b5f2aae2c3792f1a7b14427a04a3ffb6f28650074831d2ed4af41d7a"
+    },
+    "design/reuse_graph.json": {
+      "before_sha256": "8c438d4d6bdf608fb4f47ef77eea5ec7d162bae91cddf45a24090a6c760dca3f",
+      "after_sha256": "a12c3b8296d0818a45523be88edc7caa47819360ed9d63511b8988fa697527ce"
+    },
+    "design/reuse_registry.json": {
+      "before_sha256": "3afcef2af23f6ce9f8e381100039cd917dfb5112a4322b8a6a67518b5a2b4daf",
+      "after_sha256": "dc42add41a638062c8147db8ea295362a7ed94112f206f3906d3c4907cab4354"
+    }
+  }
+}

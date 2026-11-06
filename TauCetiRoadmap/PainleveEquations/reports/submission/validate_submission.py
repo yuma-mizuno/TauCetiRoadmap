@@ -103,6 +103,7 @@ def main():
     restored_inputs = {}
     preformat_by_id = by_id
     scope_revision_checked = False
+    naming_revision_checked = False
     if rendering_path.is_file():
         spec = importlib.util.spec_from_file_location(
             "painleve_math_rendering_check", Path(__file__).with_name("check_math_rendering.py"))
@@ -110,12 +111,23 @@ def main():
         spec.loader.exec_module(module)
         scope_path = ROOT / "reports/submission/scope_revision.json"
         scope_previous = {}
+        naming_previous = {}
+        if (ROOT / "reports/submission/naming_revision.json").is_file():
+            naming_spec = importlib.util.spec_from_file_location(
+                "painleve_naming_check", Path(__file__).with_name("check_naming_revision.py"))
+            naming_module = importlib.util.module_from_spec(naming_spec)
+            naming_spec.loader.exec_module(naming_module)
+            naming_previous, naming_checks = naming_module.naming_inputs(ROOT)
+            for item in naming_checks:
+                check("naming_revision", item["check"], item["passed"])
+            naming_revision_checked = True
         if scope_path.is_file():
             scope_spec = importlib.util.spec_from_file_location(
                 "painleve_scope_check", Path(__file__).with_name("check_scope_revision.py"))
             scope_module = importlib.util.module_from_spec(scope_spec)
             scope_spec.loader.exec_module(scope_module)
-            scope_previous, scope_checks = scope_module.scope_inputs(ROOT, module.math_spans)
+            scope_previous, scope_checks = scope_module.scope_inputs(
+                ROOT, module.math_spans, current_inputs=naming_previous)
             for item in scope_checks:
                 check("scope_revision", item["check"], item["passed"])
             scope_revision_checked = True
@@ -188,7 +200,7 @@ def main():
         check("targets", tid + " address", bool(re.fullmatch(r"(?:0|[1-9]\d*)\.[1-9]\d*", tid)))
         check("targets", tid + " semantic part", t["part"] in by_part
               and t["scope_role"] == by_part[t["part"]]["scope_role"])
-        check("targets", tid + " local owner", t["owner"] == "PainleveEquationsAndFunctions:" + tid)
+        check("targets", tid + " local owner", t["owner"] == "PainleveEquations:" + tid)
         refs = t["prerequisites"]
         check("dependencies", tid + " no duplicate prerequisites", len(refs) == len(set(refs)))
         for ref in refs:
@@ -509,6 +521,7 @@ def main():
         "organization_revision_checked": bool(rendering_report and
             rendering_report.get("organization_baseline_used")),
         "scope_revision_checked": scope_revision_checked,
+        "naming_revision_checked": naming_revision_checked,
         "failures": failures,
     }
     encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

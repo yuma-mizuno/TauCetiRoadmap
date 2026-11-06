@@ -308,11 +308,20 @@ def audit_manifest(root=ROOT, use_pandoc=False, historical_inputs=None):
     root = Path(root)
     scope_checks = []
     if historical_inputs is None and (root / "reports/submission/scope_revision.json").is_file():
+        naming_previous, naming_checks = {}, []
+        if (root / "reports/submission/naming_revision.json").is_file():
+            naming_spec = importlib.util.spec_from_file_location(
+                "painleve_naming_check", Path(__file__).with_name("check_naming_revision.py"))
+            naming_module = importlib.util.module_from_spec(naming_spec)
+            naming_spec.loader.exec_module(naming_module)
+            naming_previous, naming_checks = naming_module.naming_inputs(root)
         spec = importlib.util.spec_from_file_location(
             "painleve_scope_check", Path(__file__).with_name("check_scope_revision.py"))
         scope_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(scope_module)
-        historical_inputs, scope_checks = scope_module.scope_inputs(root, math_spans)
+        historical_inputs, scope_checks = scope_module.scope_inputs(
+            root, math_spans, current_inputs=naming_previous)
+        scope_checks = naming_checks + scope_checks
     manifest_path = root / "reports/submission/math_rendering.json"
     manifest = json.loads(manifest_path.read_text())
     numbering_path = root / "reports/submission/numbering.json"

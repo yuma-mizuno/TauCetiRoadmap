@@ -1,6 +1,6 @@
 {
   "schema": "tauceti-roadmap/mathematical-plan-v3",
-  "roadmap": "PainleveEquationsAndFunctions",
+  "roadmap": "PainleveEquations",
   "title": "Painlevé equations",
   "summary": "Differential Painlevé equations: nonlinear connections, meromorphic-connection moduli, Riemann–Hilbert correspondence, initial-condition surfaces, symmetries, tau sections and classical equations.",
   "document_registry": {
@@ -19,7 +19,7 @@
       "contracts": {
         "summary": "An independent finite-dimensional framework for nonlinear Ehresmann connections, local and complete horizontal transport, symplectic compatibility, observations, scalarization. No Painlevé equation, rank-two moduli space, polar-degree restriction or Riemann–Hilbert comparison is a prerequisite.",
         "dependency_policy": "Internal addresses use target:<layer>.<item>. General targets have no application prerequisites; the Painlevé targets in Layers 3–6 have no prerequisites in Layer 7. The order within each layer respects the prerequisite graph. External dependency contracts specify their exact scope.",
-        "owner": "PainleveEquationsAndFunctions:nonlinear_connections"
+        "owner": "PainleveEquations:nonlinear_connections"
       }
     },
     {
@@ -178,7 +178,7 @@
             "scope": "Supporting source for logarithmic consumers and nonemptiness certificates, not a prerequisite for the general irregular construction theorem."
           }
         ],
-        "owner": "PainleveEquationsAndFunctions:connection_moduli",
+        "owner": "PainleveEquations:connection_moduli",
         "internal_general_dependencies": [
           "target:0.1",
           "target:0.3",
@@ -200,7 +200,7 @@
           "BERT17"
         ],
         "source_registry": "sources.toml",
-        "owner": "PainleveEquationsAndFunctions:analytic_theory"
+        "owner": "PainleveEquations:analytic_theory"
       }
     },
     {
@@ -212,51 +212,51 @@
         "owned_proof_obligations": [
           {
             "target": "3.4",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Derive the ten underlying and seventeen ordered formal profiles and the one-dimensional reduced time from the input class, including stabilizer/marking comparisons; do not supply those counts as hypotheses."
           },
           {
             "target": "3.7",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Verify the central-fiber, determinant and base-change comparison with MeromorphicConnectionModuli 1.5–1.6. The full auxiliary unfolding and general closedness proof are owned there."
           },
           {
             "target": "4.2",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Extend admissible-family Stokes transport to the good rank-two ramified class by deck-equivariant isotopy and descent."
           },
           {
             "target": "4.4",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Prove relative proper RH for every admitted classical parameter and stable stratum, including uniform lattice bounds and stable replacement. The regular-singular branch imports MeromorphicConnectionModuli 2.6 after its comparison; the irregular extension is not inferred from I13."
           },
           {
             "target": "5.2",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Prove the full moduli–surface complement comparison, all charts and allowed strata; do not assume the introductory all-profile conjectural comparison."
           },
           {
             "target": "5.3",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Prove base change and time-line identification for the first boundary-layer line; no equality with all local cohomology is assumed."
           },
           {
             "target": "5.5",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Construct the additional marked-pair reflections, including the central PVI reflection, and establish horizontal extension and relations."
           },
           {
             "target": "6.3",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Construct resonant/ramified index-zero RHP adapters with their permitted comparison maps and stabilizer descent."
           },
           {
             "target": "4.7",
-            "owner": "PainleveEquationsAndFunctions",
+            "owner": "PainleveEquations",
             "obligation": "Identify the actual classical transport/action with NonlinearConnections 0.5 and verify presentation and symplectic comparisons. General action construction, universal-cover sections and descent are owned there."
           }
         ],
-        "owner": "PainleveEquationsAndFunctions:painleve",
+        "owner": "PainleveEquations:painleve",
         "dependency_policy": "Internal addresses use target:<layer>.<item>. General targets have no application prerequisites; the Painlevé targets in Layers 3–6 have no prerequisites in Layer 7. The order within each layer respects the prerequisite graph. External dependency contracts specify their exact scope."
       }
     }
@@ -343,7 +343,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.1",
+          "owner": "PainleveEquations:0.1",
           "readme_needs_ja": "[Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1)."
         },
         {
@@ -420,7 +420,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.2",
+          "owner": "PainleveEquations:0.2",
           "readme_needs_ja": "内部依存：0.1; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5)."
         },
         {
@@ -498,7 +498,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.3",
+          "owner": "PainleveEquations:0.3",
           "readme_needs_ja": "内部依存：0.1, 0.2; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1)."
         },
         {
@@ -583,7 +583,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.4",
+          "owner": "PainleveEquations:0.4",
           "readme_needs_ja": "内部依存：0.1, 0.2."
         },
         {
@@ -664,7 +664,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.5",
+          "owner": "PainleveEquations:0.5",
           "readme_needs_ja": "内部依存：0.1, 0.2, 0.3; [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8); [Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Native real Frobenius product coordinates](#dependency-frobenius) (TauCeti.exists_frobenius_flat_coordinate).",
           "supporting_constructions": [
             {
@@ -761,7 +761,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.6",
+          "owner": "PainleveEquations:0.6",
           "readme_needs_ja": "内部依存：0.1, 0.2; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1)."
         },
         {
@@ -854,7 +854,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.7",
+          "owner": "PainleveEquations:0.7",
           "supporting_constructions": [
             {
               "id": "0.7.ScalarCarrier",
@@ -951,7 +951,7 @@
           },
           "part": "nonlinear_connections",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:0.8",
+          "owner": "PainleveEquations:0.8",
           "readme_needs_ja": "内部依存：0.1; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5)."
         }
       ]
@@ -1045,7 +1045,7 @@
           "source_scope": "I23, Definitions 2.1, 2.2, 2.4, 2.7–2.8; Definition 3.1, Proposition 3.3, Corollaries 4.3–4.4 and §5. Coordinate-independent packaging and 2-coherent descent are owned proof obligations, not assertions that I23 already proves that packaging.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.1",
+          "owner": "PainleveEquations:1.1",
           "supporting_constructions": [
             {
               "id": "1.1.GF01",
@@ -1133,7 +1133,7 @@
           "source_scope": "I23 §5 constructs the curve/jet/coefficient time scheme and §§10–11 use it. The general determinant-transport and coordinate-descent interfaces are additional owned obligations; they cannot be replaced by a claim that every determinant family admits a lift.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.2",
+          "owner": "PainleveEquations:1.2",
           "supporting_constructions": [
             {
               "id": "1.2.GF03",
@@ -1234,7 +1234,7 @@
           "source_scope": "I23 Theorem 5.1 and §§7–10; fixed-determinant and coarse-base-change comparisons are explicitly constructed extensions of the displayed moduli problem.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.3",
+          "owner": "PainleveEquations:1.3",
           "supporting_constructions": [
             {
               "id": "1.3.GF05",
@@ -1323,7 +1323,7 @@
           "source_scope": "I23 §6, (6.9), Proposition 6.3 and §7, Proposition 7.2. The fixed-determinant fiber and its compatible trace-free complex are explicit owned comparisons.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.4",
+          "owner": "PainleveEquations:1.4",
           "supporting_constructions": [
             {
               "id": "1.4.GF06",
@@ -1424,7 +1424,7 @@
           },
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.5",
+          "owner": "PainleveEquations:1.5",
           "supporting_constructions": [
             {
               "id": "1.5.GF07",
@@ -1501,7 +1501,7 @@
           },
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:1.6",
+          "owner": "PainleveEquations:1.6",
           "readme_needs_ja": "内部依存：1.3, 1.4, 1.5; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B)."
         }
       ]
@@ -1593,7 +1593,7 @@
           "source_scope": "I23 Definition 10.1, (10.1), Lemmas 10.3–10.6, Propositions 10.7/10.10 and (11.2); determinant compatibility and intrinsic pole-filtration comparison are owned proof obligations.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.1",
+          "owner": "PainleveEquations:2.1",
           "supporting_constructions": [
             {
               "id": "2.1.GF08",
@@ -1678,7 +1678,7 @@
           "source_scope": "I23 Theorem 11.6, Definition 11.4 and Corollary 11.8. The flatness proof and the trace-form variation are separate obligations.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.2",
+          "owner": "PainleveEquations:2.2",
           "readme_needs_ja": "内部依存：1.4, 1.6, 2.1, 0.6; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1)."
         },
         {
@@ -1746,7 +1746,7 @@
           "source_scope": "I23 Propositions 10.7 and 10.10 supply uniqueness used by the comparison. Full intrinsic base-change/2-coherence is an owned theorem target, not a quotation from a coordinate formula.",
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.3",
+          "owner": "PainleveEquations:2.3",
           "readme_needs_ja": "内部依存：1.1, 1.2, 1.3, 1.4, 1.6, 2.1, 2.2, 0.1; [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23)."
         },
         {
@@ -1822,7 +1822,7 @@
           },
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.4",
+          "owner": "PainleveEquations:2.4",
           "readme_needs_ja": "内部依存：1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2.1, 2.2, 2.3, 0.1, 0.6."
         },
         {
@@ -1891,7 +1891,7 @@
           },
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.5",
+          "owner": "PainleveEquations:2.5",
           "supporting_constructions": [
             {
               "id": "2.5.GF09",
@@ -1983,7 +1983,7 @@
           },
           "part": "connection_moduli",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:2.6",
+          "owner": "PainleveEquations:2.6",
           "supporting_constructions": [
             {
               "id": "2.6.GF09a",
@@ -2074,7 +2074,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.1",
+          "owner": "PainleveEquations:3.1",
           "readme_needs_ja": "内部依存：1.1.",
           "hypotheses_ja": [
             "MeromorphicConnectionModuli 1.1 の対象、その実際の射、行列式、および許容局所構造を用いる。この段階では古典的な次数制限を課さない。"
@@ -2133,7 +2133,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.2",
+          "owner": "PainleveEquations:3.2",
           "readme_needs_ja": "内部依存：3.1, 1.2.",
           "hypotheses_ja": [
             "取り込んだ付加構造付き入力と許容変形問題、および固定指数データを用いる。古典的行列式の時間方向への持ち上げとの比較は、この適用で確認する。"
@@ -2204,7 +2204,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.3",
+          "owner": "PainleveEquations:3.3",
           "readme_needs_ja": "内部依存：3.1, 3.2.",
           "hypotheses_ja": [
             "種数0、階数2、構造的次数4、適合する留数を固定した確定特異な行列式接続、縮約されたversal時間変形問題、および非空な安定ファイバーを入力条件とする。"
@@ -2251,7 +2251,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.4",
+          "owner": "PainleveEquations:3.4",
           "readme_needs_ja": "内部依存：3.1, 3.2, 3.3; [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1).",
           "hypotheses_ja": [
             "§3.3の入力に、その許容された一般的位置の射影的局所型と、実際の縮約された形式データの変形問題を備える。極のラベルを保持する。プロファイルの個数、自己同型の固定部分群の計算、および縮約された時間の1次元性は、仮定ではなく結論である。"
@@ -2315,7 +2315,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.5",
+          "owner": "PainleveEquations:3.5",
           "readme_needs_ja": "内部依存：3.3, 1.3.",
           "hypotheses_ja": [
             "古典的入力 3.3 を用いる。表現する族を仮定せず、一般の安定モジュライ構成の正確な仮定を確認する。"
@@ -2374,7 +2374,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.6",
+          "owner": "PainleveEquations:3.6",
           "readme_needs_ja": "内部依存：3.5, 1.4.",
           "hypotheses_ja": [
             "3.5 の族、行列式、および局所構造を用いる。接空間・障害との同定は、確認した比較を通じて一般構成から得る。"
@@ -2447,7 +2447,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.7",
+          "owner": "PainleveEquations:3.7",
           "readme_needs_ja": "内部依存：3.3, 3.5, 3.6, 1.5, 1.6.",
           "hypotheses_ja": [
             "古典的族と一般変形構成との比較を用いる。滑らかさ、二次元性、シンプレクティック形式は結論である。"
@@ -2478,7 +2478,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.8",
+          "owner": "PainleveEquations:3.8",
           "readme_needs_ja": "内部依存：3.1, 3.5, 3.6, 3.7.",
           "hypotheses_ja": [
             "固定した局所条件で許容される、安定な共鳴・可約・見かけの特異点の各層をすべて含め、一般的位置の分岐局所モデルの既約性を用いる。"
@@ -2542,7 +2542,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.9",
+          "owner": "PainleveEquations:3.9",
           "readme_needs_ja": "内部依存：3.2, 3.5, 3.6, 3.7, 2.1, 0.1.",
           "hypotheses_ja": [
             "構成済みの古典的モジュライ・時間問題を用いる。その局所構造と行列式の移送が、強い拡張の契約を満たすことを確認する。"
@@ -2580,7 +2580,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.10",
+          "owner": "PainleveEquations:3.10",
           "readme_needs_ja": "内部依存：3.9, 2.2.",
           "hypotheses_ja": [
             "3.9 で同定した強い分裂と、一般の二パラメータ拡張問題の制限比較を用いる。"
@@ -2643,7 +2643,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.11",
+          "owner": "PainleveEquations:3.11",
           "readme_needs_ja": "内部依存：3.7, 3.9, 3.10, 2.2, 0.6.",
           "hypotheses_ja": [
             "構成した相対形式と分裂、およびモジュライのシンプレクティック保存定理の特殊化を用いる。平坦性から保存を推測しない。"
@@ -2693,7 +2693,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:3.12",
+          "owner": "PainleveEquations:3.12",
           "readme_needs_ja": "内部依存：3.1, 3.2, 3.5, 3.9, 3.10, 3.11, 2.3, 2.4.",
           "hypotheses_ja": [
             "一般構成の古典的制限として確認された対象と、実際の表示変更の射を用いる。"
@@ -2774,7 +2774,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.1",
+          "owner": "PainleveEquations:4.1",
           "readme_needs_ja": "内部依存：3.1, 3.2, 3.9, 3.10, 1.1; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).",
           "hypotheses_ja": [
             "許容された階数2の良い形式型、共鳴する対数的格子のデータ、および有限分岐被覆と被覆変換の作用を入力とする。"
@@ -2852,7 +2852,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.2",
+          "owner": "PainleveEquations:4.2",
           "supporting_constructions": [
             {
               "id": "4.2.GF10",
@@ -2932,7 +2932,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.3",
+          "owner": "PainleveEquations:4.3",
           "readme_needs_ja": "内部依存：3.5, 3.8, 3.9, 3.10, 4.1, 4.2, 1.2, 2.5.",
           "hypotheses_ja": [
             "§3.5・§3.8の安定モジュライ族全体、目標3.9–3.12の強い分裂、および§§4.1–4.2の付加構造付き解析的再構成とBetti族を入力とする。正則降下と、始域全体での水平性の適合は証明すべき事項である。逆写像は、指定した既約・非共鳴部分でのみ主張する。"
@@ -2976,7 +2976,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.4",
+          "owner": "PainleveEquations:4.4",
           "readme_needs_ja": "内部依存：3.5, 3.6, 3.7, 3.8, 4.1, 4.2, 4.3, 1.3, 2.6; [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Native topological properness](#dependency-proper) (IsProperMap).",
           "hypotheses_ja": [
             "指数の持ち上げと閉じた指標条件を保持した、許容される古典的時間・パラメータ族全体に対して§4.3で構成したRH写像、および許容される安定な始域のすべての層を入力とする。格子の一様有界性、付加構造の延長、安定な対象への置換、コンパクト集合内への包含、および相対固有性は仮定しない。その証明はこの項目の担当である。"
@@ -3036,7 +3036,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.5",
+          "owner": "PainleveEquations:4.5",
           "readme_needs_ja": "内部依存：3.9, 3.10, 0.3.",
           "hypotheses_ja": [
             "構成した正則平坦分裂と許容パラメータ・チャートを用いる。解作用素を入力にしない。"
@@ -3098,7 +3098,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.6",
+          "owner": "PainleveEquations:4.6",
           "readme_needs_ja": "内部依存：4.2, 4.3, 4.4, 4.5, 0.4.",
           "hypotheses_ja": [
             "目標4.1–4.4で証明した実際の古典的 RH 比較、完備な標的移送、全点での部分持ち上げとの両立性、および固有性を用いる。源の完備性は結論である。"
@@ -3161,7 +3161,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.7",
+          "owner": "PainleveEquations:4.7",
           "readme_needs_ja": "内部依存：3.10, 3.11, 4.6, 0.5, 0.6.",
           "hypotheses_ja": [
             "シンプレクティック保存を証明した、実際の完備平坦な古典的接続を用いる。その亜群作用は一般構成の出力である。"
@@ -3221,7 +3221,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.8",
+          "owner": "PainleveEquations:4.8",
           "readme_needs_ja": "内部依存：4.5, 4.7, 0.7.",
           "hypotheses_ja": [
             "古典的相空間族と、候補となる観測量・定義域を用いる。不定性の回避と必要な持ち上げは証明課題である。"
@@ -3261,7 +3261,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:4.9",
+          "owner": "PainleveEquations:4.9",
           "readme_needs_ja": "内部依存：3.4, 4.7, 4.8, 0.7.",
           "hypotheses_ja": [
             "証明済みの時間曲線の次元、完備な水平切断、および引戻しと非恒等的無限大条件を確認した観測量を用いる。"
@@ -3340,7 +3340,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.1",
+          "owner": "PainleveEquations:5.1",
           "supporting_constructions": [
             {
               "id": "5.1.GF12",
@@ -3421,7 +3421,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.2",
+          "owner": "PainleveEquations:5.2",
           "readme_needs_ja": "内部依存：3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 5.1; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14).",
           "hypotheses_ja": [
             "目標3.1–3.12の内在的形式と分裂を備える古典的相空間族全体、§5.1の対の枠組み、および指定した標識・許容基底変換を入力とする。コンパクト化の構成、8種類の境界型、その補集合全体と相空間族との一致、および形式・分布の比較は結論である。"
@@ -3492,7 +3492,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.3",
+          "owner": "PainleveEquations:5.3",
           "supporting_constructions": [
             {
               "id": "5.3.BoundaryBaseChange",
@@ -3568,7 +3568,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.4",
+          "owner": "PainleveEquations:5.4",
           "readme_needs_ja": "内部依存：3.1, 3.5, 3.9, 1.1; [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B).",
           "hypotheses_ja": [
             "許容された付加構造付き接続と、改変のための不変な局所商、または指定された線束接続・双対性・ラベル変更のデータを入力とする。変換後の行列式、局所指数、安定部分、および強い拡張の比較は、構成の出力である。"
@@ -3636,7 +3636,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.5",
+          "owner": "PainleveEquations:5.5",
           "readme_needs_ja": "内部依存：3.6, 3.7, 3.12, 5.2, 5.3, 5.4; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10).",
           "hypotheses_ja": [
             "§5.4の接続の関手、目標3.5–3.12の変形の対と内在的分裂、および§5.2の標識付き曲面との比較を入力とする。追加の標識付き対の反射、それらが実際に正則・双有理となる領域、水平・シンプレクティックな延長、および関係式は、この項目で構成・証明する。"
@@ -3718,7 +3718,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:5.6",
+          "owner": "PainleveEquations:5.6",
           "readme_needs_ja": "内部依存：3.9, 3.10, 3.11, 3.12, 5.1, 5.2, 5.3, 5.4, 5.5; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).",
           "hypotheses_ja": [
             "許容された非ファイバー型加法的対の内部にある自己交点−2の滑らかな有理曲線、指定された半普遍的な対の変形、および§5.3の時間方向の比較を入力とする。曲線族の延長、その不変性、および射影的線形化は、必要な局所的範囲または有限基底変換後の範囲における結論である。"
@@ -3804,7 +3804,7 @@
           "source_scope": "MAL04 §2 and BERT17 §1 are scoped construction models, not proofs of the full Hilbert-bundle and base-change contract. The explicit stabilization, cocycle, sign and naturality obligations are owned by 6.1.",
           "part": "analytic_theory",
           "scope_role": "framework",
-          "owner": "PainleveEquationsAndFunctions:6.1",
+          "owner": "PainleveEquations:6.1",
           "supporting_constructions": [
             {
               "id": "6.1.NativeComparison",
@@ -3870,7 +3870,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:6.2",
+          "owner": "PainleveEquations:6.2",
           "readme_needs_ja": "内部依存：6.1.",
           "hypotheses_ja": [
             "独立した一般の複素行列式構成を用いる。実際のパンルヴェ作用素族は 6.3 で構成・検証する。"
@@ -3950,7 +3950,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:6.3",
+          "owner": "PainleveEquations:6.3",
           "supporting_constructions": [
             {
               "id": "6.3.Toeplitz",
@@ -4032,7 +4032,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:6.4",
+          "owner": "PainleveEquations:6.4",
           "readme_needs_ja": "内部依存：4.1, 6.2, 6.3, 1.2; [Generic trace-class determinant](#dependency-trace-determinant) (8.3, generic operator-theory prefix).",
           "hypotheses_ja": [
             "構成済みの行列式切断、真の因子を得るための一般の点での非消滅性、および一般的位置のJMU比較と頂点補正に関する正確な仮定を用いる。"
@@ -4096,7 +4096,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:6.5",
+          "owner": "PainleveEquations:6.5",
           "readme_needs_ja": "内部依存：3.11, 3.12, 6.3, 6.4; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).",
           "hypotheses_ja": [
             "JMU・ハミルトニアン比較は、分岐を伴わず非共鳴である一般的位置の部分でのみ行う。より広い範囲でのスカラー正規化には、構成したRHP行列式切断の有限次元安定化による対数1形式、固定した枠、および正則な時間葉上の基点値を用いる。無限次元トレース表示には、検証したトレースクラス実現と枠の比較を追加で要する。"
@@ -4173,7 +4173,7 @@
           ],
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:7.1",
+          "owner": "PainleveEquations:7.1",
           "readme_needs_ja": "内部依存：3.4, 3.7, 3.9, 0.8.",
           "hypotheses_ja": [
             "実際の古典的時間曲線・相曲面、局所観測量、証明されたジェット同型領域を用いる。一般ジェット定理にはシンプレクティック性やパンルヴェ性を前提としない。"
@@ -4254,7 +4254,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:7.2",
+          "owner": "PainleveEquations:7.2",
           "readme_needs_ja": "内部依存：3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 4.9, 5.2, 7.1.",
           "hypotheses_ja": [
             "§3.4のプロファイル分類と、すでに構成した内在的モジュライ、分裂、シンプレクティック形式、および延長定理を入力とする。各プロファイルの具体的座標、パラメータ・時間の置換、ジェットの逆写像、および被覆・重なりの比較は、この項目の出力である。"
@@ -4285,7 +4285,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:7.3",
+          "owner": "PainleveEquations:7.3",
           "readme_needs_ja": "内部依存：7.1, 7.2; [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8).",
           "hypotheses_ja": [
             "標準的PIII・PVのすべての係数組を対象とし、スケーリングと反転の非零条件を満たす領域を用いる。求積法で解ける境界は、原始的な層と区別する。"
@@ -4320,7 +4320,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:7.4",
+          "owner": "PainleveEquations:7.4",
           "readme_needs_ja": "内部依存：3.11, 5.4, 5.5, 6.4, 6.5, 7.1, 7.2, 7.3.",
           "hypotheses_ja": [
             "それ以前の幾何学的変換、行列式の変分、および座標比較の結果を、それぞれに明記された実際の領域で用いる。シグマ形式からの逆構成には、明示した再構成の非退化性仮定を課す。文献の符号の訂正と、ハミルトニアン・シグマ・線形系の表示の比較は、この項目で証明する。"
@@ -4376,7 +4376,7 @@
           "role": "painleve-specific-construction-or-comparison",
           "part": "painleve",
           "scope_role": "application",
-          "owner": "PainleveEquationsAndFunctions:7.5",
+          "owner": "PainleveEquations:7.5",
           "readme_needs_ja": "内部依存：5.4, 5.5, 5.6, 6.5, 7.1, 7.2, 7.3, 7.4.",
           "hypotheses_ja": [
             "§7.2ですでに構成したPI・PIIの接続モジュライとの比較、1次ジェット補題、および許容された幾何学的変換を入力とする。指定したハミルトニアンの正規化、運動量の逆写像、および種となる解の恒等式は導出すべき事項である。例外的領域とRiccatiパラメータα=−1/2を保持する。"

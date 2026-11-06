@@ -1,6 +1,6 @@
 # Primary mathematical sources and precise scope. Retrieval provenance is separate from theorem proofs.
 schema = "tauceti-roadmap-sources/v1"
-roadmap = "PainleveEquationsAndFunctions"
+roadmap = "PainleveEquations"
 
 [[source]]
 id = "I23"

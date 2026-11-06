@@ -31,7 +31,7 @@ public noncomputable section
 open Bundle Set VectorField
 open scoped Manifold ContDiff
 
-namespace TauCetiRoadmap.PainleveEquationsAndFunctions
+namespace TauCetiRoadmap.PainleveEquations
 
 /-! ## 0.1: a splitting of the actual tangent map -/
 
@@ -160,4 +160,4 @@ def meromorphicObservation
     obtain ⟨z, hz⟩ := hfinite
     exact hz (congrFun h z)
 
-end TauCetiRoadmap.PainleveEquationsAndFunctions
+end TauCetiRoadmap.PainleveEquations

@@ -147,7 +147,7 @@ The browser check also inspected the Hamiltonian thin space, set braces, norm ba
 
 ## Current document organization and headings
 
-The title is *Painlevé equations and functions*. Mathematical subject names replace instruction-shaped headings such as “intrinsic”, “reusable export”, “importing”, and “as a construction output”. The same titles appear in the English and Japanese documents, layer tables, structured plan and part registry. The Suggested file changes only its documentation title.
+The title is *Painlevé equations*. Mathematical subject names replace instruction-shaped headings such as “intrinsic”, “reusable export”, “importing”, and “as a construction output”. The same titles appear in the English and Japanese documents, layer tables, structured plan and part registry. The Suggested file changes only its documentation title.
 
 The English and Japanese documents each remove 116 synthetic item labels. All 217 API items and 263 diagnostics in the structured plan have document addresses of the form `<target>.api.<index>` or `<target>.tests.<index>` under schema v3. These addresses locate statements; they do not prescribe Lean names. Existing Mathlib and Tau Ceti declaration references are unchanged. The preceding organization snapshot is commit `f5b41b49f8770b6c678b8bca87524259e54b6c74`.
 

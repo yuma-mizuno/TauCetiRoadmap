@@ -275,7 +275,7 @@ def organization_inputs(root):
         elif name.endswith(".lean"):
             check(name + " documentation title only", current == before.replace(
                 "# Intrinsic Painlevé theory: representative target signatures",
-                "# Painlevé equations and functions: suggested interfaces", 1))
+                "# Painlevé equations: suggested interfaces", 1))
         else:
             before_json, current_json = json.loads(before), json.loads(current)
             if name == "design/plan.json" and label_cleanup:

@@ -1,7 +1,7 @@
 {
   "schema": "tauceti-roadmap/mathematical-plan-v3",
   "roadmap": "PainleveEquationsAndFunctions",
-  "title": "Painlevé equations and functions",
+  "title": "Painlevé equations",
   "summary": "Differential Painlevé equations and functions: nonlinear connections, meromorphic-connection moduli, Riemann–Hilbert correspondence, tau sections, classical equations, asymptotic analysis and confluence, together with a five-logarithmic-point application.",
   "document_registry": {
     "english": "README.md",
@@ -224,7 +224,7 @@
     },
     {
       "id": "painleve",
-      "title": "Painlevé equations and functions",
+      "title": "Painlevé equations",
       "scope_role": "application",
       "contracts": {
         "summary": "Construct Painlevé dynamics from moduli of meromorphic connections, and construct Painlevé functions from the horizontal sections of that dynamics. The input consists of a curve, a structural polar divisor, a determinant connection, local formal moduli conditions, and stability and marking data. The phase space, its symplectic form, and its horizontal distribution are constructed from this input. A common continuation theorem precedes every classical scalar equation. The ten underlying rank-two formal profiles, their labelled realizations, their eight additive surface types, and the six classical differential equations are comparison results. The theory includes resonant parameters, allowed reducible connections, ramified irregular singularities, special invariant loci, tau sections, normalized analytic solutions, and confluence. Elementary coefficient degenerations are covered by a separate boundary comparison. JMU/Hamiltonian comparisons of tau sections have the precise generic scope stated in targets 6.4–6.5; the determinant construction itself has the broader marked-RHP scope specified in 6.2–6.3.",

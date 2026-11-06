@@ -39,14 +39,14 @@
     "baseline_source": 541
   },
   "inputs_sha256": {
-    "README.md": "4f5964267647886e1082048c54cda4439d613dcd4de740364a33048e83821afb",
-    "README.ja.md": "97396d44671f6687c2c20a35f6a9dd9d03a9b0f49295e1012797f76df20f8641",
+    "README.md": "4106456f7d1c38fa271f806959147a3be1b0bb3c6fe66343dac88c7a2fe695c9",
+    "README.ja.md": "99a26852e96d3a6e6c8d72e6ecbf17441e4f8b158599f7ed5bd6ee2aa36d777f",
     "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
     "sources.toml": "5ecb724f6ee828771d54e919092bd2461d3a6ee4f611710ab99dc6b11887e293",
-    "design/plan.json": "d8f7551999708631fdbb60947d4c685deb0a49d09eff066899d102f188831784",
+    "design/plan.json": "70518a4a782b2f13f3b78545f1558504b7b03b238cfe54ce1812ff0c5f5326ed",
     "design/dependencies.json": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
     "design/reuse_graph.json": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
-    "design/reuse_registry.json": "691222ce0cee95fc5546b56676e6c8055d111bed120004ed6c285077d77b8ead"
+    "design/reuse_registry.json": "95ce7b21432ab236cd6cc3690820cf83f7f9897d6b2bf608ca40cbb866966d7c"
   },
   "numbering_manifest_sha256": "e6bb8efcb637b470d80fed7eab1918276d6f30c9e9caed9a1cf5780004e3b598",
   "math_rendering_manifest_sha256": "956a05daacdcec897afbc83c2e96d5cf63a1ec846e965b970a3b5d8ccd324cf1",

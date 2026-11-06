@@ -4,23 +4,23 @@
   "files": {
     "README.md": {
       "before_sha256": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761",
-      "after_sha256": "4f5964267647886e1082048c54cda4439d613dcd4de740364a33048e83821afb"
+      "after_sha256": "4106456f7d1c38fa271f806959147a3be1b0bb3c6fe66343dac88c7a2fe695c9"
     },
     "README.ja.md": {
       "before_sha256": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd",
-      "after_sha256": "97396d44671f6687c2c20a35f6a9dd9d03a9b0f49295e1012797f76df20f8641"
+      "after_sha256": "99a26852e96d3a6e6c8d72e6ecbf17441e4f8b158599f7ed5bd6ee2aa36d777f"
     },
     "design/plan.json": {
       "before_sha256": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945",
-      "after_sha256": "d8f7551999708631fdbb60947d4c685deb0a49d09eff066899d102f188831784"
+      "after_sha256": "70518a4a782b2f13f3b78545f1558504b7b03b238cfe54ce1812ff0c5f5326ed"
     },
     "design/reuse_registry.json": {
       "before_sha256": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
-      "after_sha256": "691222ce0cee95fc5546b56676e6c8055d111bed120004ed6c285077d77b8ead"
+      "after_sha256": "95ce7b21432ab236cd6cc3690820cf83f7f9897d6b2bf608ca40cbb866966d7c"
     },
     "Suggested.lean": {
       "before_sha256": "e57dc5d04c780e0e1cfa6c1af488a69956263fe22814b035d6a9c74a3f43c68c",
-      "after_sha256": "04338860bc8e0d1828e2d31db5a2d7922371f5bb27963cc0376891e46d38712a"
+      "after_sha256": "6736c8039a5355435033b4ceaf7e13df9276f5080578b32d1ff6678d377560e8"
     }
   },
   "appendix_coverage": [

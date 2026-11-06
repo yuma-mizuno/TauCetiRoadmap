@@ -1,4 +1,4 @@
-# Add a roadmap for Painlevé equations and functions
+# Add a roadmap for Painlevé equations
 
 ## Purpose and scope
 

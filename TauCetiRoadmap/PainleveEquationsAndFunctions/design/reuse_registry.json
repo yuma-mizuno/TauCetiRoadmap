@@ -65,7 +65,7 @@
     },
     {
       "id": "painleve",
-      "title": "Painlevé equations and functions",
+      "title": "Painlevé equations",
       "scope_role": "application",
       "owner": "PainleveEquationsAndFunctions:painleve",
       "target_ids": [

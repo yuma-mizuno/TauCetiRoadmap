@@ -1,4 +1,4 @@
-# Roadmap: classical and quantum cluster algebras, cluster varieties and positivity
+# Cluster algebras
 
 Build a reusable theory of classical and quantum cluster algebras: normalized
 Fomin–Zelevinsky seeds, compatible quantum seeds, the Fock–Goncharov lattice

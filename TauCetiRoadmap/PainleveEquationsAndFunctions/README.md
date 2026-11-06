@@ -126,7 +126,7 @@ The dependency graph deliberately does not route scalarization through symplecti
 
 ### Regularity and proof boundary
 
-The real $C^1$ branch is used for individual horizontal path lifting. Curvature, differential-form identities and the smooth flat-product theorem use smooth real data. The complex branch uses holomorphic data on finite-dimensional complex manifolds. No statement silently extends these constructions to singular, nonreduced or infinite-dimensional bases.
+The real $`C^1`$ branch is used for individual horizontal path lifting. Curvature, differential-form identities and the smooth flat-product theorem use smooth real data. The complex branch uses holomorphic data on finite-dimensional complex manifolds. No statement silently extends these constructions to singular, nonreduced or infinite-dimensional bases.
 
 A consumer may legitimately supply a connection already proved complete to target:0.5. That is different from defining every connection to contain a proof of completeness. Targets 0.1–0.3 construct the carrier and local solution theory, and target:0.4 gives one sufficient theorem for completeness. Similarly, target:0.6 accepts an independently constructed relative form and proves the relation between flatness, preservation and total closedness; it does not manufacture an application’s relative form by an assumption.
 
@@ -135,11 +135,11 @@ A consumer may legitimately supply a connection already proved complete to targe
 
 **General theory.**
 
-Let $\pi:M\to B$ be a smooth submersion between finite-dimensional Hausdorff second-countable smooth manifolds without boundary. A real nonlinear connection is a $C^1$ vector-bundle splitting $h:\pi^*TB\to TM$ with $d\pi\circ h=\mathrm{id}$. The holomorphic version uses complex manifolds, a holomorphic submersion and a holomorphic splitting. Surjectivity and properness of $\pi$ are not part of the definition. Whenever curvature, differential forms or smooth Frobenius theory are used below, strengthen the real splitting to smooth; the $C^1$ branch is retained for individual path lifting.
+Let $`\pi:M\to B`$ be a smooth submersion between finite-dimensional Hausdorff second-countable smooth manifolds without boundary. A real nonlinear connection is a $`C^1`$ vector-bundle splitting $`h:\pi^*TB\to TM`$ with $`d\pi\circ h=\mathrm{id}`$. The holomorphic version uses complex manifolds, a holomorphic submersion and a holomorphic splitting. Surjectivity and properness of $`\pi`$ are not part of the definition. Whenever curvature, differential forms or smooth Frobenius theory are used below, strengthen the real splitting to smooth; the $`C^1`$ branch is retained for individual path lifting.
 
-Define an arrow $(F,f):(M\to B,h)\to(N\to C,k)$ by actual smooth maps, or holomorphic maps in the holomorphic category, satisfying $\rho F=f\pi$ and $dF\circ h=k\circ df$. Composition and identities are the actual compositions and identities of these maps. An isomorphism retains its inverse and compatibility, rather than identifying the objects in a quotient set.
+Define an arrow $`(F,f):(M\to B,h)\to(N\to C,k)`$ by actual smooth maps, or holomorphic maps in the holomorphic category, satisfying $`\rho F=f\pi`$ and $`dF\circ h=k\circ df`$. Composition and identities are the actual compositions and identities of these maps. An isomorphism retains its inverse and compatibility, rather than identifying the objects in a quotient set.
 
-For a smooth or holomorphic map $u:B'\to B$, construct the fiber product $M'=B'\times_BM$, its projection $\pi':M'\to B'$ and the pullback splitting $h'_{(b',m)}(v)=(v,h_m(du(v)))$. Prove its tangent-space membership, splitting identity, functoriality on arrows and the canonical coherence isomorphisms for repeated base change. Construct the horizontal and vertical subbundles and, on the smooth or holomorphic branch, the vertical curvature $K_h(X,Y)=[hX,hY]-h[X,Y]$. Flatness means $K_h=0$. Neither horizontal solution operators, completeness, nor a symplectic form is an input to this construction.
+For a smooth or holomorphic map $`u:B'\to B`$, construct the fiber product $`M'=B'\times_BM`$, its projection $`\pi':M'\to B'`$ and the pullback splitting $`h'_{(b',m)}(v)=(v,h_m(du(v)))`$. Prove its tangent-space membership, splitting identity, functoriality on arrows and the canonical coherence isomorphisms for repeated base change. Construct the horizontal and vertical subbundles and, on the smooth or holomorphic branch, the vertical curvature $`K_h(X,Y)=[hX,hY]-h[X,Y]`$. Flatness means $`K_h=0`$. Neither horizontal solution operators, completeness, nor a symplectic form is an input to this construction.
 
 **Hypotheses.**
 
@@ -150,12 +150,12 @@ For a smooth or holomorphic map $u:B'\to B$, construct the fiber product $M'=B'\
 
 - Construct the category of actual connection-preserving arrows, its isomorphisms, and the horizontal–vertical splitting of the tangent bundle.
 - Construct pullback connections along arbitrary smooth or holomorphic base maps and prove identity, composition and Cartesian comparison laws with their actual comparison maps.
-- Prove tensoriality of $K_h$ and its naturality under connection isomorphisms and pullback; define flatness independently of completeness and symplecticity.
+- Prove tensoriality of $`K_h`$ and its naturality under connection isomorphisms and pullback; define flatness independently of completeness and symplecticity.
 
 **Checks.**
 
-- The zero map $\pi^*TB\to TM$ fails the splitting identity when $TB\ne0$; the product splitting on $B\times X\to B$ passes it.
-- Under the noncritical time change $\tau=2t$, the vector field normalized to project to $\partial_\tau$ is one half of the vector field normalized to project to $\partial_t$.
+- The zero map $`\pi^*TB\to TM`$ fails the splitting identity when $`TB\ne0`$; the product splitting on $`B\times X\to B`$ passes it.
+- Under the noncritical time change $`\tau=2t`$, the vector field normalized to project to $`\partial_\tau`$ is one half of the vector field normalized to project to $`\partial_t`$.
 - A fiber product connection can be defined along a ramified time map; this alone asserts neither completeness nor invertibility of its first-jet observation map.
 
 *Needs:* [Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
@@ -167,11 +167,11 @@ For a smooth or holomorphic map $u:B'\to B$, construct the fiber product $M'=B'\
 
 **General theory.**
 
-Prove the local existence–uniqueness theorem for $y'=F(t,y)$ on finite-dimensional coordinate domains when $F$ is continuous in time and locally uniformly Lipschitz in the phase variable. The local constants are uniform on a sufficiently small closed time–phase box. In submersion coordinates $\pi(z,y)=z$, a $C^1$ base path $\gamma$ turns a $C^1$ splitting into the equation $y'=A(\gamma(t),y)\gamma'(t)$. Construct its local solution by the integral-equation contraction argument, prove uniqueness and restriction, and glue coordinate solutions to the unique maximal horizontal lift through each initial point. For a path with finitely many $C^1$ pieces, concatenate lifts at its breakpoints.
+Prove the local existence–uniqueness theorem for $`y'=F(t,y)`$ on finite-dimensional coordinate domains when $`F`$ is continuous in time and locally uniformly Lipschitz in the phase variable. The local constants are uniform on a sufficiently small closed time–phase box. In submersion coordinates $`\pi(z,y)=z`$, a $`C^1`$ base path $`\gamma`$ turns a $`C^1`$ splitting into the equation $`y'=A(\gamma(t),y)\gamma'(t)`$. Construct its local solution by the integral-equation contraction argument, prove uniqueness and restriction, and glue coordinate solutions to the unique maximal horizontal lift through each initial point. For a path with finitely many $`C^1`$ pieces, concatenate lifts at its breakpoints.
 
-Prove the compact-extension lemma: a horizontal lift defined up to a finite endpoint of a base path extends through that endpoint if its image is contained in a compact subset of $M$. Use finitely many submersion charts near the compact set, uniform local existence intervals, accumulation and uniqueness to obtain the endpoint value and extension. A cluster point alone is not asserted to be the limit without this local uniqueness argument. The resulting lemma is available for ordinary nonautonomous ODEs in the same coordinate form.
+Prove the compact-extension lemma: a horizontal lift defined up to a finite endpoint of a base path extends through that endpoint if its image is contained in a compact subset of $`M`$. Use finitely many submersion charts near the compact set, uniform local existence intervals, accumulation and uniqueness to obtain the endpoint value and extension. A cluster point alone is not asserted to be the limit without this local uniqueness argument. The resulting lemma is available for ordinary nonautonomous ODEs in the same coordinate form.
 
-The velocity of a $C^1$ path is merely continuous. The autonomized field $(1,F(t,y))$ therefore need not be $C^1$. The proof must use the stated continuous-time theorem, or a proved reduction to it, rather than import a smooth-vector-field theorem with unmet hypotheses. Continuous dependence on initial data is established under these hypotheses; stronger smooth or holomorphic dependence is claimed only with its additional regularity, and holomorphic horizontal sections are constructed in target:0.3. No complete-lift operator is assumed.
+The velocity of a $`C^1`$ path is merely continuous. The autonomized field $`(1,F(t,y))`$ therefore need not be $`C^1`$. The proof must use the stated continuous-time theorem, or a proved reduction to it, rather than import a smooth-vector-field theorem with unmet hypotheses. Continuous dependence on initial data is established under these hypotheses; stronger smooth or holomorphic dependence is claimed only with its additional regularity, and holomorphic horizontal sections are constructed in target:0.3. No complete-lift operator is assumed.
 
 **Hypotheses.**
 
@@ -188,8 +188,8 @@ The velocity of a $C^1$ path is merely continuous. The autonomized field $(1,F(t
 **Checks.**
 
 - For the product splitting, the fiber coordinate is constant along every horizontal lift.
-- The equation $y'=y^2$, $y(0)=1$ has $y(t)=1/(1-t)$: its local solution does not extend in the affine phase line through $t=1$; compact containment fails.
-- The path $\gamma(s)=|s-1/2|^{3/2}$ is $C^1$, but $\gamma'$ is not $C^1$ at $1/2$. Its horizontal-lift equation remains an admissible continuous-time ODE; a $C^1$ autonomization cannot be assumed.
+- The equation $`y'=y^2`$, $`y(0)=1`$ has $`y(t)=1/(1-t)`$: its local solution does not extend in the affine phase line through $`t=1`$; compact containment fails.
+- The path $`\gamma(s)=|s-1/2|^{3/2}`$ is $`C^1`$, but $`\gamma'`$ is not $`C^1`$ at $`1/2`$. Its horizontal-lift equation remains an admissible continuous-time ODE; a $`C^1`$ autonomization cannot be assumed.
 
 *Needs:* Internal: 0.1; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5).
 
@@ -200,7 +200,7 @@ The velocity of a $C^1$ path is merely continuous. The autonomized field $(1,F(t
 
 **General theory.**
 
-For a holomorphic submersion with a flat holomorphic splitting, construct the unique germ of holomorphic section $s$ through each $x_0\in M_{b_0}$ satisfying $\pi s=\mathrm{id}$, $s(b_0)=x_0$ and $ds=h$. Prove the local existence theorem with joint holomorphic dependence on the initial point and on auxiliary parameters when the submersion and splitting vary holomorphically in compatible finite-dimensional complex-manifold parameter charts. No assertion over singular or nonreduced parameter bases is implicit.
+For a holomorphic submersion with a flat holomorphic splitting, construct the unique germ of holomorphic section $`s`$ through each $`x_0\in M_{b_0}`$ satisfying $`\pi s=\mathrm{id}`$, $`s(b_0)=x_0`$ and $`ds=h`$. Prove the local existence theorem with joint holomorphic dependence on the initial point and on auxiliary parameters when the submersion and splitting vary holomorphically in compatible finite-dimensional complex-manifold parameter charts. No assertion over singular or nonreduced parameter bases is implicit.
 
 The proof target includes the complex ODE theorem with holomorphic parameter dependence: construct a convergent Picard iteration on a common polydisc, use uniform convergence to prove holomorphy, and prove uniqueness. In local base coordinates, flatness makes the horizontal coordinate vector fields commute. Prove the commuting-flow identity and compose the local flows to obtain local product charts and horizontal sections; prove their uniqueness and compatibility on connected overlaps. The resulting germ–initial-value correspondence is natural under actual connection isomorphisms and compatible base changes. It is local, and contains no global continuation assertion.
 
@@ -220,8 +220,8 @@ Construct horizontal germs by the local analytic proof, without assuming a horiz
 
 **Checks.**
 
-- For the product splitting, the horizontal section through $(b_0,x_0)$ is $b\mapsto(b,x_0)$. The constant map $b\mapsto(b_0,x_0)$ is not a section on a nontrivial base.
-- On $\mathbb C^2_{s,t}\times\mathbb C_y$, take $h\partial_s=\partial_s$ and $h\partial_t=\partial_t+s\partial_y$. A horizontal section would satisfy $y_s=0,\ y_t=s$, contradicting equality of mixed derivatives; flatness cannot be dropped.
+- For the product splitting, the horizontal section through $`(b_0,x_0)`$ is $`b\mapsto(b,x_0)`$. The constant map $`b\mapsto(b_0,x_0)`$ is not a section on a nontrivial base.
+- On $`\mathbb C^2_{s,t}\times\mathbb C_y`$, take $`h\partial_s=\partial_s`$ and $`h\partial_t=\partial_t+s\partial_y`$. A horizontal section would satisfy $`y_s=0,\ y_t=s`$, contradicting equality of mixed derivatives; flatness cannot be dropped.
 - A theorem over a smooth parameter polydisc does not by itself provide a horizontal section over a singular or nonreduced base.
 
 *Needs:* Internal: 0.1, 0.2; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
@@ -233,11 +233,11 @@ Construct horizontal germs by the local analytic proof, without assuming a horiz
 
 **General theory.**
 
-Let $(M\to B,h)$ be a real connection from target:0.1. Let $p:R\to B$ be any continuous map of topological spaces carrying specified complete continuous transport: for every piecewise $C^1$ path $\gamma:[a,b]\to B$ with finitely many pieces and every $r_0\in R_{\gamma(a)}$, a continuous trajectory $\beta_{\gamma,r_0}:[a,b]\to R$ lies over $\gamma$, starts at $r_0$, and satisfies restriction and concatenation laws. The target need not be a manifold. Let $F:M\to R$ be continuous over $B$ and proper in the explicit sense that inverse images of compact subsets are compact.
+Let $`(M\to B,h)`$ be a real connection from target:0.1. Let $`p:R\to B`$ be any continuous map of topological spaces carrying specified complete continuous transport: for every piecewise $`C^1`$ path $`\gamma:[a,b]\to B`$ with finitely many pieces and every $`r_0\in R_{\gamma(a)}`$, a continuous trajectory $`\beta_{\gamma,r_0}:[a,b]\to R`$ lies over $`\gamma`$, starts at $`r_0`$, and satisfies restriction and concatenation laws. The target need not be a manifold. Let $`F:M\to R`$ be continuous over $`B`$ and proper in the explicit sense that inverse images of compact subsets are compact.
 
-Assume compatibility at every source point: every partial horizontal lift $x$ of $\gamma$ with initial point $x_0$ satisfies $F(x(t))=\beta_{\gamma,F(x_0)}(t)$ throughout its domain. Prove that every such base path has a unique horizontal lift on its entire compact interval through every initial point of $M_{\gamma(a)}$. Flatness is not needed for this completeness theorem.
+Assume compatibility at every source point: every partial horizontal lift $`x`$ of $`\gamma`$ with initial point $`x_0`$ satisfies $`F(x(t))=\beta_{\gamma,F(x_0)}(t)`$ throughout its domain. Prove that every such base path has a unique horizontal lift on its entire compact interval through every initial point of $`M_{\gamma(a)}`$. Flatness is not needed for this completeness theorem.
 
-Indeed, the complete target trajectory has compact image $K=\beta_{\gamma,F(x_0)}([a,b])$. Every partial lift is trapped in $F^{-1}(K)$; target:0.2 extends it through each finite endpoint, and local uniqueness glues the extensions. This proof uses properness of $F$, not properness of the phase projection $M\to B$. It does not use an inverse, injectivity or surjectivity of $F$. In particular, a nontrivial compact exceptional fiber is retained in full: the initial point in that fiber matters, and transport is not defined by choosing a preimage of the target trajectory.
+Indeed, the complete target trajectory has compact image $`K=\beta_{\gamma,F(x_0)}([a,b])`$. Every partial lift is trapped in $`F^{-1}(K)`$; target:0.2 extends it through each finite endpoint, and local uniqueness glues the extensions. This proof uses properness of $`F`$, not properness of the phase projection $`M\to B`$. It does not use an inverse, injectivity or surjectivity of $`F`$. In particular, a nontrivial compact exceptional fiber is retained in full: the initial point in that fiber matters, and transport is not defined by choosing a preimage of the target trajectory.
 
 For a holomorphic source splitting, apply the real theorem to its underlying real manifolds. Holomorphic local sections and homotopy invariance require the additional flatness and analytic results stated in their own targets. Compatibility only on a dense open subset, or properness only away from exceptional points, does not meet the hypotheses.
 
@@ -250,16 +250,16 @@ For a holomorphic source splitting, apply the real theorem to its underlying rea
 
 **API.**
 
-- Construct the unique full horizontal lift of each compact piecewise $C^1$ base path through every source initial point from the proper semiconjugacy hypotheses.
+- Construct the unique full horizontal lift of each compact piecewise $`C^1`$ base path through every source initial point from the proper semiconjugacy hypotheses.
 - Prove completeness without choosing an inverse to F, and retain distinct initial points in every compact exceptional fiber.
 - Apply the theorem to the underlying real geometry of a holomorphic splitting, without asserting flatness or holomorphic global sections from properness alone.
 
 **Checks.**
 
-- Take $M=\mathbb C_t\times\mathbb C_y$, $h\partial_t=\partial_t+y^2\partial_y$, $R=B=\mathbb C_t$ and $F=\pi$. The target transport is complete and the semiconjugacy holds, but $F$ is not proper. The lift through $y(0)=1$ has $y(1/2)=2$, $y(3/4)=4$ and no finite value at $t=1$.
+- Take $`M=\mathbb C_t\times\mathbb C_y`$, $`h\partial_t=\partial_t+y^2\partial_y`$, $`R=B=\mathbb C_t`$ and $`F=\pi`$. The target transport is complete and the semiconjugacy holds, but $`F`$ is not proper. The lift through $`y(0)=1`$ has $`y(1/2)=2`$, $`y(3/4)=4`$ and no finite value at $`t=1`$.
 - For a product connection and the identity comparison with its own constant-fiber transport, the theorem returns the constant fiber coordinate.
 - If a proper comparison contracts an exceptional curve, the proof uses the compact inverse image of the target trajectory and local uniqueness at each point of that curve; replacing the fiber by one arbitrarily selected preimage fails the required initial-value statement.
-- The $C^1$ path $\gamma(s)=|s-1/2|^{3/2}$ is permitted. Its merely continuous velocity is handled by target:0.2; an unproved $C^1$ autonomization is not an admissible shortcut.
+- The $`C^1`$ path $`\gamma(s)=|s-1/2|^{3/2}`$ is permitted. Its merely continuous velocity is handled by target:0.2; an unproved $`C^1`$ autonomization is not an admissible shortcut.
 
 *Needs:* Internal: 0.1, 0.2.
 
@@ -270,11 +270,11 @@ For a holomorphic source splitting, apply the real theorem to its underlying rea
 
 **General theory.**
 
-Let a smooth real or holomorphic connection be flat and complete for all compact piecewise $C^1$ paths. Completeness is a hypothesis to be proved by the producer of the connection, by target:0.4 or another valid argument. From unique horizontal lifting construct endpoint maps $T_\gamma:M_{\gamma(a)}\to M_{\gamma(b)}$, with identity, reversal and concatenation laws. If $\gamma_1$ is traversed before $\gamma_2$, use the convention $T_{\gamma_2*\gamma_1}=T_{\gamma_2}\circ T_{\gamma_1}$.
+Let a smooth real or holomorphic connection be flat and complete for all compact piecewise $`C^1`$ paths. Completeness is a hypothesis to be proved by the producer of the connection, by target:0.4 or another valid argument. From unique horizontal lifting construct endpoint maps $`T_\gamma:M_{\gamma(a)}\to M_{\gamma(b)}`$, with identity, reversal and concatenation laws. If $`\gamma_1`$ is traversed before $`\gamma_2`$, use the convention $`T_{\gamma_2*\gamma_1}=T_{\gamma_2}\circ T_{\gamma_1}`$.
 
-Prove invariance under endpoint-fixed homotopy. Use local flat product charts, a finite subdivision of a compact homotopy, and uniqueness on overlaps; include the smooth approximation or subdivision step relating continuous homotopies to the piecewise smooth representatives. This constructs an action of the fundamental groupoid of $B$. Endpoint maps are diffeomorphisms in the smooth case and biholomorphisms in the holomorphic case. Symplectic preservation is not inferred here.
+Prove invariance under endpoint-fixed homotopy. Use local flat product charts, a finite subdivision of a compact homotopy, and uniqueness on overlaps; include the smooth approximation or subdivision step relating continuous homotopies to the piecewise smooth representatives. This constructs an action of the fundamental groupoid of $`B`$. Endpoint maps are diffeomorphisms in the smooth case and biholomorphisms in the holomorphic case. Symplectic preservation is not inferred here.
 
-For connected $B$, a chosen $b_0$ and a pointed universal cover $p:\widetilde B\to B$, construct for each $x_0\in M_{b_0}$ a global horizontal section of the pulled-back family $\widetilde B\times_BM\to\widetilde B$. Prove it is smooth, or holomorphic in the holomorphic case, by the local product theorem. It descends to a section on $B$ if and only if $x_0$ is fixed by every actual monodromy map $T_\ell$ for based loops $\ell$. Thus the universal-cover solution and its descent obstruction are separate outputs. Pullback and connection-isomorphism naturality are proved using actual maps, including all exceptional points of a supplied phase space.
+For connected $`B`$, a chosen $`b_0`$ and a pointed universal cover $`p:\widetilde B\to B`$, construct for each $`x_0\in M_{b_0}`$ a global horizontal section of the pulled-back family $`\widetilde B\times_BM\to\widetilde B`$. Prove it is smooth, or holomorphic in the holomorphic case, by the local product theorem. It descends to a section on $`B`$ if and only if $`x_0`$ is fixed by every actual monodromy map $`T_\ell`$ for based loops $`\ell`$. Thus the universal-cover solution and its descent obstruction are separate outputs. Pullback and connection-isomorphism naturality are proved using actual maps, including all exceptional points of a supplied phase space.
 
 **Hypotheses.**
 
@@ -291,8 +291,8 @@ For connected $B$, a chosen $b_0$ and a pointed universal cover $p:\widetilde B\
 **Checks.**
 
 - A loop followed by its reverse acts as the identity on every initial point, including a point on an exceptional fiber of any separately supplied comparison.
-- On $\mathbb C_t^\times\times\mathbb C^2_{q,p}$, the connection $q'=q/(2t),\ p'=-p/(2t)$ is complete and flat. One positive loop sends $(q,p)$ to $(-q,-p)$; two loops act identically. Exactly $(0,0)$ is fixed by every loop, although every initial point has a horizontal section on the universal cover.
-- On $\mathbb C^2_{s,t}\times\mathbb C^2_{q,p}$, set $h\partial_s=\partial_s+\partial_q$ and $h\partial_t=\partial_t+q\partial_p$. This connection is complete but has curvature $\partial_p$. A rectangular loop with side increments $a,b$ translates $p$ by $ab$, so completeness without flatness does not give homotopy invariance.
+- On $`\mathbb C_t^\times\times\mathbb C^2_{q,p}`$, the connection $`q'=q/(2t),\ p'=-p/(2t)`$ is complete and flat. One positive loop sends $`(q,p)`$ to $`(-q,-p)`$; two loops act identically. Exactly $`(0,0)`$ is fixed by every loop, although every initial point has a horizontal section on the universal cover.
+- On $`\mathbb C^2_{s,t}\times\mathbb C^2_{q,p}`$, set $`h\partial_s=\partial_s+\partial_q`$ and $`h\partial_t=\partial_t+q\partial_p`$. This connection is complete but has curvature $`\partial_p`$. A rectangular loop with side increments $`a,b`$ translates $`p`$ by $`ab`$, so completeness without flatness does not give homotopy invariance.
 
 **Supporting constructions owned by this target.**
 
@@ -307,19 +307,23 @@ For connected $B$, a chosen $b_0$ and a pointed universal cover $p:\widetilde B\
 
 **General theory.**
 
-Let $V=\ker d\pi$ for a smooth real or holomorphic submersion, let $h$ be a smooth or holomorphic splitting, and let $\omega$ be a smooth or holomorphic relative two-form on $V$ that is nondegenerate and closed on every fiber. These properties of $\omega$ must be proved by its producer. Define $v^V=v-h(d\pi v)$ and the actual total two-form $\Omega(v,w)=\omega(v^V,w^V)$. Prove that $\ker\Omega=\operatorname{im}h$.
+Let $`V=\ker d\pi`$ for a smooth real or holomorphic submersion, let $`h`$ be a smooth or holomorphic splitting, and let $`\omega`$ be a smooth or holomorphic relative two-form on $`V`$ that is nondegenerate and closed on every fiber. These properties of $`\omega`$ must be proved by its producer. Define $`v^V=v-h(d\pi v)`$ and the actual total two-form $`\Omega(v,w)=\omega(v^V,w^V)`$. Prove that $`\ker\Omega=\mathop{\mathrm{im}}\nolimits h`$.
 
-For a base vector field $X$ and vertical fields $U,V$, define
-$$
+For a base vector field $`X`$ and vertical fields $`U,V`$, define
+
+```math
 (D^h_X\omega)(U,V)=hX\bigl(\omega(U,V)\bigr)-\omega([hX,U],V)-\omega(U,[hX,V]).
-$$
-Compute all components of $d\Omega$: on three vertical vectors it is $d_V\omega$; on $(hX,U,V)$ it is $D^h_X\omega(U,V)$; on $(hX,hY,U)$ it is $-\omega(K_h(X,Y),U)$; on three horizontal vectors it is zero. Deduce, using vertical nondegeneracy, the equivalence
-$$
-d\Omega=0 \quad\Longleftrightarrow\quad K_h=0\ \text{and}\ D^h\omega=0.
-$$
-Prove separately that the locally defined parallel transport preserves the relative forms if and only if $D^h\omega=0$. Thus flatness and preservation are distinct conditions. Under horizontal preservation D^hω=0, flatness and completeness, target:0.5 then yields symplectic global transport; completeness is not needed for the local criterion.
+```
 
-Under the proved horizontal-preservation condition $D^h\omega=0$, only for a one-dimensional time base, and after a local symplectic trivialization with the required local phase exactness, derive a Hamiltonian potential for $h\partial_t=\partial_t+X_H$ from $\iota_{X_H}\omega=d_{\rm phase}H$. In Darboux coordinates the intrinsic total form has the coordinate display $\Omega=\sum_i dq_i\wedge dp_i+dH\wedge dt$. Prove the time-only ambiguity in $H$ on connected phase charts and the transformation law under time-dependent symplectic coordinates by comparing the actual total forms. Do not use the one-time formula unchanged in several time variables, where horizontal–horizontal components require their own analysis.
+Compute all components of $`d\Omega`$: on three vertical vectors it is $`d_V\omega`$; on $`(hX,U,V)`$ it is $`D^h_X\omega(U,V)`$; on $`(hX,hY,U)`$ it is $`-\omega(K_h(X,Y),U)`$; on three horizontal vectors it is zero. Deduce, using vertical nondegeneracy, the equivalence
+
+```math
+d\Omega=0 \quad\Longleftrightarrow\quad K_h=0\ \text{and}\ D^h\omega=0.
+```
+
+Prove separately that the locally defined parallel transport preserves the relative forms if and only if $`D^h\omega=0`$. Thus flatness and preservation are distinct conditions. Under horizontal preservation D^hω=0, flatness and completeness, target:0.5 then yields symplectic global transport; completeness is not needed for the local criterion.
+
+Under the proved horizontal-preservation condition $`D^h\omega=0`$, only for a one-dimensional time base, and after a local symplectic trivialization with the required local phase exactness, derive a Hamiltonian potential for $`h\partial_t=\partial_t+X_H`$ from $`\iota_{X_H}\omega=d_{\rm phase}H`$. In Darboux coordinates the intrinsic total form has the coordinate display $`\Omega=\sum_i dq_i\wedge dp_i+dH\wedge dt`$. Prove the time-only ambiguity in $`H`$ on connected phase charts and the transformation law under time-dependent symplectic coordinates by comparing the actual total forms. Do not use the one-time formula unchanged in several time variables, where horizontal–horizontal components require their own analysis.
 
 **Hypotheses.**
 
@@ -330,15 +334,15 @@ Under the proved horizontal-preservation condition $D^h\omega=0$, only for a one
 **API.**
 
 - Construct the total form from the vertical projection and prove its kernel identity and naturality.
-- Prove the component formulas and the equivalence $d\Omega=0\iff(K_h=0\ \text{and}\ D^h\omega=0)$ under the stated fiberwise hypotheses.
+- Prove the component formulas and the equivalence $`d\Omega=0\iff(K_h=0\ \text{and}\ D^h\omega=0)`$ under the stated fiberwise hypotheses.
 - Prove the equivalence between infinitesimal horizontal preservation and symplecticity of all local parallel-transport maps.
 - Derive the one-time Hamiltonian display, time-only ambiguity and time-dependent coordinate transformation law from the intrinsic total form.
 
 **Checks.**
 
-- On $\mathbb C_t\times\mathbb C^2_{q,p}$ take the product flat splitting and $\omega=e^t\,dq\wedge dp$. The associated $\Omega$ satisfies $d\Omega=e^t\,dt\wedge dq\wedge dp\ne0$; flatness alone does not imply symplectic preservation or total closedness.
-- For $H=p^2/2$, contraction of $\partial_t+p\partial_q$ with $dq\wedge dp+p\,dp\wedge dt$ is zero, checking the sign in the Hamiltonian display.
-- The potentials $H$ and $H+t^2$ give the same total two-form because $d(t^2)\wedge dt=0$.
+- On $`\mathbb C_t\times\mathbb C^2_{q,p}`$ take the product flat splitting and $`\omega=e^t\,dq\wedge dp`$. The associated $`\Omega`$ satisfies $`d\Omega=e^t\,dt\wedge dq\wedge dp\ne0`$; flatness alone does not imply symplectic preservation or total closedness.
+- For $`H=p^2/2`$, contraction of $`\partial_t+p\partial_q`$ with $`dq\wedge dp+p\,dp\wedge dt`$ is zero, checking the sign in the Hamiltonian display.
+- The potentials $`H`$ and $`H+t^2`$ give the same total two-form because $`d(t^2)\wedge dt=0`$.
 - On a positive-dimensional fiber the relative zero form is closed but vertically degenerate; its total extension has full tangent kernel, so the kernel and curvature conclusions require nondegeneracy. On a zero-dimensional vertical tangent space the zero form is nondegenerate.
 
 *Needs:* Internal: 0.1, 0.2; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
@@ -350,11 +354,11 @@ Under the proved horizontal-preservation condition $D^h\omega=0$, only for a one
 
 **General theory.**
 
-Let $S$ be a connected one-dimensional complex manifold and let $s:S\to M$ be a holomorphic map. Define admissible observation data by an actual holomorphic $\mathbb P^1$-valued map on a neighborhood of $s(S)$, or by meromorphic or rational presentation data for which evaluation along $s$ is proved to have a well-defined holomorphic $\mathbb P^1$-valued continuation. This is a marked observation; its domain and any comparison maps are retained.
+Let $`S`$ be a connected one-dimensional complex manifold and let $`s:S\to M`$ be a holomorphic map. Define admissible observation data by an actual holomorphic $`\mathbb P^1`$-valued map on a neighborhood of $`s(S)`$, or by meromorphic or rational presentation data for which evaluation along $`s`$ is proved to have a well-defined holomorphic $`\mathbb P^1`$-valued continuation. This is a marked observation; its domain and any comparison maps are retained.
 
-Construct that continuation in the following elementary admissible case: local numerator–denominator presentations restrict along $s$ to holomorphic pairs that are not both identically zero. Remove their common vanishing order at each point of the curve, and prove the resulting local $\mathbb P^1$-maps agree on overlaps. Alternatively, if a resolution $\widehat M\to M$, a holomorphic observation $\widehat Q:\widehat M\to\mathbb P^1$ and a holomorphic lift $\widehat s$ are supplied, evaluation is $\widehat Q\widehat s$. Its independence of choices must be proved by comparison on a dense domain, or the lift must remain part of the observation marking. In particular, a curve wholly contained in an indeterminacy locus has no canonical rational evaluation merely because some lift exists.
+Construct that continuation in the following elementary admissible case: local numerator–denominator presentations restrict along $`s`$ to holomorphic pairs that are not both identically zero. Remove their common vanishing order at each point of the curve, and prove the resulting local $`\mathbb P^1`$-maps agree on overlaps. Alternatively, if a resolution $`\widehat M\to M`$, a holomorphic observation $`\widehat Q:\widehat M\to\mathbb P^1`$ and a holomorphic lift $`\widehat s`$ are supplied, evaluation is $`\widehat Q\widehat s`$. Its independence of choices must be proved by comparison on a dense domain, or the lift must remain part of the observation marking. In particular, a curve wholly contained in an indeterminacy locus has no canonical rational evaluation merely because some lift exists.
 
-If the evaluated map is not identically $\infty$, prove that it defines a meromorphic function on $S$. At a point with value $\infty$, its reciprocal is a holomorphic germ with a zero of finite order; the identity theorem excludes infinite order. Thus poles are isolated and of finite order. The curve hypothesis is essential to this formulation: higher-dimensional bases have polar divisors and possible indeterminacy, not a theorem of isolated poles.
+If the evaluated map is not identically $`\infty`$, prove that it defines a meromorphic function on $`S`$. At a point with value $`\infty`$, its reciprocal is a holomorphic germ with a zero of finite order; the identity theorem excludes infinite order. Thus poles are isolated and of finite order. The curve hypothesis is essential to this formulation: higher-dimensional bases have polar divisors and possible indeterminacy, not a theorem of isolated poles.
 
 Apply this local statement to horizontal germs from target:0.3 and, when separately supplied, to the universal-cover sections from target:0.5. For a universal cover or connected regular cover, prove that the scalar observation descends exactly when the evaluated function is invariant under every deck transformation. A monodromy-fixed geometric initial point is sufficient, but not necessary, for scalar descent. Prove naturality under actual compatible observation maps, base changes and resolved comparisons on their stated domains.
 
@@ -373,10 +377,10 @@ Apply this local statement to horizontal germs from target:0.3 and, when separat
 
 **Checks.**
 
-- The constant $\mathbb P^1$-valued map $Q\equiv\infty$ is allowed as a map but is excluded from the ordinary-meromorphic-function conclusion.
-- For the rational observation $Q=[x:y]$ on $\mathbb C^2$ and the constant curve $s\equiv(0,0)$, both restricted coordinates vanish identically. Different directional lifts to the blowup have different values; no unmarked scalar value is defined.
-- The observation $1/t$ on a punctured disc extends as a $\mathbb P^1$-map with reciprocal $t$ at the origin, giving one pole of order one.
-- For the sign-monodromy example $q'=q/(2t),\ p'=-p/(2t)$ over $\mathbb C^\times$, the observation $q^2$ descends to the base even when the geometric section with nonzero initial data does not. Scalar descent cannot be characterized only by a fixed initial point.
+- The constant $`\mathbb P^1`$-valued map $`Q\equiv\infty`$ is allowed as a map but is excluded from the ordinary-meromorphic-function conclusion.
+- For the rational observation $`Q=[x:y]`$ on $`\mathbb C^2`$ and the constant curve $`s\equiv(0,0)`$, both restricted coordinates vanish identically. Different directional lifts to the blowup have different values; no unmarked scalar value is defined.
+- The observation $`1/t`$ on a punctured disc extends as a $`\mathbb P^1`$-map with reciprocal $`t`$ at the origin, giving one pole of order one.
+- For the sign-monodromy example $`q'=q/(2t),\ p'=-p/(2t)`$ over $`\mathbb C^\times`$, the observation $`q^2`$ descends to the base even when the geometric section with nonzero initial data does not. Scalar descent cannot be characterized only by a fixed initial point.
 
 - The connected degree-three cover p(z)=z³−3z from ℂ minus {−2,−1,1,2} to ℂ minus {−2,2} is not regular and has trivial deck group (its monodromy is S₃). The function f(z)=z is deck invariant but is not constant on the fiber over 0, so it does not descend. Deck invariance on an arbitrary nonregular cover is insufficient.
 
@@ -393,18 +397,22 @@ Apply this local statement to horizontal germs from target:0.3 and, when separat
 
 **General theory.**
 
-Let $B$ be a complex time curve, let $\rho:E\to B$ be a holomorphic submersion of relative dimension one, and let $(M\to B,h)$ be a holomorphic nonlinear connection. Construct the first-jet bundle $J^1(E/B)$ intrinsically: its fiber over $e\in E_b$ is the affine space of complex-linear splittings $j:T_bB\to T_eE$ of $d\rho_e$. Construct its holomorphic transition maps and prove that these splittings correspond to first jets of local holomorphic sections of $E\to B$.
+Let $`B`$ be a complex time curve, let $`\rho:E\to B`$ be a holomorphic submersion of relative dimension one, and let $`(M\to B,h)`$ be a holomorphic nonlinear connection. Construct the first-jet bundle $`J^1(E/B)`$ intrinsically: its fiber over $`e\in E_b`$ is the affine space of complex-linear splittings $`j:T_bB\to T_eE`$ of $`d\rho_e`$. Construct its holomorphic transition maps and prove that these splittings correspond to first jets of local holomorphic sections of $`E\to B`$.
 
-An observation $Q:M\to E$ over $B$ defines
-$$
+An observation $`Q:M\to E`$ over $`B`$ defines
+
+```math
 J_Q(x)=\bigl(Q(x),dQ_x\circ h_x\bigr)\in J^1(E/B).
-$$
-On an explicitly specified open $U\subset M$, assume and verify that $J_Q:U\to V$ is a biholomorphism onto an open $V\subset J^1(E/B)$. Transport the splitting to $V$ and prove its contact compatibility: along its horizontal curves, the jet coordinate is the derivative of the observed section. This constructs the corresponding second-order dynamics. Prove a bijection between horizontal section germs in $U$ and observation-section germs whose first jets lie in $V$ and solve that dynamics. The inverse uses the actual inverse of $J_Q$; it is not supplied by dimensional counting or by formal elimination.
+```
 
-As a downstream coordinate lemma choose $(t,q,p)$ on $U$, write $h\partial_t=\partial_t+A(t,q,p)\partial_q+B(t,q,p)\partial_p$, and suppose the jet map $(t,q,p)\mapsto(t,q,A(t,q,p))$ has the specified inverse $p=P(t,q,v)$. Then the intrinsic second-order dynamics has the display
-$$
+On an explicitly specified open $`U\subset M`$, assume and verify that $`J_Q:U\to V`$ is a biholomorphism onto an open $`V\subset J^1(E/B)`$. Transport the splitting to $`V`$ and prove its contact compatibility: along its horizontal curves, the jet coordinate is the derivative of the observed section. This constructs the corresponding second-order dynamics. Prove a bijection between horizontal section germs in $`U`$ and observation-section germs whose first jets lie in $`V`$ and solve that dynamics. The inverse uses the actual inverse of $`J_Q`$; it is not supplied by dimensional counting or by formal elimination.
+
+As a downstream coordinate lemma choose $`(t,q,p)`$ on $`U`$, write $`h\partial_t=\partial_t+A(t,q,p)\partial_q+B(t,q,p)\partial_p`$, and suppose the jet map $`(t,q,p)\mapsto(t,q,A(t,q,p))`$ has the specified inverse $`p=P(t,q,v)`$. Then the intrinsic second-order dynamics has the display
+
+```math
 q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr).
-$$
+```
+
 Prove naturality under actual connection and observation-bundle isomorphisms, and under noncritical time changes. Arbitrary ramified base change still defines the pullback connection of target:0.1, but need not preserve this jet-isomorphism hypothesis. The theorem assumes no symplectic structure, no completeness, no meromorphic continuation property and no named scalar equation.
 
 **Hypotheses.**
@@ -421,11 +429,11 @@ Prove naturality under actual connection and observation-bundle isomorphisms, an
 
 **Checks.**
 
-- When $A=p$, the jet inverse is $p=q'$ and the second-order equation is $q''=B(t,q,q')$.
-- If $A$ is independent of $p$, the jet map loses the momentum variable and has no open-set inverse in a two-dimensional phase chart.
-- For $A=p^2$, the jet map has separate local inverse branches away from $p=0$ but no automatic global inverse; at $p=0$ its differential loses rank.
+- When $`A=p`$, the jet inverse is $`p=q'`$ and the second-order equation is $`q''=B(t,q,q')`$.
+- If $`A`$ is independent of $`p`$, the jet map loses the momentum variable and has no open-set inverse in a two-dimensional phase chart.
+- For $`A=p^2`$, the jet map has separate local inverse branches away from $`p=0`$ but no automatic global inverse; at $`p=0`$ its differential loses rank.
 - Clearing denominators in a scalar display does not create a solution in a phase chart where the observation or jet inverse is undefined; the original domain is retained.
-- Under $\tau=t^2$ at $t=0$, the time derivative vanishes. Pullback connections still exist, but the noncritical time-change comparison of scalar jets does not apply.
+- Under $`\tau=t^2`$ at $`t=0`$, the time derivative vanishes. Pullback connections still exist, but the noncritical time-change comparison of scalar jets does not apply.
 
 *Needs:* Internal: 0.1; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5).
 
@@ -436,21 +444,23 @@ Prove naturality under actual connection and observation-bundle isomorphisms, an
 
 **General theory.**
 
-Let $I=[a,b]$ be compact, let $M$ be a fixed finite-dimensional smooth manifold, and let $F_\varepsilon(t,\cdot)$ be actual time-dependent tangent fields on common domains, for parameters $\varepsilon$ near $0$ in a metric parameter space. Fields are continuous in time and locally uniformly Lipschitz in phase. If phase spaces vary, the application must first supply actual common identifications and verify these hypotheses for the transported fields. Let $x_0:I\to M$ be an existing solution for $F_0$.
+Let $`I=[a,b]`$ be compact, let $`M`$ be a fixed finite-dimensional smooth manifold, and let $`F_\varepsilon(t,\cdot)`$ be actual time-dependent tangent fields on common domains, for parameters $`\varepsilon`$ near $`0`$ in a metric parameter space. Fields are continuous in time and locally uniformly Lipschitz in phase. If phase spaces vary, the application must first supply actual common identifications and verify these hypotheses for the transported fields. Let $`x_0:I\to M`$ be an existing solution for $`F_0`$.
 
-Assume a finite subdivision $a=a_0<\cdots<a_N=b$ and common phase charts such that, in each chart, the closed tube $\{(t,y):t\in I_j,\ \|y-x_{0,j}(t)\|\le r_j\}$, with a fixed $r_j>0$, is compactly contained in a larger common time–phase domain. Thus the reference graph has the explicit positive margin $r_j$ from the lateral boundary of its tube. Choose compact overlap neighborhoods in which the chart transitions and their derivatives are controlled. On each fixed tube suppose $F_\varepsilon\to F_0$ uniformly and the phase Lipschitz constants $L_j$ can be chosen independent of sufficiently small $\varepsilon$. The matched initial points $x_\varepsilon(a)$ converge to $x_0(a)$. Existence on all of $I$, confinement to the tube cover and uniform convergence of the approximate solutions are conclusions, not hypotheses.
+Assume a finite subdivision $`a=a_0<\cdots<a_N=b`$ and common phase charts such that, in each chart, the closed tube $`\{(t,y):t\in I_j,\ \|y-x_{0,j}(t)\|\le r_j\}`$, with a fixed $`r_j>0`$, is compactly contained in a larger common time–phase domain. Thus the reference graph has the explicit positive margin $`r_j`$ from the lateral boundary of its tube. Choose compact overlap neighborhoods in which the chart transitions and their derivatives are controlled. On each fixed tube suppose $`F_\varepsilon\to F_0`$ uniformly and the phase Lipschitz constants $`L_j`$ can be chosen independent of sufficiently small $`\varepsilon`$. The matched initial points $`x_\varepsilon(a)`$ converge to $`x_0(a)`$. Existence on all of $`I`$, confinement to the tube cover and uniform convergence of the approximate solutions are conclusions, not hypotheses.
 
-Construct local approximate solutions using target:0.2. Until the first possible exit from the $j$th tube, prove the Grönwall estimate
-$$
+Construct local approximate solutions using target:0.2. Until the first possible exit from the $`j`$th tube, prove the Grönwall estimate
+
+```math
 \sup_{t\in I_j}\|x_\varepsilon(t)-x_0(t)\|
 \leq \bigl(\|x_\varepsilon(a_j)-x_0(a_j)\|+\ell_j\delta_{\varepsilon,j}\bigr)e^{L_j\ell_j},
 \qquad
 \ell_j=a_{j+1}-a_j,\quad
 \delta_{\varepsilon,j}=\sup_{\text{tube}_j}\|F_\varepsilon-F_0\|.
-$$
-Here the supremum is first taken over the common interval before exit; after excluding exit it holds over $I_j$. Choose $\varepsilon$ so that this bound is smaller than the prescribed margin. A first exit is then impossible, and compact extension gives the entire segment. Transfer the endpoint estimate through the controlled chart overlap and induct over the finitely many segments. This yields uniform convergence on $I$ in any compatible metric on a compact neighborhood of the reference graph. Do not assert a single unchanged Lipschitz constant across arbitrary coordinate transitions.
+```
 
-For horizontal lifts, the pulled-back vector field contains $\gamma'(t)$; a $C^1$ base path gives a continuous-time ODE and is covered by target:0.2. Holomorphic phase fields uniformly bounded on larger common complex neighborhoods supply uniform phase Lipschitz constants on smaller tubes by Cauchy estimates. Convergence of coefficients without common domains, a no-exit margin and matched initial data is insufficient. Uniformity over a family of time paths or a compact time domain requires additional uniform path and chart controls. Fixed compact-path convergence asserts neither convergence on unbounded rays nor convergence through excluded singular endpoints.
+Here the supremum is first taken over the common interval before exit; after excluding exit it holds over $`I_j`$. Choose $`\varepsilon`$ so that this bound is smaller than the prescribed margin. A first exit is then impossible, and compact extension gives the entire segment. Transfer the endpoint estimate through the controlled chart overlap and induct over the finitely many segments. This yields uniform convergence on $`I`$ in any compatible metric on a compact neighborhood of the reference graph. Do not assert a single unchanged Lipschitz constant across arbitrary coordinate transitions.
+
+For horizontal lifts, the pulled-back vector field contains $`\gamma'(t)`$; a $`C^1`$ base path gives a continuous-time ODE and is covered by target:0.2. Holomorphic phase fields uniformly bounded on larger common complex neighborhoods supply uniform phase Lipschitz constants on smaller tubes by Cauchy estimates. Convergence of coefficients without common domains, a no-exit margin and matched initial data is insufficient. Uniformity over a family of time paths or a compact time domain requires additional uniform path and chart controls. Fixed compact-path convergence asserts neither convergence on unbounded rays nor convergence through excluded singular endpoints.
 
 **Hypotheses.**
 
@@ -467,10 +477,10 @@ For horizontal lifts, the pulled-back vector field contains $\gamma'(t)$; a $C^1
 
 **Checks.**
 
-- On $I=[0,2]$, take $F_n=1/(n+1)$, $F_0=0$ and common initial value $0$. Then $x_n(t)=t/(n+1)$ and $\sup_I|x_n-x_0|=2/(n+1)$, agreeing with the estimate.
-- Even for identical zero fields, initial values $x_n(0)=(-1)^n$ do not converge; coefficient convergence alone does not imply solution convergence.
+- On $`I=[0,2]`$, take $`F_n=1/(n+1)`$, $`F_0=0`$ and common initial value $`0`$. Then $`x_n(t)=t/(n+1)`$ and $`\sup_I|x_n-x_0|=2/(n+1)`$, agreeing with the estimate.
+- Even for identical zero fields, initial values $`x_n(0)=(-1)^n`$ do not converge; coefficient convergence alone does not imply solution convergence.
 - Convergence of coefficients on one chart does not control a trajectory after it leaves that chart; the common tubes and positive no-exit margins cannot be omitted.
-- The solutions $x_n(t)=t/(n+1)$ converge uniformly on every fixed compact interval but not uniformly for $t\in[0,\infty)$. The compact-path conclusion does not contain an unbounded-ray assertion.
+- The solutions $`x_n(t)=t/(n+1)`$ converge uniformly on every fixed compact interval but not uniformly for $`t\in[0,\infty)`$. The compact-path conclusion does not contain an unbounded-ray assertion.
 
 *Needs:* Internal: 0.2; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
@@ -2383,17 +2393,23 @@ For a parameter-uniform little-o, additionally prove weighted-tail tightness: as
 
 Construct the canonical entire Barnes G function on the native complex analytic carrier. Write gamma for Real.eulerMascheroniConstant and define G by the locally uniformly convergent product
 
-\[G(z+1)=e^{\frac z2\log(2\pi)-\frac{z(z+1)}2-\frac{\gamma z^2}2}\prod_{k=1}^{\infty}\left(1+\frac zk\right)^k e^{-z+z^2/(2k)}.\]
+```math
+G(z+1)=e^{\frac z2\log(2\pi)-\frac{z(z+1)}2-\frac{\gamma z^2}2}\prod_{k=1}^{\infty}\left(1+\frac zk\right)^k e^{-z+z^2/(2k)}.
+```
 
 The product, rather than a recurrence alone, fixes the normalization. Prove local normal convergence and nonvanishing away from the displayed factors, G(1)=1, compatibility with complex conjugation, and G(z+1)=Gamma(z)G(z) for z not in {-n : n is a natural number}. Interpret this also as a meromorphic identity; the totalized native Gamma function at its poles is not used as the value of a meromorphic pole. Prove that G has exactly the zeros z=-n of multiplicity n+1, with its local leading coefficients and the quotient/removable-limit rules needed for finite products and ratios. Consume native Complex.Gamma, GammaSeq_tendsto_Gamma, Gamma_ne_zero and its analytic regularity; prove the product-to-Gamma comparison here.
 
 Put D = {z in C : z is nonzero and |arg z| < pi}. On D construct the holomorphic branches Log z, Log Gamma(z+1) and Log G(z+1) whose values are real on the positive real axis. These are analytic logarithms continued from that axis, not pointwise principal logarithms of the Gamma or G values. Define c_A as the limit, as m tends to infinity through positive integers, of sum_(k=1)^m k log k - (m^2/2 + m/2 + 1/12) log m + m^2/4, and put A=exp(c_A). Prove existence of this normalization limit. For every integer N>=1 define
 
-\[a_N(z)=\frac{z^2}{4}+z\operatorname{Log}\Gamma(z+1)-\left(\frac{z(z+1)}2+\frac1{12}\right)\operatorname{Log}z-\log A+\sum_{k=1}^{N-1}\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.\]
+```math
+a_N(z)=\frac{z^2}{4}+z\mathop{\mathrm{Log}}\nolimits \Gamma(z+1)-\left(\frac{z(z+1)}2+\frac1{12}\right)\mathop{\mathrm{Log}}\nolimits z-\log A+\sum_{k=1}^{N-1}\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.
+```
 
 Prove
 
-\[\operatorname{Log}G(z+1)=a_N(z)+R_N(z),\qquad |R_N(z)|\le\frac{|B_{2N+2}|\sec^{2N+1}(\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.\]
+```math
+\mathop{\mathrm{Log}}\nolimits G(z+1)=a_N(z)+R_N(z),\qquad |R_N(z)|\le\frac{|B_{2N+2}|\sec^{2N+1}(\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.
+```
 
 Here B_j are the native Bernoulli numbers. For every fixed delta with 0<delta<=pi the bound is uniform on |arg z|<=pi-delta, z nonzero; it is O_(N,delta)(|z|^(-2N)) as |z| tends to infinity. Prove the finite-product logarithmic summation and integral-remainder comparisons that establish this expansion and bound; no unnamed Barnes or sectorial-Stirling supplier is a prerequisite. The Gamma-containing form of the expansion is sufficient and fixes the constant without importing a zeta-derivative formula. Its identification with a zeta-derivative expression is not used by the connection formulas.
 
@@ -2912,9 +2928,9 @@ A reusable result has its own inputs, outputs, laws, failure cases, owner and de
 
 For an admitted decorated deformation problem D, the general construction produces
 
-\[
+```math
 D\longmapsto(\pi_D:M_D\to B_D,h_D,\omega_D).
-\]
+```
 
 The phase space, tangent splitting, flatness and relative symplectic form are outputs. The construction comes with input-isomorphism and admissible-base-change comparisons, including composition and triple-overlap coherence. On a verified nonempty-fiber base, the consumer receives the actual nonlinear-connection object. No solution operator, completeness theorem or scalar formula is inserted into its input.
 

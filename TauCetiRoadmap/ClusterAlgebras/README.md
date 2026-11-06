@@ -20,7 +20,7 @@ results and proof ingredients; their historical encodings do not prescribe the A
 | 0 | Coefficients, based quantum tori, Laurent charts and local algebra | Mathlib; shared twisted algebra |
 | 1 | Exchange frames, polynomial mutation, classical and quantum seeds and algebras | 0 |
 | 2 | Common polynomial upper bounds; quantum and classical Laurentness; separation | 0–1 |
-| 3 | Lattice formalism, cluster varieties and convention transports | 0–2; toric carriers and scheme gluing |
+| 3 | Lattice formalism, cluster varieties, matrix and tropical realizations | 0–2; toric carriers and scheme gluing |
 | 4 | Classical upper-bound structure and acyclic presentations | 0–2 |
 | 5 | Finite-type classification and root parametrizations | 0–2; RootSystems |
 | 6 | Cluster scattering, Laurent positivity and sign-coherence | 0–3; ScatteringDiagrams |
@@ -101,10 +101,8 @@ generalized coefficient-semifield separation is outside this roadmap.
 - [InductionRestriction](../RepresentationTheory/InductionRestriction/README.md),
   Layer 7's twisted group algebra, owns the normalized-cocycle carrier and its
   universal property. Instantiate `TauCeti.twistedMonoidAlgebra` for the lattice
-  cocycle in §0.4. ScatteringDiagrams §4.3's `QuantumMonoidAlgebra` must be connected
-  to this same carrier by the basis-preserving algebra equivalence; coefficient
-  and lattice maps commute with that equivalence. No second multiplication or
-  basis theory is to be developed under a cluster-specific name.
+  cocycle in §0.4. Use this same instance for ScatteringDiagrams §4.3's
+  `QuantumMonoidAlgebra`, with its monomial basis, coefficient maps and lattice maps.
 - [QuantumGroups](../QuantumGroups/README.md)'s rank-one PBW development owns
   σ-derivation extensions. The present roadmap uses neither these extensions nor
   quantum-group presentations, representations or Hopf structure: its skew Laurent
@@ -160,11 +158,13 @@ For roots use `RootPairing`, `RootPairing.Base` and its integer Cartan matrix;
 for types use `TauCeti.DynkinType`, `DynkinType.Valid` and `TauCeti.IsFiniteType`.
 Extend these APIs where required instead of declaring parallel carriers.
 
-The algebraic formulas below use FZ's column exchange convention and tropical minimum.
-The geometric formulas retain GHKK's lattice convention and its maximum tropicalization.
-**Changes of convention are mathematical interfaces:** construct the maps in Layer 3,
-prove their inverse and mutation-compatibility laws, and transport downstream statements.
-A prose instruction to transpose a matrix or change a sign does not discharge a target.
+The algebraic formulas use FZ's column exchange convention and tropical minimum.
+Layer 3 uses ScatteringDiagrams §4.2's `SkewLatticeDatum` and `AdaptedBasis`, with
+the derived form `β(n,n')={n',n}`. Thus `p₁*(n)={n,−}=β(−,n)` on `N°` for `n∈N_uf`.
+The geometric tropical maps use maximum. Construct Layer 3's matrix realization
+and min/max tropicalization maps and prove their mutation laws.
+Brackets of derivations are the ordinary commutators `[D,E]=D∘E−E∘D`; for a
+Poisson bracket `[−,−]_P`, use left Hamiltonians `H_f=[f,−]_P`.
 Declaration names are illustrative; the mathematical statements specify the targets.
 
 Use `OreLocalization` and the existing twisted monoid algebra for the noncommutative
@@ -174,8 +174,8 @@ fixed division ring, not an abstract skew-polynomial carrier. `FractionRing` and
 The common scalar ring acts centrally; the ambient division ring need not be
 commutative. Ordinary quantum algebras are `Z_v`-algebras. Quasi-commuting frozen
 generators are coordinates, not central scalars.
-The quantum matrix `Λ` is distinct from Layer 3's rational skew form and weights.
-Construct comparison maps where needed rather than identifying their carriers.
+The integral quantum form `Λ` is specified on the quantum torus's exponent lattice;
+Layer 3's rational form `β` is defined on `N`.
 
 
 ## Layer 0: coefficient and ambient algebra
@@ -245,7 +245,7 @@ support, lattice reindexing, coefficient change along ring maps preserving the u
 identity and composition laws, and the identification with the lattice group algebra when
 `u=1` or `Λ=0`, including evaluation and coefficient extraction. ScatteringDiagrams §4.3's
 parameter `q_sc` is `u`; quantum cluster notation takes `u=v` and `q_cl=v²`, so
-`X_i X_j=v^{2Λ_ij}X_j X_i`. Give explicit maps between the conventions.
+`X_i X_j=v^{2Λ_ij}X_j X_i` in the same based quantum torus.
 
 For a basis of `L`, construct the quantum polynomial and mixed Laurent subalgebras by
 support, with monomial bases and localization at selected monomials. Universal
@@ -635,7 +635,7 @@ A polynomial seed realization in an R-algebra A is an injective R-algebra map
 to A from the quantum polynomial subalgebra of `T(R,u,Λ)` (§0.4), equivalently
 `Y : I → A` with `Y_iY_j=u^{2Λ_ij}Y_jY_i` and R-independent normalized monomials
 `Y^a`, `a∈ℕ^I`. Prove generator extensionality and transport along injective maps
-`A→A'`; no category is used. For injective `ι : A → D` into a division ring, construct
+`A→A'`. For injective `ι : A → D` into a division ring, construct
 the induced quantum chart; a mutation at `k` in `A` is `Y'_k∈A` with `ι(Y'_k)=X'_k`,
 which the mutated seed in `D` does not provide. If `ι(A)` contains every `X_{k;t}` of
 the induced seed (all reachable `t`), construct the injective `A_{R,u,∅}→A` inverting
@@ -1068,25 +1068,13 @@ For a polynomial seed realization `ι` (§1.6) in an R-algebra A, construct the 
 of normalized monomials and coefficient extraction on the image of `ι`; prove that `ι` is
 graded when `A` is `H`-graded with each `ι(X_i)` of degree `deg(e_i)`, and intertwines bar
 with any σ-semilinear anti-involution of A fixing each `ι(X_i)`.
-In the ordinary `Z_v` sector, for a skew-symmetric mutable block and `s_k=d`
-for all `k`, construct the KKKO adapter
-`L=Λ`, `B̃_KKKO=-B̃`, `q^{1/2}=v`, carrying `B̃ᵀΛ=(d Id 0)` to KKKO's
-`L B̃_KKKO=(d Id;0)`.
-Prove that it swaps the two summands of `X'_k`, commutes with matrix and form mutation,
-and induces a transport along mutation words; its sign changes reuse §1.5's
-coefficient/form/matrix and opposite-algebra comparisons. These sign, ordering and
-half-power transports are definitions and lemmas.
 
-Checks: for the rank-one principal seed `Λ=((0,-1),(1,0))`, `B̃=(0,1)ᵀ` of §2.1, the
-adapter gives `d=1`, `ΛB̃_KKKO=(1,0)ᵀ`, and exchanges the summands `M(-e_1+e_2)` and
-`M(-e_1)` of `X'_1`. For `K` empty and `J=Fin 1`, `Y_1=t` is a polynomial seed
+Checks: for `K` empty and `J=Fin 1`, `Y_1=t` is a polynomial seed
 realization in `A=Z_v[t]` inducing `A_{v,∅}≃A`, and `t` is not a unit of `A`.
 Over `𝔽₇` with `u=2` and `Λ(e_1,e_2)=1`, the parameter has order 3 and the Q1 product
 `(1+2T)(1+T)(1+4T)=1+T³` is nonzero. Mutation and Laurentness apply, but
 there is no field automorphism sending 2 to its inverse 4, so the bar premise fails.
-Categorification enters only through this algebraic API; no categorical
-existence or mutation theorem is assumed or requested. Sources: BZ §§3–6; KKKO
-§§5.1–5.2.
+Sources: BZ §§3–6.
 
 
 ### 2.6 Polynomial algebras, principal lifts and classical comparisons
@@ -1196,13 +1184,14 @@ condition used here must be distinguished.
 
 ## Layer 3: lattice formalism and cluster varieties
 
-Lattice seeds use the notation and conventions of GHKK, Appendix A.
+Use ScatteringDiagrams §4.2's lattice datum and adapted basis for lattice seeds.
 
-**3.1 Lattice data.** Fixed data: a finite free lattice `N`, a saturated sublattice
-`N_uf`, a skew form `{−,−}:N×N→ℚ`, integers `d_i>0` (`i∈I`) and a finite-index
-sublattice `N°`, with `{N_uf,N°}⊆ℤ` and `{N,N_uf∩N°}⊆ℤ`. A seed is a basis `(e_i)_{i∈I}`
-of `N` whose subfamily over `I_uf⊆I` is a basis of `N_uf`, with `(d_ie_i)` a basis of
-`N°`. Put `M=Hom(N,ℤ)`, `M°=Hom(N°,ℤ)`, `f_i=d_i⁻¹e_i*` (dual to `(d_ie_i)`),
+**3.1 Lattice data.** A `SkewLatticeDatum` consists of a finite free lattice `N`,
+a saturated sublattice `N_uf`, a skew form `{−,−}:N×N→ℚ` and a finite-index
+sublattice `N°`, with `{N_uf,N°}⊆ℤ` and `{N,N_uf∩N°}⊆ℤ`. A seed is an `AdaptedBasis`:
+a basis `(e_i)_{i∈I}` of `N` whose subfamily over `I_uf⊆I` is a basis of `N_uf`, and
+integers `d_i>0` with `(d_ie_i)` a basis of `N°`.
+Put `M=Hom(N,ℤ)`, `M°=Hom(N°,ℤ)`, `f_i=d_i⁻¹e_i*` (dual to `(d_ie_i)`),
 `ε_ij={e_i,e_j}d_j`; prove `ε_ij∈ℤ` unless `i,j∉I_uf`. For `k∈I_uf` define the positive
 and negative mutations `μ_k^±`: `e'_k=-e_k`, `e'_i=e_i+[±ε_ik]_+e_k` (`i≠k`). Prove that
 they give seeds of the same fixed data and are mutually inverse, and that `μ_k^+μ_k^+(s)`
@@ -1210,8 +1199,9 @@ is the image of `s` under the fixed-data automorphism `e_i↦e_i+ε_ike_k` (`i�
 `e_k↦e_k`.
 
 **3.2 Matrix and coefficient transport.** Let *latticeToFZ*`(s)` be the extended matrix
-with rows `I`, columns `I_uf`, `B̃_ik=ε_ki={e_k,d_ie_i}`. Prove that `s_k=L/d_k`
-(`k∈I_uf`), `L=lcm(d_k:k∈I_uf)`, is a symmetrizer of its mutable block, that every
+with rows `I`, columns `I_uf`, `B̃_ik=ε_ki={e_k,d_ie_i}=β(d_ie_i,e_k)`.
+Prove that `s_k=L/d_k` (`k∈I_uf`), `L=lcm(d_k:k∈I_uf)`, is a symmetrizer of its
+mutable block, that every
 symmetrizer `(s_k)` of it has `s_kd_k` constant on each connected component (edges
 `b_ij≠0`), and that *latticeToFZ* is invariant under fixed-data automorphisms, so
 `latticeToFZ(μ_k^+μ_k^+(s))=latticeToFZ(s)`. For an extended matrix `B̃` with symmetrizer
@@ -1229,12 +1219,13 @@ Prove *latticeToFZ_fzToLattice*
 (`latticeToFZ∘fzToLattice=id`), compatibility with reindexing, and, for every word `w`
 of signed mutations of a fixed-data seed, `latticeToFZ(μ_w s)=μ_w(latticeToFZ s)` with
 equal geometric coefficient patterns (§1.4). Prove that a seed identifies its fixed data
-with the free model on `ℤ^I`; the frozen–frozen form and frozen weights are part of the
-fixed data, not functions of `B̃`.
+with the free model on `ℤ^I`; the frozen–frozen form and frozen weights are data of the
+lattice seed, not functions of `B̃`.
 
 **3.3 Torus mutation and gluing.** For a domain C let
 `A_s=Spec C[M°]`, `X_s=Spec C[N]`, `A_i=z^{f_i}`, `X_i=z^{e_i}`, and
-`p₁*:N_uf→M°`, `p₁*(n)={n,−}|_{N°}`. With `s'=μ_k^+(s)`, construct `μ_k` as rational maps
+`p₁*:N_uf→M°`, `p₁*(n)={n,−}|_{N°}=β(−,n)|_{N°}`. With `s'=μ_k^+(s)`,
+construct `μ_k` as rational maps
 `A_s⇢A_{s'}`, `X_s⇢X_{s'}` and as isomorphisms `D(1+z^{p₁*(e_k)})≅D(1+z^{p₁*(e'_k)})`
 and `D(1+X_k)≅D(1+X'_k)`, with pullbacks below. For A assume §1.4's
 nonvanishing condition on *latticeToFZ*`(s)`; for X no characteristic
@@ -1295,6 +1286,17 @@ The principal extension itself has nonzero extended columns in every characteris
 Its `p₁*` is injective on `Ñ_uf`; no injectivity of the original `p₁*`
 is required. Zero rows of ε remain allowed whenever §1.4's nonvanishing
 condition holds.
+
+On the full principal character lattice `M̃°=M°⊕N`, define the rational alternating
+form `λ((m,a),(m',a'))=⟨a,m'⟩−⟨a',m⟩−β(a,a')`. Over a commutative `ℚ`-algebra R,
+give `R[M̃°]` the monomial Poisson bracket `[z^u,z^v]_P=λ(u,v)z^{u+v}`.
+For `n,n'∈N_uf`, put `r(n)=(p₁*(n),n)` and prove
+`λ(r(n),(m,a))=⟨n,m⟩`, `λ(r(n),r(n'))=β(n,n')`.
+For `n,n'∈(Σ_{i∈I_uf}ℕe_i)∖{0}`, restrict `H_{z^{r(n)}}` to
+`R[M°][t_i:i∈I_uf]` via `z^{(m,a)}=z^m t^a` and extend continuously to its
+`t`-adic completion. Prove this is ScatteringDiagrams §4.2's `D_n`, with
+`[D_n,D_{n'}]=β(n,n')D_{n+n'}`; these Hamiltonian derivations annihilate every `t_i`.
+
 For `min` and for `max` on `ℤ`, construct the tropical points of `𝒜` and `𝒳` (charts
 `N°`, resp. `M`) from the universal integral subtraction-free transitions,
 before scalar change or reduction. Prove that *minMaxNegation* `x↦−x` is a
@@ -1312,10 +1314,12 @@ L6b), *fzToLattice* sends `c_{j;t}` to `Σ_i(c_{j;t})_ie_i∈N` and `g_{j;t}` to
 `N°`, `M`, `M°` and the `min`/`max` tropical points are distinct types.
 
 **Checks.** For `B=((0,1),(−2,0))`, symmetrizer `(2,1)`, weights `(1,2)` and
-`{e₁,e₂}=−1`: `ε=Bᵀ`, `f₂=e₂*/2`, `latticeToFZ(μ_k^±s)=μ_k(B)` (`k=1,2`),
+`{e₁,e₂}=−1`, `β(e₁,e₂)=1`: `ε=Bᵀ`, `f₂=e₂*/2`,
+`latticeToFZ(μ_k^±s)=μ_k(B)` (`k=1,2`),
 `T₁(f₁)=f₁−2f₂`, `T₁(−f₁)=−f₁`, and `T₁^min(∓f₁)=−T₁(±f₁)` for
 `T₁^min(m)=m+min(⟨d₁e₁,m⟩,0)p₁*(e₁)`. For `N=N_uf=ℤe₁`, `d₁=1`, zero form, the principal
 extension has `B̃=(0,1)ᵀ` and `A₁A'₁=1+t`, `t=z^{(0,e₁)}`, becoming `A₁A'₁=2` at `t=1`.
+Here `λ((0,e₁),(e₁*,0))=1`, so `D_{e₁}(z^{e₁*})=z^{e₁*}t` even though `β=0`.
 The rank-zero construction has `lcm ∅=1` and `gcd ∅=0`. For
 `N=N_uf=ℤe`, `N°=2ℤe`, `d=2`, zero form and `g=2`, normalization gives
 `N°_g=ℤe`, `d'=1` and sends the old dual basis `e*/2` to `e*`.
@@ -1606,7 +1610,7 @@ and §§3, 7–10; RootSystems, Layers 1–6.
 
 **6.1 The cluster scattering input.** For a Layer 3 lattice seed `s` (FZ seeds via
 *fzToLattice*), instantiate ScatteringDiagrams §4.2 over `ℚ`, tracking integral
-coefficient subsemirings, with its faithful principal action on `ℚ[M°]⟦t_i⟧`,
+coefficient subsemirings, with §3.4's faithful Hamiltonian realization on `ℚ[M°]⟦t_i⟧`,
 `q^n=z^{p₁*(n)}t^n`, and incoming walls `(e_i^⊥,1+q^{e_i})`, `i∈I_uf`; call the
 completion `𝔇_s`. Prove `κ(e_i)=d_i` and instantiate §4.2's *principalGradingDictionary*
 and *principalProjectionComparison*. Uses: ScatteringDiagrams §3.4 uniqueness and §7.2
@@ -1738,8 +1742,6 @@ sign-coherence hypothesis discharged here. Since no c-column is zero,
 exactly one of the two coefficient monomials is 1 and the other vanishes at
 u=0. Evaluating L6b's recurrence at u=0 and starting from `F_{j;0}=1`
 then proves the constant-term assertion by induction.
-
-Transport each result to GHKK's conventions by Layer 3's convention maps.
 
 **Checks.** Compute the `A₂` chamber fan and principal `C,G,F` data around its pentagon.
 For `B=((0,1),(-1,0))` and word `1,2,1,2`, the lattice dual basis is
@@ -1916,10 +1918,6 @@ finite outputs are transported. No finite check substitutes for these all-rank t
 - **BZ:** Berenstein–Zelevinsky, [*Quantum cluster algebras*](https://arxiv.org/abs/math/0404446),
   §§3–4 for compatible pairs and mutation, §5 for integral upper bounds and Laurentness,
   §6 for bar operations, and §11 for Ore fractions and central divisibility.
-- **KKKO:** Kang–Kashiwara–Kim–Oh,
-  [*Monoidal categorification of cluster algebras*](https://arxiv.org/abs/1801.05145),
-  §§5.1–5.2 for the quantum seed convention and nonlocalized generated algebra.
-  Only that algebraic interface is in scope here.
 - **GLS:** Geiss–Leclerc–Schröer,
   [*Quantum cluster algebras and their specializations*](https://arxiv.org/abs/1807.09826),
   for the distinction between variable specialization and algebra special-fiber

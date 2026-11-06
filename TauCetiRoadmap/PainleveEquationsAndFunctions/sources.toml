@@ -13,7 +13,7 @@ locator_scheme = "theorem"
 locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
 url = "https://sigma-journal.com/2023/013/"
 version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article's own numbering. The generic factorized ramified setting is retained; this source alone is not evidence for unrestricted global properness."
-cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "2.7", "2.8", "2.9", "2.10"]
+cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4"]
 
 [[source]]
 id = "IS12"
@@ -54,7 +54,7 @@ locator_scheme = "section"
 locator = "§2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22)"
 url = "https://arxiv.org/abs/0902.1702v5"
 version_note = "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.4; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved."
-cited_for = ["3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "8.8", "0.7", "0.8"]
+cited_for = ["3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "0.7", "0.8"]
 
 [[source]]
 id = "IIS06"
@@ -230,7 +230,7 @@ locator_scheme = "theorem"
 locator = "Definition 2.1; Theorems 2.1 and 2.2"
 url = "https://arxiv.org/abs/1601.04790v2"
 version_note = "The stable key BERT16 retains the initial preprint year. Cited bytes are arXiv v2, 19 September 2020, 14 PDF pages, titled Corrigendum. Published in 2021 as Correction to: The Dependence on the Monodromy Data of the Isomonodromic Tau Function. Locators follow v2."
-cited_for = ["6.4", "6.5", "9.8", "9.3", "9.4"]
+cited_for = ["6.4", "6.5"]
 
 [[source]]
 id = "BERT17"
@@ -244,62 +244,7 @@ locator_scheme = "theorem"
 locator = "§1; Theorem 2.2; Proposition 2.3; formula (3.6); Theorem 3.3; §3.1.2"
 url = "https://arxiv.org/abs/1703.00046v4"
 version_note = "The unversioned arXiv PDF request returned filename 1703.00046v4.pdf; the 12-page text has the SIGMA publication header (22 June 2017). The actual fetched URL and its byte hash are retained. The initial model uses analytic invertible closed-contour symbols of zero determinant winding."
-cited_for = ["6.2", "6.3", "6.4", "6.5", "7.4", "9.8", "6.1", "9.3", "9.4"]
-
-[[source]]
-id = "ILP18"
-authors = "A. R. Its; O. Lisovyy; A. Prokhorov"
-title = "Monodromy dependence and connection formulae for isomonodromic tau functions"
-year = 2018
-venue = "Duke Mathematical Journal 167(7) (2018), 1347–1432"
-doi = "10.1215/00127094-2017-0055"
-arxiv = "1604.03082v4"
-locator_scheme = "theorem"
-locator = "§1.4, Theorems A and B, equations (1.13), (1.16)–(1.21), (1.25)–(1.28); Lemma 3.3; Propositions 3.20 and 3.24; §3.9; §§4.3–4.5, especially (4.74)–(4.76); Remark 4.8"
-url = "https://arxiv.org/abs/1604.03082v4"
-version_note = "Cited bytes are arXiv v4, 29 October 2018, 54 PDF pages; the arXiv version notice says it was revised to match the published article. Locators and branches follow v4. The generic PVI and homogeneous-PII parameter restrictions, absolute-constant calibration and removable-limit issues remain explicit. The calibration also needs the uniform sectorial Hamiltonian and arc estimates of (4.74)–(4.76), owned here through the normalized RHP; DIK/HXZ alone do not supply them."
-cited_for = ["8.5", "8.6", "8.7", "8.8", "8.1", "8.2"]
-
-[[source]]
-id = "DIK08"
-authors = "P. Deift; A. Its; I. Krasovsky"
-title = "Asymptotics of the Airy-kernel determinant"
-year = 2008
-venue = "Communications in Mathematical Physics 278 (2008), 643–678"
-doi = "10.1007/s00220-007-0409-x"
-arxiv = "math/0609451v2"
-locator_scheme = "theorem"
-locator = "Theorem 1; equations (2)–(3)"
-url = "https://arxiv.org/abs/math/0609451v2"
-version_note = "The unversioned PDF fetch resolved to arXiv v2, 21 June 2007, as printed in the downloaded text; 41 PDF pages. Publication is 2008. Used for the absolute Airy determinant calibration constant required in ILP18 §4.5, not as a duplicate Hastings–McLeod existence target."
-cited_for = ["8.7"]
-
-[[source]]
-id = "HXZ16"
-authors = "Min Huang; Shuai-Xia Xu; Lun Zhang"
-title = "Location of Poles for the Hastings–McLeod Solution to the Second Painlevé Equation"
-year = 2016
-venue = "Constructive Approximation 43(3) (2016), 463–494"
-doi = "10.1007/s00365-015-9307-1"
-arxiv = "1410.3338v2"
-locator_scheme = "theorem"
-locator = "Theorem 2.1"
-url = "https://arxiv.org/abs/1410.3338v2"
-version_note = "Cited bytes are arXiv v2, 9 July 2015, 31 PDF pages; journal issue year is 2016. The complex-sector pole-free estimate is an additional calibration input beyond the real-axis result supplied by RandomMatrices §8.5."
-cited_for = ["8.7"]
-
-[[source]]
-id = "GMR23"
-authors = "Ilia Gaiur; Marta Mazzocco; Vladimir Rubtsov"
-title = "Isomonodromic Deformations: Confluence, Reduction and Quantisation"
-year = 2023
-venue = "Communications in Mathematical Physics 400 (2023), 1385–1461"
-doi = "10.1007/s00220-023-04650-8"
-locator_scheme = "theorem"
-locator = "Theorem 2, pp. 1391–1392, (12)–(15), only with the corrected coefficient-index lemma in target 9.1, applied in target 9.5; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1 p.1441, explicitly nonramified"
-url = "https://doi.org/10.1007/s00220-023-04650-8"
-version_note = "Publisher version of record, published 1 March 2023; 77 PDF pages. The article explicitly carries a Creative Commons Attribution 4.0 notice. Printed-page locators are used. Theorem 2 as printed has a pole-rank-raising index defect: C=O(epsilon^(-r)) gives C*P^(r+1)=O(epsilon), so the new coefficient vanishes. The roadmap owns the corrected Laurent lemma. Its negative Lie-Poisson sign is transported by coefficient negation to the positive supplier. Section 5.1 is explicitly nonramified; additional ramified/boundary adapters and analytic limits remain owned targets."
-cited_for = ["9.5", "9.6", "9.7", "9.8", "9.1", "9.2"]
+cited_for = ["6.2", "6.3", "6.4", "6.5", "7.4", "6.1"]
 
 [[source]]
 id = "DLMF"
@@ -311,7 +256,7 @@ locator_scheme = "section"
 locator = "§32.2(i), equations 32.2.1–32.2.6; §§32.6–32.7; §32.9, equations 32.9.6 and 32.9.12"
 url = "https://dlmf.nist.gov/32"
 version_note = "Official page text for §§32.2, 32.6, 32.7 and 32.9 was read through web retrieval on 5 November 2026. The chapter page displayed version 1.2.8, release 15 September 2026. Direct raw-byte retrieval of §32.2 returned HTTP 403; no raw snapshot or SHA-256 is claimed. Uncertified means byte provenance is not certified here, not that the page was unread. This secondary reference supplies standard displays and normalizations, not the intrinsic construction."
-cited_for = ["7.2", "7.3", "7.4", "7.5", "8.4"]
+cited_for = ["7.2", "7.3", "7.4", "7.5"]
 
 [[source]]
 id = "I13"
@@ -324,29 +269,7 @@ locator_scheme = "theorem"
 locator = "Theorems 2.1–2.2, preprint pp. 5–6; regular-singular reconstruction in §1; properness proof in §6"
 url = "https://arxiv.org/abs/math/0602004v2"
 version_note = "The fetched unversioned PDF identifies itself as arXiv math/0602004v2, 6 June 2012, 45 pages, 625670 bytes. Locators use that preprint, not journal pagination. Theorem 2.2 retains exponent parameters by a fiber product and requires the stated genus/rank/pole inequality and generic stability weights. Fixed-determinant specialization is used only after the explicit Cartesian comparison. Certified records inspected bytes/provenance, not mathematical proof completion."
-cited_for = ["4.2", "4.3", "4.4", "2.5", "2.6", "2.7", "2.9", "2.8", "2.10"]
-
-[[source]]
-id = "DLMF5"
-authors = "NIST Digital Library of Mathematical Functions"
-title = "Barnes G-function (Double Gamma Function)"
-url = "https://dlmf.nist.gov/5.17"
-locator_scheme = "equation"
-locator = "5.17.1, 5.17.3, 5.17.5 and 5.17.7"
-version_note = "Use the canonical product and branch-normalized logarithms. The recurrence alone does not determine G."
-cited_for = ["8.4", "8.7"]
-
-[[source]]
-id = "NEM14"
-authors = "Gergő Nemes"
-title = "Error bounds and exponential improvement for the asymptotic expansion of the Barnes G-function"
-year = 2014
-arxiv = "1406.2535v2"
-url = "https://arxiv.org/abs/1406.2535v2"
-locator_scheme = "theorem"
-locator = "Equation (1.1); Theorem 1.2, equation (1.10); proofs §§2–3"
-version_note = "arXiv v2, 20 September 2014. Retain N≥1, the slit-plane logarithm branches and the factor sec(arg(z)/2)^(2N+1)."
-cited_for = ["8.4", "8.7"]
+cited_for = ["4.2", "4.3", "4.4", "2.5", "2.6"]
 
 [[source]]
 id = "SGA1XII"
@@ -401,7 +324,7 @@ url = "https://publications.ias.edu/sites/default/files/Number9.pdf"
 locator_scheme = "section"
 locator = "II §5, Proposition5.4 (extension for a section of ℂ→ℂ/ℤ); Corollary5.6 (nonresonant monodromy/residue comparison); Theorem5.9 (regular-singular algebraic/analytic correspondence); II §6.6 (principal-parts analytification of differential operators and proper hypercohomology comparison), PDF p.103 / printed p.101"
 version_note = "Chosen logarithmic extension is not in general tensor-compatible. General prescribed resonant lattices/flags, their families and determinant comparisons remain explicit owned extensions; do not infer them from a bare equivalence with local systems. II6.6 supplies the exact proof route for bounded complexes with differential-operator differentials: analytify the O-linear principal-parts presentation, then compare the E1 terms of the hypercohomology spectral sequence using proper GAGA."
-cited_for = ["1.2", "1.4", "2.5", "2.6", "2.7"]
+cited_for = ["1.2", "1.4", "2.5", "2.6"]
 
 [[source]]
 id = "ACV03"

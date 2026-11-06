@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import re
 import subprocess
@@ -217,7 +218,7 @@ def table_width_errors(text):
     return errors
 
 
-def organization_inputs(root):
+def organization_inputs(root, current_inputs=None):
     """Check the editorial successor without reassigning historical review receipts."""
     path = root / "reports/submission/organization.json"
     if not path.is_file():
@@ -247,7 +248,8 @@ def organization_inputs(root):
         git_path = "TauCetiRoadmap/PainleveEquationsAndFunctions/" + name
         before = subprocess.check_output(
             ["git", "show", commit + ":" + git_path], cwd=root.parents[1]).decode("utf-8")
-        current = (root / name).read_bytes().decode("utf-8").replace("\r\n", "\n")
+        current = (current_inputs or {}).get(name,
+            (root / name).read_bytes().decode("utf-8").replace("\r\n", "\n"))
         check(name + " baseline fingerprint", sha(before) == record["files"][name]["before_sha256"])
         check(name + " current fingerprint", sha(current) == record["files"][name]["after_sha256"])
         inputs[name] = before
@@ -302,13 +304,21 @@ def organization_inputs(root):
     return inputs, checks
 
 
-def audit_manifest(root=ROOT, use_pandoc=False):
+def audit_manifest(root=ROOT, use_pandoc=False, historical_inputs=None):
     root = Path(root)
+    scope_checks = []
+    if historical_inputs is None and (root / "reports/submission/scope_revision.json").is_file():
+        spec = importlib.util.spec_from_file_location(
+            "painleve_scope_check", Path(__file__).with_name("check_scope_revision.py"))
+        scope_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(scope_module)
+        historical_inputs, scope_checks = scope_module.scope_inputs(root, math_spans)
     manifest_path = root / "reports/submission/math_rendering.json"
     manifest = json.loads(manifest_path.read_text())
     numbering_path = root / "reports/submission/numbering.json"
     numbering = json.loads(numbering_path.read_text())
-    editorial_inputs, checks = organization_inputs(root)
+    editorial_inputs, checks = organization_inputs(root, historical_inputs)
+    checks = scope_checks + checks
     restored, summaries = {}, {}
 
     def check(name, ok, detail=None):

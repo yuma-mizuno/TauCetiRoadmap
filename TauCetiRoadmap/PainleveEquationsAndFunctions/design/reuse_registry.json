@@ -14,8 +14,7 @@
         "0.5",
         "0.6",
         "0.7",
-        "0.8",
-        "0.9"
+        "0.8"
       ]
     },
     {
@@ -40,27 +39,11 @@
     },
     {
       "id": "analytic_theory",
-      "title": "Riemann–Hilbert problems and determinant convergence",
+      "title": "Holomorphic Fredholm determinant lines",
       "scope_role": "framework",
       "owner": "PainleveEquationsAndFunctions:analytic_theory",
       "target_ids": [
-        "6.1",
-        "8.1",
-        "8.2",
-        "8.3",
-        "8.4",
-        "9.3",
-        "9.4"
-      ]
-    },
-    {
-      "id": "algebraic_confluence",
-      "title": "Pole cancellation and finite-algebra Poisson geometry",
-      "scope_role": "framework",
-      "owner": "PainleveEquationsAndFunctions:algebraic_confluence",
-      "target_ids": [
-        "9.1",
-        "9.2"
+        "6.1"
       ]
     },
     {
@@ -104,27 +87,7 @@
         "7.2",
         "7.3",
         "7.4",
-        "7.5",
-        "8.5",
-        "8.6",
-        "8.7",
-        "8.8",
-        "9.5",
-        "9.6",
-        "9.7",
-        "9.8"
-      ]
-    },
-    {
-      "id": "five_point_application",
-      "title": "Five logarithmic points: independent second consumer",
-      "scope_role": "application",
-      "owner": "PainleveEquationsAndFunctions:five_point_application",
-      "target_ids": [
-        "2.7",
-        "2.8",
-        "2.9",
-        "2.10"
+        "7.5"
       ]
     }
   ]

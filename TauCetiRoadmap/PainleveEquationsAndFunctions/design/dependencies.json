@@ -24,17 +24,13 @@
         "0.6",
         "0.7",
         "0.8",
-        "0.9",
         "1.1",
         "1.2",
         "2.2",
         "2.5",
-        "6.1",
-        "9.3",
-        "8.4",
-        "9.1",
         "4.1",
         "5.6",
+        "6.1",
         "6.5"
       ]
     },
@@ -69,12 +65,11 @@
         "3.1–3.5"
       ],
       "supplied": "Finite-dimensional manifolds, charts and smooth local/maximal/time-dependent flows.",
-      "owned_here": "0.2 proves the continuous-time locally uniformly Lipschitz theorem; 0.8 constructs intrinsic jets; 0.9 proves finite-chart stability and no exit.",
-      "supplied_ja": "有限次元多様体・チャート・滑らかな局所／極大／時間依存flow。連続時間・相変数局所一様Lipschitzの定理は0.2、一階jetは0.8、有限チャートの収束は0.9で証明する。",
+      "owned_here": "0.2 proves the continuous-time locally uniformly Lipschitz theorem; 0.8 constructs intrinsic jets.",
+      "supplied_ja": "有限次元多様体・チャート・滑らかな局所／極大／時間依存flow。連続時間・相変数局所一様Lipschitzの定理は0.2、一階jetは0.8で証明する。",
       "consumers": [
         "0.2",
-        "0.8",
-        "0.9"
+        "0.8"
       ]
     },
     {
@@ -192,7 +187,6 @@
         "1.4",
         "1.5",
         "1.6",
-        "9.2",
         "5.3",
         "6.3"
       ]
@@ -231,12 +225,11 @@
         "L2A–L2B"
       ],
       "supplied": "Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence.",
-      "owned_here": "Meromorphic connections and analytification are 1.1–1.2; relative dual Poisson geometry is 9.2.",
-      "supplied_ja": "有限局所自由層、双対・テンソル・行列式、相対Specと幾何学的ベクトル束との同値。接続と解析化は1.1–1.2、相対Poisson構成は9.2が担う。",
+      "owned_here": "Meromorphic connections and analytification are 1.1–1.2.",
+      "supplied_ja": "有限局所自由層、双対・テンソル・行列式、相対Specと幾何学的ベクトル束との同値。接続と解析化は1.1–1.2が担う。",
       "consumers": [
         "1.1",
         "1.6",
-        "9.2",
         "5.1",
         "5.4"
       ]
@@ -347,11 +340,10 @@
         "L5–L6 for finite-extension steps in 1.1"
       ],
       "supplied": "Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra.",
-      "owned_here": "1.1 proves differential-module Levelt–Turrittin/descent; 9.1 proves the convergent-germ and compact-uniform cancellation adapter. Formal valuation convergence is not analytic convergence.",
-      "supplied_ja": "形式代入・連続微分・有限次元HahnModule・留数・分岐と有限拡大の代数。微分加群標準形は1.1、収束芽の極相殺と一様極限は9.1が証明する。",
+      "owned_here": "1.1 proves differential-module Levelt–Turrittin decomposition and descent.",
+      "supplied_ja": "形式代入・連続微分・有限次元HahnModule・留数・分岐と有限拡大の代数。微分加群標準形と降下は1.1が担う。",
       "consumers": [
         "1.1",
-        "9.1",
         "3.4",
         "7.3"
       ]
@@ -392,64 +384,10 @@
         "analyticAt_inverse_one_sub"
       ],
       "supplied": "Analytic inversion on units of a complete normed algebra and the small-norm inverse.",
-      "owned_here": "6.1 and 8.2 prove the actual family-to-operator maps and uniform estimates.",
-      "supplied_ja": "完備ノルム代数の可逆元における解析的逆写像。実際の族から作用素への写像と一様評価は6.1/8.2で証明する。",
+      "owned_here": "6.1 proves the actual holomorphic family-to-operator maps used in stabilization.",
+      "supplied_ja": "完備ノルム代数の可逆元における解析的逆写像。安定化に用いる実際の正則族と作用素の比較は6.1が証明する。",
       "consumers": [
-        "6.1",
-        "8.2"
-      ]
-    },
-    {
-      "id": "lp",
-      "title": "Native Lp, Fourier and integral calculus",
-      "paths": [
-        "Mathlib/Analysis/Fourier/LpSpace.lean",
-        "Mathlib/MeasureTheory/Function/Holder.lean"
-      ],
-      "sections": [
-        "Complex L²/Fourier–Plancherel",
-        "Hölder and dominated convergence on the native measure/integral carrier"
-      ],
-      "supplied": "Native complex Lp spaces, Fourier–Plancherel, Hölder inequalities and integral convergence.",
-      "owned_here": "8.1 constructs contour measure/coordinate comparisons; 8.3 proves weighted moment and uniform-tail statements.",
-      "supplied_ja": "既存の複素Lp、Fourier–Plancherel、Hölder不等式、積分収束。積分路の比較は8.1、重み付きモーメントと裾の一様性は8.3が担う。",
-      "consumers": [
-        "8.1",
-        "8.3"
-      ]
-    },
-    {
-      "id": "hilbert-transform",
-      "title": "Real-line Hilbert transform",
-      "paths": [
-        "TauCetiRoadmap/PDE/README.md"
-      ],
-      "sections": [
-        "2.3/B10"
-      ],
-      "supplied": "The real-line Cauchy/Hilbert multiplier −i sign(ξ), with L² norm one.",
-      "owned_here": "8.1 proves finite-arc/ray transport, the weighted cross-branch Schur bound, Plemelj and endpoint reconstruction.",
-      "supplied_ja": "実直線のHilbert変換とL²ノルム1の乗算子表示。分岐間の重み付きSchur評価・Plemelj・端点復元は8.1が証明する。",
-      "consumers": [
-        "8.1"
-      ]
-    },
-    {
-      "id": "cauchy",
-      "title": "Native contour and Schur foundations",
-      "paths": [
-        "TauCeti/Analysis/Contour/Cauchy/IntegralFormula.lean",
-        "TauCeti/MeasureTheory/Integral/SchurTest.lean"
-      ],
-      "sections": [
-        "Cauchy integral formula",
-        "Unweighted Schur estimates"
-      ],
-      "supplied": "Cauchy integral formula for the stated native contours and unweighted integral-kernel estimates.",
-      "owned_here": "8.1 proves its full contour package; the 1/(s+t) vertex kernel requires the weighted theorem specified there.",
-      "supplied_ja": "指定された既存積分路のCauchy公式と重みなしSchur評価。1/(s+t)の頂点核に必要な重み付き定理は8.1が証明する。",
-      "consumers": [
-        "8.1"
+        "6.1"
       ]
     },
     {
@@ -464,10 +402,9 @@
         "OI-B29–OI-B30"
       ],
       "supplied": "Normed complete trace-class ideal, nuclear gauge and two-sided ideal estimates.",
-      "owned_here": "9.4 constructs the holomorphic-family adapter; 6.3 verifies actual trace-class realizations where used.",
-      "supplied_ja": "完備なトレースクラス・イデアルとノルム評価。正則族は9.4、実際のRHPからの実現は6.3が担う。",
+      "owned_here": "6.3–6.4 verify actual trace-class realizations and their trace-norm holomorphic dependence where used.",
+      "supplied_ja": "完備なトレースクラス・イデアルとノルム評価。実際のRHPからの実現と、そのトレースノルムでの正則依存性は6.3–6.4が担う。",
       "consumers": [
-        "9.4",
         "6.3"
       ]
     },
@@ -481,10 +418,9 @@
         "8.3, generic operator-theory prefix"
       ],
       "supplied": "Trace, exterior powers, generic Fredholm determinant series and trace-norm continuity before the positive-kernel point-process specialization.",
-      "owned_here": "9.4 proves holomorphic dependence and uniform convergence. 6.4 proves its actual logarithmic derivative and integrable-kernel comparison.",
-      "supplied_ja": "正の核への特殊化以前の一般的なトレース・外冪・Fredholm行列式級数・トレースノルム連続性。正則依存は9.4、変分比較は6.4で証明する。",
+      "owned_here": "6.4 proves the logarithmic derivative, its holomorphic-family hypotheses and the integrable-kernel comparison.",
+      "supplied_ja": "正の核への特殊化以前の一般的なトレース・外冪・Fredholm行列式級数・トレースノルム連続性。正則族の仮定と変分比較は6.4が担う。",
       "consumers": [
-        "9.4",
         "6.3",
         "6.4"
       ]
@@ -506,45 +442,6 @@
       ]
     },
     {
-      "id": "rouche",
-      "title": "Native Rouché and zero counts",
-      "paths": [
-        "TauCeti/Analysis/Complex/Conformal/Rouche.lean",
-        "TauCeti/Analysis/Analytic/ZeroCount.lean"
-      ],
-      "sections": [
-        "rouche",
-        "rouche_nullHomologous",
-        "Multiplicity zero-count carrier"
-      ],
-      "supplied": "Disc and null-homologous piecewise C¹ contour Rouché theorems and zero multiplicities.",
-      "owned_here": "9.4 supplies the actual boundary cycle and winding characterization for its general domain theorem.",
-      "supplied_ja": "円板・零ホモローグな区分的C¹閉曲線のRouchéと零点重複度。一般領域の境界サイクルと回転数は9.4で構成する。",
-      "consumers": [
-        "9.4"
-      ]
-    },
-    {
-      "id": "meromorphic-germs",
-      "title": "Native convergent meromorphic germs",
-      "paths": [
-        "TauCeti/Analysis/Meromorphic/Germ.lean",
-        "TauCeti/Analysis/Meromorphic/PrincipalPart.lean"
-      ],
-      "sections": [
-        "meromorphicGerms.principalPart",
-        "principalPart_eq_iff",
-        "principalPart_eq_sum_coeff",
-        "Analytic regular remainder"
-      ],
-      "supplied": "Scalar convergent meromorphic germs, finite principal parts and holomorphic remainders.",
-      "owned_here": "9.1 supplies finite-dimensional coefficient comparison, the cancellation identity and compact-uniform parameter limits.",
-      "supplied_ja": "スカラーの収束有理型芽・有限主要部・正則剰余。有限次元係数と極相殺・パラメータ一様極限は9.1が担う。",
-      "consumers": [
-        "9.1"
-      ]
-    },
-    {
       "id": "curve-functions",
       "title": "Native meromorphic functions on Riemann surfaces",
       "paths": [
@@ -560,81 +457,6 @@
       "supplied_ja": "Riemann面からOnePoint ℂへの正則写像と恒等的無限大を除く証人、引戻し・位数。相空間の観測許容性とスカラー降下は0.7が証明し、同じ関数の対象を用いる。",
       "consumers": [
         "0.7"
-      ]
-    },
-    {
-      "id": "poisson",
-      "title": "Smooth real linear Poisson signs",
-      "paths": [
-        "TauCetiRoadmap/LieGroupoidsPoisson/README.md"
-      ],
-      "sections": [
-        "G4.6A"
-      ],
-      "supplied": "Positive/negative real Lie–Poisson conventions and fiber-negation comparison.",
-      "owned_here": "9.2 constructs the complex relative O_B-Lie and symmetric-algebra bracket, residue pairing and base change.",
-      "supplied_ja": "実Lie–Poissonの正負規約とファイバー符号反転。複素相対括弧・留数対・基底変換は9.2が構成する。",
-      "consumers": [
-        "9.2"
-      ]
-    },
-    {
-      "id": "reduction",
-      "title": "Smooth real KKS and regular reduction",
-      "paths": [
-        "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md"
-      ],
-      "sections": [
-        "R2",
-        "R3"
-      ],
-      "supplied": "Smooth real coadjoint/KKS geometry and regular free proper Hamiltonian reduction.",
-      "owned_here": "9.5 proves actual complex quotient existence, orbit flatness and collision comparisons; 9.2 transports already verified data.",
-      "supplied_ja": "実滑らかなKKSと正則・自由・固有なHamilton簡約。複素商の存在・軌道の平坦性・衝突の比較は9.5が証明する。",
-      "consumers": [
-        "9.5"
-      ]
-    },
-    {
-      "id": "airy-hm",
-      "title": "Airy, Fredholm and Hastings–McLeod theory",
-      "paths": [
-        "TauCetiRoadmap/RandomMatrices/README.md"
-      ],
-      "sections": [
-        "8.4",
-        "8.5"
-      ],
-      "supplied": "Airy normalization and tails, scalar Hastings–McLeod existence/uniqueness, real pole-freeness and F1/F2 identities.",
-      "owned_here": "8.8 constructs the intrinsic phase-point/jet bridge. 8.7 proves its tau normalization, sectorial calibration and selected connection constants.",
-      "supplied_ja": "Airyの正規化と裾、Hastings–McLeod解の存在一意性・実軸上の無極性・F1/F2恒等式。内在的な解への橋渡しは8.8、接続定数は8.7が担う。",
-      "consumers": [
-        "8.7",
-        "8.8"
-      ]
-    },
-    {
-      "id": "gamma",
-      "title": "Native Gamma, Bernoulli and analytic carriers",
-      "paths": [
-        "Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean",
-        "Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean",
-        "Mathlib/Analysis/SpecialFunctions/Gamma/Deriv.lean",
-        "Mathlib/NumberTheory/Bernoulli.lean",
-        "Mathlib/NumberTheory/BernoulliPolynomials.lean"
-      ],
-      "sections": [
-        "Complex.Gamma",
-        "GammaSeq_tendsto_Gamma",
-        "Gamma_ne_zero",
-        "Real.eulerMascheroniConstant",
-        "Bernoulli numbers/polynomials"
-      ],
-      "supplied": "Gamma and its pole-free analytic theory, Euler–Mascheroni constant, Bernoulli coefficients and native complex analysis.",
-      "owned_here": "8.4 constructs Barnes G, canonical normalization, zero divisor, logarithm branches and the explicit sectorial remainder.",
-      "supplied_ja": "既存Gammaと極を除く解析理論、Euler定数、Bernoulli係数。Barnes G・標準正規化・零因子・枝・明示剰余は8.4で構成する。",
-      "consumers": [
-        "8.4"
       ]
     },
     {

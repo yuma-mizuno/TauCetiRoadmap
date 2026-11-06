@@ -2,7 +2,7 @@
 
 Construct differential Painlevé equations as flat nonlinear connections on moduli spaces of decorated meromorphic connections, and Painlevé functions as their horizontal sections and admissible observations. Prove their properties from those constructions. The classical scalar equations, Hamiltonians and linear systems are coordinate comparison theorems.
 
-The roadmap contains 78 construction and theorem targets in 10 layers: 30 targets of reusable general theory, 44 targets for the classical Painlevé application, and four targets for a five-logarithmic-point application with two time variables and four-dimensional phase fibers.
+The roadmap contains 57 construction and theorem targets in eight layers: 21 targets of reusable general theory and 36 targets for the classical Painlevé application.
 
 [日本語版](README.ja.md) · [Structured mathematical plan](design/plan.json) · [External dependency contracts](design/dependencies.json)
 
@@ -12,39 +12,35 @@ Each layer develops one mathematical construction or theorem package. General re
 
 | Layer | Mathematical development | Targets |
 |---:|---|---:|
-| [0](#layer-0) | Nonlinear connections and their solutions | 9 |
+| [0](#layer-0) | Nonlinear connections and their solutions | 8 |
 | [1](#layer-1) | Moduli of decorated meromorphic connections | 6 |
-| [2](#layer-2) | Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence | 10 |
+| [2](#layer-2) | Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence | 6 |
 | [3](#layer-3) | Phase spaces and isomonodromic deformations of Painlevé equations | 12 |
 | [4](#layer-4) | Riemann–Hilbert comparison and the Painlevé property | 9 |
 | [5](#layer-5) | Initial-condition surfaces, symmetries and Riccati reductions | 6 |
 | [6](#layer-6) | Determinant lines and tau sections | 5 |
 | [7](#layer-7) | Classical forms of Painlevé equations | 5 |
-| [8](#layer-8) | Riemann–Hilbert asymptotics and distinguished solutions | 8 |
-| [9](#layer-9) | Confluence and convergence | 8 |
 
 <a id="general-theory"></a>
 
 ## General theory and applications
 
-All 78 targets, including each theorem with additional hypotheses, are in scope. The hypotheses state when a conclusion holds; they do not make its proof discretionary. Mathematical constructions, their basic APIs, comparison maps and specified examples belong to the same target.
+All 57 targets, including each theorem with additional hypotheses, are in scope. The hypotheses state when a conclusion holds; they do not make its proof discretionary. Mathematical constructions, their basic APIs, comparison maps and specified examples belong to the same target.
 
 | Reusable general theory | Targets |
 |---|---|
-| Nonlinear connections, solutions, transport, observations, jets and convergence | 0.1–0.9 |
+| Nonlinear connections, solutions, transport, observations and jets | 0.1–0.8 |
 | Moduli of decorated meromorphic connections | 1.1–1.6 |
 | Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence | 2.1–2.6 |
 | Determinant lines of holomorphic Fredholm families | 6.1 |
-| Cauchy operators, small-norm RHPs, weighted moments and Barnes G | 8.1–8.4 |
-| Pole cancellation, finite-algebra Poisson geometry, section and determinant convergence | 9.1–9.4 |
 
-These 30 targets have no transitive prerequisite in either application. The independent five-point application consists of targets 2.7–2.10 and has no Painlevé prerequisite. The remaining 44 targets form the Painlevé application. Its intrinsic constructions and properties in Layers 3–6 do not depend on the classical coordinate comparisons in Layer 7. Sharing a layer adds no dependency. Phase spaces, connections and forms are constructed before their properties are proved.
+These 21 targets have no transitive prerequisite in the Painlevé application. The remaining 36 targets form that application. Its intrinsic constructions and properties in Layers 3–6 do not depend on the classical coordinate comparisons in Layer 7. Sharing a layer adds no dependency. Phase spaces, connections and forms are constructed before their properties are proved.
 
 An existing roadmap supplies only the results specified in the external dependency contracts. Additional constructions have named proof owners here. Applications use the same general objects, morphisms and pullbacks and prove their hypotheses and comparisons.
 
 ## Addresses and conventions
 
-Layers are numbered consecutively from 0 to 9. A target identifier consists of its layer and its consecutive position within that layer, for example 0.1 and 0.2. Structured internal references have the form target:0.1; all internal references are global. Literature and supplier-roadmap sections retain their source numbering. Each target states its hypotheses, conclusions and comparison laws.
+Layers are numbered consecutively from 0 to 7. A target identifier consists of its layer and its consecutive position within that layer, for example 0.1 and 0.2. Structured internal references have the form target:0.1; all internal references are global. Literature and supplier-roadmap sections retain their source numbering. Each target states its hypotheses, conclusions and comparison laws.
 
 <a id="external-dependencies"></a>
 ## External dependency contracts
@@ -55,7 +51,7 @@ A roadmap reference supplies its stated construction or theorem, with its hypoth
 |---|---|---|
 | <a id="dependency-complex"></a>complex | [ComplexKahlerGeometry](../../TauCetiRoadmap/ComplexKahlerGeometry/README.md) — K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1 | Complex inverse/implicit-function and tangent calculus; holomorphic germs and one-variable meromorphic germs; holomorphic bundle/sheaf equivalence and nonsingular flat connections/local systems; projective charts. The nonlinear-connection theory owns nonlinear connections, holomorphic ODEs, transport and observations. The meromorphic-moduli theory owns meromorphic/analytic-moduli comparisons. K4 does not supply algebraic analytification. |
 | <a id="dependency-smooth"></a>smooth | [SmoothBundlesConnections](../../TauCetiRoadmap/SmoothBundlesConnections/README.md) — B1.5; B5.0; B5.2 | Smooth Ehresmann splittings, proper-submersion and principal-connection transport within their respective hypotheses. 0.1–0.5 own nonlinear connection objects, continuous-time local lifting, holomorphic parameter dependence and complete nonlinear transport. No properness of the phase projection is assumed. |
-| <a id="dependency-differential"></a>differential | [DifferentialGeometry](../../TauCetiRoadmap/DifferentialGeometry/README.md) — Layers 0–1; 3.1–3.5 | Finite-dimensional manifolds, charts and smooth local/maximal/time-dependent flows. 0.2 proves the continuous-time locally uniformly Lipschitz theorem; 0.8 constructs intrinsic jets; 0.9 proves finite-chart stability and no exit. |
+| <a id="dependency-differential"></a>differential | [DifferentialGeometry](../../TauCetiRoadmap/DifferentialGeometry/README.md) — Layers 0–1; 3.1–3.5 | Finite-dimensional manifolds, charts and smooth local/maximal/time-dependent flows. 0.2 proves the continuous-time locally uniformly Lipschitz theorem; 0.8 constructs intrinsic jets. |
 | <a id="dependency-frobenius"></a>frobenius | `TauCeti.Analysis.ODE.Frobenius` — TauCeti.exists_frobenius_flat_coordinate | For a finite-dimensional real integrable graph field, a local product OpenPartialHomeomorph with a smooth inverse and the prescribed horizontal derivatives, at the stated regularity. 0.5 constructs the submersion-chart graph field, proves curvature implies its integrability, and glues these local products for homotopy-invariant transport. 0.3 supplies the holomorphic counterpart. |
 | <a id="dependency-covers"></a>covers | [Completed/UniversalCovers](../../Completed/UniversalCovers/README.md) — Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8 | Native covering, path and homotopy lifting, universal covers and their fundamental-group interfaces. 0.5 constructs the nonlinear action and horizontal descent; general-cover descent uses the actual fiber relation, not deck invariance without normality. |
 | <a id="dependency-curves"></a>curves | [ComplexCurveModuli](../../TauCetiRoadmap/ComplexCurveModuli/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15 | Genus-zero Möbius normalization and supported point-pushing; stable marked-curve deformation charts in the stable range. 1.2 constructs unstable one-/two-pointed quotient charts, finite jets, local markings and determinant transport. Its analytic category is constructed there; D2.0 is only an instance comparison. |
@@ -64,35 +60,24 @@ A roadmap reference supplies its stated construction or theorem, with its hypoth
 | <a id="dependency-quot"></a>quot | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.14 | Noetherian projective Quot/Hilbert and Hom/Isom parameter spaces with their stated base-change laws. 1.3 proves boundedness, the equations and stability/GIT comparison. Analytic pullbacks use 1.2. |
 | <a id="dependency-cohomology"></a>cohomology | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.2; 2.6; 2.20; 3.3 | Čech and sheaf cohomology, coherent terms, relative/Serre duality, degrees and curve Riemann–Roch at the stated hypotheses. 1.4 constructs C-linear differential-operator hypercohomology and the ramified cone; coherent underlying terms do not make its differential O-linear. |
 | <a id="dependency-deformation"></a>deformation | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.2–4.6 | Artinian coefficients, deformation functors, hulls and elementary small-extension obstruction calculations. 1.4 constructs actual connection cocycles, the needed arbitrary finite square-zero kernels and framed versality; 2.1 constructs strong horizontal extensions. |
-| <a id="dependency-bundles"></a>bundles | [AlgebraicVectorBundles](../../TauCetiRoadmap/AlgebraicVectorBundles/README.md) — L0A–L0C; L1A–L1B; L2A–L2B | Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence. Meromorphic connections and analytification are 1.1–1.2; relative dual Poisson geometry is 9.2. |
+| <a id="dependency-bundles"></a>bundles | [AlgebraicVectorBundles](../../TauCetiRoadmap/AlgebraicVectorBundles/README.md) — L0A–L0C; L1A–L1B; L2A–L2B | Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence. Meromorphic connections and analytification are 1.1–1.2. |
 | <a id="dependency-analytic-coherence"></a>analytic-coherence | [RealAnalyticGeometry](../../TauCetiRoadmap/RealAnalyticGeometry/README.md) — R3.2 item 0 | Coherent analytic module-sheaf carriers and local calculus on the supplied analytic manifold structure sheaf. 1.2 constructs general complex analytic spaces, nilpotent quotients, analytification and GAGA comparisons. |
 | <a id="dependency-proper-cohomology"></a>proper-cohomology | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md) — Layer C | Proper coherent pushforwards and separately stated flat-base-change and cohomology/base-change criteria; Grauert under its reduced-base and constant-rank assumptions. 1.5 proves the relative Picard extension; 5.3 verifies boundary-coefficient flatness and the exact locally free/arbitrary-base-change criterion. |
 | <a id="dependency-chow"></a>chow | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.12, `chow_lemma` only; 0.9 and 4.11 | For a separated finite-type morphism to a Noetherian base, a projective modification with quasi-projective source over that base; the source is projective when the original morphism is proper. 1.2 uses this subtarget with coherent cohomology and proper direct images for the proper GAGA argument. The separate flattening and StableReduction branch of 4.12 is not a prerequisite. |
 | <a id="dependency-field-picard"></a>field-picard | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14 | Picard representability for projective geometrically integral schemes over a field, smooth-curve Jacobians, line-bundle descent and deformation. 1.5 constructs relative Picard under projective flat finite presentation and universal functions, including nonreduced curves; 5.1 verifies its boundary hypotheses. |
 | <a id="dependency-supports"></a>supports | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.7 | Supported cohomology, localization/excision and the Noetherian colimit-of-Ext comparison with native local cohomology. 5.3 constructs its first boundary layer, injection and time-line comparison; it does not identify all supported cohomology with that line. |
 | <a id="dependency-surfaces"></a>surfaces | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 3.4; 4.11; 4.17; 5.9–5.10 | Divisor/Picard groups, blowups and strict transforms, normal crossings, surface intersection/adjunction and lattice theory. 5.1–5.3 construct the nonreduced anticanonical boundary, relative logarithmic deformation and family comparisons; targets 5.4–5.6 construct the geometric transformations. |
-| <a id="dependency-formal-series"></a>formal-series | [FormalLaurentPuiseux](../../TauCetiRoadmap/FormalLaurentPuiseux/README.md) — L1–L4; L5–L6 for finite-extension steps in 1.1 | Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra. 1.1 proves differential-module Levelt–Turrittin/descent; 9.1 proves the convergent-germ and compact-uniform cancellation adapter. Formal valuation convergence is not analytic convergence. |
+| <a id="dependency-formal-series"></a>formal-series | [FormalLaurentPuiseux](../../TauCetiRoadmap/FormalLaurentPuiseux/README.md) — L1–L4; L5–L6 for finite-extension steps in 1.1 | Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra. 1.1 proves differential-module Levelt–Turrittin decomposition and descent. |
 | <a id="dependency-fredholm"></a>fredholm | `Mathlib.Analysis.Normed.Operator.Fredholm.Basic`; `TauCeti.Analysis.Fredholm.Stabilization`; `TauCeti.Analysis.Normed.Operator.Splitting.Family`; `TauCeti.LinearAlgebra.Determinant.Line` — IsFredholm; nonempty_fredholmPackage; exists_stabilization_kernel_coordinates; kernelHomeomorph; contDiffAt_kerSection; detLine; detLineCongr | Scalar-generic finite-dimensional kernel/cokernel, stabilization coordinates and pointwise determinant-line comparisons; specialize over ℂ and dualize the convention. 6.1 constructs the holomorphic family, canonical section, transition cocycle and base-change laws. |
-| <a id="dependency-inversion"></a>inversion | `Mathlib.Analysis.Analytic.Constructions` — analyticAt_inverse; analyticAt_inverse_one_sub | Analytic inversion on units of a complete normed algebra and the small-norm inverse. 6.1 and 8.2 prove the actual family-to-operator maps and uniform estimates. |
-| <a id="dependency-lp"></a>lp | `Mathlib.Analysis.Fourier.LpSpace`; `Mathlib.MeasureTheory.Function.Holder` — Complex L²/Fourier–Plancherel; Hölder and dominated convergence on the native measure/integral carrier | Native complex Lp spaces, Fourier–Plancherel, Hölder inequalities and integral convergence. 8.1 constructs contour measure/coordinate comparisons; 8.3 proves weighted moment and uniform-tail statements. |
-| <a id="dependency-hilbert-transform"></a>hilbert-transform | [PDE](../../TauCetiRoadmap/PDE/README.md) — 2.3/B10 | The real-line Cauchy/Hilbert multiplier −i sign(ξ), with L² norm one. 8.1 proves finite-arc/ray transport, the weighted cross-branch Schur bound, Plemelj and endpoint reconstruction. |
-| <a id="dependency-cauchy"></a>cauchy | `TauCeti.Analysis.Contour.Cauchy.IntegralFormula`; `TauCeti.MeasureTheory.Integral.SchurTest` — Cauchy integral formula; Unweighted Schur estimates | Cauchy integral formula for the stated native contours and unweighted integral-kernel estimates. 8.1 proves its full contour package; the 1/(s+t) vertex kernel requires the weighted theorem specified there. |
-| <a id="dependency-trace-ideal"></a>trace-ideal | [OperatorTheory/OperatorIdeals](../../TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md) — OI-B01–OI-B19; OI-B23; OI-B29–OI-B30 | Normed complete trace-class ideal, nuclear gauge and two-sided ideal estimates. 9.4 constructs the holomorphic-family adapter; 6.3 verifies actual trace-class realizations where used. |
-| <a id="dependency-trace-determinant"></a>trace-determinant | [RandomMatrices](../../TauCetiRoadmap/RandomMatrices/README.md) — 8.3, generic operator-theory prefix | Trace, exterior powers, generic Fredholm determinant series and trace-norm continuity before the positive-kernel point-process specialization. 9.4 proves holomorphic dependence and uniform convergence. 6.4 proves its actual logarithmic derivative and integrable-kernel comparison. |
+| <a id="dependency-inversion"></a>inversion | `Mathlib.Analysis.Analytic.Constructions` — analyticAt_inverse; analyticAt_inverse_one_sub | Analytic inversion on units of a complete normed algebra and the small-norm inverse. 6.1 proves the actual holomorphic family-to-operator maps used in stabilization. |
+| <a id="dependency-trace-ideal"></a>trace-ideal | [OperatorTheory/OperatorIdeals](../../TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md) — OI-B01–OI-B19; OI-B23; OI-B29–OI-B30 | Normed complete trace-class ideal, nuclear gauge and two-sided ideal estimates. 6.3–6.4 verify actual trace-class realizations and their trace-norm holomorphic dependence where used. |
+| <a id="dependency-trace-determinant"></a>trace-determinant | [RandomMatrices](../../TauCetiRoadmap/RandomMatrices/README.md) — 8.3, generic operator-theory prefix | Trace, exterior powers, generic Fredholm determinant series and trace-norm continuity before the positive-kernel point-process specialization. 6.4 proves the logarithmic derivative, its holomorphic-family hypotheses and the integrable-kernel comparison. |
 | <a id="dependency-toeplitz"></a>toeplitz | [OperatorTheory/ToeplitzOperators](../../TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md) — T1–T3 | Circle Hardy models and Fredholm index equal to minus determinant winding for continuous invertible matrix symbols. 6.3 constructs contour/Hardy, holomorphic-family, index-zero, resonant and ramified adapters. Index zero alone does not imply invertibility. |
-| <a id="dependency-rouche"></a>rouche | `TauCeti.Analysis.Complex.Conformal.Rouche`; `TauCeti.Analysis.Analytic.ZeroCount` — rouche; rouche_nullHomologous; Multiplicity zero-count carrier | Disc and null-homologous piecewise C¹ contour Rouché theorems and zero multiplicities. 9.4 supplies the actual boundary cycle and winding characterization for its general domain theorem. |
-| <a id="dependency-meromorphic-germs"></a>meromorphic-germs | `TauCeti.Analysis.Meromorphic.Germ`; `TauCeti.Analysis.Meromorphic.PrincipalPart` — meromorphicGerms.principalPart; principalPart_eq_iff; principalPart_eq_sum_coeff; Analytic regular remainder | Scalar convergent meromorphic germs, finite principal parts and holomorphic remainders. 9.1 supplies finite-dimensional coefficient comparison, the cancellation identity and compact-uniform parameter limits. |
 | <a id="dependency-curve-functions"></a>curve-functions | `TauCeti.Analysis.Complex.RiemannSurface.FunctionField`; `TauCeti.Analysis.Complex.RiemannSurface.FunctionField.Comap` — TauCeti.RiemannSurface.MeromorphicFunction; Nonconstant curve pullback and order comparison | Holomorphic maps from a Riemann surface to OnePoint ℂ with a witness excluding the constant-infinity map; native pullback and orders. 0.7 proves phase-observation admissibility and scalar descent; its scalar output uses this same carrier. |
-| <a id="dependency-poisson"></a>poisson | [LieGroupoidsPoisson](../../TauCetiRoadmap/LieGroupoidsPoisson/README.md) — G4.6A | Positive/negative real Lie–Poisson conventions and fiber-negation comparison. 9.2 constructs the complex relative O_B-Lie and symmetric-algebra bracket, residue pairing and base change. |
-| <a id="dependency-reduction"></a>reduction | [SymplecticGeometry/HamiltonianReduction](../../TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md) — R2; R3 | Smooth real coadjoint/KKS geometry and regular free proper Hamiltonian reduction. 9.5 proves actual complex quotient existence, orbit flatness and collision comparisons; 9.2 transports already verified data. |
-| <a id="dependency-airy-hm"></a>airy-hm | [RandomMatrices](../../TauCetiRoadmap/RandomMatrices/README.md) — 8.4; 8.5 | Airy normalization and tails, scalar Hastings–McLeod existence/uniqueness, real pole-freeness and F1/F2 identities. 8.8 constructs the intrinsic phase-point/jet bridge. 8.7 proves its tau normalization, sectorial calibration and selected connection constants. |
-| <a id="dependency-gamma"></a>gamma | `Mathlib.Analysis.SpecialFunctions.Gamma.Basic`; `Mathlib.Analysis.SpecialFunctions.Gamma.Beta`; `Mathlib.Analysis.SpecialFunctions.Gamma.Deriv`; `Mathlib.NumberTheory.Bernoulli`; `Mathlib.NumberTheory.BernoulliPolynomials` — Complex.Gamma; GammaSeq_tendsto_Gamma; Gamma_ne_zero; Real.eulerMascheroniConstant; Bernoulli numbers/polynomials | Gamma and its pole-free analytic theory, Euler–Mascheroni constant, Bernoulli coefficients and native complex analysis. 8.4 constructs Barnes G, canonical normalization, zero divisor, logarithm branches and the explicit sectorial remainder. |
 | <a id="dependency-proper"></a>proper | `Mathlib.Topology.Maps.Proper.Basic` — IsProperMap | Topological proper maps and the compact-preimage and base-change properties under their actual topological hypotheses. 0.4 proves complete-lift transfer. 1.2 proves analytic/algebraic comparison; 4.4 proves properness of the actual RH family. |
 
 ### Supporting primary sources
 
-- **DLMF5.** NIST Digital Library of Mathematical Functions. [Barnes G-function (Double Gamma Function)](https://dlmf.nist.gov/5.17). 5.17.1, 5.17.3, 5.17.5 and 5.17.7.
-- **NEM14.** Gergő Nemes. [Error bounds and exponential improvement for the asymptotic expansion of the Barnes G-function](https://arxiv.org/abs/1406.2535v2). Equation (1.1); Theorem 1.2, equation (1.10); proofs §§2–3.
 - **SGA1XII.** A. Grothendieck et al.; Exposé XII by M. Raynaud. [Revêtements étales et groupe fondamental (SGA 1), Exposé XII: Géométrie algébrique et géométrie analytique](https://arxiv.org/pdf/math/0206203v2). XII Theorem and Definition 1.1 (analytification); §2 (coherent sheaf comparison); §3.1 (morphism properties, including properness); Theorem 4.2 (proper relative direct-image comparison); Corollary 4.3 (cohomology); Theorem 4.4 (proper coherent GAGA).
 - **SERREGAGA.** J.-P. Serre. [Géométrie algébrique et géométrie analytique](https://www.numdam.org/article/AIF_1956__6__1_0.pdf). §§1–2; §3 no.12 Theorems1–3 and proofs nos.13–17.
 - **GR84.** H. Grauert and R. Remmert. [Coherent Analytic Sheaves](https://link.springer.com/book/10.1007/978-3-642-69582-7). Chapter I, Complex Spaces (pp.1–37); Chapter X, Direct Image Theorem (pp.188–222).
@@ -122,9 +107,8 @@ This is an independently reusable part of the single roadmap, recorded in its on
 | 0.6 | Closed-total-form criterion and symplectic transport | Fiberwise closedness and nondegeneracy, then the stated preservation or closedness hypothesis |
 | 0.7 | Admissible evaluation and scalar descent | An actual admissible observation on a complex curve |
 | 0.8 | Intrinsic first-jet scalarization | An observation and a proved local jet isomorphism |
-| 0.9 | Finite-chart convergence with existence and no exit | Common domains, positive margins, uniform field bounds and matched initial data |
 
-The dependency graph deliberately does not route scalarization through symplectic geometry or global continuation. Likewise, the proper-semiconjugacy theorem does not require flatness, while fundamental-groupoid transport does. Meromorphic evaluation can be used for any holomorphic map from a curve, without first proving completeness of a connection. Compact-path convergence does not depend on a collision or confluence construction; that construction is responsible for verifying its common-domain hypotheses.
+The dependency graph deliberately does not route scalarization through symplectic geometry or global continuation. Likewise, the proper-semiconjugacy theorem does not require flatness, while fundamental-groupoid transport does. Meromorphic evaluation can be used for any holomorphic map from a curve, without first proving completeness of a connection.
 
 ### Regularity assumptions
 
@@ -441,53 +425,6 @@ Prove naturality under actual connection and observation-bundle isomorphisms, an
 
 **Source scope.** Generic first-jet construction and chain-rule proof. VDPS09 §4.1 and its displayed classical systems are downstream examples of the coordinate lemma, not assumptions or a definition of the scalarized dynamics.
 
-<a id="target-0-9"></a>
-### 0.9 Finite-chart solution convergence and a no-exit argument
-
-**General theory.**
-
-Let $`I=[a,b]`$ be compact, let $`M`$ be a fixed finite-dimensional smooth manifold, and let $`F_\varepsilon(t,\cdot)`$ be actual time-dependent tangent fields on common domains, for parameters $`\varepsilon`$ near $`0`$ in a metric parameter space. Fields are continuous in time and locally uniformly Lipschitz in phase. If phase spaces vary, the application must first supply actual common identifications and verify these hypotheses for the transported fields. Let $`x_0:I\to M`$ be an existing solution for $`F_0`$.
-
-Assume a finite subdivision $`a=a_0<\cdots<a_N=b`$ and common phase charts such that, in each chart, the closed tube $`\{(t,y):t\in I_j,\ \|y-x_{0,j}(t)\|\le r_j\}`$, with a fixed $`r_j>0`$, is compactly contained in a larger common time–phase domain. Thus the reference graph has the explicit positive margin $`r_j`$ from the lateral boundary of its tube. Choose compact overlap neighborhoods in which the chart transitions and their derivatives are controlled. On each fixed tube suppose $`F_\varepsilon\to F_0`$ uniformly and the phase Lipschitz constants $`L_j`$ can be chosen independent of sufficiently small $`\varepsilon`$. The matched initial points $`x_\varepsilon(a)`$ converge to $`x_0(a)`$. Existence on all of $`I`$, confinement to the tube cover and uniform convergence of the approximate solutions are conclusions, not hypotheses.
-
-Construct local approximate solutions using target:0.2. Until the first possible exit from the $`j`$th tube, prove the Grönwall estimate
-
-```math
-\sup_{t\in I_j}\|x_\varepsilon(t)-x_0(t)\|
-\leq \bigl(\|x_\varepsilon(a_j)-x_0(a_j)\|+\ell_j\delta_{\varepsilon,j}\bigr)e^{L_j\ell_j},
-\qquad
-\ell_j=a_{j+1}-a_j,\quad
-\delta_{\varepsilon,j}=\sup_{\text{tube}_j}\|F_\varepsilon-F_0\|.
-```
-
-Here the supremum is first taken over the common interval before exit; after excluding exit it holds over $`I_j`$. Choose $`\varepsilon`$ so that this bound is smaller than the prescribed margin. A first exit is then impossible, and compact extension gives the entire segment. Transfer the endpoint estimate through the controlled chart overlap and induct over the finitely many segments. This yields uniform convergence on $`I`$ in any compatible metric on a compact neighborhood of the reference graph. Do not assert a single unchanged Lipschitz constant across arbitrary coordinate transitions.
-
-For horizontal lifts, the pulled-back vector field contains $`\gamma'(t)`$; a $`C^1`$ base path gives a continuous-time ODE and is covered by target:0.2. Holomorphic phase fields uniformly bounded on larger common complex neighborhoods supply uniform phase Lipschitz constants on smaller tubes by Cauchy estimates. Convergence of coefficients without common domains, a no-exit margin and matched initial data is insufficient. Uniformity over a family of time paths or a compact time domain requires additional uniform path and chart controls. Fixed compact-path convergence asserts neither convergence on unbounded rays nor convergence through excluded singular endpoints.
-
-**Hypotheses.**
-
-- A fixed finite-dimensional manifold, or verified common identifications supplied by the application, and continuous-time locally phase-Lipschitz tangent fields on common domains.
-- An existing reference solution on a compact interval, a finite common chart subdivision, fixed closed radius-r_j tubes compactly contained in common time–phase domains with r_j>0, and controlled compact overlap neighborhoods.
-- Uniform field convergence on those tubes and phase Lipschitz constants uniform for sufficiently small parameters.
-- Matched initial data converging to the reference initial point. No global approximate solution or prior no-exit conclusion is assumed.
-
-**API.**
-
-- Prove the until-exit segmentwise Grönwall estimate with explicit interval lengths, field errors and incoming initial errors.
-- Exclude first exits using the positive margins, extend each solution segment by compact extension, and transfer errors through finitely many controlled chart transitions.
-- Deduce existence on the entire compact interval and uniform convergence; state the additional uniform controls required before quantifying over families of paths or time domains.
-
-**Checks.**
-
-- On $`I=[0,2]`$, take $`F_n=1/(n+1)`$, $`F_0=0`$ and common initial value $`0`$. Then $`x_n(t)=t/(n+1)`$ and $`\sup_I|x_n-x_0|=2/(n+1)`$, agreeing with the estimate.
-- Even for identical zero fields, initial values $`x_n(0)=(-1)^n`$ do not converge; coefficient convergence alone does not imply solution convergence.
-- Convergence of coefficients on one chart does not control a trajectory after it leaves that chart; the common tubes and positive no-exit margins cannot be omitted.
-- The solutions $`x_n(t)=t/(n+1)`$ converge uniformly on every fixed compact interval but not uniformly for $`t\in[0,\infty)`$. The compact-path conclusion does not contain an unbounded-ray assertion.
-
-*Needs:* Internal: 0.2; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
-
-**Source scope.** Generic finite-dimensional continuous-dependence theorem with an explicit finite-chart no-exit proof. A geometric degeneration must independently construct the common identifications and verify the hypotheses; coefficient limits alone are not that construction.
-
 ### Sources and scope
 
 The proofs of the general assertions are the obligations above. The following primary sources explain important downstream geometric settings; their specialized scope must not be silently enlarged.
@@ -527,7 +464,7 @@ The main owned extensions beyond a source formula are the intrinsic presentation
 
 A consumer identifies its local models and verifies the open generic conditions; specifies its actual time family and markings; chooses unfixed determinant or verifies the fixed determinant and its rank-one time transport; chooses a valid stability chamber; and provides nonemptiness evidence wherever it claims a surjective family. It then invokes §2.4. Completeness, proper Riemann–Hilbert comparison, scalar observables, distinguished solutions and classification results are further consumer obligations.
 
-The five-logarithmic-point rank-two problem on ℙ¹ is a decisive reuse check: when nonempty with compatible fixed determinant, the construction gives phase dimension four over a two-dimensional configuration base. This checks mathematical scope beyond relative dimension two; its explicit existence certificate belongs to the separate consumer. Targets 2.5–2.6 additionally supply a proper logarithmic Riemann–Hilbert semiconjugacy in the exact I13 range. The same consumer can then apply the general continuation theorem of NonlinearConnections §0.4, without any five-point-specific compactness theorem.
+Targets 2.5–2.6 additionally supply a proper logarithmic Riemann–Hilbert semiconjugacy in the exact I13 range. Its consumers verify the hypotheses of NonlinearConnections §0.4 to obtain completeness.
 
 <a id="target-1-1"></a>
 ### 1.1 Admitted decorated connection data
@@ -739,7 +676,7 @@ The fixed-determinant dimension and symplectic theorems use the deformation-func
 
 **General theory.**
 
-Construct the relative trace two-form on the moduli family, descend it from the universal-object cover and prove nondegeneracy using §1.4 and §1.5. Prove closedness by the following auxiliary construction here, before any limiting-system or confluence application. Over a smooth integral auxiliary base H, replace the fixed polar divisor by the finite-flat divisors of I23 §8. At a ramified point use ∏ⱼ₌₁ᵐ⁻¹(z−hʳqⱼ)(z−hʳ), with qⱼ distinct, nonzero and different from 1. Construct the moduli algebraic space of simple connections with the unfolded factorized local structures, an étale universal-object cover, the relative deformation complex and trace form. Reapply the boundedness and deformation arguments to this new family; it is not covered merely by §1.1's disjoint marked sections.
+Construct the relative trace two-form on the moduli family, descend it from the universal-object cover and prove nondegeneracy using §1.4 and §1.5. Prove closedness by the following auxiliary construction. Over a smooth integral auxiliary base H, replace the fixed polar divisor by the finite-flat divisors of I23 §8. At a ramified point use ∏ⱼ₌₁ᵐ⁻¹(z−hʳqⱼ)(z−hʳ), with qⱼ distinct, nonzero and different from 1. Construct the moduli algebraic space of simple connections with the unfolded factorized local structures, an étale universal-object cover, the relative deformation complex and trace form. Reapply the boundedness and deformation arguments to this new family; it is not covered merely by §1.1's disjoint marked sections.
 
 Prove smoothness over H and identify the original stable moduli, complex and form with the appropriate open part of the central fiber. On the dense open parameter set with generic separated poles, construct both quasi-isomorphisms from the diagonal deformation complex to the unfolded complex and the logarithmic parabolic complex, respecting trace forms. Prove closedness of the logarithmic trace form by the Čech cup-product/trace calculation and gauge descent and transfer it through these two comparisons. The relative sheaf of three-forms on this smooth family over an integral base is locally free, and restriction to the indicated dense open detects zero. Deduce d_relative ω=0 on the whole family, restrict to the central stable locus and descend. A later nonreduced base change uses this proved identity; density on a nonreduced base is not a substitute.
 
@@ -969,7 +906,7 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 - For g=0,r=2,n=5, rn−2r−2=4>0, so the numerical source condition holds. A genuine nonemptiness certificate and the determinant comparison remain necessary for the full fixed-determinant application.
 - For g=0,r=2,n=3, rn−2r−2=0; this target cannot cite I13 Theorem 2.2 as supplying its properness theorem.
 - Deleting an exceptional fiber from the source may destroy properness even though the generic Riemann–Hilbert map is an isomorphism; keep the full stable moduli source.
-- The five-point application uses the same NonlinearConnections §0.4 as any other proper semiconjugacy consumer; no separate five-point compactness theorem is added here.
+- Every consumer applies the same NonlinearConnections §0.4 after verifying its proper semiconjugacy; no application-specific compactness theorem is required.
 
 **Supporting constructions owned by this target.**
 
@@ -984,7 +921,7 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 - `M-local-presentation-descent` — Build intrinsic input groupoids and coordinate/root changes with coherent descent, without treating I23 coordinate formulas as the definition.
 - `M-determinant-time` — Construct and verify rank-one strong determinant transport on the stated local charts; global fixed-determinant output requires actual gluing. Prove determinant compatibility of the rank-r lift.
 - `M-determinant-fiber` — Compare full ramified deformation cone with the regular determinant de Rham complex; prove scalar splitting, smooth determinant map, 2g removal and orthogonal nondegeneracy before exporting positive-genus fixed-determinant symplecticity.
-- `M-early-unfolding` — Construct the finite-flat auxiliary family and both generic-fiber comparison maps before every confluence application.
+- `M-early-unfolding` — Construct the finite-flat auxiliary family and both generic-fiber comparison maps as part of the proof of closedness.
 - `M-strong-lift` — Prove existence/uniqueness inside the total-pole and kernel-lattice extension class, mixed-term flatness and actual trace-form preservation.
 - `M-coherent-export` — Prove canonical pullback/presentation comparisons, 2-coherence and the general construction theorem independently of all specialized consumers.
 - `M-regular-RH-proper` — Identify the entire logarithmic moduli functor with I13, prove all-points strong-splitting semiconjugacy, exact family properness and the Cartesian fixed-determinant restriction. Source completeness belongs to the generic NonlinearConnections theorem, applied downstream.
@@ -996,158 +933,25 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 
 I13 is the source for the logarithmic theorems 2.5–2.6 and supports logarithmic-consumer nonemptiness; it is not a prerequisite for the general irregular construction of §2.4. No unrestricted extension beyond the admitted I23 local models is claimed.
 
-<a id="five-point-application"></a>
-
-### Independent five-point application
-
-This application tests actual proof reuse: its admitted input has structural degree five, its time base has dimension two and its phase fibers have dimension four. The generic construction, extension and descent proofs are the same ones used by the classical application. No Painlevé target is a prerequisite.
-
-<a id="target-2-7"></a>
-### 2.7 Five logarithmic points with a nonempty stable input
-
-**Independent five-point application.**
-
-Take an ordered five-pointed genus-zero curve. After the unique normalization of the first three points to 0, 1, ∞, its time base is B = {(t₁,t₂) ∈ ℂ² : t₁,t₂ ∉ {0,1}, t₁ ≠ t₂}. Thus dim B = 2 is a conclusion of the marked-curve quotient; coordinates on B display that quotient. Take rank 2, structural divisor P = a₁+⋯+a₅, determinant (O,d) with its fixed identification and trivial strong time transport, and full logarithmic flags with ordered residue pairs (1/4,−1/4), (1/4,−1/4), (1/6,−1/6), (1/6,−1/6), (1/4,−1/4). Choose weights αᵢ,₁ = i/100 and αᵢ,₂ = i/100 + 2ⁱ⁻¹/1000 for i=1,…,5. All ten are distinct and 0<αᵢ,₁<αᵢ,₂<1. A rank-one stability wall would require 2deg F + Σᵢ εᵢ2ⁱ⁻¹/1000 = 0 with εᵢ=±1; the signed sum has odd numerator and absolute value ≤31/1000, so equality is impossible. Thus stable = semistable for these numerical data. These are inputs to MeromorphicConnectionModuli §§1.1–1.2; no classical degree-four condition is imposed.
-
-Prove nonemptiness for every configuration, not by assuming a phase-space point. For generators with γ₁⋯γ₅ = 1 set D = diag(i,−i), J = [[0,1],[−1,0]], K = diag(exp(πi/3),exp(−πi/3)), and (M₁,…,M₅) = (D,J,K,K⁻¹,(DJ)⁻¹). Their product is I and all local spectra are distinct. D and J have no common invariant line, so the representation is irreducible. The regular-singular correspondence with chosen logarithms exp(−2πiλ), and local logarithmic lattice changes from the canonical extension when needed, produces a logarithmic connection with the specified residues and flags on each pointed curve. This statement concerns monodromy irreducibility, not constant-matrix residue eigenlines.
-
-The trace residues vanish and determinant monodromy is trivial. The determinant logarithmic connection therefore extends without poles to a flat line connection on ℙ¹, isomorphic to (O,d); choose that identification. There is no invariant proper subbundle, hence stability for the chosen weights. As an additional check, any sum choosing one residue at each pole is [3(σ₁+σ₂+σ₅)+2(σ₃+σ₄)]/12 with σᵢ ∈ {−1,1}; its numerator is odd, so it is never an integer. This independently excludes a rank-one invariant subconnection by the residue/degree relation. Nonempty fibers on the whole B are proved; a global marked object on B is not assumed.
-
-**Hypotheses**
-
-- Ordered five distinct points on ℙ¹; specified rank, logarithmic residues, determinant identification and generic weights. The two-dimensional time quotient and nonempty stable fibers are outputs.
-
-**API**
-
-- Identify the actual marked-curve quotient with B and its fixed collision discriminant.
-- Construct the irreducible monodromy witness, its chosen logarithmic extension and determinant identification.
-- Verify nonempty stable fibers without requiring a trivial rank-two underlying bundle.
-
-**Tests**
-
-- The product D J K K⁻¹ (DJ)⁻¹ equals I exactly; the eigenlines of D are the coordinate axes, and J interchanges them.
-- The residue differences are 1/2 or 1/3, hence nonresonant. The signed-sum numerator is odd, excluding every integer sum.
-- Replacing five poles by four changes the time dimension from 2 to 1; this is not a harmless chart change.
-- A pair of residue matrices without a common constant eigenline is not by itself a certificate of differential-module irreducibility.
-
-*Needs:* Internal: 1.1, 1.2, 2.5.
-
-**Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
-
-<a id="target-2-8"></a>
-### 2.8 Isomonodromic deformations on four-dimensional phase spaces
-
-**Independent five-point application.**
-
-Apply MeromorphicConnectionModuli §2.4 to the verified input of §2.7. Its output is the full stable phase family π: M → B, retaining all allowed degree-zero bundle types, the relative trace symplectic form ω, and the constructed holomorphic flat splitting h. Verify the fixed-determinant comparison on genus zero. The general dimension formula gives 2·2²(0−1)+2+2(2−1)·5 = 4; fixing the determinant removes 2g = 0 directions here. Smoothness and symplecticity are construction outputs, not fields in the input. Use NonlinearConnections §0.6 for the closed total form, after the moduli construction has proved actual preservation of ω. The two commuting horizontal time directions exist intrinsically; no scalar Garnier formula or Hamiltonian coordinates are used.
-
-**Hypotheses**
-
-- The fully verified input and nonemptiness of 2.7; no phase space, splitting or symplectic form is supplied as input.
-
-**API**
-
-- Verify the admission and determinant comparison for the general construction.
-- Export the same nonlinear connection object, relative dimension four and closed total form.
-- Identify its pullback and presentation comparisons; keep the time dimension two.
-
-**Tests**
-
-- The fiber dimension is −8+2+10=4, not 2; deg P=5 is never replaced by the classical budget.
-- Flatness alone does not preserve e^{t₁}ω; the actual preservation theorem must be invoked.
-- The global moduli family is not replaced by its trivial-bundle matrix chart.
-
-*Needs:* Internal: 2.7, 2.4, 0.6.
-
-**Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
-
-<a id="target-2-9"></a>
-### 2.9 The five-point Riemann–Hilbert correspondence and properness
-
-**Independent five-point application.**
-
-Use MeromorphicConnectionModuli §§2.5–2.6, with I13 Theorem 2.2, on this logarithmic moduli problem. Verify g=0, r=2, n=5, rn−2r−2 = 4 > 0 and generic stability weights. Identify the constructed determinant-fixed moduli with the same determinant fiber of I13's family, using the rank-one determinant comparison and the actual coarse/gerbe comparison. Take the marked character family with the residue parameters retained through its fiber product with the exponent map λ ↦ exp(−2πiλ). Properness is a theorem about this actual family map, inherited through the proved Cartesian/base-change comparison. It is not a hypothesis in §2.7 or an inference from the existence of a foliation.
-
-Use the complete Betti path transport of 2.5 and prove that the strong splitting of 2.8 maps every partial horizontal lift to that transport. Source and target comparisons use the full admitted moduli, rather than a chosen bundle chart. Only the regular-singular theorem is consumed. No general irregular properness or classical Painlevé continuation theorem is imported.
-
-**Hypotheses**
-
-- The actual logarithmic input and constructed connection of 2.7–2.8, with the checked I13 numerical range and the determinant/marking comparison. Properness and partial-lift compatibility are conclusions to verify via the general theorem.
-
-**API**
-
-- Identify the precise I13 moduli and exponent-retaining Betti target after determinant fixing.
-- Verify properness by the proved Cartesian comparison and all-point horizontal compatibility.
-
-**Tests**
-
-- Here 2·5−4−2=4>0; the source theorem is not applied without its genus/rank/pole inequality.
-- Forgetting the logarithms and retaining only their exponentials loses the properness statement.
-- Properness of RH does not say that π: M→B is proper.
-
-*Needs:* Internal: 2.7, 2.8, 2.5, 2.6.
-
-**Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
-
-<a id="target-2-10"></a>
-### 2.10 Five-point transport, monodromy and descent
-
-**Independent five-point application.**
-
-Apply NonlinearConnections §0.4 to §2.9 and obtain unique horizontal lifts through every point of every fiber for every compact piecewise C¹ path in B. Apply 0.3 for holomorphic local germs, 0.5 for the fundamental-groupoid action and the global horizontal section on a pointed universal cover of B, and 0.6 for symplectic preservation. The action and section are outputs of the constructed flat connection; descent to B holds exactly for fixed initial points of its nonlinear monodromy action.
-
-When the proper RH family has been constructed on a topological marking cover, first lift the given path γ in B to that cover after choosing its initial marking. Apply the general proper-transfer theorem to the pulled-back connection and the lifted compact path, then project the resulting horizontal lift to M. The connection-preserving pullback map and local uniqueness prove independence of the initial marking and of overlapping marking charts. Thus completeness is asserted for all paths in B, without assuming a global topological marking of the five-punctured family.
-
-This is the second actual consumer of the same general extension and descent proofs used for the classical family. Its transitive dependency closure excludes every Painlevé application target, including formal-profile enumeration, additive surface classification and scalar Painlevé formulas. This condition is checked on the expanded graph, not only on direct imports.
-
-Do not apply the scalar first-jet theorem for a two-dimensional phase fiber to this four-dimensional fiber, or assert a one-variable pole statement on the two-dimensional base. For a connected holomorphic time curve f:C→B, choose c₀∈C and x₀∈M_(f(c₀)). Pull back the connection and construct its horizontal section on the pointed universal cover C̃ of C by 0.5. For an observer whose pullback along that section is defined and satisfies the non-infinity condition, apply 0.7 to obtain a meromorphic function on C̃. Prove that it descends to C exactly when its scalar evaluation is invariant under the actual deck action; this condition can be weaker than descent of the phase section. If a horizontal section on C is separately supplied, evaluate that section directly under the same observer hypotheses. Garnier coordinate dictionaries lie outside the four five-point application targets.
-
-**Hypotheses**
-
-- The constructed flat symplectic connection and verified proper semiconjugacy of 2.8–2.9. The curve-observer theorems additionally assume a connected holomorphic time curve, a base point, an initial phase point and the stated observer admissibility along the resulting universal-cover section. Descent to the curve additionally requires scalar deck invariance, or an independently supplied horizontal section on that curve.
-
-**API**
-
-- Instantiate the same completeness and groupoid-action theorems on a two-time/four-phase family.
-- Verify no transitive dependency on the classical application.
-- Prove the observer pullback theorem on the pointed universal cover of the time curve and the scalar-deck-invariance criterion for descent, under all the stated admissibility hypotheses.
-
-**Tests**
-
-- The expanded prerequisite graph excludes every Painlevé target, including its degree-four definition.
-- Complete transport can have nontrivial monodromy; a universal-cover section need not descend.
-- On a time curve the phase fiber still has dimension four, whereas a scalar first-jet fiber has dimension two; the scalar first-jet isomorphism cannot simply be asserted.
-
-- The generic flat complete connection q′=q/(2t) on ℂ××ℂ has horizontal germ q=√t through (1,1). The observer q is admissible, but its universal-cover value changes sign under one loop. Curve pullback and admissibility alone therefore do not imply scalar descent; 0.7 supplies the exact additional condition.
-
-*Needs:* Internal: 2.8, 2.9, 0.3, 0.4, 0.5, 0.6, 0.7.
-
-**Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
-
-### Sources
-
-- **I13:** Michi-aki Inaba, *Moduli of parabolic connections on a curve and Riemann–Hilbert correspondence*, [arXiv:math/0602004v2](https://arxiv.org/abs/math/0602004v2), Theorems 2.1–2.2; journal publication J. Algebraic Geom. 22 (2013), 407–480.
-- **I23:** Michi-aki Inaba, [*Moduli Space of Factorized Ramified Connections and Generalized Isomonodromic Deformation*](https://sigma-journal.com/2023/013/), SIGMA 19 (2023), 013.
-
 <a id="layer-3"></a>
 
 ## Layer 3: Phase spaces and isomonodromic deformations of Painlevé equations
 
 <a id="painleve"></a>
 
-**Summary.** Construct Painlevé dynamics from moduli of meromorphic connections, and construct Painlevé functions from the horizontal sections of that dynamics. The input consists of a curve, a structural polar divisor, a determinant connection, local formal moduli conditions, and stability and marking data. The phase space, its symplectic form, and its horizontal distribution are constructed from this input. A common continuation theorem precedes every classical scalar equation. The ten underlying rank-two formal profiles, their labelled realizations, their eight additive surface types, and the six classical differential equations are comparison results. The theory includes resonant parameters, allowed reducible connections, ramified irregular singularities, special invariant loci, tau sections, normalized analytic solutions, and confluence. Elementary coefficient degenerations are covered by a separate boundary comparison. JMU/Hamiltonian comparisons of tau sections have the precise generic scope stated in targets 6.4–6.5; the determinant construction itself has the broader marked-RHP scope specified in 6.2–6.3.
+**Summary.** Construct Painlevé dynamics from moduli of meromorphic connections, and construct Painlevé functions from the horizontal sections of that dynamics. The input consists of a curve, a structural polar divisor, a determinant connection, local formal moduli conditions, and stability and marking data. The phase space, its symplectic form, and its horizontal distribution are constructed from this input. A common continuation theorem precedes every classical scalar equation. The ten underlying rank-two formal profiles, their labelled realizations, their eight additive surface types, and the six classical differential equations are comparison results. The theory includes resonant parameters, allowed reducible connections, ramified irregular singularities, special invariant loci, tau sections and their scalar normalization. Elementary coefficient degenerations are covered by a separate boundary comparison. JMU/Hamiltonian comparisons of tau sections have the precise generic scope stated in targets 6.4–6.5; the determinant construction itself has the broader marked-RHP scope specified in 6.2–6.3.
 
 ### Scope
 
-RandomMatrices §8.5 owns Hastings–McLeod existence and uniqueness, real pole-freeness, and its Fredholm/Tracy–Widom identities. Section 8.8 here owns only the bridge from that scalar solution to an intrinsic horizontal section. RandomMatrices is a supplier of that bridge; it is not made to depend on this roadmap. The trace-class determinant required by the tau branch is consumed from RandomMatrices §8.3 at its stated operator generality. New applications using both theories are downstream consumers of both.
+The trace-class determinant required by the tau construction is supplied by RandomMatrices §8.3 at its stated operator generality.
 
 Difference and q-difference Painlevé dynamics, a general Sakai classification of discrete systems, cluster realizations, arbitrary-rank wild nonabelian Hodge theory, a classification of every algebraic special solution, and numerical connection constants for every asymptotic regime have different scope. They are not prerequisites of the differential theory specified here. Rational and classical-function solutions included here are the explicit families obtained from the geometric reductions and transformations of targets 5.4–5.6 and 7.1–7.5; no completeness classification of all such solutions is asserted.
 
 ### Conventions
 
-Work over ℂ. Curves are smooth connected projective curves, with a finite nonempty ordered set of pairwise distinct marked points. The general rank is an integer r ≥ 1; slope stability is defined on this positive-rank domain. A ramified local condition also satisfies the rank and local-order restrictions of its stated formal model. The classical subcategory has genus zero and rank two. Write P = Σ mᵢaᵢ for the structural polar divisor; it bounds the poles and records the local moduli problem. It is not the divisor of nonzero poles of each individual connection. Apparent singularities and scalar residues at a marked point are allowed when the local conditions allow them. The auxiliary unfolding in §3.7 and the collision data of §9.5 use separately constructed finite-flat divisors; their special fibers need not consist of distinct marked sections.
+Work over ℂ. Curves are smooth connected projective curves, with a finite nonempty ordered set of pairwise distinct marked points. The general rank is an integer r ≥ 1; slope stability is defined on this positive-rank domain. A ramified local condition also satisfies the rank and local-order restrictions of its stated formal model. The classical subcategory has genus zero and rank two. Write P = Σ mᵢaᵢ for the structural polar divisor; it bounds the poles and records the local moduli problem. It is not the divisor of nonzero poles of each individual connection. Apparent singularities and scalar residues at a marked point are allowed when the local conditions allow them. The auxiliary unfolding in §1.6 uses a separately constructed finite-flat divisor; its special fibers need not consist of distinct marked sections.
 
-An object is a vector bundle E on the whole curve, a meromorphic connection ∇: E → E ⊗ Ω¹(P), an isomorphism of its determinant connection with the specified line connection, and the local structures below. All relevant bundle splitting types are retained. The general input permits a meromorphic determinant; the classical complexity subcategory uses a regular-singular determinant with fixed residues and its compatible moving-curve transport. This still allows odd determinant degree. At a logarithmic point prescribe residue eigenvalues and a compatible filtration; do not freeze one complete formal isomorphism class at resonant parameters. At an unramified irregular point use a generic distinct-leading-term formal condition. At a ramified point use the generic factorized ramified condition, with ramified descent. Leading coefficients required to be nonzero remain nonzero within a fixed irregular stratum. Their vanishing belongs to targets 9.5–9.8.
+An object is a vector bundle E on the whole curve, a meromorphic connection ∇: E → E ⊗ Ω¹(P), an isomorphism of its determinant connection with the specified line connection, and the local structures below. All relevant bundle splitting types are retained. The general input permits a meromorphic determinant; the classical complexity subcategory uses a regular-singular determinant with fixed residues and its compatible moving-curve transport. This still allows odd determinant degree. At a logarithmic point prescribe residue eigenvalues and a compatible filtration; do not freeze one complete formal isomorphism class at resonant parameters. At an unramified irregular point use a generic distinct-leading-term formal condition. At a ramified point use the generic factorized ramified condition, with ramified descent. Leading coefficients required to be nonzero remain nonzero within a fixed irregular stratum. Their vanishing changes the input stratum; §7.3 compares the coefficient-boundary equations.
 
 Weights are denoted w, avoiding confusion with the classical scalar coefficient α. Use generic stability weights for which semistability equals stability on the specified numerical data. Stability concerns ∇-invariant subbundles. Changing a weight chamber is a wall-crossing problem, not an auxiliary-choice invariance. Isomorphisms preserve the determinant identification, labels and prescribed local structures. Retain these arrows before rigidification or passage to a coarse moduli space. For a stable rank-two object with determinant identification fixed, the residual scalar group is μ₂, not the full multiplicative group; fixing the determinant and rigidifying this remaining group are different operations.
 
@@ -1161,7 +965,7 @@ Use ω = dq ∧ dp and ι_Xω = d_phase H in a Hamiltonian chart. Thus q′ = H_
 
 ### Dependencies between layers
 
-Construct nonlinear connections, solutions, transport, observations and convergence as general theorems. Construct admitted meromorphic-connection moduli and their strong isomonodromic connection, then establish the logarithmic Riemann–Hilbert comparison and its independent five-point application. Restrict this construction to the classical input and verify its formal profiles. Prove the full classical Riemann–Hilbert comparison and Painlevé property before developing the surface, transformation and Riccati comparisons. Construct determinant lines and tau sections intrinsically. Derive the classical scalar equations, Hamiltonians and sigma forms in separate coordinate-comparison targets. General small-norm RHP theory and Barnes G support the specified analytic solutions and connection formulae. General pole-cancellation, relative Poisson and analytic convergence theorems support geometric confluence and tau limits. The intrinsic construction, continuation, surface geometry and tau-section targets have no classical scalar comparison prerequisite.
+Construct nonlinear connections, solutions, transport and observations as general theorems. Construct admitted meromorphic-connection moduli and their strong isomonodromic connection, then establish the logarithmic Riemann–Hilbert comparison. Restrict this construction to the classical input and verify its formal profiles. Prove the full classical Riemann–Hilbert comparison and Painlevé property before developing the surface, transformation and Riccati comparisons. Construct determinant lines and tau sections. Derive the classical scalar equations, Hamiltonians and sigma forms in separate coordinate-comparison targets. The construction, continuation, surface geometry and tau-section targets have no classical scalar comparison prerequisite.
 
 <a id="target-3-1"></a>
 ### 3.1 Decorated connections for Painlevé equations
@@ -1332,7 +1136,7 @@ Specialize MeromorphicConnectionModuli §1.4 to the determinant-fixed family of 
 
 - The classical family and its comparison with the general deformation construction; smoothness, dimension two and the symplectic form are conclusions.
 
-Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identified in §§3.5–3.6. Verify the determinant-fiber comparison; genus zero contributes no omitted Jacobian directions. Substituting g = 0, r = 2 and deg P = 4 in the admitted general dimension theorem gives 2. Smoothness, nondegeneracy and relative closedness are outputs. The finite-flat auxiliary unfolding, its simple-connection moduli, both generic logarithmic quasi-isomorphisms and the smooth-density argument are proved once in the general framework, before any confluence theorem. Here identify its central stable fiber, complex and form with the actual classical family, including admissible nonreduced base change. Do not invoke targets 9.5–9.8. (I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.)
+Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identified in §§3.5–3.6. Verify the determinant-fiber comparison; genus zero contributes no omitted Jacobian directions. Substituting g = 0, r = 2 and deg P = 4 in the admitted general dimension theorem gives 2. Smoothness, nondegeneracy and relative closedness are outputs. The finite-flat auxiliary unfolding, its simple-connection moduli, both generic logarithmic quasi-isomorphisms and the smooth-density argument are proved once in the general framework, as part of the symplectic construction. Here identify its central stable fiber, complex and form with the actual classical family, including admissible nonreduced base change. (I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.)
 
 **API.**
 
@@ -1358,7 +1162,7 @@ Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identi
 
 - All stable resonant, reducible and apparent strata allowed by the fixed local conditions; generic ramified local irreducibility.
 
-Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Targets 4.1–4.4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is handled by §7.3 and targets 9.5–9.8. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)
+Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Targets 4.1–4.4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is covered by the coefficient-boundary comparison in §7.3. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)
 
 *Needs:* Internal: 3.1, 3.5, 3.6, 3.7.
 
@@ -1898,29 +1702,9 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 <a id="analytic-theory"></a>
 
-**Purpose.** Separate general analytic theorems from their geometric and special-function applications. The inputs are operator families, contour packages, jump matrices, weighted estimates, holomorphic line comparisons and trace-class estimates. None of the seven contracts requires a Painlevé equation, a rank-two formal profile, a phase-space dimension, a selected asymptotic branch, or a collision of meromorphic connections.
+Construct the holomorphic determinant line and canonical section for general index-zero Fredholm families in §6.1, then apply this construction to the marked Painlevé RHP families in §§6.2–6.5. The applications own their operator realization, index and holomorphic-dependence proofs, line/frame comparisons and the stated JMU/Hamiltonian identities. RandomMatrices §8.3 supplies the generic trace-class determinant where that additional realization is verified.
 
-### Determinant and analytic constructions
-
-| Contract | General input and output | Proof owner |
-| --- | --- | --- |
-| 6.1 | Index-zero holomorphic Fredholm family → determinant line, canonical section and naturality | This roadmap: 6.1 |
-| 8.1 | Contour geometry → Cauchy operators, solution class and reconstruction criteria | This roadmap: 8.1 |
-| 8.2 | Cauchy package and uniform norm gap → unique residual solution and estimates | This roadmap: 8.2 |
-| 8.3 | Weighted moments and tail control → coefficients and precisely quantified uniform asymptotics | This roadmap: 8.3 |
-| 9.3 | Compared line sections, corrected one-forms and normalization → local uniform scalar convergence | This roadmap: 9.3 |
-| 9.4 | Trace-norm holomorphic operator convergence → determinant convergence and conditional local zero counts | This roadmap: 9.4 |
-| 8.4 | Canonical entire Barnes G → zero divisor, normalized logarithms and explicit sectorial remainder | This roadmap: 8.4 |
-
-The local dependency chain is 8.1 → 8.2 → 8.3. Targets 6.1, 9.3 and 9.4 have their own foundational inputs; 9.3 and 9.4 are independent convergence routes. RandomMatrices §8.3 supplies the generic trace-class determinant. 6.1 owns the complex holomorphic Fredholm determinant-line family. Existing real orientation lines, matrix-symbol Toeplitz index results and trace-class determinants are not silently substituted for one another.
-
-Applications must verify their own adapters: the contour and endpoint bounds of a parametrix, the actual operator-family or trace-class realization, line and frame comparisons, meromorphic-connection reconstruction, and any JMU/Hamiltonian comparison. The general theorems consume the precisely stated analytic data. Special-function conclusions do not enter their prerequisites.
-
-### Source scope and analytic conditions
-
-Bibliographic information and source locators are listed in [sources.toml](sources.toml). The source models are [MAL04](https://www.numdam.org/articles/10.5802/aif.2052/), [BERT17](https://arxiv.org/abs/1703.00046v4), corrected [BERT16](https://arxiv.org/abs/1601.04790v2), and [ILP18](https://arxiv.org/abs/1604.03082v4), at the locators stated in the targets. These references are not asserted to prove the entire general contract.
-
-6.1 checks stabilization, sections and determinant conventions. The endpoint ghost, the noncompact-contour L² issue, the separate determinant-removability obligation, the ρ = 1 loss and the solvable non-small jump are diagnostics in 8.1–8.2. The translated Gaussian, including its exact sign and constant, and the uniform-tail and extra-moment distinctions are diagnostics in 8.3. The normalization-constant, moving-Hilbert-space, zero and endpoint caveats are diagnostics in 9.3–9.4. A connection reconstruction theorem or a collision comparison is a downstream adapter, not an implicit assumption of any generic analytic result.
+Bibliographic information and source locators are listed in [sources.toml](sources.toml). The construction models are MAL04 and BERT17; the JMU comparison uses BERT10 with the corrections in BERT16 at the precise loci stated below. Real orientation lines, Toeplitz index results and trace-class determinants retain their distinct scopes.
 
 <a id="target-6-1"></a>
 ### 6.1 Holomorphic determinant lines for index-zero Fredholm families
@@ -2206,7 +1990,7 @@ Classify all coefficient tuples of the standard PIII and PV displays by admissib
 | PV | δ = 0 and γ ≠ 0 | degenerate PV presentation |
 | PV | γ = δ = 0 | quadrature boundary |
 
-Prove that the PIII cases cover all tuples; the two elementary alternatives may overlap and are combined into one boundary class. Derive the boundary integrations on their stated time/observer domains, with branches and integration constants retained, and compare limiting initial data when a geometric degeneration is claimed. PIII with all four coefficients zero gives q = C exp(μ log t) on a chosen cover of ℂ*, including its nonzero-solution domain. A generic such power is not a single-valued function on ℂ*. Zero/constant solutions introduced by clearing q denominators require a separate original-equation domain check. These examples prevent the primitive classification from silently losing coefficient values.
+Prove that the PIII cases cover all tuples; the two elementary alternatives may overlap and are combined into one boundary class. Derive the boundary integrations on their stated time/observer domains, with branches and integration constants retained. PIII with all four coefficients zero gives q = C exp(μ log t) on a chosen cover of ℂ*, including its nonzero-solution domain. A generic such power is not a single-valued function on ℂ*. Zero/constant solutions introduced by clearing q denominators require a separate original-equation domain check. These examples prevent the primitive classification from silently losing coefficient values.
 
 *Needs:* Internal: 7.1, 7.2; [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8).
 
@@ -2261,583 +2045,9 @@ The scalar equation may have an apparent denominator at a perfectly regular geom
 
 Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
 
-<a id="layer-8"></a>
+### Scope boundaries
 
-## Layer 8: Riemann–Hilbert asymptotics and distinguished solutions
-
-<a id="target-8-1"></a>
-### 8.1 Contours and Cauchy-transform solutions
-
-**General theory.**
-
-**Hypotheses.**
-
-- A finite matrix size and a fixed oriented contour in the declared geometric class, with arc-length measure, specified local branches and nonzero crossing angles.
-- The boundedness, Plemelj, decay and reconstruction assertions are proof outputs for that class; for an external contour adapter they are explicit imported hypotheses.
-- The candidate-reconstruction and determinant conclusions additionally require their stated vanishing boundary-integral and removability hypotheses.
-
-Construct a reusable contour package for finite oriented unions of compact C¹,α arcs, closed C¹,α curves, and noncompact arcs that are straight rays outside a compact set, where 0 < α ≤ 1. Require regular parametrizations and only finitely many endpoints and transverse vertices. Fix arc-length measure and the complex line element dζ, and require that distinct branches meet only at the specified vertices. Prove the bounded L² Cauchy boundary operators C₊, C₋ and the Plemelj relation C₊ − C₋ = id, together with the analytic Cauchy transform C(h)(z) = (2πi)⁻¹∫_Γ h(ζ)/(ζ − z)dζ and its boundary reconstruction on the stated class. The proofs must include the local cross-branch estimates at vertices and the convergence and decay of the integral on unbounded rays. A more general contour can be admitted only after supplying these same contracts. Pointwise endpoints have zero arc-length measure, but that fact removes none of the local analytic obligations there.
-
-For a finite matrix size, define a normalized Cauchy-class residual solution by R = I + C(h), h ∈ L²(Γ), with h = R₊ − R₋ almost everywhere and with the normalization at infinity justified by the contour package and any additional moment hypotheses. The L² floor gives decay on sectors separated from the unbounded rays; a claimed I + O(1/z) normalization requires the L¹ control of §8.3. No extra homogeneous term at an endpoint or vertex is allowed. Prove that h is recovered uniquely from the jump. This specifies an analytic solution class rather than merely L² boundary traces.
-
-Also formulate and prove a candidate-reconstruction criterion using the Cauchy formula on excised domains: control the large boundary and require the small-circle integrals about every endpoint and vertex to tend to zero. The local hypotheses in that criterion must imply this disappearance, not merely assert that the candidate has L² traces. Applications with local parametrices supply those bounds for their transformed candidates. State a separate determinant-removability criterion: when det R has matching boundary values, extends across the open arcs and all endpoints and vertices, and tends to one at infinity, the resulting entire scalar function is one by Liouville’s theorem. The jump identity det(I + w) = 1 alone does not verify this criterion.
-
-**API.**
-
-- Construct the Cauchy transform and bounded boundary operators with Plemelj and the declared contour-dependent bounds.
-- Define the normalized Cauchy-transform class, recover its density from the jump and record the precise normalization supplied by its moment assumptions.
-- Prove reconstruction of a candidate from its jump under explicit large-boundary and endpoint/vertex small-circle estimates.
-- Export determinant-one and matrix-invertibility conclusions only after the scalar determinant extension and infinity normalization have been verified.
-
-**Checks.**
-
-- Identity jump gives h = 0 and R = I in this class. On Γ = [0,1], the competing matrix I + exp(−1/z)z⁻¹E₁₂ has the same identity jump and normalization and has L² boundary correction with squared norm e⁻²/2, but an essential endpoint singularity. It is excluded by Cauchy reconstruction: h = R₊ − R₋ = 0 cannot reconstruct its nonzero correction.
-- On an unbounded contour, I need not lie in L²(Γ). The normalized class is the affine class I + C(L²), not a demand that its matrix boundary value itself belong to L².
-- The determinant of a jump being one supplies matching determinant traces; endpoint and vertex removability and the normalization at infinity remain separate obligations.
-- A residual analytic matrix reconstructed from an arbitrary admissible jump is not thereby a meromorphic connection with prescribed polar data; that reconstruction belongs to the application.
-
-**Supporting constructions owned by this target.**
-
-- At a transverse contour vertex, prove the weighted Schur estimate for a kernel bounded by C/(s+t), s,t>0. Use weight s^(−1/2), the identity ∫₀∞t^(−1/2)/(s+t)dt=πs^(−1/2), and weighted Cauchy–Schwarz/Fubini; deduce the L² bound Cπ and its finite-arc restrictions. An unweighted row/column integral diverges and cannot replace this step. Prove the coordinate and arclength-density comparisons that reduce the actual cross-branch kernel to this bound.
-
-*Needs:* [Native Lp, Fourier and integral calculus](#dependency-lp) (Complex L²/Fourier–Plancherel; Hölder and dominated convergence on the native measure/integral carrier); [Real-line Hilbert transform](#dependency-hilbert-transform) (2.3/B10); [Native contour and Schur foundations](#dependency-cauchy) (Cauchy integral formula; Unweighted Schur estimates).
-
-<a id="target-8-2"></a>
-### 8.2 A quantitative small-norm RHP theorem
-
-**General theory.**
-
-**Hypotheses.**
-
-- A contour package with its Cauchy-transform solution class from target:8.1; w_s in L² ∩ L∞ with a common operator norm bound ‖C_w‖ ≤ ρ < 1.
-- Banach-holomorphic L² ∩ L∞ dependence for the holomorphic-parameter assertion; invertible jumps if that version of the boundary problem is claimed.
-- For det R = 1 and matrix invertibility, det(I + w) = 1 together with the separately verified scalar determinant extension and normalization criterion.
-
-Fix a proved contour package from §8.1 and a finite matrix size. For a residual jump J_s = I + w_s with w_s ∈ L²(Γ) ∩ L∞(Γ), define C_w f = C₋(fw) on L². Assume a common bound ‖C_w‖ ≤ ρ < 1 on the stated parameter set. If an invertible-jump RHP is intended, additionally require J_s to be invertible almost everywhere; in the determinant-one specialization require det J_s = 1 almost everywhere. These algebraic jump assumptions do not replace the operator norm gap or the determinant-removability criterion.
-
-Solve ν = C₋w + C_wν by ν = (id − C_w)⁻¹C₋w, using the Neumann series, and set μ = I + ν, h = μw and R = I + C(h). Prove h ∈ L², R₋ = μ and R₊ = R₋(I + w). Conversely, an admissible Cauchy-class solution yields that same equation for ν and is therefore unique in the specified class. The construction uses ν ∈ L² and never assumes that I or μ is in L² on an unbounded contour. State the basic quantitative bounds ‖(id − C_w)⁻¹‖ ≤ (1 − ρ)⁻¹ and ‖ν‖₂ ≤ ‖C₋w‖₂/(1 − ρ), and derive continuous and Banach-holomorphic parameter dependence from the resolvent identity when w depends in L² ∩ L∞. Weighted coefficient asymptotics are exported only through §8.3.
-
-The operator construction produces a matrix-valued analytic boundary-jump solution. A determinant-one and everywhere invertible matrix solution additionally uses the determinant extension and normalization criterion of §8.1; det J = 1 alone is not a proof of det R = 1. A problem outside the small-norm domain may still be solvable: it needs a different inverse, a vanishing lemma, or another separately verified argument. Nor does an arbitrary small L² jump specify a meromorphic connection with designated singularities. Undoing a geometric parametrix reduction and identifying the resulting connection and its horizontal variation are downstream application tasks. (ILP18, §3.3, Lemma 3.3 is a concrete application; the general norm-gap theorem and its hypotheses are owned here.)
-
-**API.**
-
-- Construct the inverse of id − C_w, the density ν, the jump density h and the unique solution R in the prescribed Cauchy class.
-- Prove the quantitative inverse and error bounds and continuous or Banach-holomorphic dependence in the stated jump norms.
-- Use the separate determinant-removability criterion to obtain determinant one and matrix invertibility on precisely the verified locus.
-- Allow alternative invertibility arguments outside the norm-gap domain without inferring nonsolvability from failure of the small-norm criterion.
-
-**Checks.**
-
-- For w = 0 the construction gives ν = h = 0 and R = I, in agreement with the Cauchy-class uniqueness statement.
-- The estimate ‖ν‖₂ ≤ ‖C₋w‖₂/(1 − ρ) records the necessary loss as ρ approaches one; it does not provide a uniform estimate at ρ = 1.
-- Failure of the small-norm hypothesis does not prove nonsolvability. On a counterclockwise unit circle the constant jump −I₂ has w = −2I₂ and ‖C_w‖ = 2, yet the solution R_out = I₂, R_in = −I₂ is in the Cauchy class, with h = −2I₂ and determinant one.
-- The Neumann-series solution theorem has no prerequisite involving phase-space dimension, a formal connection profile, monodromy selection, or reconstruction of a meromorphic connection.
-
-*Needs:* Internal: 8.1; [Native analytic inversion](#dependency-inversion) (analyticAt_inverse; analyticAt_inverse_one_sub).
-
-<a id="target-8-3"></a>
-### 8.3 Weighted moments, coefficient expansions and uniform tails
-
-**General theory.**
-
-**Hypotheses.**
-
-- A family satisfying target:8.2 with a common ρ < 1; an integer m ≥ 0 and the stated weighted L¹ and L² moments.
-- A fixed separated sector with the stated contour denominator estimate; common moment bounds for a uniform bound.
-- For a uniform little-o, weighted L¹ and L² tail tightness or a stated sufficient alternative; for the stronger next-order big-O, a uniformly bounded additional moment.
-
-For the family constructed in §8.2, fix an integer m ≥ 0 and write W_m(ζ) = 1 + |ζ|ᵐ. Require W_m w_s ∈ L¹(Γ) ∩ L²(Γ). The identities h_s = w_s + ν_s w_s and Hölder’s inequality give ‖W_m h_s‖₁ ≤ ‖W_m w_s‖₁ + ‖ν_s‖₂‖W_m w_s‖₂. Thus the common small-norm gap and uniform bounds for the displayed weighted norms imply a uniform weighted L¹ bound for h_s. Let a closed angular sector at infinity satisfy the proved contour estimate |ζ − z| ≥ c(|ζ| + |z|) for every ζ ∈ Γ and all sufficiently large z in that sector, with c > 0 independent of the claimed parameters.
-
-For each fixed parameter, prove R_s(z) = I − (2πi)⁻¹Σ_{j=0}^m z⁻ʲ⁻¹∫_Γ ζʲh_s(ζ)dζ + o(|z|⁻ᵐ⁻¹). In particular, the coefficient of z⁻ʲ⁻¹ is −(2πi)⁻¹∫_Γ ζʲh_s(ζ)dζ, with this sign. The exact remainder is (2πi)⁻¹z⁻ᵐ⁻¹∫_Γ ζᵐ⁺¹h_s(ζ)/(ζ − z)dζ. Dominated convergence proves the little-o at a fixed parameter, but uniform weighted norm bounds alone do not make it uniform on a noncompact parameter set. Those bounds do imply uniform R_s = I + O(1/z) in the specified separated sectors. Claims on the rays themselves require additional local sectorial estimates.
-
-For a parameter-uniform little-o, additionally prove weighted-tail tightness: as A → ∞, both sup_s ‖1_{|ζ|>A}W_m w_s‖₁ and sup_s ‖1_{|ζ|>A}W_m w_s‖₂ tend to zero. The same weighted L¹ tail property follows for h_s from the preceding inequality applied on the tail and the uniform ‖ν_s‖₂ bound. Split the exact remainder into a fixed bounded part and its tail: the former tends to zero uniformly and the latter is uniformly small. Sufficient alternatives are a compact parameter set with norm-continuous dependence in both weighted spaces, or uniform bounds for one additional weighted moment. The latter gives the stronger uniform O(|z|⁻ᵐ⁻²) remainder by the same denominator estimate. Every downstream endpoint, collision or asymptotic-normalization argument must verify these controls on its actual parameter set; pointwise dominated convergence is not such a verification.
-
-**API.**
-
-- Transfer weighted moments and weighted-tail tightness from w_s to h_s with the explicit L¹/L² estimate.
-- Compute each coefficient at infinity, with its sign, and the exact remainder on a sector with a proved denominator bound.
-- Distinguish pointwise little-o, uniform big-O and uniform little-o, exporting the last only with uniform tail control.
-- Prove the compact-parameter and extra-moment sufficient criteria, including the stronger next-order big-O from one extra moment.
-
-**Checks.**
-
-- On Γ = ℝ, let w_s(x) = a exp(−(x − s)²)E₁₂ with Re s > 1 and |Im s| < δ, choosing a > 0 so small that a exp(δ²) < 1. This is a Banach-holomorphic small-jump family with uniformly bounded zeroth L¹/L²/L∞ moments, determinant one and exact density h_s = w_s because E₁₂² = 0. Its zeroth moment is M₀ = a√π E₁₂. At s = n and z = in, n(C(w_n)(in) + M₀/(2πi·in)) tends to (a√π/(2πi))((1 − i)/2)E₁₂ ≠ 0. Thus a pointwise o(1/z) remainder need not be parameter-uniform; the translated mass fails the uniform tail condition.
-- For the translated Gaussian counterexample, the limiting scalar factor is 1/(1 − i) − i = (1 − i)/2. The coefficient sign and the constant a√π/(2πi) must be retained together.
-- On a compact parameter set, continuity in the weighted L¹ and L² norms makes the family uniformly tight in both weighted tails; boundedness alone on a noncompact set does not.
-- A uniform (m + 1)-st weighted moment gives an O(|z|⁻ᵐ⁻²) remainder on the same separated sector, while a claim along a contour ray still needs its own local estimate.
-
-*Needs:* Internal: 8.2; [Native Lp, Fourier and integral calculus](#dependency-lp) (Complex L²/Fourier–Plancherel; Hölder and dominated convergence on the native measure/integral carrier).
-
-<a id="target-8-4"></a>
-### 8.4 Canonical Barnes G and branch-normalized sectorial asymptotics
-
-**General theory.**
-
-Construct the canonical entire Barnes G function on the native complex analytic carrier. Write gamma for Real.eulerMascheroniConstant and define G by the locally uniformly convergent product
-
-```math
-G(z+1)=e^{\frac z2\log(2\pi)-\frac{z(z+1)}2-\frac{\gamma z^2}2}\prod_{k=1}^{\infty}\left(1+\frac zk\right)^k e^{-z+z^2/(2k)}.
-```
-
-The product, rather than a recurrence alone, fixes the normalization. Prove local normal convergence and nonvanishing away from the displayed factors, G(1)=1, compatibility with complex conjugation, and G(z+1)=Gamma(z)G(z) for z not in {-n : n is a natural number}. Interpret this also as a meromorphic identity; the totalized native Gamma function at its poles is not used as the value of a meromorphic pole. Prove that G has exactly the zeros z=-n of multiplicity n+1, with its local leading coefficients and the quotient/removable-limit rules needed for finite products and ratios. Consume native Complex.Gamma, GammaSeq_tendsto_Gamma, Gamma_ne_zero and its analytic regularity; prove the product-to-Gamma comparison here.
-
-Put D = {z in C : z is nonzero and |arg z| < pi}. On D construct the holomorphic branches Log z, Log Gamma(z+1) and Log G(z+1) whose values are real on the positive real axis. These are analytic logarithms continued from that axis, not pointwise principal logarithms of the Gamma or G values. Define c_A as the limit, as m tends to infinity through positive integers, of sum_(k=1)^m k log k - (m^2/2 + m/2 + 1/12) log m + m^2/4, and put A=exp(c_A). Prove existence of this normalization limit. For every integer N>=1 define
-
-```math
-a_N(z)=\frac{z^2}{4}+z\mathop{\mathrm{Log}}\nolimits \Gamma(z+1)-\left(\frac{z(z+1)}2+\frac1{12}\right)\mathop{\mathrm{Log}}\nolimits z-\log A+\sum_{k=1}^{N-1}\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.
-```
-
-Prove
-
-```math
-\mathop{\mathrm{Log}}\nolimits G(z+1)=a_N(z)+R_N(z),\qquad |R_N(z)|\le\frac{|B_{2N+2}|\sec^{2N+1}(\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.
-```
-
-Here B_j are the native Bernoulli numbers. For every fixed delta with 0<delta<=pi the bound is uniform on |arg z|<=pi-delta, z nonzero; it is O_(N,delta)(|z|^(-2N)) as |z| tends to infinity. Prove the finite-product logarithmic summation and integral-remainder comparisons that establish this expansion and bound; no unnamed Barnes or sectorial-Stirling supplier is a prerequisite. The Gamma-containing form of the expansion is sufficient and fixes the constant without importing a zeta-derivative formula. Its identification with a zeta-derivative expression is not used by the connection formulas.
-
-This is a reusable special-function construction independent of the connection-moduli, scalar-equation and RHP application targets. 8.7 uses its normalized factors and its proved local removable-limit rules. Sources: DLMF 5.17.1, 5.17.3 and 5.17.7; Nemes, arXiv:1406.2535v2, equation (1.1), Theorem 1.2 equation (1.10), and proofs in Sections 2-3.
-
-**Hypotheses.**
-
-- The native complex field, analytic Gamma carrier on its pole-free locus, Euler–Mascheroni constant and Bernoulli numbers. The Barnes function, product convergence, logarithm branches, normalization limit, divisor and remainder are outputs.
-- For recurrence as a pointwise identity, z is not a nonpositive integer. For logarithmic asymptotics, z is nonzero and |arg z|<pi; N>=1 and 0<delta<=pi are explicit.
-
-**API.**
-
-- Construct the canonical entire function from the locally normally convergent Weierstrass product; prove G(1)=1, conjugation compatibility and the product-to-native-Gamma comparison.
-- Prove the recurrence away from the native Gamma pole set and as a meromorphic identity, identify every zero and its multiplicity, and derive local leading-coefficient and removable-quotient rules.
-- Construct the analytic logarithm branches and Glaisher normalization limit; prove the N-term expansion and explicit remainder bound, uniformly on each fixed closed subsector.
-
-**Diagnostics.**
-
-- The product and recurrence give G(1)=G(2)=G(3)=1 and G(4)=2. At zero G has order one (G(z)/z tends to 1), while at -1 it has order two. A blanket simple-zero statement fails.
-- The entire function H(z)=exp(sin(2 pi z))G(z) has H(1)=1, the same recurrence on its allowed domain and the same zero divisor, but H is not G. The canonical product or a proved asymptotic uniqueness condition is necessary to specify G.
-- Native Complex.Gamma 0 is totalized to 0. Substituting z=0 in an unrestricted pointwise Barnes recurrence would assert G(1)=Gamma(0)G(0)=0, contrary to G(1)=1. The punctured recurrence and the meromorphic continuation are distinct assertions.
-- For N=1 and real x>0 the first omitted coefficient is B4/(2*3*4)=-1/720, so the remainder has negative sign and magnitude at most 1/(720 x^2). Replacing the chosen Log G by Log G+2 pi i violates this vanishing remainder at large x. The sector-uniform constant retains delta>0; it is not uniform as the sector reaches the negative real axis.
-
-*Needs:* [Native Gamma, Bernoulli and analytic carriers](#dependency-gamma) (Complex.Gamma; GammaSeq_tendsto_Gamma; Gamma_ne_zero; Real.eulerMascheroniConstant; Bernoulli numbers/polynomials); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
-
-<a id="target-8-5"></a>
-### 8.5 Boundary and sectorial selection data
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- Sector/end, branches, formal/Stokes framing, any exceptional lift data and normalization; no solution/existence included as a field.
-
-Define boundary-selection data over the admitted geometric time family: an end and sector or specified approach path; its time coordinate and branches; local formal and Stokes data with a framing; any lattice, parabolic or resolution datum needed to select a de Rham lift; and a normalization for the requested observable or tau representative. Define equivalence by the actual marking transformations. The record contains no solution and no existence or uniqueness assertion. A specification becomes a characterization only after its analytic realization theorem. Linear Stokes data at a spectral singularity and nonlinear asymptotics at a time boundary are different constructions, connected by the theorem. (ILP18, §1.4 and §§3.3–3.4, 4.2–4.3, for the distinction in concrete realizations.)
-
-**API.**
-
-- Construct restriction to a smaller sector, branch change and transport of a boundary specification under a geometric comparison.
-- Formulate realization by a normalized RHP and recovery of a decorated phase point without putting either result into the input definition.
-- State uniqueness for the specified normalized problem and its selected lift, then prove equality with the intrinsic horizontal section constructed from that point.
-- Define a connection constant as the comparison between two stated asymptotic normalizations of the same section along a specified continuation path.
-
-**Checks.**
-
-- Identical formal power-series asymptotics can leave exponentially small/Stokes freedom; that truncated specification does not automatically select one solution.
-- Coarse monodromy data with a nontrivial exceptional RH fiber does not identify a unique phase point without the required lift data.
-- Rescaling the observable or tau frame changes numerical asymptotic constants; equivalence of underlying horizontal sections does not erase that normalization.
-
-*Needs:* Internal: 4.1, 4.2, 4.3, 4.5, 4.6, 4.7, 4.8, 6.3, 6.4, 6.5, 7.1, 7.2.
-
-<a id="target-8-6"></a>
-### 8.6 Riemann–Hilbert realizations of Painlevé solutions
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- Specified geometric RHP data and parametrices; actual contour, endpoint, moment and uniform-tail hypotheses must be proved, not inferred from formal jump notation.
-
-Use AnalyticRHPAndDeterminants §§8.1–8.3 for the Cauchy solution class, small-norm inversion, weighted moments and parameter-uniform tails. This target owns the actual contours and local parametrices selected by §8.5. Prove the bounded Cauchy operators and reconstruction, the residual representation R = I + C(h), disappearance of small endpoint-circle integrals, and determinant removability for these geometric local models. Boundary L² traces alone are insufficient. Verify w ∈ L² ∩ L∞, det(I+w)=1 and a common operator gap ‖C_w‖ ≤ ρ < 1 on the stated parameter set; use the general ν = C₋w + C_wν solution, without assuming I ∈ L² on an unbounded contour.
-
-For every claimed coefficient or uniform remainder, verify the actual weighted L¹/L² moment and tail hypotheses of target:8.3. Uniform weighted norms alone do not give parameter-uniform little-o. Supply weighted-tail tightness, compact norm-continuous parameter control, or an additional moment on precisely the parameter set used by §§8.7 and 9.8. The general estimates and counterexamples are owned in the analytic framework.
-
-Undo the verified parametrix reduction, reconstruct the decorated connection by §4.1, and identify its parameter variation with the strong splitting of targets 3.9–3.12. Compare local solutions by uniqueness and continue by targets 4.5–4.9. An arbitrary small jump does not specify this meromorphic-connection problem. Outside the verified small-norm domain, supply a separate vanishing/invertibility argument and prove its hypotheses. (ILP18, §3.3, Lemma 3.3, is a concrete application.)
-
-**API.**
-
-- Prove the contour, endpoint and determinant-removability adapters into the general Cauchy class.
-- Verify the parameter-uniform gap and exact weighted-tail controls required by the chosen asymptotic conclusion.
-- Reconstruct the actual decorated connection and prove its horizontality and overlap comparison.
-
-**Checks.**
-
-- Identity jump gives h = 0 and R = I in this class. On Γ = [0,1], the competing matrix I + exp(−1/z)z⁻¹E₁₂ has the same identity jump and normalization and has L² boundary correction with squared norm e⁻²/2, but an essential endpoint singularity. It is excluded by Cauchy reconstruction: h = R₊ − R₋ = 0 cannot reconstruct its nonzero correction.
-- The estimate ‖ν‖₂ ≤ ‖C₋w‖₂/(1 − ρ) records the necessary loss as ρ approaches one; it does not provide a uniform estimate at ρ = 1.
-- Failure of the small-norm hypothesis does not prove nonsolvability. On a counterclockwise unit circle the constant jump −I₂ has w = −2I₂ and ‖C_w‖ = 2, yet the solution R_out = I₂, R_in = −I₂ is in the Cauchy class, with h = −2I₂ and determinant one.
-- On Γ = ℝ, let w_s(x) = a exp(−(x − s)²)E₁₂ with Re s > 1 and |Im s| < δ, choosing a > 0 so small that a exp(δ²) < 1. This is a Banach-holomorphic small-jump family with uniformly bounded zeroth L¹/L²/L∞ moments, determinant one and exact density h_s = w_s because E₁₂² = 0. Its zeroth moment is M₀ = a√π E₁₂. At s = n and z = in, n(C(w_n)(in) + M₀/(2πi·in)) tends to (a√π/(2πi))((1 − i)/2)E₁₂ ≠ 0. Thus a pointwise o(1/z) remainder need not be parameter-uniform; the translated mass fails the uniform tail condition.
-
-*Needs:* Internal: 3.9, 3.10, 4.1, 4.5, 4.7, 8.5, 8.1, 8.2, 8.3.
-
-<a id="target-8-7"></a>
-### 8.7 Connection formulas and their constants
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- The precisely listed generic PVI and homogeneous-PII monodromy loci, chosen branches/normalizations and the supplied Hastings–McLeod object/Fredholm identity, with the earlier RHP and Barnes-function interfaces. The endpoint formulas, continuation through auxiliary chart exclusions and the DIK/HXZ/HM sectorial calibration estimates are proof targets, not assumed output identities.
-
-Translate ILP18 Theorems A and B into the boundary language, prove their normalized RHP realizations and transfer their endpoint and constant-ratio identities to the tau section of targets 6.2–6.5. Keep the parameter dictionaries and branch choices explicit. The targets are the following source loci, not all parameters of the corresponding equations.
-
-For Theorem A use the four logarithmic residues with eigenvalues ±θ_ν, 2θ_ν ∉ ℤ for ν = 0,t,1,∞, the marked monodromy cubic (1.16), and σ = σ₀ₜ, ρ = σₜ₁ satisfying σ,ρ ≠ 0 and 0 ≤ Re σ, Re ρ < 1/2. Require every member of the following four sets to avoid ℤ: {θ₀ ± θₜ ± σ}, {θ∞ ± θ₁ ± σ}, {θ₁ ± θₜ ± ρ}, {θ∞ ± θ₀ ± ρ}, with both signs independent. These are (1.13) and (1.17). With the source's t ∈ (0,1) endpoint branches and JMU normalization, prove its asymptotics (1.18a–b) and C₁/C₀ equal to the Barnes-G expression (1.19), using exactly the quantities (1.20–1.21). Propositions 3.20 and 3.24 and §3.9 supply the proof targets. Where an auxiliary denominator in (1.21) vanishes, use a proved continuation of the expression rather than totalized division.
-
-For Theorem B use homogeneous PII, q″ = 2q³ + tq, and its source Stokes surface s₁ − s₂ + s₃ + s₁s₂s₃ = 0. Require s₁s₃ ≠ 1, Arg(1 − s₁s₃) ∈ (−π,π), s₂ ∉ ℝ and Arg(iϵs₂) ∈ (−π/2,π/2), where ϵ = sign Re(is₂) ∈ {−1,1}. These are (1.25). With d log τ = (q′² − q⁴ − tq²)dt, prove the two real-ray asymptotics (1.26) and C₊/C₋ equal to (1.28), with μ,ν from (1.27) and exp(iπη) = −iϵ/s₃. The literal η chart requires s₃ ≠ 0. Prove the stated η ↦ η + 2 invariance, normalization comparison and analytic extension to further allowed data; never assign an exponential logarithm to an undefined quotient. The proof locators are §§4.3–4.5 and Remark 4.8, with Barnes-function domains and removable limits explicit.
-
-Separate the absolute-constant calibration in ILP18 §4.5 from the monodromy-dependent variational calculation. Its supporting proof targets are the Airy determinant constant χ = (log 2)/24 + ζ′(−1) in DIK08 Theorem 1, (2)–(3); the complex-sector pole-freeness in HXZ16 Theorem 2.1; and the uniform complex-sector Hamiltonian asymptotics and arc estimates used in ILP18 (4.74)–(4.76). Consume the existing Hastings–McLeod object and Fredholm identity from RandomMatrices §8.5. That contract and the first two estimates do not imply the third.
-
-For the third supporting target, construct the Hastings–McLeod normalized RHP and sectorial parametrices on arg z ∈ [−π/3,0] and [2π/3,π], using its supplied scalar object rather than proving a second existence theorem. Apply §8.6 with uniform boundary-sector and weighted remainder estimates to recover the Hamiltonian asymptotics (4.74). With H_HM denoting ILP18's Hamiltonian normalization, prove that the integrals over the oriented large-circle arcs of H_HM(z)dz on the first sector and of (H_HM(z) − z²/4 + 1/(8z))dz on the second tend to zero. State and prove the uniform bounds, including the boundary rays, which justify these two limits; real-ray asymptotics alone do not suffice. ILP18 cites FIKN for the sectorial continuation and uses Jordan-type estimates at this step. Here this exact sectorial estimate is an owned RHP/parametrix proof target, not an unrecorded import of the whole FIKN theory. With the arc limits established, compute the remaining logarithmic contribution as +iπ/24 and the calibration as exp(χ + iπ/24).
-
-The quantitative arc contract is the following, uniformly for z = R exp(iθ) and sufficiently large R. On the first sector prove |H_HM(z)| ≤ C R⁻¹ exp(−(4/3)R³ᐟ² cos(3θ/2)) + C R⁻⁵ᐟ². On the second set φ = θ − π and c = 2√2/3, and prove |H_HM(z) − z²/4 + 1/(8z)| ≤ C R⁻¹ᐟ⁴ exp(−cR³ᐟ² cos(3φ/2)) + C R⁻¹ exp(−2cR³ᐟ² cos(3φ/2)) + C R⁻⁷ᐟ⁴. These are bounds for the full sectorial expansions (4.74), with uniform remainders at the boundary. The angular integrals of each exponential are O(R⁻³ᐟ²), since the cosine has a simple zero at the oscillatory boundary. Multiplication by the arc-length factor R gives first-arc bound O(R⁻³ᐟ²) and second-arc bound O(R⁻³ᐟ⁴), hence the required vanishing.
-
-**Checks.**
-
-- A resonant exponent 2θ_ν ∈ ℤ is excluded from this PVI realization even though the corresponding decorated phase object may belong to the core theory.
-- The PII source has α = 0. Its theorem does not become an arbitrary-α connection formula by changing a label.
-- The Stokes triple (i,i,0) satisfies (1.25) but does not admit the literal η formula involving 1/s₃; the continued expression needs its own proof.
-- Hastings–McLeod boundary Stokes data do not satisfy this generic PII input. Neither this theorem nor endpoint smoothness asserts absence of poles throughout every intermediate time interval.
-- The entire function exp(−z²) is flat at both real ends but has modulus exp(R²/2) on arg z = −π/3. Pole-freeness plus real-ray decay therefore fails the sectorial arc test; the explicit uniform weighted bounds above are essential.
-
-*Needs:* Internal: 6.4, 6.5, 7.1, 7.2, 7.4, 7.5, 8.5, 8.6, 8.4; [Airy, Fredholm and Hastings–McLeod theory](#dependency-airy-hm) (8.4; 8.5).
-
-<a id="target-8-8"></a>
-### 8.8 The Hastings–McLeod solution on the phase space
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- Supplied normalized real Hastings–McLeod solution and its derivative at a regular real time; no second existence theory.
-
-Consume the scalar result already owned by RandomMatrices §8.5: its normalized real Hastings–McLeod solution of q″ = tq + 2q³, its uniqueness and real pole-freeness. At a regular real time t₀, use §7.1's first-jet inverse to construct the intrinsic phase point from (q(t₀),q′(t₀)). Apply §§4.5–4.7 and prove that the resulting horizontal section evaluates to the supplied scalar solution on its real domain and on the common analytic continuation. Prove independence of t₀ using uniqueness and the first-jet overlap comparison. The real initial values determine the local complex analytic solution; they do not by themselves prove its boundary behavior, which is consumed from the supplier.
-
-The primary-source chart comparison is VDPS09 §4.10, translated to §7.5's momentum and Hamiltonian normalization. That source supplies the chart, not the Hastings–McLeod existence theorem consumed from RandomMatrices.
-
-**API.**
-
-- Construct the phase-point and horizontal-section bridge from the supplied first jet.
-- Prove commutation with scalar evaluation and with continuation through changes of phase chart.
-- Transport the supplier's reality and real pole-freeness assertions through that evaluation; retain its Airy normalization unchanged.
-
-**Checks.**
-
-- Replacing q ∼ Ai by q ∼ k Ai with k ≠ 1 does not satisfy the same supplier contract.
-- Choosing a second regular real initial time produces the same horizontal section after transport, not a second distinguished solution.
-- Real pole-freeness does not assert absence of poles at complex times, and the bridge does not infer that stronger statement.
-
-*Needs:* Internal: 4.5, 4.6, 4.7, 4.8, 4.9, 7.1, 7.5; [Airy, Fredholm and Hastings–McLeod theory](#dependency-airy-hm) (8.4; 8.5).
-
-#### Examples
-
-The identity-jump model checks the RHP normalization. The generic PVI and homogeneous-PII loci distinguish a proved connection formula from an unrestricted all-parameter assertion. The Hastings–McLeod bridge checks interoperability with an independently owned scalar theory, without using its formula to define the intrinsic dynamics.
-
-#### Dependencies
-
-Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
-
-<a id="layer-9"></a>
-
-## Layer 9: Confluence and convergence
-
-<a id="algebraic-confluence"></a>
-
-**Purpose.** Isolate two reusable results. The first is linear Laurent algebra with an elementary analytic convergence consequence for arbitrary finite-dimensional coefficients. The second constructs a relative dual Poisson structure from a finite locally free algebra. They require no Painlevé equation, primitive endpoint condition, phase dimension, asymptotic solution, or moduli quotient.
-
-### Pole cancellation and Poisson structures
-
-| Contract | Input → output | Proof owner |
-| --- | --- | --- |
-| 9.1 | Vector-valued Laurent germs and principal-part cancellation → exact rational identity, limiting coefficients and compact-uniform convergence | This roadmap: 9.1 |
-| 9.2 | Finite locally free commutative algebra A → relative Poisson structure on (gl_n ⊗ A)∨, base change and all-coefficient sign transport | This roadmap: 9.2 |
-
-The two targets are independent. A collision of connections may use both, but neither general theorem takes the collision’s geometric conclusions as hypotheses. A divisor or coefficient presentation produces comparison lemmas; it does not define the general Poisson object. The determinant, formal type, relative orbit conditions, reduction existence and horizontal-connection limit remain obligations of a consuming application.
-
-<a id="target-9-1"></a>
-### 9.1 Finite principal-part cancellation with vector-valued coefficients
-
-**General theory.**
-
-**Hypotheses.**
-
-- A finite-dimensional complex vector space V, an integer r ≥ 0 and convergent meromorphic/holomorphic germs with the stated pole bounds and P having a simple zero.
-- The principal-part cancellation is the displayed definition of B_j; the finite identity, coefficient formula and compact-uniform convergence are proof outputs.
-- For the exact pole order r + 2, W ≠ 0. No connection, Poisson reduction, formal-type classification or primitive endpoint condition is assumed.
-
-Let V be an arbitrary finite-dimensional complex vector space and r ≥ 0 an integer. Work with convergent meromorphic germs at ε = 0. Let P(ε) = t₁ε + ⋯ + tᵣ₊₁εʳ⁺¹ + O(εʳ⁺²), with t₁ ≠ 0; let C(ε) be V-valued with a pole of order at most r + 1, and write W for its ε⁻ʳ⁻¹ coefficient; and let D_j(ε) be holomorphic V-valued germs for 0 ≤ j ≤ r. For a Laurent germ f, write [f]_<0, [f]₀ and [f]_≥0 for its negative part, constant coefficient and nonnegative part. Define B_j = −[CPʲ]_<0 + D_j and
-
-A_ε(z) = Σⱼ₌₀ʳ B_j(ε)/zʲ⁺¹ + C(ε)/(z − P(ε)).
-
-Prove the exact finite identity
-
-A_ε(z) = Σⱼ₌₀ʳ (D_j(ε) + [C(ε)P(ε)ʲ]_≥0)/zʲ⁺¹ + C(ε)P(ε)ʳ⁺¹/[zʳ⁺¹(z − P(ε))].
-
-This identity uses only scalar multiplication on V. Prove that C(ε)P(ε)ʳ⁺¹ tends to t₁ʳ⁺¹W and that, on every compact subset of ℂ \ {0}, A_ε converges uniformly to Σⱼ₌₀ʳ (D_j(0) + [CPʲ]₀)/zʲ⁺¹ + t₁ʳ⁺¹W/zʳ⁺². After shrinking the ε disk, the denominator on a fixed compact set K is bounded below by |z − P(ε)| ≥ dist(K,0)/2. Thus a finite rational remainder proves uniform convergence; no exchange with an uncontrolled infinite series is needed. Prove naturality under complex-linear maps V → V′. For an invertible parameter substitution ε = φ(η), transport C, P and B_j by composition and define D′_j = B_j ∘ φ + [(C ∘ φ)(P ∘ φ)ʲ]_<0; prove that D′_j is holomorphic and gives the same rational family and limiting coefficients. Principal-part projection itself does not commute with a nonlinear substitution: the holomorphic D_j must receive this correction. The transformed leading coefficients satisfy (t′₁)ʳ⁺¹W′ = t₁ʳ⁺¹W. A change of the z-coordinate is a separate comparison of the rational expression, not an identification of its individual coefficients without transformation.
-
-The coefficient t₁ʳ⁺¹W is nonzero exactly when W is nonzero. In that case the limiting V-valued rational function has a pole of order r + 2 at z = 0. For V = M_n(ℂ) this is a statement about matrix pole order, and supplies no projective Katz slope or formal normal form. If instead C = O(ε⁻ʳ), then CPʳ⁺¹ = O(ε), so the purported new highest coefficient is zero. This is the index/scaling correction needed before the printed pole-raising assertion in GMR23, Theorem 2, pp. 1391–1392, (12)–(15) can be used. The corrected lemma is proved here rather than treating that printed statement as a premise. Whether an application’s time-dependent coefficient basis agrees with its actual Laurent coefficients must be checked in that application.
-
-**API.**
-
-- Construct the principal-part cancellation for arbitrary finite-dimensional coefficient spaces and prove the exact finite rational identity.
-- Compute all limiting coefficients and prove uniform convergence on each compact set avoiding the collision point.
-- Prove compatibility with linear coefficient maps and invertible parameter substitution, including the necessary holomorphic correction to D_j.
-- Distinguish the nonzero highest matrix pole coefficient from formal slope, and exhibit the loss of that coefficient under the insufficient C = O(ε⁻ʳ) scaling.
-
-**Checks.**
-
-- At r = 1, C = W/ε², P = t₁ε + t₂ε², B₀ = −W/ε² and B₁ = −t₁W/ε give the limit t₂W/z² + t₁²W/z³. For t₁ = 1, t₂ = 0, the entire expression equals W/[z²(z − ε)]. By contrast C = W/ε, B₀ = −W/ε, B₁ = W and P = ε give 2W/z² in the limit, with zero triple-pole coefficient.
-- At r = 0, C = W/ε, P = t₁ε and B₀ = −W/ε + D₀ give the limit D₀(0)/z + t₁W/z²; the formula must cover this smallest collision.
-- If W = 0, the highest coefficient vanishes. The theorem does not assert a pole of order r + 2 or preserve a nonzero-leading formal stratum in that case.
-- Applying a linear functional V → ℂ before or after cancellation gives the same scalar formula. Choosing V = M_n(ℂ) changes no coefficient index and introduces no matrix commutator into this lemma.
-- For r = 0, C = 1/ε, P = ε, B₀ = −1/ε and D₀ = 0, substitute ε = η + cη². Then [C ∘ φ]₀ = −c and D′₀(0) = c, so the limiting simple-pole coefficient remains zero. Setting D′₀ = D₀ ∘ φ without correction would give the wrong coefficient −c.
-
-**Supporting constructions owned by this target.**
-
-- Use the scalar native meromorphic-germ principal part and holomorphic remainder and FormalLaurentPuiseux L1/L3 for the formal vector-valued comparisons. Construct the finite-dimensional convergent-germ adapter by scalar components, prove basis independence and linear naturality, and compare each analytic Laurent coefficient with the formal one. The exact rational remainder proves analytic compact-uniform convergence independently of formal valuation convergence.
-
-*Needs:* [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Native convergent meromorphic germs](#dependency-meromorphic-germs) (meromorphicGerms.principalPart; principalPart_eq_iff; principalPart_eq_sum_coeff; Analytic regular remainder); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
-
-<a id="target-9-2"></a>
-### 9.2 Relative dual Poisson structures for finite locally free algebras
-
-**General theory.**
-
-**Hypotheses.**
-
-- A complex algebraic or analytic base B, a finite locally free commutative O_B-algebra A and an integer n ≥ 1.
-- For a residue presentation, the additional finite flat Cartier divisor in a smooth relative curve and its actual dualizing/residue comparison data; an identification A ≅ A∨ is not assumed for general A.
-- For KKS or reduction compatibility, the specified smooth orbit locus and compatible moment-map/reduction data with their hypotheses already verified. The Poisson bracket and sign isomorphism do not create those loci or quotients.
-
-Let B be a complex algebraic or complex analytic base, A a finite locally free commutative O_B-algebra, and n ≥ 1. Form the locally free Lie algebra L = gl_n(O_B) ⊗ A with [X ⊗ a, Y ⊗ b] = [X,Y] ⊗ ab. On the relative dual vector bundle L∨, define the positive linear Poisson bracket intrinsically by {ℓ_X,ℓ_Y}₊ = ℓ_[X,Y], where ℓ_X(ν) = ν(X); extend by the biderivation rule. Construct the corresponding algebraic or holomorphic relative Poisson tensor, prove Jacobi and prove compatibility with base change. The structure is relative to B and makes no assertion about a Poisson bracket in the base directions. Define the negative convention by {f,g}₋ = −{f,g}₊.
-
-Prove that fiber negation N(ν) = −ν is a Poisson isomorphism from the negative to the positive convention: {N*f,N*g}₋ = N*{f,g}₊. This negates every linear coefficient, including every degree in a Takiff-coordinate presentation; an identity map of coefficient matrices is not the comparison. Construct the relative group of units GL_n(A) and its coadjoint action, and prove equivariance of N. On an already specified smooth coadjoint-orbit locus, compare the paired KKS conventions ω_±,ν(ad*_Xν,ad*_Yν) = ±ν([X,Y]) and prove N*ω₊ = ω₋. For H₊ ∘ N = H₋, prove the corresponding Hamiltonian-vector-field transport using the recorded paired convention. Transport an already supplied compatible moment-map and regular-reduction datum through this equivariant comparison, with its sign convention recorded. The output is compatibility where that datum exists, not existence of arbitrary quotients, flatness of relative orbits, or smoothness of a reduction locus.
-
-Retain the actual dual carrier. The trace pairing identifies L∨ with gl_n(O_B) ⊗ A∨; it does not identify A∨ with A. If the application supplies a finite flat Cartier divisor P in a smooth relative curve, write p: P → B and construct A∨ ≅ p_*ω_P/B with A = p_*O_P, where ω_P/B ≅ ω_C/B(P)|_P is the relative dualizing module. Prove the resulting perfect residue pairing with A. In a local polynomial presentation A = O_B[z]/(Q(z)), with Q monic of degree m, the coordinate lemma identifies the dualizing generator with dz/Q and the Frobenius functional λ_Q(f) with the coefficient of zᵐ⁻¹ in the representative of degree less than m. Equivalently λ_Q(f) is the sum of the residues of f(z)dz/Q(z) at the divisor. Prove perfectness, base change and compatibility with changes of such presentations, transporting the differential generator as well as coefficients. A general finite locally free A need not admit such a Frobenius identification; its intrinsic dual Poisson structure does not require one.
-
-On a split fiber A ≅ ∏_i ℂ the Lie algebra and bracket split accordingly. On a local fiber A ≅ ℂ[z]/zᵐ, prove the Takiff-coordinate formula [Xzⁱ,Yzʲ] = [X,Y]zⁱ⁺ʲ for i + j < m and zero for i + j ≥ m, together with the corresponding dual linear Poisson formula. These are coordinate lemmas for the intrinsic finite-algebra construction. For the source comparison in GMR23, brackets (96)–(97), the negative convention is transported by fiber negation; a connection convention dY/dz = A_source Y versus ∇ = d + A_ours additionally requires A_ours = −A_source, with its residue and exponent coefficients transformed consistently. GMR23 Definitions 3–4 and Theorem 12, §4.2, are models on their stated domains, not a proof that every local-condition orbit or collision reduction is flat or regular.
-
-**API.**
-
-- Construct the relative dual linear Poisson structure from multiplication in A, and prove Jacobi, functoriality under algebra isomorphisms and base change.
-- Construct fiber negation as an equivariant Poisson isomorphism and transport the paired KKS, Hamiltonian and already verified reduction conventions.
-- Keep A∨ as the dual carrier and prove the residue/Frobenius coordinate comparison only with its specified curve or polynomial input.
-- Derive split and truncated-algebra coordinate formulas, including every Takiff degree and the full source-to-supplier sign map.
-
-**Checks.**
-
-- For O_Δ[z]/(z(z − ε)), ε ≠ 0 gives the product of two point algebras, while ε = 0 gives ℂ[z]/z². The central nilpotent class of z is part of the comparison.
-- With X = E₁₂, Y = E₂₁ and ν_source = diag(1,−1)/2, the source linear Poisson bracket is −1. At ν_ours = −ν_source the positive supplier bracket is also −1; pullback under fiber negation agrees, while identity comparison gives +1. For a Takiff algebra the bracket is zero when the sum of the two degrees exceeds the truncation degree.
-- For Q(z) = z(z − ε) and f = a + bz, λ_Q(f) = b. When ε ≠ 0 this equals [f(ε) − f(0)]/ε; at ε = 0 it is the coefficient of the surviving nilpotent class z. The dualizing pairing persists although the separated-point expression contains 1/ε.
-- For A = ℂ[x,y]/(x,y)², every functional λ gives a degenerate pairing (a,b) ↦ λ(ab): a nonzero element of span{x,y} in the kernel of λ pairs to zero with all A. Thus a general finite locally free algebra cannot be identified with its dual by an unstated Frobenius functional, while the dual Poisson construction still applies.
-- The fiber-negation map is not evidence that a chosen orbit family is flat or that a desired complex symplectic quotient exists. Those are separate hypotheses or construction targets of the application.
-
-**Supporting constructions owned by this target.**
-
-- For a finite flat effective relative Cartier divisor p:P→B in a smooth relative curve C→B, prove adjunction ω_(P/B)≅ω_(C/B)(P)|P and finite-flat duality p_*ω_(P/B)≅Hom_B(p_*O_P,O_B), with residue-normalized trace and base-change/parameter-change compatibility. In a monic presentation Q of degree m, prove perfectness of λ_Q(f)=coefficient_(m−1)(f mod Q), compare it with the residue trace and glue. This additional-hypothesis theorem is included in 9.2; an arbitrary finite locally free algebra is not identified with its dual without such a perfect pairing.
-
-- For the analytic branch, use the complex analytic-space and coherent/finite locally free sheaf carriers constructed in the analytic foundational prefix of 1.2, retaining nilpotent coefficients. Construct the relative vector-bundle and unit-group charts by local trivializations and prove their gluing and base-change comparisons. 9.2 owns the relative complex Poisson, coadjoint, residue and conditional reduction comparisons. This use of shared carriers imports no connection-moduli, RH or Painlevé theorem.
-
-*Needs:* Internal: 1.2; [Smooth real linear Poisson signs](#dependency-poisson) (G4.6A); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3).
-
-### Source and scope
-
-Bibliographic information and source locators are listed in [sources.toml](sources.toml). Relevant locators in [GMR23](https://doi.org/10.1007/s00220-023-04650-8) are Theorem 2, (12)–(15), with the explicit correction in 9.1; §4.2, Definitions 3–4 and Theorem 12; and brackets (96)–(97). The source’s §5.1 restriction to nonramified Painlevé realizations is a limitation of those applications, not a restriction on either elementary general contract above. No source theorem is used to infer arbitrary orbit flatness, reduction existence or primitive endpoint admissibility.
-
-<a id="target-9-3"></a>
-### 9.3 Normalized section convergence from logarithmic one-forms
-
-**General theory.**
-
-**Hypotheses.**
-
-- A common connected simply connected complex domain, explicit holomorphic line isomorphisms, a fixed nonvanishing frame, normalization factors and a common domain of nonvanishing scalar representatives.
-- A common base point with convergent nonzero normalized values, and integral convergence of the actual corrected logarithmic one-forms uniformly on the stated compact path families.
-- For the sufficient local-uniform-form condition, uniformly bounded path lengths in a common compact set for each compact endpoint set; endpoint conclusions are not part of this lemma.
-
-Prove a convergence lemma for arbitrary holomorphic line sections, independently of any determinant or differential-equation origin. Let Ω be a common connected simply connected complex domain with a fixed point s₀. Supply holomorphic line bundles L_ε, sections σ_ε, comparison isomorphisms Φ_ε: L_ε → L₀, a nowhere-zero holomorphic frame e of L₀ on Ω, and specified nowhere-zero holomorphic normalization factors c_ε. Write Φ_ε(c_εσ_ε) = f_ε e, including ε = 0, and restrict to a domain where all the f_ε under consideration and f₀ are nowhere zero. Existence of these comparisons and a common nonvanishing domain is input, not a consequence of an unspecified degeneration. Normalization factors may remove divergent factors; their parameter derivatives and the chosen frame must be included in the actual corrected one-forms α_ε = d log f_ε.
-
-For every compact K ⊂ Ω, choose piecewise smooth paths γ_s from s₀ to s ∈ K, contained in a common compact K′ ⊂ Ω and with uniformly bounded lengths in a fixed local metric. Assume f_ε(s₀) → f₀(s₀) ≠ 0 and sup_{s∈K}|∫_{γ_s}(α_ε − α₀)| → 0. Uniform convergence of the one-forms on each such K′ is a sufficient condition. Prove f_ε(s)/f₀(s) = [f_ε(s₀)/f₀(s₀)] exp(∫_{γ_s}(α_ε − α₀)) and hence locally uniform convergence f_ε → f₀. Prove independence of path using the logarithmic-derivative identity; alternatively, closed holomorphic one-forms on the simply connected domain and one nonzero base-point value construct their unique nowhere-zero scalar representatives by exponentiating primitives.
-
-This lemma requires neither a Fredholm realization nor the targets on connections, asymptotic parametrices or collision geometry. Such applications must first construct the line/frame comparisons and prove that their proposed variational forms really equal the displayed logarithmic derivatives. In particular, using a JMU or Hamiltonian expression requires its own proved comparison and does not automatically extend it to a resonant or ramified endpoint. BERT17, Proposition 2.3, formula (3.6), Theorem 3.3 and §3.1.2, and BERT16, Theorem 2.2 on its comparison locus, concern those possible inputs rather than a universal identification. This proof concerns a common nonvanishing domain. Across zeros, use a separate holomorphic representative and, where available, the determinant convergence route of §9.4. Endpoint connection constants and nonlinear Stokes limits require additional uniform sectorial estimates and compatible asymptotic normalization.
-
-**API.**
-
-- Express compared and normalized line sections in one specified frame, including all scalar factors in the actual logarithmic derivative.
-- Prove the exponential integral identity and locally uniform scalar convergence from base-point normalization and compact-path estimates.
-- Construct nowhere-zero representatives from closed holomorphic one-forms and one nonzero base-point value on a simply connected domain.
-- Retain separate obligations for comparison formulas, passage through zeros, and endpoint or connection-constant limits.
-
-**Checks.**
-
-- Multiplying τ_ε by an uncontrolled ε-dependent nonzero constant leaves d log τ_ε unchanged but can destroy convergence; the base-point normalization is essential.
-- For τ_ε(z) = z − ε, scalar determinants converge across the zero, while their logarithmic derivatives do not converge uniformly in a neighborhood of it.
-- Convergence on every fixed compact time interval does not give a uniform endpoint asymptotic estimate, so it cannot alone determine the limiting connection constant.
-- A change of line frame or a parameter-dependent normalization factor changes the logarithmic one-form by its actual logarithmic derivative; the comparison must include this correction before applying the convergence estimate.
-
-*Needs:* [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
-
-<a id="target-9-4"></a>
-### 9.4 Trace-norm determinant convergence and local zero counts
-
-**General theory.**
-
-**Hypotheses.**
-
-- A fixed Hilbert space and trace-class-norm holomorphic operator families with convergence in trace norm uniform on compact parameter sets.
-- For varying Hilbert spaces, specified valid identifications and convergence of the conjugated operators, including any contour and measure factors; a line-section realization is separate input if claimed.
-- For zero counts, one complex parameter, a fixed relatively compact bounded domain with piecewise smooth boundary, common holomorphy near its closure, and a limiting determinant nonzero on that boundary and not identically zero.
-
-Use the generic trace-class determinant and its trace-norm continuity from RandomMatrices §8.3, within that supplier’s actual operator scope. On one fixed complex Hilbert space H, let K_ε(s) be trace-class operators, holomorphic in trace norm on a common complex domain Ω, and suppose K_ε → K₀ in trace norm uniformly on every compact subset of Ω. Prove that D_ε(s) = det_H(id − K_ε(s)) is holomorphic and converges to D₀ locally uniformly. For each compact parameter set K, the image K₀(K) is compact in trace norm. Apply continuity of the generic determinant at the points of that compact image and a finite subcover; compact-uniform trace-norm convergence then gives uniform scalar convergence on K. The holomorphic-family assertion is proved from normal convergence of the exterior-power series with the trace-norm estimates constructed here. This is a theorem about scalar holomorphic representatives and can include their zeros; it does not integrate logarithmic derivatives across a zero.
-
-For operators initially acting on different Hilbert spaces H_ε, supply specified bounded complex-linear isomorphisms U_ε: H_ε → H with bounded inverses, transport K_ε by conjugation, and prove the trace-norm convergence of these transported operators. Moving-contour parametrizations, orientation and measure factors must be included in the identification; pointwise convergence of untransported kernels is not the trace-norm hypothesis. If the scalar determinant is to represent a preassigned line section, the application must prove that realization and control any multiplying nonzero scalar factor. This target neither repeats the generic determinant construction nor assumes that every RHP admits this trace-class representation.
-
-For the zero-count consequence, specialize to one complex variable and a bounded domain D with piecewise smooth boundary and compact closure in a common holomorphy domain. Require D₀ to be nonzero on ∂D and not identically zero. Prove that, for sufficiently small ε, D_ε and D₀ have the same number of zeros in D counted with multiplicity, using uniform convergence on the boundary and Rouché’s theorem. Localize this assertion to small disjoint domains around isolated limiting zeros; do not infer an unrestricted global zero-count statement. Endpoint connection constants and nonlinear Stokes limits still require uniform endpoint or sectorial estimates and compatible asymptotic normalization. Convergence on all fixed compact subsets supplies neither condition.
-
-**API.**
-
-- Export holomorphic determinant convergence from compact-uniform trace-norm convergence on a specified fixed Hilbert space.
-- Transport varying Hilbert spaces through explicit identifications and record the contour, measure and scalar-normalization obligations required by an application.
-- Prove eventual equality of local zero counts with multiplicity under the stated one-variable boundary hypotheses.
-- Keep convergence through zeros distinct from logarithmic-derivative convergence and from endpoint or Stokes-constant limits.
-
-**Checks.**
-
-- On H = ℂ take K_ε(z) = 1 − z + ε. Then K_ε converges in trace norm and D_ε(z) = z − ε converges as a holomorphic determinant across the zero, while d log D_ε = dz/(z − ε) does not converge uniformly near that zero.
-- The constant family D_ε ≡ ε converges uniformly to the identically zero function; the limiting nonvanishing-boundary hypothesis fails, so no zero-count conclusion follows.
-- A moving-contour kernel formula must include the parametrization and measure factors in the transported operator before a trace-norm estimate is a statement about one fixed Hilbert space.
-- Convergence on every fixed compact time interval does not give a uniform endpoint asymptotic estimate, so it cannot alone determine the limiting connection constant.
-
-**Supporting constructions owned by this target.**
-
-- For compact K in the common parameter domain, K0(K) is compact in trace norm. Apply continuity of the generic Fredholm determinant at each point of this compact image and a finite cover; trace-norm uniform convergence on K then gives uniform scalar convergence on K. A bound merely uniform on trace-norm balls is unnecessary. To prove holomorphic dependence, apply normal convergence to the supplier's exterior-power series and establish its requisite trace-norm estimates as the holomorphic-family adapter. For zero counts, consume native Rouché on discs; for the stated general domain, construct a finite oriented boundary cycle and prove its winding characterization.
-
-*Needs:* [Generic trace-class determinant](#dependency-trace-determinant) (8.3, generic operator-theory prefix); [Trace-class ideal carrier](#dependency-trace-ideal) (OI-B01–OI-B19; OI-B23; OI-B29–OI-B30); [Native Rouché and zero counts](#dependency-rouche) (rouche; rouche_nullHomologous; Multiplicity zero-count carrier).
-
-<a id="target-9-5"></a>
-### 9.5 Collision families of geometric connection data
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- The collision datum specified in this target: curve and finite-flat divisor family, labels, determinant/exponent/time maps, leading orbit, lower coefficients and local descent/filtration data. Primitive endpoints satisfy every condition of 3.3; boundary endpoints are recorded separately. The regular domain is defined by actual relation/deformation ranks; Poisson/sign comparisons, the corrected Laurent lemma, common charts and horizontal-field convergence are construction/proof outputs.
-
-Define a collision datum as the following geometric family, with arrows given by isomorphisms preserving all the data. Over a collision disk Δ_ε and an admitted limiting time/parameter domain, give a smooth projective curve family with a finite-flat structural divisor of degree four; ordered labels on its separated branches over ε ≠ 0 and their specialization map; a determinant line connection and its comparison; and a flat family of local polar-part conditions in the dual of gl₂ ⊗ O_P, with filtrations or factorized ramified descent as required. Specify the meromorphic-in-ε exponent map, the time map with nonzero derivative for ε ≠ 0, and any finite parameter cover used by these maps. Specify the local leading-coefficient orbit and the lower coefficients that determine its formal type, not merely the multiplicity of the divisor. The limiting formal condition is either a §3.1 condition with its actual minimal projective slope or a separately marked lower-complexity boundary condition. These are algebraic/formal data; no horizontal solution limit, symplectic equivalence or RHP convergence is a field of the definition.
-
-The admitted primitive classical domain first requires both primitive endpoints to be objects of §3.3: genus zero, rank two, structural degree four, the admitted local formal structures, a regular-singular determinant with its fixed-residue compatible time transport, the actual reduced versal time problem, generic weights and nonempty stable fibers. Projective slopes or trace-free deformation ranks cannot replace this endpoint condition. Within that domain, impose the nonzero-leading/factorization relations and construct the regular comparison locus where the relative local-condition and deformation complexes have flat coherent terms and the constant ranks computed from the endpoint problems. Define it using the actual relation and Kodaira–Spencer maps, invariant under changes of presentation; neither the time/phase dimension conclusions of §3.4 and §3.7 nor equality of horizontal distributions is a field added to the input.
-
-A boundary endpoint instead records its actual reduced structural/local conditions, determinant pole order and the rank or leading-term conditions that fail. It is not silently admitted to the primitive classical domain. It receives an elementary scalar confluence arrow only through its separately proved §7.3 dictionary and phase/first-jet comparison. An extra scalar irregular determinant is not a primitive endpoint merely because its projective profile agrees with one in §3.4. Construct the moduli/reduction comparisons on the specified regular locus, prove its rank description in the local model, and obtain the common phase charts and horizontal-field extension by solving the strong deformation equations of targets 3.9–3.12. A component without this verified regular comparison has no asserted solution-convergence arrow.
-
-For A = p_*O_P, import target:9.2’s relative dual Lie–Poisson structure and its residue comparison with the curve’s polar data. The split point algebras and the truncated local algebra at collision are coordinate realizations of this one finite-algebra family. Verify separately that the chosen local-condition orbits and relative reductions satisfy the regularity and flatness conditions needed by this collision datum; the general Poisson construction does not establish those properties. Apply the supplied fiber-negation isomorphism to the GMR23 conventions: dY/dz = A_source Y versus ∇ = d + A_ours requires A_ours = −A_source, for every Takiff coefficient and residue/exponent parameter. Identify the actual residue pairing, paired KKS form, moment map, reduction and Hamiltonian conventions through that isomorphism. An identity map of coefficient matrices is not this adapter.
-
-Use GMR23 Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429, for its ordered cascade and Takiff models, and Theorem 13, §4.3, pp. 1435–1436, for limiting Hamiltonians on their stated domains. For each coordinate collision model satisfying the simple-zero and pole-bound hypotheses of target:9.1, instantiate that corrected principal-part lemma with V = M₂(ℂ). Its exact finite identity supplies the limiting Laurent coefficients and compact-uniform coefficient limit away from the collision point; the application must match these actual Laurent coefficients with the source’s time-dependent coefficient basis and the chosen exponent/time map. The printed Theorem 2, pp. 1391–1392, (12)–(15), is not used unchanged: C = O(ε⁻ʳ) makes CPʳ⁺¹ = O(ε), whereas the corrected ε⁻ʳ⁻¹ coefficient W gives the highest limit coefficient t₁ʳ⁺¹W. Under a nonlinear change of collision parameter, transport the holomorphic D_j correction specified by the general lemma as well. Neither this matrix coefficient limit nor a nonzero highest matrix coefficient determines the projective Katz slope or supplies a moduli/reduction comparison. Prove the full endpoint formal-type and regular-locus adapters already required above. GMR23 §5.1, p. 1441, explicitly restricts its Painlevé realizations to the nonramified case; the ramified comparisons remain owned applications.
-
-**API.**
-
-- Construct the collision-data groupoid, the specified rank-defined admitted domain, its special fiber and the determinant/local-structure comparison. Prove invariance of its domains under curve, frame and parameter-cover changes.
-- Prove Poisson and symplectic-reduction compatibility on the stated regular loci and identify any needed resolution or modification.
-- Prove convergence of the pulled-back horizontal distributions in common local charts from the geometric deformation equations.
-- Construct the endpoint-profile adapters for every verified collision datum, retaining its leading orbit, lower coefficients, ramification and exponent map. A vanishing leading coefficient is sent to its computed new formal stratum or marked boundary. The quantified arrows are these collision-data comparisons, not an unstated finite list of familiar scalar arrows.
-
-**Checks.**
-
-- For O_Δ[z]/(z(z − ε)), ε ≠ 0 gives the product of two point algebras, while ε = 0 gives ℂ[z]/z². The central nilpotent class of z is part of the comparison.
-- At r = 1, C = W/ε², P = t₁ε + t₂ε², B₀ = −W/ε² and B₁ = −t₁W/ε give the limit t₂W/z² + t₁²W/z³. For t₁ = 1, t₂ = 0, the entire expression equals W/[z²(z − ε)]. By contrast C = W/ε, B₀ = −W/ε, B₁ = W and P = ε give 2W/z² in the limit, with zero triple-pole coefficient.
-- The family −B/(εz) + B/[ε(z − ε)] + C/z tends to B/z² + C/z. For B = diag(1,−1) the projective slope is 1. For B = E₁₂ and C = E₂₁ it is 1/2 after z = w² and gauge diag(1,w). For B = E₁₂ and C = 0, gauge I + E₁₂/z removes the pole. These cases have the same collision divisor but different endpoint formal data; the last leaves the generic irregular domain.
-- With X = E₁₂, Y = E₂₁ and ν_source = diag(1,−1)/2, the source linear Poisson bracket is −1. At ν_ours = −ν_source the positive supplier bracket is also −1; pullback under fiber negation agrees, while identity comparison gives +1. For a Takiff algebra the bracket is zero when the sum of the two degrees exceeds the truncation degree.
-- A global test family on ℙ¹ has poles 0, εT, 1, ∞ and coefficient (−B/ε + C)/z + (B/ε)/(z − εT) + D/(z − 1), with T ≠ 0 and εT ≠ 1. Its limit is TB/z² + C/z + D/(z − 1), and its residue at infinity remains −C − D. For the primitive classical test impose tr(B) = 0 and the specified determinant residues/transport. Regular semisimple trace-free B gives the underlying (0,0,1) profile; nilpotent B with the indicated nonzero lower coefficient gives (0,0,1/2). Verify the full §3.3 endpoint conditions, exponent map, stable locus and time comparison T ↦ εT before promoting either coefficient model to a moduli arrow.
-- B = diag(1,2) has the same projective slope-one shape as its trace-free part diag(−1/2,1/2), but its limiting determinant has the term 3T dz/z². It is outside the primitive classical domain even though scalar twisting does not change invariant subbundles or the trace-free commutator complex.
-
-*Needs:* Internal: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.9, 3.10, 3.11, 3.12, 5.2, 9.1, 9.2; [Smooth real KKS and regular reduction](#dependency-reduction) (R2; R3).
-
-<a id="target-9-6"></a>
-### 9.6 Convergence of horizontal solutions under confluence
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- The verified geometric comparison of 9.5, a reference lift, positive-margin common charts, uniform field/common Lipschitz control and initial convergence; approximating pathwise existence is a conclusion.
-
-Apply NonlinearConnections §0.9 to the actual time/phase comparison of §9.5. Supply a reference horizontal lift on a fixed compact piecewise C¹ time path avoiding the limiting fixed singularities. Verify finitely many common charts with a positive boundary margin, uniform convergence of the path-pulled fields (including the path velocity), a common local Lipschitz bound and convergent initial points. The general theorem then produces the approximating lifts on the entire path and proves uniform convergence; their existence/no-exit is not assumed. Import its segment estimate (initial error + ℓδ_ε)exp(Lℓ) and finite-chart gluing. Holomorphic fields give derivative bounds only on a larger common neighborhood where Cauchy estimates apply. Uniformity on compact time domains, parameter families or endpoint sectors requires its separate common-cover and path-family controls; none follows from convergence along one path.
-
-**API.**
-
-- Verify the exact common-chart and field-convergence hypotheses on each claimed geometric collision domain.
-- Apply the imported no-exit and quantitative convergence theorem without a separate scalar proof.
-
-**Checks.**
-
-- On [0,2], the approximating fields F_n = 1/(n+1), limiting field F_ref = 0 and initial value 0 give x_n(t) = t/(n+1), with uniform error 2/(n+1). For identical zero fields and initial values (−1)ⁿ, the solutions do not converge; the initial-convergence hypothesis is essential.
-- Coefficient convergence on a chart does not control a trajectory that leaves every common neighborhood; the positive-margin hypothesis is used in the proof.
-- The estimate is uniform on the fixed compact path. It does not assert uniform convergence on an unbounded time ray or across a limiting fixed singularity.
-
-*Needs:* Internal: 9.5, 0.9.
-
-<a id="target-9-7"></a>
-### 9.7 Confluence relations between classical equations
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- Verified geometric collision-data arrows of 9.5, their recorded endpoint/parameter/time maps and domains, and the matched-data/common-neighborhood hypotheses needed for 9.6. Scaled scalar equations and their jet comparisons are derived using targets 7.1–7.5; composition retains the actual comparison data, and exchanging limits requires additional uniform estimates.
-
-Construct the cascade as the category generated by the verified collision-data arrows of §9.5, with endpoint identifications and the stated domains retained. Its morphisms are data-dependent comparisons; the ten underlying profiles alone do not specify an arrow. For each such arrow choose the time and phase charts only after the geometric comparison is built, then derive the scaled classical equation, its parameter map and its first-jet correspondence using targets 7.1–7.5. The ramified (0,0,1/2) endpoint is obtained only on its nonzero lower-coefficient locus; a removable or vanishing-leading-term endpoint is placed in its separately computed lower stratum and receives a §7.3 scalar boundary comparison only where the first-jet comparison is proved. Prove coverage of each arrow's recorded domain, its nonzero scaling factors and its omitted charts. Apply §9.6 to obtain the solution limit for matched initial points. Composition uses compatible determinant, label, parameter-cover and time identifications; interchanging limits requires an additional uniform theorem. This theorem quantifies over the invariant collision-data class, and makes no claim that an unspecified finite graph exhausts every possible degeneration. (GMR23, Definitions 3–4, Theorems 12–13; the corrected Laurent lemma is owned by AlgebraicConfluence §9.1 and applied in §9.5, and §5's source realizations retain their nonramified scope.)
-
-**Checks.**
-
-- Two paths to a profile can produce different time scales or parameter names; equality requires the comparison maps, not equality of the final classical label.
-- An algebraic limit of a displayed equation without a first-jet inverse does not yet identify its phase points or solution germs.
-- Successive limits with different allowable neighborhoods need not commute, even when the displayed limiting differential equations agree.
-
-*Needs:* Internal: 3.12, 7.1, 7.2, 7.3, 7.4, 7.5, 9.5, 9.6.
-
-<a id="target-9-8"></a>
-### 9.8 Convergence of tau sections under confluence
-
-**Painlevé application.**
-
-**Hypotheses.**
-
-- Actual line/frame/normalization comparisons and either the proved logarithmic-form estimates or common-Hilbert-space trace-norm estimates, with separate boundary or endpoint hypotheses when claimed.
-
-Construct the actual determinant-line comparisons, frames, nonzero correction factors and common regular normalization point for the collision of §9.5. With these identifications, verify one of two independent general contracts. AnalyticRHPAndDeterminants §9.3 yields normalized scalar convergence from convergence of corrected logarithmic forms on controlled compact path families in a simply connected zero-free domain. The forms must be the actual determinant-frame forms of §6.4; JMU/Hamiltonian formulas can be used only on their proved comparison locus in §§6.4–6.5.
-
-Alternatively, prove controlled moving-contour, measure and operator identifications with one Hilbert space and compact-uniform trace-norm convergence, then apply AnalyticRHPAndDeterminants §9.4. This route can include zeros; zero counts require nonvanishing of the limit on the chosen boundary and a limit not identically zero. The line/frame/operator comparisons are application obligations, not supplied by the abstract convergence theorems. Endpoint constants and nonlinear Stokes limits additionally require the verified uniform sectorial controls of §8.6 and compatible asymptotic normalization; §9.6 alone does not give them.
-
-**API.**
-
-- Construct and verify the line, frame, normalization and operator comparisons across the actual collision.
-- Discharge the hypotheses of the chosen general convergence route and any additional zero-count or endpoint conclusion.
-
-**Checks.**
-
-- Multiplying τ_ε by an uncontrolled ε-dependent nonzero constant leaves d log τ_ε unchanged but can destroy convergence; the base-point normalization is essential.
-- For τ_ε(z) = z − ε, scalar determinants converge across the zero, while their logarithmic derivatives do not converge uniformly in a neighborhood of it.
-- Convergence on every fixed compact time interval does not give a uniform endpoint asymptotic estimate, so it cannot alone determine the limiting connection constant.
-
-*Needs:* Internal: 6.3, 6.4, 6.5, 8.6, 9.5, 9.6, 9.3, 9.4.
-
-#### Examples
-
-A two-pole collision tests the local algebra and Laurent rescaling before its classical display. Constant fields with mismatched initial points test the necessity of the analytic hypotheses. The determinant family z − ε tests the difference between function convergence and logarithmic-derivative convergence at a zero. These examples prevent a formal coefficient limit from being mistaken for the full confluence theorem.
-
-#### Dependencies
-
-Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
-
-### Downstream consumers
-
-A later random-matrix or integrable-probability application can consume this intrinsic phase/observable bridge together with RandomMatrices §§8.3–8.5, preserving the existing ownership of Fredholm determinants, the Airy edge and Hastings–McLeod theory. Such a joint consumer is a new downstream target; the existing RandomMatrices roadmap is not retroactively made to depend on this one.
-
-Further consumers include geometric special-function and connection-formula comparisons, moduli of irregular connections and character varieties, and controlled degeneration problems. They consume the proved horizontal, symplectic, continuation and normalization interfaces at their actual scope. A differential-algebraic classification of all irreducible transcendents, a complete classification of algebraic special solutions, discrete/q-difference Painlevé systems and cluster or Sakai-wide constructions are separate extensions. None supplies a premise to the intrinsic differential construction above.
-
-Implementation follows the dependency graph. Build each general result from its stated geometric or analytic foundations, and apply it only after its hypotheses have been verified. The five-point application uses the general moduli and continuation theorems without Painlevé prerequisites. The Painlevé construction and property precede the surface and tau developments; the classical coordinate comparisons follow those intrinsic constructions. Normalized analytic applications and confluence use the relevant comparison theorems and independently specified general analytic or algebraic results. This order keeps the common definitions and theorems independent of the classical scalar displays.
-
+Boundary-value asymptotics, connection constants, Hastings–McLeod identification, confluence and Garnier applications lie outside this roadmap. The finite-flat unfolding in §1.6 proves closedness of the symplectic form; §7.3 covers coefficient-boundary equations.
 
 ### References
 
@@ -2878,13 +2088,5 @@ Implementation follows the dependency graph. Build each general result from its 
 - **BERT16.** Marco Bertola. *[Corrigendum: The dependence on the monodromy data of the isomonodromic tau function](https://arxiv.org/abs/1601.04790v2)*. Communications in Mathematical Physics 381 (2021), 1445–1461. Cited version: arXiv 1601.04790v2 (19 September 2020), published in 2021 as Correction to: The Dependence on the Monodromy Data of the Isomonodromic Tau Function. The key retains the initial 2016 preprint year. Locators: Definition 2.1; Theorems 2.1 and 2.2.
 
 - **BERT17.** Marco Bertola. *[The Malgrange Form and Fredholm Determinants](https://arxiv.org/abs/1703.00046v4)*. SIGMA 13 (2017), 046, 12 pages. Cited version: arXiv 1703.00046v4, carrying the SIGMA publication text. Locators: §1; Theorem 2.2; Proposition 2.3; formula (3.6); Theorem 3.3; §3.1.2.
-
-- **ILP18.** A. R. Its; O. Lisovyy; A. Prokhorov. *[Monodromy dependence and connection formulae for isomonodromic tau functions](https://arxiv.org/abs/1604.03082v4)*. Duke Mathematical Journal 167(7) (2018), 1347–1432. Cited version: arXiv 1604.03082v4 (29 October 2018). Locators: §1.4, Theorems A and B, equations (1.13), (1.16)–(1.21), (1.25)–(1.28); Lemma 3.3; Propositions 3.20 and 3.24; §3.9; §§4.3–4.5, especially (4.74)–(4.76); Remark 4.8.
-
-- **DIK08.** P. Deift; A. Its; I. Krasovsky. *[Asymptotics of the Airy-kernel determinant](https://arxiv.org/abs/math/0609451v2)*. Communications in Mathematical Physics 278 (2008), 643–678. Cited version: arXiv math/0609451v2 (21 June 2007). Locators: Theorem 1; equations (2)–(3).
-
-- **HXZ16.** Min Huang; Shuai-Xia Xu; Lun Zhang. *[Location of Poles for the Hastings–McLeod Solution to the Second Painlevé Equation](https://arxiv.org/abs/1410.3338v2)*. Constructive Approximation 43(3) (2016), 463–494. Cited version: arXiv 1410.3338v2 (9 July 2015). Locators: Theorem 2.1.
-
-- **GMR23.** Ilia Gaiur; Marta Mazzocco; Vladimir Rubtsov. *[Isomonodromic Deformations: Confluence, Reduction and Quantisation](https://doi.org/10.1007/s00220-023-04650-8)*. Communications in Mathematical Physics 400 (2023), 1385–1461. Publisher version of record, 1 March 2023, under CC BY 4.0. Locators: Theorem 2, pp. 1391–1392, (12)–(15), used only with the corrected rank-raising coefficient lemma in §9.5; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1, p. 1441, for its explicit nonramified scope.
 
 - **DLMF.** P. A. Clarkson, *[Painlevé Transcendents, Chapter 32 of the NIST Digital Library of Mathematical Functions](https://dlmf.nist.gov/32)*. Version 1.2.8, released 15 September 2026. [§32.2](https://dlmf.nist.gov/32.2), equations 32.2.1–32.2.6; [§32.6](https://dlmf.nist.gov/32.6); [§32.7](https://dlmf.nist.gov/32.7); [§32.9](https://dlmf.nist.gov/32.9), especially equations 32.9.6 and 32.9.12. Standard scalar displays and normalization reference.

@@ -1,0 +1,145 @@
+{
+  "schema": "tauceti-roadmap/scope-revision-v1",
+  "baseline_commit": "8eaf4ed294dfeee63b0fe5603331a185f0379a70",
+  "authorization": "Remove the development applications, all of Layer 8 including 8.8, and confluence in Layer 9. Remove 0.9, whose consumers are all in Layer 9. Retain general definitions and the basic theory supporting Layers 0–7.",
+  "removed_target_ids": [
+    "0.9",
+    "2.7",
+    "2.8",
+    "2.9",
+    "2.10",
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5",
+    "8.6",
+    "8.7",
+    "8.8",
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5",
+    "9.6",
+    "9.7",
+    "9.8"
+  ],
+  "retained_counts": {
+    "parts": 4,
+    "general_parts": 3,
+    "layers": 8,
+    "targets": 57,
+    "general_targets": 21,
+    "api_laws": 154,
+    "diagnostics": 181,
+    "internal_edges": 243,
+    "supporting_constructions": 27
+  },
+  "removed_dependency_ids": [
+    "lp",
+    "hilbert-transform",
+    "cauchy",
+    "rouche",
+    "meromorphic-germs",
+    "poisson",
+    "reduction",
+    "airy-hm",
+    "gamma"
+  ],
+  "removed_source_ids": [
+    "ILP18",
+    "DIK08",
+    "HXZ16",
+    "GMR23",
+    "DLMF5",
+    "NEM14"
+  ],
+  "retained_target_edits": {
+    "1.6": [
+      {
+        "path": [
+          "statement"
+        ],
+        "before": "Construct the relative trace two-form on the moduli family, descend it from the universal-object cover and prove nondegeneracy using §1.4 and §1.5. Prove closedness by the following auxiliary construction here, before any limiting-system or confluence application. Over a smooth integral auxiliary base H, replace the fixed polar divisor by the finite-flat divisors of I23 §8. At a ramified point use ∏ⱼ₌₁ᵐ⁻¹(z−hʳqⱼ)(z−hʳ), with qⱼ distinct, nonzero and different from 1. Construct the moduli algebraic space of simple connections with the unfolded factorized local structures, an étale universal-object cover, the relative deformation complex and trace form. Reapply the boundedness and deformation arguments to this new family; it is not covered merely by §1.1's disjoint marked sections.\n\nProve smoothness over H and identify the original stable moduli, complex and form with the appropriate open part of the central fiber. On the dense open parameter set with generic separated poles, construct both quasi-isomorphisms from the diagonal deformation complex to the unfolded complex and the logarithmic parabolic complex, respecting trace forms. Prove closedness of the logarithmic trace form by the Čech cup-product/trace calculation and gauge descent and transfer it through these two comparisons. The relative sheaf of three-forms on this smooth family over an integral base is locally free, and restriction to the indicated dense open detects zero. Deduce d_relative ω=0 on the whole family, restrict to the central stable locus and descend. A later nonreduced base change uses this proved identity; density on a nonreduced base is not a substitute.\n\nThe fixed-determinant result is the pullback of this closed form to the determinant fiber, with nondegeneracy supplied only after §1.5's orthogonality comparison. No scalar Hamiltonian or classification of phase surfaces enters this construction.",
+        "after": "Construct the relative trace two-form on the moduli family, descend it from the universal-object cover and prove nondegeneracy using §1.4 and §1.5. Prove closedness by the following auxiliary construction. Over a smooth integral auxiliary base H, replace the fixed polar divisor by the finite-flat divisors of I23 §8. At a ramified point use ∏ⱼ₌₁ᵐ⁻¹(z−hʳqⱼ)(z−hʳ), with qⱼ distinct, nonzero and different from 1. Construct the moduli algebraic space of simple connections with the unfolded factorized local structures, an étale universal-object cover, the relative deformation complex and trace form. Reapply the boundedness and deformation arguments to this new family; it is not covered merely by §1.1's disjoint marked sections.\n\nProve smoothness over H and identify the original stable moduli, complex and form with the appropriate open part of the central fiber. On the dense open parameter set with generic separated poles, construct both quasi-isomorphisms from the diagonal deformation complex to the unfolded complex and the logarithmic parabolic complex, respecting trace forms. Prove closedness of the logarithmic trace form by the Čech cup-product/trace calculation and gauge descent and transfer it through these two comparisons. The relative sheaf of three-forms on this smooth family over an integral base is locally free, and restriction to the indicated dense open detects zero. Deduce d_relative ω=0 on the whole family, restrict to the central stable locus and descend. A later nonreduced base change uses this proved identity; density on a nonreduced base is not a substitute.\n\nThe fixed-determinant result is the pullback of this closed form to the determinant fiber, with nondegeneracy supplied only after §1.5's orthogonality comparison. No scalar Hamiltonian or classification of phase surfaces enters this construction."
+      }
+    ],
+    "2.6": [
+      {
+        "path": [
+          "tests",
+          3,
+          "statement"
+        ],
+        "before": "The five-point application uses the same NonlinearConnections §0.4 as any other proper semiconjugacy consumer; no separate five-point compactness theorem is added here.",
+        "after": "Every consumer applies the same NonlinearConnections §0.4 after verifying its proper semiconjugacy; no application-specific compactness theorem is required."
+      }
+    ],
+    "3.7": [
+      {
+        "path": [
+          "statement"
+        ],
+        "before": "Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identified in §§3.5–3.6. Verify the determinant-fiber comparison; genus zero contributes no omitted Jacobian directions. Substituting g = 0, r = 2 and deg P = 4 in the admitted general dimension theorem gives 2. Smoothness, nondegeneracy and relative closedness are outputs. The finite-flat auxiliary unfolding, its simple-connection moduli, both generic logarithmic quasi-isomorphisms and the smooth-density argument are proved once in the general framework, before any confluence theorem. Here identify its central stable fiber, complex and form with the actual classical family, including admissible nonreduced base change. Do not invoke targets 9.5–9.8. (I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.)",
+        "after": "Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identified in §§3.5–3.6. Verify the determinant-fiber comparison; genus zero contributes no omitted Jacobian directions. Substituting g = 0, r = 2 and deg P = 4 in the admitted general dimension theorem gives 2. Smoothness, nondegeneracy and relative closedness are outputs. The finite-flat auxiliary unfolding, its simple-connection moduli, both generic logarithmic quasi-isomorphisms and the smooth-density argument are proved once in the general framework, as part of the symplectic construction. Here identify its central stable fiber, complex and form with the actual classical family, including admissible nonreduced base change. (I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.)"
+      }
+    ],
+    "3.8": [
+      {
+        "path": [
+          "statement"
+        ],
+        "before": "Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Targets 4.1–4.4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is handled by §7.3 and targets 9.5–9.8. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)",
+        "after": "Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Targets 4.1–4.4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is covered by the coefficient-boundary comparison in §7.3. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)"
+      }
+    ],
+    "7.3": [
+      {
+        "path": [
+          "statement"
+        ],
+        "before": "Classify all coefficient tuples of the standard PIII and PV displays by admissible nonzero scalings and inversions, proving their exact domains and inverse substitutions. The primitive Painlevé profiles and the elementary boundary equations are different outputs; a leading irregular coefficient zero is not a point inside a stratum defined by its nonvanishing. (FM19, §1.1 and equation (2); DIL21, §§5.2–5.3 and Appendix B.3; DLMF, equations 32.9.6 and 32.9.12.)\n\n| Display | Coefficient condition | Comparison target |\n|---|---|---|\n| PIII | γδ ≠ 0 | D₆ profile |\n| PIII | γ = 0 and αδ ≠ 0, or δ = 0 and βγ ≠ 0 | D₇ profile, with the inversion comparison between the two orientations |\n| PIII | γ = δ = 0 and αβ ≠ 0 | D₈ profile |\n| PIII | α = γ = 0, or β = δ = 0 | quadrature/elementary boundary |\n| PV | δ ≠ 0 | ordinary PV |\n| PV | δ = 0 and γ ≠ 0 | degenerate PV presentation |\n| PV | γ = δ = 0 | quadrature boundary |\n\nProve that the PIII cases cover all tuples; the two elementary alternatives may overlap and are combined into one boundary class. Derive the boundary integrations on their stated time/observer domains, with branches and integration constants retained, and compare limiting initial data when a geometric degeneration is claimed. PIII with all four coefficients zero gives q = C exp(μ log t) on a chosen cover of ℂ*, including its nonzero-solution domain. A generic such power is not a single-valued function on ℂ*. Zero/constant solutions introduced by clearing q denominators require a separate original-equation domain check. These examples prevent the primitive classification from silently losing coefficient values.",
+        "after": "Classify all coefficient tuples of the standard PIII and PV displays by admissible nonzero scalings and inversions, proving their exact domains and inverse substitutions. The primitive Painlevé profiles and the elementary boundary equations are different outputs; a leading irregular coefficient zero is not a point inside a stratum defined by its nonvanishing. (FM19, §1.1 and equation (2); DIL21, §§5.2–5.3 and Appendix B.3; DLMF, equations 32.9.6 and 32.9.12.)\n\n| Display | Coefficient condition | Comparison target |\n|---|---|---|\n| PIII | γδ ≠ 0 | D₆ profile |\n| PIII | γ = 0 and αδ ≠ 0, or δ = 0 and βγ ≠ 0 | D₇ profile, with the inversion comparison between the two orientations |\n| PIII | γ = δ = 0 and αβ ≠ 0 | D₈ profile |\n| PIII | α = γ = 0, or β = δ = 0 | quadrature/elementary boundary |\n| PV | δ ≠ 0 | ordinary PV |\n| PV | δ = 0 and γ ≠ 0 | degenerate PV presentation |\n| PV | γ = δ = 0 | quadrature boundary |\n\nProve that the PIII cases cover all tuples; the two elementary alternatives may overlap and are combined into one boundary class. Derive the boundary integrations on their stated time/observer domains, with branches and integration constants retained. PIII with all four coefficients zero gives q = C exp(μ log t) on a chosen cover of ℂ*, including its nonzero-solution domain. A generic such power is not a single-valued function on ℂ*. Zero/constant solutions introduced by clearing q denominators require a separate original-equation domain check. These examples prevent the primitive classification from silently losing coefficient values."
+      }
+    ]
+  },
+  "files": {
+    "README.md": {
+      "before_sha256": "4106456f7d1c38fa271f806959147a3be1b0bb3c6fe66343dac88c7a2fe695c9",
+      "after_sha256": "23a9140bf8e395fd9defa82ba88f46fb418cba3e2474685677ec09ecfdd47305"
+    },
+    "README.ja.md": {
+      "before_sha256": "99a26852e96d3a6e6c8d72e6ecbf17441e4f8b158599f7ed5bd6ee2aa36d777f",
+      "after_sha256": "b9628de687c8fe2a52932c726782029c6e81b5d219327fcd58ca048089182a8e"
+    },
+    "design/plan.json": {
+      "before_sha256": "70518a4a782b2f13f3b78545f1558504b7b03b238cfe54ce1812ff0c5f5326ed",
+      "after_sha256": "9685172ba526be8cca1fc259187a73ed23c52836625260272f6a7590dc81e18e"
+    },
+    "design/dependencies.json": {
+      "before_sha256": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
+      "after_sha256": "96d16a39b5f2aae2c3792f1a7b14427a04a3ffb6f28650074831d2ed4af41d7a"
+    },
+    "design/reuse_graph.json": {
+      "before_sha256": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
+      "after_sha256": "8c438d4d6bdf608fb4f47ef77eea5ec7d162bae91cddf45a24090a6c760dca3f"
+    },
+    "design/reuse_registry.json": {
+      "before_sha256": "95ce7b21432ab236cd6cc3690820cf83f7f9897d6b2bf608ca40cbb866966d7c",
+      "after_sha256": "3afcef2af23f6ce9f8e381100039cd917dfb5112a4322b8a6a67518b5a2b4daf"
+    },
+    "sources.toml": {
+      "before_sha256": "5ecb724f6ee828771d54e919092bd2461d3a6ee4f611710ab99dc6b11887e293",
+      "after_sha256": "bd96dcd816c165ff14625042c61d60b50331ac3be2a9c593446f50624bcd0e0b"
+    },
+    "metadata.toml": {
+      "before_sha256": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+      "after_sha256": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81"
+    },
+    "Suggested.lean": {
+      "before_sha256": "6736c8039a5355435033b4ceaf7e13df9276f5080578b32d1ff6678d377560e8",
+      "after_sha256": "6736c8039a5355435033b4ceaf7e13df9276f5080578b32d1ff6678d377560e8"
+    }
+  }
+}

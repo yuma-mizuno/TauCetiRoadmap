@@ -26,11 +26,11 @@ PARTS = {
     "nonlinear_connections": "framework",
     "connection_moduli": "framework",
     "analytic_theory": "framework",
-    "algebraic_confluence": "framework",
     "painleve": "application",
-    "five_point_application": "application",
 }
-LEGACY_PARTS = dict(zip("NMACPG", PARTS))
+LEGACY_PARTS = dict(zip("NMACPG", (
+    "nonlinear_connections", "connection_moduli", "analytic_theory",
+    "algebraic_confluence", "painleve", "five_point_application")))
 CORE_FILES = (
     "README.md", "README.ja.md", "metadata.toml", "sources.toml",
     "design/plan.json", "design/dependencies.json", "design/reuse_graph.json",
@@ -102,12 +102,26 @@ def main():
     rendering_report = None
     restored_inputs = {}
     preformat_by_id = by_id
+    scope_revision_checked = False
     if rendering_path.is_file():
         spec = importlib.util.spec_from_file_location(
             "painleve_math_rendering_check", Path(__file__).with_name("check_math_rendering.py"))
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        rendering_report, restored_inputs = module.audit_manifest(ROOT)
+        scope_path = ROOT / "reports/submission/scope_revision.json"
+        scope_previous = {}
+        if scope_path.is_file():
+            scope_spec = importlib.util.spec_from_file_location(
+                "painleve_scope_check", Path(__file__).with_name("check_scope_revision.py"))
+            scope_module = importlib.util.module_from_spec(scope_spec)
+            scope_spec.loader.exec_module(scope_module)
+            scope_previous, scope_checks = scope_module.scope_inputs(ROOT, module.math_spans)
+            for item in scope_checks:
+                check("scope_revision", item["check"], item["passed"])
+            scope_revision_checked = True
+        rendering_report, restored_inputs = module.audit_manifest(
+            ROOT, historical_inputs=scope_previous)
+        restored_inputs = {**scope_previous, **restored_inputs}
         for item in rendering_report["checks"]:
             check("math_rendering", item["check"], item["passed"], item.get("detail"))
         if "design/plan.json" in restored_inputs:
@@ -121,7 +135,7 @@ def main():
             [("en", "README.md"), ("ja", "README.ja.md")]}
     check("targets", "unique IDs", len(ids) == len(ts))
     by_part = {p["id"]: p for p in plan["parts"]}
-    check("targets", "six semantic parts", len(plan["parts"]) == len(PARTS)
+    check("targets", "four semantic parts", len(plan["parts"]) == len(PARTS)
           and set(by_part) == set(PARTS))
     for part in plan["parts"]:
         check("targets", part["id"] + " scope role",
@@ -140,8 +154,8 @@ def main():
     }
     check("targets", "derived counts", plan["counts"] == expected_counts, expected_counts)
     layer_keys = [layer["key"] for layer in plan["layers"]]
-    check("layers", "ten consecutive numerical layers", layer_keys == [str(i) for i in range(10)])
-    check("targets", "78 mathematical targets", len(ts) == 78)
+    check("layers", "eight consecutive numerical layers", layer_keys == [str(i) for i in range(8)])
+    check("targets", "57 mathematical targets", len(ts) == 57)
     for layer in plan["layers"]:
         key = layer["key"]
         members = layer["targets"]
@@ -317,6 +331,16 @@ def main():
             for key in construction.get("source_keys", []):
                 check("sources", construction["id"] + " " + key, key in source_ids)
 
+    # The following preservation chain concerns the historical 78-target
+    # specification. The current 57-target scope and surviving fields were
+    # independently checked above against its last committed successor.
+    current_counts = expected_counts
+    if scope_revision_checked:
+        by_id = preformat_by_id
+        ids = set(by_id)
+        edges = {(tid, ref[7:]) for tid, t in by_id.items()
+                 for ref in t["prerequisites"] if ref.startswith("target:")}
+        expected_counts = json.loads(restored_inputs["design/plan.json"])["counts"]
     numbering_path = ROOT / "reports/submission/numbering.json"
     check("numbering", "numbering manifest exists", numbering_path.is_file())
     numbering = json.loads(numbering_path.read_text()) if numbering_path.is_file() else {}
@@ -328,7 +352,7 @@ def main():
     check("numbering", "semantic part map", numbering.get("parts_map") == LEGACY_PARTS)
     check("numbering", "one record per previous target", len(records) == len(target_map)
           and set(previous_records) == set(target_map))
-    check("numbering", "current counts", numbering.get("current_counts") == expected_counts)
+    check("numbering", "historical numbered counts", numbering.get("current_counts") == expected_counts)
     check("numbering", "previous published commit",
           numbering.get("previous_commit") == "089ae2b8698b5e01523978ba6797e8891dc0a0dd")
     check("numbering", "previous plan fingerprint",
@@ -462,6 +486,7 @@ def main():
                     check("baseline_source", tid + " " + field,
                           tid in bt and digest(bt[tid].get(field)) == item["field_sha256"][field])
 
+    expected_counts = current_counts
     failures = [c for c in checks if not c["passed"]]
     result = {
         "meaning": "Mechanical consistency and content preservation; not proof of mathematical truth or human approval.",
@@ -483,6 +508,7 @@ def main():
         "math_rendering_checks": rendering_report["check_count"] if rendering_report else 0,
         "organization_revision_checked": bool(rendering_report and
             rendering_report.get("organization_baseline_used")),
+        "scope_revision_checked": scope_revision_checked,
         "failures": failures,
     }
     encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

@@ -547,19 +547,19 @@ Choose rational stability weights in a chamber with stable = semistable whenever
 
 **API**
 
-- `admittedConnectionDataLaw1` — Construct restrictions, pullbacks, composition and inverse of arrows, with the associator and identity laws.
-- `admittedConnectionDataLaw2` — Identify the underlying formal differential module, the induced connection on End⁰(E) of rank r² − 1, and the associated PGLᵣ connection. These latter two are the invariant adjoint/projective outputs. The local matrix A − tr(A)I/r represents the projective connection in a frame; it is not a canonically glued rank-r differential module on E. No square root of the determinant line is chosen.
-- `admittedConnectionDataLaw3` — Compare equivalent local presentations by ramified descent, keeping parabolic flags and logarithmic lattices.
-- `admittedConnectionDataLaw4` — Express determinant compatibility by an isomorphism of line connections; derive the residue/degree equation in a chosen local convention.
+- Construct restrictions, pullbacks, composition and inverse of arrows, with the associator and identity laws.
+- Identify the underlying formal differential module, the induced connection on End⁰(E) of rank r² − 1, and the associated PGLᵣ connection. These latter two are the invariant adjoint/projective outputs. The local matrix A − tr(A)I/r represents the projective connection in a frame; it is not a canonically glued rank-r differential module on E. No square root of the determinant line is chosen.
+- Compare equivalent local presentations by ramified descent, keeping parabolic flags and logarithmic lattices.
+- Express determinant compatibility by an isomorphism of line connections; derive the residue/degree equation in a chosen local convention.
 
 **Tests and falsification cases**
 
-- `admittedConnectionDataCheck1` (non-example) — On E = O ⊕ O(−1), the determinant has odd degree; a putative global half-determinant twist does not exist. The carrier must still allow this bundle when the prescribed determinant matches it.
-- `admittedConnectionDataCheck2` (compatibility) — Two logarithmic residues with the same repeated eigenvalue, one scalar and one nonzero Jordan block, are not identified by specifying the eigenvalues. Their allowed parabolic objects and monodromy differ.
-- `admittedConnectionDataCheck3` (non-example) — Changing the root w to −w in a rank-two ramified chart changes the displayed branches but gives an equivalent descended object; forgetting the descent arrow fails this check.
-- `admittedConnectionDataCheck4` (compatibility) — With I23's ramified convention, a rank-two ramified point contributes 2c + 1/2 to the residue/degree relation. Replacing it by 2c changes that relation by 1/2.
-- `admittedConnectionDataCheck5` (computation) — Rank zero is rejected before slope stability or the dimension formula is applied. At r = 1 the adjoint bundle End⁰(E) has rank zero, without changing the required positive rank of E.
-- `admittedConnectionDataCheck6` (computation) — For A = 0 and frame change g = diag(z,1), g⁻¹dg = diag(1,0)dz/z; subtracting half its trace gives diag(1/2,−1/2)dz/z. The scalar discrepancy prevents gluing a rank-two trace-subtracted connection on E, while the induced End⁰(E) and PGL₂ connections glue.
+- On E = O ⊕ O(−1), the determinant has odd degree; a putative global half-determinant twist does not exist. The carrier must still allow this bundle when the prescribed determinant matches it.
+- Two logarithmic residues with the same repeated eigenvalue, one scalar and one nonzero Jordan block, are not identified by specifying the eigenvalues. Their allowed parabolic objects and monodromy differ.
+- Changing the root w to −w in a rank-two ramified chart changes the displayed branches but gives an equivalent descended object; forgetting the descent arrow fails this check.
+- With I23's ramified convention, a rank-two ramified point contributes 2c + 1/2 to the residue/degree relation. Replacing it by 2c changes that relation by 1/2.
+- Rank zero is rejected before slope stability or the dimension formula is applied. At r = 1 the adjoint bundle End⁰(E) has rank zero, without changing the required positive rank of E.
+- For A = 0 and frame change g = diag(z,1), g⁻¹dg = diag(1,0)dz/z; subtracting half its trace gives diag(1/2,−1/2)dz/z. The scalar discrepancy prevents gluing a rank-two trace-subtracted connection on E, while the induced End⁰(E) and PGL₂ connections glue.
 
 **Supporting constructions owned by this target.**
 
@@ -589,17 +589,17 @@ Separate external exponent parameters from these time directions. Strong isomono
 
 **API**
 
-- `admittedTimeDeformationLaw1` — Separate tangent directions along the admitted time base B from variation in the external residue/exponent parameter θ, and compare the pullback tangent sequence.
-- `admittedTimeDeformationLaw2` — Construct marking changes and local time reparametrizations with their coherence laws.
-- `admittedTimeDeformationLaw3` — Identify the collision and vanishing-leading-term discriminant from the input, independently of initial conditions.
-- `admittedTimeDeformationLaw4` — Construct and certify local rank-one determinant transports, including the genus-zero logarithmic dlog model, and state the exact gluing datum required for global fixed-determinant output.
+- Separate tangent directions along the admitted time base B from variation in the external residue/exponent parameter θ, and compare the pullback tangent sequence.
+- Construct marking changes and local time reparametrizations with their coherence laws.
+- Identify the collision and vanishing-leading-term discriminant from the input, independently of initial conditions.
+- Construct and certify local rank-one determinant transports, including the genus-zero logarithmic dlog model, and state the exact gluing datum required for global fixed-determinant output.
 
 **Tests and falsification cases**
 
-- `admittedTimeDeformationCheck1` (computation) — Five ordered logarithmic points on ℙ¹ have two time moduli after quotient by PGL₂: 5 − 3 = 2; their configuration is independent of initial conditions.
-- `admittedTimeDeformationCheck2` (computation) — A change τ = 2t multiplies the displayed horizontal generator by 1/2; retaining its coefficient unchanged gives a different parametrized system.
-- `admittedTimeDeformationCheck3` (non-example) — Two solutions with different movable pole sets use the same Bθ. A base that deletes one solution's poles fails this requirement.
-- `admittedTimeDeformationCheck4` (non-example) — On a fixed positive-genus curve, changing a line connection by tη with nonzero holomorphic η generally changes a period and hence its rank-one monodromy. Fixed residues alone cannot certify a strong determinant transport.
+- Five ordered logarithmic points on ℙ¹ have two time moduli after quotient by PGL₂: 5 − 3 = 2; their configuration is independent of initial conditions.
+- A change τ = 2t multiplies the displayed horizontal generator by 1/2; retaining its coefficient unchanged gives a different parametrized system.
+- Two solutions with different movable pole sets use the same Bθ. A base that deletes one solution's poles fails this requirement.
+- On a fixed positive-genus curve, changing a line connection by tη with nonzero holomorphic η generally changes a period and hence its rank-one monodromy. Fixed residues alone cannot certify a strong determinant transport.
 
 **Supporting constructions owned by this target.**
 
@@ -630,17 +630,17 @@ In unfixed-determinant mode the stable scalar inertia is Gm. With a specified de
 
 **API**
 
-- `stableDecoratedModuliLaw1` — Identify geometric points and families up to the appropriate arrows, with an explicit coarse-map universal property.
-- `stableDecoratedModuliLaw2` — Prove restriction and admissible base-change comparisons, including determinant fibers.
-- `stableDecoratedModuliLaw3` — Compare framed charts with their actual moduli loci. Fixed splitting-type strata on ℙ¹ are locally closed; the balanced locus is open, including the trivial-bundle locus in degree zero. Prove each inclusion and closure comparison, and record the complement of every chart used.
-- `stableDecoratedModuliLaw4` — For a change of weights, identify the actual common stable locus and the resulting comparison there; do not export an automatic global isomorphism.
+- Identify geometric points and families up to the appropriate arrows, with an explicit coarse-map universal property.
+- Prove restriction and admissible base-change comparisons, including determinant fibers.
+- Compare framed charts with their actual moduli loci. Fixed splitting-type strata on ℙ¹ are locally closed; the balanced locus is open, including the trivial-bundle locus in degree zero. Prove each inclusion and closure comparison, and record the complement of every chart used.
+- For a change of weights, identify the actual common stable locus and the resulting comparison there; do not export an automatic global isomorphism.
 
 **Tests and falsification cases**
 
-- `stableDecoratedModuliCheck1` (non-example) — A stable object may have scalar automorphisms before rigidification. A set-valued quotient that claims all stabilizers were trivial fails this example.
-- `stableDecoratedModuliCheck2` (characterisation) — A family can leave a trivial-bundle chart by bundle jumping while remaining in the moduli space. Its phase path is not declared singular for that reason.
-- `stableDecoratedModuliCheck3` (computation) — In the extension family 0 → O(−1) → E_t → O(1) → 0, E₀ = O(−1) ⊕ O(1) while E_t = O ⊕ O for t ≠ 0. The two splitting strata pull back to {0} and its complement in A¹; the first is not open. The full connection moduli must retain such bundle jumps on the permitted connection locus.
-- `stableDecoratedModuliCheck4` (characterisation) — An admitted totally ramified generic local model is irreducible as a formal differential module, hence a global connection containing it has no proper ∇-invariant subbundle and is stable for every weight (I23 Remark 2.9). This assertion is not exported to arbitrary ramified blocks.
+- A stable object may have scalar automorphisms before rigidification. A set-valued quotient that claims all stabilizers were trivial fails this example.
+- A family can leave a trivial-bundle chart by bundle jumping while remaining in the moduli space. Its phase path is not declared singular for that reason.
+- In the extension family 0 → O(−1) → E_t → O(1) → 0, E₀ = O(−1) ⊕ O(1) while E_t = O ⊕ O for t ≠ 0. The two splitting strata pull back to {0} and its complement in A¹; the first is not open. The full connection moduli must retain such bundle jumps on the permitted connection locus.
+- An admitted totally ramified generic local model is irreducible as a formal differential module, hence a global connection containing it has no proper ∇-invariant subbundle and is stable for every weight (I23 Remark 2.9). This assertion is not exported to arbitrary ramified blocks.
 
 **Supporting constructions owned by this target.**
 
@@ -669,16 +669,16 @@ The commutator with ∇ is a ℂ-linear first-order differential operator and is
 
 **API**
 
-- `decoratedDeformationComplexLaw1` — Give the differential, local compatibility equations and the map from an infinitesimal family to its cocycle.
-- `decoratedDeformationComplexLaw2` — Prove gauge-change and coboundary compatibility in both directions.
-- `decoratedDeformationComplexLaw3` — Construct the trace-free/determinant decomposition and the dual complex with its signs.
-- `decoratedDeformationComplexLaw4` — Prove naturality of the pairing under input isomorphisms and admissible base change.
+- Give the differential, local compatibility equations and the map from an infinitesimal family to its cocycle.
+- Prove gauge-change and coboundary compatibility in both directions.
+- Construct the trace-free/determinant decomposition and the dual complex with its signs.
+- Prove naturality of the pairing under input isomorphisms and admissible base change.
 
 **Tests and falsification cases**
 
-- `decoratedDeformationComplexCheck1` (compatibility) — An infinitesimal gauge change by u changes a connection representative by the commutator differential of u; its tangent class is zero.
-- `decoratedDeformationComplexCheck2` (characterisation) — Without determinant identification stable scalar automorphisms have a one-dimensional infinitesimal direction. Fixing the identification removes that direction in characteristic zero, although finite μr remains until rigidification; this does not remove the 2g determinant deformation directions by itself.
-- `decoratedDeformationComplexCheck3` (computation) — With ω = dq ∧ dp, the ordered tangent pair (∂q, ∂p) has pairing +1 and the reversed pair −1; a reversed trace convention must be corrected before transport formulas are used.
+- An infinitesimal gauge change by u changes a connection representative by the commutator differential of u; its tangent class is zero.
+- Without determinant identification stable scalar automorphisms have a one-dimensional infinitesimal direction. Fixing the identification removes that direction in characteristic zero, although finite μr remains until rigidification; this does not remove the 2g determinant deformation directions by itself.
+- With ω = dq ∧ dp, the ordered tangent pair (∂q, ∂p) has pairing +1 and the reversed pair −1; a reversed trace convention must be corrected before transport formulas are used.
 
 **Supporting constructions owned by this target.**
 
@@ -712,17 +712,17 @@ The fixed-determinant dimension and symplectic theorems use the deformation-func
 
 **API**
 
-- `smoothModuliAndDeterminantFiberLaw1` — Identify the relative tangent sheaf and prove base-change compatibility for tangent and obstruction calculations.
-- `smoothModuliAndDeterminantFiberLaw2` — Construct the determinant deformation map, its scalar section and the trace-free fiber, including all local compatibility equations.
-- `smoothModuliAndDeterminantFiberLaw3` — Prove smoothness and orthogonal trace decomposition before subtracting 2g determinant directions.
-- `smoothModuliAndDeterminantFiberLaw4` — Return separate unfixed- and fixed-determinant dimension theorems with their exact hypotheses.
+- Identify the relative tangent sheaf and prove base-change compatibility for tangent and obstruction calculations.
+- Construct the determinant deformation map, its scalar section and the trace-free fiber, including all local compatibility equations.
+- Prove smoothness and orthogonal trace decomposition before subtracting 2g determinant directions.
+- Return separate unfixed- and fixed-determinant dimension theorems with their exact hypotheses.
 
 **Tests and falsification cases**
 
-- `smoothModuliAndDeterminantFiberCheck1` (computation) — Genus zero, rank two and degree four give −8 + 2 + 8 = 2; structural degree five instead gives 4.
-- `smoothModuliAndDeterminantFiberCheck2` (non-example) — Fixing the determinant in positive genus removes 2g directions when the determinant-map comparison applies; the genus-zero coincidence cannot be exported unchanged.
-- `smoothModuliAndDeterminantFiberCheck3` (computation) — At r = 1 and g = 1 the unfixed-determinant formula gives 2, and fixing the entire line connection gives 0. The rank-zero input that would incorrectly give 2 is outside the domain.
-- `smoothModuliAndDeterminantFiberCheck4` (computation) — For g=1, r=2 and deg P=1, the unfixed formula gives 4 and the fixed-determinant formula gives 2 whenever the corresponding stable fiber is nonempty and the comparison holds; removing only the scalar stabilizer would miss this difference.
+- Genus zero, rank two and degree four give −8 + 2 + 8 = 2; structural degree five instead gives 4.
+- Fixing the determinant in positive genus removes 2g directions when the determinant-map comparison applies; the genus-zero coincidence cannot be exported unchanged.
+- At r = 1 and g = 1 the unfixed-determinant formula gives 2, and fixing the entire line connection gives 0. The rank-zero input that would incorrectly give 2 is outside the domain.
+- For g=1, r=2 and deg P=1, the unfixed formula gives 4 and the fixed-determinant formula gives 2 whenever the corresponding stable fiber is nonempty and the comparison holds; removing only the scalar stabilizer would miss this difference.
 
 **Supporting constructions owned by this target.**
 
@@ -752,15 +752,15 @@ The fixed-determinant result is the pullback of this closed form to the determin
 
 **API**
 
-- `closedRelativeTraceFormLaw1` — Construct the finite-flat unfolding, the moduli of simple connections and the universal-object cover, and identify their central fibers.
-- `closedRelativeTraceFormLaw2` — Construct both diagonal-complex comparison maps and prove compatibility with the trace pairing.
-- `closedRelativeTraceFormLaw3` — Prove nondegeneracy and closedness independently, including descent and later base-change compatibility.
+- Construct the finite-flat unfolding, the moduli of simple connections and the universal-object cover, and identify their central fibers.
+- Construct both diagonal-complex comparison maps and prove compatibility with the trace pairing.
+- Prove nondegeneracy and closedness independently, including descent and later base-change compatibility.
 
 **Tests and falsification cases**
 
-- `closedRelativeTraceFormCheck1` (characterisation) — A skew pairing which vanishes identically is closed but is not symplectic; nondegeneracy must follow from the actual duality computation.
-- `closedRelativeTraceFormCheck2` (computation) — For r = 2, local order 2 and q₁ = 2, the unfolding equation is (z − 2h²)(z − h²). Its fiber at h = 0 is z² and at h = 1 is (z − 2)(z − 1); modulo h² it is again z². Check the central and pulled-back complexes and forms, rather than identifying this family with fixed distinct sections.
-- `closedRelativeTraceFormCheck3` (dependency check) — Delete all later applications and every scalar equation: the finite-flat unfolding, its two generic comparison maps and the closedness proof must still be stated and constructible here.
+- A skew pairing which vanishes identically is closed but is not symplectic; nondegeneracy must follow from the actual duality computation.
+- For r = 2, local order 2 and q₁ = 2, the unfolding equation is (z − 2h²)(z − h²). Its fiber at h = 0 is z² and at h = 1 is (z − 2)(z − 1); modulo h² it is again z². Check the central and pulled-back complexes and forms, rather than identifying this family with fixed distinct sections.
+- Delete all later applications and every scalar equation: the finite-flat unfolding, its two generic comparison maps and the closedness proof must still be stated and constructible here.
 
 *Needs:* Internal: 1.3, 1.4, 1.5; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B).
 
@@ -786,18 +786,18 @@ Prove existence and uniqueness up to the specified isomorphism restricting to th
 
 **API**
 
-- `strongHorizontalSplittingLaw1` — Construct the lift from a time tangent and prove additivity and O-linearity.
-- `strongHorizontalSplittingLaw2` — Prove restriction, base-change and input-isomorphism naturality of the lift.
-- `strongHorizontalSplittingLaw3` — Compare lifts computed with different local coordinates, formal diagonalizations and universal-object covers.
-- `strongHorizontalSplittingLaw4` — Identify the induced horizontal subbundle and its projection isomorphism to π*TB.
-- `strongHorizontalSplittingLaw5` — Prove determinant functoriality of the strong extension and tangency to a certified moving determinant fiber.
+- Construct the lift from a time tangent and prove additivity and O-linearity.
+- Prove restriction, base-change and input-isomorphism naturality of the lift.
+- Compare lifts computed with different local coordinates, formal diagonalizations and universal-object covers.
+- Identify the induced horizontal subbundle and its projection isomorphism to π*TB.
+- Prove determinant functoriality of the strong extension and tangency to a certified moving determinant fiber.
 
 **Tests and falsification cases**
 
-- `strongHorizontalSplittingCheck1` (characterisation) — A zero time tangent lifts to zero; adding an arbitrary vertical vector would violate uniqueness of the integrable extension.
-- `strongHorizontalSplittingCheck2` (compatibility) — Rescaling the time tangent by 2 rescales its lift by 2, while changing the time coordinate to 2t rescales the normalized generator by 1/2.
-- `strongHorizontalSplittingCheck3` (non-example) — The zero map cannot be a splitting over a nonzero time tangent because dπ ∘ 0 = 0 ≠ id.
-- `strongHorizontalSplittingCheck4` (non-example) — At m=1 a proposed time term dε/z lies outside the allowed total-form module in a moving polar coordinate; fiberwise flag preservation cannot repair that violation.
+- A zero time tangent lifts to zero; adding an arbitrary vertical vector would violate uniqueness of the integrable extension.
+- Rescaling the time tangent by 2 rescales its lift by 2, while changing the time coordinate to 2t rescales the normalized generator by 1/2.
+- The zero map cannot be a splitting over a nonzero time tangent because dπ ∘ 0 = 0 ≠ id.
+- At m=1 a proposed time term dε/z lies outside the allowed total-form module in a moving polar coordinate; fiberwise flag preservation cannot repair that violation.
 
 **Supporting constructions owned by this target.**
 
@@ -822,18 +822,18 @@ Use the actual trace cocycles and strong-extension comparison to prove that the 
 
 **API**
 
-- `flatSymplecticIsomonodromyLaw1` — Compute the mixed two-parameter extension term and obtain the bracket identity and flat horizontal distribution.
-- `flatSymplecticIsomonodromyLaw2` — Recover the relative form by vertical restriction and the horizontal distribution as the kernel.
-- `flatSymplecticIsomonodromyLaw3` — Prove admissible base-change naturality for the relative form, the actual splitting and the closed total form.
-- `flatSymplecticIsomonodromyLaw4` — Compare two Hamiltonian potentials in a fixed chart: their difference is constant along connected phase fibers.
-- `flatSymplecticIsomonodromyLaw5` — State the extra generator term for a time-dependent symplectic change of coordinates through equality of the extended two-forms.
+- Compute the mixed two-parameter extension term and obtain the bracket identity and flat horizontal distribution.
+- Recover the relative form by vertical restriction and the horizontal distribution as the kernel.
+- Prove admissible base-change naturality for the relative form, the actual splitting and the closed total form.
+- Compare two Hamiltonian potentials in a fixed chart: their difference is constant along connected phase fibers.
+- State the extra generator term for a time-dependent symplectic change of coordinates through equality of the extended two-forms.
 
 **Tests and falsification cases**
 
-- `flatSymplecticIsomonodromyCheck1` (non-example) — For H = p²/2, contraction with ∂t + p∂q annihilates dq ∧ dp + p dp ∧ dt; using the opposite sign does not.
-- `flatSymplecticIsomonodromyCheck2` (compatibility) — H and H + t² give the same vertical vector field and extended two-form, but different scalar functions.
-- `flatSymplecticIsomonodromyCheck3` (non-example) — On a symplectic fiber, Ω has no nonzero vertical kernel vector; degenerating ω to zero would fail this characterization.
-- `flatSymplecticIsomonodromyCheck4` (non-example) — On ℂ²×ℂ with ω=dq∧dp, h(∂t)=∂t+q∂q is flat because the base has dimension one, but its flow scales ω. This fails the trace-form preservation obligation.
+- For H = p²/2, contraction with ∂t + p∂q annihilates dq ∧ dp + p dp ∧ dt; using the opposite sign does not.
+- H and H + t² give the same vertical vector field and extended two-form, but different scalar functions.
+- On a symplectic fiber, Ω has no nonzero vertical kernel vector; degenerating ω to zero would fail this characterization.
+- On ℂ²×ℂ with ω=dq∧dp, h(∂t)=∂t+q∂q is flat because the base has dimension one, but its flow scales ω. This fails the trace-form preservation obligation.
 
 *Needs:* Internal: 1.4, 1.6, 2.1, 0.6; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
@@ -855,15 +855,15 @@ Record the natural comparison isomorphisms for identity and composite base chang
 
 **API**
 
-- `coherentModuliNaturalityLaw1` — Give the stack-level comparison 1-isomorphisms and their coherent 2-isomorphisms; descend the corresponding phase-space comparisons.
-- `coherentModuliNaturalityLaw2` — Prove equality of pullback splitting and forms with the outputs constructed after base change.
-- `coherentModuliNaturalityLaw3` — Preserve source and target maps of the NonlinearConnections morphisms and specify the exact domains of all parameter correspondences.
+- Give the stack-level comparison 1-isomorphisms and their coherent 2-isomorphisms; descend the corresponding phase-space comparisons.
+- Prove equality of pullback splitting and forms with the outputs constructed after base change.
+- Preserve source and target maps of the NonlinearConnections morphisms and specify the exact domains of all parameter correspondences.
 
 **Tests and falsification cases**
 
-- `coherentModuliNaturalityCheck1` (compatibility) — For f:B′→B and g:B″→B′, compare direct (f∘g)* construction with g*f* and check the three-composition pentagon rather than choosing unrelated identifications.
-- `coherentModuliNaturalityCheck2` (non-example) — A weight wall crossing changes the stable locus and is not a presentation isomorphism unless an actual common stable domain has been specified.
-- `coherentModuliNaturalityCheck3` (compatibility) — The base map t=s² pulls h(∂t) back to h′(∂s)=(∂s,2s h(∂t)); at s=0 the horizontal vector still projects to ∂s, so the base map need not be a local isomorphism.
+- For f:B′→B and g:B″→B′, compare direct (f∘g)* construction with g*f* and check the three-composition pentagon rather than choosing unrelated identifications.
+- A weight wall crossing changes the stable locus and is not a presentation isomorphism unless an actual common stable domain has been specified.
+- The base map t=s² pulls h(∂t) back to h′(∂s)=(∂s,2s h(∂t)); at s=0 the horizontal vector still projects to ∂s, so the base map need not be a local isomorphism.
 
 *Needs:* Internal: 1.1, 1.2, 1.3, 1.4, 1.6, 2.1, 2.2, 0.1; [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23).
 
@@ -886,16 +886,16 @@ Give a single consumer certificate listing local-model admission, the actual tim
 
 **API**
 
-- `meromorphicModuliToNonlinearConnectionLaw1` — Export a construction theorem, not an alias for a specialized phase space: its conclusion supplies π, h, ω, Ω and all their laws from the admitted geometric input.
-- `meromorphicModuliToNonlinearConnectionLaw2` — Supply the common consumer certificate and distinguish construction, nonemptiness and completeness obligations.
-- `meromorphicModuliToNonlinearConnectionLaw3` — Prove reuse under base change and presentation equivalence through 2.3, without rerunning a case classification.
+- Export a construction theorem, not an alias for a specialized phase space: its conclusion supplies π, h, ω, Ω and all their laws from the admitted geometric input.
+- Supply the common consumer certificate and distinguish construction, nonemptiness and completeness obligations.
+- Prove reuse under base change and presentation equivalence through 2.3, without rerunning a case classification.
 
 **Tests and falsification cases**
 
-- `meromorphicModuliToNonlinearConnectionCheck1` (dependency check) — Removing every specialized consumer, every relative-dimension-two selection and every classical equation leaves the input/output statement and all local prerequisites intact.
-- `meromorphicModuliToNonlinearConnectionCheck2` (computation) — Five logarithmic points on ℙ¹ in rank two, fixed determinant and a nonempty stable locus give relative dimension 4 and a two-dimensional configuration base; the construction theorem must accept that input.
-- `meromorphicModuliToNonlinearConnectionCheck3` (non-example) — A tuple of arbitrary formal singularities is not admitted merely because its dimension formula happens to be positive; each local model and determinant/time certificate must be verified.
-- `meromorphicModuliToNonlinearConnectionCheck4` (non-example) — A holomorphic flat symplectic connection can have incomplete horizontal curves; this export alone cannot justify global continuation of all initial conditions.
+- Removing every specialized consumer, every relative-dimension-two selection and every classical equation leaves the input/output statement and all local prerequisites intact.
+- Five logarithmic points on ℙ¹ in rank two, fixed determinant and a nonempty stable locus give relative dimension 4 and a two-dimensional configuration base; the construction theorem must accept that input.
+- A tuple of arbitrary formal singularities is not admitted merely because its dimension formula happens to be positive; each local model and determinant/time certificate must be verified.
+- A holomorphic flat symplectic connection can have incomplete horizontal curves; this export alone cannot justify global continuation of all initial conditions.
 
 *Needs:* Internal: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2.1, 2.2, 2.3, 0.1, 0.6.
 
@@ -919,15 +919,15 @@ For a certified determinant transport, show that taking determinant of monodromy
 
 **API**
 
-- `regularSingularRiemannHilbertSemiconjugacyLaw1` — Construct the marked affine Betti target with its complete path transport and state the retained residue/character parameter map.
-- `regularSingularRiemannHilbertSemiconjugacyLaw2` — Prove the all-points Riemann–Hilbert semiconjugacy for the actual strong source splitting, including the map on singular target strata.
-- `regularSingularRiemannHilbertSemiconjugacyLaw3` — Identify the full logarithmic moduli functor with I13 and prove compatibility with determinant, presentation change and analytic base change.
+- Construct the marked affine Betti target with its complete path transport and state the retained residue/character parameter map.
+- Prove the all-points Riemann–Hilbert semiconjugacy for the actual strong source splitting, including the map on singular target strata.
+- Identify the full logarithmic moduli functor with I13 and prove compatibility with determinant, presentation change and analytic base change.
 
 **Tests and falsification cases**
 
-- `regularSingularRiemannHilbertSemiconjugacyCheck1` (non-example) — An open subset where Riemann–Hilbert is an isomorphism does not include all stable resonant or reducible objects. The semiconjugacy statement must be checked on their actual moduli points.
-- `regularSingularRiemannHilbertSemiconjugacyCheck2` (compatibility) — Two residue parameters differing by allowed integer shifts can have the same local monodromy eigenvalues; retain λ rather than identifying the de Rham families over the a-parameter.
-- `regularSingularRiemannHilbertSemiconjugacyCheck3` (compatibility) — A singular affine character variety is still a Hausdorff locally compact analytic space with complete marked transport; requiring a nonsingular target would discard exactly the strata needed by the proper-map continuation argument.
+- An open subset where Riemann–Hilbert is an isomorphism does not include all stable resonant or reducible objects. The semiconjugacy statement must be checked on their actual moduli points.
+- Two residue parameters differing by allowed integer shifts can have the same local monodromy eigenvalues; retain λ rather than identifying the de Rham families over the a-parameter.
+- A singular affine character variety is still a Hausdorff locally compact analytic space with complete marked transport; requiring a nonsingular target would discard exactly the strata needed by the proper-map continuation argument.
 
 **Supporting constructions owned by this target.**
 
@@ -960,16 +960,16 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 
 **API**
 
-- `regularSingularFamilyPropernessLaw1` — Identify the full parameterized target and prove properness after pullback along any admitted analytic time/exponent base change.
-- `regularSingularFamilyPropernessLaw2` — Construct and prove the Cartesian determinant comparison on coarse moduli, including rank-one Riemann–Hilbert and scalar identification issues.
-- `regularSingularFamilyPropernessLaw3` — Return a proper semiconjugacy certificate for a separate application of the general continuation theorem.
+- Identify the full parameterized target and prove properness after pullback along any admitted analytic time/exponent base change.
+- Construct and prove the Cartesian determinant comparison on coarse moduli, including rank-one Riemann–Hilbert and scalar identification issues.
+- Return a proper semiconjugacy certificate for a separate application of the general continuation theorem.
 
 **Tests and falsification cases**
 
-- `regularSingularFamilyPropernessCheck1` (computation) — For g=0,r=2,n=5, rn−2r−2=4>0, so the numerical source condition holds. A genuine nonemptiness certificate and the determinant comparison remain necessary for the full fixed-determinant application.
-- `regularSingularFamilyPropernessCheck2` (non-example) — For g=0,r=2,n=3, rn−2r−2=0; this target cannot cite I13 Theorem 2.2 as supplying its properness theorem.
-- `regularSingularFamilyPropernessCheck3` (non-example) — Deleting an exceptional fiber from the source may destroy properness even though the generic Riemann–Hilbert map is an isomorphism; keep the full stable moduli source.
-- `regularSingularFamilyPropernessCheck4` (dependency check) — The five-point application uses the same NonlinearConnections §0.4 as any other proper semiconjugacy consumer; no separate five-point compactness theorem is added here.
+- For g=0,r=2,n=5, rn−2r−2=4>0, so the numerical source condition holds. A genuine nonemptiness certificate and the determinant comparison remain necessary for the full fixed-determinant application.
+- For g=0,r=2,n=3, rn−2r−2=0; this target cannot cite I13 Theorem 2.2 as supplying its properness theorem.
+- Deleting an exceptional fiber from the source may destroy properness even though the generic Riemann–Hilbert map is an isomorphism; keep the full stable moduli source.
+- The five-point application uses the same NonlinearConnections §0.4 as any other proper semiconjugacy consumer; no separate five-point compactness theorem is added here.
 
 **Supporting constructions owned by this target.**
 
@@ -1019,16 +1019,16 @@ The trace residues vanish and determinant monodromy is trivial. The determinant 
 
 **API**
 
-- `fivePointAdmittedInputLaw1` — Identify the actual marked-curve quotient with B and its fixed collision discriminant.
-- `fivePointAdmittedInputLaw2` — Construct the irreducible monodromy witness, its chosen logarithmic extension and determinant identification.
-- `fivePointAdmittedInputLaw3` — Verify nonempty stable fibers without requiring a trivial rank-two underlying bundle.
+- Identify the actual marked-curve quotient with B and its fixed collision discriminant.
+- Construct the irreducible monodromy witness, its chosen logarithmic extension and determinant identification.
+- Verify nonempty stable fibers without requiring a trivial rank-two underlying bundle.
 
 **Tests**
 
-- `fivePointAdmittedInputCheck1` — The product D J K K⁻¹ (DJ)⁻¹ equals I exactly; the eigenlines of D are the coordinate axes, and J interchanges them.
-- `fivePointAdmittedInputCheck2` — The residue differences are 1/2 or 1/3, hence nonresonant. The signed-sum numerator is odd, excluding every integer sum.
-- `fivePointAdmittedInputCheck3` — Replacing five poles by four changes the time dimension from 2 to 1; this is not a harmless chart change.
-- `fivePointAdmittedInputCheck4` — A pair of residue matrices without a common constant eigenline is not by itself a certificate of differential-module irreducibility.
+- The product D J K K⁻¹ (DJ)⁻¹ equals I exactly; the eigenlines of D are the coordinate axes, and J interchanges them.
+- The residue differences are 1/2 or 1/3, hence nonresonant. The signed-sum numerator is odd, excluding every integer sum.
+- Replacing five poles by four changes the time dimension from 2 to 1; this is not a harmless chart change.
+- A pair of residue matrices without a common constant eigenline is not by itself a certificate of differential-module irreducibility.
 
 *Needs:* Internal: 1.1, 1.2, 2.5.
 
@@ -1047,15 +1047,15 @@ Apply MeromorphicConnectionModuli §2.4 to the verified input of §2.7. Its outp
 
 **API**
 
-- `fivePointConstructedDynamicsLaw1` — Verify the admission and determinant comparison for the general construction.
-- `fivePointConstructedDynamicsLaw2` — Export the same nonlinear connection object, relative dimension four and closed total form.
-- `fivePointConstructedDynamicsLaw3` — Identify its pullback and presentation comparisons; keep the time dimension two.
+- Verify the admission and determinant comparison for the general construction.
+- Export the same nonlinear connection object, relative dimension four and closed total form.
+- Identify its pullback and presentation comparisons; keep the time dimension two.
 
 **Tests**
 
-- `fivePointConstructedDynamicsCheck1` — The fiber dimension is −8+2+10=4, not 2; deg P=5 is never replaced by the classical budget.
-- `fivePointConstructedDynamicsCheck2` — Flatness alone does not preserve e^{t₁}ω; the actual preservation theorem must be invoked.
-- `fivePointConstructedDynamicsCheck3` — The global moduli family is not replaced by its trivial-bundle matrix chart.
+- The fiber dimension is −8+2+10=4, not 2; deg P=5 is never replaced by the classical budget.
+- Flatness alone does not preserve e^{t₁}ω; the actual preservation theorem must be invoked.
+- The global moduli family is not replaced by its trivial-bundle matrix chart.
 
 *Needs:* Internal: 2.7, 2.4, 0.6.
 
@@ -1076,14 +1076,14 @@ Use the complete Betti path transport of 2.5 and prove that the strong splitting
 
 **API**
 
-- `fivePointProperRhLaw1` — Identify the precise I13 moduli and exponent-retaining Betti target after determinant fixing.
-- `fivePointProperRhLaw2` — Verify properness by the proved Cartesian comparison and all-point horizontal compatibility.
+- Identify the precise I13 moduli and exponent-retaining Betti target after determinant fixing.
+- Verify properness by the proved Cartesian comparison and all-point horizontal compatibility.
 
 **Tests**
 
-- `fivePointProperRhCheck1` — Here 2·5−4−2=4>0; the source theorem is not applied without its genus/rank/pole inequality.
-- `fivePointProperRhCheck2` — Forgetting the logarithms and retaining only their exponentials loses the properness statement.
-- `fivePointProperRhCheck3` — Properness of RH does not say that π: M→B is proper.
+- Here 2·5−4−2=4>0; the source theorem is not applied without its genus/rank/pole inequality.
+- Forgetting the logarithms and retaining only their exponentials loses the properness statement.
+- Properness of RH does not say that π: M→B is proper.
 
 *Needs:* Internal: 2.7, 2.8, 2.5, 2.6.
 
@@ -1108,15 +1108,15 @@ Do not apply the scalar first-jet theorem for a two-dimensional phase fiber to t
 
 **API**
 
-- `fivePointCompleteTransportLaw1` — Instantiate the same completeness and groupoid-action theorems on a two-time/four-phase family.
-- `fivePointCompleteTransportLaw2` — Verify no transitive dependency on the classical application.
-- `fivePointCompleteTransportLaw3` — Prove the observer pullback theorem on the pointed universal cover of the time curve and the scalar-deck-invariance criterion for descent, under all the stated admissibility hypotheses.
+- Instantiate the same completeness and groupoid-action theorems on a two-time/four-phase family.
+- Verify no transitive dependency on the classical application.
+- Prove the observer pullback theorem on the pointed universal cover of the time curve and the scalar-deck-invariance criterion for descent, under all the stated admissibility hypotheses.
 
 **Tests**
 
-- `fivePointCompleteTransportCheck1` — The expanded prerequisite graph excludes every Painlevé target, including its degree-four definition.
-- `fivePointCompleteTransportCheck2` — Complete transport can have nontrivial monodromy; a universal-cover section need not descend.
-- `fivePointCompleteTransportCheck3` — On a time curve the phase fiber still has dimension four, whereas a scalar first-jet fiber has dimension two; the scalar first-jet isomorphism cannot simply be asserted.
+- The expanded prerequisite graph excludes every Painlevé target, including its degree-four definition.
+- Complete transport can have nontrivial monodromy; a universal-cover section need not descend.
+- On a time curve the phase fiber still has dimension four, whereas a scalar first-jet fiber has dimension two; the scalar first-jet isomorphism cannot simply be asserted.
 
 - The generic flat complete connection q′=q/(2t) on ℂ××ℂ has horizontal germ q=√t through (1,1). The observer q is admissible, but its universal-cover value changes sign under one loop. Curve pullback and admissibility alone therefore do not imply scalar descent; 0.7 supplies the exact additional condition.
 
@@ -1952,7 +1952,7 @@ Identify τ_T(s) ≠ 0 exactly with invertibility of T_s. Existence of L_T does 
 - An everywhere invertible constant family has nonvanishing determinant section; an identically singular index-zero family may have an identically zero section without invalidating its line.
 - Two finite-dimensional stabilizations must give the same section after comparison through a common refinement, and a third stabilization must not change that comparison.
 
-- `holomorphicFredholmDeterminantLineCheck5` (scope boundary) — On the dual-number base, T=ε and T=0 have the same pointwise operator but determinant sections ε and 0. This nonreduced base is excluded from the present manifold-base theorem; an extension to nonreduced bases requires sheaf-valued operator coefficients.
+- On the dual-number base, T=ε and T=0 have the same pointwise operator but determinant sections ε and 0. This nonreduced base is excluded from the present manifold-base theorem; an extension to nonreduced bases requires sheaf-valued operator coefficients.
 
 **Supporting constructions owned by this target.**
 

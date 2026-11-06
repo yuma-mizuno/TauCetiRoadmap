@@ -1,18 +1,18 @@
 {
   "baseline_commit": "9110ce4b595d9afe79399c379fc132b350b69739",
-  "scope": "Remove duplicated appendix and global summaries; name headings by mathematical subject. Target bodies, mathematical hypotheses, conclusions, APIs, diagnostics and prerequisite edges are unchanged.",
+  "scope": "Remove duplicated summaries and instruction-shaped headings; replace synthetic API and diagnostic names by target-local document addresses. Mathematical statements, hypotheses, conclusions, diagnostic kinds and prerequisite edges are unchanged.",
   "files": {
     "README.md": {
       "before_sha256": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761",
-      "after_sha256": "7dd6a2a2e361cdb9ce5716c9794bca39f00fce3e905e85d627163995f000d56e"
+      "after_sha256": "4f5964267647886e1082048c54cda4439d613dcd4de740364a33048e83821afb"
     },
     "README.ja.md": {
       "before_sha256": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd",
-      "after_sha256": "058e79e12f9d18ba8de4b294277777b493475c28ba3ea095a06345eed6a8763f"
+      "after_sha256": "97396d44671f6687c2c20a35f6a9dd9d03a9b0f49295e1012797f76df20f8641"
     },
     "design/plan.json": {
       "before_sha256": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945",
-      "after_sha256": "f2ee85f9cf9fdb23ad3df70028b4f4fe22e51f9efd384eed33a36e1f1b82b12f"
+      "after_sha256": "d8f7551999708631fdbb60947d4c685deb0a49d09eff066899d102f188831784"
     },
     "design/reuse_registry.json": {
       "before_sha256": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
@@ -131,5 +131,12 @@
     "9.6",
     "9.7",
     "9.8"
-  ]
+  ],
+  "item_identifier_cleanup": {
+    "preceding_commit": "f5b41b49f8770b6c678b8bca87524259e54b6c74",
+    "api_items": 217,
+    "diagnostics": 263,
+    "visible_labels_removed_per_language": 116,
+    "format": "<target>.api.<index> and <target>.tests.<index>"
+  }
 }

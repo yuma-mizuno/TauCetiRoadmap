@@ -234,6 +234,15 @@ def organization_inputs(root):
     commit = record["baseline_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("invalid organization baseline commit")
+    label_cleanup = record.get("item_identifier_cleanup") is not None
+    baseline_plan = json.loads(subprocess.check_output(
+        ["git", "show", commit + ":TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json"],
+        cwd=root.parents[1]).decode("utf-8"))
+    old_labels = {item["name"] for layer in baseline_plan["layers"]
+                  for target in layer["targets"] for field in ["api", "tests"]
+                  for item in target[field]}
+    label_prefix = re.compile(r'^- `(?:' + '|'.join(re.escape(x) for x in old_labels)
+                              + r')`(?: \([^\n)]*\)|（[^\n）]*）)?[ \t]*—[ \t]*', re.M)
     for name in sorted(expected):
         git_path = "TauCetiRoadmap/PainleveEquationsAndFunctions/" + name
         before = subprocess.check_output(
@@ -243,7 +252,7 @@ def organization_inputs(root):
         check(name + " current fingerprint", sha(current) == record["files"][name]["after_sha256"])
         inputs[name] = before
         if name.endswith(".md"):
-            # Compare each full target block, excluding only its heading title.
+            # Compare statements exactly, excluding headings and removed synthetic labels.
             def bodies(text):
                 out = {}
                 for match in re.finditer(r'^<a id="target-([0-9]+-[0-9]+)"></a>\n### [^\n]*\n', text, re.M):
@@ -255,7 +264,12 @@ def organization_inputs(root):
             check(name + " 78 target identities", len(old_bodies) == 78
                   and old_bodies.keys() == current_bodies.keys())
             for tid, body in old_bodies.items():
-                check(name + " unchanged target body " + tid, current_bodies.get(tid) == body)
+                expected_body = label_prefix.sub('- ', body) if label_cleanup else body
+                check(name + " unchanged mathematical target body " + tid,
+                      current_bodies.get(tid) == expected_body)
+            if label_cleanup:
+                check(name + " no synthetic API or diagnostic labels",
+                      not any('`' + label + '`' in current for label in old_labels))
             check(name + " no appendix references", "reuse-contract" not in current)
             check(name + " one global overview", current.count('<a id="general-theory"></a>') == 1)
         elif name.endswith(".lean"):
@@ -263,6 +277,18 @@ def organization_inputs(root):
                 "# Intrinsic Painlevé theory: representative target signatures",
                 "# Painlevé equations and functions: suggested interfaces", 1))
         else:
+            before_json, current_json = json.loads(before), json.loads(current)
+            if name == "design/plan.json" and label_cleanup:
+                before_json["schema"] = "tauceti-roadmap/mathematical-plan-v3"
+                before_json["item_identifiers"] = (
+                    "Target-local document addresses, not proposed Lean declaration names: "
+                    "<target>.api.<index> and <target>.tests.<index>.")
+                for layer in before_json["layers"]:
+                    for target in layer["targets"]:
+                        for field in ["api", "tests"]:
+                            for i, item in enumerate(target[field], 1):
+                                item.pop("name")
+                                item["id"] = f"{target['id']}.{field}.{i}"
             def mathematical_content(value, top=False):
                 if isinstance(value, dict):
                     return {k: mathematical_content(v) for k, v in value.items()
@@ -271,8 +297,8 @@ def organization_inputs(root):
                     return [mathematical_content(v) for v in value]
                 return value
             check(name + " unchanged mathematical fields",
-                  mathematical_content(json.loads(before), True)
-                  == mathematical_content(json.loads(current), True))
+                  mathematical_content(before_json, True)
+                  == mathematical_content(current_json, True))
     return inputs, checks
 
 

@@ -191,8 +191,9 @@ def main():
         for i, hyp in enumerate(t.get("hypotheses_ja", []), 1):
             check("documents", tid + " Japanese hypothesis " + str(i) + " in owning target", hyp in blocks["ja"])
         for field in ["api", "tests"]:
-            names = [x["name"] for x in t[field]]
-            check("targets", tid + " unique " + field, len(names) == len(set(names)))
+            item_ids = [x["id"] for x in t[field]]
+            check("targets", tid + " addressed " + field,
+                  item_ids == [f"{tid}.{field}.{i}" for i in range(1, len(item_ids) + 1)])
             for i, item in enumerate(t[field], 1):
                 check("documents", tid + " English " + field + " " + str(i),
                       item["statement"] in blocks["en"])
@@ -396,7 +397,8 @@ def main():
                   and new_t["scope_role"] == old_t["scope_role"])
             for field in ["api", "tests"]:
                 check("previous_source", old_id + " exact " + field + " names",
-                      [x["name"] for x in old_t[field]] == [x["name"] for x in new_t[field]])
+                      [x["name"] for x in old_t[field]] == [x["name"] for x in
+                          preformat_by_id[row["after_id"]][field]])
             old_support = [x["id"] for x in old_t.get("supporting_constructions", [])]
             new_support = [x["id"] for x in new_t.get("supporting_constructions", [])]
             check("previous_source", old_id + " supporting construction prefixes",
@@ -443,7 +445,8 @@ def main():
                           revision is not None and revision["before_sha256"] == old
                           and revision["after_sha256"] == previous_hash and bool(revision["reason"]))
             for field in ["api", "tests"]:
-                names = {x["name"] for x in t[field]} if t is not None else set()
+                recorded_t = preformat_by_id.get(target_map.get(tid))
+                names = {x["name"] for x in recorded_t[field]} if recorded_t is not None else set()
                 check("preservation", tid + " original " + field + " retained",
                       set(base_t[field + "_names"]) <= names)
         if args.baseline:

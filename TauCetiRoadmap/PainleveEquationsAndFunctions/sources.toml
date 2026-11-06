@@ -1,0 +1,468 @@
+# Local draft source manifest. "certified" concerns source bytes and provenance, not mathematical proof.
+schema = "tauceti-roadmap-sources/v1"
+roadmap = "PainleveEquationsAndFunctions"
+
+[[source]]
+id = "I23"
+authors = "Michi-aki Inaba"
+title = "Moduli Space of Factorized Ramified Connections and Generalized Isomonodromic Deformation"
+year = 2023
+venue = "SIGMA 19 (2023), 013, 72 pages"
+doi = "10.3842/SIGMA.2023.013"
+locator_scheme = "theorem"
+locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
+url = "https://sigma-journal.com/2023/013/"
+fetched_from = "https://sigma-journal.com/2023/013/sigma23-013.pdf"
+fetched_at = "2026-11-05T06:14:45.472927+00:00"
+sha256 = "cad8b314bc240715095334d40db8db1567d55ede06e7afba9090b9e574a04af2"
+licence_class = "publisher-open"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article's own numbering. The generic factorized ramified setting is retained; this source alone is not evidence for unrestricted global properness. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "3.3", "3.4", "4.1", "4.3", "4.4", "5.1", "7.1"]
+
+[[source]]
+id = "IS12"
+authors = "Michi-aki Inaba; Masa-Hiko Saito"
+title = "Moduli of unramified irregular singular parabolic connections on a smooth projective curve"
+year = 2013
+venue = "Kyoto Journal of Mathematics 53(2) (2013), 433–482"
+doi = "10.1215/21562261-2081261"
+arxiv = "1203.0084v3"
+locator_scheme = "theorem"
+locator = "Theorem 5.1; Remark 6.3"
+url = "https://arxiv.org/abs/1203.0084v3"
+fetched_from = "https://arxiv.org/pdf/1203.0084v3"
+fetched_at = "2026-11-05T06:14:46.000591+00:00"
+sha256 = "4a82dd6106c9749d3201d30430ac4dacb2e129a70402e6f54c1cbc58b8174741"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The stable key IS12 follows the 2012 preprint; journal publication is 2013. The cited bytes are arXiv v3, 22 November 2012, 40 PDF pages, and locators follow that version. The unramified/generic parameter hypotheses and Remark 6.3 are essential. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["4.3", "4.4"]
+
+[[source]]
+id = "HEU10"
+authors = "Viktoria Heu"
+title = "Universal isomonodromic deformations of meromorphic rank 2 connections on curves"
+year = 2010
+venue = "Annales de l'Institut Fourier 60(2) (2010), 515–549"
+doi = "10.5802/aif.2531"
+locator_scheme = "theorem"
+locator = "Theorem 1.1; Definitions 2.3 and 2.10; §2"
+url = "https://www.numdam.org/item/AIF_2010__60_2_515_0/"
+fetched_from = "https://www.numdam.org/article/AIF_2010__60_2_515_0.pdf"
+fetched_at = "2026-11-05T06:14:54.564857+00:00"
+sha256 = "d700a83e51086f5072aa37d70353ad67c32d2d2ef7ed1ae36327898834f3a245"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "NUMDAM/CEDRAM copy of the published article; 36 PDF pages including the repository cover. Printed page numbers are 515–549. The source's trace-free rank-two setting and its universal deformation base are retained. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["1.2", "3.4", "4.1", "4.4"]
+
+[[source]]
+id = "VDPS09"
+authors = "Marius van der Put; Masa-Hiko Saito"
+title = "Moduli spaces for linear differential equations and the Painlevé equations"
+year = 2009
+venue = "Annales de l'Institut Fourier 59(7) (2009), 2611–2667"
+doi = "10.5802/aif.2502"
+arxiv = "0902.1702v5"
+locator_scheme = "section"
+locator = "§2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22)"
+url = "https://arxiv.org/abs/0902.1702v5"
+fetched_from = "https://arxiv.org/pdf/0902.1702v5"
+fetched_at = "2026-11-05T06:13:55.810474+00:00"
+sha256 = "1d4be8e4526f6ca834506a976a6ffc999e9659acc2da08753b87e1f59d006e47"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §9.4; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["1.3", "1.4", "2.4", "4.2", "5.4", "6.2", "9.1", "9.2", "9.4", "9.5", "10.4"]
+
+[[source]]
+id = "IIS06"
+authors = "Michi-aki Inaba; Katsunori Iwasaki; Masa-Hiko Saito"
+title = "Dynamics of the Sixth Painlevé Equation"
+year = 2006
+venue = "Séminaires et Congrès 14 (2006), 103–167"
+arxiv = "math/0501007v2"
+locator_scheme = "theorem"
+locator = "Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definition 3.5; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10"
+url = "https://arxiv.org/abs/math/0501007v2"
+fetched_from = "https://arxiv.org/pdf/math/0501007v2"
+fetched_at = "2026-11-05T06:13:55.478625+00:00"
+sha256 = "07e4a8ed71f35316d0ab911c3b915a205724fea80352b3d24d8a51f4e8ee1fa0"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Published in 2006; cited bytes are arXiv v2, 6 March 2005, 58 PDF pages. All target locators follow the downloaded version. The detailed global geometric comparison is for PVI; transferring its mechanism to other profiles is a proof target. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["2.4", "4.3", "4.4", "5.1", "5.2", "5.3", "5.4", "5.5", "6.2", "7.1", "7.2", "7.3", "9.1", "9.2", "9.4"]
+
+[[source]]
+id = "BOA01"
+authors = "Philip Boalch"
+title = "Symplectic Manifolds and Isomonodromic Deformations"
+year = 2001
+venue = "Advances in Mathematics 163 (2001), 137–205"
+doi = "10.1006/aima.2001.1998"
+arxiv = "2002.00052v1"
+locator_scheme = "theorem"
+locator = "§§3–6; Theorems 7.1 and 7.3; §7"
+url = "https://arxiv.org/abs/2002.00052v1"
+fetched_from = "https://arxiv.org/pdf/2002.00052v1"
+fetched_at = "2026-11-05T06:13:56.425815+00:00"
+sha256 = "45890c24d4c80c1bc6aeb6a2b144042d900a4373bb387de476ff89fded2e635b"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The 2001 article was deposited on arXiv as 2002.00052v1 on 31 January 2020 for accessibility. The cited bytes are that 61-page deposit; theorem locators follow it. The local generic hypotheses of each construction remain in force. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["3.3", "4.1", "5.3"]
+
+[[source]]
+id = "BOA14"
+authors = "P. P. Boalch"
+title = "Geometry and braiding of Stokes data; Fission and wild character varieties"
+year = 2014
+venue = "Annals of Mathematics 179(1) (2014), 301–365"
+doi = "10.4007/annals.2014.179.1.5"
+arxiv = "1111.6228v3"
+locator_scheme = "theorem"
+locator = "§10, Theorem 10.2; §7 for Stokes data"
+url = "https://arxiv.org/abs/1111.6228v3"
+fetched_from = "https://arxiv.org/pdf/1111.6228"
+fetched_at = "2026-11-05T06:31:03.261789+00:00"
+sha256 = "28de90bd091dc3eac5a7b2a5df7657cf96164bbc449d505c43cce03a21d24686"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The unversioned PDF fetch resolved to arXiv 1111.6228v3, 22 September 2012, as printed in the downloaded text; 61 PDF pages. Publication year is 2014. Locators follow v3 and its admissible-deformation hypotheses. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["4.2"]
+
+[[source]]
+id = "BY15"
+authors = "Philip Boalch; Daisuke Yamakawa"
+title = "Twisted wild character varieties"
+year = 2015
+venue = "arXiv preprint 1512.08091"
+arxiv = "1512.08091v1"
+locator_scheme = "theorem"
+locator = "Remark 3; Definitions 7 and 13; Proposition 19; Theorem 21; Corollary 22"
+url = "https://arxiv.org/abs/1512.08091v1"
+fetched_from = "https://arxiv.org/pdf/1512.08091"
+fetched_at = "2026-11-05T06:31:01.890198+00:00"
+sha256 = "30cb9e6a9a7be880da0b238db3e5c097476ed6a503aaba87d79a99d1c911f1dd"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The unversioned PDF fetch resolved to arXiv v1, 26 December 2015, as printed in the downloaded text; 26 PDF pages. Used for twisted/ramified Stokes carriers and their actual algebraic constructions, not as a theorem of proper de Rham-to-Betti comparison on all strata. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["4.1", "4.2"]
+
+[[source]]
+id = "STT02"
+authors = "Masa-Hiko Saito; Taro Takebe; Hitomi Terajima"
+title = "Deformation of Okamoto–Painlevé pairs and Painlevé equations"
+year = 2002
+venue = "Journal of Algebraic Geometry 11(2) (2002), 311–362"
+doi = "10.1090/S1056-3911-01-00316-2"
+arxiv = "math/0006026v2"
+locator_scheme = "theorem"
+locator = "Definitions 1.1 and 1.3; Proposition 1.2; Tables 2–3; Theorem 3.1; §6"
+url = "https://arxiv.org/abs/math/0006026v2"
+fetched_from = "https://arxiv.org/pdf/math/0006026v2"
+fetched_at = "2026-11-05T06:15:10.905583+00:00"
+sha256 = "ca614c60e4331f73bab15d3c7da1c587bdf830bbeb286ecb8687b5511d48af83"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are the three-author arXiv v2, 18 September 2000, 39 PDF pages; publication is 2002. This is distinct from the similarly titled single-author conference note and from Classification of Okamoto–Painlevé pairs. Locators follow this preprint. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["5.4", "6.1", "6.2", "6.3", "7.2"]
+
+[[source]]
+id = "TER02"
+authors = "Hitomi Terajima"
+title = "Local cohomology of generalized Okamoto–Painlevé pairs and Painlevé equations"
+year = 2002
+venue = "Japanese Journal of Mathematics, New Series 28(1) (2002), 137–162"
+doi = "10.4099/math1924.28.137"
+arxiv = "math/0006027v1"
+locator_scheme = "theorem"
+locator = "Theorem 2.1; Proposition 2.1; Conjecture 2.1"
+url = "https://arxiv.org/abs/math/0006027v1"
+fetched_from = "https://arxiv.org/pdf/math/0006027v1"
+fetched_at = "2026-11-05T06:15:09.417521+00:00"
+sha256 = "12b731dec359e1872a44bdf8968aeeb9b31e9ff6717f356077808744a25446c7"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v1, 5 June 2000, 22 PDF pages; publication is 2002. The one-dimensional first boundary contribution is distinguished from the conjectural assertion about the entire local-cohomology space. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["6.3"]
+
+[[source]]
+id = "ST04"
+authors = "Masa-Hiko Saito; Hitomi Terajima"
+title = "Nodal curves and Riccati solutions of Painlevé equations"
+year = 2004
+venue = "Journal of Mathematics of Kyoto University 44(3) (2004), 529–568"
+arxiv = "math/0201225v1"
+locator_scheme = "theorem"
+locator = "§2.4; Proposition 2.1; Definition 2.3; Remark 2.4; Appendix A"
+url = "https://arxiv.org/abs/math/0201225v1"
+fetched_from = "https://arxiv.org/pdf/math/0201225v1"
+fetched_at = "2026-11-05T06:15:10.693102+00:00"
+sha256 = "0dd9e402d7098937e6d2d9d15a7f96f33887aa52f610568c392c2aeaf8f9db2a"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v1, 23 January 2002, 30 PDF pages; publication is 2004. Nodal-curve/Riccati results retain the local or base-changed family hypotheses. Appendix A's local-cohomology conclusions have their stated scope. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["6.3", "7.3", "9.5"]
+
+[[source]]
+id = "FM19"
+authors = "Andrea E. V. Ferrari; Lionel Mason"
+title = "Meromorphic Painlevé III transcendents and the Joukowski correspondence"
+year = 2019
+venue = "Journal of Integrable Systems 4(1) (2019), xyz001"
+doi = "10.1093/integr/xyz001"
+arxiv = "1809.07885v2"
+locator_scheme = "section"
+locator = "§1.1; equation (2)"
+url = "https://arxiv.org/abs/1809.07885v2"
+fetched_from = "https://arxiv.org/pdf/1809.07885v2"
+fetched_at = "2026-11-05T06:15:16.194409+00:00"
+sha256 = "5407f067688c595e85e92f1d7de1f7dae2e09296836cd5387644834b8a4b30f1"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v2, 30 January 2019, 25 PDF pages. The first page shortens the first author's name to Andrea Ferrari; the publisher record gives Andrea E. V. Ferrari. Used for the explicit PIII parameter-type convention and boundary comparison. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["9.3"]
+
+[[source]]
+id = "DIL21"
+authors = "Jan Dereziński; Artur Ishkhanyan; Adam Latosiński"
+title = "From Heun Class Equations to Painlevé Equations"
+year = 2021
+venue = "SIGMA 17 (2021), 056, 59 pages"
+doi = "10.3842/SIGMA.2021.056"
+locator_scheme = "section"
+locator = "§§5.2–5.3; Appendix B.3"
+url = "https://sigma-journal.com/2021/056/"
+fetched_from = "https://sigma-journal.com/2021/056/sigma21-056.pdf"
+fetched_at = "2026-11-05T06:15:17.105803+00:00"
+sha256 = "5de673e04e80e1b878e50c424dfaeee22923f4603057c4b1550bafaa23f96822"
+licence_class = "publisher-open"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Publisher PDF, final form 25 May 2021, published 7 June 2021; 59 PDF pages. Used for precisely scoped coefficient and degeneration displays; these displays do not define the intrinsic dynamics. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["9.3"]
+
+[[source]]
+id = "AHT17"
+authors = "Primitivo B. Acosta-Humánez; Marius van der Put; Jaap Top"
+title = "Isomonodromy for the Degenerate Fifth Painlevé Equation"
+year = 2017
+venue = "SIGMA 13 (2017), 029, 14 pages"
+doi = "10.3842/SIGMA.2017.029"
+locator_scheme = "section"
+locator = "Introduction; §§2–3"
+url = "https://sigma-journal.com/2017/029/"
+fetched_from = "https://sigma-journal.com/2017/029/sigma17-029.pdf"
+fetched_at = "2026-11-05T06:15:15.205751+00:00"
+sha256 = "ceb6e8425989fa5e5d03cd0ed91a09a910def6a7d2993ac161c2856821adfa7f"
+licence_class = "publisher-open"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Publisher PDF, final form 1 May 2017, published 9 May 2017; 14 PDF pages. The degenerate-PV comparison is scoped to its stated moduli and normalization conventions; a scalar substitution alone is not a global moduli equivalence. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["9.2"]
+
+[[source]]
+id = "MAL04"
+authors = "Bernard Malgrange"
+title = "Déformations isomonodromiques, forme de Liouville, fonction τ"
+year = 2004
+venue = "Annales de l'Institut Fourier 54(5) (2004), 1371–1392"
+doi = "10.5802/aif.2052"
+locator_scheme = "theorem"
+locator = "§2, printed pp. 1372–1374; Theorem 5.12"
+url = "https://www.numdam.org/articles/10.5802/aif.2052/"
+fetched_from = "https://www.numdam.org/item/10.5802/aif.2052.pdf"
+fetched_at = "2026-11-05T06:14:23.049959+00:00"
+sha256 = "2991cae554e555e99611589b8c2ab1ac98103ebb721c427e3935e9cdf86d547f"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "NUMDAM/CEDRAM copy of the published article; 23 PDF pages including the repository cover. Printed-page and theorem numbering follow the published article. Used for the determinant-extension/Liouville model within its stated Schlesinger setting. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["8.1", "8.2", "8.4"]
+
+[[source]]
+id = "BERT10"
+authors = "Marco Bertola"
+title = "The dependence on the monodromy data of the isomonodromic tau function"
+year = 2010
+venue = "Communications in Mathematical Physics 294 (2010), 539–579"
+doi = "10.1007/s00220-009-0961-7"
+arxiv = "0902.4716v2"
+locator_scheme = "theorem"
+locator = "Assumption 3.1; §5.1, Proposition 5.1; Theorem 5.1 only with the correction BERT16"
+url = "https://arxiv.org/abs/0902.4716v2"
+fetched_from = "https://arxiv.org/pdf/0902.4716v2"
+fetched_at = "2026-11-05T06:20:14.284053+00:00"
+sha256 = "7d90cf8f1ff8080e52bb843bf1bc0b0ff4d1e0eeb35713b9b1f1f8adf09226fa"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Original publication is 2010. Cited bytes are arXiv v2, 20 January 2016, 34 PDF pages. The associated correction BERT16 is mandatory for the general contour-vertex/monodromy-variation formulas; the original unrestricted formula is not used. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["8.3", "8.4"]
+
+[[source]]
+id = "BERT16"
+authors = "Marco Bertola"
+title = "Corrigendum: The dependence on the monodromy data of the isomonodromic tau function"
+year = 2021
+venue = "Communications in Mathematical Physics 381 (2021), 1445–1461"
+doi = "10.1007/s00220-020-03904-z"
+arxiv = "1601.04790v2"
+locator_scheme = "theorem"
+locator = "Definition 2.1; Theorems 2.1 and 2.2"
+url = "https://arxiv.org/abs/1601.04790v2"
+fetched_from = "https://arxiv.org/pdf/1601.04790v2"
+fetched_at = "2026-11-05T06:20:14.036895+00:00"
+sha256 = "b4708229e958e026222bf1fcbbee7fc6a86779b1ccd6c3f3701e8a0dc476d5ec"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The stable key BERT16 retains the initial preprint year. Cited bytes are arXiv v2, 19 September 2020, 14 PDF pages, titled Corrigendum. Published in 2021 as Correction to: The Dependence on the Monodromy Data of the Isomonodromic Tau Function. Locators follow v2. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["8.3", "8.4", "11.4"]
+
+[[source]]
+id = "BERT17"
+authors = "Marco Bertola"
+title = "The Malgrange Form and Fredholm Determinants"
+year = 2017
+venue = "SIGMA 13 (2017), 046, 12 pages"
+doi = "10.3842/SIGMA.2017.046"
+arxiv = "1703.00046v4"
+locator_scheme = "theorem"
+locator = "§1; Theorem 2.2; Proposition 2.3; formula (3.6); Theorem 3.3; §3.1.2"
+url = "https://arxiv.org/abs/1703.00046v4"
+fetched_from = "https://arxiv.org/pdf/1703.00046"
+fetched_at = "2026-11-05T06:15:46.570099+00:00"
+sha256 = "6ca20a0e696e2c2c45ab2b8fd31a5e0d16d8782516a9893b3f085540ef691516"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The unversioned arXiv PDF request returned filename 1703.00046v4.pdf; the 12-page text has the SIGMA publication header (22 June 2017). The actual fetched URL and its byte hash are retained. The initial model uses analytic invertible closed-contour symbols of zero determinant winding. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["8.1", "8.2", "8.3", "8.4", "9.4", "11.4"]
+
+[[source]]
+id = "ILP18"
+authors = "A. R. Its; O. Lisovyy; A. Prokhorov"
+title = "Monodromy dependence and connection formulae for isomonodromic tau functions"
+year = 2018
+venue = "Duke Mathematical Journal 167(7) (2018), 1347–1432"
+doi = "10.1215/00127094-2017-0055"
+arxiv = "1604.03082v4"
+locator_scheme = "theorem"
+locator = "§1.4, Theorems A and B, equations (1.13), (1.16)–(1.21), (1.25)–(1.28); Lemma 3.3; Propositions 3.20 and 3.24; §3.9; §§4.3–4.5, especially (4.74)–(4.76); Remark 4.8"
+url = "https://arxiv.org/abs/1604.03082v4"
+fetched_from = "https://arxiv.org/pdf/1604.03082v4"
+fetched_at = "2026-11-05T06:20:15.161188+00:00"
+sha256 = "b63a1e2ec2e6e7a67f6bcf62c1238a5cef834aa70983e5b2dc53ab8457461b65"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v4, 29 October 2018, 54 PDF pages; the arXiv version notice says it was revised to match the published article. Locators and branches follow v4. The generic PVI and homogeneous-PII parameter restrictions, absolute-constant calibration and removable-limit issues remain explicit. The calibration also needs the uniform sectorial Hamiltonian and arc estimates of (4.74)–(4.76), owned here through the normalized RHP; DIK/HXZ alone do not supply them. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["10.1", "10.2", "10.3", "10.4"]
+
+[[source]]
+id = "DIK08"
+authors = "P. Deift; A. Its; I. Krasovsky"
+title = "Asymptotics of the Airy-kernel determinant"
+year = 2008
+venue = "Communications in Mathematical Physics 278 (2008), 643–678"
+doi = "10.1007/s00220-007-0409-x"
+arxiv = "math/0609451v2"
+locator_scheme = "theorem"
+locator = "Theorem 1; equations (2)–(3)"
+url = "https://arxiv.org/abs/math/0609451v2"
+fetched_from = "https://arxiv.org/pdf/math/0609451"
+fetched_at = "2026-11-05T06:36:58.912743+00:00"
+sha256 = "92ef702cbb36bf498a74723e87dc8b337b30dc35df7d0092dd8ed6dd9622ae71"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "The unversioned PDF fetch resolved to arXiv v2, 21 June 2007, as printed in the downloaded text; 41 PDF pages. Publication is 2008. Used for the absolute Airy determinant calibration constant required in ILP18 §4.5, not as a duplicate Hastings–McLeod existence target. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["10.3"]
+
+[[source]]
+id = "HXZ16"
+authors = "Min Huang; Shuai-Xia Xu; Lun Zhang"
+title = "Location of Poles for the Hastings–McLeod Solution to the Second Painlevé Equation"
+year = 2016
+venue = "Constructive Approximation 43(3) (2016), 463–494"
+doi = "10.1007/s00365-015-9307-1"
+arxiv = "1410.3338v2"
+locator_scheme = "theorem"
+locator = "Theorem 2.1"
+url = "https://arxiv.org/abs/1410.3338v2"
+fetched_from = "https://arxiv.org/pdf/1410.3338v2"
+fetched_at = "2026-11-05T06:36:58.901589+00:00"
+sha256 = "97d6026b77a5a9c2fb5d0a1bd26e106239037ac82cecd32c9beaeac5601fadba"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Cited bytes are arXiv v2, 9 July 2015, 31 PDF pages; journal issue year is 2016. The complex-sector pole-free estimate is an additional calibration input beyond the real-axis result supplied by RandomMatrices §8.5. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["10.3"]
+
+[[source]]
+id = "GMR23"
+authors = "Ilia Gaiur; Marta Mazzocco; Vladimir Rubtsov"
+title = "Isomonodromic Deformations: Confluence, Reduction and Quantisation"
+year = 2023
+venue = "Communications in Mathematical Physics 400 (2023), 1385–1461"
+doi = "10.1007/s00220-023-04650-8"
+locator_scheme = "theorem"
+locator = "Theorem 2, pp. 1391–1392, (12)–(15), only with the corrected coefficient-index lemma in roadmap 11.1; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1 p.1441, explicitly nonramified"
+url = "https://doi.org/10.1007/s00220-023-04650-8"
+fetched_from = "https://link.springer.com/content/pdf/10.1007/s00220-023-04650-8.pdf"
+fetched_at = "2026-11-05T06:24:41.051605+00:00"
+sha256 = "c8e5f87622ef37e86d53e74822e57299311e7f4ab3dfb31127f87a42d761736d"
+licence_class = "publisher-open"
+status = "certified"
+accessed = "2026-11-05"
+version_note = "Publisher version of record, published 1 March 2023; 77 PDF pages. The article explicitly carries a Creative Commons Attribution 4.0 notice. Printed-page locators are used. Theorem 2 as printed has a pole-rank-raising index defect: C=O(epsilon^(-r)) gives C*P^(r+1)=O(epsilon), so the new coefficient vanishes. The roadmap owns the corrected Laurent lemma. Its negative Lie-Poisson sign is transported by coefficient negation to the positive supplier. Section 5.1 is explicitly nonramified; additional ramified/boundary adapters and analytic limits remain owned targets. Certified records the retrieved text and byte provenance, not a proof of the roadmap's mathematical targets."
+cited_for = ["11.1", "11.2", "11.3", "11.4"]
+
+[[source]]
+id = "DLMF"
+authors = "P. A. Clarkson (chapter author); National Institute of Standards and Technology"
+title = "NIST Digital Library of Mathematical Functions, Chapter 32: Painlevé Transcendents"
+year = 2026
+venue = "DLMF, version 1.2.8, released 15 September 2026"
+locator_scheme = "section"
+locator = "§32.2(i), equations 32.2.1–32.2.6; §§32.6–32.7; §32.9, equations 32.9.6 and 32.9.12"
+url = "https://dlmf.nist.gov/32"
+licence_class = "institutional"
+status = "uncertified"
+accessed = "2026-11-05"
+version_note = "Official page text for §§32.2, 32.6, 32.7 and 32.9 was read through web retrieval on 5 November 2026. The chapter page displayed version 1.2.8, release 15 September 2026. Direct raw-byte retrieval of §32.2 returned HTTP 403; no raw snapshot or SHA-256 is claimed. Uncertified means byte provenance is not certified here, not that the page was unread. This secondary reference supplies standard displays and normalizations, not the intrinsic construction."
+cited_for = ["9.2", "9.3", "9.4", "9.5"]
+
+[[source]]
+id = "I13"
+authors = "Michi-aki Inaba"
+title = "Moduli of parabolic connections on a curve and Riemann-Hilbert correspondence"
+year = 2013
+venue = "Journal of Algebraic Geometry 22 (2013), 407–480; cited preprint arXiv math/0602004v2"
+arxiv = "math/0602004v2"
+locator_scheme = "theorem"
+locator = "Theorems 2.1–2.2, preprint pp. 5–6; regular-singular reconstruction in §1; properness proof in §6"
+url = "https://arxiv.org/abs/math/0602004v2"
+fetched_from = "https://arxiv.org/pdf/math/0602004"
+fetched_at = "2026-11-06T02:46:51.507890+00:00"
+sha256 = "01842bb622734023216f75333f87f42f88835e90e90eee3032fec3b99efb2469"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-06"
+version_note = "The fetched unversioned PDF identifies itself as arXiv math/0602004v2, 6 June 2012, 45 pages, 625670 bytes. Locators use that preprint, not journal pagination. Theorem 2.2 retains exponent parameters by a fiber product and requires the stated genus/rank/pole inequality and generic stability weights. Fixed-determinant specialization is used only after the explicit Cartesian comparison. Certified records inspected bytes/provenance, not mathematical proof completion."
+cited_for = ["4.2", "4.3", "4.4", "framework:MeromorphicConnectionModuli/4.1", "framework:MeromorphicConnectionModuli/4.2", "application:FiveLogarithmicPoints/1.1", "application:FiveLogarithmicPoints/1.3"]

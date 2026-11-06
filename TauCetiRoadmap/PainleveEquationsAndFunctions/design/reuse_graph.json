@@ -1,0 +1,1077 @@
+{
+  "schema": "mathematical-reuse-graph/single-roadmap-v1",
+  "roadmap": "PainleveEquationsAndFunctions",
+  "meaning": "Edges point from a target to its prerequisites. All 321 internal edges are the image of the previously reviewed graph under the recorded address bijection. External contracts retain their exact original strings.",
+  "nodes": [
+    {
+      "id": "N1.1",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:SmoothBundlesConnections §B1.5/B5",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "N1.2",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1"
+      ],
+      "external_contracts": [
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5"
+      ]
+    },
+    {
+      "id": "N1.3",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1",
+        "N1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "N1.4",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1",
+        "N1.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "N1.5",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1",
+        "N1.2",
+        "N1.3"
+      ],
+      "external_contracts": [
+        "roadmap:UniversalCovers §completed covering and lifting interface",
+        "roadmap:SmoothBundlesConnections §B1.5/B5"
+      ]
+    },
+    {
+      "id": "N1.6",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1",
+        "N1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "N1.7",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexCurveModuli §D0/D2.0",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "N1.8",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1",
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5"
+      ]
+    },
+    {
+      "id": "N1.9",
+      "part": "N",
+      "scope_role": "framework",
+      "prerequisites": [
+        "N1.2"
+      ],
+      "external_contracts": [
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "M1.1",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:PadicDifferentialEquationsAndRigidCohomology §RD.6.52a",
+        "roadmap:SchemeAndStackFoundations §1.18/1.23",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B"
+      ]
+    },
+    {
+      "id": "M1.2",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexCurveModuli §D0/D2.0",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    {
+      "id": "M2.1",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1/7.1/8"
+      ]
+    },
+    {
+      "id": "M2.2",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M2.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6"
+      ]
+    },
+    {
+      "id": "M2.3",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M2.1",
+        "M2.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.20/3.3",
+        "roadmap:ComplexComparisonPartII §C3.2d.2/C3.2f.1–2"
+      ]
+    },
+    {
+      "id": "M2.4",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M2.1",
+        "M2.2",
+        "M2.3"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/4.2–4.6",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B"
+      ]
+    },
+    {
+      "id": "M3.1",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "N1.1"
+      ],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:SchemeAndStackFoundations §4.2–4.6"
+      ]
+    },
+    {
+      "id": "M3.2",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M2.2",
+        "M2.4",
+        "M3.1",
+        "N1.6"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "M3.3",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.2",
+        "M2.4",
+        "M3.1",
+        "M3.2",
+        "N1.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §1.18/1.23"
+      ]
+    },
+    {
+      "id": "M3.4",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M3.1",
+        "M3.2",
+        "M3.3",
+        "N1.1",
+        "N1.6"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "M4.1",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M3.1",
+        "M3.2",
+        "M3.3",
+        "M3.4",
+        "N1.3"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6",
+        "roadmap:ComplexCurveModuli §D0/D2.0"
+      ]
+    },
+    {
+      "id": "M4.2",
+      "part": "M",
+      "scope_role": "framework",
+      "prerequisites": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.3",
+        "M3.3",
+        "M3.4",
+        "M4.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1"
+      ]
+    },
+    {
+      "id": "A1.1",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:HeegaardFloer §2.2/F0.0",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30; complex bounded-Fredholm and local-splitting foundations"
+      ]
+    },
+    {
+      "id": "A1.2",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "foundation:complex L² spaces, Fourier–Plancherel, the real-line Hilbert-transform bound, Schur estimates, Cauchy integral formula and holomorphic-function uniqueness",
+        "roadmap:OperatorTheory bounded-operator foundations; proposed Cauchy contour extension"
+      ]
+    },
+    {
+      "id": "A1.3",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [
+        "A1.2"
+      ],
+      "external_contracts": [
+        "foundation:bounded-operator Neumann series and holomorphic inversion"
+      ]
+    },
+    {
+      "id": "A1.4",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [
+        "A1.3"
+      ],
+      "external_contracts": [
+        "foundation:Hölder inequality, dominated convergence and compactness in weighted Lᵖ spaces"
+      ]
+    },
+    {
+      "id": "A1.5",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1",
+        "foundation:holomorphic one-forms, primitives and integration on simply connected domains"
+      ]
+    },
+    {
+      "id": "A1.6",
+      "part": "A",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30",
+        "foundation:holomorphic functions, Rouché theorem and argument principle"
+      ]
+    },
+    {
+      "id": "C1.1",
+      "part": "C",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "foundation:finite-dimensional complex vector spaces, convergent Laurent series and elementary compact-uniform holomorphic estimates"
+      ]
+    },
+    {
+      "id": "C1.2",
+      "part": "C",
+      "scope_role": "framework",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:LieGroupoidsPoisson §G4.6A",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "foundation:finite locally free algebras, complex relative vector bundles, duals and symmetric algebras",
+        "foundation:relative Cartier divisors, curve differential forms and residue/dualizing-module comparison for the optional residue adapter"
+      ]
+    },
+    {
+      "id": "P1.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "M1.1"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P1.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "M1.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P1.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P1.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P1.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P1.2",
+        "P1.3"
+      ],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7"
+      ]
+    },
+    {
+      "id": "P2.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.3",
+        "M2.1"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P2.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P2.1",
+        "M2.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P2.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.3",
+        "P2.1",
+        "P2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P2.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P2.1",
+        "P2.2",
+        "P2.3"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P3.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.2",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "M3.1",
+        "N1.1"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P3.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.1",
+        "M3.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P3.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P2.3",
+        "P3.1",
+        "P3.2",
+        "M3.2",
+        "N1.6"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P3.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P1.2",
+        "P2.1",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "M3.3",
+        "M3.4"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P4.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P1.2",
+        "P3.1",
+        "P3.2"
+      ],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:PadicDifferentialEquationsAndRigidCohomology §RD.6.52a",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "P4.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.2",
+        "P4.1",
+        "M4.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §1.17",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:UniversalCovers §completed covering and lifting interface",
+        "roadmap:SmoothBundlesConnections §B1.5/B5"
+      ]
+    },
+    {
+      "id": "P4.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P2.1",
+        "P2.4",
+        "P3.1",
+        "P3.2",
+        "P4.1",
+        "P4.2",
+        "M4.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:ComplexComparisonPartII §C5.6"
+      ]
+    },
+    {
+      "id": "P4.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P2.4",
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "M4.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1/7.1/8",
+        "mathlib:IsProperMap"
+      ]
+    },
+    {
+      "id": "P5.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.1",
+        "P3.2",
+        "N1.3"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P5.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P4.2",
+        "P4.3",
+        "P4.4",
+        "P5.1",
+        "N1.4"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P5.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.2",
+        "P3.3",
+        "P5.2",
+        "N1.5",
+        "N1.6"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P5.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P5.1",
+        "P5.3",
+        "N1.7"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P5.5",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.4",
+        "P5.3",
+        "P5.4",
+        "N1.7"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P6.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:ComplexComparisonPartII §C3.2d.2/C3.2f.1–2"
+      ]
+    },
+    {
+      "id": "P6.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.3",
+        "P1.4",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P2.4",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P6.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §4.14"
+      ]
+    },
+    {
+      "id": "P6.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P6.1",
+        "P6.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "roadmap:JacobianChallenge §Layer C"
+      ]
+    },
+    {
+      "id": "P7.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P2.1",
+        "P3.1"
+      ],
+      "external_contracts": [
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:FormalConnectionsOpers §F2–F3"
+      ]
+    },
+    {
+      "id": "P7.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P2.2",
+        "P2.3",
+        "P3.4",
+        "P6.2",
+        "P6.3",
+        "P7.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10"
+      ]
+    },
+    {
+      "id": "P7.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.1",
+        "P7.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "P8.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "A1.1"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P8.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P2.1",
+        "P2.2",
+        "P3.1",
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "P8.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "roadmap:SchemeAndStackFoundations §1.22",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30; ToeplitzOperators T3",
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    {
+      "id": "P8.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P4.1",
+        "P8.1",
+        "P8.2"
+      ],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    {
+      "id": "P8.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.3",
+        "P3.4",
+        "P8.2",
+        "P8.3"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    {
+      "id": "P9.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.4",
+        "P2.3",
+        "P3.1",
+        "N1.8"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P9.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.4",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P2.4",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P5.5",
+        "P6.2",
+        "P9.1"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P9.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P9.1",
+        "P9.2"
+      ],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "roadmap:UniversalCovers §completed covering and lifting interface"
+      ]
+    },
+    {
+      "id": "P9.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.3",
+        "P7.1",
+        "P7.2",
+        "P8.3",
+        "P8.4",
+        "P9.1",
+        "P9.2",
+        "P9.3"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P9.5",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P7.1",
+        "P7.2",
+        "P7.3",
+        "P8.4",
+        "P9.1",
+        "P9.2",
+        "P9.3",
+        "P9.4"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P10.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "P5.1",
+        "P5.2",
+        "P5.3",
+        "P5.4",
+        "P8.2",
+        "P8.3",
+        "P8.4",
+        "P9.1",
+        "P9.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P10.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.1",
+        "P3.2",
+        "P4.1",
+        "P5.1",
+        "P5.3",
+        "P10.1",
+        "A1.2",
+        "A1.3",
+        "A1.4"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P10.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P8.3",
+        "P8.4",
+        "P9.1",
+        "P9.2",
+        "P9.4",
+        "P9.5",
+        "P10.1",
+        "P10.2"
+      ],
+      "external_contracts": [
+        "roadmap:AnalyticNumberTheoryPartII §4.3–4.3a",
+        "roadmap:RandomMatrices §8.4–8.5"
+      ]
+    },
+    {
+      "id": "P10.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P5.1",
+        "P5.2",
+        "P5.3",
+        "P5.4",
+        "P5.5",
+        "P9.1",
+        "P9.5"
+      ],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.4–8.5"
+      ]
+    },
+    {
+      "id": "P11.1",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P1.1",
+        "P1.2",
+        "P1.3",
+        "P1.4",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P6.2",
+        "C1.1",
+        "C1.2"
+      ],
+      "external_contracts": [
+        "roadmap:SymplecticGeometry §HamiltonianReduction R2–R3"
+      ]
+    },
+    {
+      "id": "P11.2",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P11.1",
+        "N1.9"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P11.3",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P3.4",
+        "P9.1",
+        "P9.2",
+        "P9.3",
+        "P9.4",
+        "P9.5",
+        "P11.1",
+        "P11.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "P11.4",
+      "part": "P",
+      "scope_role": "application",
+      "prerequisites": [
+        "P8.2",
+        "P8.3",
+        "P8.4",
+        "P10.2",
+        "P11.1",
+        "P11.2",
+        "A1.5",
+        "A1.6"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "G1.1",
+      "part": "G",
+      "scope_role": "application",
+      "prerequisites": [
+        "M1.1",
+        "M1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6 regular-singular correspondence, with chosen-logarithm lattice comparison"
+      ]
+    },
+    {
+      "id": "G1.2",
+      "part": "G",
+      "scope_role": "application",
+      "prerequisites": [
+        "G1.1",
+        "M3.4",
+        "N1.6"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "G1.3",
+      "part": "G",
+      "scope_role": "application",
+      "prerequisites": [
+        "G1.1",
+        "G1.2",
+        "M4.1",
+        "M4.2"
+      ],
+      "external_contracts": []
+    },
+    {
+      "id": "G1.4",
+      "part": "G",
+      "scope_role": "application",
+      "prerequisites": [
+        "G1.2",
+        "G1.3",
+        "N1.3",
+        "N1.4",
+        "N1.5",
+        "N1.6",
+        "N1.7"
+      ],
+      "external_contracts": []
+    }
+  ]
+}

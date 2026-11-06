@@ -1,0 +1,1073 @@
+{
+  "scope": "All 44 original targets retained; general proof ownership is extracted and application-specific responsibilities remain explicit. Generic diagnostics may be referenced on both sides, without duplicate proof ownership.",
+  "before_source": "reports/reusability/history/before/",
+  "rows": [
+    {
+      "original_target": "1.1",
+      "original_title": "Decorated connection data and its groupoid",
+      "current_title": "Binding the general decorated-connection input",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/1.1"
+      ],
+      "current_role": "import-binding",
+      "remaining_application_contract": "Use the objects and arrows of MeromorphicConnectionModuli §1.1 directly. This is an import binding, not a second definition of decorated connections. Record the determinant, local decorations, weights and marking that the classical restriction in §1.3 will retain. The genus-zero rank-two restriction is imposed there, not in the general framework. Identify the local presentations used in the Painlevé sources with these same objects, preserving filtrations, logarithmic lattices and ramified descent. The invariant adjoint and projective objects are End⁰(E) and the PGLᵣ connection; no globally trace-subtracted rank-r connection or square root of the determinant is introduced. (I23, §§2–4.)",
+      "original_api_names": [
+        "decoratedConnectionGroupoidLaw1",
+        "decoratedConnectionGroupoidLaw2",
+        "decoratedConnectionGroupoidLaw3",
+        "decoratedConnectionGroupoidLaw4"
+      ],
+      "current_api_names": [
+        "decoratedConnectionGroupoidApplicationLaw1",
+        "decoratedConnectionGroupoidApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "decoratedConnectionGroupoidCheck1",
+        "decoratedConnectionGroupoidCheck2",
+        "decoratedConnectionGroupoidCheck3",
+        "decoratedConnectionGroupoidCheck4",
+        "decoratedConnectionGroupoidCheck5",
+        "decoratedConnectionGroupoidCheck6"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "1.2",
+      "original_title": "Time deformation and external parameters",
+      "current_title": "Binding the general time-deformation problem",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/1.2"
+      ],
+      "current_role": "import-binding",
+      "remaining_application_contract": "Use MeromorphicConnectionModuli §1.2 for the admitted deformation problem, its coordinate-change arrows, marking covers and fixed exponent parameters. For the classical subcategory verify the regular-singular determinant with fixed residues has the compatible time lift required by that contract. Identify the genus-zero local slices and their actual tangent maps; do not construct a second time-base carrier. The reduced versal problem remains the input to §1.3; its one-dimensionality is proved in §1.4. Strong isomonodromy preserves transported analytic data, not a fixed-coordinate irregular polynomial. (HEU10, Theorem 1.1; I23, §§5, 11.)",
+      "original_api_names": [
+        "reducedTimeDeformationLaw1",
+        "reducedTimeDeformationLaw2",
+        "reducedTimeDeformationLaw3",
+        "reducedTimeDeformationLaw4"
+      ],
+      "current_api_names": [
+        "reducedTimeDeformationApplicationLaw1",
+        "reducedTimeDeformationApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "reducedTimeDeformationCheck1",
+        "reducedTimeDeformationCheck2",
+        "reducedTimeDeformationCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "1.3",
+      "original_title": "The rank-two degree-four subcategory",
+      "current_title": "The rank-two degree-four subcategory",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Define the classical differential Painlevé input class by genus zero, rank two, a structural polar divisor of degree four, the local moduli conditions of §1.1, a regular-singular determinant connection with fixed residues and its compatible transport, the reduced versal formal-data deformation from §1.2, and nonempty stable fibers. On genus zero the determinant residues obey their sum = −degree convention for ∇ = d + A. The time deformation is the actual reduced deformation problem, not an arbitrarily chosen constant or nonversal curve in a larger base. Nonemptiness is a domain condition on the moduli problem; neither one-dimensional time nor continuation is a field of this definition. Prove the reduced-time dimension in §1.4, independently of the phase dimension. Keep the connection data themselves as objects; do not define this class as a six-element type. (VDPS09, §2.2 and Table 1; I23, Theorem 7.5.)\n\nIn the pole-budget comparison, r is the projective Katz invariant, computed from trace-free exponential differences. It is not the maximal slope of an arbitrary scalar twist of the connection. The classical determinant normalization avoids extra scalar irregular times. Adding an arbitrary scalar irregular part belongs to a separate rank-one extension with a specified strong time lift; it is not silently included in the one-dimensional deformation count. None of these local/formal comparisons requires a global square root of the determinant line.",
+      "original_api_names": [
+        "classicalPainleveInputLaw1",
+        "classicalPainleveInputLaw2",
+        "classicalPainleveInputLaw3",
+        "classicalPainleveInputLaw4"
+      ],
+      "current_api_names": [
+        "classicalPainleveInputLaw1",
+        "classicalPainleveInputLaw2",
+        "classicalPainleveInputLaw3",
+        "classicalPainleveInputLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "classicalPainleveInputCheck1",
+        "classicalPainleveInputCheck2",
+        "classicalPainleveInputCheck3",
+        "classicalPainleveInputCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "1.4",
+      "original_title": "Classification of formal profiles and time normalizations",
+      "current_title": "Classification of formal profiles and time normalizations",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Classify the allowed rank-two formal profiles of structural degree four, retaining the nondegenerate leading-term and reduced-deformation hypotheses. First classify underlying profiles after forgetting the order of the pole labels: enumerate partitions of four and the integral or half-integral generic local slope at each irregular part. This gives ten underlying profiles. Recover the original ordered input through its label-assignment groupoid: a permutation induces a reindexing equivalence between labelled presentations, not a label-preserving arrow in the original groupoid. There are seventeen ordered slope profiles, with counts 2, 8, 6 and 1 for one, two, three and four poles; the corresponding unordered counts are 2, 5, 2 and 1. These are counts of formal profile shapes, not of objects with continuous exponent parameters.\n\nProve that every labelled realization has one essential time parameter after quotienting the permitted label-preserving curve-coordinate changes. In a presentation with n poles the dimension calculation is n + Σ⌈rᵢ⌉ − 3 = Σmᵢ − 3 = 1, with the automorphism stabilizers and the chosen marking/slices explicitly checked. The determinant normalization and its transport remove no required projective direction and add no scalar irregular direction. Prove that all ten underlying presentations and every label assignment admit this determinant normalization. The table in §9.2 is a table of underlying profiles; its coordinate formulas are transported along the label-reindexing equivalences. (VDPS09, §2.2, Table 1, printed pp.18–19.)\n\nProve the familiar time domains only after fixing the displayed marking and normalization: the four-point cross-ratio base, a nonzero irregular time for the multiplicative-looking time charts, and an affine time for the polynomial charts. These are charts or marking covers of the intrinsic time problem; they are not six definitions of dynamics. The classification is restricted to this rank-two formal complexity, and does not classify every two-dimensional nonautonomous system.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [
+        "classicalProfilesAndTimeDimensionCheck1",
+        "classicalProfilesAndTimeDimensionCheck2",
+        "classicalProfilesAndTimeDimensionCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "2.1",
+      "original_title": "The stable moduli family on all bundles",
+      "current_title": "Classical specialization of the full stable moduli",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/2.1"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply MeromorphicConnectionModuli §2.1 to §1.3. Verify its determinant, stability and local-model admission hypotheses on the classical input; boundedness is supplied by the general construction. Identify its output with the full classical stable moduli problem. The stack, rigidification, coarse family and étale universal-object covers are the imported constructions. Retain all permitted bundle types and the actual residual μ₂ stabilizer before rigidification. Own the comparison of every classical framed chart with its actual locally closed or open locus; a balanced chart never replaces the entire moduli space. (I23, Theorem 5.1.)",
+      "original_api_names": [
+        "stableConnectionModuliLaw1",
+        "stableConnectionModuliLaw2",
+        "stableConnectionModuliLaw3",
+        "stableConnectionModuliLaw4"
+      ],
+      "current_api_names": [
+        "stableConnectionModuliApplicationLaw1",
+        "stableConnectionModuliApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "stableConnectionModuliCheck1",
+        "stableConnectionModuliCheck2",
+        "stableConnectionModuliCheck3",
+        "stableConnectionModuliCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "2.2",
+      "original_title": "The deformation complex and its pairing",
+      "current_title": "Specializing the deformation complex and pairing",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/2.2"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Specialize MeromorphicConnectionModuli §2.2 to the determinant-fixed family of §2.1, and prove that infinitesimal classical families and gauges correspond to its cocycles and coboundaries. Use its actual three-term ramified cone and ℂ-linear differential-operator/Čech construction. Do not replace the commutator differential by an O-linear map, or truncate the cone without a proved quasi-isomorphism. Verify the determinant restriction and trace-sign convention on the same complex. (I23, equation (6.9), Propositions 6.3 and 7.2.)",
+      "original_api_names": [
+        "connectionDeformationComplexLaw1",
+        "connectionDeformationComplexLaw2",
+        "connectionDeformationComplexLaw3",
+        "connectionDeformationComplexLaw4"
+      ],
+      "current_api_names": [
+        "connectionDeformationComplexApplicationLaw1",
+        "connectionDeformationComplexApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "connectionDeformationComplexCheck1",
+        "connectionDeformationComplexCheck2",
+        "connectionDeformationComplexCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "2.3",
+      "original_title": "Smoothness, dimension and relative symplecticity",
+      "current_title": "The classical symplectic surface as a construction output",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/2.3",
+        "MeromorphicConnectionModuli/2.4"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply MeromorphicConnectionModuli §§2.3–2.4 to the family and complex identified in §§2.1–2.2. Verify the determinant-fiber comparison; genus zero contributes no omitted Jacobian directions. Substituting g = 0, r = 2 and deg P = 4 in the admitted general dimension theorem gives 2. Smoothness, nondegeneracy and relative closedness are outputs. The finite-flat auxiliary unfolding, its simple-connection moduli, both generic logarithmic quasi-isomorphisms and the smooth-density argument are proved once in the general framework, before any confluence theorem. Here identify its central stable fiber, complex and form with the actual classical family, including admissible nonreduced base change. Do not invoke Layer 11. (I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.)",
+      "original_api_names": [
+        "relativeSymplecticModuliLaw1",
+        "relativeSymplecticModuliLaw2",
+        "relativeSymplecticModuliLaw3",
+        "relativeSymplecticModuliLaw4"
+      ],
+      "current_api_names": [
+        "relativeSymplecticModuliApplicationLaw1",
+        "relativeSymplecticModuliApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "relativeSymplecticModuliCheck1",
+        "relativeSymplecticModuliCheck2",
+        "relativeSymplecticModuliCheck3",
+        "relativeSymplecticModuliCheck4",
+        "relativeSymplecticModuliCheck5"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "2.4",
+      "original_title": "Exceptional strata are part of the phase space",
+      "current_title": "Exceptional strata are part of the phase space",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Layer 4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is handled by §9.3 and Layer 11. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "3.1",
+      "original_title": "Infinitesimal integrable extensions",
+      "current_title": "Specializing the strong isomonodromy construction",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/3.1",
+        "NonlinearConnections/1.1"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply MeromorphicConnectionModuli §3.1 to the classical time problem and the family of Layer 2. Identify its strong extensions with the classical universal-object charts, including kernel lattices, logarithmic flags and ramified descent. The total pole class is Ω¹_X(log D) ⊗ O_X(P − D); its moving-coordinate generators dz/zᵐ and dε/zᵐ⁻¹ remain comparison lemmas, with a regular time coefficient at a logarithmic pole. Import existence, uniqueness and gluing of strong extensions, and obtain the same splitting h of NonlinearConnections §1.1. This target does not assume h or recover it from a prescribed scalar equation. (I23, Definition 10.1, Propositions 10.7 and 10.10.)",
+      "original_api_names": [
+        "strongIsomonodromySplittingLaw1",
+        "strongIsomonodromySplittingLaw2",
+        "strongIsomonodromySplittingLaw3",
+        "strongIsomonodromySplittingLaw4"
+      ],
+      "current_api_names": [
+        "strongIsomonodromySplittingApplicationLaw1",
+        "strongIsomonodromySplittingApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "strongIsomonodromySplittingCheck1",
+        "strongIsomonodromySplittingCheck2",
+        "strongIsomonodromySplittingCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "3.2",
+      "original_title": "Flatness of the constructed splitting",
+      "current_title": "The imported flatness theorem on classical inputs",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/3.2"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Use MeromorphicConnectionModuli §3.2 and the identification of §3.1 to obtain h([v,w]) = [h(v),h(w)] on the classical family. Verify that the two-parameter strong-extension comparison restricts to this time problem. The general mixed-term proof is not repeated for each formal profile; no analytic Stokes theorem or scalar equation is a premise. (I23, Theorem 11.6.)",
+      "original_api_names": [],
+      "current_api_names": [
+        "isomonodromySplittingFlatApplicationLaw1"
+      ],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "3.3",
+      "original_title": "Symplectic preservation and the total form",
+      "current_title": "Symplectic preservation and total form by general comparison",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/3.2",
+        "NonlinearConnections/1.6"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "First specialize the actual symplectic-preservation theorem of MeromorphicConnectionModuli §3.2. Flatness by itself does not supply preservation. Then apply NonlinearConnections §1.6 to (π,h,ω) and obtain the closed total form Ω(v,w) = ω(v − h(dπv), w − h(dπw)), its kernel and transport laws. Identify this form with the classical family, rather than introducing a second Hamiltonian object. A Darboux/time chart and local exactness give the downstream expression dq ∧ dp + dH ∧ dt. (I23, Definition 11.4 and Corollary 11.8.)",
+      "original_api_names": [
+        "closedTotalSymplecticFormLaw1",
+        "closedTotalSymplecticFormLaw2",
+        "closedTotalSymplecticFormLaw3",
+        "closedTotalSymplecticFormLaw4"
+      ],
+      "current_api_names": [
+        "closedTotalSymplecticFormApplicationLaw1",
+        "closedTotalSymplecticFormApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "closedTotalSymplecticFormCheck1",
+        "closedTotalSymplecticFormCheck2",
+        "closedTotalSymplecticFormCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "3.4",
+      "original_title": "Choice independence and genuine parameter changes",
+      "current_title": "Coherent restriction of the general construction",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/3.3",
+        "MeromorphicConnectionModuli/3.4"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Use MeromorphicConnectionModuli §§3.3–3.4 to identify all objects in Layers 1–3 as the classical restriction of one construction, with coherent presentation, gauge and admissible base-change comparisons. Verify the cocycle diagrams for the classical markings and time slices. Changes of labels, determinant or stability chamber remain the explicitly permitted morphisms or correspondences, with stated domains. A later coordinate dictionary must commute with this construction; it is not a new definition of the dynamics.",
+      "original_api_names": [],
+      "current_api_names": [
+        "presentationNaturalityApplicationLaw1",
+        "presentationNaturalityApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "4.1",
+      "original_title": "Sectorial local systems and ramified analytic descent",
+      "current_title": "Sectorial local systems and ramified analytic descent",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Construct the analytic classification of the permitted local meromorphic connections by formal graded data, sectorial solutions and Stokes transition maps, retaining resonant logarithmic lattices and flags. Prove sectorial existence, overlap uniqueness, cocycle identities and analytic dependence on the admissible time parameters. At a ramified point perform the construction on the finite cover and prove equivariant descent, including the deck permutation of the exponential factors. A formal Laurent-series classification alone does not prove these analytic assertions. (I23, §9, Theorem 9.7 and Corollary 9.11; BOA01, §§3–6; HEU10, §2; BY15, Remark 3 and Definitions 7 and 13.)",
+      "original_api_names": [
+        "sectorialStokesDescentLaw1",
+        "sectorialStokesDescentLaw2",
+        "sectorialStokesDescentLaw3",
+        "sectorialStokesDescentLaw4"
+      ],
+      "current_api_names": [
+        "sectorialStokesDescentLaw1",
+        "sectorialStokesDescentLaw2",
+        "sectorialStokesDescentLaw3",
+        "sectorialStokesDescentLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "sectorialStokesDescentCheck1",
+        "sectorialStokesDescentCheck2",
+        "sectorialStokesDescentCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "4.2",
+      "original_title": "The Betti family and complete transport",
+      "current_title": "The Betti family and complete transport",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/4.1"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "For the regular-singular subcategory, use MeromorphicConnectionModuli §4.1 and verify that its marked Betti family agrees with this target. The genuinely irregular and ramified transport extensions remain the scoped obligations below.\n\nConstruct the generalized monodromy groupoid by gluing the local data of §4.1 with the global local system on the punctured curve. Keep the enriched groupoid with logarithmic lattices and flags distinct from the ordinary affine character quotient obtained by forgetting those decorations. In the ordinary quotient impose the closed spectral-invariant and determinant constraints, and retain the exponent parameter θ as a separate fiber-product coordinate. At resonance do not fix a single nonclosed Jordan conjugacy class: scalar and allowed unipotent strata with the prescribed spectrum must remain present. Construct locally constant transport along admissible marked deformations, including changes of Stokes-sector presentations. Prove composition and inverse laws and completeness along every compact path in Bθ. A singular character fiber is permitted; transport is defined by the groupoid/topological construction, not by an assumed smooth tangent splitting there. (VDPS09, §§1–3; BOA14, §10, Theorem 10.2; BY15, Proposition 19, Theorem 21 and Corollary 22.)\n\nBOA14's cited family-transport theorem has untwisted scope. Extend its isotopy construction to the rank-two ramified objects of BY15 by retaining the exponential covering, grading and deck action, constructing deck-compatible equivalences of the Stokes groupoids, and descending the framing action and closed spectral constraints. Prove independence, composition and homotopy compatibility before concatenating local products along a compact path. BY15's quasi-Hamiltonian/Poisson theorem by itself is not this family-transport theorem.",
+      "original_api_names": [
+        "completeBettiTransportLaw1",
+        "completeBettiTransportLaw2",
+        "completeBettiTransportLaw3",
+        "completeBettiTransportLaw4"
+      ],
+      "current_api_names": [
+        "completeBettiTransportApplicationLaw1",
+        "completeBettiTransportApplicationLaw2",
+        "completeBettiTransportApplicationLaw3",
+        "completeBettiTransportApplicationLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "completeBettiTransportCheck1",
+        "completeBettiTransportCheck2",
+        "completeBettiTransportCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "4.3",
+      "original_title": "Riemann–Hilbert and compatibility on the whole phase space",
+      "current_title": "Riemann–Hilbert and compatibility on the whole phase space",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/4.1"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "The regular-singular RH map and its all-point horizontal compatibility are imported through MeromorphicConnectionModuli §4.1, after identifying the same parabolic moduli and residue-parameter target. This import does not discharge the irregular local reconstruction.\n\nConstruct RHθ: Mθᵃⁿ → Rθ over Bθ by the analytic classification and prove that it is holomorphic. Prove that it sends every horizontal trajectory of §3.1 to the transport of §4.2, including trajectories inside resonance, reducible and exceptional loci. On the stated stable irreducible/nonresonant open locus prove the inverse comparison; elsewhere record the actual fibers and decoration data rather than asserting injectivity. Compare the integrable-extension construction with the local analytic reconstruction, and descend from universal-object covers. (IIS06, Theorems 4.10–4.12; IS12, Theorem 5.1; I23, §9 and §11.)\n\nThe theorem's all-strata scope is a construction target: the generic unramified theorem is one of its inputs, not a replacement for the missing resonant or ramified comparison. No scalar equation is used in the extension across these loci.",
+      "original_api_names": [
+        "fullPhaseRiemannHilbertLaw1",
+        "fullPhaseRiemannHilbertLaw2",
+        "fullPhaseRiemannHilbertLaw3"
+      ],
+      "current_api_names": [
+        "fullPhaseRiemannHilbertApplicationLaw1",
+        "fullPhaseRiemannHilbertApplicationLaw2",
+        "fullPhaseRiemannHilbertApplicationLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "fullPhaseRiemannHilbertCheck1",
+        "fullPhaseRiemannHilbertCheck2",
+        "fullPhaseRiemannHilbertCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "4.4",
+      "original_title": "Proper comparison for the full classical input class",
+      "current_title": "Proper comparison for the full classical input class",
+      "general_proof_destinations": [
+        "MeromorphicConnectionModuli/4.2"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "On the four-logarithmic-point branch, verify 2·4 − 2·2 − 2 = 2 > 0 and the fixed-determinant/marking comparison, then apply MeromorphicConnectionModuli §4.2 (I13, Theorem 2.2). The source retains the exponent parameters by a fiber product. No general irregular properness is inferred from this regular-singular theorem; the all-classical extension below remains an owned target.\n\nFor each admitted degree-four rank-two input and every allowed exponent parameter, prove that RHθ is proper as a map of the whole time family, with the exponent lift retained in its target, on the full stable moduli space of §2.1. Establish the corresponding family statement on admitted parameter charts; properness of each fixed-time map is not sufficient. The target has the ordinary generalized character data with its fixed closed constraints; no solution-dependent open subset is removed. State surjectivity onto the realizable component separately from properness. This includes resonant logarithmic and stable reducible points and the generic ramified local structures defining the classical class. (IIS06, Definition 2.11 and Theorems 4.10–4.12; IS12, Theorem 5.1 and the scope warning of Remark 6.3; HEU10, Theorem 1.1.)\n\nThe required extension is owned here. Develop the proof through four concrete intermediate results: boundedness of local lattices uniformly over compact families of generalized characters with fixed exponent lifts; extension of the retained flags and factorized structures in a relative projective parameter space with their closed incidence relations; semistable replacement after the necessary base change and elementary modifications, followed by semistable = stable for the chosen weights and uniqueness in the separated moduli problem; and compatibility of these extensions with global gluing and the analytic moduli topology. Stability is open but is not thereby preserved by arbitrary limits. Verify that these results give compact inverse images of compact subsets, rather than merely closed fibers or pointwise solvability. A projective flag variety alone does not prove the theorem, since the underlying connection may also escape.\n\nHEU10's universal strong isomonodromic deformation gives an independent possible route to the continuation conclusion of §5.2. Such a route must establish the identification of the time bases, extension of local decorations, determinant and stability preservation, bundle-jumping compatibility, descent, and equality with §3.1. It does not by itself prove the properness required in this target. I23's global foliation theorem and IS12's generic theorem also do not discharge it. The compactness theorem remains an explicit internal proof-development task.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "5.1",
+      "original_title": "Horizontal germs and local analytic solution theory",
+      "current_title": "Classical horizontal germs from general local theory",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.3"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply NonlinearConnections §1.3 to the actual holomorphic flat splitting of §§3.1–3.2. A geometric Painlevé germ is its native horizontal-section germ with specified initial point; the evaluation bijection, local uniqueness and holomorphic parameter dependence are the general outputs. Verify that the admitted parameter charts of Layer 1 meet the joint-holomorphic hypotheses. The former named holomorphic-horizontal-lifts gap is now the explicit general proof target NonlinearConnections §1.3, not an unexpanded assumption of this application.",
+      "original_api_names": [
+        "horizontalSolutionGermLaw1",
+        "horizontalSolutionGermLaw2",
+        "horizontalSolutionGermLaw3",
+        "horizontalSolutionGermLaw4"
+      ],
+      "current_api_names": [
+        "horizontalSolutionGermApplicationLaw1",
+        "horizontalSolutionGermApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "horizontalSolutionGermCheck1",
+        "horizontalSolutionGermCheck2",
+        "horizontalSolutionGermCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "5.2",
+      "original_title": "Proper semiconjugacy prevents finite-time escape",
+      "current_title": "Classical completeness by proper semiconjugacy",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.2",
+        "NonlinearConnections/1.4"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply NonlinearConnections §1.4, whose continuous-time local ODE and compact-extension floor is §1.2, to the constructed phase family. Verify the complete target transport of §4.2, the actual partial-lift compatibility of §4.3 at every permitted point, and the relative proper map of §4.4. Obtain a unique horizontal lift for every admitted θ, initial time b₀, point x₀ ∈ Mθ,b₀ and compact piecewise C¹ path in Bθ beginning at b₀. The target may be singular, and exceptional fibers are retained. Neither a local inverse of RH nor properness of π is required. The general compact-containment proof lives entirely in NonlinearConnections; this target owns the classical hypothesis checks and the resulting geometric Painlevé property. Poles of a chosen scalar observable do not change the admitted base.",
+      "original_api_names": [],
+      "current_api_names": [
+        "properSemiconjugacyContinuationApplicationLaw1",
+        "properSemiconjugacyContinuationApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "properSemiconjugacyContinuationCheck1",
+        "properSemiconjugacyContinuationCheck2",
+        "properSemiconjugacyContinuationCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "5.3",
+      "original_title": "Transport, universal-cover sections and descent",
+      "current_title": "Classical transport, universal-cover sections and descent",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.5",
+        "NonlinearConnections/1.6"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply NonlinearConnections §1.5 to the flatness of §3.2 and completeness of §5.2. Its construction produces the actual endpoint transport, fundamental-groupoid action and universal-cover horizontal section through every classical initial point. Identify this action with the constructed connection rather than assuming a monodromy action as input. Use §3.3 and NonlinearConnections §1.6 for symplectic preservation. Descend precisely for initial points fixed by the resulting deck/monodromy action; completeness alone does not imply single-valuedness on Bθ.",
+      "original_api_names": [
+        "universalCoverHorizontalSectionLaw1",
+        "universalCoverHorizontalSectionLaw2",
+        "universalCoverHorizontalSectionLaw3"
+      ],
+      "current_api_names": [
+        "universalCoverHorizontalSectionApplicationLaw1",
+        "universalCoverHorizontalSectionApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "universalCoverHorizontalSectionCheck1",
+        "universalCoverHorizontalSectionCheck2",
+        "universalCoverHorizontalSectionCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "5.4",
+      "original_title": "Admissible observables",
+      "current_title": "Classical observable adapters",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.7"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Use the observable notion of NonlinearConnections §1.7 on the classical phase family. Own the construction of each claimed classical morphism to ℙ¹, or its stated rational domain and resolution/lift comparison. Prove defined pullback along every claimed solution stratum and exclude an identically infinite pullback before calling the result a scalar meromorphic function. Observers, their domains and normalization remain explicit data; the generic evaluation theorem does not supply these application-specific verifications.",
+      "original_api_names": [
+        "admissiblePainleveObservableLaw1",
+        "admissiblePainleveObservableLaw2",
+        "admissiblePainleveObservableLaw3",
+        "admissiblePainleveObservableLaw4"
+      ],
+      "current_api_names": [
+        "admissiblePainleveObservableApplicationLaw1",
+        "admissiblePainleveObservableApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "admissiblePainleveObservableCheck1",
+        "admissiblePainleveObservableCheck2",
+        "admissiblePainleveObservableCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "5.5",
+      "original_title": "Scalar meromorphic continuation",
+      "current_title": "Meromorphic evaluation on the classical time curve",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.7"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Verify the one-dimensional time conclusion of §1.4 and apply NonlinearConnections §1.7 to §§5.3–5.4. Every claimed non-identically-infinite scalar evaluation is meromorphic on the universal cover of the admitted time curve, with finite-order poles at its interior scalar singularities. Observer resolution and non-indeterminacy for every claimed stratum remain the application obligations of §5.4. The single-valued descent criterion is separate. This transfers one intrinsic theorem to the coordinate comparisons, rather than proving six scalar continuation theorems.",
+      "original_api_names": [],
+      "current_api_names": [
+        "scalarMeromorphicContinuationApplicationLaw1"
+      ],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "6.1",
+      "original_title": "Additive Okamoto–Painlevé pairs",
+      "current_title": "Additive Okamoto–Painlevé pairs",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Define the comparison groupoid of smooth projective rational surfaces S with a nonzero effective anticanonical divisor Y, satisfying Y·Yᵢ = 0 for every irreducible component, with D = Y_red a simple normal-crossing divisor. Require additive type, expressed by the additive identity component of Pic⁰(Y), and nonfibered type: no elliptic fibration has a fiber nY with n ≥ 1. Retain markings when a root basis or normalized time is used. Construct the relative versions of these conditions. (STT02, Definitions 1.1 and 1.3, Proposition 1.2 and Tables 2–3.)",
+      "original_api_names": [
+        "additiveOkamotoPairLaw1",
+        "additiveOkamotoPairLaw2",
+        "additiveOkamotoPairLaw3",
+        "additiveOkamotoPairLaw4"
+      ],
+      "current_api_names": [
+        "additiveOkamotoPairLaw1",
+        "additiveOkamotoPairLaw2",
+        "additiveOkamotoPairLaw3",
+        "additiveOkamotoPairLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "additiveOkamotoPairCheck1",
+        "additiveOkamotoPairCheck2",
+        "additiveOkamotoPairCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "6.2",
+      "original_title": "Compactification and the eight boundary types",
+      "current_title": "Compactification and the eight boundary types",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Construct a compactification of the degree-four connection moduli family with the pair structure of §6.1, after the stated marking/base changes, and prove that its complement is the full phase family. Prove the extension and comparison of the symplectic form and time distribution, including exceptional curves and nontrivial bundle charts. Classify the additive normal-crossing boundary types as D₄, D₅, D₆, D₇, D₈, E₆, E₇ and E₈. These are affine boundary diagrams. (STT02, Proposition 1.2 and Tables 2–3; VDPS09, introduction and Table 1; IIS06, §10 for the fully established PVI comparison.)\n\nThe all-profile comparison is a construction and proof target. VDPS09's introductory conjectural global comparison is not used as an established theorem. Prove overlap identifications, coverage and the extension at the omitted charts before asserting a global isomorphism. The compactification is not used to bypass §4.4 or to infer completeness merely from existence of a foliation.",
+      "original_api_names": [
+        "phaseSurfaceComparisonLaw1",
+        "phaseSurfaceComparisonLaw2",
+        "phaseSurfaceComparisonLaw3"
+      ],
+      "current_api_names": [
+        "phaseSurfaceComparisonLaw1",
+        "phaseSurfaceComparisonLaw2",
+        "phaseSurfaceComparisonLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "phaseSurfaceComparisonCheck1",
+        "phaseSurfaceComparisonCheck2",
+        "phaseSurfaceComparisonCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "6.3",
+      "original_title": "Intrinsic comparison of the time line",
+      "current_title": "Intrinsic comparison of the time line",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Let F = Θ_S(−log D) and N_D = O_S(D)/O_S. Construct L = H⁰(D,F ⊗ N_D), prove that it is one-dimensional for these pairs, and construct its injection into local cohomology. Establish the family/base-change theorem for L and compare its Kodaira–Spencer image with the time direction of §3.1. Prove the connecting-map/intersection-matrix identity intrinsically; do not repeat a different coordinate computation for each boundary graph. (TER02, Theorem 2.1 and Proposition 2.1; STT02, Theorem 3.1.)\n\nDo not assert equality with the entire local-cohomology space as a standing premise: TER02 Conjecture 2.1 and the restricted results of ST04 Appendix A have different scope. A line is not a distinguished nonzero vector; a normalized time supplies a generator. Prove equality of the lifted distributions by the deformation comparison and uniqueness on the prescribed algebraic complement.",
+      "original_api_names": [
+        "firstBoundaryTimeLineLaw1",
+        "firstBoundaryTimeLineLaw2",
+        "firstBoundaryTimeLineLaw3"
+      ],
+      "current_api_names": [
+        "firstBoundaryTimeLineLaw1",
+        "firstBoundaryTimeLineLaw2",
+        "firstBoundaryTimeLineLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "firstBoundaryTimeLineCheck1",
+        "firstBoundaryTimeLineCheck2",
+        "firstBoundaryTimeLineCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "7.1",
+      "original_title": "Functors on decorated connections",
+      "current_title": "Functors on decorated connections",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Construct elementary modifications along an invariant local flag, tensor product with an admitted rank-one connection, duality and relabeling as functors between the actual decorated moduli problems. Specify the new determinant, exponent and stability data and the locus on which the transformed object is stable. Use the kernel construction for a modification, its induced connection, and the inverse modification; retain the comparison arrows. Extend these functors to strong integrable families by preservation of the allowed pole filtration and kernel lattices. (IIS06, Definition 3.5 and §7; I23, §§2–4 and Definition 10.1.)",
+      "original_api_names": [
+        "decoratedConnectionTransformationsLaw1",
+        "decoratedConnectionTransformationsLaw2",
+        "decoratedConnectionTransformationsLaw3",
+        "decoratedConnectionTransformationsLaw4"
+      ],
+      "current_api_names": [
+        "decoratedConnectionTransformationsLaw1",
+        "decoratedConnectionTransformationsLaw2",
+        "decoratedConnectionTransformationsLaw3",
+        "decoratedConnectionTransformationsLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "decoratedConnectionTransformationsCheck1",
+        "decoratedConnectionTransformationsCheck2",
+        "decoratedConnectionTransformationsCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "7.2",
+      "original_title": "Horizontal and symplectic transformation laws",
+      "current_title": "Horizontal and symplectic transformation laws",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Prove that each admitted transformation intertwines h by applying the uniqueness of strong extensions to its transformed family. Prove the transformation law for ω by the induced map of deformation complexes and trace pairing. Construct the resulting action groupoid on the parameterized moduli family, and establish relations by natural isomorphisms of the functors. On a marked surface compare its action on Pic(S) with the corresponding integral root reflections and diagram automorphisms. State the actual symmetry root lattice and its parameter hyperplanes separately from the boundary root diagram. (IIS06, Theorem 7.4 and Theorem 10.13 for PVI; STT02, Tables 2–3 and the marked deformation construction.)\n\nThe functors in §7.1 are not assumed to generate the full affine Weyl group. Construct the additional reflections on the moduli of marked pairs, identify the induced birational correspondence of connection moduli through §6.2, and prove its horizontal and symplectic extension on the claimed domain. The central PVI reflection is a required test: it is not generated merely by the local gauge modifications listed in §7.1. IIS06 Remark 7.5(2) describes a Fourier-transform realization; a Fourier–Laplace or middle-convolution implementation would likewise require its own functor and strong-extension comparison. The marked-surface construction is the specified route here. The PVI theorem is not cited as a theorem for every profile. Verify the actual reflection and Coxeter relations, effective-locus conditions and extension across chart complements before deriving rational Bäcklund formulas in §9.4. An identity of rational maps on a dense open set must be upgraded before claiming an everywhere defined automorphism.",
+      "original_api_names": [
+        "horizontalSymplecticReflectionActionLaw1",
+        "horizontalSymplecticReflectionActionLaw2",
+        "horizontalSymplecticReflectionActionLaw3"
+      ],
+      "current_api_names": [
+        "horizontalSymplecticReflectionActionLaw1",
+        "horizontalSymplecticReflectionActionLaw2",
+        "horizontalSymplecticReflectionActionLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "horizontalSymplecticReflectionActionCheck1",
+        "horizontalSymplecticReflectionActionCheck2",
+        "horizontalSymplecticReflectionActionCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "7.3",
+      "original_title": "Invariant rational curves and Riccati dynamics",
+      "current_title": "Invariant rational curves and Riccati dynamics",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "For the admitted nonfibered additive pair, construct the local family of an interior smooth rational curve C with C² = −2. Prove invariance under the time distribution using the logarithmic deformation sequence. Retain the étale or finite base change needed to continue that family; descent to the original base requires its own monodromy check. On the resulting relative ℙ¹-bundle, identify the restricted connection as a projective linear connection, using H⁰(ℙ¹,Tℙ¹) ≅ sl₂. The coordinate lemma then has q′ = a(t)q² + b(t)q + c(t). A linear rank-two lift is asserted locally, or globally only with its lifting obstruction resolved. (ST04, §2.4, Proposition 2.1, Remark 2.4 and Definition 2.3.) The PVI comparison with the Gauss equation is IIS06 Theorem 5.15; its Theorem 5.16 assumes analytic Painlevé property and is not used as a premise of this independent geometric construction.\n\nClassify these interior nodal configurations by the boundary intersection lattice under ST04 Theorem 3.1's hypotheses. Deduce its nonexistence statement for the E₈, D₇ and D₈ boundary types. Linearization gives the relevant classical special-function families after the coordinate comparisons; the parameter restrictions and normalizations remain part of those lemmas.",
+      "original_api_names": [
+        "invariantCurveRiccatiReductionLaw1",
+        "invariantCurveRiccatiReductionLaw2",
+        "invariantCurveRiccatiReductionLaw3",
+        "invariantCurveRiccatiReductionLaw4"
+      ],
+      "current_api_names": [
+        "invariantCurveRiccatiReductionLaw1",
+        "invariantCurveRiccatiReductionLaw2",
+        "invariantCurveRiccatiReductionLaw3",
+        "invariantCurveRiccatiReductionLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "invariantCurveRiccatiReductionCheck1",
+        "invariantCurveRiccatiReductionCheck2",
+        "invariantCurveRiccatiReductionCheck3",
+        "invariantCurveRiccatiReductionCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "8.1",
+      "original_title": "The holomorphic determinant-family contract",
+      "current_title": "Importing the complex determinant-line construction",
+      "general_proof_destinations": [
+        "AnalyticRHPAndDeterminants/1.1"
+      ],
+      "current_role": "import-binding",
+      "remaining_application_contract": "Use AnalyticRHPAndDeterminants §1.1 for the holomorphic complex index-zero determinant line, its canonical section, finite-dimensional stabilizations and coherent comparison maps. The former named gap is expanded there as a proof target proposed for HeegaardFloerPartII F0.0C; no accepted upstream implementation is asserted. Retain L_T = det(ker T)* ⊗ det(coker T) and the same native complex operator carriers. This target fixes the convention and the import interface used in §8.2; §8.2 must construct the actual operator family and verify index zero and holomorphic dependence. The generic construction is not repeated inside Painlevé, and a real orientation line is not substituted for it.",
+      "original_api_names": [
+        "complexDeterminantFamilyAdapterLaw1",
+        "complexDeterminantFamilyAdapterLaw2",
+        "complexDeterminantFamilyAdapterLaw3",
+        "complexDeterminantFamilyAdapterLaw4"
+      ],
+      "current_api_names": [
+        "complexDeterminantFamilyAdapterApplicationLaw1",
+        "complexDeterminantFamilyAdapterApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "complexDeterminantFamilyAdapterCheck1",
+        "complexDeterminantFamilyAdapterCheck2",
+        "complexDeterminantFamilyAdapterCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "8.2",
+      "original_title": "An index-zero RHP realization and descent",
+      "current_title": "An index-zero RHP realization and descent",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Construct an analytic RHP chart from the decorated connection family of Layers 1–3 and the analytic comparison of §§4.1–4.3. Retain the reference bundle or modification, contours, local lattices, branches, framings and normalization in its marking data. Construct the associated Fredholm operator and prove its index zero; the assertion is not a field added to every connection by fiat. For the initial closed-contour model use a holomorphic invertible jump symbol in a fixed contour neighborhood and zero determinant winding. Compare the solvable normalized RHP with the corresponding marked connection and pull back §8.1's line and section. Extend this construction to the analytic sectorial models for every ramified and resonant stratum retained by §§1.1–1.3, with explicit adapters. Proving these adapters is part of the construction; neither cited generic source is claimed to supply all of them. (BERT17, §1 and Theorem 2.2; MAL04, §2.)\n\nThe auxiliary bundle matters. On ℙ¹, rank E = 2 and deg E = d give χ(E(−1)) = d and χ(E(k)) = d + 2k + 2. Thus a degree-minus-one phase object does not acquire an index-zero complex by the unexplained choice E(−1); no integral common line twist has Euler characteristic zero when d is odd. Construct the needed normalized index-zero complex or modification and its comparison with the original connection. Malgrange's degree-zero sewn-bundle construction does not remove this obligation.\n\nKeep the reference bundle and auxiliary modification in the input marking. Unit transition factors for line and section are asserted only for proved equivalences, with any added auxiliary complex everywhere acyclic. An arbitrary change of reference bundle or modification can change the zero divisor. Treat it as a different normalized problem, and construct the relative determinant factor or meromorphic transformation with its divisor instead of declaring the two sections equal up to a unit. BERT17's factorization comparisons do not supply invariance under unrestricted bundle modification.",
+      "original_api_names": [
+        "isomonodromicTauLineLaw1",
+        "isomonodromicTauLineLaw2",
+        "isomonodromicTauLineLaw3",
+        "isomonodromicTauLineLaw4"
+      ],
+      "current_api_names": [
+        "isomonodromicTauLineLaw1",
+        "isomonodromicTauLineLaw2",
+        "isomonodromicTauLineLaw3",
+        "isomonodromicTauLineLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "isomonodromicTauLineCheck1",
+        "isomonodromicTauLineCheck2",
+        "isomonodromicTauLineCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "8.3",
+      "original_title": "The divisor and corrected variational comparisons",
+      "current_title": "The divisor and corrected variational comparisons",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Prove that the determinant section vanishes precisely where its normalized RHP is not solvable. On a reduced connected smooth chart where it is not identically zero, construct its effective Cartier divisor; obtain a global divisor only through the line comparisons. This is the failure locus of the selected RHP normalization, not a declaration that the intrinsic phase space or horizontal section ceases to exist. Establish the local trace identity d log det(I − K) = −Tr((I − K)⁻¹dK) on the invertible locus of a holomorphic trace-class family, then derive the integrable-kernel variational formula and its frame-change law. (BERT17, Theorem 2.2, Proposition 2.3, formula (3.6), Theorem 3.3 and §3.1.2.)\n\nCompare with the JMU form only under the stated formal-normalization hypotheses: the generic unramified diagonalizable-leading-term and logarithmic nonresonance locus of BERT10 Assumption 3.1 and §5.1, Proposition 5.1. Use BERT16 Definition 2.1 for the corrected sign, Theorem 2.1 for vertex curvature, and Theorem 2.2, which replaces BERT10 Theorem 5.1. The corrected local formula uses ω_M − θ_V, with dθ_V = η_V on the monodromy parameters. Along fixed-monodromy time directions θ_V has no component; factorization/frame corrections still have to be matched. Neither the raw Malgrange form nor its original modification is asserted closed on the full monodromy-and-time space. Removing contour vertices requires a proved sewing comparison.",
+      "original_api_names": [
+        "tauDivisorAndVariationalComparisonLaw1",
+        "tauDivisorAndVariationalComparisonLaw2",
+        "tauDivisorAndVariationalComparisonLaw3"
+      ],
+      "current_api_names": [
+        "tauDivisorAndVariationalComparisonLaw1",
+        "tauDivisorAndVariationalComparisonLaw2",
+        "tauDivisorAndVariationalComparisonLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "tauDivisorAndVariationalComparisonCheck1",
+        "tauDivisorAndVariationalComparisonCheck2",
+        "tauDivisorAndVariationalComparisonCheck3",
+        "tauDivisorAndVariationalComparisonCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "8.4",
+      "original_title": "Hamiltonians, frames and scalar normalization",
+      "current_title": "Hamiltonians, frames and scalar normalization",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "On the JMU comparison locus of §8.3, choose a time coordinate and symplectic chart of the already constructed dynamics and derive the relation between the selected determinant-frame logarithmic derivative and the local Hamiltonian. Prove the exact coefficient and gauge, factorization and time-only correction terms from §8.3; do not silently identify different Hamiltonian conventions. A local primitive supplied by a symplectic chart is not a canonical function on the whole phase family. This Hamiltonian/JMU identity is restricted to that locus, and does not assert an additional ramified/resonant identity. (MAL04, Theorem 5.12 in its logarithmic Schlesinger scope; BERT10, §5.1, Proposition 5.1, with BERT16.)\n\nFor every constructed marked RHP chart, including a ramified or resonant chart after its §8.2 adapter is proved, retain instead the general determinant-frame identity of §8.3, locally d log det(I − K) = −Tr((I − K)⁻¹dK) with its proved frame correction. Fix this actual logarithmic one-form and the frame prescription, then establish its scalar normalization by choosing a nonzero value in a determinant fiber at a regular base point. This normalization theorem does not require a JMU or Hamiltonian identification outside the generic comparison locus. (BERT17, Proposition 2.3 and formula (3.6).)\n\nThe differential-equation normalization is along a fixed-monodromy horizontal time leaf, away from the chosen divisor. There a closed scalar differential and a base-point value determine the representative on a simply connected domain. Any extension of this assertion to the full monodromy-and-time space must prove the required integrability after its frame corrections; simple connectedness alone does not remove curvature of a line connection.",
+      "original_api_names": [
+        "normalizedHamiltonianTauComparisonLaw1",
+        "normalizedHamiltonianTauComparisonLaw2",
+        "normalizedHamiltonianTauComparisonLaw3"
+      ],
+      "current_api_names": [
+        "normalizedHamiltonianTauComparisonLaw1",
+        "normalizedHamiltonianTauComparisonLaw2",
+        "normalizedHamiltonianTauComparisonLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "normalizedHamiltonianTauComparisonCheck1",
+        "normalizedHamiltonianTauComparisonCheck2",
+        "normalizedHamiltonianTauComparisonCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "9.1",
+      "original_title": "The common first-jet comparison",
+      "current_title": "Applying the intrinsic first-jet theorem",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.8"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Use NonlinearConnections §1.8, formulated for an observer bundle and its first-jet bundle. For the classical time curve and phase surface, supply a local observer and prove that the induced jet map is an isomorphism on the stated domain. Apply the general equivalence between horizontal germs and scalar second-order germs on that domain. In a time/phase chart, write h(∂t) = ∂t + A∂q + B∂p and J(t,q,p) = (t,q,A); if p = P(t,q,v) is its genuine inverse, the coordinate comparison is q″ = (A_t + A A_q + B A_p)(t,q,P(t,q,q′)). The chain-rule theorem and intrinsic jet construction belong to the general framework. A_p ≠ 0 gives a local inverse only. Individual classical chart constructions belong to §9.2; meromorphic continuation additionally uses §5.5 and is not a hypothesis of the jet theorem.",
+      "original_api_names": [
+        "firstJetScalarComparisonLaw1",
+        "firstJetScalarComparisonLaw2",
+        "firstJetScalarComparisonLaw3",
+        "firstJetScalarComparisonLaw4"
+      ],
+      "current_api_names": [
+        "firstJetScalarComparisonApplicationLaw1",
+        "firstJetScalarComparisonApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "firstJetScalarComparisonCheck1",
+        "firstJetScalarComparisonCheck2",
+        "firstJetScalarComparisonCheck3",
+        "firstJetScalarComparisonCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "9.2",
+      "original_title": "Exhaustive presentation and equation comparisons",
+      "current_title": "Exhaustive presentation and equation comparisons",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "For every profile in §1.4 construct a concrete time/Darboux or equivalent symplectic chart from the connection moduli, with its inverse on its actual image. Identify h in this chart by the strong integrable extension of §3.1, apply §9.1, and prove the parameter and time-substitution dictionary to the standard equation below, including the required marking covers. The required comparison records the chosen local frames, the determinant convention, the chart domain, the momentum inverse, every denominator, and the omitted loci. Coverage of the full moduli space is the overlap theorem, not the claim that one rational chart covers it. Re-derive the scalar expression from the compatible system; the source corrections in §9.4 are part of the comparison. (VDPS09, §2.2, Table 1 and §4; IIS06, Theorems 10.6, 10.10 and 10.13; DLMF, §32.2(i), equations 32.2.1–32.2.6.)\n\nIn the following output table, slopes are projective Katz invariants and their order is forgotten only for the classification table; an omitted pole is written “—”. All seventeen ordered profiles are recovered with the label-assignment and reindexing comparisons of §1.4. The number of external parameters is the dimension of the generic exponent family, not the number of initial conditions. Boundary diagrams are affine.\n\n| Slopes at 0, 1, ∞, t | Boundary type | External dimension | Displayed realization and exact locator |\n|---|---|---:|---|\n| 0, 0, 0, 0 | D₄ | 4 | PVI; IIS06 §10, Theorems 10.6 and 10.10 |\n| 0, 0, 1, — | D₅ | 3 | PV; VDPS09 §4.3, equations (1)–(5) |\n| 0, 0, 1/2, — | D₆ | 2 | degenerate PV; VDPS09 §4.4, equations (6)–(11) |\n| 1, —, 1, — | D₆ | 2 | PIII(D₆); VDPS09 §4.5, equations (12)–(16) |\n| 1/2, —, 1, — | D₇ | 1 | PIII(D₇); VDPS09 §4.6, equations (17)–(21) |\n| 1/2, —, 1/2, — | D₈ | 0 | PIII(D₈); VDPS09 §4.7, equations (22)–(26) |\n| 0, —, 2, — | E₆ | 2 | PIV; VDPS09 §4.8, equations (27)–(31) |\n| 0, —, 3/2, — | E₇ | 1 | Flaschka–Newell realization; VDPS09 §4.9, equations (32)–(36); its immediate scalar coordinate is P34 |\n| —, —, 3, — | E₇ | 1 | Jimbo–Miwa realization of PII; VDPS09 §4.10, equations (37)–(41) |\n| —, —, 5/2, — | E₈ | 0 | PI; VDPS09 §4.11, equations (42)–(47) |\n\nProve the actual substitutions and admissible inverse domains relating the Flaschka–Newell scalar coordinate to PII and degenerate PV to PIII(D₆). Two rows sharing a boundary type are not declared identical decorated moduli problems. In particular, a scalar substitution from degenerate PV to PIII does not by itself identify their isomonodromic families. (AHT17, introduction and §§2–3.)\n\nThe six standard scalar conclusions, in the DLMF normalization and on their ordinary differential-equation domains, are:\n\n| Equation | Coordinate expression |\n|---|---|\n| PI | q″ = 6q² + t |\n| PII | q″ = 2q³ + tq + α |\n| PIII | q″ = q′²/q − q′/t + (αq² + β)/t + γq³ + δ/q |\n| PIV | q″ = q′²/(2q) + 3q³/2 + 4tq² + 2(t² − α)q + β/q |\n| PV | q″ = (1/(2q) + 1/(q − 1))q′² − q′/t + (q − 1)²(αq + β/q)/t² + γq/t + δq(q + 1)/(q − 1) |\n| PVI | q″ = (1/q + 1/(q − 1) + 1/(q − t))q′²/2 − (1/t + 1/(t − 1) + 1/(q − t))q′ + q(q − 1)(q − t)[α + βt/q² + γ(t − 1)/(q − 1)² + δt(t − 1)/(q − t)²]/[t²(t − 1)²] |\n\nEach row is a theorem about a chart and a specified parameter map. The symbols α, β, γ, δ are local to that row. The following explicit dictionaries fix the intended normalization; their admissible inverse charts and momentum transformations are part of the proof.\n\n| Source variables and parameters | Standard variables and coefficients |\n|---|---|\n| IIS06 (1)–(2), with 2κ₀ + κ₁ + κ₂ + κ₃ + κ₄ = 1 | PVI: α = κ₄²/2, β = −κ₁²/2, γ = κ₂²/2, δ = (1 − κ₃²)/2 |\n| VDPS09 PV system (2)/(5), with the scalar correction in §9.4 | T = t, Q = q/(q − 1); (α,β,γ,δ) = (θ₁²/2,−θ₀²/2,1 − θ∞,−1/2) |\n| VDPS09 degenerate PV system (8) | T = t², Q = q/(q − 1); (α,β,γ,δ) = (θ₁²/2,−θ₀²/2,−2,0) |\n| VDPS09 PIII(D₆), (14) | T = t, Q = q; (α,β,γ,δ) = (4(θ∞ + 1),−4θ₀,4,−4) |\n| VDPS09 PIII(D₇), (19) | t = T², Q(T) = Tq(T²); (α,β,γ,δ) = (4(θ∞ + 1),−8,4,0) |\n| VDPS09 PIII(D₈), (24) | t = T², Q(T) = q(T²)/T; (α,β,γ,δ) = (8,−8,0,0) |\n| VDPS09 PIV, (29) | t = 2T, Q(T) = 2q(2T); α = −θ∞ − 1, β = −2θ₀² |\n| VDPS09 PII Jimbo–Miwa, (39) | T = t, Q = q; α = (θ∞ + 1)/2 |\n| VDPS09 PI, (45), choose c⁵ = 2 | T = ct, Q = c⁻²q; Q″ = 6Q² + T |\n\nFor the Flaschka–Newell coordinate (34), choose c³ = 2 and set T = −ct, U(T) = cq(t). Then U″ = U′²/(2U) + 2U² − TU − θ₀²/(2U). Retain a chosen exponent sign a = ±θ₀. On U ≠ 0, Q = (U′ − a)/(2U) is the PII variable with α = a − 1/2; conversely U = Q′ + Q² + T/2. The exceptional branch U = 0, a = 0 cannot be reconstructed by division and keeps its full phase data. The square-time comparisons are local biholomorphisms on their nonzero domains or comparisons on the indicated covers; they are not global changes of coordinate on the same punctured line.",
+      "original_api_names": [
+        "classicalPresentationDictionariesLaw1",
+        "classicalPresentationDictionariesLaw2",
+        "classicalPresentationDictionariesLaw3",
+        "classicalPresentationDictionariesLaw4"
+      ],
+      "current_api_names": [
+        "classicalPresentationDictionariesLaw1",
+        "classicalPresentationDictionariesLaw2",
+        "classicalPresentationDictionariesLaw3",
+        "classicalPresentationDictionariesLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "classicalPresentationDictionariesCheck1",
+        "classicalPresentationDictionariesCheck2",
+        "classicalPresentationDictionariesCheck3",
+        "classicalPresentationDictionariesCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "9.3",
+      "original_title": "Complete coefficient-boundary coverage",
+      "current_title": "Complete coefficient-boundary coverage",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Classify all coefficient tuples of the standard PIII and PV displays by admissible nonzero scalings and inversions, proving their exact domains and inverse substitutions. The primitive Painlevé profiles and the elementary boundary equations are different outputs; a leading irregular coefficient zero is not a point inside a stratum defined by its nonvanishing. (FM19, §1.1 and equation (2); DIL21, §§5.2–5.3 and Appendix B.3; DLMF, equations 32.9.6 and 32.9.12.)\n\n| Display | Coefficient condition | Comparison target |\n|---|---|---|\n| PIII | γδ ≠ 0 | D₆ profile |\n| PIII | γ = 0 and αδ ≠ 0, or δ = 0 and βγ ≠ 0 | D₇ profile, with the inversion comparison between the two orientations |\n| PIII | γ = δ = 0 and αβ ≠ 0 | D₈ profile |\n| PIII | α = γ = 0, or β = δ = 0 | quadrature/elementary boundary |\n| PV | δ ≠ 0 | ordinary PV |\n| PV | δ = 0 and γ ≠ 0 | degenerate PV presentation |\n| PV | γ = δ = 0 | quadrature boundary |\n\nProve that the PIII cases cover all tuples; the two elementary alternatives may overlap and are combined into one boundary class. Derive the boundary integrations on their stated time/observer domains, with branches and integration constants retained, and compare limiting initial data when a geometric degeneration is claimed. PIII with all four coefficients zero gives q = C exp(μ log t) on a chosen cover of ℂ*, including its nonzero-solution domain. A generic such power is not a single-valued function on ℂ*. Zero/constant solutions introduced by clearing q denominators require a separate original-equation domain check. These examples prevent the primitive classification from silently losing coefficient values.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "9.4",
+      "original_title": "Hamiltonian, sigma and linear-system realizations",
+      "current_title": "Hamiltonian, sigma and linear-system realizations",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "For each admitted presentation, derive the displayed Hamiltonian system from h and ω, and derive the Lax-pair compatibility from the same strong total connection. For sigma equations, transformations and tau logarithmic derivatives, state a forward lemma and a converse only on the locus where the reconstruction has been proved. Track additive Hamiltonian functions of time, multiplicative tau normalizations, branch choices and exceptional derivatives explicitly. (DLMF, §§32.6–32.7; VDPS09, §4; IIS06, Theorem 10.13; BERT17, Proposition 2.3 and Theorem 3.3.)\n\nThe source sign comparison is itself a lemma. In VDPS09 §4.1 the displayed equations p′ = F H_q, q′ = −F H_p, with F depending only on q, have kernel form dp ∧ dq/F + dH ∧ dt. The printed minus sign in that extended form is inconsistent with those equations, including the PI instance (44), (46), (47). On F ≠ 0, set Q = q, P = p/F(q), K(Q,P,t) = −H(F(Q)P,Q,t), using the source's argument order H(p,q,t); then dQ ∧ dP + dK ∧ dt is the negative of the correct source form and gives the convention of §3.3. Verify this identity directly before importing any source Hamiltonian.\n\nVDPS09's printed PV equation (3) also disagrees with its system (2) and Hamiltonian (5). Differentiating q′ = 2p/t gives the exponent term [θ₀²(q − 1)² − θ₁²q²]/[2q(q − 1)t²], in place of the printed θ₀²/(2qt²) + θ₁²/[2(q − 1)t²]. At t = 1, q = 2, p = 0, θ₀ = 0, θ₁ = 1, θ∞ = 1, the compatible system gives q″ = 2 while the printed scalar equation gives 7/2. The comparison uses the re-derived expression and then the PV substitution of §9.2.\n\nFor sigma reconstruction include the derivative-nondegeneracy hypothesis and analytic extension argument. For example, the PI sigma relation (σ″)² + 4(σ′)³ + 2tσ′ − 2σ = 0 admits σ ≡ 0, whereas q = −σ′ ≡ 0 does not solve q″ = 6q² + t. Thus the unqualified reverse implication is false. On the branch σ″ not identically zero, differentiating and then extending the resulting analytic identity gives the required reconstruction. The entire excluded branch is σ = at + 2a³ with a constant; its q = −a never solves PI on an open time domain. This explicitly identifies the spurious scalar branches of this sigma relation.\n\nDistinguish this PI obstruction from loss of phase information on a genuine invariant locus. In the PII normalization of §9.5, put c = α + 1/2 and σ = H. Direct differentiation gives σ′ = −p/2 and σ″ = 2qσ′ − c/2, hence q = (2σ″ + c)/(4σ′) and p = −2σ′ on σ′ ≠ 0. At c = 0 and p = 0, every Riccati trajectory q′ = −q² − t/2 has σ ≡ 0. These are genuine phase trajectories with distinct initial q, all having the same scalar sigma function. Retain that phase/initial-point data on this locus; there is no sigma-only inverse there. Isolated zeros of σ′ in the reconstructible branch require the stated analytic extension comparison, not totalized division.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "9.5",
+      "original_title": "Concrete normalizations and special-solution checks",
+      "current_title": "Concrete normalizations and special-solution checks",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Prove the PI chart H = p²/2 − 2q³ − tq and the PII chart H = p²/2 − (q² + t/2)p − (α + 1/2)q from the corresponding moduli charts, and apply §9.1. The PII jet inverse is p = q′ + q² + t/2. The polynomial chart covers all finite (q,q′), while poles use the other phase charts. Establish its parameter dictionary with §9.2. (VDPS09, §§4.10–4.11; DLMF, §§32.2, 32.6 and 32.9.)\n\nConstruct the rational and classical-function families generated from the proved seed objects by §§7.1–7.2's admitted transformations, and prove their formulas only as the resulting coordinate lemmas. No completeness classification of all rational or algebraic solutions is imported from these few seeds.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [
+        "painleveTwoNormalizationExamplesCheck1",
+        "painleveTwoNormalizationExamplesCheck2",
+        "painleveTwoNormalizationExamplesCheck3",
+        "painleveTwoNormalizationExamplesCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "10.1",
+      "original_title": "Boundary and sectorial selection data",
+      "current_title": "Boundary and sectorial selection data",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Define boundary-selection data over the admitted geometric time family: an end and sector or specified approach path; its time coordinate and branches; local formal and Stokes data with a framing; any lattice, parabolic or resolution datum needed to select a de Rham lift; and a normalization for the requested observable or tau representative. Define equivalence by the actual marking transformations. The record contains no solution and no existence or uniqueness assertion. A specification becomes a characterization only after its analytic realization theorem. Linear Stokes data at a spectral singularity and nonlinear asymptotics at a time boundary are different constructions, connected by the theorem. (ILP18, §1.4 and §§3.3–3.4, 4.2–4.3, for the distinction in concrete realizations.)",
+      "original_api_names": [
+        "sectorialBoundarySpecificationLaw1",
+        "sectorialBoundarySpecificationLaw2",
+        "sectorialBoundarySpecificationLaw3",
+        "sectorialBoundarySpecificationLaw4"
+      ],
+      "current_api_names": [
+        "sectorialBoundarySpecificationLaw1",
+        "sectorialBoundarySpecificationLaw2",
+        "sectorialBoundarySpecificationLaw3",
+        "sectorialBoundarySpecificationLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "sectorialBoundarySpecificationCheck1",
+        "sectorialBoundarySpecificationCheck2",
+        "sectorialBoundarySpecificationCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "10.2",
+      "original_title": "A common small-norm RHP existence engine",
+      "current_title": "Geometric adapters for the general small-norm RHP theorem",
+      "general_proof_destinations": [
+        "AnalyticRHPAndDeterminants/1.2",
+        "AnalyticRHPAndDeterminants/1.3",
+        "AnalyticRHPAndDeterminants/1.4"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Use AnalyticRHPAndDeterminants §§1.2–1.4 for the Cauchy solution class, small-norm inversion, weighted moments and parameter-uniform tails. This target owns the actual contours and local parametrices selected by §10.1. Prove the bounded Cauchy operators and reconstruction, the residual representation R = I + C(h), disappearance of small endpoint-circle integrals, and determinant removability for these geometric local models. Boundary L² traces alone are insufficient. Verify w ∈ L² ∩ L∞, det(I+w)=1 and a common operator gap ‖C_w‖ ≤ ρ < 1 on the stated parameter set; use the general ν = C₋w + C_wν solution, without assuming I ∈ L² on an unbounded contour.\n\nFor every claimed coefficient or uniform remainder, verify the actual weighted L¹/L² moment and tail hypotheses of §1.4. Uniform weighted norms alone do not give parameter-uniform little-o. Supply weighted-tail tightness, compact norm-continuous parameter control, or an additional moment on precisely the parameter set used by §§10.3 and 11.4. The general estimates and counterexamples are owned in the analytic framework.\n\nUndo the verified parametrix reduction, reconstruct the decorated connection by §4.1, and identify its parameter variation with the strong splitting of Layer 3. Compare local solutions by uniqueness and continue by Layer 5. An arbitrary small jump does not specify this meromorphic-connection problem. Outside the verified small-norm domain, supply a separate vanishing/invertibility argument and prove its hypotheses. (ILP18, §3.3, Lemma 3.3, is a concrete application.)",
+      "original_api_names": [
+        "smallNormRiemannHilbertEngineLaw1",
+        "smallNormRiemannHilbertEngineLaw2",
+        "smallNormRiemannHilbertEngineLaw3",
+        "smallNormRiemannHilbertEngineLaw4"
+      ],
+      "current_api_names": [
+        "smallNormRiemannHilbertEngineApplicationLaw1",
+        "smallNormRiemannHilbertEngineApplicationLaw2",
+        "smallNormRiemannHilbertEngineApplicationLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "smallNormRiemannHilbertEngineCheck1",
+        "smallNormRiemannHilbertEngineCheck2",
+        "smallNormRiemannHilbertEngineCheck3",
+        "smallNormRiemannHilbertEngineCheck4"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "10.3",
+      "original_title": "Two precisely scoped connection-formula realizations",
+      "current_title": "Two precisely scoped connection-formula realizations",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Translate ILP18 Theorems A and B into the boundary language, prove their normalized RHP realizations and transfer their endpoint and constant-ratio identities to §8's section. Keep the parameter dictionaries and branch choices explicit. The targets are the following source loci, not all parameters of the corresponding equations.\n\nFor Theorem A use the four logarithmic residues with eigenvalues ±θ_ν, 2θ_ν ∉ ℤ for ν = 0,t,1,∞, the marked monodromy cubic (1.16), and σ = σ₀ₜ, ρ = σₜ₁ satisfying σ,ρ ≠ 0 and 0 ≤ Re σ, Re ρ < 1/2. Require every member of the following four sets to avoid ℤ: {θ₀ ± θₜ ± σ}, {θ∞ ± θ₁ ± σ}, {θ₁ ± θₜ ± ρ}, {θ∞ ± θ₀ ± ρ}, with both signs independent. These are (1.13) and (1.17). With the source's t ∈ (0,1) endpoint branches and JMU normalization, prove its asymptotics (1.18a–b) and C₁/C₀ equal to the Barnes-G expression (1.19), using exactly the quantities (1.20–1.21). Propositions 3.20 and 3.24 and §3.9 supply the proof targets. Where an auxiliary denominator in (1.21) vanishes, use a proved continuation of the expression rather than totalized division.\n\nFor Theorem B use homogeneous PII, q″ = 2q³ + tq, and its source Stokes surface s₁ − s₂ + s₃ + s₁s₂s₃ = 0. Require s₁s₃ ≠ 1, Arg(1 − s₁s₃) ∈ (−π,π), s₂ ∉ ℝ and Arg(iϵs₂) ∈ (−π/2,π/2), where ϵ = sign Re(is₂) ∈ {−1,1}. These are (1.25). With d log τ = (q′² − q⁴ − tq²)dt, prove the two real-ray asymptotics (1.26) and C₊/C₋ equal to (1.28), with μ,ν from (1.27) and exp(iπη) = −iϵ/s₃. The literal η chart requires s₃ ≠ 0. Prove the stated η ↦ η + 2 invariance, normalization comparison and analytic extension to further allowed data; never assign an exponential logarithm to an undefined quotient. The proof locators are §§4.3–4.5 and Remark 4.8, with Barnes-function domains and removable limits explicit.\n\nSeparate the absolute-constant calibration in ILP18 §4.5 from the monodromy-dependent variational calculation. Its supporting proof targets are the Airy determinant constant χ = (log 2)/24 + ζ′(−1) in DIK08 Theorem 1, (2)–(3); the complex-sector pole-freeness in HXZ16 Theorem 2.1; and the uniform complex-sector Hamiltonian asymptotics and arc estimates used in ILP18 (4.74)–(4.76). Consume the existing Hastings–McLeod object and Fredholm identity from RandomMatrices §8.5. That contract and the first two estimates do not imply the third.\n\nFor the third supporting target, construct the Hastings–McLeod normalized RHP and sectorial parametrices on arg z ∈ [−π/3,0] and [2π/3,π], using its supplied scalar object rather than proving a second existence theorem. Apply §10.2 with uniform boundary-sector and weighted remainder estimates to recover the Hamiltonian asymptotics (4.74). With H_HM denoting ILP18's Hamiltonian normalization, prove that the integrals over the oriented large-circle arcs of H_HM(z)dz on the first sector and of (H_HM(z) − z²/4 + 1/(8z))dz on the second tend to zero. State and prove the uniform bounds, including the boundary rays, which justify these two limits; real-ray asymptotics alone do not suffice. ILP18 cites FIKN for the sectorial continuation and uses Jordan-type estimates at this step. Here this exact sectorial estimate is an owned RHP/parametrix proof target, not an unrecorded import of the whole FIKN theory. With the arc limits established, compute the remaining logarithmic contribution as +iπ/24 and the calibration as exp(χ + iπ/24).\n\nThe quantitative arc contract is the following, uniformly for z = R exp(iθ) and sufficiently large R. On the first sector prove |H_HM(z)| ≤ C R⁻¹ exp(−(4/3)R³ᐟ² cos(3θ/2)) + C R⁻⁵ᐟ². On the second set φ = θ − π and c = 2√2/3, and prove |H_HM(z) − z²/4 + 1/(8z)| ≤ C R⁻¹ᐟ⁴ exp(−cR³ᐟ² cos(3φ/2)) + C R⁻¹ exp(−2cR³ᐟ² cos(3φ/2)) + C R⁻⁷ᐟ⁴. These are bounds for the full sectorial expansions (4.74), with uniform remainders at the boundary. The angular integrals of each exponential are O(R⁻³ᐟ²), since the cosine has a simple zero at the oscillatory boundary. Multiplication by the arc-length factor R gives first-arc bound O(R⁻³ᐟ²) and second-arc bound O(R⁻³ᐟ⁴), hence the required vanishing.",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [
+        "scopedConnectionFormulaRealizationsCheck1",
+        "scopedConnectionFormulaRealizationsCheck2",
+        "scopedConnectionFormulaRealizationsCheck3",
+        "scopedConnectionFormulaRealizationsCheck4",
+        "scopedConnectionFormulaRealizationsCheck5"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "10.4",
+      "original_title": "The Hastings–McLeod bridge",
+      "current_title": "The Hastings–McLeod bridge",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Consume the scalar result already owned by RandomMatrices §8.5: its normalized real Hastings–McLeod solution of q″ = tq + 2q³, its uniqueness and real pole-freeness. At a regular real time t₀, use §9.1's first-jet inverse to construct the intrinsic phase point from (q(t₀),q′(t₀)). Apply §§5.1–5.3 and prove that the resulting horizontal section evaluates to the supplied scalar solution on its real domain and on the common analytic continuation. Prove independence of t₀ using uniqueness and the first-jet overlap comparison. The real initial values determine the local complex analytic solution; they do not by themselves prove its boundary behavior, which is consumed from the supplier.\n\nThe primary-source chart comparison is VDPS09 §4.10, translated to §9.5's momentum and Hamiltonian normalization. That source supplies the chart, not the Hastings–McLeod existence theorem consumed from RandomMatrices.",
+      "original_api_names": [
+        "hastingsMcLeodIntrinsicBridgeLaw1",
+        "hastingsMcLeodIntrinsicBridgeLaw2",
+        "hastingsMcLeodIntrinsicBridgeLaw3"
+      ],
+      "current_api_names": [
+        "hastingsMcLeodIntrinsicBridgeLaw1",
+        "hastingsMcLeodIntrinsicBridgeLaw2",
+        "hastingsMcLeodIntrinsicBridgeLaw3"
+      ],
+      "retained_original_diagnostics": [
+        "hastingsMcLeodIntrinsicBridgeCheck1",
+        "hastingsMcLeodIntrinsicBridgeCheck2",
+        "hastingsMcLeodIntrinsicBridgeCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "11.1",
+      "original_title": "Collision families of geometric connection data",
+      "current_title": "Collision families of geometric connection data",
+      "general_proof_destinations": [
+        "AlgebraicConfluence/1.1",
+        "AlgebraicConfluence/1.2"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Define a collision datum as the following geometric family, with arrows given by isomorphisms preserving all the data. Over a collision disk Δ_ε and an admitted limiting time/parameter domain, give a smooth projective curve family with a finite-flat structural divisor of degree four; ordered labels on its separated branches over ε ≠ 0 and their specialization map; a determinant line connection and its comparison; and a flat family of local polar-part conditions in the dual of gl₂ ⊗ O_P, with filtrations or factorized ramified descent as required. Specify the meromorphic-in-ε exponent map, the time map with nonzero derivative for ε ≠ 0, and any finite parameter cover used by these maps. Specify the local leading-coefficient orbit and the lower coefficients that determine its formal type, not merely the multiplicity of the divisor. The limiting formal condition is either a §1.1 condition with its actual minimal projective slope or a separately marked lower-complexity boundary condition. These are algebraic/formal data; no horizontal solution limit, symplectic equivalence or RHP convergence is a field of the definition.\n\nThe admitted primitive classical domain first requires both primitive endpoints to be objects of §1.3: genus zero, rank two, structural degree four, the admitted local formal structures, a regular-singular determinant with its fixed-residue compatible time transport, the actual reduced versal time problem, generic weights and nonempty stable fibers. Projective slopes or trace-free deformation ranks cannot replace this endpoint condition. Within that domain, impose the nonzero-leading/factorization relations and construct the regular comparison locus where the relative local-condition and deformation complexes have flat coherent terms and the constant ranks computed from the endpoint problems. Define it using the actual relation and Kodaira–Spencer maps, invariant under changes of presentation; neither the time/phase dimension conclusions of §1.4 and §2.3 nor equality of horizontal distributions is a field added to the input.\n\nA boundary endpoint instead records its actual reduced structural/local conditions, determinant pole order and the rank or leading-term conditions that fail. It is not silently admitted to the primitive classical domain. It receives an elementary scalar confluence arrow only through its separately proved §9.3 dictionary and phase/first-jet comparison. An extra scalar irregular determinant is not a primitive endpoint merely because its projective profile agrees with one in §1.4. Construct the moduli/reduction comparisons on the specified regular locus, prove its rank description in the local model, and obtain the common phase charts and horizontal-field extension by solving the strong deformation equations of Layer 3. A component without this verified regular comparison has no asserted solution-convergence arrow.\n\nFor A = p_*O_P, import framework:AlgebraicConfluence/1.2’s relative dual Lie–Poisson structure and its residue comparison with the curve’s polar data. The split point algebras and the truncated local algebra at collision are coordinate realizations of this one finite-algebra family. Verify separately that the chosen local-condition orbits and relative reductions satisfy the regularity and flatness conditions needed by this collision datum; the general Poisson construction does not establish those properties. Apply the supplied fiber-negation isomorphism to the GMR23 conventions: dY/dz = A_source Y versus ∇ = d + A_ours requires A_ours = −A_source, for every Takiff coefficient and residue/exponent parameter. Identify the actual residue pairing, paired KKS form, moment map, reduction and Hamiltonian conventions through that isomorphism. An identity map of coefficient matrices is not this adapter.\n\nUse GMR23 Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429, for its ordered cascade and Takiff models, and Theorem 13, §4.3, pp. 1435–1436, for limiting Hamiltonians on their stated domains. For each coordinate collision model satisfying the simple-zero and pole-bound hypotheses of framework:AlgebraicConfluence/1.1, instantiate that corrected principal-part lemma with V = M₂(ℂ). Its exact finite identity supplies the limiting Laurent coefficients and compact-uniform coefficient limit away from the collision point; the application must match these actual Laurent coefficients with the source’s time-dependent coefficient basis and the chosen exponent/time map. The printed Theorem 2, pp. 1391–1392, (12)–(15), is not used unchanged: C = O(ε⁻ʳ) makes CPʳ⁺¹ = O(ε), whereas the corrected ε⁻ʳ⁻¹ coefficient W gives the highest limit coefficient t₁ʳ⁺¹W. Under a nonlinear change of collision parameter, transport the holomorphic D_j correction specified by the general lemma as well. Neither this matrix coefficient limit nor a nonzero highest matrix coefficient determines the projective Katz slope or supplies a moduli/reduction comparison. Prove the full endpoint formal-type and regular-locus adapters already required above. GMR23 §5.1, p. 1441, explicitly restricts its Painlevé realizations to the nonramified case; the ramified comparisons remain owned applications.",
+      "original_api_names": [
+        "geometricConfluenceFamilyLaw1",
+        "geometricConfluenceFamilyLaw2",
+        "geometricConfluenceFamilyLaw3",
+        "geometricConfluenceFamilyLaw4"
+      ],
+      "current_api_names": [
+        "geometricConfluenceFamilyLaw1",
+        "geometricConfluenceFamilyLaw2",
+        "geometricConfluenceFamilyLaw3",
+        "geometricConfluenceFamilyLaw4"
+      ],
+      "retained_original_diagnostics": [
+        "geometricConfluenceFamilyCheck1",
+        "geometricConfluenceFamilyCheck2",
+        "geometricConfluenceFamilyCheck3",
+        "geometricConfluenceFamilyCheck4",
+        "geometricConfluenceFamilyCheck5",
+        "geometricConfluenceFamilyCheck6"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "11.2",
+      "original_title": "A common compact-path solution-convergence theorem",
+      "current_title": "Confluence by the general compact-path theorem",
+      "general_proof_destinations": [
+        "NonlinearConnections/1.9"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Apply NonlinearConnections §1.9 to the actual time/phase comparison of §11.1. Supply a reference horizontal lift on a fixed compact piecewise C¹ time path avoiding the limiting fixed singularities. Verify finitely many common charts with a positive boundary margin, uniform convergence of the path-pulled fields (including the path velocity), a common local Lipschitz bound and convergent initial points. The general theorem then produces the approximating lifts on the entire path and proves uniform convergence; their existence/no-exit is not assumed. Import its segment estimate (initial error + ℓδ_ε)exp(Lℓ) and finite-chart gluing. Holomorphic fields give derivative bounds only on a larger common neighborhood where Cauchy estimates apply. Uniformity on compact time domains, parameter families or endpoint sectors requires its separate common-cover and path-family controls; none follows from convergence along one path.",
+      "original_api_names": [],
+      "current_api_names": [
+        "compactPathSolutionConvergenceApplicationLaw1",
+        "compactPathSolutionConvergenceApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "compactPathSolutionConvergenceCheck1",
+        "compactPathSolutionConvergenceCheck2",
+        "compactPathSolutionConvergenceCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "11.3",
+      "original_title": "The cascade as coordinate comparison",
+      "current_title": "The cascade as coordinate comparison",
+      "general_proof_destinations": [],
+      "current_role": "painleve-specific-construction-or-comparison",
+      "remaining_application_contract": "Construct the cascade as the category generated by the verified collision-data arrows of §11.1, with endpoint identifications and the stated domains retained. Its morphisms are data-dependent comparisons; the ten underlying profiles alone do not specify an arrow. For each such arrow choose the time and phase charts only after the geometric comparison is built, then derive the scaled classical equation, its parameter map and its first-jet correspondence using Layer 9. The ramified (0,0,1/2) endpoint is obtained only on its nonzero lower-coefficient locus; a removable or vanishing-leading-term endpoint is placed in its separately computed lower stratum and receives a §9.3 scalar boundary comparison only where the first-jet comparison is proved. Prove coverage of each arrow's recorded domain, its nonzero scaling factors and its omitted charts. Apply §11.2 to obtain the solution limit for matched initial points. Composition uses compatible determinant, label, parameter-cover and time identifications; interchanging limits requires an additional uniform theorem. This theorem quantifies over the invariant collision-data class, and makes no claim that an unspecified finite graph exhausts every possible degeneration. (GMR23, Definitions 3–4, Theorems 12–13; the corrected Laurent lemma is owned by AlgebraicConfluence §1.1 and applied in §11.1, and §5's source realizations retain their nonramified scope.)",
+      "original_api_names": [],
+      "current_api_names": [],
+      "retained_original_diagnostics": [
+        "classicalConfluenceCascadeComparisonCheck1",
+        "classicalConfluenceCascadeComparisonCheck2",
+        "classicalConfluenceCascadeComparisonCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    },
+    {
+      "original_target": "11.4",
+      "original_title": "Normalized tau limits",
+      "current_title": "Tau-confluence adapters for general analytic convergence",
+      "general_proof_destinations": [
+        "AnalyticRHPAndDeterminants/1.5",
+        "AnalyticRHPAndDeterminants/1.6"
+      ],
+      "current_role": "application-adapter",
+      "remaining_application_contract": "Construct the actual determinant-line comparisons, frames, nonzero correction factors and common regular normalization point for the collision of §11.1. With these identifications, verify one of two independent general contracts. AnalyticRHPAndDeterminants §1.5 yields normalized scalar convergence from convergence of corrected logarithmic forms on controlled compact path families in a simply connected zero-free domain. The forms must be the actual determinant-frame forms of §8.3; JMU/Hamiltonian formulas can be used only on their proved comparison locus in §§8.3–8.4.\n\nAlternatively, prove controlled moving-contour, measure and operator identifications with one Hilbert space and compact-uniform trace-norm convergence, then apply AnalyticRHPAndDeterminants §1.6. This route can include zeros; zero counts require nonvanishing of the limit on the chosen boundary and a limit not identically zero. The line/frame/operator comparisons are application obligations, not supplied by the abstract convergence theorems. Endpoint constants and nonlinear Stokes limits additionally require the verified uniform sectorial controls of §10.2 and compatible asymptotic normalization; §11.2 alone does not give them.",
+      "original_api_names": [
+        "normalizedTauConfluenceLaw1",
+        "normalizedTauConfluenceLaw2",
+        "normalizedTauConfluenceLaw3"
+      ],
+      "current_api_names": [
+        "normalizedTauConfluenceApplicationLaw1",
+        "normalizedTauConfluenceApplicationLaw2"
+      ],
+      "retained_original_diagnostics": [
+        "normalizedTauConfluenceCheck1",
+        "normalizedTauConfluenceCheck2",
+        "normalizedTauConfluenceCheck3"
+      ],
+      "diagnostic_status": "Original diagnostics retained verbatim as application checks/imported guards; their generic proof ownership follows the destination, not this duplicated example text."
+    }
+  ],
+  "expanded_gaps": [
+    {
+      "slug": "holomorphic-horizontal-lifts",
+      "title": "holomorphic horizontal lifts",
+      "supplier": "SmoothBundlesConnectionsPartII",
+      "section": "proposed H1: holomorphic horizontal lifts",
+      "needs": "an integrable holomorphic Ehresmann splitting of a submersion between finite-dimensional complex manifolds has unique local holomorphic horizontal sections through every point, jointly holomorphic in initial data and auxiliary holomorphic parameters.",
+      "neededBy": [
+        "5.1",
+        "11.2"
+      ],
+      "detail": "Named extension of the existing supplier; not present as a proved native interface at the audited pins.",
+      "expanded_as": "framework:NonlinearConnections/1.3",
+      "resolution": "Expanded as an explicit draft proof target, not discharged by a completed proof."
+    },
+    {
+      "slug": "complex-holomorphic-determinant-family",
+      "title": "complex holomorphic determinant families",
+      "supplier": "HeegaardFloerPartII",
+      "section": "proposed F0.0C: complex holomorphic determinant families",
+      "needs": "a holomorphic family of complex index-zero Fredholm operators has a holomorphic determinant line and canonical section constructed through finite-dimensional stabilizations, with comparison isomorphisms satisfying refinement, cocycle and holomorphic base-change laws.",
+      "neededBy": [
+        "8.1"
+      ],
+      "detail": "Named extension of the existing supplier; not present as a proved native interface at the audited pins.",
+      "expanded_as": "framework:AnalyticRHPAndDeterminants/1.1",
+      "resolution": "Expanded as an explicit draft proof target, not discharged by a completed proof."
+    }
+  ],
+  "remaining_not_exported_as_unrestricted_theorems": [
+    "General irregular/ramified RH properness outside the admitted classical extension",
+    "Arbitrary ramified block Stokes families",
+    "Existence/flatness of arbitrary relative symplectic reductions",
+    "All surface and boundary local-cohomology classifications",
+    "Unconditional RHP reconstruction of a meromorphic connection",
+    "Uncontrolled endpoint tau/connection-constant limits"
+  ]
+}

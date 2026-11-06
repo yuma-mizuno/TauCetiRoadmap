@@ -1,0 +1,94 @@
+{
+  "scope": "Findings remain in their original reports; this ledger points to independent final closures.",
+  "findings": [
+    {
+      "id": "A-M01",
+      "severity": "medium",
+      "title": "Specify whether the analytic base and base changes include nonreduced spaces, and define operator families at that level",
+      "original_review": "reports/reusability/review_round1_analytic/review_moduli_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_moduli_author.json"
+    },
+    {
+      "id": "GEO-N-01",
+      "severity": "P2",
+      "title": "Old supplier prose still assigns extracted general moduli proofs to the root application",
+      "original_review": "reports/reusability/review_round1_geometry/review_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    },
+    {
+      "id": "GEO-N-02",
+      "severity": "P2",
+      "title": "Japanese 'smooth base change' can incorrectly restrict the admitted base maps",
+      "original_review": "reports/reusability/review_round1_geometry/review_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    },
+    {
+      "id": "GEO-N-03",
+      "severity": "P3",
+      "title": "Attach separatedness explicitly to the coarse space or rigidification",
+      "original_review": "reports/reusability/review_round1_geometry/review_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    },
+    {
+      "id": "GEO-N-04",
+      "severity": "P3",
+      "title": "Make the passage from the marked proper family to paths in the configuration base explicit",
+      "original_review": "reports/reusability/review_round1_geometry/review_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    },
+    {
+      "id": "N-R1",
+      "severity": "medium",
+      "title": "The generic target does not assume flatness, but its optional invocation of target:1.5 says only that completeness is added. Target 1.5 additionally requires flatness. The local theorem and the component formulas are correct; the cross-contract export must state the full condition.",
+      "original_review": "reports/reusability/review_round1_nonlinear/review_analysis_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_analysis_author.json"
+    },
+    {
+      "id": "N-R2",
+      "severity": "medium",
+      "title": "The main statement correctly restricts deck-invariance descent to a universal cover. The reusable hypothesis says only \"a specified covering and its actual deck action\", while the API gives an unqualified if-and-only-if. Deck invariance is insufficient for an arbitrary nonregular cover.",
+      "original_review": "reports/reusability/review_round1_nonlinear/review_analysis_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_analysis_author.json"
+    },
+    {
+      "id": "N-R3",
+      "severity": "low",
+      "title": "\"両方が恒等的には零でない\" can be read as requiring each member of the pair to be non-identically-zero, whereas the intended and correct English condition is that the two are not both identically zero. The distinction matters for admissible constant maps represented by (0,1) or (1,0).",
+      "original_review": "reports/reusability/review_round1_nonlinear/review_analysis_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_analysis_author.json"
+    },
+    {
+      "id": "R2-M01",
+      "severity": "low",
+      "title": "The English and plan still say the corrected Laurent lemma is owned by section 11.1. The Japanese already correctly assigns the lemma to AlgebraicConfluence 1.1 and its application to root 11.1.",
+      "original_review": "reports/reusability/review_round2/closure_moduli_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_moduli_author.json"
+    },
+    {
+      "id": "GEO-N2-01",
+      "severity": "P3",
+      "title": "The historical dependency direction is reversed in Japanese",
+      "original_review": "reports/reusability/review_round2/closure_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    },
+    {
+      "id": "GEO-N2-02",
+      "severity": "P3",
+      "title": "State the complex time-curve hypothesis in the English scalarization summary",
+      "original_review": "reports/reusability/review_round2/closure_nonlinear_author.json",
+      "status": "closed",
+      "final_scope_closure": "reports/reusability/review_round3/closure_nonlinear_author.json"
+    }
+  ],
+  "unresolved_findings": []
+}

@@ -1,0 +1,183 @@
+{
+  "schema": "tauceti-mathematical-draft/single-roadmap-registry-v1",
+  "roadmap": "PainleveEquationsAndFunctions",
+  "plan": "design/plan.json",
+  "english": "README.md",
+  "japanese": "README.ja.md",
+  "sources": "sources.toml",
+  "parts": [
+    {
+      "id": "N",
+      "scope_role": "framework",
+      "title": "Nonlinear connections, transport, observations and comparison",
+      "layer_keys": [
+        "N1"
+      ],
+      "target_ids": [
+        "N1.1",
+        "N1.2",
+        "N1.3",
+        "N1.4",
+        "N1.5",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9"
+      ],
+      "anchor": "part-n"
+    },
+    {
+      "id": "M",
+      "scope_role": "framework",
+      "title": "Reusable intrinsic construction of meromorphic-connection moduli and their nonlinear time connection",
+      "layer_keys": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "target_ids": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M3.1",
+        "M3.2",
+        "M3.3",
+        "M3.4",
+        "M4.1",
+        "M4.2"
+      ],
+      "anchor": "part-m"
+    },
+    {
+      "id": "A",
+      "scope_role": "framework",
+      "title": "Reusable analytic RHPs and determinant convergence",
+      "layer_keys": [
+        "A1"
+      ],
+      "target_ids": [
+        "A1.1",
+        "A1.2",
+        "A1.3",
+        "A1.4",
+        "A1.5",
+        "A1.6"
+      ],
+      "anchor": "part-a"
+    },
+    {
+      "id": "C",
+      "scope_role": "framework",
+      "title": "Reusable algebraic confluence and finite-algebra Poisson geometry",
+      "layer_keys": [
+        "C1"
+      ],
+      "target_ids": [
+        "C1.1",
+        "C1.2"
+      ],
+      "anchor": "part-c"
+    },
+    {
+      "id": "P",
+      "scope_role": "application",
+      "title": "Intrinsic Painlevé equations and functions",
+      "layer_keys": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11"
+      ],
+      "target_ids": [
+        "P1.1",
+        "P1.2",
+        "P1.3",
+        "P1.4",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P2.4",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "P4.4",
+        "P5.1",
+        "P5.2",
+        "P5.3",
+        "P5.4",
+        "P5.5",
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.1",
+        "P7.2",
+        "P7.3",
+        "P8.1",
+        "P8.2",
+        "P8.3",
+        "P8.4",
+        "P9.1",
+        "P9.2",
+        "P9.3",
+        "P9.4",
+        "P9.5",
+        "P10.1",
+        "P10.2",
+        "P10.3",
+        "P10.4",
+        "P11.1",
+        "P11.2",
+        "P11.3",
+        "P11.4"
+      ],
+      "anchor": "part-p"
+    },
+    {
+      "id": "G",
+      "scope_role": "application",
+      "title": "Five logarithmic points: independent second consumer",
+      "layer_keys": [
+        "G1"
+      ],
+      "target_ids": [
+        "G1.1",
+        "G1.2",
+        "G1.3",
+        "G1.4"
+      ],
+      "anchor": "part-g"
+    }
+  ],
+  "reference_rules": {
+    "target:ID": "An internal target in the single plan; ID includes N, M, A, C, P or G.",
+    "roadmap:Name locator": "An unchanged external proposed or foundational supplier contract at its recorded scope.",
+    "foundation:description": "Explicit ordinary mathematical foundations; no implementation or completed proof implied.",
+    "mathlib:Name": "A retained external historical foundation reference, not a requested formalization step."
+  },
+  "acceptance_rules": [
+    "There is exactly one active mathematical plan with one target collection and one roadmap identity.",
+    "The old-to-new address map is a bijection on all 77 targets; all 321 internal edges and each external contract are preserved.",
+    "The complete graph is acyclic.",
+    "General parts N, M, A and C have no P or G target in their transitive prerequisite closure.",
+    "Part G has no P target in its transitive prerequisite closure.",
+    "Part P intrinsic layers P1–P8 do not depend on the scalar-comparison layer P9.",
+    "Native mathematical carriers and general proofs are shared; applications verify their own admission and comparison hypotheses.",
+    "The complete English and Japanese bodies, including scope, examples, appendices and sources, are retained modulo explicit address and document-location normalization."
+  ],
+  "status_boundary": "The parts are sections of one roadmap, not six separately owned active roadmaps. Proposed future upstream destinations remain proposals."
+}

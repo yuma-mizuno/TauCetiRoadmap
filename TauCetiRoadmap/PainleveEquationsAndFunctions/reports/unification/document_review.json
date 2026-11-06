@@ -1,0 +1,312 @@
+{
+  "schema": "independent-document-consolidation-review/v1",
+  "reviewer": "unify_schema_review",
+  "decision": "pass",
+  "scope": "Independent review of root-authored English/Japanese unified documents and document generator/manifest for complete content preservation, single-roadmap wording and reference/navigation consistency.",
+  "independence_boundary": "This reviewer authored the unified JSON schema earlier and does not certify that JSON as independently reviewed here. The plan, DAG and metadata have a separate independent reviewer. This report concerns root-authored documents only.",
+  "mathematical_boundary": "No theorem is newly proved by this review. The full mathematical content of the previously reviewed source bodies is preserved; this is an independent consolidation audit, not a repeated claim of source-theorem certification.",
+  "source_bodies": [
+    {
+      "source": "frameworks/NonlinearConnections/README.md",
+      "destination": "README.md",
+      "part": "N",
+      "language": "en",
+      "source_sha256": "721e70364ae021128faf010ef7c204b564f1eaaabd7e9a5c7e4e5c6bfbefcec7",
+      "embedded_body_sha256": "aaedbb1e4e36afd3b9905c5a642271409a27a8e9cbe13963d4d91445dd430891",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.md",
+      "destination": "README.md",
+      "part": "M",
+      "language": "en",
+      "source_sha256": "35a7e07a3497c04918c02b6accfd1ab877bb0085254c1c299181498383b84d7b",
+      "embedded_body_sha256": "4dda3172e86ff59e064b06ef537ec66ab522043fc4123653a2afe5ae2c39be83",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.md",
+      "destination": "README.md",
+      "part": "A",
+      "language": "en",
+      "source_sha256": "04278d6797bf73e8bf36a89cc68c4f7c2c1def037d30eb7d925b1277606e6fb8",
+      "embedded_body_sha256": "45eaa4420ebdd7f370a4915afb26625d5b0ad8fcdc2be13854045dd7b6472420",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/AlgebraicConfluence/README.md",
+      "destination": "README.md",
+      "part": "C",
+      "language": "en",
+      "source_sha256": "2f9f58497d8645bb0135b1580c02146a2ec953bf00511d137f457951eee8f2c5",
+      "embedded_body_sha256": "8d3ab2728d04e6c4810b186010221e9ae94451a510b44913818dd9c38de7330d",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "README.md",
+      "destination": "README.md",
+      "part": "P",
+      "language": "en",
+      "source_sha256": "f7b1554e29703b568e87792848b5c07b165aca79f743c6a796137bb5415cab65",
+      "embedded_body_sha256": "3476afbb7f2542412ccf6ce3960d77d0ae2151ba1c2c9ebcdaab41cdcb73b7dc",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "applications/FiveLogarithmicPoints/README.md",
+      "destination": "README.md",
+      "part": "G",
+      "language": "en",
+      "source_sha256": "a1f7592c5f1883dc41ca84e839c1d5fe997019053f3ece9258de440579eb44fc",
+      "embedded_body_sha256": "baa56a6edf2de5748cafe5804c8d42bf19cd50290d77e6a6a6804771a0b339ad",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "REUSABILITY.md",
+      "destination": "README.md",
+      "part": "R",
+      "language": "en",
+      "source_sha256": "38519184c88aa7210d824f9cec29be433365454a3c8cdd9d106052ee043b3f4a",
+      "embedded_body_sha256": "25c687b7624e427becb38a65b54fa188ffab68ef6b0ff396701faa32116376ce",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/NonlinearConnections/README.ja.md",
+      "destination": "README.ja.md",
+      "part": "N",
+      "language": "ja",
+      "source_sha256": "95ce938293212dcaeafdfc009fa853d18dafd54a1c1ee394a7a8686b39dfb2dd",
+      "embedded_body_sha256": "a369517ca5faec226b56c7004cbde431721bf45021e6f947b1fba0c786065f85",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.ja.md",
+      "destination": "README.ja.md",
+      "part": "M",
+      "language": "ja",
+      "source_sha256": "b7a43a8ba8d309ff08979f892258837f0ab95e23f6c27306884bc59d6e15a5d6",
+      "embedded_body_sha256": "8a780a1313d19ed75aac21808bf9a6e88b533e68836c369a3da53b37cef17b68",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.ja.md",
+      "destination": "README.ja.md",
+      "part": "A",
+      "language": "ja",
+      "source_sha256": "b07fec4bd57b6efcb72d956ecab8069406d44b0e247dca648298930241dc5959",
+      "embedded_body_sha256": "e8e4254da0e8d71e92027ad86086cefb32737b9f5b1c233dbfb457897e560c98",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "frameworks/AlgebraicConfluence/README.ja.md",
+      "destination": "README.ja.md",
+      "part": "C",
+      "language": "ja",
+      "source_sha256": "733010f0580c7c3642dd8ca8cb7d84c25144b786170c04cdc95ac4de1686f255",
+      "embedded_body_sha256": "9ec2cfa14db7fb269073da814d544293b352abfab5ad8c6c79be7742daa9c3e9",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "README.ja.md",
+      "destination": "README.ja.md",
+      "part": "P",
+      "language": "ja",
+      "source_sha256": "4a9c11f83f39468336cdc585c4fcdd717dbe7ef9794f5cdde3dfed29e1b463d8",
+      "embedded_body_sha256": "344b24a2f1a6121530a8eb313b05b3b5e0ec57d25743f4476bcc1c461d8daf06",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "applications/FiveLogarithmicPoints/README.ja.md",
+      "destination": "README.ja.md",
+      "part": "G",
+      "language": "ja",
+      "source_sha256": "248968914b417c4431a8ac826d20b3b5dea6cfa4549635680a039b54b0c680ed",
+      "embedded_body_sha256": "d75d1d4a703c6ad7ddfa72057fec168cef224540e6bbffa52701ee5441266f1d",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "destination": "README.ja.md",
+      "part": "R",
+      "language": "ja",
+      "source_sha256": "2196eb8abaee6b20b1eec60231d0a1c51a0cf0038a7d0b9807131039ea626c7c",
+      "embedded_body_sha256": "c5ebaf113df750d428f14e1359e2fd3348c5e3b009bd995ae9b1f7677c97f511",
+      "checks": {
+        "source_hash_matches": true,
+        "embedded_body_hash_matches": true,
+        "all_nonheading_content_preserved": true,
+        "external_source_links_preserved": true,
+        "heading_count_preserved": true
+      }
+    }
+  ],
+  "language_checks": {
+    "README.md": {
+      "tests": {
+        "target_order_preserved": true,
+        "target_count_77": true,
+        "all_anchors_unique": true,
+        "same_document_anchors_resolve": true,
+        "no_unpublished_claim": true,
+        "no_bare_plan_filename": true
+      },
+      "sha256": "65aab8f98368fbff9515fbaf014924ac0382fb4c6a2e7a76d90f6affa8751f14",
+      "size_bytes": 320501,
+      "target_count": 77,
+      "anchor_count": 84
+    },
+    "README.ja.md": {
+      "tests": {
+        "target_order_preserved": true,
+        "target_count_77": true,
+        "all_anchors_unique": true,
+        "same_document_anchors_resolve": true,
+        "no_unpublished_claim": true,
+        "no_bare_plan_filename": true
+      },
+      "sha256": "ee130d8c50abe19f1d4e676eff5a3f1f38f8f90d000d7ee7bd4a5da45e8adee2",
+      "size_bytes": 372700,
+      "target_count": 77,
+      "anchor_count": 84
+    }
+  },
+  "explicit_administrative_edits_reviewed": 46,
+  "reference_convention_review": {
+    "decision": "adequate",
+    "reasons": [
+      "Both introductions give one global target namespace, a part-local interpretation for bare section/layer numerals and an explicit override for named source or other-part contexts.",
+      "The anaphoric references in P5.2, G1.3 and G1.4 retain their original mathematical meaning under that convention.",
+      "Source theorem, equation and section locators are unchanged; external source URL multisets are identical.",
+      "Former component names are declared aliases for corresponding parts, while headings and structured tokens provide unique canonical addresses."
+    ]
+  },
+  "completeness_review": [
+    "All12 original language bodies for the six parts are included in full, plus the two complete reusability explanations.",
+    "Japanese Painleve Appendix A and Appendix B are retained within part P.",
+    "Every language has all77 target headings in the declared part order, six part anchors and a reuse appendix anchor.",
+    "General theory and the second application are present in the same active document; separate source-plan creation is not an input requirement.",
+    "All77 proof targets remain in scope; theorem hypotheses are neither removed nor strengthened by the heading clarification."
+  ],
+  "findings": [
+    {
+      "id": "DOC-U1",
+      "severity": "low",
+      "finding": "The English reuse appendix retained an Unpublished status after the user authorized a draft branch.",
+      "resolution": "Changed to Mathematical draft; both active language bodies contain no stale unpublished claim.",
+      "status": "closed"
+    },
+    {
+      "id": "DOC-U2",
+      "severity": "low",
+      "finding": "The English reuse appendix Japanese-version link was rewritten to its own same-document appendix.",
+      "resolution": "Reuse language destinations explicitly point to README.md#reuse-contract or README.ja.md#reuse-contract; the English Japanese-version link reaches the Japanese document.",
+      "status": "closed"
+    },
+    {
+      "id": "DOC-U3",
+      "severity": "low",
+      "finding": "The N-part source-orientation tail retained the obsolete bare plan.json filename; the first correction left its Japanese counterpart unchanged.",
+      "resolution": "Both English and Japanese tails name design/plan.json. No bare plan.json filename remains in either active README.",
+      "status": "closed"
+    },
+    {
+      "id": "DOC-U4",
+      "severity": "low",
+      "finding": "After Optional was removed from the English M4 layer title, the Japanese title retained 選択的な.",
+      "resolution": "Both layer titles omit that administrative qualifier. Both introductions explicitly include all77 targets; conditional hypotheses and mathematical branch scopes remain unchanged.",
+      "status": "closed"
+    }
+  ],
+  "open_findings": [],
+  "reviewed_artifact_hashes": {
+    "README.md": "65aab8f98368fbff9515fbaf014924ac0382fb4c6a2e7a76d90f6affa8751f14",
+    "README.ja.md": "ee130d8c50abe19f1d4e676eff5a3f1f38f8f90d000d7ee7bd4a5da45e8adee2",
+    "reports/unification/content_manifest.json": "ae3455694019138326de6c0eef148413ac7ea6298a1650bbc3388b904991aaca",
+    "authoring/build_documents.py": "bd2164cb910897fb84b3d15fd0cb83fc77edf95c4189aecfc7c0949d72ca721f",
+    "authoring/normalization.py": "8f0ed5eb9168e4783e5a5ea7e172f8db8e9d791a14fd3c5c0f4116998be9893e"
+  },
+  "final_closure_checks": {
+    "DOC-U1": true,
+    "DOC-U2": true,
+    "DOC-U3": true,
+    "DOC-U4": true
+  },
+  "timestamp_utc": "2026-11-06T03:57:40.437406+00:00"
+}

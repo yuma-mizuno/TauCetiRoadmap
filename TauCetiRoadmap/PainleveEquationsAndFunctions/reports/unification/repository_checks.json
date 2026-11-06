@@ -1,0 +1,23 @@
+{
+  "repository": "yuma-mizuno/TauCetiRoadmap",
+  "base_branch": "mei",
+  "base_commit": "e43b1fc32d7e24a47baae13bdae74ea253c3d811",
+  "draft_branch": "codex/painleve-intrinsic-roadmap",
+  "user_authorized_branch_push": true,
+  "roadmap_directory": "TauCetiRoadmap/PainleveEquationsAndFunctions",
+  "topic": "math.AG",
+  "repository_topic_check": "passed:156 roadmaps",
+  "packaged_content_preservation": {
+    "checks": 4975,
+    "failures": 0
+  },
+  "one_active_plan": true,
+  "no_nested_metadata": true,
+  "no_lean_files_added": true,
+  "pull_request_requested": false,
+  "scope": "mathematical draft and preservation records; no full Lean build or official Worker acceptance",
+  "whitespace_notes": [
+    "The retained Japanese Markdown blockquote uses an intentional two-space hard line break.",
+    "The reviewed normalization helper retains an extra terminal blank line; its reviewed bytes are preserved."
+  ]
+}

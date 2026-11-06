@@ -1,0 +1,10 @@
+{
+  "baseline_files": 23,
+  "baseline_zip_sha256": "5fc0104b5b29655e7b4ed3b3a8095782f16c1cb9ed404adfb9f91cedc8a84d79",
+  "baseline_zip_bytes": 360944,
+  "historical_review_archive": "reports/history/preceding_review_records.tar.xz",
+  "historical_review_archive_sha256": "cd1f5cdb383cbea6fbd24550e27032a112dca73fd49f414670f780cca35e9966",
+  "historical_review_archive_bytes": 619832,
+  "historical_review_members": 366,
+  "historical_review_member_contents_preserved": true
+}

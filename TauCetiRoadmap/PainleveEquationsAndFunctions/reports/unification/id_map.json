@@ -1,0 +1,2416 @@
+{
+  "schema": "tauceti-mathematical-draft/single-roadmap-address-map-v1",
+  "status": "Historical provenance and a bijection of addresses; not a second active plan.",
+  "roadmap": "PainleveEquationsAndFunctions",
+  "mapping": {
+    "NonlinearConnections/1.1": "N1.1",
+    "NonlinearConnections/1.2": "N1.2",
+    "NonlinearConnections/1.3": "N1.3",
+    "NonlinearConnections/1.4": "N1.4",
+    "NonlinearConnections/1.5": "N1.5",
+    "NonlinearConnections/1.6": "N1.6",
+    "NonlinearConnections/1.7": "N1.7",
+    "NonlinearConnections/1.8": "N1.8",
+    "NonlinearConnections/1.9": "N1.9",
+    "MeromorphicConnectionModuli/1.1": "M1.1",
+    "MeromorphicConnectionModuli/1.2": "M1.2",
+    "MeromorphicConnectionModuli/2.1": "M2.1",
+    "MeromorphicConnectionModuli/2.2": "M2.2",
+    "MeromorphicConnectionModuli/2.3": "M2.3",
+    "MeromorphicConnectionModuli/2.4": "M2.4",
+    "MeromorphicConnectionModuli/3.1": "M3.1",
+    "MeromorphicConnectionModuli/3.2": "M3.2",
+    "MeromorphicConnectionModuli/3.3": "M3.3",
+    "MeromorphicConnectionModuli/3.4": "M3.4",
+    "MeromorphicConnectionModuli/4.1": "M4.1",
+    "MeromorphicConnectionModuli/4.2": "M4.2",
+    "AnalyticRHPAndDeterminants/1.1": "A1.1",
+    "AnalyticRHPAndDeterminants/1.2": "A1.2",
+    "AnalyticRHPAndDeterminants/1.3": "A1.3",
+    "AnalyticRHPAndDeterminants/1.4": "A1.4",
+    "AnalyticRHPAndDeterminants/1.5": "A1.5",
+    "AnalyticRHPAndDeterminants/1.6": "A1.6",
+    "AlgebraicConfluence/1.1": "C1.1",
+    "AlgebraicConfluence/1.2": "C1.2",
+    "PainleveEquationsAndFunctions/1.1": "P1.1",
+    "PainleveEquationsAndFunctions/1.2": "P1.2",
+    "PainleveEquationsAndFunctions/1.3": "P1.3",
+    "PainleveEquationsAndFunctions/1.4": "P1.4",
+    "PainleveEquationsAndFunctions/2.1": "P2.1",
+    "PainleveEquationsAndFunctions/2.2": "P2.2",
+    "PainleveEquationsAndFunctions/2.3": "P2.3",
+    "PainleveEquationsAndFunctions/2.4": "P2.4",
+    "PainleveEquationsAndFunctions/3.1": "P3.1",
+    "PainleveEquationsAndFunctions/3.2": "P3.2",
+    "PainleveEquationsAndFunctions/3.3": "P3.3",
+    "PainleveEquationsAndFunctions/3.4": "P3.4",
+    "PainleveEquationsAndFunctions/4.1": "P4.1",
+    "PainleveEquationsAndFunctions/4.2": "P4.2",
+    "PainleveEquationsAndFunctions/4.3": "P4.3",
+    "PainleveEquationsAndFunctions/4.4": "P4.4",
+    "PainleveEquationsAndFunctions/5.1": "P5.1",
+    "PainleveEquationsAndFunctions/5.2": "P5.2",
+    "PainleveEquationsAndFunctions/5.3": "P5.3",
+    "PainleveEquationsAndFunctions/5.4": "P5.4",
+    "PainleveEquationsAndFunctions/5.5": "P5.5",
+    "PainleveEquationsAndFunctions/6.1": "P6.1",
+    "PainleveEquationsAndFunctions/6.2": "P6.2",
+    "PainleveEquationsAndFunctions/6.3": "P6.3",
+    "PainleveEquationsAndFunctions/7.1": "P7.1",
+    "PainleveEquationsAndFunctions/7.2": "P7.2",
+    "PainleveEquationsAndFunctions/7.3": "P7.3",
+    "PainleveEquationsAndFunctions/8.1": "P8.1",
+    "PainleveEquationsAndFunctions/8.2": "P8.2",
+    "PainleveEquationsAndFunctions/8.3": "P8.3",
+    "PainleveEquationsAndFunctions/8.4": "P8.4",
+    "PainleveEquationsAndFunctions/9.1": "P9.1",
+    "PainleveEquationsAndFunctions/9.2": "P9.2",
+    "PainleveEquationsAndFunctions/9.3": "P9.3",
+    "PainleveEquationsAndFunctions/9.4": "P9.4",
+    "PainleveEquationsAndFunctions/9.5": "P9.5",
+    "PainleveEquationsAndFunctions/10.1": "P10.1",
+    "PainleveEquationsAndFunctions/10.2": "P10.2",
+    "PainleveEquationsAndFunctions/10.3": "P10.3",
+    "PainleveEquationsAndFunctions/10.4": "P10.4",
+    "PainleveEquationsAndFunctions/11.1": "P11.1",
+    "PainleveEquationsAndFunctions/11.2": "P11.2",
+    "PainleveEquationsAndFunctions/11.3": "P11.3",
+    "PainleveEquationsAndFunctions/11.4": "P11.4",
+    "FiveLogarithmicPoints/1.1": "G1.1",
+    "FiveLogarithmicPoints/1.2": "G1.2",
+    "FiveLogarithmicPoints/1.3": "G1.3",
+    "FiveLogarithmicPoints/1.4": "G1.4"
+  },
+  "parts": [
+    {
+      "part": "N",
+      "source_namespace": "NonlinearConnections",
+      "source_plan": "frameworks/NonlinearConnections/plan.json",
+      "source_plan_sha256": "c65d7dd0650f719c68fe127b020f608fa452b6e1c19b24d98ae0cfc0d58fd2aa",
+      "layer_mapping": {
+        "1": "N1"
+      },
+      "targets": 9,
+      "api_laws": 28,
+      "diagnostics": 34
+    },
+    {
+      "part": "M",
+      "source_namespace": "MeromorphicConnectionModuli",
+      "source_plan": "frameworks/MeromorphicConnectionModuli/plan.json",
+      "source_plan_sha256": "53b8e2729f37c37b507cf0816c340bcb8ea537b477a4f268dd1bbf171dc425a1",
+      "layer_mapping": {
+        "1": "M1",
+        "2": "M2",
+        "3": "M3",
+        "4": "M4"
+      },
+      "targets": 12,
+      "api_laws": 45,
+      "diagnostics": 46
+    },
+    {
+      "part": "A",
+      "source_namespace": "AnalyticRHPAndDeterminants",
+      "source_plan": "frameworks/AnalyticRHPAndDeterminants/plan.json",
+      "source_plan_sha256": "f4c96ec2b23e8f5598289367c9ab9a72661f1bc9e3a2921d8be7edb7106cea7b",
+      "layer_mapping": {
+        "1": "A1"
+      },
+      "targets": 6,
+      "api_laws": 24,
+      "diagnostics": 25
+    },
+    {
+      "part": "C",
+      "source_namespace": "AlgebraicConfluence",
+      "source_plan": "frameworks/AlgebraicConfluence/plan.json",
+      "source_plan_sha256": "802ef38fa6d9086e94fa954de590d55f06c22c86e073b43ba53e6702d176356c",
+      "layer_mapping": {
+        "1": "C1"
+      },
+      "targets": 2,
+      "api_laws": 8,
+      "diagnostics": 10
+    },
+    {
+      "part": "P",
+      "source_namespace": "PainleveEquationsAndFunctions",
+      "source_plan": "design/plan.json",
+      "source_plan_sha256": "4aac6b79a0c46a2eb8902cf9faae1d31ccf2a6aed86efa05bdadd40d3fb12903",
+      "layer_mapping": {
+        "1": "P1",
+        "2": "P2",
+        "3": "P3",
+        "4": "P4",
+        "5": "P5",
+        "6": "P6",
+        "7": "P7",
+        "8": "P8",
+        "9": "P9",
+        "10": "P10",
+        "11": "P11"
+      },
+      "targets": 44,
+      "api_laws": 98,
+      "diagnostics": 129
+    },
+    {
+      "part": "G",
+      "source_namespace": "FiveLogarithmicPoints",
+      "source_plan": "applications/FiveLogarithmicPoints/plan.json",
+      "source_plan_sha256": "6323115c4472497ac48b5c62721b466f0270554ef9361537b82f60a3513f859e",
+      "layer_mapping": {
+        "1": "G1"
+      },
+      "targets": 4,
+      "api_laws": 11,
+      "diagnostics": 13
+    }
+  ],
+  "counts": {
+    "parts": 6,
+    "general_parts": 4,
+    "layers": 19,
+    "targets": 77,
+    "api_laws": 214,
+    "diagnostics": 257,
+    "internal_edges": 321
+  },
+  "original_component_metadata": {
+    "NonlinearConnections": {
+      "roadmap": "NonlinearConnections",
+      "title": "Nonlinear connections, transport, observations and comparison",
+      "parent": null,
+      "status": "mathematical draft; all targets are proof obligations",
+      "summary": "An independent finite-dimensional framework for nonlinear Ehresmann connections, local and complete horizontal transport, symplectic compatibility, observations, scalarization and compact-path convergence. No Painlevé equation, rank-two moduli space, polar-degree restriction or Riemann–Hilbert comparison is a prerequisite.",
+      "ownership_status": "Every proposed_owner is a proposed upstream destination. This draft does not assert that an upstream roadmap or library has been changed.",
+      "dependency_policy": "Local references use target:ID. Generic suppliers use roadmap:NAME §LOCATOR. Consumers and applications are excluded from prerequisites. Completeness, flatness, symplectic preservation and admissibility are separate hypotheses or separately proved outputs; no record assumes all desired conclusions.",
+      "proof_status": "planned mathematical constructions and theorems, not completed proofs or implemented formal results",
+      "translation_policy": "Each target carries a Japanese translation in ja. English README Statement, Hypotheses, API, Checks and Needs are rendered verbatim from their plan fields; target identifiers and dependency references are language independent."
+    },
+    "MeromorphicConnectionModuli": {
+      "roadmap": "MeromorphicConnectionModuli",
+      "title": "Reusable intrinsic construction of meromorphic-connection moduli and their nonlinear time connection",
+      "summary": "A proposed independent mathematical framework. It constructs the nonlinear connection from source-admitted geometric input and is shared by distinct consumers.",
+      "delivery_status": "Draft only; no worker execution, proof-assistant run, commit, push or publication claimed.",
+      "revision": "reusability-extraction-2026-11-06",
+      "proposed_owner": "TauCetiRoadmap.MeromorphicConnectionModuli",
+      "scope": {
+        "base_field": "ℂ",
+        "curve": "smooth proper connected; nonempty disjoint marked sections",
+        "rank": "r≥1; totally ramified model requires r≥2",
+        "local_models": "logarithmic with full flags; generic unramified m≥2; totally ramified I23 factorized generic model m≥2 and a10 invertible",
+        "determinant": "unfixed with prescribed trace polar data; fixed only through the separate determinant-fiber and certified transport comparisons",
+        "time": "smooth charts/base changes of the admitted curve/jet/coefficient deformation problem; no arbitrary topological deformation assumption",
+        "nonemptiness": "consumer obligation when output is asserted on the whole time base"
+      },
+      "foundational_interfaces": [
+        {
+          "area": "algebraic curves and bundles",
+          "content": "smooth proper families, Cartier divisors, finite jets, coherent cohomology, Picard varieties, determinant and End⁰ constructions"
+        },
+        {
+          "area": "stacks and moduli",
+          "content": "descent, smooth atlases, boundedness and Quot/GIT construction, scalar rigidification and coarse-space comparisons"
+        },
+        {
+          "area": "deformation theory",
+          "content": "Čech hypercohomology with C-linear differential operators, Serre duality, infinitesimal smoothness; no automatic D(QCoh) interpretation"
+        },
+        {
+          "area": "formal local algebra",
+          "content": "finite ramification, formal differential modules, descent and explicit factorized relations"
+        },
+        {
+          "area": "complex geometry",
+          "content": "analytic curve families, local topological markings, rank-one local systems and logarithm/exponential gluing, holomorphic tensors"
+        }
+      ],
+      "external_framework_dependencies": [
+        "framework:NonlinearConnections/1.1",
+        "framework:NonlinearConnections/1.3",
+        "framework:NonlinearConnections/1.6"
+      ],
+      "owned_proof_obligations": [
+        {
+          "id": "M-local-presentation-descent",
+          "targets": [
+            "1.1",
+            "1.2",
+            "3.3"
+          ],
+          "statement": "Build intrinsic input groupoids and coordinate/root changes with coherent descent, without treating I23 coordinate formulas as the definition."
+        },
+        {
+          "id": "M-determinant-time",
+          "targets": [
+            "1.2",
+            "3.1"
+          ],
+          "statement": "Construct and verify rank-one strong determinant transport on the stated local charts; global fixed-determinant output requires actual gluing. Prove determinant compatibility of the rank-r lift."
+        },
+        {
+          "id": "M-determinant-fiber",
+          "targets": [
+            "2.2",
+            "2.3",
+            "2.4"
+          ],
+          "statement": "Compare full ramified deformation cone with the regular determinant de Rham complex; prove scalar splitting, smooth determinant map, 2g removal and orthogonal nondegeneracy before exporting positive-genus fixed-determinant symplecticity."
+        },
+        {
+          "id": "M-early-unfolding",
+          "targets": [
+            "2.4"
+          ],
+          "statement": "Construct the finite-flat auxiliary family and both generic-fiber comparison maps upstream of every confluence application."
+        },
+        {
+          "id": "M-strong-lift",
+          "targets": [
+            "3.1",
+            "3.2"
+          ],
+          "statement": "Prove existence/uniqueness inside the total-pole and kernel-lattice extension class, mixed-term flatness and actual trace-form preservation."
+        },
+        {
+          "id": "M-coherent-export",
+          "targets": [
+            "3.3",
+            "3.4"
+          ],
+          "statement": "Prove canonical pullback/presentation comparisons, 2-coherence and the general construction theorem independently of all specialized consumers."
+        },
+        {
+          "id": "M-regular-RH-proper",
+          "targets": [
+            "4.1",
+            "4.2"
+          ],
+          "statement": "Identify the entire logarithmic moduli functor with I13, prove all-points strong-splitting semiconjugacy, exact family properness and the Cartesian fixed-determinant restriction. Source completeness belongs to the generic NonlinearConnections theorem, applied downstream."
+        }
+      ],
+      "consumer_certificate_fields": [
+        "local-model admission",
+        "admitted time base and marking",
+        "determinant mode and certificate",
+        "stability chamber",
+        "nonemptiness evidence",
+        "additional downstream hypotheses"
+      ],
+      "sources": [
+        {
+          "key": "I23",
+          "title": "Michi-aki Inaba, Moduli Space of Factorized Ramified Connections and Generalized Isomonodromic Deformation, SIGMA 19 (2023), 013",
+          "url": "https://sigma-journal.com/2023/013/",
+          "pdf": "https://sigma-journal.com/2023/013/sigma23-013.pdf",
+          "locators": [
+            "§§2–5",
+            "§6 (6.9), Proposition 6.3",
+            "§7 Proposition 7.2, Theorem 7.5",
+            "§8 Theorem 8.1, Propositions 8.2–8.3",
+            "§10 Definition 10.1, (10.1), Propositions 10.7/10.10",
+            "§11 Definition 11.4, Theorem 11.6, Corollary 11.8"
+          ]
+        },
+        {
+          "key": "I13",
+          "title": "Michi-aki Inaba, Moduli of parabolic connections on a curve and Riemann–Hilbert correspondence, Journal of Algebraic Geometry 22 (2013), 407–480",
+          "url": "https://arxiv.org/abs/math/0602004",
+          "pdf": "https://arxiv.org/pdf/math/0602004",
+          "locators": [
+            "Definitions 1.1 and 2.2",
+            "Theorems 2.1–2.2",
+            "§6; regular-singular reconstruction and surjectivity"
+          ],
+          "scope": "Supporting source for logarithmic consumers and nonemptiness certificates, not a prerequisite for the general irregular construction theorem."
+        }
+      ],
+      "foundation_contract_status": "Exact target-level foundation references retained from the recorded supplier audit; additional differential-operator, determinant and moduli-specific comparisons remain owned proof targets, not assumed supplier outputs."
+    },
+    "AnalyticRHPAndDeterminants": {
+      "roadmap": "AnalyticRHPAndDeterminants",
+      "title": "Reusable analytic RHPs and determinant convergence",
+      "summary": "Six general operator, Cauchy-class, weighted-asymptotic and normalized-section contracts, independent of Painlevé selection and connection reconstruction.",
+      "parent_context": "Extracted from PainleveEquationsAndFunctions §§8.1,10.2,11.4; extraction provenance is not a dependency.",
+      "delivery_status": "draft mathematical roadmap; upstream ownership is proposed and no theorem proof is declared complete",
+      "ownership_policy": "HeegaardFloerPartII proposed F0.0C owns the generic holomorphic Fredholm determinant line. RandomMatrices §8.3 retains the generic trace-class determinant. The remaining owners are proposed additions, not claims of existing upstream results.",
+      "dependency_policy": "Internal target: references resolve within this module; consumers use framework:AnalyticRHPAndDeterminants/<id>. No general target depends on a Painlevé/application target or on its own named gap.",
+      "source_keys": [
+        "MAL04",
+        "BERT17",
+        "BERT16",
+        "ILP18"
+      ],
+      "source_registry": "../../sources.toml",
+      "extraction_map": [
+        {
+          "old_target": "8.1",
+          "new_targets": [
+            "1.1"
+          ],
+          "application_remainder": "The actual connection/RHP family and the pullback of the generic determinant line."
+        },
+        {
+          "old_target": "10.2",
+          "new_targets": [
+            "1.2",
+            "1.3",
+            "1.4"
+          ],
+          "application_remainder": "Parametrix/endpoint adapters, geometric connection reconstruction and identification of horizontal variation."
+        },
+        {
+          "old_target": "11.4",
+          "new_targets": [
+            "1.5",
+            "1.6"
+          ],
+          "application_remainder": "Collision-specific line/frame/Hilbert-space identifications, actual variational-form comparisons and additional endpoint constants."
+        }
+      ]
+    },
+    "AlgebraicConfluence": {
+      "roadmap": "AlgebraicConfluence",
+      "title": "Reusable algebraic confluence and finite-algebra Poisson geometry",
+      "summary": "Two independent general targets: corrected vector-valued principal-part cancellation and relative dual Poisson structures for finite locally free algebras.",
+      "parent_context": "Extracted from PainleveEquationsAndFunctions §11.1; extraction provenance is not a dependency.",
+      "delivery_status": "draft mathematical roadmap; proposed upstream additions and no declaration of completed proofs",
+      "source_keys": [
+        "GMR23"
+      ],
+      "source_registry": "../../sources.toml",
+      "dependency_policy": "No internal dependence between 1.1 and 1.2, and no applied Painlevé prerequisites. Consumers use framework:AlgebraicConfluence/<id>.",
+      "ownership_policy": "FormalLaurentPuiseux owns the proposed principal-part extension; LieGroupoidsPoisson owns the proposed complex relative dual Poisson extension. The application owns its formal-type, orbit-flatness, quotient and horizontal-limit proofs."
+    },
+    "PainleveEquationsAndFunctions": {
+      "roadmap": "PainleveEquationsAndFunctions",
+      "title": "Intrinsic Painlevé equations and functions",
+      "parent": null,
+      "summary": "Construct Painlevé dynamics from moduli of meromorphic connections, and construct Painlevé functions from the horizontal sections of that dynamics. The input consists of a curve, a structural polar divisor, a determinant connection, local formal moduli conditions, and stability and marking data. The phase space, its symplectic form, and its horizontal distribution are constructed from this input. A common continuation theorem precedes every classical scalar equation. The ten underlying rank-two formal profiles, their labelled realizations, their eight additive surface types, and the six classical differential equations are comparison results. The theory includes resonant parameters, allowed reducible connections, ramified irregular singularities, special invariant loci, tau sections, normalized analytic solutions, and confluence. Elementary coefficient degenerations are covered by a separate boundary comparison. JMU/Hamiltonian comparisons of tau sections have the precise generic scope stated in Layer 8; the determinant construction itself has the broader marked-RHP scope specified there.",
+      "baseline": {
+        "mathlib": "f6090c7095e1e56b3464c1daba5f24631f1290d2",
+        "tauceti": "358314d4ab97483df4fc4cb8adcc02e74a8d9f5a",
+        "roadmap": "c9a16a043c3bf2321c63dff75e3f709466373528",
+        "worker_contract": "46e12afb791b1efab8fd8b3285370d689ba2e7b8"
+      },
+      "lean_toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "suppliers": [
+        {
+          "contract": "formal",
+          "roadmap": "FormalConnectionsOpers",
+          "sections": [
+            "F2–F3"
+          ],
+          "what": "Algebraic/formal connection groupoids; no analytic Stokes or full isomonodromy theorem; finite-ramification normal forms are a separate direct supplier.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "turrittin",
+          "roadmap": "PadicDifferentialEquationsAndRigidCohomology",
+          "sections": [
+            "RD.6.52a"
+          ],
+          "what": "Characteristic-zero formal finite-ramification normal forms, constants and descent, specialized over ℂ.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "stack",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.18/1.23"
+          ],
+          "what": "Stacks, 2-fiber products and stated fine/coarse moduli criteria.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quot",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "4.14"
+          ],
+          "what": "Noetherian projective Quot/Hilbert and Hom/Isom constructions.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "coh",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.2/2.6/2.20/3.3/4.2–4.6"
+          ],
+          "what": "Čech and coherent cohomology, termwise Serre duality, curve Euler characteristic and deformation foundations.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "surface",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.7/3.4/4.11/4.17/5.9–5.10"
+          ],
+          "what": "Supported cohomology, divisor/Picard groups, modifications, normal crossings and surface intersection/adjunction.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "qcdescent",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.22"
+          ],
+          "what": "Quasi-coherent module presentation and descent on stacks.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quotient",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.17"
+          ],
+          "what": "Categorical/geometric quotient framework; application hypotheses must be checked.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "moduli",
+          "roadmap": "AlgebraicModuliForArithmeticGeometry",
+          "sections": [
+            "5.1/7.1/8"
+          ],
+          "what": "Rigidification, Artin criteria and framed deformation/versality at their stated hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "curve",
+          "roadmap": "ComplexCurveModuli",
+          "sections": [
+            "D0/D2.0"
+          ],
+          "what": "Genus-zero families and native-manifold/analytic-space adapter.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "analytic",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C−1.1/C0.3"
+          ],
+          "what": "Complex analytic spaces, quotients, gluing, analytification and analytic bundle/sheaf dictionary.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "regularRH",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C5.6"
+          ],
+          "what": "Regular-singular RH comparison only, with its residue convention.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "picard",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C3.2d.2/C3.2f.1–2"
+          ],
+          "what": "Proper-flat universal-functions Picard carrier and its identity component under the proved smoothness/dimension hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "jacobian",
+          "roadmap": "JacobianChallenge",
+          "sections": [
+            "Layer C"
+          ],
+          "what": "Proper coherent pushforward, cohomology/base change and constant-rank locally free comparison.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "bundle",
+          "roadmap": "AlgebraicVectorBundles",
+          "sections": [
+            "L0A–L0C/L1A–L1B"
+          ],
+          "what": "Locally free sheaves, tensor/dual/determinant and geometric vector-bundle carriers.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "complex",
+          "roadmap": "ComplexKahlerGeometry",
+          "sections": [
+            "K1/K3.0/K4/K7.1"
+          ],
+          "what": "Complex manifold inverse-function theory, holomorphic calculus/connections and projective-space charts.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "smooth",
+          "roadmap": "SmoothBundlesConnections",
+          "sections": [
+            "B1.5/B5"
+          ],
+          "what": "Smooth Ehresmann/transport interfaces; no automatic holomorphic parameter-dependence or proper RH conclusion.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "flows",
+          "roadmap": "DifferentialGeometry",
+          "sections": [
+            "Layers 0–1 and Layer 3/3.5"
+          ],
+          "what": "Differential forms and local/maximal/time-dependent smooth flow floor.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "covers",
+          "roadmap": "UniversalCovers",
+          "sections": [
+            "completed covering and lifting interface"
+          ],
+          "what": "Native covers, lifting and fundamental groupoid.",
+          "catalogue_status": "completed-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "realDet",
+          "roadmap": "HeegaardFloer",
+          "sections": [
+            "2.2/F0.0"
+          ],
+          "what": "Real determinant-line stabilization and comparison only; the complex holomorphic extension is a named gap.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "operator",
+          "roadmap": "OperatorTheory",
+          "sections": [
+            "OperatorIdeals OI-B23/OI-B30; ToeplitzOperators T3"
+          ],
+          "what": "Complex operator ideals, trace-class carrier, matrix-symbol Fredholm/index theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "det",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.3"
+          ],
+          "what": "Generic trace-class determinant, trace and trace-norm continuity floor within its actual operator scope.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "hm",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.4–8.5"
+          ],
+          "what": "Airy edge, Hastings–McLeod existence/uniqueness and real pole-freeness, Fredholm/Tracy–Widom identities.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "series",
+          "roadmap": "FormalLaurentPuiseux",
+          "sections": [
+            "L1–L7"
+          ],
+          "what": "Scalar Laurent/Puiseux arithmetic, substitution, residues and ramification, not Stokes theory.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "barnes",
+          "roadmap": "AnalyticNumberTheoryPartII",
+          "sections": [
+            "4.3–4.3a"
+          ],
+          "what": "Canonical Barnes G product, normalization, recurrence, zeros and rigorous sectorial asymptotics.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "poisson",
+          "roadmap": "LieGroupoidsPoisson",
+          "sections": [
+            "G4.6A"
+          ],
+          "what": "Positive smooth real Lie–Poisson bracket; complex Takiff adapter is owned by target 11.1.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "reduction",
+          "roadmap": "SymplecticGeometry",
+          "sections": [
+            "HamiltonianReduction R2–R3"
+          ],
+          "what": "Smooth real coadjoint/KKS and free/proper reduction comparisons; not an automatic complex algebraic reduction theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        }
+      ],
+      "consumers": [
+        {
+          "roadmap": "FiveLogarithmicPoints",
+          "status": "second worked consumer included in this draft",
+          "what": "Consumes the general frameworks directly; has no dependency on PainleveEquationsAndFunctions."
+        },
+        {
+          "roadmap": "FutureRandomMatrixPainleveApplications",
+          "status": "proposed future consumer",
+          "what": "Jointly consume this bridge and the existing RandomMatrices 8.3–8.5 theory; no reverse dependency added to the current supplier."
+        },
+        {
+          "roadmap": "GeometricSpecialFunctionComparisons",
+          "status": "proposed future consumer",
+          "what": "Consume horizontal continuation, intrinsic transformations and normalized tau/observable dictionaries."
+        },
+        {
+          "roadmap": "IrregularConnectionDegenerations",
+          "status": "proposed future consumer",
+          "what": "Consume controlled geometric and analytic confluence with exact comparison domains."
+        }
+      ],
+      "gaps": [],
+      "owned_proof_obligations": [
+        {
+          "target": "1.4",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Derive the ten underlying and seventeen ordered formal profiles and the one-dimensional reduced time from the input class, including stabilizer/marking comparisons; do not supply those counts as hypotheses.",
+          "status": "classification and reduced-time proof owned by this target"
+        },
+        {
+          "target": "2.3",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Verify the central-fiber, determinant and base-change comparison with MeromorphicConnectionModuli 2.3–2.4. The full auxiliary unfolding and general closedness proof are owned there.",
+          "status": "classical specialization of the separately owned general construction"
+        },
+        {
+          "target": "4.2",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Extend admissible-family Stokes transport to the good rank-two ramified class by deck-equivariant isotopy and descent.",
+          "status": "explicit common proof-development target"
+        },
+        {
+          "target": "4.4",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Prove relative proper RH for every admitted classical parameter and stable stratum, including uniform lattice bounds and stable replacement. The regular-singular branch imports MeromorphicConnectionModuli 4.2 after its comparison; the irregular extension is not inferred from I13.",
+          "status": "essential extension beyond the scoped sources; not claimed open in the literature"
+        },
+        {
+          "target": "6.2",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Prove the full moduli–surface complement comparison, all charts and allowed strata; do not assume the introductory all-profile conjectural comparison.",
+          "status": "explicit common proof-development target"
+        },
+        {
+          "target": "6.3",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Prove base change and time-line identification for the first boundary-layer line; no equality with all local cohomology is assumed.",
+          "status": "explicit family comparison target"
+        },
+        {
+          "target": "7.2",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Construct the additional marked-pair reflections, including the central PVI reflection, and establish horizontal extension and relations.",
+          "status": "explicit symmetry construction target"
+        },
+        {
+          "target": "8.2",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Construct resonant/ramified index-zero RHP adapters with their permitted comparison maps and stabilizer descent.",
+          "status": "explicit analytic adapter target"
+        },
+        {
+          "target": "10.3",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Prove DIK08/HXZ16 and the precise uniform HM sectorial Hamiltonian bounds/arc-vanishing calibration, plus continuation through auxiliary coordinate exclusions, using the supplied Hastings–McLeod object.",
+          "status": "precisely scoped application proof targets"
+        },
+        {
+          "target": "11.1",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Construct the actual collision groupoid, endpoint formal-type and determinant admission, orbit-flatness and regular-reduction comparisons, and common charts. Apply AlgebraicConfluence 1.1–1.2 for principal-part cancellation, the finite-algebra dual Poisson structure and sign transport; verify all coefficient, parameter-change and residue comparisons.",
+          "status": "geometric application obligations; general algebra separately owned"
+        },
+        {
+          "target": "10.2",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Prove actual geometric contour, endpoint, determinant-removability, reconstruction and parameter-set hypotheses for AnalyticRHPAndDeterminants 1.2–1.4. The general small-norm and uniform-tail proofs are owned there.",
+          "status": "application-specific analytic adapters"
+        },
+        {
+          "target": "5.3",
+          "owner": "PainleveEquationsAndFunctions",
+          "obligation": "Identify the actual classical transport/action with NonlinearConnections 1.5 and verify presentation and symplectic comparisons. General action construction, universal-cover sections and descent are owned there.",
+          "status": "application comparison; no assumed nonlinear action"
+        }
+      ],
+      "delivery_status": {
+        "draft_authored": true,
+        "official_worker_acceptance": false,
+        "manual_review_record": "reports/reusability/review_report.ja.md",
+        "worker_started": false,
+        "remote_mutations": false,
+        "formalization_complete": false,
+        "source_provenance_is_not_a_proof_certificate": true,
+        "current_review_scope": "Mathematical reusability, intrinsic construction, source scope and bilingual dependency contracts; Lean excluded.",
+        "mathematical_review_record": "reports/reusability/review_report.ja.md",
+        "historical_formalization_records": "Suggested.lean and previous static reports apply to their frozen historical snapshots, not to this revision.",
+        "reusability_review_state_record": "reports/reusability/review_report.ja.md; frozen reviewer verdicts are recorded there and are not replaced by a plan boolean."
+      },
+      "reusability": {
+        "registry": "design/reuse_registry.json",
+        "policy": "Generic framework dependency closure contains no application targets. Native carriers and general proofs are shared, not cloned.",
+        "migration": "reports/reusability/migration.json",
+        "scope": "Mathematical roadmap targets and review; not completed proofs or formalization."
+      },
+      "expanded_named_gaps": [
+        {
+          "slug": "holomorphic-horizontal-lifts",
+          "title": "holomorphic horizontal lifts",
+          "supplier": "SmoothBundlesConnectionsPartII",
+          "section": "proposed H1: holomorphic horizontal lifts",
+          "needs": "an integrable holomorphic Ehresmann splitting of a submersion between finite-dimensional complex manifolds has unique local holomorphic horizontal sections through every point, jointly holomorphic in initial data and auxiliary holomorphic parameters.",
+          "neededBy": [
+            "5.1",
+            "11.2"
+          ],
+          "detail": "Named extension of the existing supplier; not present as a proved native interface at the audited pins.",
+          "expanded_as": "framework:NonlinearConnections/1.3",
+          "resolution": "Expanded as an explicit draft proof target, not discharged by a completed proof."
+        },
+        {
+          "slug": "complex-holomorphic-determinant-family",
+          "title": "complex holomorphic determinant families",
+          "supplier": "HeegaardFloerPartII",
+          "section": "proposed F0.0C: complex holomorphic determinant families",
+          "needs": "a holomorphic family of complex index-zero Fredholm operators has a holomorphic determinant line and canonical section constructed through finite-dimensional stabilizations, with comparison isomorphisms satisfying refinement, cocycle and holomorphic base-change laws.",
+          "neededBy": [
+            "8.1"
+          ],
+          "detail": "Named extension of the existing supplier; not present as a proved native interface at the audited pins.",
+          "expanded_as": "framework:AnalyticRHPAndDeterminants/1.1",
+          "resolution": "Expanded as an explicit draft proof target, not discharged by a completed proof."
+        }
+      ],
+      "historical_implementation_metadata": {
+        "lean_elaboration": "not executed successfully: official runtime failed to locate application in this environment",
+        "suggested_lean_declarations": "see Suggested.lean and current static report"
+      }
+    },
+    "FiveLogarithmicPoints": {
+      "roadmap": "FiveLogarithmicPoints",
+      "title": "Five logarithmic points: independent second consumer",
+      "role": "application",
+      "summary": "An explicit genus-zero rank-two logarithmic input with two time variables, four-dimensional phase fibers, and complete intrinsic dynamics, constructed from the reusable frameworks without any classical Painlevé dependency.",
+      "source_keys": [
+        "I13",
+        "I23"
+      ],
+      "source_registry": "../../sources.toml",
+      "delivery_status": {
+        "draft_authored": true,
+        "worker_started": false,
+        "formalization_complete": false,
+        "proofs_complete": false
+      },
+      "dependency_policy": "No direct or transitive prerequisite may be a PainleveEquationsAndFunctions target; classical chart comparisons are optional downstream work."
+    }
+  },
+  "metadata_transformations": [
+    {
+      "part": "N",
+      "field": "dependency_policy",
+      "before": "Local references use target:ID. Generic suppliers use roadmap:NAME §LOCATOR. Consumers and applications are excluded from prerequisites. Completeness, flatness, symplectic preservation and admissibility are separate hypotheses or separately proved outputs; no record assumes all desired conclusions.",
+      "after": "All internal prerequisite addresses use the global target:<prefixed-ID> namespace of this one roadmap. The transitive prerequisite closure of every target in this general part excludes both application parts P and G. External roadmap and foundation contracts retain their original scope. Completeness, flatness, symplectic preservation and observer admissibility remain distinct hypotheses or proved outputs.",
+      "reason": "Administrative reference convention; the original per-target dependency graph is unchanged."
+    },
+    {
+      "part": "N",
+      "field": "translation_policy",
+      "before": "Each target carries a Japanese translation in ja. English README Statement, Hypotheses, API, Checks and Needs are rendered verbatim from their plan fields; target identifiers and dependency references are language independent.",
+      "after": "English and Japanese bodies are unified in README.md and README.ja.md. Existing target-level Japanese fields are retained unchanged modulo explicit address normalization; authored Japanese text not encoded in those fields remains in the Japanese body. Both languages use the same prefixed target identifiers.",
+      "reason": "One bilingual document identity; no translation content is discarded."
+    },
+    {
+      "part": "M",
+      "field": "delivery_status",
+      "before": "Draft only; no worker execution, proof-assistant run, commit, push or publication claimed.",
+      "after": "Current status is governed by this plan’s top-level delivery_status. The complete prior component status is retained as historical provenance in reports/unification/id_map.json under original_component_metadata.",
+      "reason": "Old review approvals remain attached to their frozen source versions; consolidation has its own review."
+    },
+    {
+      "part": "A",
+      "field": "source_registry",
+      "before": "../../sources.toml",
+      "after": "sources.toml",
+      "reason": "One source registry, interpreted relative to the roadmap root."
+    },
+    {
+      "part": "A",
+      "field": "dependency_policy",
+      "before": "Internal target: references resolve within this module; consumers use framework:AnalyticRHPAndDeterminants/<id>. No general target depends on a Painlevé/application target or on its own named gap.",
+      "after": "All internal prerequisite addresses use the global target:<prefixed-ID> namespace of this one roadmap. The transitive prerequisite closure of every target in this general part excludes both application parts P and G. External roadmap and foundation contracts retain their original scope. Completeness, flatness, symplectic preservation and observer admissibility remain distinct hypotheses or proved outputs.",
+      "reason": "Administrative reference convention; the original per-target dependency graph is unchanged."
+    },
+    {
+      "part": "A",
+      "field": "delivery_status",
+      "before": "draft mathematical roadmap; upstream ownership is proposed and no theorem proof is declared complete",
+      "after": "Current status is governed by this plan’s top-level delivery_status. The complete prior component status is retained as historical provenance in reports/unification/id_map.json under original_component_metadata.",
+      "reason": "Old review approvals remain attached to their frozen source versions; consolidation has its own review."
+    },
+    {
+      "part": "C",
+      "field": "source_registry",
+      "before": "../../sources.toml",
+      "after": "sources.toml",
+      "reason": "One source registry, interpreted relative to the roadmap root."
+    },
+    {
+      "part": "C",
+      "field": "dependency_policy",
+      "before": "No internal dependence between 1.1 and 1.2, and no applied Painlevé prerequisites. Consumers use framework:AlgebraicConfluence/<id>.",
+      "after": "All internal prerequisite addresses use the global target:<prefixed-ID> namespace of this one roadmap. The transitive prerequisite closure of every target in this general part excludes both application parts P and G. External roadmap and foundation contracts retain their original scope. Completeness, flatness, symplectic preservation and observer admissibility remain distinct hypotheses or proved outputs.",
+      "reason": "Administrative reference convention; the original per-target dependency graph is unchanged."
+    },
+    {
+      "part": "C",
+      "field": "delivery_status",
+      "before": "draft mathematical roadmap; proposed upstream additions and no declaration of completed proofs",
+      "after": "Current status is governed by this plan’s top-level delivery_status. The complete prior component status is retained as historical provenance in reports/unification/id_map.json under original_component_metadata.",
+      "reason": "Old review approvals remain attached to their frozen source versions; consolidation has its own review."
+    },
+    {
+      "part": "P",
+      "field": "delivery_status",
+      "before": {
+        "draft_authored": true,
+        "official_worker_acceptance": false,
+        "manual_review_record": "reports/reusability/review_report.ja.md",
+        "worker_started": false,
+        "remote_mutations": false,
+        "formalization_complete": false,
+        "source_provenance_is_not_a_proof_certificate": true,
+        "current_review_scope": "Mathematical reusability, intrinsic construction, source scope and bilingual dependency contracts; Lean excluded.",
+        "mathematical_review_record": "reports/reusability/review_report.ja.md",
+        "historical_formalization_records": "Suggested.lean and previous static reports apply to their frozen historical snapshots, not to this revision.",
+        "reusability_review_state_record": "reports/reusability/review_report.ja.md; frozen reviewer verdicts are recorded there and are not replaced by a plan boolean."
+      },
+      "after": "Current status is governed by this plan’s top-level delivery_status. The complete prior component status is retained as historical provenance in reports/unification/id_map.json under original_component_metadata.",
+      "reason": "Old review approvals remain attached to their frozen source versions; consolidation has its own review."
+    },
+    {
+      "part": "P",
+      "field": "consumers",
+      "before": [
+        {
+          "roadmap": "FiveLogarithmicPoints",
+          "status": "second worked consumer included in this draft",
+          "what": "Consumes the general frameworks directly; has no dependency on PainleveEquationsAndFunctions."
+        },
+        {
+          "roadmap": "FutureRandomMatrixPainleveApplications",
+          "status": "proposed future consumer",
+          "what": "Jointly consume this bridge and the existing RandomMatrices 8.3–8.5 theory; no reverse dependency added to the current supplier."
+        },
+        {
+          "roadmap": "GeometricSpecialFunctionComparisons",
+          "status": "proposed future consumer",
+          "what": "Consume horizontal continuation, intrinsic transformations and normalized tau/observable dictionaries."
+        },
+        {
+          "roadmap": "IrregularConnectionDegenerations",
+          "status": "proposed future consumer",
+          "what": "Consume controlled geometric and analytic confluence with exact comparison domains."
+        }
+      ],
+      "after": [
+        {
+          "status": "second worked application inside this roadmap",
+          "what": "Consumes the same general targets in parts N and M; its transitive prerequisite closure excludes part P.",
+          "part": "G"
+        },
+        {
+          "roadmap": "FutureRandomMatrixPainleveApplications",
+          "status": "proposed future consumer",
+          "what": "Jointly consume this bridge and the existing RandomMatrices 8.3–8.5 theory; no reverse dependency added to the current supplier."
+        },
+        {
+          "roadmap": "GeometricSpecialFunctionComparisons",
+          "status": "proposed future consumer",
+          "what": "Consume horizontal continuation, intrinsic transformations and normalized tau/observable dictionaries."
+        },
+        {
+          "roadmap": "IrregularConnectionDegenerations",
+          "status": "proposed future consumer",
+          "what": "Consume controlled geometric and analytic confluence with exact comparison domains."
+        }
+      ],
+      "reason": "The included second application is now an internal part; future external consumers remain unchanged."
+    },
+    {
+      "part": "P",
+      "field": "reusability",
+      "before": {
+        "registry": "design/reuse_registry.json",
+        "policy": "Generic framework dependency closure contains no application targets. Native carriers and general proofs are shared, not cloned.",
+        "migration": "reports/reusability/migration.json",
+        "scope": "Mathematical roadmap targets and review; not completed proofs or formalization."
+      },
+      "after": {
+        "registry": "design/reuse_registry.json",
+        "policy": "General parts N, M, A and C have no application target in their transitive prerequisite closure. Native carriers and general proofs are shared inside one roadmap, not cloned.",
+        "migration": "reports/unification/id_map.json",
+        "scope": "Mathematical roadmap targets and review; not completed proofs or formalization."
+      },
+      "reason": "Register one roadmap and its internal parts; preserve the earlier extraction record as historical provenance."
+    },
+    {
+      "part": "G",
+      "field": "source_registry",
+      "before": "../../sources.toml",
+      "after": "sources.toml",
+      "reason": "One source registry, interpreted relative to the roadmap root."
+    },
+    {
+      "part": "G",
+      "field": "dependency_policy",
+      "before": "No direct or transitive prerequisite may be a PainleveEquationsAndFunctions target; classical chart comparisons are optional downstream work.",
+      "after": "All internal prerequisite addresses use the global target:<prefixed-ID> namespace of this one roadmap. The transitive prerequisite closure of part G excludes part P. External roadmap and foundation contracts retain their original scope. Completeness, flatness, symplectic preservation and observer admissibility remain distinct hypotheses or proved outputs.",
+      "reason": "Administrative reference convention; the original per-target dependency graph is unchanged."
+    },
+    {
+      "part": "G",
+      "field": "delivery_status",
+      "before": {
+        "draft_authored": true,
+        "worker_started": false,
+        "formalization_complete": false,
+        "proofs_complete": false
+      },
+      "after": "Current status is governed by this plan’s top-level delivery_status. The complete prior component status is retained as historical provenance in reports/unification/id_map.json under original_component_metadata.",
+      "reason": "Old review approvals remain attached to their frozen source versions; consolidation has its own review."
+    },
+    {
+      "part": "P",
+      "field": "suppliers",
+      "before": [
+        {
+          "contract": "formal",
+          "roadmap": "FormalConnectionsOpers",
+          "sections": [
+            "F2–F3"
+          ],
+          "what": "Algebraic/formal connection groupoids; no analytic Stokes or full isomonodromy theorem; finite-ramification normal forms are a separate direct supplier.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "turrittin",
+          "roadmap": "PadicDifferentialEquationsAndRigidCohomology",
+          "sections": [
+            "RD.6.52a"
+          ],
+          "what": "Characteristic-zero formal finite-ramification normal forms, constants and descent, specialized over ℂ.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "stack",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.18/1.23"
+          ],
+          "what": "Stacks, 2-fiber products and stated fine/coarse moduli criteria.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quot",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "4.14"
+          ],
+          "what": "Noetherian projective Quot/Hilbert and Hom/Isom constructions.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "coh",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.2/2.6/2.20/3.3/4.2–4.6"
+          ],
+          "what": "Čech and coherent cohomology, termwise Serre duality, curve Euler characteristic and deformation foundations.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "surface",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.7/3.4/4.11/4.17/5.9–5.10"
+          ],
+          "what": "Supported cohomology, divisor/Picard groups, modifications, normal crossings and surface intersection/adjunction.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "qcdescent",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.22"
+          ],
+          "what": "Quasi-coherent module presentation and descent on stacks.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quotient",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.17"
+          ],
+          "what": "Categorical/geometric quotient framework; application hypotheses must be checked.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "moduli",
+          "roadmap": "AlgebraicModuliForArithmeticGeometry",
+          "sections": [
+            "5.1/7.1/8"
+          ],
+          "what": "Rigidification, Artin criteria and framed deformation/versality at their stated hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "curve",
+          "roadmap": "ComplexCurveModuli",
+          "sections": [
+            "D0/D2.0"
+          ],
+          "what": "Genus-zero families and native-manifold/analytic-space adapter.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "analytic",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C−1.1/C0.3"
+          ],
+          "what": "Complex analytic spaces, quotients, gluing, analytification and analytic bundle/sheaf dictionary.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "regularRH",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C5.6"
+          ],
+          "what": "Regular-singular RH comparison only, with its residue convention.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "picard",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C3.2d.2/C3.2f.1–2"
+          ],
+          "what": "Proper-flat universal-functions Picard carrier and its identity component under the proved smoothness/dimension hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "jacobian",
+          "roadmap": "JacobianChallenge",
+          "sections": [
+            "Layer C"
+          ],
+          "what": "Proper coherent pushforward, cohomology/base change and constant-rank locally free comparison.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "bundle",
+          "roadmap": "AlgebraicVectorBundles",
+          "sections": [
+            "L0A–L0C/L1A–L1B"
+          ],
+          "what": "Locally free sheaves, tensor/dual/determinant and geometric vector-bundle carriers.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "complex",
+          "roadmap": "ComplexKahlerGeometry",
+          "sections": [
+            "K1/K3.0/K4/K7.1"
+          ],
+          "what": "Complex manifold inverse-function theory, holomorphic calculus/connections and projective-space charts.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "smooth",
+          "roadmap": "SmoothBundlesConnections",
+          "sections": [
+            "B1.5/B5"
+          ],
+          "what": "Smooth Ehresmann/transport interfaces; no automatic holomorphic parameter-dependence or proper RH conclusion.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "flows",
+          "roadmap": "DifferentialGeometry",
+          "sections": [
+            "Layers 0–1 and Layer 3/3.5"
+          ],
+          "what": "Differential forms and local/maximal/time-dependent smooth flow floor.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "covers",
+          "roadmap": "UniversalCovers",
+          "sections": [
+            "completed covering and lifting interface"
+          ],
+          "what": "Native covers, lifting and fundamental groupoid.",
+          "catalogue_status": "completed-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "realDet",
+          "roadmap": "HeegaardFloer",
+          "sections": [
+            "2.2/F0.0"
+          ],
+          "what": "Real determinant-line stabilization and comparison only; the complex holomorphic extension is a named gap.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "operator",
+          "roadmap": "OperatorTheory",
+          "sections": [
+            "OperatorIdeals OI-B23/OI-B30; ToeplitzOperators T3"
+          ],
+          "what": "Complex operator ideals, trace-class carrier, matrix-symbol Fredholm/index theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "det",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.3"
+          ],
+          "what": "Generic trace-class determinant, trace and trace-norm continuity floor within its actual operator scope.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "hm",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.4–8.5"
+          ],
+          "what": "Airy edge, Hastings–McLeod existence/uniqueness and real pole-freeness, Fredholm/Tracy–Widom identities.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "series",
+          "roadmap": "FormalLaurentPuiseux",
+          "sections": [
+            "L1–L7"
+          ],
+          "what": "Scalar Laurent/Puiseux arithmetic, substitution, residues and ramification, not Stokes theory.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "barnes",
+          "roadmap": "AnalyticNumberTheoryPartII",
+          "sections": [
+            "4.3–4.3a"
+          ],
+          "what": "Canonical Barnes G product, normalization, recurrence, zeros and rigorous sectorial asymptotics.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "poisson",
+          "roadmap": "LieGroupoidsPoisson",
+          "sections": [
+            "G4.6A"
+          ],
+          "what": "Positive smooth real Lie–Poisson bracket; complex Takiff adapter is owned by target 11.1.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "reduction",
+          "roadmap": "SymplecticGeometry",
+          "sections": [
+            "HamiltonianReduction R2–R3"
+          ],
+          "what": "Smooth real coadjoint/KKS and free/proper reduction comparisons; not an automatic complex algebraic reduction theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        }
+      ],
+      "after": [
+        {
+          "contract": "formal",
+          "roadmap": "FormalConnectionsOpers",
+          "sections": [
+            "F2–F3"
+          ],
+          "what": "Algebraic/formal connection groupoids; no analytic Stokes or full isomonodromy theorem; finite-ramification normal forms are a separate direct supplier.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "turrittin",
+          "roadmap": "PadicDifferentialEquationsAndRigidCohomology",
+          "sections": [
+            "RD.6.52a"
+          ],
+          "what": "Characteristic-zero formal finite-ramification normal forms, constants and descent, specialized over ℂ.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "stack",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.18/1.23"
+          ],
+          "what": "Stacks, 2-fiber products and stated fine/coarse moduli criteria.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quot",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "4.14"
+          ],
+          "what": "Noetherian projective Quot/Hilbert and Hom/Isom constructions.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "coh",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.2/2.6/2.20/3.3/4.2–4.6"
+          ],
+          "what": "Čech and coherent cohomology, termwise Serre duality, curve Euler characteristic and deformation foundations.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "surface",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "2.7/3.4/4.11/4.17/5.9–5.10"
+          ],
+          "what": "Supported cohomology, divisor/Picard groups, modifications, normal crossings and surface intersection/adjunction.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "qcdescent",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.22"
+          ],
+          "what": "Quasi-coherent module presentation and descent on stacks.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "quotient",
+          "roadmap": "SchemeAndStackFoundations",
+          "sections": [
+            "1.17"
+          ],
+          "what": "Categorical/geometric quotient framework; application hypotheses must be checked.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "moduli",
+          "roadmap": "AlgebraicModuliForArithmeticGeometry",
+          "sections": [
+            "5.1/7.1/8"
+          ],
+          "what": "Rigidification, Artin criteria and framed deformation/versality at their stated hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "curve",
+          "roadmap": "ComplexCurveModuli",
+          "sections": [
+            "D0/D2.0"
+          ],
+          "what": "Genus-zero families and native-manifold/analytic-space adapter.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "analytic",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C−1.1/C0.3"
+          ],
+          "what": "Complex analytic spaces, quotients, gluing, analytification and analytic bundle/sheaf dictionary.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "regularRH",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C5.6"
+          ],
+          "what": "Regular-singular RH comparison only, with its residue convention.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "picard",
+          "roadmap": "ComplexComparisonPartII",
+          "sections": [
+            "C3.2d.2/C3.2f.1–2"
+          ],
+          "what": "Proper-flat universal-functions Picard carrier and its identity component under the proved smoothness/dimension hypotheses.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "jacobian",
+          "roadmap": "JacobianChallenge",
+          "sections": [
+            "Layer C"
+          ],
+          "what": "Proper coherent pushforward, cohomology/base change and constant-rank locally free comparison.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "bundle",
+          "roadmap": "AlgebraicVectorBundles",
+          "sections": [
+            "L0A–L0C/L1A–L1B"
+          ],
+          "what": "Locally free sheaves, tensor/dual/determinant and geometric vector-bundle carriers.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "complex",
+          "roadmap": "ComplexKahlerGeometry",
+          "sections": [
+            "K1/K3.0/K4/K7.1"
+          ],
+          "what": "Complex manifold inverse-function theory, holomorphic calculus/connections and projective-space charts.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "smooth",
+          "roadmap": "SmoothBundlesConnections",
+          "sections": [
+            "B1.5/B5"
+          ],
+          "what": "Smooth Ehresmann/transport interfaces; no automatic holomorphic parameter-dependence or proper RH conclusion.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "flows",
+          "roadmap": "DifferentialGeometry",
+          "sections": [
+            "Layers 0–1 and Layer 3/3.5"
+          ],
+          "what": "Differential forms and local/maximal/time-dependent smooth flow floor.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "covers",
+          "roadmap": "UniversalCovers",
+          "sections": [
+            "completed covering and lifting interface"
+          ],
+          "what": "Native covers, lifting and fundamental groupoid.",
+          "catalogue_status": "completed-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "realDet",
+          "roadmap": "HeegaardFloer",
+          "sections": [
+            "2.2/F0.0"
+          ],
+          "what": "Real determinant-line stabilization and comparison only; the complex holomorphic extension is the explicit proof target A1.1, not an output supplied by this external contract.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "operator",
+          "roadmap": "OperatorTheory",
+          "sections": [
+            "OperatorIdeals OI-B23/OI-B30; ToeplitzOperators T3"
+          ],
+          "what": "Complex operator ideals, trace-class carrier, matrix-symbol Fredholm/index theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "det",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.3"
+          ],
+          "what": "Generic trace-class determinant, trace and trace-norm continuity floor within its actual operator scope.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "hm",
+          "roadmap": "RandomMatrices",
+          "sections": [
+            "8.4–8.5"
+          ],
+          "what": "Airy edge, Hastings–McLeod existence/uniqueness and real pole-freeness, Fredholm/Tracy–Widom identities.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "series",
+          "roadmap": "FormalLaurentPuiseux",
+          "sections": [
+            "L1–L7"
+          ],
+          "what": "Scalar Laurent/Puiseux arithmetic, substitution, residues and ramification, not Stokes theory.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "barnes",
+          "roadmap": "AnalyticNumberTheoryPartII",
+          "sections": [
+            "4.3–4.3a"
+          ],
+          "what": "Canonical Barnes G product, normalization, recurrence, zeros and rigorous sectorial asymptotics.",
+          "catalogue_status": "proposed",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "poisson",
+          "roadmap": "LieGroupoidsPoisson",
+          "sections": [
+            "G4.6A"
+          ],
+          "what": "Positive smooth real Lie–Poisson bracket; the complex relative finite-algebra dual-Poisson extension is owned by C1.2, and P11.1 verifies the collision-specific application comparisons.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        },
+        {
+          "contract": "reduction",
+          "roadmap": "SymplecticGeometry",
+          "sections": [
+            "HamiltonianReduction R2–R3"
+          ],
+          "what": "Smooth real coadjoint/KKS and free/proper reduction comparisons; not an automatic complex algebraic reduction theorem.",
+          "catalogue_status": "main-roadmap",
+          "evidence": "reports/worker_contract.md and reports/worker_contract_addendum.md"
+        }
+      ],
+      "reason": "Correct inherited administrative ownership summaries to the already-extracted A1.1 and C1.2 targets. External supplier scope and every target prerequisite remain unchanged; original text is preserved in historical metadata."
+    }
+  ],
+  "old_graph": {
+    "NonlinearConnections/1.1": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:SmoothBundlesConnections §B1.5/B5",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "NonlinearConnections/1.2": {
+      "prerequisites": [
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5"
+      ]
+    },
+    "NonlinearConnections/1.3": {
+      "prerequisites": [
+        "NonlinearConnections/1.1",
+        "NonlinearConnections/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "NonlinearConnections/1.4": {
+      "prerequisites": [
+        "NonlinearConnections/1.1",
+        "NonlinearConnections/1.2"
+      ],
+      "external_contracts": []
+    },
+    "NonlinearConnections/1.5": {
+      "prerequisites": [
+        "NonlinearConnections/1.1",
+        "NonlinearConnections/1.2",
+        "NonlinearConnections/1.3"
+      ],
+      "external_contracts": [
+        "roadmap:UniversalCovers §completed covering and lifting interface",
+        "roadmap:SmoothBundlesConnections §B1.5/B5"
+      ]
+    },
+    "NonlinearConnections/1.6": {
+      "prerequisites": [
+        "NonlinearConnections/1.1",
+        "NonlinearConnections/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "NonlinearConnections/1.7": {
+      "prerequisites": [
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexCurveModuli §D0/D2.0",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "NonlinearConnections/1.8": {
+      "prerequisites": [
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1",
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5"
+      ]
+    },
+    "NonlinearConnections/1.9": {
+      "prerequisites": [
+        "NonlinearConnections/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "MeromorphicConnectionModuli/1.1": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:PadicDifferentialEquationsAndRigidCohomology §RD.6.52a",
+        "roadmap:SchemeAndStackFoundations §1.18/1.23",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B"
+      ]
+    },
+    "MeromorphicConnectionModuli/1.2": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexCurveModuli §D0/D2.0",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    "MeromorphicConnectionModuli/2.1": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1/7.1/8"
+      ]
+    },
+    "MeromorphicConnectionModuli/2.2": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/2.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6"
+      ]
+    },
+    "MeromorphicConnectionModuli/2.3": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.20/3.3",
+        "roadmap:ComplexComparisonPartII §C3.2d.2/C3.2f.1–2"
+      ]
+    },
+    "MeromorphicConnectionModuli/2.4": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.2",
+        "MeromorphicConnectionModuli/2.3"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/4.2–4.6",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B"
+      ]
+    },
+    "MeromorphicConnectionModuli/3.1": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2",
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.2",
+        "MeromorphicConnectionModuli/2.3",
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:SchemeAndStackFoundations §4.2–4.6"
+      ]
+    },
+    "MeromorphicConnectionModuli/3.2": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/2.2",
+        "MeromorphicConnectionModuli/2.4",
+        "MeromorphicConnectionModuli/3.1",
+        "NonlinearConnections/1.6"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "MeromorphicConnectionModuli/3.3": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2",
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.2",
+        "MeromorphicConnectionModuli/2.4",
+        "MeromorphicConnectionModuli/3.1",
+        "MeromorphicConnectionModuli/3.2",
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §1.18/1.23"
+      ]
+    },
+    "MeromorphicConnectionModuli/3.4": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2",
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.2",
+        "MeromorphicConnectionModuli/2.3",
+        "MeromorphicConnectionModuli/2.4",
+        "MeromorphicConnectionModuli/3.1",
+        "MeromorphicConnectionModuli/3.2",
+        "MeromorphicConnectionModuli/3.3",
+        "NonlinearConnections/1.1",
+        "NonlinearConnections/1.6"
+      ],
+      "external_contracts": []
+    },
+    "MeromorphicConnectionModuli/4.1": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2",
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/3.1",
+        "MeromorphicConnectionModuli/3.2",
+        "MeromorphicConnectionModuli/3.3",
+        "MeromorphicConnectionModuli/3.4",
+        "NonlinearConnections/1.3"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6",
+        "roadmap:ComplexCurveModuli §D0/D2.0"
+      ]
+    },
+    "MeromorphicConnectionModuli/4.2": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2",
+        "MeromorphicConnectionModuli/2.1",
+        "MeromorphicConnectionModuli/2.3",
+        "MeromorphicConnectionModuli/3.3",
+        "MeromorphicConnectionModuli/3.4",
+        "MeromorphicConnectionModuli/4.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.1": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:HeegaardFloer §2.2/F0.0",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30; complex bounded-Fredholm and local-splitting foundations"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.2": {
+      "prerequisites": [],
+      "external_contracts": [
+        "foundation:complex L² spaces, Fourier–Plancherel, the real-line Hilbert-transform bound, Schur estimates, Cauchy integral formula and holomorphic-function uniqueness",
+        "roadmap:OperatorTheory bounded-operator foundations; proposed Cauchy contour extension"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.3": {
+      "prerequisites": [
+        "AnalyticRHPAndDeterminants/1.2"
+      ],
+      "external_contracts": [
+        "foundation:bounded-operator Neumann series and holomorphic inversion"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.4": {
+      "prerequisites": [
+        "AnalyticRHPAndDeterminants/1.3"
+      ],
+      "external_contracts": [
+        "foundation:Hölder inequality, dominated convergence and compactness in weighted Lᵖ spaces"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.5": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1",
+        "foundation:holomorphic one-forms, primitives and integration on simply connected domains"
+      ]
+    },
+    "AnalyticRHPAndDeterminants/1.6": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30",
+        "foundation:holomorphic functions, Rouché theorem and argument principle"
+      ]
+    },
+    "AlgebraicConfluence/1.1": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "foundation:finite-dimensional complex vector spaces, convergent Laurent series and elementary compact-uniform holomorphic estimates"
+      ]
+    },
+    "AlgebraicConfluence/1.2": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:LieGroupoidsPoisson §G4.6A",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "foundation:finite locally free algebras, complex relative vector bundles, duals and symmetric algebras",
+        "foundation:relative Cartier divisors, curve differential forms and residue/dualizing-module comparison for the optional residue adapter"
+      ]
+    },
+    "PainleveEquationsAndFunctions/1.1": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/1.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "MeromorphicConnectionModuli/1.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/1.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/1.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/1.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/1.3"
+      ],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7"
+      ]
+    },
+    "PainleveEquationsAndFunctions/2.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.3",
+        "MeromorphicConnectionModuli/2.1"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/2.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/2.1",
+        "MeromorphicConnectionModuli/2.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/2.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.3",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "MeromorphicConnectionModuli/2.3",
+        "MeromorphicConnectionModuli/2.4"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/2.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/3.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "MeromorphicConnectionModuli/3.1",
+        "NonlinearConnections/1.1"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/3.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.1",
+        "MeromorphicConnectionModuli/3.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/3.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "MeromorphicConnectionModuli/3.2",
+        "NonlinearConnections/1.6"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/3.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "MeromorphicConnectionModuli/3.3",
+        "MeromorphicConnectionModuli/3.4"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/4.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2"
+      ],
+      "external_contracts": [
+        "roadmap:FormalConnectionsOpers §F2–F3",
+        "roadmap:PadicDifferentialEquationsAndRigidCohomology §RD.6.52a",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "PainleveEquationsAndFunctions/4.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/4.1",
+        "MeromorphicConnectionModuli/4.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §1.17",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:UniversalCovers §completed covering and lifting interface",
+        "roadmap:SmoothBundlesConnections §B1.5/B5"
+      ]
+    },
+    "PainleveEquationsAndFunctions/4.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.4",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/4.2",
+        "MeromorphicConnectionModuli/4.1"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+        "roadmap:ComplexComparisonPartII §C5.6"
+      ]
+    },
+    "PainleveEquationsAndFunctions/4.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/2.4",
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/4.2",
+        "PainleveEquationsAndFunctions/4.3",
+        "MeromorphicConnectionModuli/4.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:AlgebraicModuliForArithmeticGeometry §5.1/7.1/8",
+        "mathlib:IsProperMap"
+      ]
+    },
+    "PainleveEquationsAndFunctions/5.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "NonlinearConnections/1.3"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/5.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/4.2",
+        "PainleveEquationsAndFunctions/4.3",
+        "PainleveEquationsAndFunctions/4.4",
+        "PainleveEquationsAndFunctions/5.1",
+        "NonlinearConnections/1.4"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/5.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/5.2",
+        "NonlinearConnections/1.5",
+        "NonlinearConnections/1.6"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/5.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/5.1",
+        "PainleveEquationsAndFunctions/5.3",
+        "NonlinearConnections/1.7"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/5.5": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.4",
+        "PainleveEquationsAndFunctions/5.3",
+        "PainleveEquationsAndFunctions/5.4",
+        "NonlinearConnections/1.7"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/6.1": {
+      "prerequisites": [],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:ComplexComparisonPartII §C3.2d.2/C3.2f.1–2"
+      ]
+    },
+    "PainleveEquationsAndFunctions/6.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.3",
+        "PainleveEquationsAndFunctions/1.4",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/2.4",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/6.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §4.14"
+      ]
+    },
+    "PainleveEquationsAndFunctions/6.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/6.1",
+        "PainleveEquationsAndFunctions/6.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "roadmap:JacobianChallenge §Layer C"
+      ]
+    },
+    "PainleveEquationsAndFunctions/7.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/3.1"
+      ],
+      "external_contracts": [
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+        "roadmap:FormalConnectionsOpers §F2–F3"
+      ]
+    },
+    "PainleveEquationsAndFunctions/7.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/6.2",
+        "PainleveEquationsAndFunctions/6.3",
+        "PainleveEquationsAndFunctions/7.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10"
+      ]
+    },
+    "PainleveEquationsAndFunctions/7.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/6.1",
+        "PainleveEquationsAndFunctions/6.2",
+        "PainleveEquationsAndFunctions/6.3",
+        "PainleveEquationsAndFunctions/7.1",
+        "PainleveEquationsAndFunctions/7.2"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "PainleveEquationsAndFunctions/8.1": {
+      "prerequisites": [
+        "AnalyticRHPAndDeterminants/1.1"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/8.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/4.2",
+        "PainleveEquationsAndFunctions/4.3",
+        "PainleveEquationsAndFunctions/8.1"
+      ],
+      "external_contracts": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "roadmap:SchemeAndStackFoundations §1.22",
+        "roadmap:OperatorTheory §OperatorIdeals OI-B23/OI-B30; ToeplitzOperators T3",
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    "PainleveEquationsAndFunctions/8.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/8.1",
+        "PainleveEquationsAndFunctions/8.2"
+      ],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.3",
+        "roadmap:ComplexComparisonPartII §C−1.1/C0.3"
+      ]
+    },
+    "PainleveEquationsAndFunctions/8.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/8.2",
+        "PainleveEquationsAndFunctions/8.3"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1"
+      ]
+    },
+    "PainleveEquationsAndFunctions/9.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.4",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/3.1",
+        "NonlinearConnections/1.8"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/9.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.4",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/2.4",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/5.5",
+        "PainleveEquationsAndFunctions/6.2",
+        "PainleveEquationsAndFunctions/9.1"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/9.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2"
+      ],
+      "external_contracts": [
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "roadmap:UniversalCovers §completed covering and lifting interface"
+      ]
+    },
+    "PainleveEquationsAndFunctions/9.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/7.1",
+        "PainleveEquationsAndFunctions/7.2",
+        "PainleveEquationsAndFunctions/8.3",
+        "PainleveEquationsAndFunctions/8.4",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2",
+        "PainleveEquationsAndFunctions/9.3"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/9.5": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/7.1",
+        "PainleveEquationsAndFunctions/7.2",
+        "PainleveEquationsAndFunctions/7.3",
+        "PainleveEquationsAndFunctions/8.4",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2",
+        "PainleveEquationsAndFunctions/9.3",
+        "PainleveEquationsAndFunctions/9.4"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/10.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/4.2",
+        "PainleveEquationsAndFunctions/4.3",
+        "PainleveEquationsAndFunctions/5.1",
+        "PainleveEquationsAndFunctions/5.2",
+        "PainleveEquationsAndFunctions/5.3",
+        "PainleveEquationsAndFunctions/5.4",
+        "PainleveEquationsAndFunctions/8.2",
+        "PainleveEquationsAndFunctions/8.3",
+        "PainleveEquationsAndFunctions/8.4",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/10.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/4.1",
+        "PainleveEquationsAndFunctions/5.1",
+        "PainleveEquationsAndFunctions/5.3",
+        "PainleveEquationsAndFunctions/10.1",
+        "AnalyticRHPAndDeterminants/1.2",
+        "AnalyticRHPAndDeterminants/1.3",
+        "AnalyticRHPAndDeterminants/1.4"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/10.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/8.3",
+        "PainleveEquationsAndFunctions/8.4",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2",
+        "PainleveEquationsAndFunctions/9.4",
+        "PainleveEquationsAndFunctions/9.5",
+        "PainleveEquationsAndFunctions/10.1",
+        "PainleveEquationsAndFunctions/10.2"
+      ],
+      "external_contracts": [
+        "roadmap:AnalyticNumberTheoryPartII §4.3–4.3a",
+        "roadmap:RandomMatrices §8.4–8.5"
+      ]
+    },
+    "PainleveEquationsAndFunctions/10.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/5.1",
+        "PainleveEquationsAndFunctions/5.2",
+        "PainleveEquationsAndFunctions/5.3",
+        "PainleveEquationsAndFunctions/5.4",
+        "PainleveEquationsAndFunctions/5.5",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.5"
+      ],
+      "external_contracts": [
+        "roadmap:RandomMatrices §8.4–8.5"
+      ]
+    },
+    "PainleveEquationsAndFunctions/11.1": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/1.1",
+        "PainleveEquationsAndFunctions/1.2",
+        "PainleveEquationsAndFunctions/1.3",
+        "PainleveEquationsAndFunctions/1.4",
+        "PainleveEquationsAndFunctions/2.1",
+        "PainleveEquationsAndFunctions/2.2",
+        "PainleveEquationsAndFunctions/2.3",
+        "PainleveEquationsAndFunctions/3.1",
+        "PainleveEquationsAndFunctions/3.2",
+        "PainleveEquationsAndFunctions/3.3",
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/6.2",
+        "AlgebraicConfluence/1.1",
+        "AlgebraicConfluence/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:SymplecticGeometry §HamiltonianReduction R2–R3"
+      ]
+    },
+    "PainleveEquationsAndFunctions/11.2": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/11.1",
+        "NonlinearConnections/1.9"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/11.3": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/3.4",
+        "PainleveEquationsAndFunctions/9.1",
+        "PainleveEquationsAndFunctions/9.2",
+        "PainleveEquationsAndFunctions/9.3",
+        "PainleveEquationsAndFunctions/9.4",
+        "PainleveEquationsAndFunctions/9.5",
+        "PainleveEquationsAndFunctions/11.1",
+        "PainleveEquationsAndFunctions/11.2"
+      ],
+      "external_contracts": []
+    },
+    "PainleveEquationsAndFunctions/11.4": {
+      "prerequisites": [
+        "PainleveEquationsAndFunctions/8.2",
+        "PainleveEquationsAndFunctions/8.3",
+        "PainleveEquationsAndFunctions/8.4",
+        "PainleveEquationsAndFunctions/10.2",
+        "PainleveEquationsAndFunctions/11.1",
+        "PainleveEquationsAndFunctions/11.2",
+        "AnalyticRHPAndDeterminants/1.5",
+        "AnalyticRHPAndDeterminants/1.6"
+      ],
+      "external_contracts": []
+    },
+    "FiveLogarithmicPoints/1.1": {
+      "prerequisites": [
+        "MeromorphicConnectionModuli/1.1",
+        "MeromorphicConnectionModuli/1.2"
+      ],
+      "external_contracts": [
+        "roadmap:ComplexComparisonPartII §C5.6 regular-singular correspondence, with chosen-logarithm lattice comparison"
+      ]
+    },
+    "FiveLogarithmicPoints/1.2": {
+      "prerequisites": [
+        "FiveLogarithmicPoints/1.1",
+        "MeromorphicConnectionModuli/3.4",
+        "NonlinearConnections/1.6"
+      ],
+      "external_contracts": []
+    },
+    "FiveLogarithmicPoints/1.3": {
+      "prerequisites": [
+        "FiveLogarithmicPoints/1.1",
+        "FiveLogarithmicPoints/1.2",
+        "MeromorphicConnectionModuli/4.1",
+        "MeromorphicConnectionModuli/4.2"
+      ],
+      "external_contracts": []
+    },
+    "FiveLogarithmicPoints/1.4": {
+      "prerequisites": [
+        "FiveLogarithmicPoints/1.2",
+        "FiveLogarithmicPoints/1.3",
+        "NonlinearConnections/1.3",
+        "NonlinearConnections/1.4",
+        "NonlinearConnections/1.5",
+        "NonlinearConnections/1.6",
+        "NonlinearConnections/1.7"
+      ],
+      "external_contracts": []
+    }
+  },
+  "allowed_target_transformation": "Recursively apply normalization.rewrite_text to strings, use map_ref for prerequisite strings, prefix target.id with its part, and add part/scope_role. No target field is deleted; existing role is preserved.",
+  "metadata_reference_rules": {
+    "owned_proof_obligations target/targets": "Prefix by the owning part.",
+    "expanded_named_gaps neededBy": "Prefix by P.",
+    "expanded_named_gaps expanded_as": "Resolve the explicitly named general part.",
+    "analytic extraction_map old_target": "Prefix by P.",
+    "analytic extraction_map new_targets": "Prefix by A.",
+    "source_registry": "Use sources.toml relative to the unified roadmap root."
+  },
+  "source_namespace_boundary": "Original component names and old file paths in this report identify frozen sources only. They do not register live plans or dependencies."
+}

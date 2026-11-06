@@ -1,0 +1,498 @@
+{
+  "edition": "single-roadmap-content-preserving",
+  "documents": [
+    {
+      "source": "frameworks/NonlinearConnections/README.md",
+      "part": "N",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "721e70364ae021128faf010ef7c204b564f1eaaabd7e9a5c7e4e5c6bfbefcec7",
+      "transformed_sha256": "aaedbb1e4e36afd3b9905c5a642271409a27a8e9cbe13963d4d91445dd430891",
+      "start_marker": "<!-- source-body:N:en:begin -->",
+      "end_marker": "<!-- source-body:N:en:end -->",
+      "source_characters": 45970,
+      "preserved_body_characters": 46324
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.md",
+      "part": "M",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "35a7e07a3497c04918c02b6accfd1ab877bb0085254c1c299181498383b84d7b",
+      "transformed_sha256": "4dda3172e86ff59e064b06ef537ec66ab522043fc4123653a2afe5ae2c39be83",
+      "start_marker": "<!-- source-body:M:en:begin -->",
+      "end_marker": "<!-- source-body:M:en:end -->",
+      "source_characters": 58948,
+      "preserved_body_characters": 59218
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.md",
+      "part": "A",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "04278d6797bf73e8bf36a89cc68c4f7c2c1def037d30eb7d925b1277606e6fb8",
+      "transformed_sha256": "45eaa4420ebdd7f370a4915afb26625d5b0ad8fcdc2be13854045dd7b6472420",
+      "start_marker": "<!-- source-body:A:en:begin -->",
+      "end_marker": "<!-- source-body:A:en:end -->",
+      "source_characters": 28241,
+      "preserved_body_characters": 28356
+    },
+    {
+      "source": "frameworks/AlgebraicConfluence/README.md",
+      "part": "C",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "2f9f58497d8645bb0135b1580c02146a2ec953bf00511d137f457951eee8f2c5",
+      "transformed_sha256": "8d3ab2728d04e6c4810b186010221e9ae94451a510b44913818dd9c38de7330d",
+      "start_marker": "<!-- source-body:C:en:begin -->",
+      "end_marker": "<!-- source-body:C:en:end -->",
+      "source_characters": 12792,
+      "preserved_body_characters": 12759
+    },
+    {
+      "source": "README.md",
+      "part": "P",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "f7b1554e29703b568e87792848b5c07b165aca79f743c6a796137bb5415cab65",
+      "transformed_sha256": "3476afbb7f2542412ccf6ce3960d77d0ae2151ba1c2c9ebcdaab41cdcb73b7dc",
+      "start_marker": "<!-- source-body:P:en:begin -->",
+      "end_marker": "<!-- source-body:P:en:end -->",
+      "source_characters": 142452,
+      "preserved_body_characters": 142776
+    },
+    {
+      "source": "applications/FiveLogarithmicPoints/README.md",
+      "part": "G",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "a1f7592c5f1883dc41ca84e839c1d5fe997019053f3ece9258de440579eb44fc",
+      "transformed_sha256": "baa56a6edf2de5748cafe5804c8d42bf19cd50290d77e6a6a6804771a0b339ad",
+      "start_marker": "<!-- source-body:G:en:begin -->",
+      "end_marker": "<!-- source-body:G:en:end -->",
+      "source_characters": 12954,
+      "preserved_body_characters": 12827
+    },
+    {
+      "source": "REUSABILITY.md",
+      "part": "R",
+      "language": "en",
+      "destination": "README.md",
+      "source_sha256": "38519184c88aa7210d824f9cec29be433365454a3c8cdd9d106052ee043b3f4a",
+      "transformed_sha256": "25c687b7624e427becb38a65b54fa188ffab68ef6b0ff396701faa32116376ce",
+      "start_marker": "<!-- source-body:R:en:begin -->",
+      "end_marker": "<!-- source-body:R:en:end -->",
+      "source_characters": 8760,
+      "preserved_body_characters": 8930
+    },
+    {
+      "source": "frameworks/NonlinearConnections/README.ja.md",
+      "part": "N",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "95ce938293212dcaeafdfc009fa853d18dafd54a1c1ee394a7a8686b39dfb2dd",
+      "transformed_sha256": "a369517ca5faec226b56c7004cbde431721bf45021e6f947b1fba0c786065f85",
+      "start_marker": "<!-- source-body:N:ja:begin -->",
+      "end_marker": "<!-- source-body:N:ja:end -->",
+      "source_characters": 22305,
+      "preserved_body_characters": 22642
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.ja.md",
+      "part": "M",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "b7a43a8ba8d309ff08979f892258837f0ab95e23f6c27306884bc59d6e15a5d6",
+      "transformed_sha256": "8a780a1313d19ed75aac21808bf9a6e88b533e68836c369a3da53b37cef17b68",
+      "start_marker": "<!-- source-body:M:ja:begin -->",
+      "end_marker": "<!-- source-body:M:ja:end -->",
+      "source_characters": 29531,
+      "preserved_body_characters": 29726
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.ja.md",
+      "part": "A",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "b07fec4bd57b6efcb72d956ecab8069406d44b0e247dca648298930241dc5959",
+      "transformed_sha256": "e8e4254da0e8d71e92027ad86086cefb32737b9f5b1c233dbfb457897e560c98",
+      "start_marker": "<!-- source-body:A:ja:begin -->",
+      "end_marker": "<!-- source-body:A:ja:end -->",
+      "source_characters": 13235,
+      "preserved_body_characters": 13352
+    },
+    {
+      "source": "frameworks/AlgebraicConfluence/README.ja.md",
+      "part": "C",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "733010f0580c7c3642dd8ca8cb7d84c25144b786170c04cdc95ac4de1686f255",
+      "transformed_sha256": "9ec2cfa14db7fb269073da814d544293b352abfab5ad8c6c79be7742daa9c3e9",
+      "start_marker": "<!-- source-body:C:ja:begin -->",
+      "end_marker": "<!-- source-body:C:ja:end -->",
+      "source_characters": 6311,
+      "preserved_body_characters": 6299
+    },
+    {
+      "source": "README.ja.md",
+      "part": "P",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "4a9c11f83f39468336cdc585c4fcdd717dbe7ef9794f5cdde3dfed29e1b463d8",
+      "transformed_sha256": "344b24a2f1a6121530a8eb313b05b3b5e0ec57d25743f4476bcc1c461d8daf06",
+      "start_marker": "<!-- source-body:P:ja:begin -->",
+      "end_marker": "<!-- source-body:P:ja:end -->",
+      "source_characters": 81781,
+      "preserved_body_characters": 82019
+    },
+    {
+      "source": "applications/FiveLogarithmicPoints/README.ja.md",
+      "part": "G",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "248968914b417c4431a8ac826d20b3b5dea6cfa4549635680a039b54b0c680ed",
+      "transformed_sha256": "d75d1d4a703c6ad7ddfa72057fec168cef224540e6bbffa52701ee5441266f1d",
+      "start_marker": "<!-- source-body:G:ja:begin -->",
+      "end_marker": "<!-- source-body:G:ja:end -->",
+      "source_characters": 7508,
+      "preserved_body_characters": 7342
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "part": "R",
+      "language": "ja",
+      "destination": "README.ja.md",
+      "source_sha256": "2196eb8abaee6b20b1eec60231d0a1c51a0cf0038a7d0b9807131039ea626c7c",
+      "transformed_sha256": "c5ebaf113df750d428f14e1359e2fd3348c5e3b009bd995ae9b1f7677c97f511",
+      "start_marker": "<!-- source-body:R:ja:begin -->",
+      "end_marker": "<!-- source-body:R:ja:end -->",
+      "source_characters": 5783,
+      "preserved_body_characters": 5767
+    }
+  ],
+  "layout_edits": [
+    {
+      "source": "frameworks/NonlinearConnections/README.md",
+      "old": "recorded target by target in plan.json",
+      "new": "recorded target by target in design/plan.json",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/NonlinearConnections/README.md",
+      "old": "This is a reusable dependency unit with its own [plan](plan.json) and [Japanese version](README.ja.md).",
+      "new": "This is an independently reusable part of the single roadmap, recorded in its one [plan](design/plan.json) and [Japanese version](README.ja.md#part-n).",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.md",
+      "old": "## Layer 4: Optional logarithmic Riemann–Hilbert and properness branch",
+      "new": "## Layer 4: Logarithmic Riemann–Hilbert and properness branch",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.md",
+      "old": "**Independent mathematical framework — draft.** This is a proposed upstream owner, with its own inputs, twelve theorem/construction targets and output contracts.",
+      "new": "**General mathematical part — draft.** Part M has its own inputs, twelve theorem/construction targets and output contracts within this single roadmap. Its proposed upstream ownership is retained.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.md",
+      "old": "In `plan.json`, `target:1.3` refers to this module. A consumer imports a contract as `framework:AnalyticRHPAndDeterminants/1.3`.",
+      "new": "In the one `design/plan.json`, every consumer refers to the same internal target `target:A1.3`.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "## Reusable proof packages and independent consumers",
+      "new": "## General parts and independent applications in this roadmap",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "The companion files are part of this draft, not merely suggestions to write another roadmap later.",
+      "new": "Parts N, M, A and C contain these general proof targets in full in this same document; Part G contains the second application.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "| Package | Construction or theorem | Independent consumers |",
+      "new": "| General or applied part | Construction or theorem | Independent consumers |",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "The reusable constructions and the Painlevé application have separate proof targets and dependency graphs.",
+      "new": "The reusable constructions and the Painlevé application have separate proof targets within one dependency graph.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "This roadmap owns the classical restriction and its hypothesis checks,",
+      "new": "Part P owns the classical restriction and its hypothesis checks,",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "The structured graph is a local draft extension with explicit framework references.",
+      "new": "The structured graph is one local draft graph with explicit internal target references.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "This roadmap; FiveLogarithmicPoints;",
+      "new": "Part P; Part G;",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "This roadmap; independent operator",
+      "new": "Part P; independent operator",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.md",
+      "old": "This roadmap; other pole-collision",
+      "new": "Part P; other pole-collision",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "**Unpublished mathematical draft.**",
+      "new": "**Mathematical draft.**",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "Worker execution, push and publication have not occurred.",
+      "new": "Worker execution and official upstream acceptance are not claimed. The user has authorized a draft branch in their fork.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "The original 44 Painlevé IDs remain stable as application bindings or specialized targets.",
+      "new": "Part P retains the original 44 local Painlevé numbers as application bindings or specialized targets, now with the canonical prefix P; reports/unification/id_map.json records every old-to-new address.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "Current independent review and repairs are in `reports/reusability/review_report.ja.md`.",
+      "new": "The mathematical review of the preceding split edition and its repairs are in `reports/reusability/review_report.ja.md`; the current consolidation review is in `reports/unification/review_report.ja.md`.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "## Independent proof packages",
+      "new": "## Independently reusable parts of one roadmap",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "`design/reuse_registry.json` registers each actual package and `reports/reusability/validate_reusability.py` expands the combined graph.",
+      "new": "`design/reuse_registry.json` registers the six internal parts of one plan; `reports/unification/validate_one_roadmap.py` checks the one graph and its exact correspondence with the reviewed split edition.",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.md",
+      "old": "| Package |",
+      "new": "| Part |",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/NonlinearConnections/README.ja.md",
+      "old": "上流への担当先の提案は plan.json の各目標に記録する。",
+      "new": "上流への担当先の提案は design/plan.json の各目標に記録する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/NonlinearConnections/README.ja.md",
+      "old": "本モジュールは、独立した [plan](plan.json) と [英語版](README.md) を持つ再利用可能な依存単位である。",
+      "new": "本部は、一つのロードマップの中で独立に再利用できる証明単位であり、共通の [plan](design/plan.json) と [英語版](README.md#part-n) に記録する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.ja.md",
+      "old": "選択的な対数 Riemann–Hilbert・固有性の分枝",
+      "new": "対数 Riemann–Hilbert・固有性の分枝",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/MeromorphicConnectionModuli/README.ja.md",
+      "old": "**独立した数学枠組み・ドラフト。** 独自の入力、12個の定義・構成・定理目標、出力条件を持つ上流の担当を提案する。",
+      "new": "**一般理論を担う部・ドラフト。** 本ロードマップのM部は独自の入力、12個の定義・構成・定理目標、出力条件を持つ。上流の担当についての提案を保持する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "frameworks/AnalyticRHPAndDeterminants/README.ja.md",
+      "old": "`plan.json` の `target:1.3` はこのモジュール内の参照である。利用側は `framework:AnalyticRHPAndDeterminants/1.3` として仕様を参照する。",
+      "new": "一つの `design/plan.json` において、すべての利用側が同じ内部目標 `target:A1.3` を参照する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "## 再利用する証明パッケージと独立した利用先",
+      "new": "## 本ロードマップ内の一般理論と独立した適用",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "同梱した一般枠組みは、このドラフトの実際の構成要素である。",
+      "new": "一般理論N・M・A・Cと第二の適用Gは、この同じ文書に全文を収めた構成要素である。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "構造化グラフは、枠組み間の参照を明示したローカルなドラフト拡張である。",
+      "new": "構造化グラフは、部をまたぐ内部目標の参照を明示した、一つのローカルなドラフトである。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "再利用可能な構成とパンルヴェへの適用は、証明目標と依存グラフを分ける。",
+      "new": "再利用可能な構成とパンルヴェへの適用は、一つの依存グラフの中で別の証明目標として区別する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "本ロードマップは古典的制限とその仮定の検証、",
+      "new": "本P部は古典的制限とその仮定の検証、",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "本ロードマップ、FiveLogarithmicPoints、",
+      "new": "P部、G部、",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "本ロードマップ、独立した作用素",
+      "new": "P部、独立した作用素",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "本ロードマップ、他の極衝突",
+      "new": "P部、他の極衝突",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "| パッケージ | 構成・定理 | 独立した利用先 |",
+      "new": "| 一般理論・適用の部 | 構成・定理 | 独立した利用先 |",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "本文の11層・44項目の番号、数式、文献キー、構成・法則、検証事項、依存関係を維持している。",
+      "new": "P部の11層・44項目を、接頭辞Pを付けた番号で保持する。数式、文献キー、構成・法則、検証事項、依存関係を維持している。統合計画全体は19層・77目標である。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "この付録は、この再利用性改訂版の `design/plan.json` にある44項目の `hypotheses` を日本語で示す。",
+      "new": "この付録は、統合版 `design/plan.json` のP部にある44項目の `hypotheses` を日本語で示す。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "README.ja.md",
+      "old": "次の12項目は、構造化計画で明示的に記録された証明課題である。",
+      "new": "次の12項目は、構造化計画のP部で明示的に記録された証明課題である。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "**状態：未公開の数学ドラフト。**",
+      "new": "**状態：数学ドラフト。**",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "Worker の実行、push、公開は行っていない。",
+      "new": "Worker は実行していない。ユーザーの指示により、fork先のドラフトブランチへの反映を行う。公式上流での受理は主張しない。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "旧版で使った目標番号は、パンルヴェ側の利用契約として維持した。",
+      "new": "パンルヴェ側の44個の旧ローカル番号は、接頭辞Pを付けた正式番号として維持した。旧番号から新番号への全対応を `reports/unification/id_map.json` に記録する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "| パッケージ |",
+      "new": "| 部 |",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "新しい一般モジュライ構成のロードマップとして提案",
+      "new": "本ロードマップの一般構成M部。将来の上流担当を提案",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "`design/reuse_registry.json` が各パッケージを登録し、`reports/reusability/validate_reusability.py` が全体を展開する。",
+      "new": "`design/reuse_registry.json` が一つの計画の内部の六つの部を登録し、`reports/unification/validate_one_roadmap.py` が単一のグラフと、レビュー済み分冊版との一致を検査する。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "すべての内部・パッケージ間参照が実在し、グラフが循環しない。",
+      "new": "すべての内部・部をまたぐ参照が実在し、グラフが循環しない。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    },
+    {
+      "source": "REUSABILITY.ja.md",
+      "old": "現在の厳格レビューと修正の記録は [review_report.ja.md](reports/reusability/review_report.ja.md) を参照。",
+      "new": "数学内容の厳格レビューと修正の記録は [旧版の数学レビュー](reports/reusability/review_report.ja.md)、今回の統合と内容保持の確認は [統合レビュー](reports/unification/review_report.ja.md) を参照。",
+      "occurrences": 1,
+      "kind": "layout-or-reference-explanation"
+    }
+  ],
+  "normalization": "normalization.py: named internal addresses only; bare source/local references retain explicit part-local convention"
+}

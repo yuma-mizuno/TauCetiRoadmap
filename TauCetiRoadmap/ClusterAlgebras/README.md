@@ -20,7 +20,7 @@ results and proof ingredients; their historical encodings do not prescribe the A
 | 0 | Coefficients, based quantum tori, Laurent charts and local algebra | Mathlib; shared twisted algebra |
 | 1 | Exchange frames, polynomial mutation, classical and quantum seeds and algebras | 0 |
 | 2 | Common polynomial upper bounds; quantum and classical Laurentness; separation | 0–1 |
-| 3 | Lattice formalism, cluster varieties and convention transports | 0–2; scheme gluing |
+| 3 | Lattice formalism, cluster varieties and convention transports | 0–2; toric carriers and scheme gluing |
 | 4 | Classical upper-bound structure and acyclic presentations | 0–2 |
 | 5 | Finite-type classification and root parametrizations | 0–2; RootSystems |
 | 6 | Cluster scattering, Laurent positivity and sign-coherence | 0–3; ScatteringDiagrams |
@@ -81,6 +81,11 @@ generalized coefficient-semifield separation is outside this roadmap.
   supplies scheme gluing, dimension theory and §0.6's normal Hartogs extension.
   [SchubertGeometry](../SchubertGeometry/README.md) owns flag/Schubert section theory;
   use its existing comparisons when expressing minors as sections, without duplicating it.
+- [AnalyticToricGeometry](../AnalyticToricGeometry/README.md), Layer 0, owns the
+  lattice, cone and dual-semigroup carriers and their complex affine toric schemes.
+  Section 3.3 extends the regular-cone chart and face-localization API to the
+  characteristic-zero ground field used here; §6.3 consumes it. The complex
+  scheme construction is not an arbitrary-field supplier.
 
 - [InductionRestriction](../RepresentationTheory/InductionRestriction/README.md),
   Layer 7's twisted group algebra, owns the normalized-cocycle carrier and its
@@ -212,6 +217,10 @@ the `z_t` (`t∈T\S`) for `S⊆T`.
 **Checks.** `Trop(Empty)` is the one-element object; `z^{(-1,2)}∈Trop(Fin 2)` evaluates
 to `q_0⁻¹q_1²`. `(u_0²+u_0u_1)/(u_0+u_1)∈Qsf(Fin 2)` evaluates to `y_0` in every `P`. The
 canonical chart of `L(ℤ,Fin 2)` keeps monomials `ℤ`-linearly independent.
+`Qsf(Empty)` is the positive rational semifield, not `Trop(Empty)`.
+For `J={1,2}` and `S={1}`, `z_1⁻¹z_2²∈R_S` but `z_2⁻¹∉R_S`; the latter enters after
+localizing at `z_2`. Evaluation `L(ℤ,Unit)→ℤ` at `X=1` exists, while `X↦2`
+does not extend to that Laurent ring because 2 is not a unit of ℤ.
 
 **0.4 Based quantum tori and Ore realizations.** For a commutative ring `R`, a unit
 `u∈Rˣ`, a finite free lattice `L` and an integral alternating form `Λ`, let `T(R,u,Λ)` be
@@ -236,9 +245,11 @@ taken in that order; the result is independent of the order.
 Over a field it
 satisfies the left and right Ore conditions; prove them (they may then be registered as
 instances) rather than assuming them as instance arguments.
-Construct its skew field of fractions with `OreLocalization`, proving as extensions of
-Mathlib's API the missing injectivity, fraction-comparison, division-ring and
-universal-property lemmas; for a domain `R`, coefficient change embeds `T(R,u,Λ)` in
+Construct its skew field of fractions with `OreLocalization`, using
+`OreLocalization.oreDiv_eq_iff`, `OreLocalization.numeratorHom_inj`, the existing
+division-ring instance and `OreLocalization.universalHom` with its uniqueness
+theorem. Prove the quantum-torus Ore hypotheses and the coefficient, lattice and
+chart comparisons needed below; for a domain `R`, coefficient change embeds `T(R,u,Λ)` in
 the skew field of fractions of `T(FractionRing R,u,Λ)`. A quantum chart is an injective
 `R`-algebra map of `T(R,u,Λ)` into a division ring; it is generating when its image
 generates that ring. Generating charts determine their ambient division ring up to
@@ -338,6 +349,26 @@ For a commutative coefficient ring R, construct
 not a commutativity assumption on the quantum ambient ring. Polynomial and quantum
 seed instances construct all displayed identities from their exchange data;
 no seed stores these local conclusions or Laurent membership as fields.
+
+**Checks for §§0.4–0.7.**
+- For `Λ(e_1,e_2)=1`, `xy=uX^{e_1+e_2}`, `yx=u⁻¹X^{e_1+e_2}` and
+  `X^{e_1+e_2}=u⁻¹xy=u yx`. At `u=1` the torus is commutative even though Λ
+  is nonzero; in rank zero it is R.
+- In the generic skew field with `xz=v²zx`, take `C=ℚ(v)[z^{±1}]`,
+  `E=1+z` and `y=Ex⁻¹`. Then `y²=(1+z)(1+v⁻²z)x⁻²`, not `E²x⁻²`.
+  In the commutative case `C=ℤ`, `E=2`, the coefficients required for
+  `x⁻¹,x⁻²` are respectively divisible by 2 and 4: `2x⁻¹,4x⁻²` belong to
+  the intersection, while `x⁻¹,2x⁻²` do not.
+- In `ℤ[a^{±1},b^{±1}]`, `1+a` and `1+b` are relatively prime but do not
+  generate the unit ideal, as evaluation at `a=b=−1` shows. Replacing
+  `1+b` by `1+a³` gives the nonunit common divisor `1+a`. In §0.6's center
+  statement, `u=1` and a nonzero form give the whole commutative torus as
+  center, so the infinite-order hypothesis cannot be omitted there.
+- In §0.7, an empty sum with `N=0`, `φ=1`, `n₀=m₀=1` gives `z**=z*=z⁻¹`.
+  For independent x,z over ℚ and `x*=(1+z)/x`, the singleton exchange
+  `z*=(1+x)/z` gives `(1+x*)/z=x*z*−1`. The two-term exchange
+  `z*=(1+x+x²)/z` gives `((x*)²+x*+1)/z=(x*)²z*−x*−z−2`.
+  At `x=z=1` these two identities have values 3 and 7 respectively.
 
 ## Layer 1: classical and quantum seeds and mutation
 
@@ -493,8 +524,17 @@ full column rank. An ordinary quantum seed is such a pair with a faithful
 so its mutation satisfies
 `X'_k=M(-e_k+[b_{•k}]_+)+M(-e_k+[-b_{•k}]_+)` with no separate chart construction.
 
-Construct the bijection between quantum charts and BZ toric frames
-`M:ℤ^I→D`, `M(a)M(b)=v^{Λ(a,b)}M(a+b)`, with `Z_v`-independent values.
+Construct the bijection between faithful quantum charts and maps
+`M:ℤ^I→D` with `M(0)=1`, `M(a)M(b)=v^{Λ(a,b)}M(a+b)` and
+`Z_v`-independent values. For a fixed initial based torus and its fraction
+division ring, BZ toric frames are the generating charts whose forms are
+obtained from the initial form by an integral lattice isomorphism: prove the
+equivalence using the induced fraction-ring automorphism (BZ Definition 4.3).
+Every faithful chart generates such a fraction division subring inside D;
+its inclusion into D need not be surjective. Mutation preserves that subring
+and gives the usual BZ mutation there.
+For example, `Z_v[X^{±1}]→ℚ(v)(x,t)`, `X↦x`, is faithful but generates
+only `ℚ(v)(x)`; it is not a BZ toric frame in `ℚ(v)(x,t)`.
 Construct `T(Z_v,v,Λ)≃T(Z_v,v,−Λ)` semilinear along `v↦v⁻¹` and
 `T(Z_v,v,Λ)ᵐᵒᵖ≃ₐ[Z_v]T(Z_v,v,−Λ)`, fixing each normalized basis monomial.
 With `B̃↦−B̃` these preserve the positive diagonal d, commute with binary
@@ -1032,9 +1072,15 @@ symmetrizer `(s_k)` of it has `s_kd_k` constant on each connected component (edg
 `latticeToFZ(μ_k^+μ_k^+(s))=latticeToFZ(s)`. For an extended matrix `B̃` with symmetrizer
 `(s_k)` and `L=lcm(s_k)`, construct *fzToLattice* on `ℤ^I`: `d_k=L/s_k` (mutable `k`),
 `d_j=1` (frozen `j`), `{e_k,e_i}=B̃_ik/d_i` for mutable `k`, skewness, and zero
-frozen–frozen form. Prove 3.1 for it and that its mutable weights have gcd `1`; for
-fixed data and a positive integer `g` dividing every `d_i` (`i∈I`), prove that
-`(d_i,{−,−})↦(d_i/g,g{−,−})` preserves 3.1 and `ε`. Prove *latticeToFZ_fzToLattice*
+frozen–frozen form. Prove 3.1 for it and, when `K` is nonempty, that its mutable
+weights have gcd `1`; use `lcm ∅=1` for rank zero, with no gcd-one claim for the
+empty family. For
+fixed data and a positive integer `g` dividing every `d_i` (`i∈I`), put
+`N°_g={n∈N:g n∈N°}`. Prove that `(N°,d_i,{−,−})↦(N°_g,d_i/g,g{−,−})`
+again satisfies §3.1 and preserves `ε`; its basis of `N°_g` is `(d_i e_i/g)`.
+Multiplication by g identifies `N°_g` with `N°`; construct the induced dual-lattice
+isomorphism and prove that it carries the respective dual bases to one another.
+Prove *latticeToFZ_fzToLattice*
 (`latticeToFZ∘fzToLattice=id`), compatibility with reindexing, and, for every word `w`
 of signed mutations of a fixed-data seed, `latticeToFZ(μ_w s)=μ_w(latticeToFZ s)` with
 equal geometric coefficient patterns (§1.4). Prove that a seed identifies its fixed data
@@ -1071,6 +1117,20 @@ The maps `p*:N→M°` with `p*(n)(n°)={n,n°}` whenever `n∈N_uf` or `n°∈N_
 annihilator in `M°`. For each such `p*`, kept as data, construct `p:𝒜→𝒳` with torus
 pullback `z^n↦z^{p*(n)}`, and prove `μ_k∘p=p∘μ_k` on every chart.
 
+For the partial compactification used in §6.3, extend the shared regular-cone
+chart API to 𝕜. If a cone in a lattice L is generated by a subset of a lattice
+basis, its dual semigroup consists of the characters nonnegative on those
+generators. Construct its chart `Spec 𝕜[σ^∨∩L*]`, identify it with
+`𝔸^r×(𝔾_m)^{rank(L)−r}`, and construct face inclusions as localizations at
+the corresponding coordinate monomials. Prove compatibility with lattice
+isomorphisms, face composition and field extension: for `𝕜→𝕜'`, construct
+`𝕜'⊗_𝕜 𝕜[σ^∨∩L*]≃ₐ[𝕜']𝕜'[σ^∨∩L*]` and its scheme base-change
+comparison, commuting with the face maps. Use §§0.2–0.3, the existing cone and
+dual-semigroup carriers, and the scheme gluing supplier; at `𝕜=ℂ`, identify
+these constructions with AnalyticToricGeometry Layer 0's affine toric charts
+and face maps. This supplies the toric charts, not the cluster-specific
+extension of transition maps, which is proved in §6.3.
+
 **3.4 Principal and tropical comparisons.** Construct the principal extension
 `Ñ=N⊕M°`, `Ñ_uf=N_uf⊕0`, `Ñ°=N°⊕M`, `{(n,m),(n',m')}={n,n'}+⟨n,m'⟩−⟨n',m⟩`
 (`⟨−,−⟩` the `ℚ`-valued pairing of `N`, `M°`), seed `(e_i,0),(0,f_i)`, weights `d_i`
@@ -1099,6 +1159,11 @@ L6b), *fzToLattice* sends `c_{j;t}` to `Σ_i(c_{j;t})_ie_i∈N` and `g_{j;t}` to
 `T₁(f₁)=f₁−2f₂`, `T₁(−f₁)=−f₁`, and `T₁^min(∓f₁)=−T₁(±f₁)` for
 `T₁^min(m)=m+min(⟨d₁e₁,m⟩,0)p₁*(e₁)`. For `N=N_uf=ℤe₁`, `d₁=1`, zero form, the principal
 extension has `B̃=(0,1)ᵀ` and `A₁A'₁=1+t`, `t=z^{(0,e₁)}`, becoming `A₁A'₁=2` at `t=1`.
+The rank-zero construction has `lcm ∅=1` and `gcd ∅=0`. For
+`N=N_uf=ℤe`, `N°=2ℤe`, `d=2`, zero form and `g=2`, normalization gives
+`N°_g=ℤe`, `d'=1` and sends the old dual basis `e*/2` to `e*`.
+For the cone generated by the first vector of `ℤ²`, the chart is
+`Spec 𝕜[t,z^{±1}]`; its zero face is `Spec 𝕜[t^{±1},z^{±1}]`.
 Sources: GHKK, §1.3, §2 and Appendices A–B.
 
 ## Layer 4: upper bounds and acyclic cluster algebras
@@ -1127,8 +1192,12 @@ polynomials is not assumed here.
 `H=D[x,x*,y,y*]` the two intersected rings are `D[x,x*,y^{±1}]=H[y⁻¹]` and
 `D[x^{±1},y,y*]=H[x⁻¹]`. U2a's relative primality is not a Bézout identity.
 
-**U2c — replacement after mutation.** With U2b's data and `g,h∈Dˣ` with
+**U2c — replacement after mutation.** With U2b's data, `c>0`, and `g,h∈Dˣ` with
 `fh=dgb^e`, `D[x,x*,y,y*]=D[x,x*,y,(g(x*)^e+h)/y]`.
+For `y**=(g(x*)^e+h)/y`, use the polynomial
+`Δ=((ay^c+b)^e−b^e)/y∈D[y]` to prove both inclusions through
+`y**=(g/f)(x*)^e y*−(gd/f)Δ` and
+`y*=(d/h)x^e y**−(dg/h)Δ`. These identities also cover `x*=0`.
 
 Instances: for a geometric seed over `R=R_J` or `R=𝕜_J` (§1.4) and mutable `i≠j`, put
 `D=R[x_l^{±1}:l≠i,j]`, `x=x_i`, `y=x_j`, `x*=x'_i`, `y*=x'_j`, and `B̃'=μ_i(B̃)`. If
@@ -1165,6 +1234,12 @@ not in `ℤ[x,x*,y,y*]`. For U2b–U2c over `ℤ` with all units `1`, `c=1` and 
 `(g(x*)^e+h)/y` is `x*y*−1`, `(x*)²y*−y−2`, `(x*)³y*−y²−3y−3`. For mutable block `0`
 in rank two and one frozen row `(1,1)`, `E₁=E₂=1+z`: not coprime.
 
+The condition `c>0` in U2c is essential even when every scalar coefficient is
+one. At `c=0`, `e=1`, one has `x*=2/x`, `y*=(x+1)/y` and `fh=dgb^e=1`.
+In `ℤ[x^{±1},y^{±1}]`, specialization `x↦−1` sends
+`ℤ[x,x*,y,y*]` into `ℤ[y]`, but sends `(x*+1)/y` to `−y⁻¹`.
+Thus U2b still applies while U2c's replacement fails at this boundary.
+
 Check the frozen-inversion boundary explicitly. Over `ℤ[z]` with independent
 x,y and extended matrix `((0,1),(−1,0),(1,−1))`, put
 `x'=(y+z)/x`, `y'=(x+z)/y` and `h=(x+y+z)/(xy)`.
@@ -1191,6 +1266,11 @@ monomials (no factor `x_ix'_i`) form an `R`-basis of `LB(s)` and that
 Source: BFZ III, §1 and proofs in §§3–7.
 
 ## Layer 5: finite type and almost-positive roots
+
+Inputs are §§1.1–1.3, L8 and the named RootSystems interfaces. Construct
+§5.2's root compatibility for a given finite root system and §5.1's diagram
+reduction before using them in the finite-type classification and denominator
+correspondence; neither construction assumes that final classification.
 
 **5.1 Classification.** For an exchange matrix `B : Matrix K K ℤ` let `[B]` be the set of
 all `μ_w(B)`, `w` a mutation word. A pattern is of finite type if it has finitely many
@@ -1258,24 +1338,69 @@ diagram of §3.4's principal extension (`t_i` ↦ `e_i` in the `N` summand of
 identification. These statements include zero rows of `ε` and noninjective
 `p₁*:N_uf→M°`, also where GHKK assumes otherwise.
 
-Construct the piecewise-linear mutation `T_k` (§3.4) of wall supports and labels on the
-half-spaces `⟨e_k,−⟩≥0` and `≤0`, with the wall `e_k^⊥`, crossing signs and primitive
-normals. Prove `T_k(𝔇_s)` equivalent to `𝔇_{μ_k^+(s)}` (GHKK Theorem 1.24), comparing the
-two sides of `e_k^⊥` through ScatteringDiagrams §4.4's slab localizations at each finite
-order of the filtration; no filtered map of the completion induced by `T_k` is asserted.
-Construct the chamber `C_t^+` of every seed `t` reached by
-a mutation word (`C^+` for the initial seed); prove that wall crossing from `C^+` to
-`C_t^+` is the composite of §3.3's cluster maps, and that these chambers and their
-faces form the cluster fan.
-Not every chamber of `𝔇_s` is asserted to be a cluster chamber.
+Write `M̃°=M°⊕N` for the full principal character lattice. Extend the
+principal cylinders to `M̃°_ℝ` and call their completion `𝔇̃_s`; its wall
+monomials are `z^{(p₁*(n),n)}`. Prove by the cylinder comparison and uniqueness
+that this is the scattering diagram of §3.4's full principal seed. Apply
+mutation invariance first here, where `p̃₁*` is injective: construct `T̃_k`
+on wall supports and labels, with crossing signs and primitive normals, and
+prove `T̃_k(𝔇̃_s)∼𝔇_{μ_k^+(s̃)}` (GHKK Theorem 1.24). Compare the two
+sides of the mutation wall through ScatteringDiagrams §4.4's slab
+localizations at each finite order. In the projected description, transport
+the coefficient lattice, monomials and wall labels from this mutated full
+principal seed, as well as projecting supports by `T_k`.
+No mutation map between unchanged `t`-adic completions is asserted.
 
-**6.2 Cluster monomials and positivity.** For every `t` and `m∈M°∩C_t^+`, prove that the
-theta function `ϑ_{Q,m}`, endpoint `Q` generic in `C^+`, is the initial-chart expansion,
-with principal coefficients, of the monomial `z^m` of the seed-`t` torus (a cluster
-monomial of `t` times a frozen Laurent monomial): it lies in the subring `ℤ[t_i][M°]`
-(`i∈I_uf`) of polynomials in the `t_i` over `ℤ[M°]`, which is injectively included in
-`ℚ[M°]⟦t_i⟧`, and equals there the image of Layer 2's finite expansion (L8, L6a) under
-`A_i=z^{f_i}`, `u_i↦t_i`. The specialization `t_i=1` is applied only on `ℤ[t_i][M°]`.
+For a reachable principal seed t, use a labelled character lattice `M̃_t°`
+and put `C̃(t)={Σ_α a_α f̃_α^t:a_α≥0 for α∈I_uf}`, with every frozen
+exponent unrestricted. Let `τ̃_{s,t}` be the composite of the full principal
+piecewise-linear maps, using inverse maps on reversed paths, and set
+`C̃_t^+=τ̃_{s,t}^{-1}(C̃(t))`. Prove that its restriction extends to an
+integral lattice isomorphism `ℓ̃_t:M̃_s°≃M̃_t°`. Construct the monomial torus
+isomorphism `ψ̃_t:A_t^prin≃T̃_t^scat`, with scattering character lattice
+`M̃_s°` and `ψ̃_t^*(z^m̃)=z^{ℓ̃_t(m̃)}`. For expression transport
+`W̃_{t→r}` from scattering chamber t to r, prove
+`ψ̃_r^*∘W̃_{t→r}=μ̃_{r→t}^*∘ψ̃_t^*` on rational-function fields and
+overlap localizations (GHKK Proposition 4.3 and Theorem 4.4).
+
+Projection `π:M̃°→M°` commutes with these piecewise-linear maps. For the
+original seed define `C(t)={Σ_i a_i f_i^t:a_i≥0 for i∈I_uf}`,
+`C_t^+=τ_{s,t}^{-1}(C(t))`, where `τ_{s,t}` is §3.4's composite with
+inverses on reversed paths. Prove `C̃_t^+=π^{-1}(C_t^+)` and that `ℓ̃_t`
+induces the linear extension `ℓ_t:M_s°≃M_t°` of `τ_{s,t}|_{C_t^+}`.
+The full principal monomial maps respect the coefficient-torus projection.
+Prove the cluster-path transports rational; by §1.4's exchange nonvanishing,
+their needed denominators remain nonzero at `t_i=1`. Restrict to these
+overlap localizations and descend to that fiber. This gives
+`ψ_t:A_t≃T_t^scat`, `ψ_t^*(z^m)=z^{ℓ_t(m)}` and
+`ψ_r^*∘W_{t→r}=μ_{r→t}^*∘ψ_t^*`, where `W` denotes this descended
+transport; extend the comparison to §3.3's maximal regular overlaps.
+No evaluation `t_i=1` on a formal completion or its fraction field is used.
+
+Prove that the cones `C_t^+` and their faces form the cluster fan, with
+common lineality `N_uf^⊥` and simplicial quotient cones. Rank zero has the
+whole character space as lineality. Not every scattering chamber is asserted
+to be a cluster chamber. The principal fan is its inverse image under π.
+Sources for the fan: GHKK Lemma 2.10 and Theorem 2.13.
+
+**6.2 Cluster monomials and positivity.** For a seed-t monomial
+`c_t=∏_i(A_i^t)^{a_i}`, with mutable exponents nonnegative and frozen exponents
+arbitrary integers, construct its principal lift `c̃_t` by the same word and
+exponents on the original-coordinate variables of §3.4's principal extension.
+Let `ã_t` be its character in that principal seed chart and set
+`m̃=ℓ̃_t⁻¹(ã_t)`. Prove that `m̃∈C̃_t^+` and that `ϑ_{Q̃,m̃}`, with generic
+endpoint in the initial chamber, equals the initial expansion of `c̃_t`
+(GHKK Theorem 4.9 and Proposition B.11).
+Use the principal cylinder comparison `z^{(m,n)}↦z^m t^n`, initially in
+shifted modules over `ℚ[M°][t_j^{±1}:j∈I∖I_uf]⟦t_i:i∈I_uf⟧`
+(ScatteringDiagrams §5.1); the shift allows negative mutable components of n.
+By L8 and L6a the result lies in `ℤ[t_i:i∈I_uf][M°]⊆ℚ[M°]⟦t_i⟧`.
+Added principal variables indexed by original frozen vertices do not occur:
+their zero rows in the initial extended matrix stay zero under mutation.
+Identify the result with Layer 2's unique
+finite expansion, with all coefficient and chart maps specified. Specialize
+`t_i=1` only on this polynomial subring. The reduction of the full label m̃
+to a g-vector is proved in §6.3, not used to define this comparison.
 Theorems:
 
 - for every geometric pattern (any `B̃`, including singular `B` and zero rows) and
@@ -1288,12 +1413,24 @@ Theorems:
 **6.3 Sign-coherence.** `C_t` and `G_t` are the FZ matrices of L5 and L6b. Construct the
 principal partial compactification relative to a fixed initial lattice seed `s`:
 start with the cone spanned by `(0,e_i*)` in `Ñ°=N°⊕M`, for the second copy of `I`,
-transport its fan by geometric tropicalization of the chart transitions, and glue
-the resulting toric charts (GHKK Construction 5.1, Construction B.9 and Remark B.10).
+transport its fan by geometric tropicalization of the chart transitions, and use
+§3.3's regular-cone charts and face localizations to glue the toric charts
+(GHKK Construction 5.1, Construction B.9 and Remark B.10).
 Construct its morphism to `𝔸^I` extending §3.4's coefficient-torus projection.
-Prove that adjacent mutations are isomorphisms on neighborhoods of the zero fiber; identify the two coefficient monomials
+Prove that the zero fiber is the initial torus and that adjacent mutations are
+isomorphisms on its neighborhoods (GHKK Lemma 5.2 and Corollary 5.3).
+Identify the two coefficient monomials
 `u^{[c_{k;t}]_+}`, `u^{[-c_{k;t}]_+}` of each principal exchange relation and prove one is
-`1`. These two results must not assume sign-coherence. Theorems, for every
+`1`, without assuming sign-coherence.
+
+Extend L6b's degree calculation to geometric extended matrices, with
+`deg z^m=m` and `deg t_k=−p₁*(e_k)` in `ℤ[t_k:k∈I_uf][M°]`.
+For §6.2's lifted monomial of degree `g(c_t)`, prove `m̃=(g(c_t),0)` by its
+torus character on the zero fiber (GHKK Proposition 5.7 and Corollary 5.9).
+This gives the reduced-label theta comparison. With original frozen variables,
+the mutable g-vectors generate the chamber modulo its frozen lineality.
+For a mutable matrix B₀ and its principal pattern, these are L6b's g-vectors.
+Theorems, for every
 skew-symmetrizable `B₀` and every mutation word:
 
 - each column of `C_t` is entrywise `≥0` or entrywise `≤0`;
@@ -1304,17 +1441,36 @@ skew-symmetrizable `B₀` and every mutation word:
   this is `⟨d_ic_{i;t},g_{j;t}⟩=δ_ij` between `N` and `M°`;
 - every `F_{j;t}` has constant term `1`, and, with `ε` the sign of `c_{k;t}`,
   `F_{k;t'}F_{k;t}=u^{|c_{k;t}|}∏_iF_{i;t}^{[εb_{ik;t}]_+}+∏_iF_{i;t}^{[-εb_{ik;t}]_+}`,
-  stated as a consequence of column sign-coherence.
+  as a consequence of column sign-coherence and the nonzero c-columns.
+
+For the duality statement, use L6b's `G_tB_t=B₀C_t` to derive the signed matrix recurrences
+`C_{t'}=C_tF_ε`, `G_{t'}=G_tE_ε`, using §1.1's mutable factors and a sign
+with `εc_{k;t}≥0`. Their determinants are −1 and
+`E_εᵀD_sF_ε=D_s`; induction gives unimodularity and `G_tᵀD_sC_t=D_s`.
+This is the route of NZ Theorem 1.2, Proposition 1.3 and (2.7), with its
+sign-coherence hypothesis discharged here. Since no c-column is zero,
+exactly one of the two coefficient monomials is 1 and the other vanishes at
+u=0. Evaluating L6b's recurrence at u=0 and starting from `F_{j;0}=1`
+then proves the constant-term assertion by induction.
 
 Transport each result to GHKK's conventions by Layer 3's convention maps.
 
 **Checks.** Compute the `A₂` chamber fan and principal `C,G,F` data around its pentagon.
+For `B=((0,1),(-1,0))` and word `1,2,1,2`, the lattice dual basis is
+`f_1^t=−f_2`, `f_2^t=f_1−f_2`, while the g-vectors are `−f_2,f_1` and the
+principal cluster is `((1+u_2x_1)/x_2,x_1)`. The theta label `f_1` is
+transported by ℓ_t to `f_2^t`, giving x_1. The untransported character f_1
+after `u_1=u_2=1` would instead give `x_1x_2/(1+x_1)`, whose value at
+`x_1=x_2=1` is 1/2 rather than 1.
 For `B=((0,1),(-2,0))`, mutation in direction 1 has `g=(-1,2)` for the new variable;
 check row sign-coherence and `GᵀD_sC=D_s` with `D_s=diag(2,1)`.
 Zero-form rank one (`N=N_uf=ℤe₁`, `d₁=1`) has initial wall `(e₁^⊥,1+t_1)` and exchange
 `xx'=1+t_1`; after one mutation `C=(−1)`, `G=(−1)` and `F=1+u`, although its skew form
-is zero.
-Sources: GHKK, Theorems 1.24, 4.9–4.10, Corollary 5.5 and Theorem 5.11.
+is zero. Its original coefficient-free exchange is `xx'=2`, obtained at
+`t_1=1` on the finite expression; the original-lattice map `T_k=id` does
+not remove the auxiliary coefficient from `1+t_1`.
+Sources: GHKK, Theorems 1.24, 4.9–4.10, Corollary 5.5 and Theorem 5.11;
+NZ, Theorem 1.2, Proposition 1.3 and (2.7).
 
 ## Layer 7: double Bruhat cells
 
@@ -1331,7 +1487,9 @@ ReductiveGroups Layer 10, equal to `ω_i(h)` on `U_-TU_+`. With pinned Weyl repr
 put `Δ_{uω_i,vω_i}(g)=Δ_{ω_i,ω_i}(ū⁻¹gv̄)`; prove it regular, dependent only on `uω_i`
 and `vω_i`, and for `SL_n` equal to the minor with rows `u([1,i])` and columns `v([1,i])`.
 Prove the rank-two identities of FZ, *Double Bruhat cells*, Theorem 1.16 (with their
-transposed companions and the `G₂` identities cited there). Construct the twist map
+transposed companions), the `G₂` identities of Berenstein–Zelevinsky,
+*Total positivity in Schubert varieties*, (4.8)–(4.11), and FZ's mixed-minor
+identity, Theorem 1.17. Construct the twist map
 `ζ^{u,v}:G^{u,v}→G^{u⁻¹,v⁻¹}` (its Definition 1.5) as a biregular isomorphism with
 inverse `ζ^{u⁻¹,v⁻¹}` and its pullback on coordinate rings. Other isogeny types are out
 of scope.
@@ -1415,16 +1573,22 @@ theorem. No finite check substitutes for these all-rank targets.
   §1.3–1.5, §3, §§7–10 and Proposition 11.2 for polynomial frozen coefficients.
 - **FZ IV:** Fomin–Zelevinsky, [*Cluster algebras IV: Coefficients*](https://arxiv.org/abs/math/0602259),
   Definitions 2.1–2.4, Theorems 3.5 and 3.7, and Corollary 6.3.
+- **NZ:** Nakanishi–Zelevinsky, [*On tropical dualities in cluster algebras*](https://arxiv.org/abs/1101.3736),
+  version 3, Theorem 1.2, Proposition 1.3 and (2.7); the sign-coherence premise
+  is proved in §6.3 before these recurrences are used.
 - **GHKK:** Gross–Hacking–Keel–Kontsevich,
   [*Canonical bases for cluster algebras*](https://arxiv.org/abs/1411.1394), version 2,
   §1.3 (PDF pp. 29–34), §4 (pp. 45–50), §5 (pp. 50–57),
   Appendix A (pp. 111–113) and Appendix B (pp. 113–118).
 - **BFZ III:** Berenstein–Fomin–Zelevinsky,
   [*Cluster algebras III: Upper bounds and double Bruhat cells*](https://arxiv.org/abs/math/0305434),
-  §§1–4; the upper-bound proof is on PDF pp. 24–28, and Theorem 2.10 and its
+  §§1–7; the upper-bound proof is on PDF pp. 24–28, and Theorem 2.10 and its
   geometric input are on pp. 15–18 of version 3.
 - Fomin–Zelevinsky, [*Double Bruhat cells and total positivity*](https://arxiv.org/abs/math/9802056),
   the factorization, twist and generalized-minor constructions used by BFZ.
+- Berenstein–Zelevinsky, [*Total positivity in Schubert varieties*](https://ems.press/content/serial-article-files/42750?nt=1),
+  §4, (4.8)–(4.11), and Corollary 6.6 for the rank-two minor identities,
+  including type `G₂`.
 - **BZ:** Berenstein–Zelevinsky, [*Quantum cluster algebras*](https://arxiv.org/abs/math/0404446),
   §§3–4 for compatible pairs and mutation, §5 for integral upper bounds and Laurentness,
   §6 for bar operations, and §11 for Ore fractions and central divisibility.

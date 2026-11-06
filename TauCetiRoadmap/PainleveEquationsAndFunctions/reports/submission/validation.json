@@ -1,8 +1,8 @@
 {
   "meaning": "Mechanical consistency and content preservation; not proof of mathematical truth or human approval.",
   "passed": true,
-  "checks": 6547,
-  "passed_checks": 6547,
+  "checks": 6702,
+  "passed_checks": 6702,
   "failed_checks": 0,
   "baseline_source_independently_compared": true,
   "previous_plan_independently_compared": true,
@@ -21,7 +21,7 @@
   "distinct_supplier_files": 38,
   "source_records": 34,
   "categories": {
-    "math_rendering": 99,
+    "math_rendering": 281,
     "targets": 664,
     "layers": 31,
     "documents": 1330,
@@ -29,7 +29,7 @@
     "boundaries": 65,
     "registries": 9,
     "supplier_files": 49,
-    "links": 319,
+    "links": 292,
     "timeless_prose": 20,
     "metadata": 1,
     "sources": 89,
@@ -39,18 +39,19 @@
     "baseline_source": 541
   },
   "inputs_sha256": {
-    "README.md": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761",
-    "README.ja.md": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd",
+    "README.md": "7dd6a2a2e361cdb9ce5716c9794bca39f00fce3e905e85d627163995f000d56e",
+    "README.ja.md": "058e79e12f9d18ba8de4b294277777b493475c28ba3ea095a06345eed6a8763f",
     "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
     "sources.toml": "5ecb724f6ee828771d54e919092bd2461d3a6ee4f611710ab99dc6b11887e293",
-    "design/plan.json": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945",
+    "design/plan.json": "f2ee85f9cf9fdb23ad3df70028b4f4fe22e51f9efd384eed33a36e1f1b82b12f",
     "design/dependencies.json": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
     "design/reuse_graph.json": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
-    "design/reuse_registry.json": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e"
+    "design/reuse_registry.json": "691222ce0cee95fc5546b56676e6c8055d111bed120004ed6c285077d77b8ead"
   },
   "numbering_manifest_sha256": "e6bb8efcb637b470d80fed7eab1918276d6f30c9e9caed9a1cf5780004e3b598",
   "math_rendering_manifest_sha256": "956a05daacdcec897afbc83c2e96d5cf63a1ec846e965b970a3b5d8ccd324cf1",
   "presentation_bridge_used": true,
-  "math_rendering_checks": 99,
+  "math_rendering_checks": 281,
+  "organization_revision_checked": true,
   "failures": []
 }

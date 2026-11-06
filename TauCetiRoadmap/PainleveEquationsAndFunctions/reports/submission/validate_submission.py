@@ -76,6 +76,8 @@ def main():
     parser.add_argument("--previous-plan", type=Path,
                         help="published design/plan.json before numerical regrouping")
     parser.add_argument("--output", type=Path, help="write the JSON result")
+    parser.add_argument("--packages-dir", type=Path, default=REPO / ".lake/packages",
+                        help="existing pinned dependency checkouts (no build or download)")
     args = parser.parse_args()
     checks = []
 
@@ -271,9 +273,9 @@ def main():
             supplier_paths.add(path)
             prefix = REPO
             if path.startswith("Mathlib/"):
-                prefix /= ".lake/packages/mathlib"
+                prefix = args.packages_dir / "mathlib"
             elif path.startswith("TauCeti/"):
-                prefix /= ".lake/packages/TauCeti"
+                prefix = args.packages_dir / "TauCeti"
             check("supplier_files", path, (prefix / path).is_file())
 
     for lang, text in docs.items():
@@ -476,6 +478,8 @@ def main():
         "math_rendering_manifest_sha256": file_digest(rendering_path) if rendering_path.is_file() else None,
         "presentation_bridge_used": rendering_report is not None,
         "math_rendering_checks": rendering_report["check_count"] if rendering_report else 0,
+        "organization_revision_checked": bool(rendering_report and
+            rendering_report.get("organization_baseline_used")),
         "failures": failures,
     }
     encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

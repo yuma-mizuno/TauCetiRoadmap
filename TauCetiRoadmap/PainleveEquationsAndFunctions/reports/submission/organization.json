@@ -1,0 +1,135 @@
+{
+  "baseline_commit": "9110ce4b595d9afe79399c379fc132b350b69739",
+  "scope": "Remove duplicated appendix and global summaries; name headings by mathematical subject. Target bodies, mathematical hypotheses, conclusions, APIs, diagnostics and prerequisite edges are unchanged.",
+  "files": {
+    "README.md": {
+      "before_sha256": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761",
+      "after_sha256": "7dd6a2a2e361cdb9ce5716c9794bca39f00fce3e905e85d627163995f000d56e"
+    },
+    "README.ja.md": {
+      "before_sha256": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd",
+      "after_sha256": "058e79e12f9d18ba8de4b294277777b493475c28ba3ea095a06345eed6a8763f"
+    },
+    "design/plan.json": {
+      "before_sha256": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945",
+      "after_sha256": "f2ee85f9cf9fdb23ad3df70028b4f4fe22e51f9efd384eed33a36e1f1b82b12f"
+    },
+    "design/reuse_registry.json": {
+      "before_sha256": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
+      "after_sha256": "691222ce0cee95fc5546b56676e6c8055d111bed120004ed6c285077d77b8ead"
+    },
+    "Suggested.lean": {
+      "before_sha256": "e57dc5d04c780e0e1cfa6c1af488a69956263fe22814b035d6a9c74a3f43c68c",
+      "after_sha256": "04338860bc8e0d1828e2d31db5a2d7922371f5bb27963cc0376891e46d38712a"
+    }
+  },
+  "appendix_coverage": [
+    {
+      "subject": "Shared objects, proof ownership and application independence",
+      "location": "Opening General theory and applications section"
+    },
+    {
+      "subject": "Admitted inputs, local models, determinant transport and fixed-determinant comparison",
+      "targets": [
+        "1.1",
+        "1.2",
+        "1.5"
+      ]
+    },
+    {
+      "subject": "Construction and coherent comparisons",
+      "targets": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "subject": "Proper semiconjugacy, transport and descent",
+      "targets": [
+        "0.2",
+        "0.4",
+        "0.5",
+        "2.6",
+        "4.4",
+        "4.6",
+        "4.7"
+      ]
+    },
+    {
+      "subject": "First jets and coordinate formula",
+      "targets": [
+        "0.8",
+        "7.1",
+        "7.2"
+      ]
+    },
+    {
+      "subject": "Five-point existence, dimensions and observer descent",
+      "targets": [
+        "2.7",
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "subject": "Classical classification, surfaces, transformations, analytic realizations and confluence",
+      "targets": [
+        "3.4",
+        "4.1",
+        "4.4",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.3",
+        "7.1",
+        "7.2",
+        "8.6",
+        "9.1",
+        "9.2",
+        "9.5",
+        "9.6",
+        "9.8"
+      ]
+    }
+  ],
+  "target_heading_ids": [
+    "0.1",
+    "0.8",
+    "1.6",
+    "2.1",
+    "2.4",
+    "2.6",
+    "2.8",
+    "2.9",
+    "2.10",
+    "3.1",
+    "3.2",
+    "3.5",
+    "3.6",
+    "3.7",
+    "3.8",
+    "3.9",
+    "3.10",
+    "3.11",
+    "3.12",
+    "4.5",
+    "4.8",
+    "5.3",
+    "6.2",
+    "6.4",
+    "7.1",
+    "8.1",
+    "8.6",
+    "8.7",
+    "8.8",
+    "9.6",
+    "9.7",
+    "9.8"
+  ]
+}

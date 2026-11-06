@@ -9,7 +9,7 @@ public import Mathlib.Dynamics.Flow
 public import Mathlib.Geometry.Manifold.VectorBundle.Pullback
 
 /-!
-# Intrinsic Painlevé theory: representative target signatures
+# Painlevé equations and functions: suggested interfaces
 
 **This file is not the roadmap and is not exhaustive.** The definitive specification is
 `README.md`. These declarations suggest Lean forms for representative interfaces; the roadmap

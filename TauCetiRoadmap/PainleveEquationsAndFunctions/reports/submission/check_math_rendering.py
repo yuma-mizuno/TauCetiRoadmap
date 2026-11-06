@@ -217,13 +217,73 @@ def table_width_errors(text):
     return errors
 
 
+def organization_inputs(root):
+    """Check the editorial successor without reassigning historical review receipts."""
+    path = root / "reports/submission/organization.json"
+    if not path.is_file():
+        return {}, []
+    record = json.loads(path.read_text(encoding="utf-8"))
+    checks, inputs = [], {}
+
+    def check(name, ok):
+        checks.append({"check": "organization: " + name, "passed": bool(ok)})
+
+    expected = {"README.md", "README.ja.md", "Suggested.lean",
+                "design/plan.json", "design/reuse_registry.json"}
+    check("exact file scope", set(record["files"]) == expected)
+    commit = record["baseline_commit"]
+    if not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("invalid organization baseline commit")
+    for name in sorted(expected):
+        git_path = "TauCetiRoadmap/PainleveEquationsAndFunctions/" + name
+        before = subprocess.check_output(
+            ["git", "show", commit + ":" + git_path], cwd=root.parents[1]).decode("utf-8")
+        current = (root / name).read_bytes().decode("utf-8").replace("\r\n", "\n")
+        check(name + " baseline fingerprint", sha(before) == record["files"][name]["before_sha256"])
+        check(name + " current fingerprint", sha(current) == record["files"][name]["after_sha256"])
+        inputs[name] = before
+        if name.endswith(".md"):
+            # Compare each full target block, excluding only its heading title.
+            def bodies(text):
+                out = {}
+                for match in re.finditer(r'^<a id="target-([0-9]+-[0-9]+)"></a>\n### [^\n]*\n', text, re.M):
+                    tail = text[match.end():]
+                    boundary = re.search(r'^(?:<a id="(?:target-|layer-)|#{1,3} )', tail, re.M)
+                    out[match.group(1)] = tail[:boundary.start()] if boundary else tail
+                return out
+            old_bodies, current_bodies = bodies(before), bodies(current)
+            check(name + " 78 target identities", len(old_bodies) == 78
+                  and old_bodies.keys() == current_bodies.keys())
+            for tid, body in old_bodies.items():
+                check(name + " unchanged target body " + tid, current_bodies.get(tid) == body)
+            check(name + " no appendix references", "reuse-contract" not in current)
+            check(name + " one global overview", current.count('<a id="general-theory"></a>') == 1)
+        elif name.endswith(".lean"):
+            check(name + " documentation title only", current == before.replace(
+                "# Intrinsic Painlevé theory: representative target signatures",
+                "# Painlevé equations and functions: suggested interfaces", 1))
+        else:
+            def mathematical_content(value, top=False):
+                if isinstance(value, dict):
+                    return {k: mathematical_content(v) for k, v in value.items()
+                            if k not in {"title", "title_ja"} and not (top and k == "summary")}
+                if isinstance(value, list):
+                    return [mathematical_content(v) for v in value]
+                return value
+            check(name + " unchanged mathematical fields",
+                  mathematical_content(json.loads(before), True)
+                  == mathematical_content(json.loads(current), True))
+    return inputs, checks
+
+
 def audit_manifest(root=ROOT, use_pandoc=False):
     root = Path(root)
     manifest_path = root / "reports/submission/math_rendering.json"
     manifest = json.loads(manifest_path.read_text())
     numbering_path = root / "reports/submission/numbering.json"
     numbering = json.loads(numbering_path.read_text())
-    checks, restored, summaries = [], {}, {}
+    editorial_inputs, checks = organization_inputs(root)
+    restored, summaries = {}, {}
 
     def check(name, ok, detail=None):
         item = {"check": name, "passed": bool(ok)}
@@ -242,8 +302,9 @@ def audit_manifest(root=ROOT, use_pandoc=False):
     for name, record in records.items():
         if name not in EXPECTED_FILES:
             continue
-        current = (root / name).read_bytes().decode("utf-8")
-        check(name + " current bytes", sha(current) == record["after_sha256"])
+        current = editorial_inputs.get(name, (root / name).read_bytes().decode("utf-8"))
+        snapshot_label = " presentation snapshot bytes" if name in editorial_inputs else " current bytes"
+        check(name + snapshot_label, sha(current) == record["after_sha256"])
         check(name + " recorded preceding bytes",
               record["before_sha256"] == numbering["inputs_sha256"].get(name))
         try:
@@ -288,12 +349,32 @@ def audit_manifest(root=ROOT, use_pandoc=False):
                 summaries[name] = {"changed_string_fields": len(edits), "typography_exceptions": exceptions}
         except (ValueError, KeyError, subprocess.SubprocessError) as exc:
             check(name + " presentation audit", False, str(exc))
+    # The historical rendering receipt stays bound to its original bytes.
+    # Independently check the current, shorter documents as Markdown math.
+    if editorial_inputs:
+        for name in ["README.md", "README.ja.md"]:
+            text = (root / name).read_text(encoding="utf-8")
+            spans = math_spans(text)
+            check(name + " current protected math forms",
+                  all(x["form"] in {"protected_inline", "math_fence"} for x in spans))
+            check(name + " current operator macros",
+                  not any(FORBIDDEN_OPERATOR_MACRO.search(x["tex"]) for x in spans))
+            check(name + " current table columns", not table_width_errors(text))
+            summaries[name] = {"current_total": len(spans),
+                               "current_forms": dict(Counter(x["form"] for x in spans)),
+                               "historical_presentation_total": summaries.get(name, {}).get("total")}
+            if use_pandoc:
+                check(name + " current independent Pandoc GFM math nodes",
+                      pandoc_math(text) == [(x["kind"], x["tex"]) for x in spans])
+        for name, text in editorial_inputs.items():
+            restored.setdefault(name, text)
     failures = [x for x in checks if not x["passed"]]
     result = {
         "meaning": "Presentation preservation with three exact operator-name expansions and Markdown recognition; not theorem proof or remote visual verification.",
         "passed": not failures, "checks": checks, "check_count": len(checks),
         "failed_checks": len(failures), "failures": failures, "documents": summaries,
         "pandoc_used": use_pandoc,
+        "organization_baseline_used": bool(editorial_inputs),
         "tex_typography_substitutions": TEX_TYPOGRAPHY_SUBSTITUTIONS,
         "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
     }

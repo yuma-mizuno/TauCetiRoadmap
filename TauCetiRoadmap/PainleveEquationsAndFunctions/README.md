@@ -1,4 +1,4 @@
-# Roadmap: intrinsic Painlevé equations and functions
+# Painlevé equations and functions
 
 Construct differential Painlevé equations as flat nonlinear connections on moduli spaces of decorated meromorphic connections, and Painlevé functions as their horizontal sections and admissible observations. Prove their properties from those constructions. The classical scalar equations, Hamiltonians and linear systems are coordinate comparison theorems.
 
@@ -12,18 +12,20 @@ Each layer develops one mathematical construction or theorem package. General re
 
 | Layer | Mathematical development | Targets |
 |---:|---|---:|
-| [0](#layer-0) | Nonlinear connections and intrinsic solutions | 9 |
+| [0](#layer-0) | Nonlinear connections and their solutions | 9 |
 | [1](#layer-1) | Moduli of decorated meromorphic connections | 6 |
-| [2](#layer-2) | General isomonodromy and logarithmic Riemann–Hilbert correspondence | 10 |
-| [3](#layer-3) | Intrinsic construction of Painlevé equations | 12 |
+| [2](#layer-2) | Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence | 10 |
+| [3](#layer-3) | Phase spaces and isomonodromic deformations of Painlevé equations | 12 |
 | [4](#layer-4) | Riemann–Hilbert comparison and the Painlevé property | 9 |
 | [5](#layer-5) | Initial-condition surfaces, symmetries and Riccati reductions | 6 |
 | [6](#layer-6) | Determinant lines and tau sections | 5 |
-| [7](#layer-7) | Classical equations as coordinate comparisons | 5 |
+| [7](#layer-7) | Classical forms of Painlevé equations | 5 |
 | [8](#layer-8) | Riemann–Hilbert asymptotics and distinguished solutions | 8 |
 | [9](#layer-9) | Confluence and convergence | 8 |
 
-## Reusable general theory and proof ownership
+<a id="general-theory"></a>
+
+## General theory and applications
 
 All 78 targets, including each theorem with additional hypotheses, are in scope. The hypotheses state when a conclusion holds; they do not make its proof discretionary. Mathematical constructions, their basic APIs, comparison maps and specified examples belong to the same target.
 
@@ -31,7 +33,7 @@ All 78 targets, including each theorem with additional hypotheses, are in scope.
 |---|---|
 | Nonlinear connections, solutions, transport, observations, jets and convergence | 0.1–0.9 |
 | Moduli of decorated meromorphic connections | 1.1–1.6 |
-| General isomonodromy and logarithmic Riemann–Hilbert correspondence | 2.1–2.6 |
+| Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence | 2.1–2.6 |
 | Determinant lines of holomorphic Fredholm families | 6.1 |
 | Cauchy operators, small-norm RHPs, weighted moments and Barnes G | 8.1–8.4 |
 | Pole cancellation, finite-algebra Poisson geometry, section and determinant convergence | 9.1–9.4 |
@@ -42,7 +44,7 @@ An existing roadmap supplies only the results specified in the external dependen
 
 ## Addresses and conventions
 
-Layers are numbered consecutively from 0 to 9. A target identifier consists of its layer and its consecutive position within that layer, for example 0.1 and 0.2. Structured internal references have the form target:0.1; all internal references are global. Literature and supplier-roadmap sections retain their source numbering. The [reusable proof contract](#reuse-contract) specifies shared objects, exact application conditions and comparison laws.
+Layers are numbered consecutively from 0 to 9. A target identifier consists of its layer and its consecutive position within that layer, for example 0.1 and 0.2. Structured internal references have the form target:0.1; all internal references are global. Literature and supplier-roadmap sections retain their source numbering. Each target states its hypotheses, conclusions and comparison laws.
 
 <a id="external-dependencies"></a>
 ## External dependency contracts
@@ -102,13 +104,13 @@ A roadmap reference supplies its stated construction or theorem, with its hypoth
 
 <a id="layer-0"></a>
 
-## Layer 0: Nonlinear connections and intrinsic solutions
+## Layer 0: Nonlinear connections and their solutions
 
 <a id="nonlinear-connections"></a>
 
 This is an independently reusable part of the single roadmap, recorded in its one [plan](design/plan.json) and [Japanese version](README.ja.md#nonlinear-connections). Its mathematical prerequisites contain no Painlevé target, rank-two condition, degree-four condition, classical scalar equation, or Riemann–Hilbert comparison. A geometric application constructs its own phase family, splitting and any auxiliary forms or comparison maps, then invokes only the general results whose hypotheses it has proved. The module retains actual objects, arrows, pullbacks and comparison isomorphisms.
 
-### What is reusable
+### Theorems and constructions
 
 | Target | Independently exported result | Additional input a consumer must prove |
 |---|---|---|
@@ -124,14 +126,14 @@ This is an independently reusable part of the single roadmap, recorded in its on
 
 The dependency graph deliberately does not route scalarization through symplectic geometry or global continuation. Likewise, the proper-semiconjugacy theorem does not require flatness, while fundamental-groupoid transport does. Meromorphic evaluation can be used for any holomorphic map from a curve, without first proving completeness of a connection. Compact-path convergence does not depend on a collision or confluence construction; that construction is responsible for verifying its common-domain hypotheses.
 
-### Regularity and proof boundary
+### Regularity assumptions
 
 The real $`C^1`$ branch is used for individual horizontal path lifting. Curvature, differential-form identities and the smooth flat-product theorem use smooth real data. The complex branch uses holomorphic data on finite-dimensional complex manifolds. No statement silently extends these constructions to singular, nonreduced or infinite-dimensional bases.
 
 A consumer may legitimately supply a connection already proved complete to target:0.5. That is different from defining every connection to contain a proof of completeness. Targets 0.1–0.3 construct the carrier and local solution theory, and target:0.4 gives one sufficient theorem for completeness. Similarly, target:0.6 accepts an independently constructed relative form and proves the relation between flatness, preservation and total closedness; it does not manufacture an application’s relative form by an assumption.
 
 <a id="target-0-1"></a>
-### 0.1 Ehresmann connections, actual arrows and base change
+### 0.1 Ehresmann connections, morphisms and base change
 
 **General theory.**
 
@@ -393,7 +395,7 @@ Apply this local statement to horizontal germs from target:0.3 and, when separat
 **Source scope.** Generic complex-curve evaluation and descent. IIS06's geometric definition of solution and VDPS09's scalar coordinates motivate applications; arbitrary rational observations do not automatically satisfy admissibility.
 
 <a id="target-0-8"></a>
-### 0.8 Intrinsic first jets and local scalarization
+### 0.8 First jets and second-order equations
 
 **General theory.**
 
@@ -486,7 +488,7 @@ For horizontal lifts, the pulled-back vector field contains $`\gamma'(t)`$; a $`
 
 **Source scope.** Generic finite-dimensional continuous-dependence theorem with an explicit finite-chart no-exit proof. A geometric degeneration must independently construct the common identifications and verify the hypotheses; coefficient limits alone are not that construction.
 
-### Source orientation and ownership
+### Sources and scope
 
 The proofs of the general assertions are the obligations above. The following primary sources explain important downstream geometric settings; their specialized scope must not be silently enlarged.
 
@@ -501,7 +503,7 @@ The proofs of the general assertions are the obligations above. The following pr
 
 <a id="connection-moduli"></a>
 
-### What is reusable
+### Theorems and constructions
 
 The construction takes decorated meromorphic-connection data and produces a moduli family together with its **constructed** flat symplectic nonlinear time connection. A consumer supplies admission data and then uses one theorem, §2.4. Genus zero, rank two, structural polar degree four, one time variable, a named scalar equation and a classified surface are absent from the general hypotheses.
 
@@ -515,13 +517,13 @@ The construction takes decorated meromorphic-connection data and produces a modu
 
 The local scope is deliberately exact: logarithmic full-flag conditions, generic unramified irregular conditions, and the generic totally ramified factorized conditions specified in §1.1. A new local singularity class requires an admission/construction theorem before it can use this export. Logarithmic resonance is retained through flags and lattices. Nonempty fibers, global fixed-determinant transport and positive-genus fixed-determinant smoothness have separate verification obligations.
 
-### Dependency and ownership boundary
+### Dependencies
 
 The geometric construction uses `0.1` (carrier, morphisms and pullbacks) and `0.6` (generic differential-form calculus). The logarithmic branch, under the hypotheses of 2.5–2.6, also uses `0.3` for local horizontal sections. They do not supply the geometric horizontal splitting or preservation of its trace form: §§2.1–2.2 prove those properties for this construction. Foundational inputs are standard curve/bundle, stack/moduli, coherent-cohomology, formal local algebra and complex-geometry interfaces listed in the structured plan. No specialized consumer is a prerequisite.
 
 The main owned extensions beyond a source formula are the intrinsic presentation groupoid, certified determinant transport, the full trace-free/trace comparison including ramified relations, early finite-flat unfolding, and coherent comparison maps. In particular, removing a scalar stabilizer is not the same as removing the 2g-dimensional determinant deformation space.
 
-### Common consumer certificate
+### Application hypotheses
 
 A consumer identifies its local models and verifies the open generic conditions; specifies its actual time family and markings; chooses unfixed determinant or verifies the fixed determinant and its rank-one time transport; chooses a valid stability chamber; and provides nonemptiness evidence wherever it claims a surjective family. It then invokes §2.4. Completeness, proper Riemann–Hilbert comparison, scalar observables, distinguished solutions and classification results are further consumer obligations.
 
@@ -733,7 +735,7 @@ The fixed-determinant dimension and symplectic theorems use the deformation-func
 **Source scope and owned proof:** I23 Theorem 7.5 and its determinant-obstruction argument; fixed-determinant smoothness, full cone splitting and orthogonality are the extensions proved in 1.5 and used by its fixed-determinant conclusions.
 
 <a id="target-1-6"></a>
-### 1.6 Early finite-flat unfolding and the closed symplectic form
+### 1.6 Finite-flat unfoldings and closed symplectic forms
 
 **General theory.**
 
@@ -766,10 +768,10 @@ The fixed-determinant result is the pullback of this closed form to the determin
 
 <a id="layer-2"></a>
 
-## Layer 2: General isomonodromy and logarithmic Riemann–Hilbert correspondence
+## Layer 2: Isomonodromic deformations and the logarithmic Riemann–Hilbert correspondence
 
 <a id="target-2-1"></a>
-### 2.1 Strong integrable extensions and the actual horizontal splitting
+### 2.1 Strong integrable extensions and horizontal splittings
 
 **General theory.**
 
@@ -868,7 +870,7 @@ Record the natural comparison isomorphisms for identity and composite base chang
 **Source scope and owned proof:** I23 Propositions 10.7 and 10.10 supply uniqueness used by the comparison. Full intrinsic base-change/2-coherence is an owned theorem target, not a quotation from a coordinate formula.
 
 <a id="target-2-4"></a>
-### 2.4 General construction theorem and reusable export
+### 2.4 Isomonodromic connections on meromorphic-connection moduli
 
 **General theory.**
 
@@ -940,7 +942,7 @@ For a certified determinant transport, show that taking determinant of monodromy
 **Source scope and owned proof:** I13 §2 (the marked Riemann–Hilbert map), §6 and §8 (isomonodromic deformation). Full comparison of its moduli functor and strong splitting with this framework, including exceptional strata and determinant compatibility, is explicitly owned.
 
 <a id="target-2-6"></a>
-### 2.6 Family properness in the exact logarithmic source scope
+### 2.6 Properness of the logarithmic Riemann–Hilbert family
 
 **General theory.**
 
@@ -1033,7 +1035,7 @@ The trace residues vanish and determinant monodromy is trivial. The determinant 
 **Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
 
 <a id="target-2-8"></a>
-### 2.8 Constructed flat symplectic dynamics in phase dimension four
+### 2.8 Isomonodromic deformations on four-dimensional phase spaces
 
 **Independent five-point application.**
 
@@ -1060,7 +1062,7 @@ Apply MeromorphicConnectionModuli §2.4 to the verified input of §2.7. Its outp
 **Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
 
 <a id="target-2-9"></a>
-### 2.9 A verified proper RH comparison
+### 2.9 The five-point Riemann–Hilbert correspondence and properness
 
 **Independent five-point application.**
 
@@ -1088,7 +1090,7 @@ Use the complete Betti path transport of 2.5 and prove that the strong splitting
 **Source scope:** I13 Theorems 2.1–2.2 and its regular-singular correspondence, plus I23 admitted logarithmic construction. All generic results are consumed through the named frameworks; this application verifies their hypotheses.
 
 <a id="target-2-10"></a>
-### 2.10 Reusing complete transport and its exact limits
+### 2.10 Five-point transport, monodromy and descent
 
 **Independent five-point application.**
 
@@ -1129,29 +1131,13 @@ Do not apply the scalar first-jet theorem for a two-dimensional phase fiber to t
 
 <a id="layer-3"></a>
 
-## Layer 3: Intrinsic construction of Painlevé equations
+## Layer 3: Phase spaces and isomonodromic deformations of Painlevé equations
 
 <a id="painleve"></a>
 
 **Summary.** Construct Painlevé dynamics from moduli of meromorphic connections, and construct Painlevé functions from the horizontal sections of that dynamics. The input consists of a curve, a structural polar divisor, a determinant connection, local formal moduli conditions, and stability and marking data. The phase space, its symplectic form, and its horizontal distribution are constructed from this input. A common continuation theorem precedes every classical scalar equation. The ten underlying rank-two formal profiles, their labelled realizations, their eight additive surface types, and the six classical differential equations are comparison results. The theory includes resonant parameters, allowed reducible connections, ramified irregular singularities, special invariant loci, tau sections, normalized analytic solutions, and confluence. Elementary coefficient degenerations are covered by a separate boundary comparison. JMU/Hamiltonian comparisons of tau sections have the precise generic scope stated in targets 6.4–6.5; the determinant construction itself has the broader marked-RHP scope specified in 6.2–6.3.
 
-### General theory and independent applications
-
-A reusable target satisfies the following condition: a general proof must have its own mathematical inputs, outputs, laws, counterexamples and owner, and its dependency closure must contain no application target. The general theories of nonlinear connections, meromorphic-connection moduli, analytic RHPs and determinants, and algebraic confluence are specified in this document. The five-point construction is an independent application.
-
-| General theory or application | Construction or theorem | Independent consumers |
-|---|---|---|
-| [NonlinearConnections](#nonlinear-connections) | General nonlinear connections, local lifts, proper transfer, monodromy/descent, symplectic form, observers, intrinsic jets, compact-path limits | Painlevé systems; five logarithmic points; other smooth/holomorphic connection problems |
-| [MeromorphicConnectionModuli](#connection-moduli) | Admitted decorated moduli → coherent flat symplectic nonlinear connection; regular-singular RH branch | Degree-four classical input; five logarithmic points; admitted higher-rank/genus data |
-| [AnalyticRHPAndDeterminants](#analytic-theory) | Complex Fredholm determinant, Cauchy-class RHP, uniform moments/tails, normalized limits | Painlevé systems; independent operator and RHP problems |
-| [AlgebraicConfluence](#algebraic-confluence) | Vector-valued principal-part cancellation and relative dual Lie–Poisson structures | Painlevé systems; other pole-collision and finite-algebra problems |
-| [FiveLogarithmicPoints](#five-point-application) | A second worked consumer with two-dimensional time and four-dimensional phase fibers | Uses the first two packages without importing a Painlevé target |
-
-The general framework is not an axiom saying that an arbitrary connection is complete, nor an unrestricted moduli theorem. Each theorem retains its exact hypotheses. General existence/flatness/symplecticity are constructed in the moduli package; completeness requires a separately proved proper semiconjugacy. The classical degree-four restriction occurs only in §3.3. Coordinate equations remain downstream comparisons in targets 7.1–7.5. See [the reusable proof contract](#reuse-contract) for the ownership and proof-reuse contract and [the Japanese version](README.ja.md#reuse-contract).
-
-### Scope and ownership
-
-The reusable constructions and the Painlevé application have separate proof targets within one dependency graph. NonlinearConnections owns general nonlinear-connection, continuation, jet and convergence theorems. MeromorphicConnectionModuli constructs those objects from its admitted geometric input, with a separately scoped regular-singular RH branch. AnalyticRHPAndDeterminants owns the general determinant and RHP analysis; AlgebraicConfluence owns the finite-algebra and pole-cancellation lemmas. The Painlevé application owns the classical restriction and its hypothesis checks, formal-profile classification, the remaining classical irregular/Stokes and proper-RH extension, observable and surface comparisons, transformations, and the analytic and confluence application adapters. It consumes the same underlying objects and theorems; it does not define parallel carriers. The proof owners and shared contracts are recorded in design/plan.json and the reusable proof contract.
+### Scope
 
 RandomMatrices §8.5 owns Hastings–McLeod existence and uniqueness, real pole-freeness, and its Fredholm/Tracy–Widom identities. Section 8.8 here owns only the bridge from that scalar solution to an intrinsic horizontal section. RandomMatrices is a supplier of that bridge; it is not made to depend on this roadmap. The trace-class determinant required by the tau branch is consumed from RandomMatrices §8.3 at its stated operator generality. New applications using both theories are downstream consumers of both.
 
@@ -1173,16 +1159,12 @@ Use ω = dq ∧ dp and ι_Xω = d_phase H in a Hamiltonian chart. Thus q′ = H_
 
 “Painlevé function” first means a geometric horizontal section or its germ. A scalar function is the evaluation of a specified admissible observable, with a time coordinate and normalization. An everywhere defined map to ℙ¹ may give the constant value ∞; the usual meromorphic-function conclusion excludes that case. Universal-cover continuation and single-valued descent to B are different conclusions.
 
-### Foundations and application boundaries
-
-Use the [external dependency contracts](#external-dependencies) and the general results on nonlinear connections, meromorphic-connection moduli, analytic RHPs and determinants, and algebraic confluence. The Painlevé application owns each classical admission, formal-profile classification, irregular analytic comparison, surface comparison and analytic/confluence adapter stated below. The local proof requirements specify every construction beyond the supplied foundation.
-
-### Order of construction
+### Dependencies between layers
 
 Construct nonlinear connections, solutions, transport, observations and convergence as general theorems. Construct admitted meromorphic-connection moduli and their strong isomonodromic connection, then establish the logarithmic Riemann–Hilbert comparison and its independent five-point application. Restrict this construction to the classical input and verify its formal profiles. Prove the full classical Riemann–Hilbert comparison and Painlevé property before developing the surface, transformation and Riccati comparisons. Construct determinant lines and tau sections intrinsically. Derive the classical scalar equations, Hamiltonians and sigma forms in separate coordinate-comparison targets. General small-norm RHP theory and Barnes G support the specified analytic solutions and connection formulae. General pole-cancellation, relative Poisson and analytic convergence theorems support geometric confluence and tau limits. The intrinsic construction, continuation, surface geometry and tau-section targets have no classical scalar comparison prerequisite.
 
 <a id="target-3-1"></a>
-### 3.1 Binding the general decorated-connection input
+### 3.1 Decorated connections for Painlevé equations
 
 **Painlevé application.**
 
@@ -1209,7 +1191,7 @@ Use the objects and arrows of MeromorphicConnectionModuli §1.1 directly. This i
 *Needs:* Internal: 1.1.
 
 <a id="target-3-2"></a>
-### 3.2 Binding the general time-deformation problem
+### 3.2 Time-deformation spaces for Painlevé equations
 
 **Painlevé application.**
 
@@ -1293,7 +1275,7 @@ For a single ramified pole with slope 5/2, the structural order is 4 and the thr
 Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
 
 <a id="target-3-5"></a>
-### 3.5 Classical specialization of the full stable moduli
+### 3.5 Stable moduli for Painlevé equations
 
 **Painlevé application.**
 
@@ -1318,7 +1300,7 @@ Apply MeromorphicConnectionModuli §1.3 to §3.3. Verify its determinant, stabil
 *Needs:* Internal: 3.3, 1.3.
 
 <a id="target-3-6"></a>
-### 3.6 Specializing the deformation complex and pairing
+### 3.6 Deformation complexes and trace pairings
 
 **Painlevé application.**
 
@@ -1342,7 +1324,7 @@ Specialize MeromorphicConnectionModuli §1.4 to the determinant-fixed family of 
 *Needs:* Internal: 3.5, 1.4.
 
 <a id="target-3-7"></a>
-### 3.7 The classical symplectic surface as a construction output
+### 3.7 Symplectic structures on phase spaces
 
 **Painlevé application.**
 
@@ -1368,7 +1350,7 @@ Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identi
 *Needs:* Internal: 3.3, 3.5, 3.6, 1.5, 1.6.
 
 <a id="target-3-8"></a>
-### 3.8 Exceptional strata are part of the phase space
+### 3.8 Exceptional strata of the phase space
 
 **Painlevé application.**
 
@@ -1389,7 +1371,7 @@ At genus zero and rank two, the dimension calculation gives −8 + 2 + 2·4 = 2.
 Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
 
 <a id="target-3-9"></a>
-### 3.9 Specializing the strong isomonodromy construction
+### 3.9 Isomonodromic connections for Painlevé equations
 
 **Painlevé application.**
 
@@ -1413,7 +1395,7 @@ Apply MeromorphicConnectionModuli §2.1 to the classical time problem and the fa
 *Needs:* Internal: 3.2, 3.5, 3.6, 3.7, 2.1, 0.1.
 
 <a id="target-3-10"></a>
-### 3.10 The imported flatness theorem on classical inputs
+### 3.10 Flatness of the isomonodromic connection
 
 **Painlevé application.**
 
@@ -1430,7 +1412,7 @@ Use MeromorphicConnectionModuli §2.2 and the identification of §3.9 to obtain 
 *Needs:* Internal: 3.9, 2.2.
 
 <a id="target-3-11"></a>
-### 3.11 Symplectic preservation and total form by general comparison
+### 3.11 Symplectic transport and the total two-form
 
 **Painlevé application.**
 
@@ -1454,7 +1436,7 @@ First specialize the actual symplectic-preservation theorem of MeromorphicConnec
 *Needs:* Internal: 3.7, 3.9, 3.10, 2.2, 0.6.
 
 <a id="target-3-12"></a>
-### 3.12 Coherent restriction of the general construction
+### 3.12 Base change and presentation independence of the isomonodromic connection
 
 **Painlevé application.**
 
@@ -1600,7 +1582,7 @@ An exceptional RH fiber can be a projective curve. A chosen point on it is still
 Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`. General proof prerequisites belong to their independent package; this layer verifies its stated application comparisons.
 
 <a id="target-4-5"></a>
-### 4.5 Classical horizontal germs from general local theory
+### 4.5 Local holomorphic horizontal sections
 
 **Painlevé application.**
 
@@ -1672,7 +1654,7 @@ Apply NonlinearConnections §0.5 to the flatness of §3.10 and completeness of �
 *Needs:* Internal: 3.10, 3.11, 4.6, 0.5, 0.6.
 
 <a id="target-4-8"></a>
-### 4.8 Classical observable adapters
+### 4.8 Observations on Painlevé phase spaces
 
 **Painlevé application.**
 
@@ -1782,7 +1764,7 @@ The all-profile comparison is a construction and proof target. VDPS09's introduc
 *Needs:* Internal: 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 5.1; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14).
 
 <a id="target-5-3"></a>
-### 5.3 Intrinsic comparison of the time line
+### 5.3 The boundary deformation space and time direction
 
 **Painlevé application.**
 
@@ -1918,7 +1900,7 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 **Purpose.** Separate general analytic theorems from their geometric and special-function applications. The inputs are operator families, contour packages, jump matrices, weighted estimates, holomorphic line comparisons and trace-class estimates. None of the seven contracts requires a Painlevé equation, a rank-two formal profile, a phase-space dimension, a selected asymptotic branch, or a collision of meromorphic connections.
 
-### Reuse and ownership
+### Determinant and analytic constructions
 
 | Contract | General input and output | Proof owner |
 | --- | --- | --- |
@@ -1979,7 +1961,7 @@ Identify τ_T(s) ≠ 0 exactly with invertibility of T_s. Existence of L_T does 
 *Needs:* [Native complex Fredholm and determinant carriers](#dependency-fredholm) (IsFredholm; nonempty_fredholmPackage; exists_stabilization_kernel_coordinates; kernelHomeomorph; contDiffAt_kerSection; detLine; detLineCongr); [Native analytic inversion](#dependency-inversion) (analyticAt_inverse; analyticAt_inverse_one_sub); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
 <a id="target-6-2"></a>
-### 6.2 Importing the complex determinant-line construction
+### 6.2 Determinant lines for Painlevé families
 
 **Painlevé application.**
 
@@ -2037,7 +2019,7 @@ Keep the reference bundle and auxiliary modification in the input marking. Unit 
 *Needs:* Internal: 3.1, 3.5, 3.6, 3.9, 4.1, 4.2, 4.3, 6.2, 1.2; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23); [Trace-class ideal carrier](#dependency-trace-ideal) (OI-B01–OI-B19; OI-B23; OI-B29–OI-B30); [Matrix-symbol Toeplitz index](#dependency-toeplitz) (T1–T3); [Generic trace-class determinant](#dependency-trace-determinant) (8.3, generic operator-theory prefix).
 
 <a id="target-6-4"></a>
-### 6.4 The divisor and corrected variational comparisons
+### 6.4 The tau divisor and variational formulas
 
 **Painlevé application.**
 
@@ -2105,10 +2087,10 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 <a id="layer-7"></a>
 
-## Layer 7: Classical equations as coordinate comparisons
+## Layer 7: Classical forms of Painlevé equations
 
 <a id="target-7-1"></a>
-### 7.1 Applying the intrinsic first-jet theorem
+### 7.1 First-jet coordinates and scalar Painlevé equations
 
 **Painlevé application.**
 
@@ -2284,7 +2266,7 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 ## Layer 8: Riemann–Hilbert asymptotics and distinguished solutions
 
 <a id="target-8-1"></a>
-### 8.1 Contour packages and the Cauchy-transform solution class
+### 8.1 Contours and Cauchy-transform solutions
 
 **General theory.**
 
@@ -2462,7 +2444,7 @@ Define boundary-selection data over the admitted geometric time family: an end a
 *Needs:* Internal: 4.1, 4.2, 4.3, 4.5, 4.6, 4.7, 4.8, 6.3, 6.4, 6.5, 7.1, 7.2.
 
 <a id="target-8-6"></a>
-### 8.6 Geometric adapters for the general small-norm RHP theorem
+### 8.6 Riemann–Hilbert realizations of Painlevé solutions
 
 **Painlevé application.**
 
@@ -2492,7 +2474,7 @@ Undo the verified parametrix reduction, reconstruct the decorated connection by 
 *Needs:* Internal: 3.9, 3.10, 4.1, 4.5, 4.7, 8.5, 8.1, 8.2, 8.3.
 
 <a id="target-8-7"></a>
-### 8.7 Two precisely scoped connection-formula realizations
+### 8.7 Connection formulas and their constants
 
 **Painlevé application.**
 
@@ -2523,7 +2505,7 @@ The quantitative arc contract is the following, uniformly for z = R exp(iθ) and
 *Needs:* Internal: 6.4, 6.5, 7.1, 7.2, 7.4, 7.5, 8.5, 8.6, 8.4; [Airy, Fredholm and Hastings–McLeod theory](#dependency-airy-hm) (8.4; 8.5).
 
 <a id="target-8-8"></a>
-### 8.8 The Hastings–McLeod bridge
+### 8.8 The Hastings–McLeod solution on the phase space
 
 **Painlevé application.**
 
@@ -2565,7 +2547,7 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 **Purpose.** Isolate two reusable results. The first is linear Laurent algebra with an elementary analytic convergence consequence for arbitrary finite-dimensional coefficients. The second constructs a relative dual Poisson structure from a finite locally free algebra. They require no Painlevé equation, primitive endpoint condition, phase dimension, asymptotic solution, or moduli quotient.
 
-### Contracts and ownership
+### Pole cancellation and Poisson structures
 
 | Contract | Input → output | Proof owner |
 | --- | --- | --- |
@@ -2772,7 +2754,7 @@ Use GMR23 Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429, for its orde
 *Needs:* Internal: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.9, 3.10, 3.11, 3.12, 5.2, 9.1, 9.2; [Smooth real KKS and regular reduction](#dependency-reduction) (R2; R3).
 
 <a id="target-9-6"></a>
-### 9.6 Confluence by the general compact-path theorem
+### 9.6 Convergence of horizontal solutions under confluence
 
 **Painlevé application.**
 
@@ -2796,7 +2778,7 @@ Apply NonlinearConnections §0.9 to the actual time/phase comparison of §9.5. S
 *Needs:* Internal: 9.5, 0.9.
 
 <a id="target-9-7"></a>
-### 9.7 The cascade as coordinate comparison
+### 9.7 Confluence relations between classical equations
 
 **Painlevé application.**
 
@@ -2815,7 +2797,7 @@ Construct the cascade as the category generated by the verified collision-data a
 *Needs:* Internal: 3.12, 7.1, 7.2, 7.3, 7.4, 7.5, 9.5, 9.6.
 
 <a id="target-9-8"></a>
-### 9.8 Tau-confluence adapters for general analytic convergence
+### 9.8 Convergence of tau sections under confluence
 
 **Painlevé application.**
 
@@ -2906,54 +2888,3 @@ Implementation follows the dependency graph. Build each general result from its 
 - **GMR23.** Ilia Gaiur; Marta Mazzocco; Vladimir Rubtsov. *[Isomonodromic Deformations: Confluence, Reduction and Quantisation](https://doi.org/10.1007/s00220-023-04650-8)*. Communications in Mathematical Physics 400 (2023), 1385–1461. Publisher version of record, 1 March 2023, under CC BY 4.0. Locators: Theorem 2, pp. 1391–1392, (12)–(15), used only with the corrected rank-raising coefficient lemma in §9.5; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1, p. 1441, for its explicit nonramified scope.
 
 - **DLMF.** P. A. Clarkson, *[Painlevé Transcendents, Chapter 32 of the NIST Digital Library of Mathematical Functions](https://dlmf.nist.gov/32)*. Version 1.2.8, released 15 September 2026. [§32.2](https://dlmf.nist.gov/32.2), equations 32.2.1–32.2.6; [§32.6](https://dlmf.nist.gov/32.6); [§32.7](https://dlmf.nist.gov/32.7); [§32.9](https://dlmf.nist.gov/32.9), especially equations 32.9.6 and 32.9.12. Standard scalar displays and normalization reference.
-
-<a id="reuse-contract"></a>
-
-## Appendix: the reusable proof contract
-
-### Acceptance contract
-
-A reusable result has its own inputs, outputs, laws, failure cases, owner and dependency unit. Its transitive prerequisites contain no specialized application. Applications use the same native objects and prove that the hypotheses apply; they do not copy the carrier or repeat the general proof. Actual morphisms, pullbacks and coherence maps are retained. Reusability does not justify weakening a necessary hypothesis.
-
-### Independently reusable theories
-
-| General theory | Targets | Reusable mathematics | Proof owner |
-|---|---:|---|---|
-| [NonlinearConnections](#nonlinear-connections) | 9 | Actual nonlinear connections and base change; continuous-time local lifts; holomorphic germs; proper-transfer completeness; fundamental groupoids and descent; relative forms; observations; intrinsic jets; compact-path limits | This roadmap: 0.1–0.9 |
-| [MeromorphicConnectionModuli](#connection-moduli) | 12 | Admitted decorated input → full moduli, deformation cone, relative symplectic form and constructed strong flat splitting; regular-singular RH branch | This roadmap: 1.1–2.6 |
-| [AnalyticRHPAndDeterminants](#analytic-theory) | 7 | Complex Fredholm determinant line; Cauchy-class small-norm RHP; weighted moments and uniform tails; normalized analytic limits | This roadmap: 6.1; 8.1–8.3; 8.4; 9.3–9.4 |
-| [AlgebraicConfluence](#algebraic-confluence) | 2 | Vector-valued principal-part cancellation; relative Lie–Poisson structures on duals over finite locally free algebras | This roadmap: 9.1–9.2 |
-
-### Intrinsic construction and later properties
-
-For an admitted decorated deformation problem D, the general construction produces
-
-```math
-D\longmapsto(\pi_D:M_D\to B_D,h_D,\omega_D).
-```
-
-The phase space, tangent splitting, flatness and relative symplectic form are outputs. The construction comes with input-isomorphism and admissible-base-change comparisons, including composition and triple-overlap coherence. On a verified nonempty-fiber base, the consumer receives the actual nonlinear-connection object. No solution operator, completeness theorem or scalar formula is inserted into its input.
-
-The admitted scope retains I23's logarithmic flags, generic distinct-leading unramified conditions and specified generic totally ramified factorized conditions. Mixed blocks and new local types require a new admission/construction theorem. Fixed determinant has its own transport and deformation comparison; the positive-genus removal of 2g directions is not inferred from the genus-zero formula. [I23, §§2–5 and Theorems 5.1, 7.5, 8.1, 11.6](https://sigma-journal.com/2023/013/).
-
-Completeness is obtained separately. A proper semiconjugacy from a finite-dimensional C¹ nonlinear connection to a complete continuous transport sends every partial horizontal lift into the compact preimage of one transported path. Continuous-time local uniqueness and compact extension then give a full lift. The target may be singular; no inverse to the comparison map is needed. Individual-path completeness does not need flatness. Flatness is needed for homotopy invariance, the fundamental-groupoid action and universal-cover sections. Descent is a further fixed-point condition. The moduli application must supply the proper map and all-point compatibility. I13 supplies a precisely scoped regular-singular family theorem with the exponent parameters retained; general irregular properness is not inferred from it. [I13, Theorem 2.2](https://arxiv.org/abs/math/0602004v2).
-
-For scalarization, the general input is a holomorphic observer bundle E→B of relative dimension one over a complex time curve B, together with its intrinsic jet map J_Q:M→J¹(E/B). On a proved jet-isomorphism domain, transport gives a second-order equation. The coordinate formula q″=(A_t+AA_q+BA_p)(t,q,P(t,q,q′)) is a lemma after choosing h(∂t)=∂t+A∂q+B∂p and a genuine inverse p=P(t,q,v). Symplecticity, completeness and the Painlevé property are not hypotheses of that generic theorem.
-
-### A second actual consumer
-
-[FiveLogarithmicPoints](#five-point-application) contains four application targets with no direct or transitive Painlevé prerequisite. It starts with rank two on an ordered five-pointed projective line, structural degree five, determinant (O,d), and fixed residue pairs ±1/4, ±1/4, ±1/6, ±1/6, ±1/4. Explicit rational weights avoid stability walls. The normalized configuration base has dimension 5−3=2. The phase dimension is −8+2+10=4.
-
-Nonemptiness is witnessed by (D,J,K,K⁻¹,(DJ)⁻¹), where D=diag(i,−i), J=[[0,1],[−1,0]] and K=diag(exp(πi/3),exp(−πi/3)). The product is I; D and J have no common invariant line. Chosen logarithmic lattices, the determinant comparison and stability turn this irreducible representation into an admitted connection for every configuration. No trivial rank-two underlying bundle or global marked object is assumed. The exact I13 inequality is 2·5−2·2−2=4>0.
-
-Both applications consume the same construction in MeromorphicConnectionModuli 2.4, the same completeness theorem in NonlinearConnections 0.4 and the same groupoid/descent theorem in 0.5. The second consumer exposes accidental classical assumptions: its four-dimensional phase fiber cannot be identified with a scalar first-jet fiber, and its two-dimensional time base does not support an unqualified one-variable pole statement. A holomorphic time-curve pullback and an initial point give meromorphic evaluation on the pointed universal cover under the observer hypotheses. Descent to the time curve requires scalar deck invariance, or a separately supplied horizontal phase section on the curve. Garnier coordinate displays lie outside the five-point application.
-
-### Application-specific proof ownership
-
-Painlevé owns the degree-four restriction, the ten underlying and seventeen ordered profile classification and one-dimensional time conclusion; the remaining classical irregular/Stokes and all-strata proper-RH extension; full surface and boundary comparisons; transformations and invariant reductions; actual observer/jet charts; resonant/ramified index-zero RHP realizations; the geometric contour, endpoint and uniformity adapters; and collision families, endpoint admissibility, common charts and tau line/frame/operator comparisons.
-
-The vector-valued pole-cancellation theorem does not classify Katz slopes or certify a primitive endpoint. The relative Lie–Poisson theorem does not assert existence of every symplectic quotient or flatness of every orbit family. Those comparisons remain explicit application obligations.
-
-### Shared objects and dependency conditions
-
-Every target has a unique address and a definite proof owner. Internal references resolve in an acyclic dependency graph. General targets depend only on foundations and other general targets; the two applications supply their own admission and comparison proofs. The English text, Japanese text and structured plan specify the same hypotheses, conclusions, laws and failure cases. A comparison theorem retains its actual maps and their composition laws; an equality of informal names does not replace it.

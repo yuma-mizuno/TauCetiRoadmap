@@ -1,6 +1,6 @@
 # Submission review and verification record
 
-This record concerns the intrinsic Painlevé roadmap, its structural revision into ten numbered layers, and its GitHub math rendering. The mathematical specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. Process history, model attribution, execution results and outstanding human-review steps belong here and in the PR description.
+This record concerns the Painlevé roadmap, its structural revision into ten numbered layers, and its GitHub math rendering. The mathematical specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. Process history, model attribution, execution results and outstanding human-review steps belong here and in the PR description.
 
 ## Snapshots and change boundary
 
@@ -29,7 +29,7 @@ The R3 review identifies the mathematical snapshot published in `089ae2b8698b5e0
 | README.ja.md | `e10c2a2b107f005b17727c93a07ff0c438d769805a34e54649ae13b23394a046` |
 | design/plan.json | `dfb8c5e9f0aa3abf5dbebf5934a9c9cda302627445661d00d1b8c4963470f524` |
 
-These are not the hashes of the reorganized documents. The R1–R3 JSON records, [preservation.json](preservation.json) and [build_results.json](build_results.json) retain their original identifiers, scope and hashes. The mapping and structural comparisons for the numbered snapshot are recorded separately in [numbering.json](numbering.json). The subsequent presentation repair is recorded in [math_rendering.json](math_rendering.json), with current check results in [validation.json](validation.json). Native/supplier file hashes remain in [dependency_audit.json](dependency_audit.json).
+These are not the hashes of the reorganized documents. The R1–R3 JSON records, [preservation.json](preservation.json) and [build_results.json](build_results.json) retain their original identifiers, scope and hashes. The mapping and structural comparisons for the numbered snapshot are recorded separately in [numbering.json](numbering.json). The subsequent presentation repair is recorded in [math_rendering.json](math_rendering.json), with its historical check results retained in Git and current successor checks in [validation.json](validation.json). Native/supplier file hashes remain in [dependency_audit.json](dependency_audit.json).
 
 ## Current layer structure and preservation
 
@@ -145,7 +145,17 @@ The browser check also inspected the Hamiltonian thin space, set braces, norm ba
 
 [math_rendering.json](math_rendering.json) stores reversible, offset-qualified patches and old/new hashes. The validator reconstructs the numbered snapshot exactly and checks its immutable historical fingerprints; it then checks the current text and permits only the declared presentation changes. The old numbering and mathematical review records are not rewritten or presented as reviews of different bytes.
 
-## Current structural checks
+## Current document organization and headings
+
+The title is *Painlevé equations and functions*. Mathematical subject names replace instruction-shaped headings such as “intrinsic”, “reusable export”, “importing”, and “as a construction output”. The same titles appear in the English and Japanese documents, layer tables, structured plan and part registry. The Suggested file changes only its documentation title.
+
+The global independence policy remains in the opening overview. The duplicated appendix and repeated general-theory overview at the start of Layer 3 are removed. The appendix's mathematical content is already specified in the owning targets: admission and determinant comparisons in 1.1–1.5, construction and coherence in 2.1–2.4, completeness and descent in 0.4–0.5 and their applications, scalarization in 0.8, and the five-point example in 2.7–2.10. The application-specific surface, analytic and confluence obligations remain in their numbered targets. No new target or hypothesis is introduced by this reorganization.
+
+[organization.json](organization.json) binds this revision to commit `9110ce4b595d9afe79399c379fc132b350b69739`. The checker compares all 78 target bodies in each language exactly after removing the heading line, and compares the structured mathematical fields with only titles and the document-level summary excluded. It verifies the current file fingerprints before using the preceding Git snapshot for historical rendering and numbering checks. Those receipts have not been rewritten as reviews of the new bytes.
+
+The current validator passes **6,702 checks** with zero failures, including both original-plan comparisons. The current Markdown math forms and table columns are checked locally. The historical browser result below belongs to its stated earlier snapshot; no new browser inspection or Lean build is claimed. The repository-wide build cancellation remains in effect.
+
+## Rendering-snapshot structural checks
 
 | Check | Result | Meaning |
 |---|---|---|
@@ -156,7 +166,7 @@ The browser check also inspected the Hamiltonian thin space, set braces, norm ba
 | Suggested Lean changes | Roadmap references in comments only | Declarations, imports and proof bodies are unchanged; no new Lean build is run |
 | Full repository `lake build` | Not restarted | The user's cancellation remains in effect; no full-build success is claimed |
 
-Current exact inputs and results are in [math_rendering.json](math_rendering.json) and [validation.json](validation.json), linked to the earlier [numbering.json](numbering.json). Structural preservation and rendering checks do not prove theorem statements or replace specialist review.
+The rendering snapshot inputs are in [math_rendering.json](math_rendering.json), linked to [numbering.json](numbering.json). Current successor results are in [validation.json](validation.json) and are checked against [organization.json](organization.json). Structural preservation and rendering checks do not prove theorem statements or replace specialist review.
 
 ### Earlier executed checks
 
@@ -188,14 +198,16 @@ python3 TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/validate
 python3 TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/check_math_rendering.py --pandoc
 ```
 
-To reproduce the recorded 6,547 checks, obtain `TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json` at source commit `2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f` and pass its local path with `--baseline`; also obtain that file at the reviewed parent `089ae2b8698b5e01523978ba6797e8891dc0a0dd` and pass its path with `--previous-plan`. The first comparison checks the original mathematical preservation manifest; the second independently checks the complete target dictionaries and prerequisite mapping before regrouping. Without these arguments, the validator checks the stored fingerprints and current documents and explicitly reports which source files it has not independently reread. The output count is correspondingly lower. The standalone `--pandoc` check requires Pandoc and adds independent GFM parsing to the standard-library presentation checks; it does not inspect a browser or claim to reproduce the recorded GitHub visual check.
+To reproduce the current 6,702 checks, obtain `TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json` at source commit `2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f` and pass its local path with `--baseline`; also obtain that file at the reviewed parent `089ae2b8698b5e01523978ba6797e8891dc0a0dd` and pass its path with `--previous-plan`. The first comparison checks the original mathematical preservation manifest; the second independently checks the complete target dictionaries and prerequisite mapping before regrouping. Without these arguments, the validator checks the stored fingerprints and current documents and explicitly reports which source files it has not independently reread. The output count is correspondingly lower. The standalone `--pandoc` check requires Pandoc and adds independent GFM parsing to the standard-library presentation checks; it does not inspect a browser or claim to reproduce the recorded GitHub visual check.
 
 The validator requires checked-out Mathlib and Tau Ceti sources to verify native dependency paths. It does not run network requests, theorem proofs, the roadmap worker or AI-provider jobs. Rebuilding Lean is not required for this comments-only prototype revision.
 
 ## AI attribution and outstanding human steps
 
-Drafting, source/dependency work, representative Lean prototyping, structural revision, math rendering inspection and AI reviews used **ChatGPT (GPT-6 Astra Pro)**. No TauCetiRoadmapWorker process or AI-provider job was run. The source draft's retained attribution also names GPT-6 Astra Pro.
+Earlier drafting, source/dependency work, representative Lean prototyping, structural revision, math rendering inspection and AI reviews used **ChatGPT (GPT-6 Astra Pro)**. No TauCetiRoadmapWorker process or AI-provider job was run. The source draft's retained attribution also names GPT-6 Astra Pro.
 
 There is no claim that a human has read this final snapshot or that a subject-area expert has approved it. The final human read-through and expert-review arrangements remain to be recorded before opening the PR. Review attention should include the intended mathematical scope, the full irregular RH properness proof target, determinant/moduli comparisons and the analytic realization/normalization interfaces. These are substantial specifications with named proof obligations; the AI reviews do not turn them into completed theorems.
+
+The subsequent appendix and title edit was assisted by Codex.
 
 [PR_BODY.md](PR_BODY.md) is prepared for a PR targeting upstream `main` with `awaiting-review`. Preparing and pushing this branch does not itself open a PR, request a review or post a message. No such external action has been taken.

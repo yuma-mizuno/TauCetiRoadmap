@@ -20,7 +20,7 @@
     },
     {
       "id": "connection_moduli",
-      "title": "Reusable intrinsic construction of meromorphic-connection moduli and their nonlinear time connection",
+      "title": "Meromorphic-connection moduli and isomonodromic connections",
       "scope_role": "framework",
       "owner": "PainleveEquationsAndFunctions:connection_moduli",
       "target_ids": [
@@ -40,7 +40,7 @@
     },
     {
       "id": "analytic_theory",
-      "title": "Reusable analytic RHPs and determinant convergence",
+      "title": "Riemann–Hilbert problems and determinant convergence",
       "scope_role": "framework",
       "owner": "PainleveEquationsAndFunctions:analytic_theory",
       "target_ids": [
@@ -55,7 +55,7 @@
     },
     {
       "id": "algebraic_confluence",
-      "title": "Reusable algebraic confluence and finite-algebra Poisson geometry",
+      "title": "Pole cancellation and finite-algebra Poisson geometry",
       "scope_role": "framework",
       "owner": "PainleveEquationsAndFunctions:algebraic_confluence",
       "target_ids": [
@@ -65,7 +65,7 @@
     },
     {
       "id": "painleve",
-      "title": "Intrinsic Painlevé equations and functions",
+      "title": "Painlevé equations and functions",
       "scope_role": "application",
       "owner": "PainleveEquationsAndFunctions:painleve",
       "target_ids": [

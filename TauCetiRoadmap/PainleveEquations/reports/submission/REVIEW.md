@@ -60,7 +60,7 @@ They are historical evidence, not fresh reviews of the current files. The full p
 
 ## Submission boundary
 
-The branch is `codex/painleve-roadmap-submission`, based on upstream `main` at `ffac5139fe4794a132eb540a89e1b973070aad69`. Its diff remains confined to `TauCetiRoadmap/PainleveEquations/`. No PR or external review request is created by this revision.
+The working branch is `codex/painleve-roadmap-working`, based on upstream `main` at `ffac5139fe4794a132eb540a89e1b973070aad69`. Its diff remains confined to `TauCetiRoadmap/PainleveEquations/`. No PR or external review request is created by this revision.
 
 The mathematical specification and scope revision were prepared with AI assistance from Codex. Human review and the eventual PR/CI steps are separate from these local checks.
 
@@ -71,3 +71,13 @@ The directory, active roadmap identifiers, proof-owner prefixes and Lean namespa
 The primary topic remains `math.AG`. The closest moduli/isomonodromy and initial-condition-space sources are primary AG: [van der Put–Saito](https://arxiv.org/abs/0902.1702v5) (cross-listed CA), [Inaba](https://arxiv.org/abs/2108.09667), [Inaba–Iwasaki–Saito](https://arxiv.org/abs/math/0501007v2) (cross-listed DS), and [Saito–Takebe–Terajima](https://arxiv.org/abs/math/0006026v2). Analytic treatments have other primary topics: [Steinmetz](https://arxiv.org/abs/1601.04031) is CV and [Dereziński–Ishkhanyan–Latosiński](https://arxiv.org/abs/2007.05698) is CA. This is a comparison of selected close sources, not a statistical survey. Retaining AG for the present moduli-based construction is an editorial judgement informed by those registrations.
 
 The renamed representative Lean file was submitted to a direct type check, which stopped at the first import because the existing dependency checkout lacks `TauCeti.Geometry.Manifold.Submersion.olean`. No proof-body error was reached, and no full build was started. [namespace_check.json](namespace_check.json) records the failed check; the current namespace has not been certified by Lean.
+
+## Submission packaging
+
+The former `codex/painleve-roadmap-submission` branch is renamed locally and on GitHub to `codex/painleve-roadmap-working`. It retains the Japanese text, structured plan and all verification history. The separate `codex/painleve-equations-submission` branch is based on upstream `main` at `eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d` and contains one roadmap commit adding exactly three files: `README.md`, `Suggested.lean` and `metadata.toml`.
+
+The submitted English README replaces references to omitted working files with its own dependency table and bibliography. All target bodies are preserved except for those explicitly listed reference edits; all mathematical statements, hypotheses, API items, diagnostics, supporting constructions, prerequisite lists and ordered TeX payloads are retained. The Lean interfaces and topic are byte-identical to the working source at `81debc5bdc5512ed79dfaa0ae03ddb4ddadc9989`.
+
+[packaging.json](packaging.json) records the source and submission commits, three file hashes, exact prose substitutions, 997 passing packaging checks and the actual GitHub rendering observations. The current upstream changes to the ComplexCurveModuli supplier redirect its own analytic dependencies; the curve-moduli interfaces consumed here remain present. Root indexes, workflow files and dependency pins are not part of the submission diff.
+
+The submitted page has 212 rendered MathML nodes and 57 target headings, with no queried math errors or rendering warnings. The screenshot spot check covered target 0.6. This does not certify every formula visually or prove the mathematics. Current Lean type checking remains unconfirmed after the missing dependency-object failure; no full build was restarted. Human review, upstream PR creation, its build check and code-owner approval remain outstanding. The prepared PR body is retained only on the working branch; no PR, review request or discussion message has been sent.

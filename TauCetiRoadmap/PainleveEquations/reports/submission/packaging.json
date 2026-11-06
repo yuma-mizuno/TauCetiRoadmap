@@ -1,0 +1,65 @@
+{
+  "meaning": "Submission packaging and preservation checks; not mathematical proof, Lean compilation or browser-rendering evidence.",
+  "source_branch": "codex/painleve-roadmap-working",
+  "source_commit": "81debc5bdc5512ed79dfaa0ae03ddb4ddadc9989",
+  "submission_branch": "codex/painleve-equations-submission",
+  "submission_base": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+  "files": {
+    "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+    "README.md": "f9e365d7cf8342778e476f03a1a93d90dfc9d38ecd703e91e57165eb9a4c476f",
+    "Suggested.lean": "d910df12b2db44c9efe6ded57928d784e1b5a68903d23f92ec3cb2810399af5d"
+  },
+  "english_prose_edits": [
+    {
+      "before": "[日本語版](README.ja.md) · [Structured mathematical plan](design/plan.json) · [External dependency contracts](design/dependencies.json)\n\n",
+      "after": ""
+    },
+    {
+      "before": "Full contract records are in [design/dependencies.json](design/dependencies.json).",
+      "after": "The external dependency contracts are listed below."
+    },
+    {
+      "before": "This is an independently reusable part of the single roadmap, recorded in its one [plan](design/plan.json) and [Japanese version](README.ja.md#nonlinear-connections).",
+      "after": "This is an independently reusable part of this roadmap."
+    },
+    {
+      "before": "interfaces listed in the structured plan.",
+      "after": "interfaces specified in the external dependency contracts above."
+    },
+    {
+      "before": "Use the exact *Needs* list at each target and the cross-package registry in `design/reuse_registry.json`.",
+      "after": "Use the exact *Needs* list at each target and the external dependency contracts above."
+    },
+    {
+      "before": "Bibliographic information and source locators are listed in [sources.toml](sources.toml).",
+      "after": "Bibliographic information and source locators are listed in the [references](#references)."
+    },
+    {
+      "before": "### References\n",
+      "after": "<a id=\"references\"></a>\n\n### References\n"
+    }
+  ],
+  "checks": 997,
+  "passed_checks": 997,
+  "failed_checks": [],
+  "lean_typecheck": "Unconfirmed: prior direct check stopped at a missing compiled TauCeti import; no full build restarted.",
+  "github_visual_check": {
+    "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-equations-submission/TauCetiRoadmap/PainleveEquations/README.md",
+    "commit": "8b189c883fcdf1ce901b2fc39e2126cb28611103",
+    "rendered_mathml_nodes": 212,
+    "target_headings": 57,
+    "queried_math_error_nodes": 0,
+    "rendering_warning_matches": 0,
+    "screenshot_spot_check": "Target 0.6: inline and display mathematics rendered legibly.",
+    "limit": "DOM inventory and a visual spot check; not a visual inspection of every formula or a mathematical review."
+  },
+  "pr_created": false,
+  "submission_commit": "8b189c883fcdf1ce901b2fc39e2126cb28611103",
+  "topic_check": "Passed: 173 roadmaps.",
+  "remaining": [
+    "Current Suggested.lean type checking is unconfirmed: the last attempt stopped at a missing compiled Tau Ceti import. No full build restarted.",
+    "Human final review of the proposed scope and interfaces.",
+    "Create an upstream PR against main and apply awaiting-review; PR build and code-owner approval remain outstanding.",
+    "The linked Getting started: roadmaps Zulip discussion has not been read; prior access attempts failed."
+  ]
+}

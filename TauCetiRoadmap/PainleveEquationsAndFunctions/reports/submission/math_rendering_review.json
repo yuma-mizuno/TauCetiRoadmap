@@ -1,0 +1,1296 @@
+{
+  "reviewer": "independent child agent /root/math_markdown_audit",
+  "scope": "Read-only review of English/Japanese mathematical Markdown and their plan.json strings. No topic source was edited by the reviewer.",
+  "baseline_commit": "4287135b0e642d91c29df0ec1cfa5996fa1c5bcb",
+  "repository_head_at_review": "4287135b0e642d91c29df0ec1cfa5996fa1c5bcb",
+  "inputs": {
+    "README.md": {
+      "before_sha256": "1f4af5281c9a10174e5ea01e5254689a999161ab7f638423a01bdc7927b9484e",
+      "after_sha256": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761"
+    },
+    "README.ja.md": {
+      "before_sha256": "6cacf36f53fdd2c8b504655e3c3a5de223c3243c7e5f0791b869681bc67b6196",
+      "after_sha256": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd"
+    },
+    "design/plan.json": {
+      "before_sha256": "83feeafa7e754ca6d8bb9a4ecbdf54257e6a31265c9243df553c69aad8e624e5",
+      "after_sha256": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945"
+    }
+  },
+  "accepted_changes": [
+    "Inline dollar delimiters replaced by GitHub dollar/backtick delimiters; original inline bodies otherwise byte-preserved.",
+    "Legacy bracket and double-dollar displays replaced by blank-separated math fences; only boundary newlines may change.",
+    "Explicit compatibility exception: operatorname{X} may become mathop{mathrm{X}}nolimits for X in im, Log, diag, including exactly one added command-separator space after nolimits. These plain-letter operator names retain upright style, operator spacing and non-limit subscript placement. No other TeX body changes allowed."
+  ],
+  "readme_reviews": {
+    "README.md": {
+      "path": "README.md",
+      "old_counts": {
+        "inline": 240,
+        "display": 9
+      },
+      "new_counts": {
+        "inline": 240,
+        "display": 9
+      },
+      "math_bodies_exact_except_declared_operator_rewrite": true,
+      "nonmath_exact_except_display_boundary_blank_lines": true,
+      "operator_rewrite_expressions": [
+        {
+          "expression": 125,
+          "old_line": 310,
+          "new_line": 310,
+          "operators": [
+            "im"
+          ]
+        },
+        {
+          "expression": 247,
+          "old_line": 2392,
+          "new_line": 2404,
+          "operators": [
+            "Log",
+            "Log"
+          ]
+        },
+        {
+          "expression": 248,
+          "old_line": 2396,
+          "new_line": 2410,
+          "operators": [
+            "Log"
+          ]
+        }
+      ],
+      "issues": [],
+      "passed": true
+    },
+    "README.ja.md": {
+      "path": "README.ja.md",
+      "old_counts": {
+        "inline": 226,
+        "display": 11
+      },
+      "new_counts": {
+        "inline": 226,
+        "display": 11
+      },
+      "math_bodies_exact_except_declared_operator_rewrite": true,
+      "nonmath_exact_except_display_boundary_blank_lines": true,
+      "operator_rewrite_expressions": [
+        {
+          "expression": 113,
+          "old_line": 310,
+          "new_line": 310,
+          "operators": [
+            "im"
+          ]
+        },
+        {
+          "expression": 233,
+          "old_line": 2396,
+          "new_line": 2408,
+          "operators": [
+            "Log",
+            "Log"
+          ]
+        },
+        {
+          "expression": 234,
+          "old_line": 2400,
+          "new_line": 2414,
+          "operators": [
+            "Log"
+          ]
+        },
+        {
+          "expression": 237,
+          "old_line": 3011,
+          "new_line": 3027,
+          "operators": [
+            "diag",
+            "diag"
+          ]
+        }
+      ],
+      "issues": [],
+      "passed": true
+    }
+  },
+  "unchanged_dependency_and_reuse_files": {
+    "design/dependencies.json": {
+      "before_sha256": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
+      "after_sha256": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
+      "unchanged": true
+    },
+    "design/reuse_registry.json": {
+      "before_sha256": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
+      "after_sha256": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
+      "unchanged": true
+    },
+    "design/reuse_graph.json": {
+      "before_sha256": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
+      "after_sha256": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
+      "unchanged": true
+    }
+  },
+  "plan_review": {
+    "changed_string_count": 73,
+    "structural_changes": [],
+    "strings": [
+      {
+        "path": "design/plan.json/layers/0/targets/0/api/2/statement",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/ja/api/2",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/ja/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/ja/tests/0",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/ja/tests/1",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/tests/0/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/0/tests/1/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/ja/statement",
+        "old_counts": {
+          "inline": 12
+        },
+        "new_counts": {
+          "inline": 12
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/ja/tests/1",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/ja/tests/2",
+        "old_counts": {
+          "inline": 6
+        },
+        "new_counts": {
+          "inline": 6
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/statement",
+        "old_counts": {
+          "inline": 12
+        },
+        "new_counts": {
+          "inline": 12
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/tests/1/statement",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/1/tests/2/statement",
+        "old_counts": {
+          "inline": 6
+        },
+        "new_counts": {
+          "inline": 6
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/ja/statement",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/ja/tests/0",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/ja/tests/1",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/statement",
+        "old_counts": {
+          "inline": 5
+        },
+        "new_counts": {
+          "inline": 5
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/tests/0/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/2/tests/1/statement",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/api/0/statement",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/ja/statement",
+        "old_counts": {
+          "inline": 20
+        },
+        "new_counts": {
+          "inline": 20
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/ja/tests/0",
+        "old_counts": {
+          "inline": 5
+        },
+        "new_counts": {
+          "inline": 5
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/ja/tests/3",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/statement",
+        "old_counts": {
+          "inline": 20
+        },
+        "new_counts": {
+          "inline": 20
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/tests/0/statement",
+        "old_counts": {
+          "inline": 9
+        },
+        "new_counts": {
+          "inline": 9
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/3/tests/3/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/ja/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/ja/tests/1",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/ja/tests/2",
+        "old_counts": {
+          "inline": 6
+        },
+        "new_counts": {
+          "inline": 6
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/tests/1/statement",
+        "old_counts": {
+          "inline": 5
+        },
+        "new_counts": {
+          "inline": 5
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/4/tests/2/statement",
+        "old_counts": {
+          "inline": 7
+        },
+        "new_counts": {
+          "inline": 7
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/api/1/statement",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/ja/api/1",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/ja/statement",
+        "old_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "new_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [
+          {
+            "expression": 8,
+            "old_line": 1,
+            "new_line": 1,
+            "operators": [
+              "im"
+            ]
+          }
+        ],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/ja/tests/0",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/ja/tests/1",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/ja/tests/2",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/statement",
+        "old_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "new_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [
+          {
+            "expression": 8,
+            "old_line": 1,
+            "new_line": 1,
+            "operators": [
+              "im"
+            ]
+          }
+        ],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/tests/0/statement",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/tests/1/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/5/tests/2/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/ja/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/ja/tests/0",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/ja/tests/1",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/ja/tests/2",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/ja/tests/3",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/statement",
+        "old_counts": {
+          "inline": 15
+        },
+        "new_counts": {
+          "inline": 15
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/tests/0/statement",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/tests/1/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/tests/2/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/6/tests/3/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/ja/statement",
+        "old_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "new_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/ja/tests/0",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/ja/tests/1",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/ja/tests/2",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/ja/tests/4",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/statement",
+        "old_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "new_counts": {
+          "inline": 22,
+          "display": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/tests/0/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/tests/1/statement",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/tests/2/statement",
+        "old_counts": {
+          "inline": 3
+        },
+        "new_counts": {
+          "inline": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/7/tests/4/statement",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/ja/statement",
+        "old_counts": {
+          "inline": 23,
+          "display": 1
+        },
+        "new_counts": {
+          "inline": 23,
+          "display": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/ja/tests/0",
+        "old_counts": {
+          "inline": 4
+        },
+        "new_counts": {
+          "inline": 4
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/ja/tests/1",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/ja/tests/3",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/statement",
+        "old_counts": {
+          "inline": 23,
+          "display": 1
+        },
+        "new_counts": {
+          "inline": 23,
+          "display": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/tests/0/statement",
+        "old_counts": {
+          "inline": 6
+        },
+        "new_counts": {
+          "inline": 6
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/tests/1/statement",
+        "old_counts": {
+          "inline": 1
+        },
+        "new_counts": {
+          "inline": 1
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/0/targets/8/tests/3/statement",
+        "old_counts": {
+          "inline": 2
+        },
+        "new_counts": {
+          "inline": 2
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/8/targets/3/statement",
+        "old_counts": {
+          "display": 3
+        },
+        "new_counts": {
+          "display": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [
+          {
+            "expression": 2,
+            "old_line": 9,
+            "new_line": 11,
+            "operators": [
+              "Log",
+              "Log"
+            ]
+          },
+          {
+            "expression": 3,
+            "old_line": 13,
+            "new_line": 17,
+            "operators": [
+              "Log"
+            ]
+          }
+        ],
+        "issues": [],
+        "passed": true
+      },
+      {
+        "path": "design/plan.json/layers/8/targets/3/statement_ja",
+        "old_counts": {
+          "display": 3
+        },
+        "new_counts": {
+          "display": 3
+        },
+        "math_bodies_exact_except_declared_operator_rewrite": true,
+        "nonmath_exact_except_display_boundary_blank_lines": true,
+        "operator_rewrite_expressions": [
+          {
+            "expression": 2,
+            "old_line": 9,
+            "new_line": 11,
+            "operators": [
+              "Log",
+              "Log"
+            ]
+          },
+          {
+            "expression": 3,
+            "old_line": 13,
+            "new_line": 17,
+            "operators": [
+              "Log"
+            ]
+          }
+        ],
+        "issues": [],
+        "passed": true
+      }
+    ]
+  },
+  "plan_sync_before": {
+    "en": {
+      "targets": 78,
+      "mirrored_fields": 793,
+      "failures": [],
+      "passed": true
+    },
+    "ja": {
+      "targets": 78,
+      "mirrored_fields": 280,
+      "failures": [],
+      "passed": true
+    }
+  },
+  "plan_sync_after": {
+    "en": {
+      "targets": 78,
+      "mirrored_fields": 793,
+      "failures": [],
+      "passed": true
+    },
+    "ja": {
+      "targets": 78,
+      "mirrored_fields": 280,
+      "failures": [],
+      "passed": true
+    }
+  },
+  "computed_counts": {
+    "layers": 10,
+    "targets": 78,
+    "api_laws": 217,
+    "diagnostics": 263,
+    "internal_edges": 333,
+    "supporting_constructions": 32
+  },
+  "declared_counts": {
+    "parts": 6,
+    "general_parts": 4,
+    "layers": 10,
+    "targets": 78,
+    "general_targets": 30,
+    "api_laws": 217,
+    "diagnostics": 263,
+    "internal_edges": 333,
+    "supporting_constructions": 32
+  },
+  "checks": {
+    "readme_formula_and_text_preservation": true,
+    "plan_string_formula_and_text_preservation": true,
+    "plan_json_structure_and_nonstring_values_unchanged": true,
+    "target_ids_order_names_roles_owners_prerequisites_unchanged": true,
+    "expected_formula_counts": true,
+    "computed_counts_match_declared_counts": true,
+    "dependency_and_reuse_design_files_unchanged": true,
+    "declared_counts_unchanged": true,
+    "english_and_japanese_plan_sync": true,
+    "source_inputs_stable_during_review": true
+  },
+  "passed": true,
+  "limits": [
+    "This source review does not by itself establish successful GitHub rendering. Parent is independently inspecting published GitHub math nodes, rendered MathML and visual layout.",
+    "This review does not prove the mathematical theorems and does not run lake build or the roadmap worker.",
+    "Unchanged Unicode mathematics in prose is not classified as an unrendered TeX expression."
+  ]
+}

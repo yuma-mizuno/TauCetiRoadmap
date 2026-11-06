@@ -1,6 +1,6 @@
 # Submission review and verification record
 
-This record concerns the intrinsic Painlevé roadmap and its structural revision into ten numbered layers. The mathematical specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. Process history, model attribution, execution results and outstanding human-review steps belong here and in the PR description.
+This record concerns the intrinsic Painlevé roadmap, its structural revision into ten numbered layers, and its GitHub math rendering. The mathematical specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. Process history, model attribution, execution results and outstanding human-review steps belong here and in the PR description.
 
 ## Snapshots and change boundary
 
@@ -9,6 +9,8 @@ This record concerns the intrinsic Painlevé roadmap and its structural revision
 | Source draft | `yuma-mizuno/TauCetiRoadmap`, `2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f` |
 | Submission base | `TauCetiProject/TauCetiRoadmap:main`, `ffac5139fe4794a132eb540a89e1b973070aad69` |
 | Reviewed submission snapshot; parent of the structural revision | `089ae2b8698b5e01523978ba6797e8891dc0a0dd` |
+| Numbered snapshot; input to the presentation repair | `4287135b0e642d91c29df0ec1cfa5996fa1c5bcb` |
+| Math source candidate inspected on GitHub | `9f0f9b5ead988e2a3fe4e9500e54c88bc94f5caa` |
 | Submission branch | `codex/painleve-roadmap-submission` |
 | Allowed change directory | `TauCetiRoadmap/PainleveEquationsAndFunctions/` |
 | Lean toolchain | `leanprover/lean4:v4.36.0-rc2` |
@@ -27,7 +29,7 @@ The R3 review identifies the mathematical snapshot published in `089ae2b8698b5e0
 | README.ja.md | `e10c2a2b107f005b17727c93a07ff0c438d769805a34e54649ae13b23394a046` |
 | design/plan.json | `dfb8c5e9f0aa3abf5dbebf5934a9c9cda302627445661d00d1b8c4963470f524` |
 
-These are not the hashes of the reorganized documents. The R1–R3 JSON records, [preservation.json](preservation.json) and [build_results.json](build_results.json) retain their original identifiers, scope and hashes. The current mapping and structural comparisons are recorded separately in [numbering.json](numbering.json), with current check results in [validation.json](validation.json). Native/supplier file hashes remain in [dependency_audit.json](dependency_audit.json).
+These are not the hashes of the reorganized documents. The R1–R3 JSON records, [preservation.json](preservation.json) and [build_results.json](build_results.json) retain their original identifiers, scope and hashes. The mapping and structural comparisons for the numbered snapshot are recorded separately in [numbering.json](numbering.json). The subsequent presentation repair is recorded in [math_rendering.json](math_rendering.json), with current check results in [validation.json](validation.json). Native/supplier file hashes remain in [dependency_audit.json](dependency_audit.json).
 
 ## Current layer structure and preservation
 
@@ -120,23 +122,47 @@ Two separate AI reviewer sessions inspected the reorganized snapshot. Their scop
 - [Geometry and structure review](numbering_review_geometry.json) inspected every target dictionary and all 124 contextual-reference or ownership-prose changes beyond direct identifier substitutions. It verified preservation of the formulas, target roles and prerequisite order. The reviewer disclosed its earlier authorship of the validator changes and supplemented the rerun with direct text comparisons.
 - [Reference and source review](numbering_review_references.json) compared 3,359 paired plan strings and all 156 English/Japanese target blocks, checked local links and anchors, and distinguished internal addresses from literature and supplier sections.
 
-The reviews found obsolete surface-layer references, two stale local references inside source records, and two agreement/capitalization details. Each was corrected and rechecked. Both final records report no open findings within their stated scope and pin the current source hashes. The English and Japanese TeX-span multisets and external URL multisets are unchanged. The 78 targets, 217 API laws, 263 diagnostics, 32 supporting constructions and 333 prerequisite edges are retained under the explicit numbering map. These reviews are author-side AI checks, not human approvals or theorem proofs.
+The reviews found obsolete surface-layer references, two stale local references inside source records, and two agreement/capitalization details. Each was corrected and rechecked. Both final records report no open findings within their stated scope and pin the numbered snapshot, before the presentation repair below. The English and Japanese TeX-span multisets and external URL multisets were unchanged by that structural revision. The 78 targets, 217 API laws, 263 diagnostics, 32 supporting constructions and 333 prerequisite edges are retained under the explicit numbering map. These reviews are author-side AI checks, not human approvals or theorem proofs.
+
+## GitHub math rendering review
+
+The earlier preservation checks did not establish successful rendering. Inspection of the actual GitHub pages at `4287135` found all 20 intended display equations unrecognized: ten used bracket delimiters, and ten double-dollar blocks lacked paragraph separation. Fifty Japanese inline expressions and one English inline expression also remained literal text. Ordinary Markdown processing consumed some TeX backslashes, including the thin-space command in the Hamiltonian sign diagnostic.
+
+All 466 inline formulas now use protected dollar/backtick delimiters, and all 20 display formulas use blank-separated `math` fences, following the [GitHub math syntax documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions). A first rendered candidate recognized every formula but still produced seven GitHub error boxes rejecting `operatorname`. The repair therefore also expands the three plain operator names `im`, `Log` and `diag` using `mathop`, `mathrm` and `nolimits`, including the required command-separator space. These changes retain upright operator names, operator spacing and limit placement.
+
+The next candidate, `9f0f9b5`, was checked on the actual GitHub pages before the branch update:
+
+| Document | Inline formulas | Display formulas | Actual MathML formulas | GitHub error boxes / MathML error nodes | Raw dollar text outside math |
+|---|---:|---:|---:|---:|---:|
+| English | 240 | 9 | 249 / 249 | 0 / 0 | 0 |
+| Japanese | 226 | 11 | 237 / 237 | 0 / 0 | 0 |
+
+The browser check also inspected the Hamiltonian thin space, set braces, norm bars, upright operators and the two-by-two matrix. Visual checks covered the long Grönwall estimate, the Barnes product/expansion/remainder and the matrix comparison. All display blocks fit the inspected 1,348-pixel desktop viewport without horizontal overflow. This is a recorded desktop check, not a claim about every screen size.
+
+[math_rendering_review.json](math_rendering_review.json) is a separate, read-only AI review of the changed source bytes. All 486 formulas retain their order and mathematical content; 479 TeX bodies are exact, and the other seven contain only the explicitly listed equivalent operator expansions. Non-math prose is exact except for display-boundary blank lines. The 73 changed plan strings pass the same comparison, while target identities, order, dependency edges and the other design files remain unchanged. The reviewer checked 793 English and 280 Japanese fields inside their owning target blocks.
+
+[math_rendering_check.json](math_rendering_check.json) records 101 passing checks, including independent Pandoc GFM recognition of every formula. [math_rendering_browser.json](math_rendering_browser.json) records the actual browser findings and the two-candidate correction loop. Pandoc's separate TeX-to-MathML converter cannot handle the existing `d_{\rm phase}` expression in either language; GitHub renders both correctly, so the source is retained. Local parser recognition and actual GitHub rendering are reported separately.
+
+[math_rendering.json](math_rendering.json) stores reversible, offset-qualified patches and old/new hashes. The validator reconstructs the numbered snapshot exactly and checks its immutable historical fingerprints; it then checks the current text and permits only the declared presentation changes. The old numbering and mathematical review records are not rewritten or presented as reviews of different bytes.
 
 ## Current structural checks
 
 | Check | Result | Meaning |
 |---|---|---|
-| Identifier mapping, preservation and target-local consistency | 6,448 / 6,448 passed | Numerical addresses, retained mathematical fields, English/Japanese scope, dependency graph, ownership boundaries and links |
+| Identifier mapping, preservation and target-local consistency | 6,547 / 6,547 passed | Numerical addresses, retained mathematical fields, English/Japanese scope, dependency graph, ownership boundaries, links and the strict presentation bridge |
+| Math presentation and independent GFM parsing | 101 / 101 passed | Formula payload preservation, complete Markdown recognition and document/plan synchronization |
+| Actual GitHub rendering | English 249 / 249; Japanese 237 / 237 | Every formula has MathML; no GitHub math error boxes, MathML errors or raw dollar delimiters remain |
 | `check_roadmap_topics.py` | Passed; 173 roadmaps | The `math.AG` metadata remains valid |
 | Suggested Lean changes | Roadmap references in comments only | Declarations, imports and proof bodies are unchanged; no new Lean build is run |
 | Full repository `lake build` | Not restarted | The user's cancellation remains in effect; no full-build success is claimed |
 
-Current exact inputs and results are in [numbering.json](numbering.json) and [validation.json](validation.json). Structural preservation checks do not prove theorem statements or replace specialist review.
+Current exact inputs and results are in [math_rendering.json](math_rendering.json) and [validation.json](validation.json), linked to the earlier [numbering.json](numbering.json). Structural preservation and rendering checks do not prove theorem statements or replace specialist review.
 
 ### Earlier executed checks
 
 | Historical check | Result | Scope |
 |---|---|---|
+| Numerical regrouping consistency | 6,448 / 6,448 passed | Numbered snapshot at `4287135`, before the rendering repair |
 | Target-local consistency and source-plan comparison | 4,329 / 4,329 passed | Reviewed R3 snapshot, with its original identifiers |
 | Independent rerun by analytic reviewer | 4,329 / 4,329 passed | Same validator against the actual pinned source plan |
 | `lake exe cache get` | Exit 0 | Dependency cache acquisition succeeded |
@@ -159,15 +185,16 @@ From the repository root, run:
 ```bash
 python3 .github/scripts/check_roadmap_topics.py
 python3 TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/validate_submission.py
+python3 TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/check_math_rendering.py --pandoc
 ```
 
-To reproduce the recorded 6,448 checks, obtain `TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json` at source commit `2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f` and pass its local path with `--baseline`; also obtain that file at the reviewed parent `089ae2b8698b5e01523978ba6797e8891dc0a0dd` and pass its path with `--previous-plan`. The first comparison checks the original mathematical preservation manifest; the second independently checks the complete target dictionaries and prerequisite mapping before regrouping. Without these arguments, the validator checks the stored fingerprints and current documents and explicitly reports which source files it has not independently reread. The output count is correspondingly lower.
+To reproduce the recorded 6,547 checks, obtain `TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json` at source commit `2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f` and pass its local path with `--baseline`; also obtain that file at the reviewed parent `089ae2b8698b5e01523978ba6797e8891dc0a0dd` and pass its path with `--previous-plan`. The first comparison checks the original mathematical preservation manifest; the second independently checks the complete target dictionaries and prerequisite mapping before regrouping. Without these arguments, the validator checks the stored fingerprints and current documents and explicitly reports which source files it has not independently reread. The output count is correspondingly lower. The standalone `--pandoc` check requires Pandoc and adds independent GFM parsing to the standard-library presentation checks; it does not inspect a browser or claim to reproduce the recorded GitHub visual check.
 
 The validator requires checked-out Mathlib and Tau Ceti sources to verify native dependency paths. It does not run network requests, theorem proofs, the roadmap worker or AI-provider jobs. Rebuilding Lean is not required for this comments-only prototype revision.
 
 ## AI attribution and outstanding human steps
 
-Drafting, source/dependency work, representative Lean prototyping, structural revision and AI reviews used **ChatGPT (GPT-6 Astra Pro)**. No TauCetiRoadmapWorker process or AI-provider job was run. The source draft's retained attribution also names GPT-6 Astra Pro.
+Drafting, source/dependency work, representative Lean prototyping, structural revision, math rendering inspection and AI reviews used **ChatGPT (GPT-6 Astra Pro)**. No TauCetiRoadmapWorker process or AI-provider job was run. The source draft's retained attribution also names GPT-6 Astra Pro.
 
 There is no claim that a human has read this final snapshot or that a subject-area expert has approved it. The final human read-through and expert-review arrangements remain to be recorded before opening the PR. Review attention should include the intended mathematical scope, the full irregular RH properness proof target, determinant/moduli comparisons and the analytic realization/normalization interfaces. These are substantial specifications with named proof obligations; the AI reviews do not turn them into completed theorems.
 

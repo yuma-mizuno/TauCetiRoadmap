@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import re
 import sys
@@ -91,6 +92,25 @@ def main():
     ts = targets(plan)
     by_id = {t["id"]: t for t in ts}
     ids = set(by_id)
+    # Preserve the reviewed numbering snapshot. A presentation-only revision
+    # supplies a reversible patch, exact old/new file hashes, and independently
+    # checked equality of prose and ordered TeX payloads. All mathematical and
+    # document-consistency checks below still inspect the current plan.
+    rendering_path = ROOT / "reports/submission/math_rendering.json"
+    rendering_report = None
+    restored_inputs = {}
+    preformat_by_id = by_id
+    if rendering_path.is_file():
+        spec = importlib.util.spec_from_file_location(
+            "painleve_math_rendering_check", Path(__file__).with_name("check_math_rendering.py"))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        rendering_report, restored_inputs = module.audit_manifest(ROOT)
+        for item in rendering_report["checks"]:
+            check("math_rendering", item["check"], item["passed"], item.get("detail"))
+        if "design/plan.json" in restored_inputs:
+            preformat_by_id = {t["id"]: t for t in targets(
+                json.loads(restored_inputs["design/plan.json"]))}
     graph = read_json("design/reuse_graph.json")
     registry = read_json("design/reuse_registry.json")
     contracts = read_json("design/dependencies.json")["contracts"]
@@ -324,22 +344,27 @@ def main():
         new_id = row["after_id"]
         check("numbering", old_id + " target address", target_map.get(old_id) == new_id)
         t = by_id.get(new_id)
-        check("numbering", new_id + " target fingerprint", t is not None
-              and digest(t) == row["after_sha256"])
+        recorded_t = preformat_by_id.get(new_id)
+        check("numbering", new_id + " recorded target fingerprint", t is not None
+              and recorded_t is not None and digest(recorded_t) == row["after_sha256"])
         check("numbering", old_id + " previous target fingerprint",
               bool(re.fullmatch(r"[0-9a-f]{64}", row.get("before_sha256", ""))))
         check("numbering", new_id + " complete core field fingerprints",
               set(row.get("field_sha256", {})) == set(CORE_FIELDS))
         for field in CORE_FIELDS:
             hashes = row.get("field_sha256", {}).get(field, {})
-            check("numbering", new_id + " current " + field,
-                  t is not None and digest(t.get(field)) == hashes.get("after"))
+            check("numbering", new_id + " recorded " + field,
+                  t is not None and recorded_t is not None
+                  and digest(recorded_t.get(field)) == hashes.get("after"))
     recorded_inputs = numbering.get("inputs_sha256", {})
     check("numbering", "core input fingerprints recorded", set(CORE_FILES) <= set(recorded_inputs))
     for name, recorded_hash in recorded_inputs.items():
         path = ROOT / name
-        check("numbering", name + " exact input fingerprint",
-              path.is_file() and file_digest(path) == recorded_hash)
+        actual_hash = (hashlib.sha256(restored_inputs[name].encode("utf-8")).hexdigest()
+                       if name in restored_inputs else file_digest(path) if path.is_file() else None)
+        check("numbering", name + " exact recorded input fingerprint",
+              actual_hash == recorded_hash,
+              {"presentation_bridge": name in restored_inputs})
 
     previous_checked = False
     if args.previous_plan:
@@ -448,6 +473,9 @@ def main():
         "categories": dict(Counter(c["category"] for c in checks)),
         "inputs_sha256": {p: file_digest(ROOT / p) for p in CORE_FILES},
         "numbering_manifest_sha256": file_digest(numbering_path) if numbering_path.is_file() else None,
+        "math_rendering_manifest_sha256": file_digest(rendering_path) if rendering_path.is_file() else None,
+        "presentation_bridge_used": rendering_report is not None,
+        "math_rendering_checks": rendering_report["check_count"] if rendering_report else 0,
         "failures": failures,
     }
     encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

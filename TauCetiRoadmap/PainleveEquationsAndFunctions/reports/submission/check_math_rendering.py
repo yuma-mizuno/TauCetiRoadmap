@@ -1,0 +1,318 @@
+#!/usr/bin/env python3
+"""Check a reversible, formula-preserving GitHub math presentation change.
+
+The standard-library checks reconstruct the reviewed input exactly and compare
+ordered math payloads and non-math text, permitting only the three explicit
+operator-name expansions below. --pandoc independently checks the GFM syntax
+tree. Neither test claims that a remote GitHub page was visually checked.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import subprocess
+import sys
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+TICK = chr(96)
+FENCE = re.compile(r"[ ]{0,3}(" + TICK + r"{3,}|~{3,})([^\r\n]*)\r?\n")
+EXPECTED_FILES = {"README.md", "README.ja.md", "design/plan.json"}
+EXPECTED_COMMIT = "4287135b0e642d91c29df0ec1cfa5996fa1c5bcb"
+TEX_TYPOGRAPHY_SUBSTITUTIONS = {
+    "\\operatorname{im}": "\\mathop{\\mathrm{im}}\\nolimits ",
+    "\\operatorname{Log}": "\\mathop{\\mathrm{Log}}\\nolimits ",
+    "\\operatorname{diag}": "\\mathop{\\mathrm{diag}}\\nolimits ",
+}
+FORBIDDEN_OPERATOR_MACRO = re.compile(r"\\operatorname\b")
+
+
+def sha(text):
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def escaped(text, offset):
+    i = offset - 1
+    while i >= 0 and text[i] == "\\":
+        i -= 1
+    return (offset - i - 1) % 2 == 1
+
+
+def closing(text, delimiter, start):
+    at = text.find(delimiter, start)
+    while at >= 0 and escaped(text, at):
+        at = text.find(delimiter, at + len(delimiter))
+    if at < 0:
+        raise ValueError("unclosed math delimiter at " + str(start))
+    return at
+
+
+def math_spans(text):
+    """Lex old delimiters and the protected GitHub forms, outside ordinary code."""
+    spans = []
+    i = 0
+    while i < len(text):
+        if i == 0 or text[i - 1] == "\n":
+            opening = FENCE.match(text, i)
+            if opening:
+                fence, info = opening.groups()
+                pattern = re.compile(r"(?m)^[ ]{0,3}" + re.escape(fence[0])
+                                     + "{" + str(len(fence)) + r",}[ \t]*\r?$")
+                end = pattern.search(text, opening.end())
+                if end is None:
+                    raise ValueError("unclosed fenced block at " + str(i))
+                if info.strip() == "math":
+                    spans.append({"kind": "display", "form": "math_fence",
+                                  "start": i, "end": end.end(),
+                                  "tex": text[opening.end():end.start()].strip()})
+                i = end.end()
+                continue
+        if text.startswith("$" + TICK, i) and not escaped(text, i):
+            end = closing(text, TICK + "$", i + 2)
+            spans.append({"kind": "inline", "form": "protected_inline",
+                          "start": i, "end": end + 2, "tex": text[i + 2:end].strip()})
+            i = end + 2
+            continue
+        if text.startswith("\\[", i) and not escaped(text, i):
+            end = closing(text, "\\]", i + 2)
+            spans.append({"kind": "display", "form": "bracket_display",
+                          "start": i, "end": end + 2, "tex": text[i + 2:end].strip()})
+            i = end + 2
+            continue
+        if text[i] == "$" and not escaped(text, i):
+            delimiter = "$$" if text.startswith("$$", i) else "$"
+            end = closing(text, delimiter, i + len(delimiter))
+            spans.append({"kind": "display" if delimiter == "$$" else "inline",
+                          "form": "dollar_display" if delimiter == "$$" else "dollar_inline",
+                          "start": i, "end": end + len(delimiter),
+                          "tex": text[i + len(delimiter):end].strip()})
+            i = end + len(delimiter)
+            continue
+        if text[i] == TICK:
+            end = i + 1
+            while end < len(text) and text[end] == TICK:
+                end += 1
+            close = text.find(text[i:end], end)
+            i = close + end - i if close >= 0 else end
+            continue
+        i += 1
+    return spans
+
+
+def canonical_tex(tex):
+    """Reverse only approved exact operator spellings, including the separator."""
+    for before, after in TEX_TYPOGRAPHY_SUBSTITUTIONS.items():
+        tex = tex.replace(after, before)
+    return tex
+
+
+def typography_changes(before_spans, after_spans):
+    """Expose every changed payload; canonical comparison decides acceptability."""
+    return [{"formula_index": i, "kind": after["kind"],
+             "before": before["tex"], "after": after["tex"],
+             "expansions": {old: after["tex"].count(new)
+                            for old, new in TEX_TYPOGRAPHY_SUBSTITUTIONS.items()
+                            if new in after["tex"]}}
+            for i, (before, after) in enumerate(zip(before_spans, after_spans), 1)
+            if before["tex"] != after["tex"]]
+
+
+def canonical(text):
+    spans = math_spans(text)
+    pieces = []
+    start = 0
+    previous_display = False
+    for item in spans:
+        literal = text[start:item["start"]]
+        if previous_display:
+            literal = literal.lstrip("\r\n")
+        if item["kind"] == "display":
+            literal = literal.rstrip("\r\n")
+        pieces.extend([("text", literal), (item["kind"], canonical_tex(item["tex"]))])
+        previous_display = item["kind"] == "display"
+        start = item["end"]
+    literal = text[start:]
+    if previous_display:
+        literal = literal.lstrip("\r\n")
+    pieces.append(("text", literal))
+    return pieces
+
+
+def reconstruct_before(current, record):
+    pieces = []
+    after_at = before_at = 0
+    for edit in record["edits"]:
+        a, b = edit["after_start"], edit["after_end"]
+        c, d = edit["before_start"], edit["before_end"]
+        if not (after_at <= a <= b <= len(current) and before_at <= c <= d):
+            raise ValueError("unordered or invalid patch offsets")
+        if b - a != len(edit["after"]) or d - c != len(edit["before"]):
+            raise ValueError("patch offset/length mismatch")
+        if current[a:b] != edit["after"] or a - after_at != c - before_at:
+            raise ValueError("patch does not match current content")
+        pieces.extend([current[after_at:a], edit["before"]])
+        after_at, before_at = b, d
+    pieces.append(current[after_at:])
+    previous = "".join(pieces)
+    for edit in record["edits"]:
+        if previous[edit["before_start"]:edit["before_end"]] != edit["before"]:
+            raise ValueError("patch does not reconstruct its stated previous span")
+    return previous
+
+
+def changed_strings(before, after, path=()):
+    if isinstance(before, dict):
+        if not isinstance(after, dict) or set(before) != set(after):
+            raise ValueError("JSON object structure changed at " + repr(path))
+        return [item for key in before
+                for item in changed_strings(before[key], after[key], path + (key,))]
+    if isinstance(before, list):
+        if not isinstance(after, list) or len(before) != len(after):
+            raise ValueError("JSON list structure changed at " + repr(path))
+        return [item for i, (a, b) in enumerate(zip(before, after))
+                for item in changed_strings(a, b, path + (i,))]
+    if before == after:
+        return []
+    if not isinstance(before, str) or not isinstance(after, str):
+        raise ValueError("non-string JSON content changed at " + repr(path))
+    return [{"path": list(path), "before": before, "after": after}]
+
+
+def pandoc_math(text):
+    result = subprocess.run(["pandoc", "--from=gfm", "--to=json"], input=text,
+                            text=True, capture_output=True, check=True)
+    out = []
+
+    def visit(value):
+        if isinstance(value, dict):
+            if value.get("t") == "Math":
+                kind, tex = value["c"]
+                out.append(("display" if kind["t"] == "DisplayMath" else "inline", tex.strip()))
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+
+    visit(json.loads(result.stdout))
+    return out
+
+
+def table_width_errors(text):
+    errors = []
+    width = None
+    for lineno, line in enumerate(text.splitlines(), 1):
+        if not line.startswith("|"):
+            width = None
+            continue
+        delimiters = [i for i, char in enumerate(line) if char == "|" and not escaped(line, i)]
+        count = len(delimiters) - (1 if line.rstrip().endswith("|") else 0)
+        if width is None:
+            width = count
+        elif count != width:
+            errors.append({"line": lineno, "expected": width, "actual": count})
+    return errors
+
+
+def audit_manifest(root=ROOT, use_pandoc=False):
+    root = Path(root)
+    manifest_path = root / "reports/submission/math_rendering.json"
+    manifest = json.loads(manifest_path.read_text())
+    numbering_path = root / "reports/submission/numbering.json"
+    numbering = json.loads(numbering_path.read_text())
+    checks, restored, summaries = [], {}, {}
+
+    def check(name, ok, detail=None):
+        item = {"check": name, "passed": bool(ok)}
+        if detail is not None:
+            item["detail"] = detail
+        checks.append(item)
+
+    check("presentation schema", manifest.get("schema") == "tauceti-roadmap/math-rendering-v1")
+    check("published preceding commit", manifest.get("previous_commit") == EXPECTED_COMMIT)
+    check("immutable numbering manifest", manifest.get("numbering_manifest_sha256")
+          == hashlib.sha256(numbering_path.read_bytes()).hexdigest())
+    check("exact approved TeX typography substitutions",
+          manifest.get("tex_typography_substitutions") == TEX_TYPOGRAPHY_SUBSTITUTIONS)
+    records = manifest.get("files", {})
+    check("exact presentation file scope", set(records) == EXPECTED_FILES)
+    for name, record in records.items():
+        if name not in EXPECTED_FILES:
+            continue
+        current = (root / name).read_bytes().decode("utf-8")
+        check(name + " current bytes", sha(current) == record["after_sha256"])
+        check(name + " recorded preceding bytes",
+              record["before_sha256"] == numbering["inputs_sha256"].get(name))
+        try:
+            previous = reconstruct_before(current, record)
+            check(name + " exact reversible patch", sha(previous) == record["before_sha256"])
+            restored[name] = previous
+            if name.endswith(".md"):
+                before_spans, spans = math_spans(previous), math_spans(current)
+                check(name + " literal prose and ordered TeX payloads with named expansions only",
+                      canonical(previous) == canonical(current))
+                check(name + " protected GitHub math forms",
+                      all(x["form"] in {"protected_inline", "math_fence"} for x in spans))
+                check(name + " no GitHub-rejected operatorname macro",
+                      not any(FORBIDDEN_OPERATOR_MACRO.search(x["tex"]) for x in spans))
+                check(name + " table column counts", not table_width_errors(current), table_width_errors(current))
+                counts = dict(Counter(x["kind"] for x in spans))
+                summaries[name] = {"inline": counts.get("inline", 0), "display": counts.get("display", 0),
+                                   "total": len(spans), "previous_total": len(before_spans),
+                                   "forms": dict(Counter(x["form"] for x in spans)),
+                                   "typography_exceptions": typography_changes(before_spans, spans)}
+                check(name + " required full formula inventory", len(spans) == (249 if name == "README.md" else 237))
+                if use_pandoc:
+                    parsed = pandoc_math(current)
+                    expected = [(x["kind"], x["tex"]) for x in spans]
+                    check(name + " independent Pandoc GFM math nodes", parsed == expected,
+                          {"parsed": len(parsed), "expected": len(expected)})
+            else:
+                edits = changed_strings(json.loads(previous), json.loads(current))
+                recorded_edits = manifest.get("plan_string_edits", [])
+                check("complete structured-plan edit inventory", edits == recorded_edits)
+                for edit in edits:
+                    label = "/".join(str(x) for x in edit["path"])
+                    check("plan presentation only: " + label,
+                          canonical(edit["before"]) == canonical(edit["after"]))
+                check("structured plan has no GitHub-rejected operatorname macro",
+                      not FORBIDDEN_OPERATOR_MACRO.search(current))
+                exceptions = []
+                for edit in edits:
+                    changes = typography_changes(math_spans(edit["before"]), math_spans(edit["after"]))
+                    if changes:
+                        exceptions.append({"path": edit["path"], "formulas": changes})
+                summaries[name] = {"changed_string_fields": len(edits), "typography_exceptions": exceptions}
+        except (ValueError, KeyError, subprocess.SubprocessError) as exc:
+            check(name + " presentation audit", False, str(exc))
+    failures = [x for x in checks if not x["passed"]]
+    result = {
+        "meaning": "Presentation preservation with three exact operator-name expansions and Markdown recognition; not theorem proof or remote visual verification.",
+        "passed": not failures, "checks": checks, "check_count": len(checks),
+        "failed_checks": len(failures), "failures": failures, "documents": summaries,
+        "pandoc_used": use_pandoc,
+        "tex_typography_substitutions": TEX_TYPOGRAPHY_SUBSTITUTIONS,
+        "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+    }
+    return result, restored
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--pandoc", action="store_true", help="also compare the independent GFM syntax tree")
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args()
+    result, _ = audit_manifest(args.root, args.pandoc)
+    encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+    if args.output:
+        args.output.write_text(encoded)
+    print(encoded, end="")
+    return 0 if result["passed"] else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

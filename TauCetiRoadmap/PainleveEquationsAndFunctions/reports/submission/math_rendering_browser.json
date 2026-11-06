@@ -1,0 +1,161 @@
+{
+  "schema": "tauceti-roadmap/math-rendering-browser-review-v1",
+  "scope": "Actual GitHub Markdown rendering in Chromium, with whole-document DOM inspection and selected visual checks; not a mathematical proof.",
+  "rendered_candidate_commit": "9f0f9b5ead988e2a3fe4e9500e54c88bc94f5caa",
+  "input_sha256": {
+    "README.md": "3ab621fce2de75c6b3ff906f4af371ba5dcf0de32879a8f8a302c7dcc468f761",
+    "README.ja.md": "e6c86ccc7a2f21bb36c252e312d176617256a326fa69ce104f6177d5eab4effd",
+    "design/plan.json": "ea47307145deaa7b79e0d036fd85b70699cd90cea2091c8db05eb7688c18b945"
+  },
+  "syntax_reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
+  "rounds": [
+    {
+      "snapshot": "4287135b0e642d91c29df0ec1cfa5996fa1c5bcb",
+      "result": "changes_required",
+      "README.md": {
+        "expected_inline": 240,
+        "expected_display": 9,
+        "recognized_inline_nodes": 239,
+        "recognized_display_nodes": 0,
+        "raw_inline_pairs": 1
+      },
+      "README.ja.md": {
+        "expected_inline": 226,
+        "expected_display": 11,
+        "recognized_inline_nodes": 176,
+        "recognized_display_nodes": 0,
+        "raw_inline_pairs": 50
+      },
+      "findings": [
+        "Ten bracket-delimited display formulas were not recognized.",
+        "Ten double-dollar display formulas adjoined ordinary paragraphs and were not recognized.",
+        "Fifty Japanese inline expressions and one English expression remained literal dollar-delimited text.",
+        "Ordinary Markdown consumed TeX backslashes, including the thin-space command in the Hamiltonian sign diagnostic."
+      ]
+    },
+    {
+      "snapshot": "02b9b28df992910d177ba996b6d94560e3d6d125",
+      "result": "changes_required",
+      "README.md": {
+        "math_renderer_nodes": 249,
+        "mathml_formulas": 246,
+        "github_macro_error_boxes": 3
+      },
+      "README.ja.md": {
+        "math_renderer_nodes": 237,
+        "mathml_formulas": 233,
+        "github_macro_error_boxes": 4
+      },
+      "finding": "The GitHub renderer rejected operatorname in seven expressions. Counting renderer elements alone would have missed the failures.",
+      "repair": "Use the explicitly reviewed mathop/mathrm/nolimits expansion for the plain operator names im, Log and diag."
+    },
+    {
+      "snapshot": "9f0f9b5ead988e2a3fe4e9500e54c88bc94f5caa",
+      "result": "passed",
+      "documents": {
+        "README.md": {
+          "display_overflow_pixels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "display_renderers": 9,
+          "github_error_boxes": 0,
+          "inline_renderers": 240,
+          "mathml_error_nodes": 0,
+          "mathml_formulas": 249,
+          "matrix_tables": [],
+          "raw_dollar_text_nodes_outside_math": 0,
+          "renderers_without_mathml": 0,
+          "thin_space_diagnostic": [
+            {
+              "literal_comma": false,
+              "space_widths": [
+                "0.167em"
+              ]
+            }
+          ],
+          "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/9f0f9b5ead988e2a3fe4e9500e54c88bc94f5caa/TauCetiRoadmap/PainleveEquationsAndFunctions/README.md#06-symplectic-preservation-and-the-closed-total-two-form",
+          "viewport": {
+            "height": 936,
+            "width": 1348
+          }
+        },
+        "README.ja.md": {
+          "display_overflow_pixels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "display_renderers": 11,
+          "github_error_boxes": 0,
+          "inline_renderers": 226,
+          "mathml_error_nodes": 0,
+          "mathml_formulas": 237,
+          "matrix_tables": [
+            {
+              "cells": 4,
+              "rows": 2
+            }
+          ],
+          "raw_dollar_text_nodes_outside_math": 0,
+          "renderers_without_mathml": 0,
+          "thin_space_diagnostic": [
+            {
+              "literal_comma": false,
+              "space_widths": [
+                "0.167em"
+              ]
+            }
+          ],
+          "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/9f0f9b5ead988e2a3fe4e9500e54c88bc94f5caa/TauCetiRoadmap/PainleveEquationsAndFunctions/README.ja.md#4-%E7%AC%AC%E4%BA%8C%E3%81%AE%E5%88%A9%E7%94%A8%E4%BE%8B%E3%81%A7%E4%B8%80%E8%88%AC%E6%80%A7%E3%82%92%E5%AE%9F%E9%9A%9B%E3%81%AB%E8%A9%A6%E3%81%99",
+          "viewport": {
+            "height": 936,
+            "width": 1348
+          }
+        }
+      }
+    }
+  ],
+  "visual_checks": [
+    "English target 0.6: both display equations, inline image operator, hypotheses and prose flow.",
+    "Japanese target 0.9: the complete Gronwall bound and both accompanying definitions fit the inspected content area.",
+    "Japanese target 8.4: canonical Barnes product, asymptotic polynomial and explicit remainder bound.",
+    "Japanese appendix: scalarization formula and the two-by-two matrix with its diagonal operators."
+  ],
+  "specific_payload_checks": [
+    "The Hamiltonian diagnostic contains a MathML mspace of width 0.167em and no literal comma in place of the thin space, in both languages.",
+    "The Japanese tube-set formula retains both set braces and both double norm bars.",
+    "The image operator is an upright MathML operator, and the matrix has two rows and four cells."
+  ],
+  "local_tex_parser_comparison": {
+    "tool": "Pandoc 3.1.11.1 TeX-to-MathML conversion",
+    "english_converted": 248,
+    "english_total": 249,
+    "japanese_converted": 236,
+    "japanese_total": 237,
+    "limitation": "The one unconverted expression in each language contains d_{\\rm phase}, unsupported by this local TeX parser. Actual GitHub renders both successfully, so the existing source was retained.",
+    "other_warning_or_error_nodes": 0,
+    "distinction": "Pandoc GFM math-node recognition passed for every formula; this limitation belongs to its separate TeX-to-MathML converter."
+  },
+  "passed": true,
+  "limits": [
+    "Visual inspection used the recorded desktop viewport; this is not a claim about every browser or screen width.",
+    "Ordinary Unicode mathematical prose is outside the marked-TeX inventory.",
+    "This review validates presentation, not the truth or proof completion of the mathematical targets."
+  ]
+}

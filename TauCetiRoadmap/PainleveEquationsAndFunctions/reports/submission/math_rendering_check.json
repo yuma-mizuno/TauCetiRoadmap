@@ -1,0 +1,623 @@
+{
+  "meaning": "Presentation preservation with three exact operator-name expansions and Markdown recognition; not theorem proof or remote visual verification.",
+  "passed": true,
+  "checks": [
+    {
+      "check": "presentation schema",
+      "passed": true
+    },
+    {
+      "check": "published preceding commit",
+      "passed": true
+    },
+    {
+      "check": "immutable numbering manifest",
+      "passed": true
+    },
+    {
+      "check": "exact approved TeX typography substitutions",
+      "passed": true
+    },
+    {
+      "check": "exact presentation file scope",
+      "passed": true
+    },
+    {
+      "check": "README.md current bytes",
+      "passed": true
+    },
+    {
+      "check": "README.md recorded preceding bytes",
+      "passed": true
+    },
+    {
+      "check": "README.md exact reversible patch",
+      "passed": true
+    },
+    {
+      "check": "README.md literal prose and ordered TeX payloads with named expansions only",
+      "passed": true
+    },
+    {
+      "check": "README.md protected GitHub math forms",
+      "passed": true
+    },
+    {
+      "check": "README.md no GitHub-rejected operatorname macro",
+      "passed": true
+    },
+    {
+      "check": "README.md table column counts",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "README.md required full formula inventory",
+      "passed": true
+    },
+    {
+      "check": "README.md independent Pandoc GFM math nodes",
+      "passed": true,
+      "detail": {
+        "parsed": 249,
+        "expected": 249
+      }
+    },
+    {
+      "check": "README.ja.md current bytes",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md recorded preceding bytes",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md exact reversible patch",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md literal prose and ordered TeX payloads with named expansions only",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md protected GitHub math forms",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md no GitHub-rejected operatorname macro",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md table column counts",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "README.ja.md required full formula inventory",
+      "passed": true
+    },
+    {
+      "check": "README.ja.md independent Pandoc GFM math nodes",
+      "passed": true,
+      "detail": {
+        "parsed": 237,
+        "expected": 237
+      }
+    },
+    {
+      "check": "design/plan.json current bytes",
+      "passed": true
+    },
+    {
+      "check": "design/plan.json recorded preceding bytes",
+      "passed": true
+    },
+    {
+      "check": "design/plan.json exact reversible patch",
+      "passed": true
+    },
+    {
+      "check": "complete structured-plan edit inventory",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/api/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/ja/api/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/0/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/tests/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/1/ja/tests/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/2/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/api/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/tests/3/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/3/ja/tests/3",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/tests/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/4/ja/tests/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/api/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/tests/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/ja/api/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/5/ja/tests/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/tests/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/tests/3/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/ja/tests/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/6/ja/tests/3",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/tests/2/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/tests/4/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/ja/tests/2",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/7/ja/tests/4",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/tests/0/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/tests/1/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/tests/3/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/ja/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/ja/tests/0",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/ja/tests/1",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/0/targets/8/ja/tests/3",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/8/targets/3/statement",
+      "passed": true
+    },
+    {
+      "check": "plan presentation only: layers/8/targets/3/statement_ja",
+      "passed": true
+    },
+    {
+      "check": "structured plan has no GitHub-rejected operatorname macro",
+      "passed": true
+    }
+  ],
+  "check_count": 101,
+  "failed_checks": 0,
+  "failures": [],
+  "documents": {
+    "README.md": {
+      "inline": 240,
+      "display": 9,
+      "total": 249,
+      "previous_total": 249,
+      "forms": {
+        "protected_inline": 240,
+        "math_fence": 9
+      },
+      "typography_exceptions": [
+        {
+          "formula_index": 125,
+          "kind": "inline",
+          "before": "\\ker\\Omega=\\operatorname{im}h",
+          "after": "\\ker\\Omega=\\mathop{\\mathrm{im}}\\nolimits h",
+          "expansions": {
+            "\\operatorname{im}": 1
+          }
+        },
+        {
+          "formula_index": 247,
+          "kind": "display",
+          "before": "a_N(z)=\\frac{z^2}{4}+z\\operatorname{Log}\\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\operatorname{Log}z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+          "after": "a_N(z)=\\frac{z^2}{4}+z\\mathop{\\mathrm{Log}}\\nolimits \\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\mathop{\\mathrm{Log}}\\nolimits z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+          "expansions": {
+            "\\operatorname{Log}": 2
+          }
+        },
+        {
+          "formula_index": 248,
+          "kind": "display",
+          "before": "\\operatorname{Log}G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+          "after": "\\mathop{\\mathrm{Log}}\\nolimits G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+          "expansions": {
+            "\\operatorname{Log}": 1
+          }
+        }
+      ]
+    },
+    "README.ja.md": {
+      "inline": 226,
+      "display": 11,
+      "total": 237,
+      "previous_total": 237,
+      "forms": {
+        "protected_inline": 226,
+        "math_fence": 11
+      },
+      "typography_exceptions": [
+        {
+          "formula_index": 113,
+          "kind": "inline",
+          "before": "\\ker\\Omega=\\operatorname{im}h",
+          "after": "\\ker\\Omega=\\mathop{\\mathrm{im}}\\nolimits h",
+          "expansions": {
+            "\\operatorname{im}": 1
+          }
+        },
+        {
+          "formula_index": 233,
+          "kind": "display",
+          "before": "a_N(z)=\\frac{z^2}{4}+z\\operatorname{Log}\\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\operatorname{Log}z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+          "after": "a_N(z)=\\frac{z^2}{4}+z\\mathop{\\mathrm{Log}}\\nolimits \\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\mathop{\\mathrm{Log}}\\nolimits z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+          "expansions": {
+            "\\operatorname{Log}": 2
+          }
+        },
+        {
+          "formula_index": 234,
+          "kind": "display",
+          "before": "\\operatorname{Log}G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+          "after": "\\mathop{\\mathrm{Log}}\\nolimits G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+          "expansions": {
+            "\\operatorname{Log}": 1
+          }
+        },
+        {
+          "formula_index": 237,
+          "kind": "display",
+          "before": "D=\\operatorname{diag}(i,-i),\\quad\nJ=\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix},\\quad\nK=\\operatorname{diag}(e^{\\pi i/3},e^{-\\pi i/3})",
+          "after": "D=\\mathop{\\mathrm{diag}}\\nolimits (i,-i),\\quad\nJ=\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix},\\quad\nK=\\mathop{\\mathrm{diag}}\\nolimits (e^{\\pi i/3},e^{-\\pi i/3})",
+          "expansions": {
+            "\\operatorname{diag}": 2
+          }
+        }
+      ]
+    },
+    "design/plan.json": {
+      "changed_string_fields": 73,
+      "typography_exceptions": [
+        {
+          "path": [
+            "layers",
+            0,
+            "targets",
+            5,
+            "statement"
+          ],
+          "formulas": [
+            {
+              "formula_index": 8,
+              "kind": "inline",
+              "before": "\\ker\\Omega=\\operatorname{im}h",
+              "after": "\\ker\\Omega=\\mathop{\\mathrm{im}}\\nolimits h",
+              "expansions": {
+                "\\operatorname{im}": 1
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "layers",
+            0,
+            "targets",
+            5,
+            "ja",
+            "statement"
+          ],
+          "formulas": [
+            {
+              "formula_index": 8,
+              "kind": "inline",
+              "before": "\\ker\\Omega=\\operatorname{im}h",
+              "after": "\\ker\\Omega=\\mathop{\\mathrm{im}}\\nolimits h",
+              "expansions": {
+                "\\operatorname{im}": 1
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "layers",
+            8,
+            "targets",
+            3,
+            "statement"
+          ],
+          "formulas": [
+            {
+              "formula_index": 2,
+              "kind": "display",
+              "before": "a_N(z)=\\frac{z^2}{4}+z\\operatorname{Log}\\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\operatorname{Log}z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+              "after": "a_N(z)=\\frac{z^2}{4}+z\\mathop{\\mathrm{Log}}\\nolimits \\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\mathop{\\mathrm{Log}}\\nolimits z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+              "expansions": {
+                "\\operatorname{Log}": 2
+              }
+            },
+            {
+              "formula_index": 3,
+              "kind": "display",
+              "before": "\\operatorname{Log}G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+              "after": "\\mathop{\\mathrm{Log}}\\nolimits G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+              "expansions": {
+                "\\operatorname{Log}": 1
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "layers",
+            8,
+            "targets",
+            3,
+            "statement_ja"
+          ],
+          "formulas": [
+            {
+              "formula_index": 2,
+              "kind": "display",
+              "before": "a_N(z)=\\frac{z^2}{4}+z\\operatorname{Log}\\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\operatorname{Log}z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+              "after": "a_N(z)=\\frac{z^2}{4}+z\\mathop{\\mathrm{Log}}\\nolimits \\Gamma(z+1)-\\left(\\frac{z(z+1)}2+\\frac1{12}\\right)\\mathop{\\mathrm{Log}}\\nolimits z-\\log A+\\sum_{k=1}^{N-1}\\frac{B_{2k+2}}{2k(2k+1)(2k+2)z^{2k}}.",
+              "expansions": {
+                "\\operatorname{Log}": 2
+              }
+            },
+            {
+              "formula_index": 3,
+              "kind": "display",
+              "before": "\\operatorname{Log}G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+              "after": "\\mathop{\\mathrm{Log}}\\nolimits G(z+1)=a_N(z)+R_N(z),\\qquad |R_N(z)|\\le\\frac{|B_{2N+2}|\\sec^{2N+1}(\\arg(z)/2)}{2N(2N+1)(2N+2)|z|^{2N}}.",
+              "expansions": {
+                "\\operatorname{Log}": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pandoc_used": true,
+  "tex_typography_substitutions": {
+    "\\operatorname{im}": "\\mathop{\\mathrm{im}}\\nolimits ",
+    "\\operatorname{Log}": "\\mathop{\\mathrm{Log}}\\nolimits ",
+    "\\operatorname{diag}": "\\mathop{\\mathrm{diag}}\\nolimits "
+  },
+  "manifest_sha256": "956a05daacdcec897afbc83c2e96d5cf63a1ec846e965b970a3b5d8ccd324cf1"
+}

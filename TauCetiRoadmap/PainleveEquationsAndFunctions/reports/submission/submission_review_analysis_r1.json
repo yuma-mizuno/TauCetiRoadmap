@@ -1,0 +1,275 @@
+{
+  "schema": "tauceti-roadmap/independent-review-v1",
+  "review_id": "submission_review_analysis_r1",
+  "role": "independent analytic/algebraic and cross-geometry reviewer; read-only core files",
+  "candidate": "R1",
+  "snapshot_sha256": {
+    "README.md": "f90b276a8c454f55356bad77d8a70e886789a0fe5a52d7e31a0c3cca4750f0f1",
+    "README.ja.md": "e2864d74f1c2f5ca07c578647a698f687c390d7e574910642a05992ee5ebd1c5",
+    "design/plan.json": "02ff17d95371c2c05b2b5be4e3ed0865b977c9eee2a6cb2cba9ca48f9b0b1f22"
+  },
+  "upstream_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "verdict": "changes_required",
+  "blocking_findings": 6,
+  "scope": {
+    "targets": [
+      "A1.1",
+      "A1.2",
+      "A1.3",
+      "A1.4",
+      "A1.5",
+      "A1.6",
+      "A1.7",
+      "C1.1",
+      "C1.2",
+      "P7.1",
+      "P7.2",
+      "P7.3",
+      "P8.1",
+      "P8.2",
+      "P8.3",
+      "P8.4",
+      "P9.1",
+      "P9.2",
+      "P9.3",
+      "P9.4",
+      "P9.5",
+      "P10.1",
+      "P10.2",
+      "P10.3",
+      "P10.4",
+      "P11.1",
+      "P11.2",
+      "P11.3",
+      "P11.4"
+    ],
+    "additional_geometry": [
+      "M1.2",
+      "M2.1",
+      "M2.2",
+      "M2.3",
+      "GF01–GF13 cross-review"
+    ],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "content_boundary": "Review of statements, hypotheses, counterexamples, ownership and source scope; not completed theorem proofs."
+  },
+  "preservation_check": {
+    "original_targets": 77,
+    "candidate_targets": 78,
+    "missing_original_targets": [],
+    "added_targets": [
+      "A1.7"
+    ],
+    "original_api_names": 214,
+    "candidate_api_names": 217,
+    "missing_api_names": [],
+    "original_diagnostic_names": 257,
+    "candidate_diagnostic_names": 261,
+    "missing_diagnostic_names": [],
+    "limit": "Name/count preservation checks are not proofs of semantic equivalence or mathematical truth."
+  },
+  "findings": [
+    {
+      "id": "AR1-01",
+      "severity": "major",
+      "blocking": true,
+      "targets": [
+        "A1.6"
+      ],
+      "locations": [
+        "README.md:1087",
+        "README.ja.md:A1.6 first paragraph",
+        "design/plan.json:A1.6.statement"
+      ],
+      "title": "Remove the remaining attribution of a quantitative determinant bound to RandomMatrices",
+      "finding": "The statement still says that the supplier’s determinant-continuity bound gives a uniform estimate. The audited RandomMatrices §8.3 contract states trace-norm continuity, not that quantitative bound. The new UniformDeterminant supporting construction correctly proves uniform convergence from compactness of K0(K) and continuity; the main sentence contradicts that dependency boundary.",
+      "replacement_en": "For each compact parameter set K, the image K₀(K) is compact in trace norm. Apply continuity of the generic determinant at the points of that compact image and a finite subcover; compact-uniform trace-norm convergence then gives uniform scalar convergence on K. The holomorphic-family assertion is proved from normal convergence of the exterior-power series with the trace-norm estimates constructed here.",
+      "replacement_ja": "各コンパクトなパラメータ集合 K に対し、像 K₀(K) はトレースノルムでコンパクトである。この像の各点での一般行列式の連続性と有限部分被覆を用い、K 上のトレースノルム一様収束からスカラー行列式の一様収束を得る。正則な族に関する主張は、ここで構成するトレースノルム評価と外冪級数の正規収束から証明する。",
+      "preservation": "Keeps the same determinant, holomorphy, convergence and zero-count targets; removes only the unsupported supplier attribution.",
+      "evidence": [
+        "TauCetiRoadmap/RandomMatrices/README.md §8.3 at upstream ffac5139fe4794a132eb540a89e1b973070aad69",
+        "A1.6.UniformDeterminant in R1"
+      ]
+    },
+    {
+      "id": "AR1-02",
+      "severity": "major",
+      "blocking": true,
+      "targets": [
+        "P8.3",
+        "P8.4"
+      ],
+      "locations": [
+        "README.md:P8.3 API3 and Check4",
+        "README.md:1950 and P8.4 API1",
+        "README.ja.md:P8.3/P8.4 corresponding text",
+        "design/plan.json:P8.3/P8.4"
+      ],
+      "title": "Construct a determinant-frame differential for every Fredholm chart before specializing to a trace-class formula",
+      "finding": "P8.2 constructs a holomorphic index-zero Fredholm family, but no general theorem makes that original operator I−K with K trace class. P8.3 API3 and P8.4 then promise the displayed trace-class logarithmic derivative on every constructed ramified/resonant chart. A1.1 supplies a finite-dimensional stabilization representation, which resolves this gap without weakening the normalization scope.",
+      "diagnostic": "On an infinite-dimensional complex Hilbert space, T_s=e^s I is a holomorphic invertible Fredholm family. T_s⁻¹dT_s=I ds has no trace-class trace. A determinant-line construction exists nonetheless. Thus a general Fredholm family alone does not justify the unrestricted infinite-dimensional trace formula.",
+      "replacement_en": "On each A1.1 stabilization chart, choose holomorphic frames for the equal-rank bundles K_stab and F and let S(s) represent the projection K_stab→F. The canonical section has representative det S. Prove d log(det S)=Tr(S⁻¹dS) on its nonvanishing locus and the actual logarithmic correction for a change of determinant frame. This gives the determinant-frame form and scalar normalization on every constructed RHP chart, including the ramified and resonant adapters. Equivalently, K_fin=I−S on the finite-dimensional space F gives the displayed trace-class identity. For a claimed infinite-dimensional integrable-kernel realization K, additionally construct its trace-norm holomorphic family and the comparison τ=u det(I−K), with u nowhere zero; only then use d log τ=d log u−Tr((I−K)⁻¹dK). The JMU/Hamiltonian comparison retains its stated generic locus.",
+      "replacement_ja": "A1.1 の各安定化チャートで、同じ階数の束 K_stab と F の正則フレームを選び、射影 K_stab→F を表す行列を S(s) とする。標準切断の代表は det S である。非消滅領域で d log(det S)=Tr(S⁻¹dS) を証明し、行列式フレームの変更に伴う実際の対数補正を証明する。これにより分岐・共鳴のアダプターを含む全ての構成済み RHP チャートで行列式フレームの1形式とスカラー正規化を得る。同値に、有限次元空間 F 上で K_fin=I−S と置けば、表示したトレースクラス恒等式を得る。無限次元の可積分核 K による実現を主張する場合は、トレースノルムで正則な族と、非消滅因子 u を伴う τ=u det(I−K) の比較を構成した上で d log τ=d log u−Tr((I−K)⁻¹dK) を用いる。JMU/Hamiltonian 比較の一般領域に関する仮定は保持する。",
+      "preservation": "Keeps every retained RHP stratum, determinant section, divisor, normalization and all verified trace-class/JMU comparisons. It supplies the missing universal local construction rather than assuming a universal infinite-dimensional realization.",
+      "evidence": [
+        "R1 A1.1 explicit stabilization K_stab→F",
+        "R1 P8.2 operator-family contract",
+        "R1 A1.6 explicitly says not every RHP is assumed trace-class representable"
+      ]
+    },
+    {
+      "id": "AR1-03",
+      "severity": "major",
+      "blocking": true,
+      "targets": [
+        "M2.3"
+      ],
+      "locations": [
+        "README.md:670",
+        "README.ja.md:672",
+        "design/plan.json:M2.3.PicardObstructions"
+      ],
+      "title": "Localize the Picard smoothness obstruction test to affine square-zero bases",
+      "finding": "The arbitrary quasi-coherent square-zero ideal is a correct improvement over finite-dimensional complex kernels. The paragraph still asks for a cohomological-dimension vanishing on proper relative curves without saying that the test base is affine. Relative dimension at most one gives R^q p_*J=0 for q>1, not H²(C_T0,J)=0 over arbitrary nonaffine T0. The latter is the obstruction group needed in the displayed lifting argument.",
+      "diagnostic": "Take T₀ to be an abelian surface, C_T0=P¹×T₀, and a trivial square-zero thickening with ideal O_T0. Then H²(C_T0,p*O_T0)=H²(T₀,O_T0) is nonzero, although every curve fiber has H²=0. Formal smoothness is still proved by local affine tests and descent.",
+      "replacement_en": "Test formal smoothness locally on affine square-zero thickenings T₀↪T with quasi-coherent ideal I. Flatness identifies the ideal of C_T0 in C_T with p*I. Construct the obstruction in H²(C_T0,p*I), the torsor of isomorphism classes of lifts with a specified restriction isomorphism under H¹(C_T0,p*I), and their infinitesimal automorphisms from H⁰. Prove R^q p_*(p*I)=0 for q>1 by proper relative dimension at most one and use the affine base and Leray to obtain H²=0. Handle general test bases by open/fppf descent and apply the local finite-presentation criterion to deduce smoothness. Do not infer absolute H² vanishing on a nonaffine base from fiber dimension.",
+      "replacement_ja": "形式的滑らかさは、準連接イデアル I を持つ affine な平方零肥厚 T₀↪T に局所化して検証する。平坦性により C_T 内の C_T0 のイデアルを p*I と同定する。H²(C_T0,p*I) に値を取る障害、制限同型を指定した持上げの同型類に対する H¹(C_T0,p*I) の torsor、および H⁰ から得る微小自己同型を構成する。固有かつ相対次元が高々1であることから q>1 で R^q p_*(p*I)=0 を証明し、基底の affine 性と Leray により H²=0 を得る。一般の試験基底は開被覆または fppf 降下で扱い、局所有限表示の判定から滑らかさを導く。非 affine 基底上の絶対 H² 消滅をファイバー次元だけから推論しない。",
+      "preservation": "Keeps the full relative Picard result, nonreduced curves and bases, and arbitrary square-zero ideal scope; specifies the valid local proof mechanism.",
+      "evidence": [
+        "https://stacks.math.columbia.edu/tag/0DPJ — Lemma108.8.5, proof explicitly uses affine first-order thickenings",
+        "https://stacks.math.columbia.edu/tag/0DMD — Picard functor under proper flat fp and universal-functions hypotheses",
+        "https://stacks.math.columbia.edu/tag/0D24 — Lemma99.11.4 rigidification by a section"
+      ]
+    },
+    {
+      "id": "AR1-04",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "C1.2"
+      ],
+      "locations": [
+        "design/plan.json:C1.2.prerequisites",
+        "README.md/README.ja.md:C1.2 supporting constructions and needs",
+        "design/reuse_registry.json and reuse_graph.json corresponding dependency"
+      ],
+      "title": "Name the analytic-space carrier consumed by the complex analytic branch",
+      "finding": "C1.2 allows a complex analytic base and arbitrary base change, but its declared suppliers are algebraic vector bundles, algebraic cohomology and smooth real Poisson theory. The complex analytic category retaining nilpotents is owned by the foundational prefix of M1.2. Naming that shared carrier closes the ownership graph; there is no need to assume connection-moduli conclusions.",
+      "replacement_en": "For the analytic branch, use the complex analytic-space and coherent/finite locally free sheaf carriers constructed in the analytic foundational prefix of M1.2, retaining nilpotent coefficients. Construct the relative vector-bundle and unit-group charts by local trivializations and prove their gluing and base-change comparisons. C1.2 owns the relative complex Poisson, coadjoint, residue and conditional reduction comparisons. This use of shared carriers imports no connection-moduli, RH or Painlevé theorem.",
+      "replacement_ja": "解析版では、M1.2 の解析的基礎部分が構成する複素解析空間と連接・有限局所自由層の対象を用い、冪零係数を保持する。局所自明化から相対ベクトル束と単元群のチャートを構成し、貼合せと基底変換を証明する。相対複素 Poisson 構造、余随伴作用、留数、および仮定付き簡約の比較は C1.2 が担う。共通の対象を用いることで、接続モジュライ・RH・パンルヴェの定理を前提にはしない。",
+      "graph_guidance": "Add target:M1.2 as the conservative target-level prerequisite for its analytic foundational prefix and update the generated graph/registry; alternatively explicitly own the relevant analytic carrier glue in C1.2 without duplicating the M1.2 definition. No new target or P/G prerequisite is required.",
+      "preservation": "Keeps the algebraic and analytic versions, including nonreduced analytic coefficients, and preserves mathematical independence from application conclusions.",
+      "evidence": [
+        "R1 M1.2.GF03 owns analytic spaces retaining nilpotents",
+        "R1 dependency-poisson is explicitly smooth real; dependency-bundles is algebraic"
+      ]
+    },
+    {
+      "id": "AR1-05",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "P10.2"
+      ],
+      "locations": [
+        "README.md/README.ja.md:P10.2 second paragraph",
+        "design/plan.json:P10.2.statement"
+      ],
+      "title": "Use A1.4 explicitly for the weighted moment and tail contract",
+      "finding": "The paragraph refers to the weighted hypotheses of §1.4. Under the manuscript’s address convention, a bare section inside Part P denotes P1.4, which supplies profile classification, not weighted tails. The intended supplier is A1.4.",
+      "replacement_en": "For every claimed coefficient or uniform remainder, verify the actual weighted L¹/L² moment and tail hypotheses of target:A1.4.",
+      "replacement_ja": "各係数や一様剰余を主張する際には、target:A1.4 の実際の重み付き L¹/L² モーメントと裾の仮定を検証する。",
+      "preservation": "Only corrects an address; no mathematical content changes.",
+      "evidence": [
+        "R1 README Addresses and conventions",
+        "R1 P10.2 prerequisites already contains target:A1.4"
+      ]
+    },
+    {
+      "id": "AR1-06",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "G1.4",
+        "A references",
+        "C references"
+      ],
+      "locations": [
+        "README.md:2471",
+        "README.md:1156,1248",
+        "README.ja.md:1160,1252",
+        "design/plan.json:G1.4.hypotheses if matching residue"
+      ],
+      "title": "Remove the final optional wording and consolidation-history prose",
+      "finding": "The G1.4 appendix still says Optional curve-observer conclusions. The A/C reference paragraphs still refer to a parent sources file and retaining existing source keys and byte provenance, which describes document consolidation rather than mathematical specification.",
+      "replacement_en": "The curve-observer theorems additionally assume the stated curve and observer-admissibility data. / Bibliographic information and source locators are listed in sources.toml. [Then retain the existing mathematical descriptions of each source’s scope.]",
+      "replacement_ja": "曲線上の観測量に関する定理では、明記した曲線と観測量の許容性を追加で仮定する。／書誌情報と文献中の参照箇所は sources.toml に記す。[その後に各文献の数学的な適用範囲を保持する。]",
+      "additional_editorial_guidance": "In the Japanese A1.1 scope diagnostic use この複素多様体基底の定理 instead of 現在の. The downstream-use sentence can omit 今後 without changing scope.",
+      "preservation": "Keeps all additional-hypothesis conclusions as required proof targets and all mathematical source restrictions; moves no mathematical content out of scope.",
+      "evidence": [
+        "R1 README Scope and proof ownership says all additional-hypothesis theorems are in scope",
+        "User explicitly requested timeless specification and removal of optional/deferred work"
+      ]
+    }
+  ],
+  "positive_checks": [
+    "A1.1 uses native complex Fredholm/stabilization and the dual determinant convention; it explicitly excludes pointwise treatment of nilpotent bases.",
+    "A1.2 owns weighted cross-branch Schur estimates; the endpoint essential-singularity example has the stated L² norm squared exp(−2)/2.",
+    "A1.3’s constant −I₂ jump is a valid nonsmall but solvable example; A1.4’s translated Gaussian has the stated nonzero asymptotic remainder factor (1−i)/2.",
+    "C1.1’s exact finite rational identity, highest coefficient, insufficient scaling and nonlinear-parameter correction are mathematically consistent; C1.2’s dual/Frobenius distinction and negation sign are retained.",
+    "P8 keeps odd-degree index-zero normalization and acyclic comparison restrictions; the new concern is the missing local finite-dimensional versus infinite-dimensional trace distinction.",
+    "P9’s PI sigma affine spurious branch and PII sigma loss of phase data are valid diagnostics; the Flaschka–Newell/P34 to PII inversion carries its required U≠0 restriction.",
+    "P10.3’s quantitative sector estimates match ILP18 (4.74); the angular estimates yield the stated first and second arc orders, and calibration +iπ/24 matches (4.76). This is a verification of the specified target and source scope, not a proof of the required uniform parametrices.",
+    "P11’s nilpotent and semisimple collision examples have distinct projective slopes despite the same divisor; the determinant trace test correctly excludes the extra scalar irregular endpoint.",
+    "M1.2.GF03a now separates proper relative higher-direct-image comparison from absolute proper GAGA. The relative-proper identity map A¹→A¹ would not justify full coherent GAGA; R1 no longer claims that.",
+    "M2.2.RelativeLinearity retains p⁻¹O_B-linearity and correctly avoids treating the connection differential as O_C-linear. Moving framed versal comparison into M2.2 avoids using it to assume the earlier GIT construction.",
+    "GF01–GF13 retain field versus family formal decomposition, actual reductive GIT stages, finite-inertia restrictions, full resonant logarithmic lattices, exact I13 properness scope and first-boundary-layer versus all-supported-cohomology distinctions.",
+    "No additional English/Japanese formula, parameter-domain or counterexample mismatch was found in the reviewed A/C/P7–P11 and relative-linearity/Picard passages. The reported defects occur in both languages, apart from the remaining English optional appendix wording."
+  ],
+  "primary_sources_checked": [
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0DPJ",
+      "locator": "Lemma108.8.5, proof",
+      "purpose": "Affine square-zero tests and proper-relative-curve H² vanishing"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0DMD",
+      "locator": "§108.9, assumptions; Lemmas108.9.1–108.9.5",
+      "purpose": "Universal functions, Picard algebraic-space and smoothness scope; no general separatedness without added hypotheses"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0D24",
+      "locator": "Lemmas99.11.3–99.11.4",
+      "purpose": "Relative Picard and marked-section rigidification"
+    },
+    {
+      "url": "https://arxiv.org/html/1412.5166v2",
+      "locator": "Theorem1.2/Theorem7.1 and Theorem1.3/Corollary7.5",
+      "purpose": "Independent check of relative proper direct images versus absolute proper coherent GAGA"
+    },
+    {
+      "url": "https://arxiv.org/html/1604.03082v4",
+      "locator": "Equations(1.25)–(1.28), (4.74)–(4.76)",
+      "purpose": "Generic PII source conditions, Hamiltonian sector expansions and calibration phase"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.17",
+      "locator": "5.17.1,5.17.3,5.17.7",
+      "purpose": "Barnes canonical product, recurrence and normalization"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1406.2535v2",
+      "locator": "(1.1), Theorem1.2 (1.10), §§2–3",
+      "purpose": "Barnes branch-normalized explicit sector remainder"
+    }
+  ],
+  "review_limits": [
+    "This review does not certify every target as an established theorem; many are explicit owned construction/proof obligations.",
+    "The build and topic validator are owned by the build/root reviewers; no build result is inferred from mathematical review.",
+    "Active-PR/Zulip alignment evidence is recorded separately in community_analysis_alignment.json; indexed negative search is not exhaustive absence evidence.",
+    "The integrated candidate must be re-read after all changes and freshly hashed before closing these findings."
+  ]
+}

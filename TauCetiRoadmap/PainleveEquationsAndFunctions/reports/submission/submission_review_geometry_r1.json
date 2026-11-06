@@ -1,0 +1,302 @@
+{
+  "schema": "painleve-independent-mathematical-review-v1",
+  "round": "R1",
+  "reviewer": "submission_geometry_dependencies",
+  "verdict": "changes_required",
+  "snapshot_sha256": {
+    "README.md": "f90b276a8c454f55356bad77d8a70e886789a0fe5a52d7e31a0c3cca4750f0f1",
+    "README.ja.md": "e2864d74f1c2f5ca07c578647a698f687c390d7e574910642a05992ee5ebd1c5",
+    "design/plan.json": "02ff17d95371c2c05b2b5be4e3ed0865b977c9eee2a6cb2cba9ca48f9b0b1f22"
+  },
+  "upstream_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "reviewed_targets": [
+    "N1.1",
+    "N1.2",
+    "N1.3",
+    "N1.4",
+    "N1.5",
+    "N1.6",
+    "N1.7",
+    "N1.8",
+    "N1.9",
+    "M1.1",
+    "M1.2",
+    "M2.1",
+    "M2.2",
+    "M2.3",
+    "M2.4",
+    "M3.1",
+    "M3.2",
+    "M3.3",
+    "M3.4",
+    "M4.1",
+    "M4.2",
+    "A1.7",
+    "P1.1",
+    "P1.2",
+    "P1.3",
+    "P1.4",
+    "P2.1",
+    "P2.2",
+    "P2.3",
+    "P2.4",
+    "P3.1",
+    "P3.2",
+    "P3.3",
+    "P3.4",
+    "P4.1",
+    "P4.2",
+    "P4.3",
+    "P4.4",
+    "P5.1",
+    "P5.2",
+    "P5.3",
+    "P5.4",
+    "P5.5",
+    "P6.1",
+    "P6.2",
+    "P6.3",
+    "G1.1",
+    "G1.2",
+    "G1.3",
+    "G1.4"
+  ],
+  "reviewed_target_count": 50,
+  "findings": [
+    {
+      "id": "GR1-01",
+      "severity": "high",
+      "blocking": true,
+      "targets": [
+        "G1.4"
+      ],
+      "title": "A time-curve pullback does not supply a single-valued observed solution on that curve",
+      "locations": {
+        "README.md": [
+          "G1.4 final paragraph, API Law3",
+          "Appendix: A second actual consumer"
+        ],
+        "README.ja.md": [
+          "G1.4 final paragraph, API Law3"
+        ]
+      },
+      "evidence": "G1.4 supplies only a holomorphic time map C→B and an admissible observer, then promises meromorphic evaluation on that curve. N1.7 requires an actual holomorphic phase map s:C→M. The constructed complete flat connection supplies a section on the pointed universal cover of C; descent to C is a separate condition.",
+      "falsification": "The roadmap’s own sign-monodromy connection q′=q/(2t) over C=ℂ× with observation Q=q and nonzero initial value has a well-defined non-infinite observation on the universal cover, but no single-valued meromorphic evaluation on C.",
+      "required_change": "State the conditional theorem with a chosen initial point and evaluation on the pointed universal cover C̃. Evaluation descends to C precisely under scalar monodromy/deck invariance. Alternatively require an actual horizontal section on C as input. Retain this as an in-scope theorem under additional hypotheses; update EN, JA, plan and appendix."
+    },
+    {
+      "id": "GR1-02",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "M1.2"
+      ],
+      "title": "The analytic-space to native-manifold comparison needs topological hypotheses",
+      "locations": {
+        "README.md": [
+          "M1.2 first supporting construction"
+        ],
+        "README.ja.md": [
+          "M1.2 first supporting construction"
+        ]
+      },
+      "evidence": "The constructed analytic category is specified only by local coherent ideal quotients of polydiscs, but every smooth object is then identified with the native complex-manifold carrier. Those local axioms do not imply Hausdorffness or second countability.",
+      "falsification": "The complex line with doubled origin is a smooth locally polydisc analytic space but is not Hausdorff. An uncountable disjoint union of complex lines is smooth and Hausdorff but not second countable. Neither is in the declared native manifold scope.",
+      "required_change": "Require Hausdorffness and second countability (or the exact equivalent native hypotheses) for the smooth-object/manifold comparison, and prove them for the separated finite-type analytifications and admitted smooth-base pullbacks used by this roadmap. Keep broader analytic gluing only with its own stated category and restrictions."
+    },
+    {
+      "id": "GR1-03",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "M2.3"
+      ],
+      "title": "Picard smoothness must use affine square-zero tests or relative cohomological dimension",
+      "locations": {
+        "README.md": [
+          "M2.3 second supporting construction"
+        ],
+        "README.ja.md": [
+          "M2.3 second supporting construction"
+        ]
+      },
+      "evidence": "The new bullet quantifies over a square-zero thickening T₀↪T, places the obstruction in absolute H²(C_T₀,p*I), and calls for the cohomological-dimension vanishing on proper relative curves. Relative dimension one alone does not make this absolute group vanish for nonaffine T₀.",
+      "falsification": "Take T₀=ℙ²_ℂ, C_T₀=ℙ¹×T₀ and I=O_ℙ²(−3), with the split square-zero thickening defined by O_T₀⊕I. Then H²(C_T₀,p*I)≅ℂ. The relative Picard functor can nevertheless be smooth.",
+      "required_change": "Prove R²p_*(p*I)=0 and the absolute vanishing on affine square-zero test bases, or use the exact affine argument in Stacks tag0DPJ/0DPK. For arbitrary test bases formulate local lifting and descent/sheafification, not global vanishing of this H² group. The obstruction and torsor statements themselves remain valid."
+    },
+    {
+      "id": "GR1-04",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "M1.2",
+        "M2.1"
+      ],
+      "title": "Polarization independence contains an unresolved backward reference to the moduli universal property",
+      "locations": {
+        "README.md": [
+          "M1.2 last supporting construction"
+        ],
+        "README.ja.md": [
+          "M1.2 last supporting construction"
+        ]
+      },
+      "evidence": "M1.2 now constructs a polarization and compares its choices by the moduli universal property. The stable-connection moduli universal property is constructed in M2.1, which already depends on M1.2. The machine graph is acyclic only because this prose edge is unrecorded.",
+      "required_change": "Keep positivity, relative ampleness and local very ampleness in M1.2. Compare auxiliary embeddings through common tensor powers/presentations there, or move independence of the resulting stable-moduli construction to M2.1 after its universal property is proved. If an existing Quot universal property was intended, name it explicitly and supply its exact dependency rather than referring to the later moduli theorem."
+    },
+    {
+      "id": "GR1-05",
+      "severity": "medium",
+      "blocking": false,
+      "targets": [
+        "N1.5",
+        "M1.2"
+      ],
+      "title": "Two supporting proof routes need their exact existing suppliers recorded",
+      "locations": {
+        "README.md": [
+          "External dependency contracts",
+          "N1.5 Needs",
+          "M1.2 Needs and GAGA supporting construction"
+        ],
+        "design/dependencies.json": [
+          "differential and algebraic-cohomology suppliers"
+        ],
+        "design/plan.json": [
+          "N1.5 and M1.2 prerequisites"
+        ]
+      },
+      "evidence": "N1.5 uses real local flat product charts, while the differential contract stops at Layers0–1 and3.1–3.5 and the flat SmoothBundles supplier is principal. M1.2’s proper GAGA route explicitly uses Chow and coherent direct images, but its direct prerequisites contain only M1.1, curves, complex and analytic-coherence.",
+      "required_change": "For N1.5 consume pinned TauCeti.Analysis.ODE.Frobenius.exists_frobenius_flat_coordinate (or exact DifferentialGeometry4.3) and own h→graph, curvature→integrability, connection-chart adaptation, gluing and homotopy. For M1.2 record the algebraic coherent cohomology/direct-image floor and SchemeAndStackFoundations4.12 chow_lemma subtarget; do not accidentally import its separate flattening/StableReduction branch.",
+      "supplier_evidence": [
+        "Pinned TauCeti/Analysis/ODE/Frobenius.lean line753 constructs the real local product OpenPartialHomeomorph with a C^(n+1) inverse; confirmed independently by the Lean agent and read by root.",
+        "Current DifferentialGeometry4.3 lines463–470 supplies the general smooth distribution flat-chart transport.",
+        "Current SchemeAndStackFoundations4.12 lines5624–5632 states chow_lemma; its prerequisites are only0.9 and4.11, separate from flattening/StableReduction."
+      ]
+    },
+    {
+      "id": "GR1-06",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "G1.4"
+      ],
+      "title": "The merged-roadmap dependency claim and cross-part addresses are stale",
+      "locations": {
+        "README.md": [
+          "G1.4 first and third paragraphs",
+          "Appendix: A second actual consumer"
+        ],
+        "README.ja.md": [
+          "G1.4 third paragraph"
+        ],
+        "design/plan.json": [
+          "G1.4 statement"
+        ]
+      },
+      "evidence": "G1.4 forbids every PainleveEquationsAndFunctions target in its transitive closure, although all N/M targets now have that same roadmap owner. Its intended exclusion is Part P. In EN, §1.5 and §1.6 following a G paragraph are also ambiguous or nonexistent under the new same-part reference convention; the appendix names the groupoid theorem only as1.5.",
+      "required_change": "Specify that G’s transitive prerequisite closure excludes every Part P target, while allowing N/M/A/C. Write N1.5 and N1.6 explicitly wherever those general results are meant. Keep EN/JA/plan consistent.",
+      "validation": "The actual structured graph has78 targets, is acyclic, general N/M/A/C closures exclude P/G, G closures exclude P, and P1–P8 closures exclude P9. The defective assertion is in prose, not the intended graph."
+    },
+    {
+      "id": "GR1-07",
+      "severity": "low",
+      "blocking": false,
+      "targets": [
+        "N1.6"
+      ],
+      "title": "The zero-form falsification case excludes zero-dimensional fibers",
+      "locations": {
+        "README.md": [
+          "N1.6 final Check"
+        ],
+        "README.ja.md": [
+          "N1.6 corresponding final check"
+        ]
+      },
+      "evidence": "The diagnostic says the relative zero form is vertically degenerate without a positive-dimension qualification. On a zero-dimensional vertical tangent space, the zero alternating form is nondegenerate. The framework admits this case, including rank-one fixed-determinant fibers.",
+      "required_change": "Say that the relative zero form is degenerate on a positive-dimensional fiber. Preserve the theorem’s valid zero-dimensional case."
+    },
+    {
+      "id": "GR1-08",
+      "severity": "medium",
+      "blocking": true,
+      "targets": [
+        "M2.3",
+        "M3.4",
+        "G1.4"
+      ],
+      "title": "Required timeless and conditional-theorem wording is not fully applied",
+      "locations": {
+        "README.md": [
+          "M2.3 third paragraph and Source scope",
+          "M3.4 second paragraph",
+          "G1.4 Hypotheses"
+        ],
+        "README.ja.md": [
+          "M2.3 completion-status paragraph",
+          "M3.4 proof-completion disclaimer",
+          "G1.4 API Law3"
+        ],
+        "design/plan.json": [
+          "matching statements/hypotheses/source_scope"
+        ]
+      },
+      "evidence": "EN still contains “Optional curve-observer conclusions” in G1.4. M2.3 discusses a result being “marked available until it is discharged” and a “completion gate”; M3.4 discusses whether all proofs have “already been completed.” JA preserves completion-status wording, and G1.4 Law3 merely says to state the conditional observer result where EN requires a proof.",
+      "required_change": "State the curve-observer result as an in-scope theorem under its explicit additional hypotheses and use 証明する in JA. Replace proof-status/availability language with stable mathematical dependencies, e.g. the fixed-determinant dimension and symplectic theorem use the trace splitting and smooth determinant-map theorem constructed in M2.3. Put actual completion-status caveats in the review/PR record."
+    },
+    {
+      "id": "GR1-09",
+      "severity": "low",
+      "blocking": false,
+      "targets": [
+        "M1.1",
+        "M3.3"
+      ],
+      "title": "Japanese 2-categorical coherence is mistranslated as two-stage coherence",
+      "locations": {
+        "README.ja.md": [
+          "M1.1 Source scope at line519",
+          "M3.3 Source scope at line801",
+          "M-coherent-export at line916"
+        ]
+      },
+      "evidence": "English “2-coherent descent” and “base-change/2-coherence” appear as “2段階の整合的降下” and “2段階の整合性”. The 2 refers to coherence of 2-isomorphisms, not a construction performed in two stages.",
+      "required_change": "Use terminology such as “2-圏的な整合性を伴う降下” and “基底変換と2同型の整合性”, consistent with the actual stack-level composition and pentagon statement."
+    },
+    {
+      "id": "GR1-10",
+      "severity": "low",
+      "blocking": false,
+      "targets": [
+        "M1.2",
+        "M4.1"
+      ],
+      "title": "The Deligne proof source should carry its substantive erratum",
+      "locations": {
+        "README.md": [
+          "Supporting primary sources: DEL70"
+        ],
+        "README.ja.md": [
+          "DEL70 supporting source"
+        ],
+        "sources.toml": [
+          "DEL70"
+        ]
+      },
+      "evidence": "DEL70 is cited for II5.9 and its family proof route, but its 1971 correction is omitted from the submitted source record. The correction deletes the false II1.23–1.24 and replaces the proof of II4.1; it explicitly explains that the corrected argument includes the essential existence-theorem argument for II5.7/5.9.",
+      "required_change": "Attach the primary erratum URL to DEL70 and state that higher-dimensional regularity/existence arguments use the corrected proof. The one-dimensional statements II5.4/5.6 and the II6.6 differential-operator comparison are not invalidated by this correction.",
+      "source": "https://publications.ias.edu/sites/default/files/Erratum%20to%20SLN%20163.pdf"
+    }
+  ],
+  "checks_performed": [
+    "Read actual EN and corresponding JA statements in N/M/P1–P6/G, including new supporting constructions; crosschecked A1.7 independently.",
+    "Inspected internal transitive prerequisite graph:78 nodes, no cycles; N/M/A/C exclude P/G; G excludes P; P1–P8 exclude P9.",
+    "Rechecked current upstream Chow and Frobenius target scopes and the exact native Frobenius floor.",
+    "Reconciled admitted formal profiles, determinant normalization, generic/local analytic scope, relative Picard, all-strata properness ownership, P6 first-boundary-layer scope and five-point monodromy witness.",
+    "Opened Nemes arXiv:1406.2535 (actual v2) and checked product, equation1.1, Theorem1.2 equation1.10 and its domain/sign against A1.7. No defect found in the Barnes product, zero multiplicities, chosen logarithm branches or displayed remainder bound.",
+    "Read Deligne primary erratum and identified its effect on the cited proof route."
+  ],
+  "preservation_result": "No dropped original N/M/P1–P6/G target found. All-profile P4.4 properness and P6.2 surface comparison remain owned proof targets; neither is mislabeled as supplied by a generic source. This review does not prove those targets.",
+  "review_limit": "Independent specification/dependency/source-scope review, not a completed proof of any roadmap theorem or validation of literature beyond the precise cited claims."
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "painleve-independent-mathematical-review-v1",
+  "round": "R2",
+  "reviewer": "submission_geometry_dependencies",
+  "verdict": "changes_required_one_scope_qualification",
+  "snapshot_sha256": {
+    "README.md": "ceca44f077f6dc934695cc7b483c9ba86669016af31074a4a0685d3725015cb8",
+    "README.ja.md": "f93a560661d3e4f59b4393aa4f2cb67cceafd4a446d20d275b9f86e50a1f6778",
+    "design/plan.json": "8dea4aa6ca519c76726c2cd8b783d3a5165bab1556a486a971ebe9197548bad6"
+  },
+  "reviewed_targets": [
+    "N1.1",
+    "N1.2",
+    "N1.3",
+    "N1.4",
+    "N1.5",
+    "N1.6",
+    "N1.7",
+    "N1.8",
+    "N1.9",
+    "M1.1",
+    "M1.2",
+    "M2.1",
+    "M2.2",
+    "M2.3",
+    "M2.4",
+    "M3.1",
+    "M3.2",
+    "M3.3",
+    "M3.4",
+    "M4.1",
+    "M4.2",
+    "A1.7",
+    "P1.1",
+    "P1.2",
+    "P1.3",
+    "P1.4",
+    "P2.1",
+    "P2.2",
+    "P2.3",
+    "P2.4",
+    "P3.1",
+    "P3.2",
+    "P3.3",
+    "P3.4",
+    "P4.1",
+    "P4.2",
+    "P4.3",
+    "P4.4",
+    "P5.1",
+    "P5.2",
+    "P5.3",
+    "P5.4",
+    "P5.5",
+    "P6.1",
+    "P6.2",
+    "P6.3",
+    "G1.1",
+    "G1.2",
+    "G1.3",
+    "G1.4"
+  ],
+  "reviewed_target_count": 50,
+  "r1_closure": [
+    {
+      "id": "GR1-01",
+      "status": "closed",
+      "evidence": "G1.4 now chooses c₀ and x₀, constructs a horizontal section over C̃, evaluates there, and proves scalar deck invariance exactly characterizes descent to C. A separately supplied section on C is a distinct allowed input. EN/JA APIs require the same proof; a sign-monodromy diagnostic was added."
+    },
+    {
+      "id": "GR1-02",
+      "status": "partially_closed",
+      "evidence": "M1.2 explicitly adds Hausdorffness and second countability, retains separation information in the broader analytic category, and requires verification for N/M objects. A fixed-model-dimension qualification is still needed; see GR2-01."
+    },
+    {
+      "id": "GR1-03",
+      "status": "closed",
+      "evidence": "M2.3 uses affine square-zero thickenings, identifies the ideal by flatness, retains H² obstruction/H¹ torsor/H⁰ automorphisms, proves relative higher-direct-image vanishing, and invokes the affine base and Leray. General bases use open/fppf descent. No absolute nonaffine H² vanishing is asserted."
+    },
+    {
+      "id": "GR1-04",
+      "status": "closed",
+      "evidence": "M1.2 compares positive powers and bases by a common multiple. M2.1 separately compares both constructed Quot/GIT presentations through their proved universal properties, with composition and base-change laws. No M1.2→M2.1 proof dependency remains."
+    },
+    {
+      "id": "GR1-05",
+      "status": "closed",
+      "evidence": "N1.5 consumes TauCeti.exists_frobenius_flat_coordinate and owns the h→graph, curvature→integrability and gluing adapter. M1.2 now names coherent cohomology, proper direct images and only the SSF4.12 chow_lemma branch; the unrelated flattening/StableReduction branch is excluded explicitly."
+    },
+    {
+      "id": "GR1-06",
+      "status": "closed",
+      "evidence": "G1.4 now excludes Part P, not the merged roadmap owner. Its general transport references explicitly say N1.5/N1.6; the appendix uses N1.5 for groupoid/descent. The declared graph has the intended separation."
+    },
+    {
+      "id": "GR1-07",
+      "status": "closed",
+      "evidence": "N1.6 restricts zero-form degeneracy to positive-dimensional fibers and explicitly states nondegeneracy on a zero-dimensional vertical tangent space in both languages."
+    },
+    {
+      "id": "GR1-08",
+      "status": "closed",
+      "evidence": "The optional observer label and the identified completion/availability-status prose are removed. M2.3/M3.4 state mathematical dependency/construction requirements; G1.4 is an in-scope conditional theorem and JA Law3 says 証明する. The P-target hypotheses moved from the JA appendix into the corresponding local targets are preserved."
+    },
+    {
+      "id": "GR1-09",
+      "status": "closed",
+      "evidence": "JA now uses 2-圏的な整合性を伴う降下 and 2同型の整合性 in the relevant M1.1/M3.3/constructive-requirement passages; it no longer describes bicategorical coherence as two construction stages."
+    },
+    {
+      "id": "GR1-10",
+      "status": "closed",
+      "evidence": "Both language source lists and sources.toml include the April1971 Deligne erratum and its exact deleted/replacement scope, while retaining the valid one-dimensional and II6.6 claims."
+    }
+  ],
+  "remaining_findings": [
+    {
+      "id": "GR2-01",
+      "severity": "medium",
+      "blocking": true,
+      "target": "M1.2",
+      "title": "Native manifold comparison still needs fixed complex dimension or componentwise construction",
+      "locations": [
+        "README.md M1.2 first supporting construction",
+        "README.ja.md M1.2 corresponding first supporting construction",
+        "design/plan.json M1.2 supporting_constructions"
+      ],
+      "evidence": "The amended comparison applies to smooth Hausdorff second-countable analytic spaces, but the native CKG IsManifold carrier has a fixed finite-dimensional model. Smooth analytic spaces can have connected components of different dimensions.",
+      "counterexample": "The disjoint union ℂ ⊔ ℂ² is smooth, Hausdorff and second countable, but is not a manifold with one fixed model ℂ^n.",
+      "required_change": "State the comparison for smooth analytic spaces of a fixed complex dimension n, or decompose by the locally constant dimension and construct the native manifold on each open-and-closed dimension part. Verify fixed dimension for each admitted native N/M application. This preserves all mathematical scope used here.",
+      "source_scope": "ComplexKahlerGeometry K3 explicitly partitions smooth strata by constant complex dimension and connected components before giving a single fixed-dimensional manifold model (current README around lines422–429).",
+      "relation_to_r1": "Completes the native-carrier hypothesis precision requested in GR1-02; the Hausdorff and second-countability repairs themselves are correct."
+    }
+  ],
+  "retention": {
+    "README.md": {
+      "target_heading_count": 78,
+      "missing_reviewed_targets": []
+    },
+    "README.ja.md": {
+      "target_heading_count": 78,
+      "missing_reviewed_targets": []
+    }
+  },
+  "graph_checks": {
+    "nodes": 78,
+    "acyclic": true,
+    "general_depend_on_P_or_G": false,
+    "G_depend_on_P": false,
+    "P1_to_P8_depend_on_P9": false
+  },
+  "regression_review": "No further defect found in the revised universal-cover observation theorem, affine Picard argument, polarization proof order, local target hypotheses, N1.5 native reuse, Deligne correction, P1–P6 retained scope or the A1.7 crosscheck. The final fixed-model qualification is the only remaining geometry review finding.",
+  "bilingual_review": "The inspected EN/JA mathematical inputs, outputs and new conditions agree. All78 target headings and all50 reviewed target identifiers are present in both languages. The moved local P hypotheses do not assume properness, compactification, time dimension or a solution operator as inputs. Technical native/English names remain recognizable; no additional translation issue requiring a change was found.",
+  "review_limit": "Specification, hypotheses, source scope, translation and dependency review only. It does not certify proofs of the roadmap targets, and the mechanical graph/retention checks are not proofs of their mathematical correctness."
+}

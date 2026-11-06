@@ -1,0 +1,107 @@
+{
+  "schema": "tauceti-roadmap/independent-review-v1",
+  "review_id": "submission_review_analysis_r3",
+  "role": "independent analytic/algebraic and cross-geometry reviewer; read-only core files",
+  "candidate": "R3",
+  "snapshot_sha256": {
+    "README.md": "81c15816b186b118f470059d020987aef9f7959fc5c5c86e0be623a96f312ba1",
+    "README.ja.md": "e10c2a2b107f005b17727c93a07ff0c438d769805a34e54649ae13b23394a046",
+    "design/plan.json": "dfb8c5e9f0aa3abf5dbebf5934a9c9cda302627445661d00d1b8c4963470f524"
+  },
+  "upstream_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "verdict": "pass",
+  "verdict_scope": "Limited final closure of AR2-01–AR2-03 and regression reading of the already reviewed analytic/algebraic/source-scope contracts; not certification of theorem proofs.",
+  "blocking_findings": 0,
+  "new_mathematical_blockers": 0,
+  "closures": [
+    {
+      "id": "AR2-01",
+      "status": "closed_in_R3",
+      "evidence": "Both new diagnostic entries now have kind=\"scope diagnostic\" and no role field. All 263 diagnostic records have a nonempty kind field. The mathematical statements of the e^s I Fredholm and sqrt(t) deck-descent diagnostics are retained."
+    },
+    {
+      "id": "AR2-02",
+      "status": "closed_in_R3",
+      "evidence": "P8.3 Check4 in the English README and structured plan now states \"its finite-dimensional stabilization logarithmic derivative\". The Japanese check already has the corresponding precise wording. The finite-dimensional stabilization and separately conditional infinite-dimensional trace formulas remain distinguished in P8.3 and P8.4."
+    },
+    {
+      "id": "AR2-03",
+      "status": "closed_in_R3",
+      "evidence": "The hypothesis blocks for P1.4, P2.4, P4.4, P9.3, P9.4, P9.5, P10.3 and P11.3 now immediately follow their own target heading in both languages. No condition is lost or weakened. An independent heading-bounded check finds all 125 English structured hypotheses and all 98 available structured Japanese hypotheses inside the correct target."
+    }
+  ],
+  "previous_closures_retained": [
+    "AR1-01",
+    "AR1-02",
+    "AR1-03",
+    "AR1-04",
+    "AR1-05",
+    "AR1-06",
+    "P7.3-time-direction-clarification"
+  ],
+  "findings": [],
+  "independent_checks": {
+    "candidate_hashes_match": true,
+    "english_target_headings": 78,
+    "japanese_target_headings": 78,
+    "english_hypotheses_checked_in_own_target": 125,
+    "structured_japanese_hypotheses_checked_in_own_target": 98,
+    "misplaced_hypotheses": [],
+    "diagnostics_with_valid_kind": 263,
+    "validator_review": "Read target_block and the owning-target field checks. They bound content by the next target/part/section boundary and check the EN statement, hypotheses, API and diagnostics, added JA hypotheses, bilingual supporting constructions and Needs in the owner.",
+    "r2_regression_evidence": "Read validator-r2-scoped.json: exactly the 16 English/Japanese placement failures and two kind-field failures were detected on the R2 hashes.",
+    "independent_validator_run": {
+      "script": "repository/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/validate_submission.py",
+      "baseline": "/workspace/scratch/58443e4fc6da/_single_roadmap_revision/repository/TauCetiRoadmap/PainleveEquationsAndFunctions/design/plan.json",
+      "result_file": "analysis_r3_validation.json",
+      "exit_code": 0,
+      "checks": 4329,
+      "passed_checks": 4329,
+      "failed_checks": 0,
+      "baseline_source_independently_compared": true,
+      "meaning": "Mechanical consistency and content preservation; not proof of mathematical truth or human approval."
+    }
+  },
+  "regression_reading": [
+    "A1.6 retains the compact-image finite-subcover argument and owned exterior-power normal-convergence estimates; no supplier quantitative bound is reintroduced.",
+    "P8.3 and P8.4 retain universal finite-dimensional stabilization, frame correction, and the additional trace-norm-holomorphic realization plus unit factor required for infinite-dimensional formulas. The generic unramified nonresonant JMU scope is retained.",
+    "M2.3 retains affine square-zero tests with arbitrary quasi-coherent ideals, relative-versus-absolute cohomology distinction, specified restriction isomorphisms and descent for general bases.",
+    "C1.2 retains the nilpotent-preserving analytic foundational prefix of M1.2 and does not import connection-moduli conclusions into the reusable construction.",
+    "P7.3 retains the fixed external parameter α₀ and time-direction base {α₀}×U in both languages.",
+    "The M1.2 manifold comparison now explicitly requires a fixed model dimension n with Hausdorff and second-countable underlying space, and treats dimension-varying smooth components on their open-and-closed dimension loci. The English/Japanese qualification is compatible with the already reviewed analytic carrier; the geometry reviewer owns full closure of that finding.",
+    "The revised target-local insertion preserves mathematical ownership: classification, compactness, coordinate realizations and asymptotic-calibration conclusions are still proof targets, not newly imposed output assumptions."
+  ],
+  "preservation_check": {
+    "original_targets": 77,
+    "candidate_targets": 78,
+    "missing_original_targets": [],
+    "added_targets": [
+      "A1.7"
+    ],
+    "original_api_names": 214,
+    "candidate_api_names": 217,
+    "missing_api_names": [],
+    "original_diagnostic_names": 257,
+    "candidate_diagnostic_names": 263,
+    "missing_diagnostic_names": [],
+    "limit": "Identifier preservation is unchanged from R2; the independent source-baseline validator also passes. Neither check proves semantic equivalence or mathematical truth. The R2 hypothesis-placement defect is closed."
+  },
+  "counts": {
+    "parts": 6,
+    "general_parts": 4,
+    "layers": 19,
+    "targets": 78,
+    "general_targets": 30,
+    "api_laws": 217,
+    "diagnostics": 263,
+    "internal_edges": 333,
+    "supporting_constructions": 32
+  },
+  "review_limits": [
+    "This R3 review is deliberately limited to precise corrections and regression reading after the comprehensive assigned R1/R2 review. It is not a new exhaustive review of every theorem.",
+    "The verdict approves the reviewed roadmap specification at the recorded hashes. It does not prove existence of all planned constructions, all theorem conclusions, or the difficult uniform RH/parametrix estimates.",
+    "The 4,329 checks establish mechanical consistency and documented content preservation, not mathematical correctness or human approval.",
+    "The Japanese exact-field check covers the 98 available structured Japanese hypotheses; unstructured Japanese prose was reviewed only within the assigned mathematical passages.",
+    "No Lean build, topic validation, expert human approval, PR creation or push is certified by this child review. Those actions and reports belong to their respective owners."
+  ]
+}

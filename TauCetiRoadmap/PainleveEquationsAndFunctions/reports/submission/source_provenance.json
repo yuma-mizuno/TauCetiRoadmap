@@ -1,0 +1,219 @@
+{
+  "source_commit": "2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f",
+  "meaning": "Retrieved source-byte records, not mathematical proof certificates.",
+  "sources": [
+    {
+      "id": "I23",
+      "fetched_from": "https://sigma-journal.com/2023/013/sigma23-013.pdf",
+      "fetched_at": "2026-11-05T06:14:45.472927+00:00",
+      "sha256": "cad8b314bc240715095334d40db8db1567d55ede06e7afba9090b9e574a04af2",
+      "licence_class": "publisher-open",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "IS12",
+      "fetched_from": "https://arxiv.org/pdf/1203.0084v3",
+      "fetched_at": "2026-11-05T06:14:46.000591+00:00",
+      "sha256": "4a82dd6106c9749d3201d30430ac4dacb2e129a70402e6f54c1cbc58b8174741",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "HEU10",
+      "fetched_from": "https://www.numdam.org/article/AIF_2010__60_2_515_0.pdf",
+      "fetched_at": "2026-11-05T06:14:54.564857+00:00",
+      "sha256": "d700a83e51086f5072aa37d70353ad67c32d2d2ef7ed1ae36327898834f3a245",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "VDPS09",
+      "fetched_from": "https://arxiv.org/pdf/0902.1702v5",
+      "fetched_at": "2026-11-05T06:13:55.810474+00:00",
+      "sha256": "1d4be8e4526f6ca834506a976a6ffc999e9659acc2da08753b87e1f59d006e47",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "IIS06",
+      "fetched_from": "https://arxiv.org/pdf/math/0501007v2",
+      "fetched_at": "2026-11-05T06:13:55.478625+00:00",
+      "sha256": "07e4a8ed71f35316d0ab911c3b915a205724fea80352b3d24d8a51f4e8ee1fa0",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BOA01",
+      "fetched_from": "https://arxiv.org/pdf/2002.00052v1",
+      "fetched_at": "2026-11-05T06:13:56.425815+00:00",
+      "sha256": "45890c24d4c80c1bc6aeb6a2b144042d900a4373bb387de476ff89fded2e635b",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BOA14",
+      "fetched_from": "https://arxiv.org/pdf/1111.6228",
+      "fetched_at": "2026-11-05T06:31:03.261789+00:00",
+      "sha256": "28de90bd091dc3eac5a7b2a5df7657cf96164bbc449d505c43cce03a21d24686",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BY15",
+      "fetched_from": "https://arxiv.org/pdf/1512.08091",
+      "fetched_at": "2026-11-05T06:31:01.890198+00:00",
+      "sha256": "30cb9e6a9a7be880da0b238db3e5c097476ed6a503aaba87d79a99d1c911f1dd",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "STT02",
+      "fetched_from": "https://arxiv.org/pdf/math/0006026v2",
+      "fetched_at": "2026-11-05T06:15:10.905583+00:00",
+      "sha256": "ca614c60e4331f73bab15d3c7da1c587bdf830bbeb286ecb8687b5511d48af83",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "TER02",
+      "fetched_from": "https://arxiv.org/pdf/math/0006027v1",
+      "fetched_at": "2026-11-05T06:15:09.417521+00:00",
+      "sha256": "12b731dec359e1872a44bdf8968aeeb9b31e9ff6717f356077808744a25446c7",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "ST04",
+      "fetched_from": "https://arxiv.org/pdf/math/0201225v1",
+      "fetched_at": "2026-11-05T06:15:10.693102+00:00",
+      "sha256": "0dd9e402d7098937e6d2d9d15a7f96f33887aa52f610568c392c2aeaf8f9db2a",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "FM19",
+      "fetched_from": "https://arxiv.org/pdf/1809.07885v2",
+      "fetched_at": "2026-11-05T06:15:16.194409+00:00",
+      "sha256": "5407f067688c595e85e92f1d7de1f7dae2e09296836cd5387644834b8a4b30f1",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "DIL21",
+      "fetched_from": "https://sigma-journal.com/2021/056/sigma21-056.pdf",
+      "fetched_at": "2026-11-05T06:15:17.105803+00:00",
+      "sha256": "5de673e04e80e1b878e50c424dfaeee22923f4603057c4b1550bafaa23f96822",
+      "licence_class": "publisher-open",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "AHT17",
+      "fetched_from": "https://sigma-journal.com/2017/029/sigma17-029.pdf",
+      "fetched_at": "2026-11-05T06:15:15.205751+00:00",
+      "sha256": "ceb6e8425989fa5e5d03cd0ed91a09a910def6a7d2993ac161c2856821adfa7f",
+      "licence_class": "publisher-open",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "MAL04",
+      "fetched_from": "https://www.numdam.org/item/10.5802/aif.2052.pdf",
+      "fetched_at": "2026-11-05T06:14:23.049959+00:00",
+      "sha256": "2991cae554e555e99611589b8c2ab1ac98103ebb721c427e3935e9cdf86d547f",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BERT10",
+      "fetched_from": "https://arxiv.org/pdf/0902.4716v2",
+      "fetched_at": "2026-11-05T06:20:14.284053+00:00",
+      "sha256": "7d90cf8f1ff8080e52bb843bf1bc0b0ff4d1e0eeb35713b9b1f1f8adf09226fa",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BERT16",
+      "fetched_from": "https://arxiv.org/pdf/1601.04790v2",
+      "fetched_at": "2026-11-05T06:20:14.036895+00:00",
+      "sha256": "b4708229e958e026222bf1fcbbee7fc6a86779b1ccd6c3f3701e8a0dc476d5ec",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "BERT17",
+      "fetched_from": "https://arxiv.org/pdf/1703.00046",
+      "fetched_at": "2026-11-05T06:15:46.570099+00:00",
+      "sha256": "6ca20a0e696e2c2c45ab2b8fd31a5e0d16d8782516a9893b3f085540ef691516",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "ILP18",
+      "fetched_from": "https://arxiv.org/pdf/1604.03082v4",
+      "fetched_at": "2026-11-05T06:20:15.161188+00:00",
+      "sha256": "b63a1e2ec2e6e7a67f6bcf62c1238a5cef834aa70983e5b2dc53ab8457461b65",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "DIK08",
+      "fetched_from": "https://arxiv.org/pdf/math/0609451",
+      "fetched_at": "2026-11-05T06:36:58.912743+00:00",
+      "sha256": "92ef702cbb36bf498a74723e87dc8b337b30dc35df7d0092dd8ed6dd9622ae71",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "HXZ16",
+      "fetched_from": "https://arxiv.org/pdf/1410.3338v2",
+      "fetched_at": "2026-11-05T06:36:58.901589+00:00",
+      "sha256": "97d6026b77a5a9c2fb5d0a1bd26e106239037ac82cecd32c9beaeac5601fadba",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "GMR23",
+      "fetched_from": "https://link.springer.com/content/pdf/10.1007/s00220-023-04650-8.pdf",
+      "fetched_at": "2026-11-05T06:24:41.051605+00:00",
+      "sha256": "c8e5f87622ef37e86d53e74822e57299311e7f4ab3dfb31127f87a42d761736d",
+      "licence_class": "publisher-open",
+      "status": "certified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "DLMF",
+      "licence_class": "institutional",
+      "status": "uncertified",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "I13",
+      "fetched_from": "https://arxiv.org/pdf/math/0602004",
+      "fetched_at": "2026-11-06T02:46:51.507890+00:00",
+      "sha256": "01842bb622734023216f75333f87f42f88835e90e90eee3032fec3b99efb2469",
+      "licence_class": "open-repository",
+      "status": "certified",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

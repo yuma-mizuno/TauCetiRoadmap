@@ -1,0 +1,689 @@
+{
+  "schema": "tauceti-roadmap/dependency-contracts-v1",
+  "contracts": [
+    {
+      "id": "complex",
+      "title": "Complex manifolds, holomorphic bundles and observations",
+      "paths": [
+        "TauCetiRoadmap/ComplexKahlerGeometry/README.md"
+      ],
+      "sections": [
+        "K1",
+        "K3.0",
+        "K3.HolomorphicStalk",
+        "K3.MeromorphicGermField",
+        "K4",
+        "K7.1"
+      ],
+      "supplied": "Complex inverse/implicit-function and tangent calculus; holomorphic germs and one-variable meromorphic germs; holomorphic bundle/sheaf equivalence and nonsingular flat connections/local systems; projective charts.",
+      "owned_here": "N owns nonlinear connections, holomorphic ODEs, transport and observations. M owns meromorphic/analytic-moduli comparisons. K4 does not supply algebraic analytification.",
+      "supplied_ja": "複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則ODEはN部、解析化と有理型比較はM部が担う。",
+      "consumers": [
+        "N1.1",
+        "N1.3",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9",
+        "M1.1",
+        "M1.2",
+        "M3.2",
+        "M4.1",
+        "A1.1",
+        "A1.5",
+        "A1.7",
+        "C1.1",
+        "P4.1",
+        "P7.3",
+        "P8.4"
+      ]
+    },
+    {
+      "id": "smooth",
+      "title": "Smooth bundle and connection foundations",
+      "paths": [
+        "TauCetiRoadmap/SmoothBundlesConnections/README.md"
+      ],
+      "sections": [
+        "B1.5",
+        "B5.0",
+        "B5.2"
+      ],
+      "supplied": "Smooth Ehresmann splittings, proper-submersion and principal-connection transport within their respective hypotheses.",
+      "owned_here": "N1.1–N1.5 own nonlinear connection objects, continuous-time local lifting, holomorphic parameter dependence and complete nonlinear transport. No properness of the phase projection is assumed.",
+      "supplied_ja": "滑らかなEhresmann分裂、固有沈め込みおよび主接続の移送を、それぞれの仮定の範囲で用いる。一般の非線形移送はN1.1–N1.5が担う。",
+      "consumers": [
+        "N1.1",
+        "N1.5",
+        "P4.2"
+      ]
+    },
+    {
+      "id": "differential",
+      "title": "Smooth differential calculus and flows",
+      "paths": [
+        "TauCetiRoadmap/DifferentialGeometry/README.md"
+      ],
+      "sections": [
+        "Layers 0–1",
+        "3.1–3.5"
+      ],
+      "supplied": "Finite-dimensional manifolds, charts and smooth local/maximal/time-dependent flows.",
+      "owned_here": "N1.2 proves the continuous-time locally uniformly Lipschitz theorem; N1.8 constructs intrinsic jets; N1.9 proves finite-chart stability and no exit.",
+      "supplied_ja": "有限次元多様体・チャート・滑らかな局所／極大／時間依存flow。連続時間・相変数局所一様Lipschitzの定理はN1.2、一階jetはN1.8、有限チャートの収束はN1.9で証明する。",
+      "consumers": [
+        "N1.2",
+        "N1.8",
+        "N1.9"
+      ]
+    },
+    {
+      "id": "covers",
+      "title": "Covering spaces and universal covers",
+      "paths": [
+        "Completed/UniversalCovers/README.md"
+      ],
+      "sections": [
+        "Stage 0.2–0.4",
+        "Stage 1.5",
+        "Stage 2.6–2.8"
+      ],
+      "supplied": "Native covering, path and homotopy lifting, universal covers and their fundamental-group interfaces.",
+      "owned_here": "N1.5 constructs the nonlinear action and horizontal descent; general-cover descent uses the actual fiber relation, not deck invariance without normality.",
+      "supplied_ja": "既存の被覆・経路とホモトピーの持上げ・普遍被覆・基本群。非線形作用と水平降下はN1.5で構成し、非正規被覆では実際のファイバー関係を用いる。",
+      "consumers": [
+        "N1.5",
+        "N1.7",
+        "P4.2",
+        "P9.3"
+      ]
+    },
+    {
+      "id": "curves",
+      "title": "Marked-curve charts",
+      "paths": [
+        "TauCetiRoadmap/ComplexCurveModuli/README.md",
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "ComplexCurveModuli D0.3, D3–D5",
+        "SchemeAndStackFoundations 4.15"
+      ],
+      "supplied": "Genus-zero Möbius normalization and supported point-pushing; stable marked-curve deformation charts in the stable range.",
+      "owned_here": "M1.2 constructs unstable one-/two-pointed quotient charts, finite jets, local markings and determinant transport. Its analytic category is constructed there; D2.0 is only an instance comparison.",
+      "supplied_ja": "種数0のMöbius正規化と点の移動、安定範囲の標識曲線変形チャート。1・2標点の商チャート、有限jet、局所標識、行列式移送はM1.2が構成する。",
+      "consumers": [
+        "M1.2",
+        "M4.1"
+      ]
+    },
+    {
+      "id": "stacks",
+      "title": "Stacks, inertia and restricted coarse-space criteria",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "1.18–1.23"
+      ],
+      "supplied": "Stackification, 2-fiber products, algebraic/DM presentations, inertia, QCoh descent, and finite-inertia Keel–Mori at its hypotheses.",
+      "owned_here": "M2.1 proves bounded GIT, scalar Gm rigidification, gerbe and coarse comparisons. Finite-inertia criteria do not apply to an unrigidified Gm stable stack.",
+      "supplied_ja": "スタック化・2ファイバー積・慣性・準連接層降下・有限慣性のKeel–Mori。Gmの剛化、GIT、gerbeと粗モジュライの比較はM2.1が証明する。",
+      "consumers": [
+        "M1.1",
+        "M2.1",
+        "M3.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "quotient-predicates",
+      "title": "Quotient predicates",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "1.17"
+      ],
+      "supplied": "Categorical/geometric quotient definitions, Artin bootstrap and the stated finite-group projective quotients.",
+      "owned_here": "Reductive invariant theory and actual character quotients are M2.1/M4.1; wild framing and Stokes quotients are P4.2.",
+      "supplied_ja": "圏論的商・幾何学的商の定義と明記された有限群商。簡約群の不変式と指標商はM2.1/M4.1、Stokesの商はP4.2で構成する。",
+      "consumers": [
+        "M2.1",
+        "P4.2"
+      ]
+    },
+    {
+      "id": "quot",
+      "title": "Quot/Hilbert and parameter schemes",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.14"
+      ],
+      "supplied": "Noetherian projective Quot/Hilbert and Hom/Isom parameter spaces with their stated base-change laws.",
+      "owned_here": "M2.1 proves boundedness, the equations and stability/GIT comparison. Analytic pullbacks use M1.2.",
+      "supplied_ja": "Noetherian・射影的なQuot/HilbertとHom/Isom空間。接続の有界性・方程式・安定性はM2.1、解析的引戻しはM1.2が担う。",
+      "consumers": [
+        "M2.1",
+        "P4.4",
+        "P6.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "cohomology",
+      "title": "Cohomology, duality and curve degree",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "2.2",
+        "2.6",
+        "2.20",
+        "3.3"
+      ],
+      "supplied": "Čech and sheaf cohomology, coherent terms, relative/Serre duality, degrees and curve Riemann–Roch at the stated hypotheses.",
+      "owned_here": "M2.2 constructs C-linear differential-operator hypercohomology and the ramified cone; coherent underlying terms do not make its differential O-linear.",
+      "supplied_ja": "Čech・層コホモロジー、連接な項、相対・Serre双対、次数・曲線Riemann–Roch。ℂ線形微分作用素の全複体と分岐の錐はM2.2が構成する。",
+      "consumers": [
+        "M1.2",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "C1.2",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "deformation",
+      "title": "Elementary deformation theory",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.2–4.6"
+      ],
+      "supplied": "Artinian coefficients, deformation functors, hulls and elementary small-extension obstruction calculations.",
+      "owned_here": "M2.2 constructs actual connection cocycles, the needed arbitrary finite square-zero kernels and framed versality; M3.1 constructs strong horizontal extensions.",
+      "supplied_ja": "Artin係数・変形関手・hull・基本的小拡大の障害。実際の接続コサイクルと平方零核・versal比較はM2.2、強い水平延長はM3.1で証明する。",
+      "consumers": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M3.1",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "bundles",
+      "title": "Algebraic vector bundles and finite locally free sheaves",
+      "paths": [
+        "TauCetiRoadmap/AlgebraicVectorBundles/README.md"
+      ],
+      "sections": [
+        "L0A–L0C",
+        "L1A–L1B",
+        "L2A–L2B"
+      ],
+      "supplied": "Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence.",
+      "owned_here": "Meromorphic connections and analytification are M1.1–M1.2; relative dual Poisson geometry is C1.2.",
+      "supplied_ja": "有限局所自由層、双対・テンソル・行列式、相対Specと幾何学的ベクトル束との同値。接続と解析化はM1.1–M1.2、相対Poisson構成はC1.2が担う。",
+      "consumers": [
+        "M1.1",
+        "M2.4",
+        "C1.2",
+        "P6.1",
+        "P7.1"
+      ]
+    },
+    {
+      "id": "analytic-coherence",
+      "title": "Coherent analytic module sheaves",
+      "paths": [
+        "TauCetiRoadmap/RealAnalyticGeometry/README.md"
+      ],
+      "sections": [
+        "R3.2 item 0"
+      ],
+      "supplied": "Coherent analytic module-sheaf carriers and local calculus on the supplied analytic manifold structure sheaf.",
+      "owned_here": "M1.2 constructs general complex analytic spaces, nilpotent quotients, analytification and GAGA comparisons.",
+      "supplied_ja": "与えられた解析多様体の構造層上の連接解析加群。冪零元を含む一般複素解析空間、解析化、GAGA比較はM1.2が構成する。",
+      "consumers": [
+        "M1.2"
+      ]
+    },
+    {
+      "id": "proper-cohomology",
+      "title": "Proper coherent direct images and base change",
+      "paths": [
+        "TauCetiRoadmap/JacobianChallenge/README.md"
+      ],
+      "sections": [
+        "Layer C"
+      ],
+      "supplied": "Proper coherent pushforwards and separately stated flat-base-change and cohomology/base-change criteria; Grauert under its reduced-base and constant-rank assumptions.",
+      "owned_here": "M2.3 proves the relative Picard extension; P6.3 verifies boundary-coefficient flatness and the exact locally free/arbitrary-base-change criterion.",
+      "supplied_ja": "固有連接直像と、各仮定を区別した平坦基底変換・コホモロジー基底変換。相対Picard拡張はM2.3、境界係数と任意基底変換の検証はP6.3が担う。",
+      "consumers": [
+        "M1.2",
+        "M2.3",
+        "P6.3"
+      ]
+    },
+    {
+      "id": "field-picard",
+      "title": "Picard over a field and Picard foundations",
+      "paths": [
+        "TauCetiRoadmap/JacobianChallenge/README.md",
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "JacobianChallenge Layer D",
+        "SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14"
+      ],
+      "supplied": "Picard representability for projective geometrically integral schemes over a field, smooth-curve Jacobians, line-bundle descent and deformation.",
+      "owned_here": "M2.3 constructs relative Picard under projective flat finite presentation and universal functions, including nonreduced curves; P6.1 verifies its boundary hypotheses.",
+      "supplied_ja": "体上の射影的幾何学的整スキームのPicard、滑らかな曲線のJacobian、線束降下・変形。非被約曲線を含む相対PicardはM2.3が構成する。",
+      "consumers": [
+        "M2.3"
+      ]
+    },
+    {
+      "id": "supports",
+      "title": "Cohomology with supports",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "2.7"
+      ],
+      "supplied": "Supported cohomology, localization/excision and the Noetherian colimit-of-Ext comparison with native local cohomology.",
+      "owned_here": "P6.3 constructs its first boundary layer, injection and time-line comparison; it does not identify all supported cohomology with that line.",
+      "supplied_ja": "台付きコホモロジー、局所化・切除、NoetherianなExt余極限との比較。第一境界層・注入・時間直線はP6.3が構成する。",
+      "consumers": [
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "surfaces",
+      "title": "Divisors, modifications and surface intersections",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "3.4",
+        "4.11",
+        "4.17",
+        "5.9–5.10"
+      ],
+      "supplied": "Divisor/Picard groups, blowups and strict transforms, normal crossings, surface intersection/adjunction and lattice theory.",
+      "owned_here": "P6.1–P6.3 construct the nonreduced anticanonical boundary, relative logarithmic deformation and family comparisons; P7 constructs the geometric transformations.",
+      "supplied_ja": "因子・Picard群、ブローアップ・狭義変換、正規交叉、曲面交点・随伴・格子。非被約境界と相対変形はP6、変換はP7が担う。",
+      "consumers": [
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "formal-series",
+      "title": "Formal scalar and vector-valued Laurent algebra",
+      "paths": [
+        "TauCetiRoadmap/FormalLaurentPuiseux/README.md"
+      ],
+      "sections": [
+        "L1–L4",
+        "L5–L6 for finite-extension steps in M1.1"
+      ],
+      "supplied": "Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra.",
+      "owned_here": "M1.1 proves differential-module Levelt–Turrittin/descent; C1.1 proves the convergent-germ and compact-uniform cancellation adapter. Formal valuation convergence is not analytic convergence.",
+      "supplied_ja": "形式代入・連続微分・有限次元HahnModule・留数・分岐と有限拡大の代数。微分加群標準形はM1.1、収束芽の極相殺と一様極限はC1.1が証明する。",
+      "consumers": [
+        "M1.1",
+        "C1.1",
+        "P1.4",
+        "P9.3"
+      ]
+    },
+    {
+      "id": "fredholm",
+      "title": "Native complex Fredholm and determinant carriers",
+      "paths": [
+        "Mathlib/Analysis/Normed/Operator/Fredholm/Basic.lean",
+        "TauCeti/Analysis/Fredholm/Stabilization.lean",
+        "TauCeti/Analysis/Normed/Operator/Splitting/Family.lean",
+        "TauCeti/LinearAlgebra/Determinant/Line.lean"
+      ],
+      "sections": [
+        "IsFredholm",
+        "nonempty_fredholmPackage",
+        "exists_stabilization_kernel_coordinates",
+        "kernelHomeomorph",
+        "contDiffAt_kerSection",
+        "detLine",
+        "detLineCongr"
+      ],
+      "supplied": "Scalar-generic finite-dimensional kernel/cokernel, stabilization coordinates and pointwise determinant-line comparisons; specialize over ℂ and dualize the convention.",
+      "owned_here": "A1.1 constructs the holomorphic family, canonical section, transition cocycle and base-change laws.",
+      "supplied_ja": "体を複素数に特殊化できる核・余核・安定化と各点の行列式線。双対規約を用い、正則な族・標準切断・コサイクルはA1.1が構成する。",
+      "consumers": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "inversion",
+      "title": "Native analytic inversion",
+      "paths": [
+        "Mathlib/Analysis/Analytic/Constructions.lean"
+      ],
+      "sections": [
+        "analyticAt_inverse",
+        "analyticAt_inverse_one_sub"
+      ],
+      "supplied": "Analytic inversion on units of a complete normed algebra and the small-norm inverse.",
+      "owned_here": "A1.1 and A1.3 prove the actual family-to-operator maps and uniform estimates.",
+      "supplied_ja": "完備ノルム代数の可逆元における解析的逆写像。実際の族から作用素への写像と一様評価はA1.1/A1.3で証明する。",
+      "consumers": [
+        "A1.1",
+        "A1.3"
+      ]
+    },
+    {
+      "id": "lp",
+      "title": "Native Lp, Fourier and integral calculus",
+      "paths": [
+        "Mathlib/Analysis/Fourier/LpSpace.lean",
+        "Mathlib/MeasureTheory/Function/Holder.lean"
+      ],
+      "sections": [
+        "Complex L²/Fourier–Plancherel",
+        "Hölder and dominated convergence on the native measure/integral carrier"
+      ],
+      "supplied": "Native complex Lp spaces, Fourier–Plancherel, Hölder inequalities and integral convergence.",
+      "owned_here": "A1.2 constructs contour measure/coordinate comparisons; A1.4 proves weighted moment and uniform-tail statements.",
+      "supplied_ja": "既存の複素Lp、Fourier–Plancherel、Hölder不等式、積分収束。積分路の比較はA1.2、重み付きモーメントと裾の一様性はA1.4が担う。",
+      "consumers": [
+        "A1.2",
+        "A1.4"
+      ]
+    },
+    {
+      "id": "hilbert-transform",
+      "title": "Real-line Hilbert transform",
+      "paths": [
+        "TauCetiRoadmap/PDE/README.md"
+      ],
+      "sections": [
+        "2.3/B10"
+      ],
+      "supplied": "The real-line Cauchy/Hilbert multiplier −i sign(ξ), with L² norm one.",
+      "owned_here": "A1.2 proves finite-arc/ray transport, the weighted cross-branch Schur bound, Plemelj and endpoint reconstruction.",
+      "supplied_ja": "実直線のHilbert変換とL²ノルム1の乗算子表示。分岐間の重み付きSchur評価・Plemelj・端点復元はA1.2が証明する。",
+      "consumers": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "cauchy",
+      "title": "Native contour and Schur foundations",
+      "paths": [
+        "TauCeti/Analysis/Contour/Cauchy/IntegralFormula.lean",
+        "TauCeti/MeasureTheory/Integral/SchurTest.lean"
+      ],
+      "sections": [
+        "Cauchy integral formula",
+        "Unweighted Schur estimates"
+      ],
+      "supplied": "Cauchy integral formula for the stated native contours and unweighted integral-kernel estimates.",
+      "owned_here": "A1.2 proves its full contour package; the 1/(s+t) vertex kernel requires the weighted theorem specified there.",
+      "supplied_ja": "指定された既存積分路のCauchy公式と重みなしSchur評価。1/(s+t)の頂点核に必要な重み付き定理はA1.2が証明する。",
+      "consumers": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "trace-ideal",
+      "title": "Trace-class ideal carrier",
+      "paths": [
+        "TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md"
+      ],
+      "sections": [
+        "OI-B01–OI-B19",
+        "OI-B23",
+        "OI-B29–OI-B30"
+      ],
+      "supplied": "Normed complete trace-class ideal, nuclear gauge and two-sided ideal estimates.",
+      "owned_here": "A1.6 constructs the holomorphic-family adapter; P8.2 verifies actual trace-class realizations where used.",
+      "supplied_ja": "完備なトレースクラス・イデアルとノルム評価。正則族はA1.6、実際のRHPからの実現はP8.2が担う。",
+      "consumers": [
+        "A1.6",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "trace-determinant",
+      "title": "Generic trace-class determinant",
+      "paths": [
+        "TauCetiRoadmap/RandomMatrices/README.md"
+      ],
+      "sections": [
+        "8.3, generic operator-theory prefix"
+      ],
+      "supplied": "Trace, exterior powers, generic Fredholm determinant series and trace-norm continuity before the positive-kernel point-process specialization.",
+      "owned_here": "A1.6 proves holomorphic dependence and uniform convergence. P8.3 proves its actual logarithmic derivative and integrable-kernel comparison.",
+      "supplied_ja": "正の核への特殊化以前の一般的なトレース・外冪・Fredholm行列式級数・トレースノルム連続性。正則依存はA1.6、変分比較はP8.3で証明する。",
+      "consumers": [
+        "A1.6",
+        "P8.2",
+        "P8.3"
+      ]
+    },
+    {
+      "id": "toeplitz",
+      "title": "Matrix-symbol Toeplitz index",
+      "paths": [
+        "TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md"
+      ],
+      "sections": [
+        "T1–T3"
+      ],
+      "supplied": "Circle Hardy models and Fredholm index equal to minus determinant winding for continuous invertible matrix symbols.",
+      "owned_here": "P8.2 constructs contour/Hardy, holomorphic-family, index-zero, resonant and ramified adapters. Index zero alone does not imply invertibility.",
+      "supplied_ja": "円周Hardy模型と可逆行列記号の指数＝行列式回転数の負。P8.2が実際の積分路・正則族・共鳴・分岐の比較を構成する。",
+      "consumers": [
+        "P8.2"
+      ]
+    },
+    {
+      "id": "rouche",
+      "title": "Native Rouché and zero counts",
+      "paths": [
+        "TauCeti/Analysis/Complex/Conformal/Rouche.lean",
+        "TauCeti/Analysis/Analytic/ZeroCount.lean"
+      ],
+      "sections": [
+        "rouche",
+        "rouche_nullHomologous",
+        "Multiplicity zero-count carrier"
+      ],
+      "supplied": "Disc and null-homologous piecewise C¹ contour Rouché theorems and zero multiplicities.",
+      "owned_here": "A1.6 supplies the actual boundary cycle and winding characterization for its general domain theorem.",
+      "supplied_ja": "円板・零ホモローグな区分的C¹閉曲線のRouchéと零点重複度。一般領域の境界サイクルと回転数はA1.6で構成する。",
+      "consumers": [
+        "A1.6"
+      ]
+    },
+    {
+      "id": "meromorphic-germs",
+      "title": "Native convergent meromorphic germs",
+      "paths": [
+        "TauCeti/Analysis/Meromorphic/Germ.lean",
+        "TauCeti/Analysis/Meromorphic/PrincipalPart.lean"
+      ],
+      "sections": [
+        "meromorphicGerms.principalPart",
+        "principalPart_eq_iff",
+        "principalPart_eq_sum_coeff",
+        "Analytic regular remainder"
+      ],
+      "supplied": "Scalar convergent meromorphic germs, finite principal parts and holomorphic remainders.",
+      "owned_here": "C1.1 supplies finite-dimensional coefficient comparison, the cancellation identity and compact-uniform parameter limits.",
+      "supplied_ja": "スカラーの収束有理型芽・有限主要部・正則剰余。有限次元係数と極相殺・パラメータ一様極限はC1.1が担う。",
+      "consumers": [
+        "C1.1"
+      ]
+    },
+    {
+      "id": "curve-functions",
+      "title": "Native meromorphic functions on Riemann surfaces",
+      "paths": [
+        "TauCeti/Analysis/Complex/RiemannSurface/FunctionField.lean",
+        "TauCeti/Analysis/Complex/RiemannSurface/FunctionField/Comap.lean"
+      ],
+      "sections": [
+        "TauCeti.RiemannSurface.MeromorphicFunction",
+        "Nonconstant curve pullback and order comparison"
+      ],
+      "supplied": "Holomorphic maps from a Riemann surface to OnePoint ℂ with a witness excluding the constant-infinity map; native pullback and orders.",
+      "owned_here": "N1.7 proves phase-observation admissibility and scalar descent; its scalar output uses this same carrier.",
+      "supplied_ja": "Riemann面からOnePoint ℂへの正則写像と恒等的無限大を除く証人、引戻し・位数。相空間の観測許容性とスカラー降下はN1.7が証明し、同じ関数の対象を用いる。",
+      "consumers": [
+        "N1.7"
+      ]
+    },
+    {
+      "id": "poisson",
+      "title": "Smooth real linear Poisson signs",
+      "paths": [
+        "TauCetiRoadmap/LieGroupoidsPoisson/README.md"
+      ],
+      "sections": [
+        "G4.6A"
+      ],
+      "supplied": "Positive/negative real Lie–Poisson conventions and fiber-negation comparison.",
+      "owned_here": "C1.2 constructs the complex relative O_B-Lie and symmetric-algebra bracket, residue pairing and base change.",
+      "supplied_ja": "実Lie–Poissonの正負規約とファイバー符号反転。複素相対括弧・留数対・基底変換はC1.2が構成する。",
+      "consumers": [
+        "C1.2"
+      ]
+    },
+    {
+      "id": "reduction",
+      "title": "Smooth real KKS and regular reduction",
+      "paths": [
+        "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md"
+      ],
+      "sections": [
+        "R2",
+        "R3"
+      ],
+      "supplied": "Smooth real coadjoint/KKS geometry and regular free proper Hamiltonian reduction.",
+      "owned_here": "P11.1 proves actual complex quotient existence, orbit flatness and collision comparisons; C1.2 transports already verified data.",
+      "supplied_ja": "実滑らかなKKSと正則・自由・固有なHamilton簡約。複素商の存在・軌道の平坦性・衝突の比較はP11.1が証明する。",
+      "consumers": [
+        "P11.1"
+      ]
+    },
+    {
+      "id": "airy-hm",
+      "title": "Airy, Fredholm and Hastings–McLeod theory",
+      "paths": [
+        "TauCetiRoadmap/RandomMatrices/README.md"
+      ],
+      "sections": [
+        "8.4",
+        "8.5"
+      ],
+      "supplied": "Airy normalization and tails, scalar Hastings–McLeod existence/uniqueness, real pole-freeness and F1/F2 identities.",
+      "owned_here": "P10.4 constructs the intrinsic phase-point/jet bridge. P10.3 proves its tau normalization, sectorial calibration and selected connection constants.",
+      "supplied_ja": "Airyの正規化と裾、Hastings–McLeod解の存在一意性・実軸上の無極性・F1/F2恒等式。内在的な解への橋渡しはP10.4、接続定数はP10.3が担う。",
+      "consumers": [
+        "P10.3",
+        "P10.4"
+      ]
+    },
+    {
+      "id": "gamma",
+      "title": "Native Gamma, Bernoulli and analytic carriers",
+      "paths": [
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean",
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean",
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Deriv.lean",
+        "Mathlib/NumberTheory/Bernoulli.lean",
+        "Mathlib/NumberTheory/BernoulliPolynomials.lean"
+      ],
+      "sections": [
+        "Complex.Gamma",
+        "GammaSeq_tendsto_Gamma",
+        "Gamma_ne_zero",
+        "Real.eulerMascheroniConstant",
+        "Bernoulli numbers/polynomials"
+      ],
+      "supplied": "Gamma and its pole-free analytic theory, Euler–Mascheroni constant, Bernoulli coefficients and native complex analysis.",
+      "owned_here": "A1.7 constructs Barnes G, canonical normalization, zero divisor, logarithm branches and the explicit sectorial remainder.",
+      "supplied_ja": "既存Gammaと極を除く解析理論、Euler定数、Bernoulli係数。Barnes G・標準正規化・零因子・枝・明示剰余はA1.7で構成する。",
+      "consumers": [
+        "A1.7"
+      ]
+    },
+    {
+      "id": "proper",
+      "title": "Native topological properness",
+      "paths": [
+        "Mathlib/Topology/Maps/Proper/Basic.lean"
+      ],
+      "sections": [
+        "IsProperMap"
+      ],
+      "supplied": "Topological proper maps and the compact-preimage and base-change properties under their actual topological hypotheses.",
+      "owned_here": "N1.4 proves complete-lift transfer. M1.2 proves analytic/algebraic comparison; P4.4 proves properness of the actual RH family.",
+      "supplied_ja": "位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長はN1.4、解析比較はM1.2、RH族の固有性はP4.4が証明する。",
+      "consumers": [
+        "P4.4"
+      ]
+    },
+    {
+      "id": "frobenius",
+      "title": "Native real Frobenius product coordinates",
+      "paths": [
+        "TauCeti/Analysis/ODE/Frobenius.lean"
+      ],
+      "sections": [
+        "TauCeti.exists_frobenius_flat_coordinate"
+      ],
+      "supplied": "For a finite-dimensional real integrable graph field, a local product OpenPartialHomeomorph with a smooth inverse and the prescribed horizontal derivatives, at the stated regularity.",
+      "owned_here": "N1.5 constructs the submersion-chart graph field, proves curvature implies its integrability, and glues these local products for homotopy-invariant transport. N1.3 supplies the holomorphic counterpart.",
+      "supplied_ja": "有限次元の実可積分グラフ場から、明記した正則性の下で、滑らかな逆写像と水平微分を持つ局所積OpenPartialHomeomorphを得る。N1.5が沈め込み座標への移送、曲率から可積分性、貼合せとホモトピー不変性を証明し、正則版はN1.3を用いる。",
+      "consumers": [
+        "N1.5"
+      ]
+    },
+    {
+      "id": "chow",
+      "title": "Chow lemma for the proper GAGA proof",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11"
+      ],
+      "supplied": "For a separated finite-type morphism to a Noetherian base, a projective modification with quasi-projective source over that base; the source is projective when the original morphism is proper.",
+      "owned_here": "M1.2 uses this subtarget with coherent cohomology and proper direct images for the proper GAGA argument. The separate flattening and StableReduction branch of 4.12 is not a prerequisite.",
+      "supplied_ja": "Noetherian基底への有限型分離射に対し、基底上準射影的となる射影的改変を供給し、元の射が固有なら改変後は基底上射影的となる。M1.2はこの小目標と連接コホモロジー・固有直像をGAGAの証明に用い、4.12の別の平坦化・StableReductionの分岐は前提にしない。",
+      "consumers": [
+        "M1.2"
+      ]
+    }
+  ]
+}

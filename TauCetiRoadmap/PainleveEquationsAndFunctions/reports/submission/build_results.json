@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "scoped_validation_complete",
+  "recorded_date_utc": "2026-11-06",
+  "toolchain": {
+    "lean": "leanprover/lean4:v4.36.0-rc2",
+    "lean_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+    "lake": "5.0.0-src+b35cb10",
+    "roadmap_upstream_base": "ffac5139fe4794a132eb540a89e1b973070aad69",
+    "tauceti_manifest_pin": "2fd255d997f47c0b5d834ee416c7015d55444ce5",
+    "mathlib_manifest_pin": "1b1ccf4b088b32fa3f23f2de1127433254a81e1e",
+    "native_cache_mapping_ancestor": "3bc91d1d5f3b6212c8ba268a63c4586960ba4e79",
+    "source_pins_changed": false,
+    "repository_build_configuration_changed": false
+  },
+  "source": {
+    "path": "TauCetiRoadmap/PainleveEquationsAndFunctions/Suggested.lean",
+    "final_sha256": "4cc1bfedac907a532f6e472c0931636d20d2c52c370cda4e29d4bea21bd0d011",
+    "explicit_declarations": 9,
+    "admitted_theorems": 4,
+    "admitted_declaration_names": [
+      "NonlinearConnection.isCompl_vertical_horizontal",
+      "NonlinearConnection.isContMDiffDistribution_horizontal",
+      "NonlinearConnection.curvatureOn_mem_vertical",
+      "isCompleteVectorField_of_proper_semiconjugacy"
+    ],
+    "namespace": "TauCetiRoadmap.PainleveEquationsAndFunctions",
+    "complete_roadmap_encoding": false,
+    "all_theorem_proofs_completed": false
+  },
+  "completed_checks": [
+    {
+      "check": "Mathlib cache preparation",
+      "command": "lake exe cache get",
+      "exit_code": 0,
+      "verified_files": 9111,
+      "log": "cache-get-retry.log",
+      "meaning": "Pinned Mathlib cache artifacts were downloaded and decompressed; this is dependency preparation, not a proof check."
+    },
+    {
+      "check": "Painleve prototype target build",
+      "command": "lake build TauCetiRoadmap.PainleveEquationsAndFunctions.Suggested",
+      "exit_code": 0,
+      "jobs": 7510,
+      "intentional_sorry_warnings": 4,
+      "log": "painleve-target-build-final.log",
+      "source_scope": "The representative signature revision before the final explicit manifold and finite-dimensional hypothesis refinements. The exact final source is covered by the separate elaboration check."
+    },
+    {
+      "check": "Exact final-source elaboration",
+      "command": "lake env lean TauCetiRoadmap/PainleveEquationsAndFunctions/Suggested.lean",
+      "exit_code": 0,
+      "source_sha256": "4cc1bfedac907a532f6e472c0931636d20d2c52c370cda4e29d4bea21bd0d011",
+      "intentional_sorry_warnings": 4,
+      "log": "painleve-final-source-elaboration.log",
+      "meaning": "All final declarations elaborate at the pinned native interfaces; the four admitted theorem proofs remain open."
+    }
+  ],
+  "whole_repository_build": {
+    "command": "lake build",
+    "status": "intentionally_interrupted_at_user_request",
+    "execution_session_exit_code": 130,
+    "pending_gate": false,
+    "completed_successfully": null,
+    "log": "lake-build-submission-bounded.log",
+    "reason": "The user explicitly withdrew the whole-repository local-build requirement. The completed scoped checks above are the requested verification; the repository CI requirement is unchanged.",
+    "no_full_build_success_claim": true,
+    "no_lean_type_error_diagnosed_in_final_bounded_attempt": true,
+    "maximum_observed_active_compiler_processes": 2,
+    "processes_stopped": true,
+    "compiler_slot_locks_free_after_stop": 2,
+    "required_local_gate_for_this_revision": false,
+    "repository_ci_requirement_unchanged": true
+  },
+  "historical_attempts": [
+    {
+      "logs": [
+        "cache-get.log"
+      ],
+      "exit_codes": [
+        1
+      ],
+      "outcome": "A transient GitHub CONNECT 403 interrupted initial dependency preparation; the recorded cache retry subsequently exited 0."
+    },
+    {
+      "logs": [
+        "tauceti-cache-mappings.log",
+        "tauceti-cache-ancestor-mappings.log"
+      ],
+      "exit_codes": [
+        1,
+        0
+      ],
+      "outcome": "The exact TauCeti pin had no published map; the official ancestor lookup found the mapping listed above. The source checkout stayed at the manifest pin; Lake validated content hashes."
+    },
+    {
+      "logs": [
+        "tauceti-cache-artifacts.log",
+        "tauceti-cache-throttled.log"
+      ],
+      "exit_codes": [
+        1,
+        130
+      ],
+      "outcome": "Public cache HTTP 429 responses interrupted bulk retrieval. Successful verified artifacts were retained; request starts were subsequently globally limited to eight per second. No build success was inferred."
+    },
+    {
+      "logs": [
+        "lake-build-first.log",
+        "lake-build-final.log",
+        "tauceti-cache-rate-bounded.log"
+      ],
+      "exit_codes": [
+        130,
+        130,
+        130
+      ],
+      "outcome": "These preparation or full-build attempts were deliberately interrupted while changing cache preparation and prioritizing the prototype target. None is a completed full build."
+    },
+    {
+      "logs": [
+        "painleve-target-build.log"
+      ],
+      "exit_codes": [
+        1
+      ],
+      "outcome": "An infinity-notation mismatch was corrected to OnePoint.infty before the successful target build."
+    },
+    {
+      "logs": [
+        "lake-build-submission.log"
+      ],
+      "exit_codes": [
+        130
+      ],
+      "observed_child_compiler_exit_code": 137,
+      "outcome": "Co-located Lake ignored LEAN_SYSROOT until LAKE_OVERRIDE_LEAN=true was set. Several unrelated compiler processes exited 137; the attempt was interrupted and rerun with a verified two-process cap. No Lean source error or full-build success was inferred."
+    },
+    {
+      "logs": [
+        "roadmap-cache-mappings.log"
+      ],
+      "exit_codes": [
+        1
+      ],
+      "outcome": "No published cache map was found for the unchanged upstream roadmap package. No artifact or build success was inferred."
+    }
+  ],
+  "resource_controls": {
+    "scope": "Task-local runtime only; repository configuration and original toolchain executable bytes were unchanged.",
+    "lake_override": "LAKE_OVERRIDE_LEAN=true",
+    "maximum_compiler_processes": 2,
+    "worker_threads_per_compiler": 4,
+    "aggregate_cache_request_starts_per_second": 8
+  },
+  "proof_boundary": [
+    "Compilation checks types and interfaces, not the correctness of admitted theorem statements.",
+    "The N1.4 signature is an autonomous C1 specialization and does not discharge the continuous-time, locally uniformly Lipschitz path-lifting target.",
+    "Moduli, Riemann-Hilbert, symplectic, confluence and Painleve realization targets are not exhaustively encoded.",
+    "The README remains the definitive mathematical specification."
+  ],
+  "raw_evidence": {
+    "note": "Full raw logs and detailed execution receipts are retained in the author-side workspace, not included in the submission. These fingerprints identify the principal logs.",
+    "sha256": {
+      "cache-get-retry.log": "07cd39891da44dc8522097ae28049e87e071ab14a3a42f11e89e48889f15c24f",
+      "painleve-target-build-final.log": "694f3bc654c5f9d777e3228dbe5ed4d88c90fbbc926389554ebae926fa9feb18",
+      "painleve-final-source-elaboration.log": "2cabdffb0ecb03ef168a16003b8b4c45584e3ad14eaa8653647a84fd3f9a1fa2",
+      "lake-build-submission-bounded.log": "5fec7d541aaa00668376feb841d9ec05c1fe6230bfb34a69873d1e8c56549c3a"
+    }
+  }
+}

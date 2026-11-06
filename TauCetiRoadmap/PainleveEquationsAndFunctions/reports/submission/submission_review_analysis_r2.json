@@ -1,0 +1,252 @@
+{
+  "schema": "tauceti-roadmap/independent-review-v1",
+  "review_id": "submission_review_analysis_r2",
+  "role": "independent analytic/algebraic and cross-geometry reviewer; read-only core files",
+  "candidate": "R2",
+  "snapshot_sha256": {
+    "README.md": "ceca44f077f6dc934695cc7b483c9ba86669016af31074a4a0685d3725015cb8",
+    "README.ja.md": "f93a560661d3e4f59b4393aa4f2cb67cceafd4a446d20d275b9f86e50a1f6778",
+    "design/plan.json": "8dea4aa6ca519c76726c2cd8b783d3a5165bab1556a486a971ebe9197548bad6"
+  },
+  "upstream_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "verdict": "changes_required",
+  "blocking_findings": 2,
+  "new_mathematical_blockers": 0,
+  "scope": {
+    "targets": [
+      "A1.1",
+      "A1.2",
+      "A1.3",
+      "A1.4",
+      "A1.5",
+      "A1.6",
+      "A1.7",
+      "C1.1",
+      "C1.2",
+      "P7.1",
+      "P7.2",
+      "P7.3",
+      "P8.1",
+      "P8.2",
+      "P8.3",
+      "P8.4",
+      "P9.1",
+      "P9.2",
+      "P9.3",
+      "P9.4",
+      "P9.5",
+      "P10.1",
+      "P10.2",
+      "P10.3",
+      "P10.4",
+      "P11.1",
+      "P11.2",
+      "P11.3",
+      "P11.4"
+    ],
+    "additional_geometry": [
+      "M1.2",
+      "M2.1",
+      "M2.2",
+      "M2.3",
+      "GF01–GF13 cross-review"
+    ],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "content_boundary": "Review of statements, hypotheses, counterexamples, ownership and source scope; not completed theorem proofs."
+  },
+  "closures": [
+    {
+      "id": "AR1-01",
+      "status": "closed_in_R2",
+      "targets": [
+        "A1.6"
+      ],
+      "evidence": "The statement and UniformDeterminant supporting construction use compactness of the trace-norm image, pointwise continuity and a finite subcover. Holomorphy is owned via normal convergence of the exterior-power series. No quantitative bound is attributed to RandomMatrices §8.3."
+    },
+    {
+      "id": "AR1-02",
+      "status": "closed_in_R2",
+      "targets": [
+        "P8.3",
+        "P8.4"
+      ],
+      "evidence": "Every index-zero Fredholm chart obtains the local section det S from an equal-rank finite-dimensional stabilization, with d log(det S)=Tr(S⁻¹dS) and frame corrections. An infinite-dimensional integrable-kernel trace formula additionally requires a trace-norm holomorphic realization and τ=u det(I−K), including d log u. JMU/Hamiltonian comparisons retain the generic unramified nonresonant scope. The e^s I diagnostic is valid. Remaining Check4 terminology is recorded separately as AR2-02."
+    },
+    {
+      "id": "AR1-03",
+      "status": "closed_in_R2",
+      "targets": [
+        "M2.3"
+      ],
+      "evidence": "PicardObstructions explicitly restricts absolute H² vanishing to affine square-zero test bases with arbitrary quasi-coherent ideal. It distinguishes relative R^q p_* vanishing from absolute cohomology, uses affine-base Leray, and treats general test bases through descent. Restriction isomorphisms are retained in the H¹ torsor claim."
+    },
+    {
+      "id": "AR1-04",
+      "status": "closed_in_R2",
+      "targets": [
+        "C1.2"
+      ],
+      "evidence": "AnalyticCarrier names the nilpotent-preserving analytic foundational prefix of M1.2, owns local charts/gluing/base change, and excludes moduli/RH/Painlevé theorem input. The target-level M1.2 dependency is present and does not introduce an application-to-general dependency."
+    },
+    {
+      "id": "AR1-05",
+      "status": "closed_in_R2",
+      "targets": [
+        "P10.2"
+      ],
+      "evidence": "The weighted moment/tail reference is target:A1.4 in the English statement, Japanese statement and structured plan."
+    },
+    {
+      "id": "AR1-06",
+      "status": "closed_in_R2",
+      "targets": [
+        "G1.4",
+        "A references",
+        "C references"
+      ],
+      "evidence": "Additional-hypothesis curve/observer theorems are stated as proof obligations; optional wording and parent-file/consolidation/byte-provenance prose are removed from the normative manuscript. The Japanese temporal qualifiers identified in R1 are removed."
+    },
+    {
+      "id": "P7.3-time-direction-clarification",
+      "status": "closed_in_R2",
+      "targets": [
+        "P7.3"
+      ],
+      "evidence": "Both languages fix external parameters at α₀ and extend the nodal curve along the time base {α₀}×U. Extension in external-parameter directions requires a separately established nodal-curve locus. This agrees with ST04 Proposition 2.1(1)(a), rather than enlarging its conclusion to the full parameter space."
+    }
+  ],
+  "findings": [
+    {
+      "id": "AR2-01",
+      "severity": "minor",
+      "blocking": true,
+      "kind": "structured-data consistency",
+      "targets": [
+        "P8.3",
+        "G1.4"
+      ],
+      "title": "Use the existing diagnostic kind field for both newly added checks",
+      "finding": "tauDivisorAndVariationalComparisonCheckFredholmTrace and fivePointCompleteTransportCheckCurveDescent use role=\"scope diagnostic\", whereas the other 261 diagnostic records use kind. This creates an avoidable schema exception. Both mathematical counterexamples are valid.",
+      "replacement": "Replace role with kind in these two entries, retaining the value and statement. Check that every diagnostic record has a kind field."
+    },
+    {
+      "id": "AR2-02",
+      "severity": "minor",
+      "blocking": false,
+      "kind": "bilingual terminology consistency",
+      "targets": [
+        "P8.3"
+      ],
+      "title": "Align Check4 with the precise finite-dimensional logarithmic derivative construction",
+      "finding": "The English README and plan Check4 still say \"its Fredholm logarithmic derivative\". The Japanese check already says \"有限次元安定化による対数微分\", and the main theorem now makes exactly that construction. The surrounding mathematical scope is corrected, so this is a residual ambiguous label rather than a new counterexample.",
+      "replacement": "Use \"its finite-dimensional stabilization logarithmic derivative\" in the English README and plan test tauDivisorAndVariationalComparisonCheck4."
+    },
+    {
+      "id": "AR2-03",
+      "severity": "major",
+      "blocking": true,
+      "kind": "hypothesis placement and scope",
+      "targets": [
+        "P1.4",
+        "P2.4",
+        "P4.4",
+        "P9.3",
+        "P9.4",
+        "P9.5",
+        "P10.3",
+        "P11.3"
+      ],
+      "title": "Place the eight no-API target hypothesis blocks inside their own target sections",
+      "finding": "In both READMEs, the explicit hypothesis blocks for eight targets without an API list were inserted into the next target having an API list. The strings are globally preserved, so a global membership check misses the error; local target-section checks detect it. Reading the resulting text attributes these conditions to unrelated targets, notably P9.3–P9.5 to P10.1 and P10.3 to P10.4.",
+      "misplacement": {
+        "P1.4": "P2.1",
+        "P2.4": "P3.1",
+        "P4.4": "P5.1",
+        "P9.3": "P10.1",
+        "P9.4": "P10.1",
+        "P9.5": "P10.1",
+        "P10.3": "P10.4",
+        "P11.3": "P11.4"
+      },
+      "replacement": "Move each block to the owning target immediately after its target heading or before its own mathematical statement. Bound any insertion search by the next target heading. Validate exact English and available Japanese structured hypotheses inside their respective target sections, not merely anywhere in the document.",
+      "preservation": "No condition should be deleted or weakened; this correction only restores ownership and scope."
+    }
+  ],
+  "preservation_check": {
+    "original_targets": 77,
+    "candidate_targets": 78,
+    "missing_original_targets": [],
+    "added_targets": [
+      "A1.7"
+    ],
+    "original_api_names": 214,
+    "candidate_api_names": 217,
+    "missing_api_names": [],
+    "original_diagnostic_names": 257,
+    "candidate_diagnostic_names": 263,
+    "missing_diagnostic_names": [],
+    "limit": "Identifier preservation does not prove semantic equivalence or truth. Exact placement of hypotheses was also checked and produced AR2-03."
+  },
+  "positive_checks": [
+    "All six R1 analytic-review findings are substantively corrected in English, Japanese and the structured plan; the P7.3 source-scope clarification is present in both languages.",
+    "The 23 new Japanese hypotheses for A1.1–A1.6 and C1.1–C1.2 preserve the English assumptions, quantifiers and exclusions. P7–P11 hypothesis pairs have no new mathematical translation mismatch; the placement defect is separate.",
+    "The infinite-dimensional family T_s=e^s I is Fredholm but has a non-trace-class logarithmic derivative I ds; the finite-dimensional stabilization construction handles it without asserting an unavailable infinite-dimensional trace.",
+    "The generic complete flat connection q′=q/(2t) on ℂ××ℂ gives √t on the universal cover, with nontrivial deck action. Admissibility alone does not establish scalar descent. The added diagnostic correctly distinguishes these assertions.",
+    "A1.6 now uses compact-image continuity for compact-uniform determinant convergence, with owned normal-series estimates for holomorphy; it does not rely on an unstated supplier inequality.",
+    "The affine-local Picard argument retains arbitrary quasi-coherent square-zero ideals and nonreduced bases. The invalid inference from relative dimension to global H² vanishing over nonaffine bases has been removed.",
+    "C1.2 consumes shared analytic carriers without importing connection-moduli conclusions; its declared general dependency closure remains free of Part P/G application targets.",
+    "The P10.3 explicit sector bounds, sector angles, branch conventions, weighted arc orders and calibration phase remain unchanged from the reviewed correct specification. Those owned parametrix estimates are still proof obligations, not assumed completed results.",
+    "No additional false mathematical assertion or invalid counterexample was detected in the assigned reviewed passages. Geometry-specific fixed-dimension qualification is being handled by the independent geometry reviewer."
+  ],
+  "primary_sources_checked": [
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0DPJ",
+      "locator": "Lemma108.8.5, proof",
+      "purpose": "Affine square-zero tests and proper-relative-curve H² vanishing"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0DMD",
+      "locator": "§108.9, assumptions; Lemmas108.9.1–108.9.5",
+      "purpose": "Universal functions, Picard algebraic-space and smoothness scope; no general separatedness without added hypotheses"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/0D24",
+      "locator": "Lemmas99.11.3–99.11.4",
+      "purpose": "Relative Picard and marked-section rigidification"
+    },
+    {
+      "url": "https://arxiv.org/html/1412.5166v2",
+      "locator": "Theorem1.2/Theorem7.1 and Theorem1.3/Corollary7.5",
+      "purpose": "Independent check of relative proper direct images versus absolute proper coherent GAGA"
+    },
+    {
+      "url": "https://arxiv.org/html/1604.03082v4",
+      "locator": "Equations(1.25)–(1.28), (4.74)–(4.76)",
+      "purpose": "Generic PII source conditions, Hamiltonian sector expansions and calibration phase"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.17",
+      "locator": "5.17.1,5.17.3,5.17.7",
+      "purpose": "Barnes canonical product, recurrence and normalization"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1406.2535v2",
+      "locator": "(1.1), Theorem1.2 (1.10), §§2–3",
+      "purpose": "Barnes branch-normalized explicit sector remainder"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0201225",
+      "locator": "Proposition 2.1(1)(a), printed page 6; Remark 2.4, printed page 9",
+      "purpose": "Fixed-external-parameter time direction of nodal-curve extension in P7.3"
+    }
+  ],
+  "review_limits": [
+    "This closes the identified mathematical statement/scope defects, not the proofs of all roadmap targets.",
+    "No build outcome or topic-validator outcome is inferred from this mathematical review.",
+    "The placement check examines exact structured hypotheses where the Japanese field is available. The absence of structured Japanese hypothesis fields in some M/G records is not treated as absence of prose hypotheses.",
+    "R3 must check the exact three corrections and fresh hashes after parent integration. Separate geometry-review findings require their own closure."
+  ]
+}

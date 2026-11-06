@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-11-06",
+  "purpose": "Bounded contribution-workflow alignment check for the PainleveEquationsAndFunctions submission; no new mathematical review.",
+  "status": "merged_neighboring_pr_check_complete_zulip_topic_not_read",
+  "reviewer": "GPT-6 Astra Pro geometry/dependency subagent",
+  "normative_source": {
+    "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/CONTRIBUTING.md",
+    "local_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+    "sections": [
+      "Getting started",
+      "Opening a pull request",
+      "Who has the ball?",
+      "Resolving review conversations"
+    ]
+  },
+  "read_method": "Read-only GitHub connector metadata, complete returned discussion timelines and paginated changed-filename listings; local pinned CONTRIBUTING.md.",
+  "merged_pull_requests": [
+    {
+      "number": 953,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953",
+      "title": "Add complex and Kähler geometry roadmap",
+      "base": "main",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-10-19T19:44:23Z",
+      "merge_commit_sha": "e1e11cfe6ae2505dab06d18a4ff739dd7f7a1bfc",
+      "reviewed_public_head": "17de96c131cb4bba925c11191595b59dd39cde98",
+      "files": [
+        "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+        "TauCetiRoadmap/ComplexKahlerGeometry/Suggested.lean",
+        "TauCetiRoadmap/ComplexKahlerGeometry/metadata.toml"
+      ],
+      "discussion_entries": [
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6218419637",
+          "created_at": "2026-10-16T15:06:57Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6220251656",
+          "created_at": "2026-10-16T16:43:06Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6222639714",
+          "created_at": "2026-10-16T19:00:09Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6253040888",
+          "created_at": "2026-10-18T17:40:33Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6254097451",
+          "created_at": "2026-10-18T19:22:10Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#issuecomment-6258302454",
+          "created_at": "2026-10-19T02:22:53Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/953#pullrequestreview-5576660210",
+          "created_at": "2026-10-19T19:29:56Z",
+          "review_state": "APPROVED",
+          "body_was_nonempty": false
+        }
+      ],
+      "observations": [
+        "The review at 8b03be5 requested five substantive repairs: an accessible supplier contract, a missing existence construction, rank-generalizing assembly, a metric-convention adapter, and a corrected surface-theory supplier.",
+        "The follow-up at 13b2335e closed those five findings but kept a later ownership correction open. The author named the exact corrective commit; a subsequent APPROVED event preceded merge.",
+        "The description distinguishes written dependency contracts from implementation, and confines the suggested signatures to non-exhaustive targets with admissions. Historical proposed suppliers in this discussion are not treated as current-main dependencies."
+      ],
+      "relevance_to_draft": [
+        "Keep exact supplier sections and owned bridges, fixed-model/rank hypotheses and explicit comparison constructions.",
+        "Record closure against the actual corrected snapshot; a prior review pass does not close a later ownership defect.",
+        "Preserve the separation of roadmap specification, prototype compilation, mathematical proof and repository approval."
+      ]
+    },
+    {
+      "number": 881,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/881",
+      "title": "Roadmap: formal Laurent fields, Puiseux expansions and differential calculus",
+      "base": "main",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-10-14T09:01:01Z",
+      "merge_commit_sha": "7b79230b1b5b8e06c896ba99dae9a79c77ecf483",
+      "reviewed_public_head": "e3ec8eba29d9a7255a6adfc31f1462edf1220964",
+      "files": [
+        "TauCetiRoadmap/FormalLaurentPuiseux/README.md",
+        "TauCetiRoadmap/FormalLaurentPuiseux/Suggested.lean",
+        "TauCetiRoadmap/FormalLaurentPuiseux/metadata.toml"
+      ],
+      "discussion_entries": [
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/881#pullrequestreview-5513864486",
+          "created_at": "2026-10-14T06:24:42Z",
+          "review_state": "APPROVED",
+          "body_was_nonempty": false
+        }
+      ],
+      "observations": [
+        "The new roadmap changes precisely its README, Suggested.lean and metadata.toml under one directory and targets main.",
+        "The PR description names native carriers, the separate geometric owner, targeted build validation, and the authoring/review models.",
+        "Its only returned discussion entry is a bodyless APPROVED review. It gives no detailed reviewer reasoning to borrow."
+      ],
+      "relevance_to_draft": [
+        "Use a focused own-directory submission with explicit ownership boundaries and model attribution.",
+        "Describe the prototype as signature/API evidence; the future mathematical results remain requested work."
+      ]
+    },
+    {
+      "number": 1110,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1110",
+      "title": "SchemeAndStackFoundations: depth of Hom, isomorphisms across depth two, reflexive extension without integrality (§§0.6, 0.17)",
+      "base": "main",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-10-19T11:49:56Z",
+      "merge_commit_sha": "ec5a26751ea72719592d12967250d106490f1a25",
+      "reviewed_public_head": "e726e21ade11b8bc7dc6f067875376ca15612235",
+      "files": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "discussion_entries": [
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1110#issuecomment-6256297800",
+          "created_at": "2026-10-18T23:06:11Z",
+          "review_state": null,
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1110#pullrequestreview-5570642357",
+          "created_at": "2026-10-19T11:08:20Z",
+          "review_state": "COMMENTED",
+          "body_was_nonempty": true
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1110#pullrequestreview-5570928274",
+          "created_at": "2026-10-19T11:35:43Z",
+          "review_state": "APPROVED",
+          "body_was_nonempty": false
+        }
+      ],
+      "observations": [
+        "This is a merged README-only extension to an existing neighboring roadmap, not a third new-area proposal.",
+        "The mathematical review checks the extra proof route supporting a genuinely wider non-integral theorem; it does not accept removing a source hypothesis without an argument.",
+        "The textual APPROVE verdict was submitted as COMMENTED; a later, distinct APPROVED event preceded merge. A coordination comment explicitly reports inability to set awaiting-review."
+      ],
+      "relevance_to_draft": [
+        "Any extension beyond cited source scope needs an owned supporting construction or explicit proof route.",
+        "Our internal AI verdict is not a repository approval event or independent human endorsement.",
+        "State a label-permission limitation if it actually applies when a PR is opened; no label or message was sent in this check."
+      ]
+    }
+  ],
+  "official_zulip": {
+    "required_topic": "https://leanprover.zulipchat.com/#narrow/channel/610393-Tau-Ceti/topic/Getting.20started.3A.20roadmaps/with/614905192",
+    "read": false,
+    "attempts": [
+      {
+        "method": "Web open of official topic",
+        "result": "Returned only unsupported-browser / error-loading shell, with no discussion text."
+      },
+      {
+        "url": "https://leanprover-community.github.io/archive/stream/610393-Tau-Ceti/topic/Getting.20started.3A.20roadmaps.html",
+        "method": "Public archive retrieval",
+        "result": "HTTP 404."
+      },
+      {
+        "method": "Unauthenticated official /api/v1/messages read for the exact channel/topic and anchor",
+        "result": "HTTP 401 Unauthorized."
+      }
+    ],
+    "limitation": "The required Zulip discussion remains unread in this environment. No contents are inferred from the repository checklist or search snippets; complete CONTRIBUTING reading compliance is not claimed.",
+    "next_step": "The submitting human should read the linked topic before publication, or supply accessible text for a final check."
+  },
+  "normative_conventions": [
+    {
+      "rule": "Target main; touch only the new area's own directory and include metadata.toml.",
+      "source_section": "Opening a pull request",
+      "application": "The submission must retain the PainleveEquationsAndFunctions-only diff; generated root listings and infrastructure remain outside it."
+    },
+    {
+      "rule": "Apply awaiting-review; labels are manual and a push does not move them.",
+      "source_section": "Opening a pull request / Who has the ball?",
+      "application": "If a PR is opened, set the label or accurately state a real permission limitation. This report performs neither action."
+    },
+    {
+      "rule": "Attribute actual AI models and ensure the submitting person reads the manuscript; identify subject expertise honestly.",
+      "source_section": "Getting started",
+      "application": "PR prose must distinguish AI self-review from external human or subject-expert review. No human approval or expert commitment is inferred here."
+    },
+    {
+      "rule": "A roadmap-reviewers approval plus successful build triggers merge.",
+      "source_section": "Opening a pull request",
+      "application": "Internal R3 pass, content-preservation checks and local builds are evidence for review, not merge authorization or formal approval."
+    },
+    {
+      "rule": "Reply to each review thread and preserve unresolved uncertainty; return to awaiting-review after the response round is complete.",
+      "source_section": "Resolving review conversations",
+      "application": "The existing R1–R3 closure records support an honest response history, but are not external review threads."
+    }
+  ],
+  "frozen_core_mutated": false,
+  "external_mutations": [],
+  "limits": [
+    "The three examples comprise two new neighboring roadmaps and one neighboring foundation extension.",
+    "This is a bounded workflow inspection, not a fresh mathematical review of the three merged roadmaps.",
+    "Recorded merge status and review events concern those PRs only; they imply no acceptance of the Painleve draft.",
+    "Build claims in historical PR descriptions were read as author reports; their CI runs were not independently rerun or exhaustively audited.",
+    "Historical supplier links in #953 are not substituted for the separate audit against the actual pinned upstream main."
+  ]
+}

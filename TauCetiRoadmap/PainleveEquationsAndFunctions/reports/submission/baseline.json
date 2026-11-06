@@ -1,0 +1,8 @@
+{
+  "source_repository": "yuma-mizuno/TauCetiRoadmap",
+  "source_commit": "2a9b41c1ff22ec73612cb2b7c84b4711f0423d8f",
+  "upstream_repository": "TauCetiProject/TauCetiRoadmap",
+  "upstream_branch": "main",
+  "base_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "submission_branch": "codex/painleve-roadmap-submission"
+}

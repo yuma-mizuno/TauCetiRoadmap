@@ -1,0 +1,70 @@
+{
+  "schema": "painleve-independent-mathematical-review-v1",
+  "round": "R3",
+  "reviewer": "submission_geometry_dependencies",
+  "verdict": "pass",
+  "blocking_findings": 0,
+  "remaining_findings": [],
+  "snapshot_sha256": {
+    "README.md": "81c15816b186b118f470059d020987aef9f7959fc5c5c86e0be623a96f312ba1",
+    "README.ja.md": "e10c2a2b107f005b17727c93a07ff0c438d769805a34e54649ae13b23394a046",
+    "design/plan.json": "dfb8c5e9f0aa3abf5dbebf5934a9c9cda302627445661d00d1b8c4963470f524"
+  },
+  "review_scope": "Limited exact-fix closure on the frozen R3 snapshot, building on the50-target R1/R2 mathematical review; no repeated whole-source audit.",
+  "closures": [
+    {
+      "id": "GR2-01",
+      "status": "closed",
+      "evidence": "M1.2.GF03 in the structured plan and both language documents now states a fixed complex dimension n and native model ℂⁿ; mixed dimensions are treated separately on open-and-closed dimension loci. It retains Hausdorffness and second countability and verifies dimension/topological hypotheses for every N/M manifold object. The broader analytic-space carrier, nilpotents and singular Betti targets are retained."
+    },
+    {
+      "id": "GR1-02",
+      "status": "fully_closed_in_R3",
+      "evidence": "R2 supplied separation/countability; R3 supplies fixed-model dimension and componentwise comparison. The doubled-origin, uncountable-disjoint-union and mixed-dimension counterexamples no longer meet the manifold-comparison hypotheses."
+    }
+  ],
+  "r1_findings_status": {
+    "GR1-01": "closed",
+    "GR1-02": "closed",
+    "GR1-03": "closed",
+    "GR1-04": "closed",
+    "GR1-05": "closed",
+    "GR1-06": "closed",
+    "GR1-07": "closed",
+    "GR1-08": "closed",
+    "GR1-09": "closed",
+    "GR1-10": "closed"
+  },
+  "regression_checks": {
+    "hypotheses_in_own_target_sections": {
+      "README.md": {
+        "P1.4": true,
+        "P2.4": true,
+        "P4.4": true,
+        "P9.3": true,
+        "P9.4": true,
+        "P9.5": true,
+        "P10.3": true,
+        "P11.3": true
+      },
+      "README.ja.md": {
+        "P1.4": true,
+        "P2.4": true,
+        "P4.4": true,
+        "P9.3": true,
+        "P9.4": true,
+        "P9.5": true,
+        "P10.3": true,
+        "P11.3": true
+      }
+    },
+    "new_diagnostics_use_kind": true,
+    "P8_3_finite_dimensional_label": true,
+    "reviewed_target_count": 50,
+    "all_reviewed_targets_retained": true,
+    "target_headings_each_language": 78,
+    "plan_target_count": 78
+  },
+  "mathematical_assessment": "The fixed-dimension/componentwise repair is mathematically appropriate and preserves all intended N/M uses. The affected English and Japanese statements agree. The checked hypothesis moves preserve their conditions and restore local ownership; diagnostic schema/terminology changes do not change the counterexamples. No regression or new mathematical blocker was found in the changed blocks.",
+  "review_limit": "Pass means all findings from this independent specification, source-scope and dependency review are resolved in the identified snapshot. It does not prove the roadmap theorems or substitute for human specialist review, and it does not infer a Lean build result from manuscript checks."
+}

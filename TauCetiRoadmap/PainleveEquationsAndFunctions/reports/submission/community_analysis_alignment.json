@@ -1,0 +1,149 @@
+{
+  "schema": "painleve-analysis-community-design-check-v1",
+  "date": "2026-11-06",
+  "purpose": "Read-only API/name collision check. Native pinned library remains the implementation authority. No upstream wait or contribution request was sent.",
+  "searches": [
+    {
+      "key": "barnes",
+      "url": "https://api.github.com/search/issues?q=repo%3Aleanprover-community%2Fmathlib4%20is%3Apr%20Barnes%20in%3Atitle%2Cbody&per_page=20",
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": []
+    },
+    {
+      "key": "holomorphic_determinant",
+      "url": "https://api.github.com/search/issues?q=repo%3Aleanprover-community%2Fmathlib4%20is%3Apr%20%22determinant%20line%22%20in%3Atitle%2Cbody&per_page=20",
+      "total_count": 3,
+      "incomplete_results": false,
+      "items": [
+        {
+          "number": 45021,
+          "title": "[Merged by Bors] - fix(Tactic/Echelon): improve Zsqrtd model to return integer numerals when possible",
+          "url": "https://github.com/leanprover-community/mathlib4/pull/45021",
+          "state": "closed"
+        },
+        {
+          "number": 42058,
+          "title": "[Merged by Bors] - refactor(Tactic/Determinant/Bird): move norm_det simproc to Tactic/NormDet",
+          "url": "https://github.com/leanprover-community/mathlib4/pull/42058",
+          "state": "closed"
+        },
+        {
+          "number": 42059,
+          "title": "[Merged by Bors] - feat(Tactic/NormDet): change norm_det simproc to work with Matrix.det",
+          "url": "https://github.com/leanprover-community/mathlib4/pull/42059",
+          "state": "closed"
+        }
+      ]
+    },
+    {
+      "key": "fredholm_determinant",
+      "url": "https://api.github.com/search/issues?q=repo%3Aleanprover-community%2Fmathlib4%20is%3Apr%20%22Fredholm%20determinant%22%20in%3Atitle%2Cbody&per_page=20",
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": []
+    },
+    {
+      "key": "holo_fredholm",
+      "url": "https://api.github.com/search/issues?q=repo%3Aleanprover-community%2Fmathlib4%20is%3Apr%20holomorphic%20Fredholm&per_page=20",
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": []
+    }
+  ],
+  "prs": [
+    {
+      "number": 39274,
+      "url": "https://github.com/leanprover-community/mathlib4/pull/39274",
+      "title": "WIP: Fredholm operators",
+      "state": "open",
+      "merged": false,
+      "head_sha": "41c7c692f6ce95e8d4297ebeee344119e2bdd382",
+      "files": [
+        "Mathlib.lean",
+        "Mathlib/Algebra/Module/LinearMap/FiniteRange.lean",
+        "Mathlib/Analysis/Normed/Operator/Perturbation/StrictByFinite.lean",
+        "Mathlib/Data/Setoid/Basic.lean",
+        "Mathlib/Topology/Algebra/Module/FredholmOperators.lean"
+      ]
+    },
+    {
+      "number": 41858,
+      "url": "https://github.com/leanprover-community/mathlib4/pull/41858",
+      "title": "feat: a properness criterion for upper semi Fredholm operators",
+      "state": "open",
+      "merged": false,
+      "head_sha": "54ccf7abdc5541373aba13e7ca533675548d131c",
+      "files": [
+        "Mathlib/Analysis/Normed/Operator/Fredholm/ProperUpperSemiFredholm.lean"
+      ]
+    },
+    {
+      "number": 42865,
+      "url": "https://github.com/leanprover-community/mathlib4/pull/42865",
+      "title": "refactor: change definition of operator norm to depend only on modules over semirings",
+      "state": "open",
+      "merged": false,
+      "head_sha": "b6f864012ab09393653769f08f4ba4bb8fc5d6e2",
+      "files": [
+        "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean",
+        "Mathlib/Analysis/Normed/Operator/Basic.lean",
+        "Mathlib/Geometry/Manifold/Riemannian/Basic.lean"
+      ]
+    },
+    {
+      "number": 45441,
+      "url": "https://github.com/leanprover-community/mathlib4/pull/45441",
+      "title": "feat(Analysis/Normed/Operator/Compact): preserve compact remainders under one-sided inverses",
+      "state": "open",
+      "merged": false,
+      "head_sha": "1ee580a69a2cdb9c2ee4059b934a855b396e9f56",
+      "files": null
+    }
+  ],
+  "findings": [
+    {
+      "topic": "Barnes G",
+      "finding": "No Barnes G implementation or directly relevant PR was found by the listed repository issue-title/body search, current indexed public discussion search, or pinned native source inspection. This is a limited negative search result, not a proof that no private, unindexed or differently named work exists.",
+      "decision": "Independent target A1.7 on existing Complex.Gamma and analytic carriers; keep new Barnes APIs additive."
+    },
+    {
+      "topic": "Holomorphic Fredholm determinant lines",
+      "finding": "No holomorphic determinant-line implementation was found by these specific searches. The determinant-line phrase query returned three unrelated determinant tactic PRs. Pinned Tau Ceti already provides pointwise scalar-generic determinant lines and stabilization; A1.1 must consume those.",
+      "decision": "Use ContinuousLinearMap.IsFredholm, FredholmPackage, TauCeti.detLine, LinearMap.detLine, detLineCongr and native stabilization. Own the holomorphic bundle/section comparisons."
+    },
+    {
+      "topic": "PR39274",
+      "finding": "Open WIP Fredholm branch uses exploratory IsFredholmStruct/IsFredholmQuot and FredholmDecomposition declarations, and its examined source includes sorry placeholders. It does not supply holomorphic determinant lines.",
+      "decision": "Do not replace the pinned accepted ContinuousLinearMap.IsFredholm API by WIP names or wait for this branch."
+    },
+    {
+      "topic": "PR41858",
+      "finding": "Open WIP properness criterion for upper semi-Fredholm operators; no determinant line or canonical holomorphic section.",
+      "decision": "No added dependency; existing pinned Fredholm/stabilization carriers suffice for A1.1."
+    },
+    {
+      "topic": "PR42865",
+      "finding": "Open operator-norm carrier generalization to semiring modules, motivated by nonarchimedean work. Its scope is not a complex trace-class or holomorphic determinant package.",
+      "decision": "Maintain standard native bounded-operator carriers and do not clone operator norm; no new dependency."
+    },
+    {
+      "topic": "PR45441",
+      "finding": "Open one-sided-inverse compact remainder lemmas IsCompactOperator.sub_id_of_rightInverse and sub_id_of_leftInverse. It is adjacent operator infrastructure, not a determinant-line construction.",
+      "decision": "No dependency on an unmerged result is required by the current target."
+    },
+    {
+      "topic": "Zulip",
+      "finding": "The public topic 'compact operators and Fredholm determinant' distinguishes nonarchimedean needs from classical complex Fredholm/spectral work. Bhavik Mehta reports existing work with Thomas Browning on complex compact operators and Fredholm alternative/spectral results; no Barnes or holomorphic determinant-family construction is supplied by that topic.",
+      "decision": "Keep the complex and nonarchimedean determinant scopes separate; do not consume the existing nonarchimedean fredholmDet carrier as a complex determinant."
+    }
+  ],
+  "discussion": {
+    "url": "https://leanprover-community.github.io/archive/stream/217875-Is-there-code-for-X%3F/topic/compact.20operators.20and.20Fredholm.20determinant.html",
+    "messages_date": "2026-02-09",
+    "archive_updated": "2026-02-28",
+    "web_ref": "turn215view0"
+  },
+  "negative_search_limits": "GitHub lexical issue/PR searches cover indexed text; general search engines produced some irrelevant relaxed matches. No exhaustive code-host or authenticated Zulip database audit is claimed. Direct native source at the project pins resolves actual availability."
+}

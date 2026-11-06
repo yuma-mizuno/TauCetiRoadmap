@@ -1,0 +1,1729 @@
+{
+  "roadmap": "PainleveEquationsAndFunctions",
+  "nodes": [
+    {
+      "id": "N1.1",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.2",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.3",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.4",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.5",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.6",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.7",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.8",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "N1.9",
+      "part": "N",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M1.1",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M1.2",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M2.1",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M2.2",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M2.3",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M2.4",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M3.1",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M3.2",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M3.3",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M3.4",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M4.1",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "M4.2",
+      "part": "M",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.1",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.2",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.3",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.4",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.5",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.6",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "A1.7",
+      "part": "A",
+      "scope_role": "framework"
+    },
+    {
+      "id": "C1.1",
+      "part": "C",
+      "scope_role": "framework"
+    },
+    {
+      "id": "C1.2",
+      "part": "C",
+      "scope_role": "framework"
+    },
+    {
+      "id": "P1.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P1.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P1.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P1.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P2.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P2.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P2.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P2.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P3.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P3.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P3.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P3.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P4.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P4.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P4.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P4.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P5.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P5.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P5.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P5.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P5.5",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P6.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P6.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P6.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P7.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P7.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P7.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P8.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P8.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P8.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P8.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P9.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P9.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P9.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P9.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P9.5",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P10.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P10.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P10.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P10.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P11.1",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P11.2",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P11.3",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "P11.4",
+      "part": "P",
+      "scope_role": "application"
+    },
+    {
+      "id": "G1.1",
+      "part": "G",
+      "scope_role": "application"
+    },
+    {
+      "id": "G1.2",
+      "part": "G",
+      "scope_role": "application"
+    },
+    {
+      "id": "G1.3",
+      "part": "G",
+      "scope_role": "application"
+    },
+    {
+      "id": "G1.4",
+      "part": "G",
+      "scope_role": "application"
+    }
+  ],
+  "edges": [
+    {
+      "from": "N1.2",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.3",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.3",
+      "to": "N1.2"
+    },
+    {
+      "from": "N1.4",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.4",
+      "to": "N1.2"
+    },
+    {
+      "from": "N1.5",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.5",
+      "to": "N1.2"
+    },
+    {
+      "from": "N1.5",
+      "to": "N1.3"
+    },
+    {
+      "from": "N1.6",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.6",
+      "to": "N1.2"
+    },
+    {
+      "from": "N1.7",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.8",
+      "to": "N1.1"
+    },
+    {
+      "from": "N1.9",
+      "to": "N1.2"
+    },
+    {
+      "from": "M1.2",
+      "to": "M1.1"
+    },
+    {
+      "from": "M2.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "M2.1",
+      "to": "M1.2"
+    },
+    {
+      "from": "M2.2",
+      "to": "M2.1"
+    },
+    {
+      "from": "M2.3",
+      "to": "M2.1"
+    },
+    {
+      "from": "M2.3",
+      "to": "M2.2"
+    },
+    {
+      "from": "M2.4",
+      "to": "M2.1"
+    },
+    {
+      "from": "M2.4",
+      "to": "M2.2"
+    },
+    {
+      "from": "M2.4",
+      "to": "M2.3"
+    },
+    {
+      "from": "M3.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "M3.1",
+      "to": "M1.2"
+    },
+    {
+      "from": "M3.1",
+      "to": "M2.1"
+    },
+    {
+      "from": "M3.1",
+      "to": "M2.2"
+    },
+    {
+      "from": "M3.1",
+      "to": "M2.3"
+    },
+    {
+      "from": "M3.1",
+      "to": "N1.1"
+    },
+    {
+      "from": "M3.2",
+      "to": "M2.2"
+    },
+    {
+      "from": "M3.2",
+      "to": "M2.4"
+    },
+    {
+      "from": "M3.2",
+      "to": "M3.1"
+    },
+    {
+      "from": "M3.2",
+      "to": "N1.6"
+    },
+    {
+      "from": "M3.3",
+      "to": "M1.1"
+    },
+    {
+      "from": "M3.3",
+      "to": "M1.2"
+    },
+    {
+      "from": "M3.3",
+      "to": "M2.1"
+    },
+    {
+      "from": "M3.3",
+      "to": "M2.2"
+    },
+    {
+      "from": "M3.3",
+      "to": "M2.4"
+    },
+    {
+      "from": "M3.3",
+      "to": "M3.1"
+    },
+    {
+      "from": "M3.3",
+      "to": "M3.2"
+    },
+    {
+      "from": "M3.3",
+      "to": "N1.1"
+    },
+    {
+      "from": "M3.4",
+      "to": "M1.1"
+    },
+    {
+      "from": "M3.4",
+      "to": "M1.2"
+    },
+    {
+      "from": "M3.4",
+      "to": "M2.1"
+    },
+    {
+      "from": "M3.4",
+      "to": "M2.2"
+    },
+    {
+      "from": "M3.4",
+      "to": "M2.3"
+    },
+    {
+      "from": "M3.4",
+      "to": "M2.4"
+    },
+    {
+      "from": "M3.4",
+      "to": "M3.1"
+    },
+    {
+      "from": "M3.4",
+      "to": "M3.2"
+    },
+    {
+      "from": "M3.4",
+      "to": "M3.3"
+    },
+    {
+      "from": "M3.4",
+      "to": "N1.1"
+    },
+    {
+      "from": "M3.4",
+      "to": "N1.6"
+    },
+    {
+      "from": "M4.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "M4.1",
+      "to": "M1.2"
+    },
+    {
+      "from": "M4.1",
+      "to": "M2.1"
+    },
+    {
+      "from": "M4.1",
+      "to": "M3.1"
+    },
+    {
+      "from": "M4.1",
+      "to": "M3.2"
+    },
+    {
+      "from": "M4.1",
+      "to": "M3.3"
+    },
+    {
+      "from": "M4.1",
+      "to": "M3.4"
+    },
+    {
+      "from": "M4.1",
+      "to": "N1.3"
+    },
+    {
+      "from": "M4.2",
+      "to": "M1.1"
+    },
+    {
+      "from": "M4.2",
+      "to": "M1.2"
+    },
+    {
+      "from": "M4.2",
+      "to": "M2.1"
+    },
+    {
+      "from": "M4.2",
+      "to": "M2.3"
+    },
+    {
+      "from": "M4.2",
+      "to": "M3.3"
+    },
+    {
+      "from": "M4.2",
+      "to": "M3.4"
+    },
+    {
+      "from": "M4.2",
+      "to": "M4.1"
+    },
+    {
+      "from": "A1.3",
+      "to": "A1.2"
+    },
+    {
+      "from": "A1.4",
+      "to": "A1.3"
+    },
+    {
+      "from": "C1.2",
+      "to": "M1.2"
+    },
+    {
+      "from": "P1.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "P1.2",
+      "to": "P1.1"
+    },
+    {
+      "from": "P1.2",
+      "to": "M1.2"
+    },
+    {
+      "from": "P1.3",
+      "to": "P1.1"
+    },
+    {
+      "from": "P1.3",
+      "to": "P1.2"
+    },
+    {
+      "from": "P1.4",
+      "to": "P1.1"
+    },
+    {
+      "from": "P1.4",
+      "to": "P1.2"
+    },
+    {
+      "from": "P1.4",
+      "to": "P1.3"
+    },
+    {
+      "from": "P2.1",
+      "to": "P1.3"
+    },
+    {
+      "from": "P2.1",
+      "to": "M2.1"
+    },
+    {
+      "from": "P2.2",
+      "to": "P2.1"
+    },
+    {
+      "from": "P2.2",
+      "to": "M2.2"
+    },
+    {
+      "from": "P2.3",
+      "to": "P1.3"
+    },
+    {
+      "from": "P2.3",
+      "to": "P2.1"
+    },
+    {
+      "from": "P2.3",
+      "to": "P2.2"
+    },
+    {
+      "from": "P2.3",
+      "to": "M2.3"
+    },
+    {
+      "from": "P2.3",
+      "to": "M2.4"
+    },
+    {
+      "from": "P2.4",
+      "to": "P1.1"
+    },
+    {
+      "from": "P2.4",
+      "to": "P2.1"
+    },
+    {
+      "from": "P2.4",
+      "to": "P2.2"
+    },
+    {
+      "from": "P2.4",
+      "to": "P2.3"
+    },
+    {
+      "from": "P3.1",
+      "to": "P1.2"
+    },
+    {
+      "from": "P3.1",
+      "to": "P2.1"
+    },
+    {
+      "from": "P3.1",
+      "to": "P2.2"
+    },
+    {
+      "from": "P3.1",
+      "to": "P2.3"
+    },
+    {
+      "from": "P3.1",
+      "to": "M3.1"
+    },
+    {
+      "from": "P3.1",
+      "to": "N1.1"
+    },
+    {
+      "from": "P3.2",
+      "to": "P3.1"
+    },
+    {
+      "from": "P3.2",
+      "to": "M3.2"
+    },
+    {
+      "from": "P3.3",
+      "to": "P2.3"
+    },
+    {
+      "from": "P3.3",
+      "to": "P3.1"
+    },
+    {
+      "from": "P3.3",
+      "to": "P3.2"
+    },
+    {
+      "from": "P3.3",
+      "to": "M3.2"
+    },
+    {
+      "from": "P3.3",
+      "to": "N1.6"
+    },
+    {
+      "from": "P3.4",
+      "to": "P1.1"
+    },
+    {
+      "from": "P3.4",
+      "to": "P1.2"
+    },
+    {
+      "from": "P3.4",
+      "to": "P2.1"
+    },
+    {
+      "from": "P3.4",
+      "to": "P3.1"
+    },
+    {
+      "from": "P3.4",
+      "to": "P3.2"
+    },
+    {
+      "from": "P3.4",
+      "to": "P3.3"
+    },
+    {
+      "from": "P3.4",
+      "to": "M3.3"
+    },
+    {
+      "from": "P3.4",
+      "to": "M3.4"
+    },
+    {
+      "from": "P4.1",
+      "to": "P1.1"
+    },
+    {
+      "from": "P4.1",
+      "to": "P1.2"
+    },
+    {
+      "from": "P4.1",
+      "to": "P3.1"
+    },
+    {
+      "from": "P4.1",
+      "to": "P3.2"
+    },
+    {
+      "from": "P4.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "P4.2",
+      "to": "P1.2"
+    },
+    {
+      "from": "P4.2",
+      "to": "P4.1"
+    },
+    {
+      "from": "P4.2",
+      "to": "M2.1"
+    },
+    {
+      "from": "P4.2",
+      "to": "M1.2"
+    },
+    {
+      "from": "P4.2",
+      "to": "M4.1"
+    },
+    {
+      "from": "P4.3",
+      "to": "P2.1"
+    },
+    {
+      "from": "P4.3",
+      "to": "P2.4"
+    },
+    {
+      "from": "P4.3",
+      "to": "P3.1"
+    },
+    {
+      "from": "P4.3",
+      "to": "P3.2"
+    },
+    {
+      "from": "P4.3",
+      "to": "P4.1"
+    },
+    {
+      "from": "P4.3",
+      "to": "P4.2"
+    },
+    {
+      "from": "P4.3",
+      "to": "M1.2"
+    },
+    {
+      "from": "P4.3",
+      "to": "M4.1"
+    },
+    {
+      "from": "P4.4",
+      "to": "P2.1"
+    },
+    {
+      "from": "P4.4",
+      "to": "P2.2"
+    },
+    {
+      "from": "P4.4",
+      "to": "P2.3"
+    },
+    {
+      "from": "P4.4",
+      "to": "P2.4"
+    },
+    {
+      "from": "P4.4",
+      "to": "P4.1"
+    },
+    {
+      "from": "P4.4",
+      "to": "P4.2"
+    },
+    {
+      "from": "P4.4",
+      "to": "P4.3"
+    },
+    {
+      "from": "P4.4",
+      "to": "M2.1"
+    },
+    {
+      "from": "P4.4",
+      "to": "M4.2"
+    },
+    {
+      "from": "P5.1",
+      "to": "P3.1"
+    },
+    {
+      "from": "P5.1",
+      "to": "P3.2"
+    },
+    {
+      "from": "P5.1",
+      "to": "N1.3"
+    },
+    {
+      "from": "P5.2",
+      "to": "P4.2"
+    },
+    {
+      "from": "P5.2",
+      "to": "P4.3"
+    },
+    {
+      "from": "P5.2",
+      "to": "P4.4"
+    },
+    {
+      "from": "P5.2",
+      "to": "P5.1"
+    },
+    {
+      "from": "P5.2",
+      "to": "N1.4"
+    },
+    {
+      "from": "P5.3",
+      "to": "P3.2"
+    },
+    {
+      "from": "P5.3",
+      "to": "P3.3"
+    },
+    {
+      "from": "P5.3",
+      "to": "P5.2"
+    },
+    {
+      "from": "P5.3",
+      "to": "N1.5"
+    },
+    {
+      "from": "P5.3",
+      "to": "N1.6"
+    },
+    {
+      "from": "P5.4",
+      "to": "P5.1"
+    },
+    {
+      "from": "P5.4",
+      "to": "P5.3"
+    },
+    {
+      "from": "P5.4",
+      "to": "N1.7"
+    },
+    {
+      "from": "P5.5",
+      "to": "P1.4"
+    },
+    {
+      "from": "P5.5",
+      "to": "P5.3"
+    },
+    {
+      "from": "P5.5",
+      "to": "P5.4"
+    },
+    {
+      "from": "P5.5",
+      "to": "N1.7"
+    },
+    {
+      "from": "P6.1",
+      "to": "M2.3"
+    },
+    {
+      "from": "P6.2",
+      "to": "P1.3"
+    },
+    {
+      "from": "P6.2",
+      "to": "P1.4"
+    },
+    {
+      "from": "P6.2",
+      "to": "P2.1"
+    },
+    {
+      "from": "P6.2",
+      "to": "P2.2"
+    },
+    {
+      "from": "P6.2",
+      "to": "P2.3"
+    },
+    {
+      "from": "P6.2",
+      "to": "P2.4"
+    },
+    {
+      "from": "P6.2",
+      "to": "P3.1"
+    },
+    {
+      "from": "P6.2",
+      "to": "P3.2"
+    },
+    {
+      "from": "P6.2",
+      "to": "P3.3"
+    },
+    {
+      "from": "P6.2",
+      "to": "P3.4"
+    },
+    {
+      "from": "P6.2",
+      "to": "P6.1"
+    },
+    {
+      "from": "P6.3",
+      "to": "P3.1"
+    },
+    {
+      "from": "P6.3",
+      "to": "P3.2"
+    },
+    {
+      "from": "P6.3",
+      "to": "P3.3"
+    },
+    {
+      "from": "P6.3",
+      "to": "P3.4"
+    },
+    {
+      "from": "P6.3",
+      "to": "P6.1"
+    },
+    {
+      "from": "P6.3",
+      "to": "P6.2"
+    },
+    {
+      "from": "P7.1",
+      "to": "P1.1"
+    },
+    {
+      "from": "P7.1",
+      "to": "P2.1"
+    },
+    {
+      "from": "P7.1",
+      "to": "P3.1"
+    },
+    {
+      "from": "P7.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "P7.2",
+      "to": "P2.2"
+    },
+    {
+      "from": "P7.2",
+      "to": "P2.3"
+    },
+    {
+      "from": "P7.2",
+      "to": "P3.4"
+    },
+    {
+      "from": "P7.2",
+      "to": "P6.2"
+    },
+    {
+      "from": "P7.2",
+      "to": "P6.3"
+    },
+    {
+      "from": "P7.2",
+      "to": "P7.1"
+    },
+    {
+      "from": "P7.3",
+      "to": "P3.1"
+    },
+    {
+      "from": "P7.3",
+      "to": "P3.2"
+    },
+    {
+      "from": "P7.3",
+      "to": "P3.3"
+    },
+    {
+      "from": "P7.3",
+      "to": "P3.4"
+    },
+    {
+      "from": "P7.3",
+      "to": "P6.1"
+    },
+    {
+      "from": "P7.3",
+      "to": "P6.2"
+    },
+    {
+      "from": "P7.3",
+      "to": "P6.3"
+    },
+    {
+      "from": "P7.3",
+      "to": "P7.1"
+    },
+    {
+      "from": "P7.3",
+      "to": "P7.2"
+    },
+    {
+      "from": "P8.1",
+      "to": "A1.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "P1.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "P2.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "P2.2"
+    },
+    {
+      "from": "P8.2",
+      "to": "P3.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "P4.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "P4.2"
+    },
+    {
+      "from": "P8.2",
+      "to": "P4.3"
+    },
+    {
+      "from": "P8.2",
+      "to": "P8.1"
+    },
+    {
+      "from": "P8.2",
+      "to": "M1.2"
+    },
+    {
+      "from": "P8.3",
+      "to": "P4.1"
+    },
+    {
+      "from": "P8.3",
+      "to": "P8.1"
+    },
+    {
+      "from": "P8.3",
+      "to": "P8.2"
+    },
+    {
+      "from": "P8.3",
+      "to": "M1.2"
+    },
+    {
+      "from": "P8.4",
+      "to": "P3.3"
+    },
+    {
+      "from": "P8.4",
+      "to": "P3.4"
+    },
+    {
+      "from": "P8.4",
+      "to": "P8.2"
+    },
+    {
+      "from": "P8.4",
+      "to": "P8.3"
+    },
+    {
+      "from": "P9.1",
+      "to": "P1.4"
+    },
+    {
+      "from": "P9.1",
+      "to": "P2.3"
+    },
+    {
+      "from": "P9.1",
+      "to": "P3.1"
+    },
+    {
+      "from": "P9.1",
+      "to": "N1.8"
+    },
+    {
+      "from": "P9.2",
+      "to": "P1.4"
+    },
+    {
+      "from": "P9.2",
+      "to": "P2.1"
+    },
+    {
+      "from": "P9.2",
+      "to": "P2.2"
+    },
+    {
+      "from": "P9.2",
+      "to": "P2.3"
+    },
+    {
+      "from": "P9.2",
+      "to": "P2.4"
+    },
+    {
+      "from": "P9.2",
+      "to": "P3.1"
+    },
+    {
+      "from": "P9.2",
+      "to": "P3.2"
+    },
+    {
+      "from": "P9.2",
+      "to": "P3.3"
+    },
+    {
+      "from": "P9.2",
+      "to": "P3.4"
+    },
+    {
+      "from": "P9.2",
+      "to": "P5.5"
+    },
+    {
+      "from": "P9.2",
+      "to": "P6.2"
+    },
+    {
+      "from": "P9.2",
+      "to": "P9.1"
+    },
+    {
+      "from": "P9.3",
+      "to": "P9.1"
+    },
+    {
+      "from": "P9.3",
+      "to": "P9.2"
+    },
+    {
+      "from": "P9.4",
+      "to": "P3.3"
+    },
+    {
+      "from": "P9.4",
+      "to": "P7.1"
+    },
+    {
+      "from": "P9.4",
+      "to": "P7.2"
+    },
+    {
+      "from": "P9.4",
+      "to": "P8.3"
+    },
+    {
+      "from": "P9.4",
+      "to": "P8.4"
+    },
+    {
+      "from": "P9.4",
+      "to": "P9.1"
+    },
+    {
+      "from": "P9.4",
+      "to": "P9.2"
+    },
+    {
+      "from": "P9.4",
+      "to": "P9.3"
+    },
+    {
+      "from": "P9.5",
+      "to": "P7.1"
+    },
+    {
+      "from": "P9.5",
+      "to": "P7.2"
+    },
+    {
+      "from": "P9.5",
+      "to": "P7.3"
+    },
+    {
+      "from": "P9.5",
+      "to": "P8.4"
+    },
+    {
+      "from": "P9.5",
+      "to": "P9.1"
+    },
+    {
+      "from": "P9.5",
+      "to": "P9.2"
+    },
+    {
+      "from": "P9.5",
+      "to": "P9.3"
+    },
+    {
+      "from": "P9.5",
+      "to": "P9.4"
+    },
+    {
+      "from": "P10.1",
+      "to": "P4.1"
+    },
+    {
+      "from": "P10.1",
+      "to": "P4.2"
+    },
+    {
+      "from": "P10.1",
+      "to": "P4.3"
+    },
+    {
+      "from": "P10.1",
+      "to": "P5.1"
+    },
+    {
+      "from": "P10.1",
+      "to": "P5.2"
+    },
+    {
+      "from": "P10.1",
+      "to": "P5.3"
+    },
+    {
+      "from": "P10.1",
+      "to": "P5.4"
+    },
+    {
+      "from": "P10.1",
+      "to": "P8.2"
+    },
+    {
+      "from": "P10.1",
+      "to": "P8.3"
+    },
+    {
+      "from": "P10.1",
+      "to": "P8.4"
+    },
+    {
+      "from": "P10.1",
+      "to": "P9.1"
+    },
+    {
+      "from": "P10.1",
+      "to": "P9.2"
+    },
+    {
+      "from": "P10.2",
+      "to": "P3.1"
+    },
+    {
+      "from": "P10.2",
+      "to": "P3.2"
+    },
+    {
+      "from": "P10.2",
+      "to": "P4.1"
+    },
+    {
+      "from": "P10.2",
+      "to": "P5.1"
+    },
+    {
+      "from": "P10.2",
+      "to": "P5.3"
+    },
+    {
+      "from": "P10.2",
+      "to": "P10.1"
+    },
+    {
+      "from": "P10.2",
+      "to": "A1.2"
+    },
+    {
+      "from": "P10.2",
+      "to": "A1.3"
+    },
+    {
+      "from": "P10.2",
+      "to": "A1.4"
+    },
+    {
+      "from": "P10.3",
+      "to": "P8.3"
+    },
+    {
+      "from": "P10.3",
+      "to": "P8.4"
+    },
+    {
+      "from": "P10.3",
+      "to": "P9.1"
+    },
+    {
+      "from": "P10.3",
+      "to": "P9.2"
+    },
+    {
+      "from": "P10.3",
+      "to": "P9.4"
+    },
+    {
+      "from": "P10.3",
+      "to": "P9.5"
+    },
+    {
+      "from": "P10.3",
+      "to": "P10.1"
+    },
+    {
+      "from": "P10.3",
+      "to": "P10.2"
+    },
+    {
+      "from": "P10.3",
+      "to": "A1.7"
+    },
+    {
+      "from": "P10.4",
+      "to": "P5.1"
+    },
+    {
+      "from": "P10.4",
+      "to": "P5.2"
+    },
+    {
+      "from": "P10.4",
+      "to": "P5.3"
+    },
+    {
+      "from": "P10.4",
+      "to": "P5.4"
+    },
+    {
+      "from": "P10.4",
+      "to": "P5.5"
+    },
+    {
+      "from": "P10.4",
+      "to": "P9.1"
+    },
+    {
+      "from": "P10.4",
+      "to": "P9.5"
+    },
+    {
+      "from": "P11.1",
+      "to": "P1.1"
+    },
+    {
+      "from": "P11.1",
+      "to": "P1.2"
+    },
+    {
+      "from": "P11.1",
+      "to": "P1.3"
+    },
+    {
+      "from": "P11.1",
+      "to": "P1.4"
+    },
+    {
+      "from": "P11.1",
+      "to": "P2.1"
+    },
+    {
+      "from": "P11.1",
+      "to": "P2.2"
+    },
+    {
+      "from": "P11.1",
+      "to": "P2.3"
+    },
+    {
+      "from": "P11.1",
+      "to": "P3.1"
+    },
+    {
+      "from": "P11.1",
+      "to": "P3.2"
+    },
+    {
+      "from": "P11.1",
+      "to": "P3.3"
+    },
+    {
+      "from": "P11.1",
+      "to": "P3.4"
+    },
+    {
+      "from": "P11.1",
+      "to": "P6.2"
+    },
+    {
+      "from": "P11.1",
+      "to": "C1.1"
+    },
+    {
+      "from": "P11.1",
+      "to": "C1.2"
+    },
+    {
+      "from": "P11.2",
+      "to": "P11.1"
+    },
+    {
+      "from": "P11.2",
+      "to": "N1.9"
+    },
+    {
+      "from": "P11.3",
+      "to": "P3.4"
+    },
+    {
+      "from": "P11.3",
+      "to": "P9.1"
+    },
+    {
+      "from": "P11.3",
+      "to": "P9.2"
+    },
+    {
+      "from": "P11.3",
+      "to": "P9.3"
+    },
+    {
+      "from": "P11.3",
+      "to": "P9.4"
+    },
+    {
+      "from": "P11.3",
+      "to": "P9.5"
+    },
+    {
+      "from": "P11.3",
+      "to": "P11.1"
+    },
+    {
+      "from": "P11.3",
+      "to": "P11.2"
+    },
+    {
+      "from": "P11.4",
+      "to": "P8.2"
+    },
+    {
+      "from": "P11.4",
+      "to": "P8.3"
+    },
+    {
+      "from": "P11.4",
+      "to": "P8.4"
+    },
+    {
+      "from": "P11.4",
+      "to": "P10.2"
+    },
+    {
+      "from": "P11.4",
+      "to": "P11.1"
+    },
+    {
+      "from": "P11.4",
+      "to": "P11.2"
+    },
+    {
+      "from": "P11.4",
+      "to": "A1.5"
+    },
+    {
+      "from": "P11.4",
+      "to": "A1.6"
+    },
+    {
+      "from": "G1.1",
+      "to": "M1.1"
+    },
+    {
+      "from": "G1.1",
+      "to": "M1.2"
+    },
+    {
+      "from": "G1.1",
+      "to": "M4.1"
+    },
+    {
+      "from": "G1.2",
+      "to": "G1.1"
+    },
+    {
+      "from": "G1.2",
+      "to": "M3.4"
+    },
+    {
+      "from": "G1.2",
+      "to": "N1.6"
+    },
+    {
+      "from": "G1.3",
+      "to": "G1.1"
+    },
+    {
+      "from": "G1.3",
+      "to": "G1.2"
+    },
+    {
+      "from": "G1.3",
+      "to": "M4.1"
+    },
+    {
+      "from": "G1.3",
+      "to": "M4.2"
+    },
+    {
+      "from": "G1.4",
+      "to": "G1.2"
+    },
+    {
+      "from": "G1.4",
+      "to": "G1.3"
+    },
+    {
+      "from": "G1.4",
+      "to": "N1.3"
+    },
+    {
+      "from": "G1.4",
+      "to": "N1.4"
+    },
+    {
+      "from": "G1.4",
+      "to": "N1.5"
+    },
+    {
+      "from": "G1.4",
+      "to": "N1.6"
+    },
+    {
+      "from": "G1.4",
+      "to": "N1.7"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "roadmap": "PainleveEquationsAndFunctions",
+  "parts": [
+    {
+      "id": "N",
+      "title": "Nonlinear connections, transport, observations and comparison",
+      "scope_role": "framework",
+      "owner": "PainleveEquationsAndFunctions, Part N",
+      "target_ids": [
+        "N1.1",
+        "N1.2",
+        "N1.3",
+        "N1.4",
+        "N1.5",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9"
+      ]
+    },
+    {
+      "id": "M",
+      "title": "Reusable intrinsic construction of meromorphic-connection moduli and their nonlinear time connection",
+      "scope_role": "framework",
+      "owner": "PainleveEquationsAndFunctions, Part M",
+      "target_ids": [
+        "M1.1",
+        "M1.2",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M3.1",
+        "M3.2",
+        "M3.3",
+        "M3.4",
+        "M4.1",
+        "M4.2"
+      ]
+    },
+    {
+      "id": "A",
+      "title": "Reusable analytic RHPs and determinant convergence",
+      "scope_role": "framework",
+      "owner": "PainleveEquationsAndFunctions, Part A",
+      "target_ids": [
+        "A1.1",
+        "A1.2",
+        "A1.3",
+        "A1.4",
+        "A1.5",
+        "A1.6",
+        "A1.7"
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Reusable algebraic confluence and finite-algebra Poisson geometry",
+      "scope_role": "framework",
+      "owner": "PainleveEquationsAndFunctions, Part C",
+      "target_ids": [
+        "C1.1",
+        "C1.2"
+      ]
+    },
+    {
+      "id": "P",
+      "title": "Intrinsic Painlevé equations and functions",
+      "scope_role": "application",
+      "owner": "PainleveEquationsAndFunctions, Part P",
+      "target_ids": [
+        "P1.1",
+        "P1.2",
+        "P1.3",
+        "P1.4",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P2.4",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P3.4",
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "P4.4",
+        "P5.1",
+        "P5.2",
+        "P5.3",
+        "P5.4",
+        "P5.5",
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.1",
+        "P7.2",
+        "P7.3",
+        "P8.1",
+        "P8.2",
+        "P8.3",
+        "P8.4",
+        "P9.1",
+        "P9.2",
+        "P9.3",
+        "P9.4",
+        "P9.5",
+        "P10.1",
+        "P10.2",
+        "P10.3",
+        "P10.4",
+        "P11.1",
+        "P11.2",
+        "P11.3",
+        "P11.4"
+      ]
+    },
+    {
+      "id": "G",
+      "title": "Five logarithmic points: independent second consumer",
+      "scope_role": "application",
+      "owner": "PainleveEquationsAndFunctions, Part G",
+      "target_ids": [
+        "G1.1",
+        "G1.2",
+        "G1.3",
+        "G1.4"
+      ]
+    }
+  ]
+}

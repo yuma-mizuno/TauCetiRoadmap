@@ -1,0 +1,124 @@
+{
+  "schema": "tauceti-roadmap/packaging-review-v1",
+  "review_id": "submission_packaging_review",
+  "reviewer": "submission_analysis_dependencies",
+  "verdict": "pass_for_packaging_with_final_build_receipt_pending",
+  "scope": "Bounded review of PR_BODY.md and REVIEW.md against actual preservation, validation, six review records and Suggested.lean. No new mathematical review or core edits.",
+  "artifact_sha256": {
+    "reports/submission/PR_BODY.md": "9bbb78f753e6daf7343cdec3c0ee50918105458623ac389b66010ccb643a36d6",
+    "reports/submission/REVIEW.md": "3839fc18500573d07338d11a6a5b189d7ba00ee895e43a3c4b6cfa289da5a384",
+    "reports/submission/preservation.json": "389adf08f6b899c27908781269d898e31ac06145274237a1a46f57d285ed705c",
+    "reports/submission/validation.json": "8267a1471e255d35839d336e4daa068a7443fcc0a2075be03b4b3e76a84451d0",
+    "Suggested.lean": "4cc1bfedac907a532f6e472c0931636d20d2c52c370cda4e29d4bea21bd0d011",
+    "reports/submission/submission_review_analysis_r1.json": "019a41be36c977594804843fa16f17e2830ba243be3ddeb16012d5a6f1e1064a",
+    "reports/submission/submission_review_analysis_r2.json": "908702c04a3d3b7a4ad99c60e9e849ddcbb7e9811d2e993cacde5d562382c2f6",
+    "reports/submission/submission_review_analysis_r3.json": "99e786999c85efd8bb747ee42379d13545859f96e0c95f8ac9f26964b118c619",
+    "reports/submission/submission_review_geometry_r1.json": "7f174680c7fc0867f044487884e0f1c0ec1abf395e3e3bd3aa6f67ea3d25eae0",
+    "reports/submission/submission_review_geometry_r2.json": "3ca86f0c0bad501a6722e720a8c3000bd495013e9d6d1edb0f2edf233c790b4d",
+    "reports/submission/submission_review_geometry_r3.json": "83c015f47a73b3e4a83d85db96ebd3a104c2be07759856f2be73198b30355f1e"
+  },
+  "findings": [
+    {
+      "id": "PKG-01",
+      "severity": "medium",
+      "status": "closed_after_direct_reread",
+      "title": "Make PR-body evidence links independent of the Markdown file directory",
+      "initial_issue": "Four sibling-relative links to REVIEW.md, validation.json, preservation.json and dependency_audit.json were valid in PR_BODY.md as a repository file but did not carry the reports/submission directory context when copied into a pull-request description. The phrase \"six records in this directory\" had the same problem.",
+      "correction_verified": "All evidence links are now absolute URLs to the actual fork submission branch and corresponding repository path. The six review records are referenced through REVIEW.md, whose relative links all resolve locally. The workflow alignment link is also absolute. The misleading directory phrase is removed.",
+      "limit": "URL structure and actual local target files were verified. Remote HTTP availability is not asserted before the submission branch is committed and pushed.",
+      "primary_documentation": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#relative-links-and-image-paths-in-markdown-files"
+    }
+  ],
+  "open_packaging_inaccuracies": [],
+  "verified_counts": {
+    "targets": 78,
+    "general_targets": 30,
+    "layers": 19,
+    "part_counts": {
+      "N": 9,
+      "M": 12,
+      "A": 7,
+      "C": 2,
+      "P": 44,
+      "G": 4
+    },
+    "api_laws": 217,
+    "diagnostics": 263,
+    "internal_edges": 333,
+    "retained_original_targets": 77,
+    "retained_original_api_names": 214,
+    "retained_original_diagnostic_names": 257,
+    "retained_original_internal_edges": 321,
+    "original_api_statements_byte_identical": 211,
+    "original_api_statements_corrected": 3,
+    "original_diagnostic_statements_byte_identical": 254,
+    "original_diagnostic_statements_corrected": 3,
+    "declared_changed_core_fields": 23,
+    "validation_passed": 4329,
+    "validation_failed": 0,
+    "dependency_contracts": 35,
+    "distinct_supplier_files": 38,
+    "geometry_reviewed_targets": 50,
+    "analysis_reviewed_targets": 29,
+    "union_of_reviewed_targets": 78,
+    "overlap": [
+      "A1.7"
+    ],
+    "uncovered_target_ids": [],
+    "sorry_theorem_bodies": 4
+  },
+  "verified_scope_claims": [
+    "The PR and review record distinguish the 78 target specifications from completed proofs, and distinguish the 4,329 mechanical checks from mathematical validity.",
+    "The three review rounds are described accurately: R1 requested changes; R2 retained a geometry qualification and detected two consistency details plus target-scope placement; R3 is limited closure at exact core hashes. The geometry and analysis target lists jointly cover all 78 targets with A1.7 overlap.",
+    "Suggested.lean contains four actual sorry theorem bodies, actual native tangent/pullback/distribution/flow/meromorphic carriers, explicit autonomous scope for N1.4, and a connected-curve hypothesis plus finite-value witness for the observation definition.",
+    "Successful target-build and exact-source-elaboration logs were inspected. The full repository build is explicitly pending and is not inferred from the target build.",
+    "The reviewer reran check_roadmap_topics.py and observed \"Roadmap topics valid (173 roadmaps).\"",
+    "Current git branch is codex/painleve-roadmap-submission at upstream base ffac5139fe4794a132eb540a89e1b973070aad69 with only the PainleveEquationsAndFunctions directory untracked. The prose is a prepared submission description; no remote publication receipt is inferred.",
+    "GPT-6 Astra Pro attribution matches the author/reviewer session identity and the source draft attribution in reports/unification/review_report.ja.md. No human reviewer or specialist approval is fabricated.",
+    "The added workflow-alignment paragraphs accurately distinguish three inspected neighboring merged PRs from an unread official Zulip topic, and explicitly leave that reading as a human publication step rather than claiming full compliance.",
+    "Every local Markdown link in REVIEW.md resolves to an existing file. Every PR_BODY evidence URL corresponds to an existing local repository file under the stated submission branch path."
+  ],
+  "pr_body_links": [
+    {
+      "label": "REVIEW.md",
+      "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-roadmap-submission/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/REVIEW.md",
+      "repository_file_exists": true
+    },
+    {
+      "label": "validation.json",
+      "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-roadmap-submission/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/validation.json",
+      "repository_file_exists": true
+    },
+    {
+      "label": "preservation.json",
+      "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-roadmap-submission/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/preservation.json",
+      "repository_file_exists": true
+    },
+    {
+      "label": "dependency_audit.json",
+      "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-roadmap-submission/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/dependency_audit.json",
+      "repository_file_exists": true
+    },
+    {
+      "label": "workflow alignment record",
+      "url": "https://github.com/yuma-mizuno/TauCetiRoadmap/blob/codex/painleve-roadmap-submission/TauCetiRoadmap/PainleveEquationsAndFunctions/reports/submission/submission_workflow_alignment.md",
+      "repository_file_exists": true
+    }
+  ],
+  "pending_receipt_actions": [
+    "Replace the explicit pending full-build lines in PR_BODY.md and REVIEW.md only after the actual whole-repository execution receipt is available; preserve failures or limits if present.",
+    "Publish the final build_results.json with commands, exit codes and exact Suggested.lean SHA-256 4cc1bfedac907a532f6e472c0931636d20d2c52c370cda4e29d4bea21bd0d011. Distinguish the earlier target build, final source elaboration and full repository build. The build owner has been notified.",
+    "After committing and pushing the prepared branch, verify the external evidence links resolve. A commit permalink can make the reviewed snapshot immutable, but the corrected branch URLs already remove the PR-directory ambiguity."
+  ],
+  "human_steps_preserved": [
+    "No final human read-through or subject-area expert approval is claimed.",
+    "The submitting person must read the exact final manuscript and the required official Zulip topic, or supply accessible text for that final policy check.",
+    "The PR is prepared for upstream main and awaiting-review; preparation and fork push are not PR creation, review requests or external messages."
+  ],
+  "limits": [
+    "Pending full-build receipt is an intentionally unresolved execution record, not a mathematical blocker or a falsely claimed success.",
+    "This report checks packaging accuracy against available local evidence. It does not repeat mathematical source audits or certify implementation of the roadmap theorems.",
+    "The added neighboring-PR/workflow account was checked for faithful representation of its supplied record; the separate geometry reviewer performed the original public discussion inspection.",
+    "No core manuscript or submission artifact was edited by this review. Only this report was written."
+  ]
+}

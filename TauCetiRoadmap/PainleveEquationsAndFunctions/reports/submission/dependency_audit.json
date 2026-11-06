@@ -1,0 +1,2471 @@
+{
+  "schema": "tauceti-roadmap/submission-dependency-audit-v1",
+  "upstream_commit": "ffac5139fe4794a132eb540a89e1b973070aad69",
+  "tauceti_commit": "2fd255d997f47c0b5d834ee416c7015d55444ce5",
+  "mathlib_commit": "1b1ccf4b088b32fa3f23f2de1127433254a81e1e",
+  "method": "Read the pinned current roadmap sections and native source APIs; compare the exact supplied theorem scope against the consumers; assign each needed extension to a named local target; re-read the integrated English/Japanese result in R1–R3.",
+  "meaning": "A referenced roadmap is a specification, not evidence that its target is implemented. Native source checks identify actual carriers/APIs. Mathematical truth of all proposed targets is not certified by file existence or source hashes.",
+  "final_contracts": [
+    {
+      "id": "complex",
+      "paths": [
+        "TauCetiRoadmap/ComplexKahlerGeometry/README.md"
+      ],
+      "sections": [
+        "K1",
+        "K3.0",
+        "K3.HolomorphicStalk",
+        "K3.MeromorphicGermField",
+        "K4",
+        "K7.1"
+      ],
+      "supplied": "Complex inverse/implicit-function and tangent calculus; holomorphic germs and one-variable meromorphic germs; holomorphic bundle/sheaf equivalence and nonsingular flat connections/local systems; projective charts.",
+      "owned_here": "N owns nonlinear connections, holomorphic ODEs, transport and observations. M owns meromorphic/analytic-moduli comparisons. K4 does not supply algebraic analytification.",
+      "consumers": [
+        "N1.1",
+        "N1.3",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9",
+        "M1.1",
+        "M1.2",
+        "M3.2",
+        "M4.1",
+        "A1.1",
+        "A1.5",
+        "A1.7",
+        "C1.1",
+        "P4.1",
+        "P7.3",
+        "P8.4"
+      ]
+    },
+    {
+      "id": "smooth",
+      "paths": [
+        "TauCetiRoadmap/SmoothBundlesConnections/README.md"
+      ],
+      "sections": [
+        "B1.5",
+        "B5.0",
+        "B5.2"
+      ],
+      "supplied": "Smooth Ehresmann splittings, proper-submersion and principal-connection transport within their respective hypotheses.",
+      "owned_here": "N1.1–N1.5 own nonlinear connection objects, continuous-time local lifting, holomorphic parameter dependence and complete nonlinear transport. No properness of the phase projection is assumed.",
+      "consumers": [
+        "N1.1",
+        "N1.5",
+        "P4.2"
+      ]
+    },
+    {
+      "id": "differential",
+      "paths": [
+        "TauCetiRoadmap/DifferentialGeometry/README.md"
+      ],
+      "sections": [
+        "Layers 0–1",
+        "3.1–3.5"
+      ],
+      "supplied": "Finite-dimensional manifolds, charts and smooth local/maximal/time-dependent flows.",
+      "owned_here": "N1.2 proves the continuous-time locally uniformly Lipschitz theorem; N1.8 constructs intrinsic jets; N1.9 proves finite-chart stability and no exit.",
+      "consumers": [
+        "N1.2",
+        "N1.8",
+        "N1.9"
+      ]
+    },
+    {
+      "id": "covers",
+      "paths": [
+        "Completed/UniversalCovers/README.md"
+      ],
+      "sections": [
+        "Stage 0.2–0.4",
+        "Stage 1.5",
+        "Stage 2.6–2.8"
+      ],
+      "supplied": "Native covering, path and homotopy lifting, universal covers and their fundamental-group interfaces.",
+      "owned_here": "N1.5 constructs the nonlinear action and horizontal descent; general-cover descent uses the actual fiber relation, not deck invariance without normality.",
+      "consumers": [
+        "N1.5",
+        "N1.7",
+        "P4.2",
+        "P9.3"
+      ]
+    },
+    {
+      "id": "curves",
+      "paths": [
+        "TauCetiRoadmap/ComplexCurveModuli/README.md",
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "ComplexCurveModuli D0.3, D3–D5",
+        "SchemeAndStackFoundations 4.15"
+      ],
+      "supplied": "Genus-zero Möbius normalization and supported point-pushing; stable marked-curve deformation charts in the stable range.",
+      "owned_here": "M1.2 constructs unstable one-/two-pointed quotient charts, finite jets, local markings and determinant transport. Its analytic category is constructed there; D2.0 is only an instance comparison.",
+      "consumers": [
+        "M1.2",
+        "M4.1"
+      ]
+    },
+    {
+      "id": "stacks",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "1.18–1.23"
+      ],
+      "supplied": "Stackification, 2-fiber products, algebraic/DM presentations, inertia, QCoh descent, and finite-inertia Keel–Mori at its hypotheses.",
+      "owned_here": "M2.1 proves bounded GIT, scalar Gm rigidification, gerbe and coarse comparisons. Finite-inertia criteria do not apply to an unrigidified Gm stable stack.",
+      "consumers": [
+        "M1.1",
+        "M2.1",
+        "M3.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "quotient-predicates",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "1.17"
+      ],
+      "supplied": "Categorical/geometric quotient definitions, Artin bootstrap and the stated finite-group projective quotients.",
+      "owned_here": "Reductive invariant theory and actual character quotients are M2.1/M4.1; wild framing and Stokes quotients are P4.2.",
+      "consumers": [
+        "M2.1",
+        "P4.2"
+      ]
+    },
+    {
+      "id": "quot",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.14"
+      ],
+      "supplied": "Noetherian projective Quot/Hilbert and Hom/Isom parameter spaces with their stated base-change laws.",
+      "owned_here": "M2.1 proves boundedness, the equations and stability/GIT comparison. Analytic pullbacks use M1.2.",
+      "consumers": [
+        "M2.1",
+        "P4.4",
+        "P6.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "cohomology",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "2.2",
+        "2.6",
+        "2.20",
+        "3.3"
+      ],
+      "supplied": "Čech and sheaf cohomology, coherent terms, relative/Serre duality, degrees and curve Riemann–Roch at the stated hypotheses.",
+      "owned_here": "M2.2 constructs C-linear differential-operator hypercohomology and the ramified cone; coherent underlying terms do not make its differential O-linear.",
+      "consumers": [
+        "M1.2",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "C1.2",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "deformation",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.2–4.6"
+      ],
+      "supplied": "Artinian coefficients, deformation functors, hulls and elementary small-extension obstruction calculations.",
+      "owned_here": "M2.2 constructs actual connection cocycles, the needed arbitrary finite square-zero kernels and framed versality; M3.1 constructs strong horizontal extensions.",
+      "consumers": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M3.1",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "bundles",
+      "paths": [
+        "TauCetiRoadmap/AlgebraicVectorBundles/README.md"
+      ],
+      "sections": [
+        "L0A–L0C",
+        "L1A–L1B",
+        "L2A–L2B"
+      ],
+      "supplied": "Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence.",
+      "owned_here": "Meromorphic connections and analytification are M1.1–M1.2; relative dual Poisson geometry is C1.2.",
+      "consumers": [
+        "M1.1",
+        "M2.4",
+        "C1.2",
+        "P6.1",
+        "P7.1"
+      ]
+    },
+    {
+      "id": "analytic-coherence",
+      "paths": [
+        "TauCetiRoadmap/RealAnalyticGeometry/README.md"
+      ],
+      "sections": [
+        "R3.2 item 0"
+      ],
+      "supplied": "Coherent analytic module-sheaf carriers and local calculus on the supplied analytic manifold structure sheaf.",
+      "owned_here": "M1.2 constructs general complex analytic spaces, nilpotent quotients, analytification and GAGA comparisons.",
+      "consumers": [
+        "M1.2"
+      ]
+    },
+    {
+      "id": "proper-cohomology",
+      "paths": [
+        "TauCetiRoadmap/JacobianChallenge/README.md"
+      ],
+      "sections": [
+        "Layer C"
+      ],
+      "supplied": "Proper coherent pushforwards and separately stated flat-base-change and cohomology/base-change criteria; Grauert under its reduced-base and constant-rank assumptions.",
+      "owned_here": "M2.3 proves the relative Picard extension; P6.3 verifies boundary-coefficient flatness and the exact locally free/arbitrary-base-change criterion.",
+      "consumers": [
+        "M1.2",
+        "M2.3",
+        "P6.3"
+      ]
+    },
+    {
+      "id": "field-picard",
+      "paths": [
+        "TauCetiRoadmap/JacobianChallenge/README.md",
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "JacobianChallenge Layer D",
+        "SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14"
+      ],
+      "supplied": "Picard representability for projective geometrically integral schemes over a field, smooth-curve Jacobians, line-bundle descent and deformation.",
+      "owned_here": "M2.3 constructs relative Picard under projective flat finite presentation and universal functions, including nonreduced curves; P6.1 verifies its boundary hypotheses.",
+      "consumers": [
+        "M2.3"
+      ]
+    },
+    {
+      "id": "supports",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "2.7"
+      ],
+      "supplied": "Supported cohomology, localization/excision and the Noetherian colimit-of-Ext comparison with native local cohomology.",
+      "owned_here": "P6.3 constructs its first boundary layer, injection and time-line comparison; it does not identify all supported cohomology with that line.",
+      "consumers": [
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "surfaces",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "3.4",
+        "4.11",
+        "4.17",
+        "5.9–5.10"
+      ],
+      "supplied": "Divisor/Picard groups, blowups and strict transforms, normal crossings, surface intersection/adjunction and lattice theory.",
+      "owned_here": "P6.1–P6.3 construct the nonreduced anticanonical boundary, relative logarithmic deformation and family comparisons; P7 constructs the geometric transformations.",
+      "consumers": [
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.2",
+        "P7.3"
+      ]
+    },
+    {
+      "id": "formal-series",
+      "paths": [
+        "TauCetiRoadmap/FormalLaurentPuiseux/README.md"
+      ],
+      "sections": [
+        "L1–L4",
+        "L5–L6 for finite-extension steps in M1.1"
+      ],
+      "supplied": "Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra.",
+      "owned_here": "M1.1 proves differential-module Levelt–Turrittin/descent; C1.1 proves the convergent-germ and compact-uniform cancellation adapter. Formal valuation convergence is not analytic convergence.",
+      "consumers": [
+        "M1.1",
+        "C1.1",
+        "P1.4",
+        "P9.3"
+      ]
+    },
+    {
+      "id": "fredholm",
+      "paths": [
+        "Mathlib/Analysis/Normed/Operator/Fredholm/Basic.lean",
+        "TauCeti/Analysis/Fredholm/Stabilization.lean",
+        "TauCeti/Analysis/Normed/Operator/Splitting/Family.lean",
+        "TauCeti/LinearAlgebra/Determinant/Line.lean"
+      ],
+      "sections": [
+        "IsFredholm",
+        "nonempty_fredholmPackage",
+        "exists_stabilization_kernel_coordinates",
+        "kernelHomeomorph",
+        "contDiffAt_kerSection",
+        "detLine",
+        "detLineCongr"
+      ],
+      "supplied": "Scalar-generic finite-dimensional kernel/cokernel, stabilization coordinates and pointwise determinant-line comparisons; specialize over ℂ and dualize the convention.",
+      "owned_here": "A1.1 constructs the holomorphic family, canonical section, transition cocycle and base-change laws.",
+      "consumers": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "inversion",
+      "paths": [
+        "Mathlib/Analysis/Analytic/Constructions.lean"
+      ],
+      "sections": [
+        "analyticAt_inverse",
+        "analyticAt_inverse_one_sub"
+      ],
+      "supplied": "Analytic inversion on units of a complete normed algebra and the small-norm inverse.",
+      "owned_here": "A1.1 and A1.3 prove the actual family-to-operator maps and uniform estimates.",
+      "consumers": [
+        "A1.1",
+        "A1.3"
+      ]
+    },
+    {
+      "id": "lp",
+      "paths": [
+        "Mathlib/Analysis/Fourier/LpSpace.lean",
+        "Mathlib/MeasureTheory/Function/Holder.lean"
+      ],
+      "sections": [
+        "Complex L²/Fourier–Plancherel",
+        "Hölder and dominated convergence on the native measure/integral carrier"
+      ],
+      "supplied": "Native complex Lp spaces, Fourier–Plancherel, Hölder inequalities and integral convergence.",
+      "owned_here": "A1.2 constructs contour measure/coordinate comparisons; A1.4 proves weighted moment and uniform-tail statements.",
+      "consumers": [
+        "A1.2",
+        "A1.4"
+      ]
+    },
+    {
+      "id": "hilbert-transform",
+      "paths": [
+        "TauCetiRoadmap/PDE/README.md"
+      ],
+      "sections": [
+        "2.3/B10"
+      ],
+      "supplied": "The real-line Cauchy/Hilbert multiplier −i sign(ξ), with L² norm one.",
+      "owned_here": "A1.2 proves finite-arc/ray transport, the weighted cross-branch Schur bound, Plemelj and endpoint reconstruction.",
+      "consumers": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "cauchy",
+      "paths": [
+        "TauCeti/Analysis/Contour/Cauchy/IntegralFormula.lean",
+        "TauCeti/MeasureTheory/Integral/SchurTest.lean"
+      ],
+      "sections": [
+        "Cauchy integral formula",
+        "Unweighted Schur estimates"
+      ],
+      "supplied": "Cauchy integral formula for the stated native contours and unweighted integral-kernel estimates.",
+      "owned_here": "A1.2 proves its full contour package; the 1/(s+t) vertex kernel requires the weighted theorem specified there.",
+      "consumers": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "trace-ideal",
+      "paths": [
+        "TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md"
+      ],
+      "sections": [
+        "OI-B01–OI-B19",
+        "OI-B23",
+        "OI-B29–OI-B30"
+      ],
+      "supplied": "Normed complete trace-class ideal, nuclear gauge and two-sided ideal estimates.",
+      "owned_here": "A1.6 constructs the holomorphic-family adapter; P8.2 verifies actual trace-class realizations where used.",
+      "consumers": [
+        "A1.6",
+        "P8.2"
+      ]
+    },
+    {
+      "id": "trace-determinant",
+      "paths": [
+        "TauCetiRoadmap/RandomMatrices/README.md"
+      ],
+      "sections": [
+        "8.3, generic operator-theory prefix"
+      ],
+      "supplied": "Trace, exterior powers, generic Fredholm determinant series and trace-norm continuity before the positive-kernel point-process specialization.",
+      "owned_here": "A1.6 proves holomorphic dependence and uniform convergence. P8.3 proves its actual logarithmic derivative and integrable-kernel comparison.",
+      "consumers": [
+        "A1.6",
+        "P8.2",
+        "P8.3"
+      ]
+    },
+    {
+      "id": "toeplitz",
+      "paths": [
+        "TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md"
+      ],
+      "sections": [
+        "T1–T3"
+      ],
+      "supplied": "Circle Hardy models and Fredholm index equal to minus determinant winding for continuous invertible matrix symbols.",
+      "owned_here": "P8.2 constructs contour/Hardy, holomorphic-family, index-zero, resonant and ramified adapters. Index zero alone does not imply invertibility.",
+      "consumers": [
+        "P8.2"
+      ]
+    },
+    {
+      "id": "rouche",
+      "paths": [
+        "TauCeti/Analysis/Complex/Conformal/Rouche.lean",
+        "TauCeti/Analysis/Analytic/ZeroCount.lean"
+      ],
+      "sections": [
+        "rouche",
+        "rouche_nullHomologous",
+        "Multiplicity zero-count carrier"
+      ],
+      "supplied": "Disc and null-homologous piecewise C¹ contour Rouché theorems and zero multiplicities.",
+      "owned_here": "A1.6 supplies the actual boundary cycle and winding characterization for its general domain theorem.",
+      "consumers": [
+        "A1.6"
+      ]
+    },
+    {
+      "id": "meromorphic-germs",
+      "paths": [
+        "TauCeti/Analysis/Meromorphic/Germ.lean",
+        "TauCeti/Analysis/Meromorphic/PrincipalPart.lean"
+      ],
+      "sections": [
+        "meromorphicGerms.principalPart",
+        "principalPart_eq_iff",
+        "principalPart_eq_sum_coeff",
+        "Analytic regular remainder"
+      ],
+      "supplied": "Scalar convergent meromorphic germs, finite principal parts and holomorphic remainders.",
+      "owned_here": "C1.1 supplies finite-dimensional coefficient comparison, the cancellation identity and compact-uniform parameter limits.",
+      "consumers": [
+        "C1.1"
+      ]
+    },
+    {
+      "id": "curve-functions",
+      "paths": [
+        "TauCeti/Analysis/Complex/RiemannSurface/FunctionField.lean",
+        "TauCeti/Analysis/Complex/RiemannSurface/FunctionField/Comap.lean"
+      ],
+      "sections": [
+        "TauCeti.RiemannSurface.MeromorphicFunction",
+        "Nonconstant curve pullback and order comparison"
+      ],
+      "supplied": "Holomorphic maps from a Riemann surface to OnePoint ℂ with a witness excluding the constant-infinity map; native pullback and orders.",
+      "owned_here": "N1.7 proves phase-observation admissibility and scalar descent; its scalar output uses this same carrier.",
+      "consumers": [
+        "N1.7"
+      ]
+    },
+    {
+      "id": "poisson",
+      "paths": [
+        "TauCetiRoadmap/LieGroupoidsPoisson/README.md"
+      ],
+      "sections": [
+        "G4.6A"
+      ],
+      "supplied": "Positive/negative real Lie–Poisson conventions and fiber-negation comparison.",
+      "owned_here": "C1.2 constructs the complex relative O_B-Lie and symmetric-algebra bracket, residue pairing and base change.",
+      "consumers": [
+        "C1.2"
+      ]
+    },
+    {
+      "id": "reduction",
+      "paths": [
+        "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md"
+      ],
+      "sections": [
+        "R2",
+        "R3"
+      ],
+      "supplied": "Smooth real coadjoint/KKS geometry and regular free proper Hamiltonian reduction.",
+      "owned_here": "P11.1 proves actual complex quotient existence, orbit flatness and collision comparisons; C1.2 transports already verified data.",
+      "consumers": [
+        "P11.1"
+      ]
+    },
+    {
+      "id": "airy-hm",
+      "paths": [
+        "TauCetiRoadmap/RandomMatrices/README.md"
+      ],
+      "sections": [
+        "8.4",
+        "8.5"
+      ],
+      "supplied": "Airy normalization and tails, scalar Hastings–McLeod existence/uniqueness, real pole-freeness and F1/F2 identities.",
+      "owned_here": "P10.4 constructs the intrinsic phase-point/jet bridge. P10.3 proves its tau normalization, sectorial calibration and selected connection constants.",
+      "consumers": [
+        "P10.3",
+        "P10.4"
+      ]
+    },
+    {
+      "id": "gamma",
+      "paths": [
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean",
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean",
+        "Mathlib/Analysis/SpecialFunctions/Gamma/Deriv.lean",
+        "Mathlib/NumberTheory/Bernoulli.lean",
+        "Mathlib/NumberTheory/BernoulliPolynomials.lean"
+      ],
+      "sections": [
+        "Complex.Gamma",
+        "GammaSeq_tendsto_Gamma",
+        "Gamma_ne_zero",
+        "Real.eulerMascheroniConstant",
+        "Bernoulli numbers/polynomials"
+      ],
+      "supplied": "Gamma and its pole-free analytic theory, Euler–Mascheroni constant, Bernoulli coefficients and native complex analysis.",
+      "owned_here": "A1.7 constructs Barnes G, canonical normalization, zero divisor, logarithm branches and the explicit sectorial remainder.",
+      "consumers": [
+        "A1.7"
+      ]
+    },
+    {
+      "id": "proper",
+      "paths": [
+        "Mathlib/Topology/Maps/Proper/Basic.lean"
+      ],
+      "sections": [
+        "IsProperMap"
+      ],
+      "supplied": "Topological proper maps and the compact-preimage and base-change properties under their actual topological hypotheses.",
+      "owned_here": "N1.4 proves complete-lift transfer. M1.2 proves analytic/algebraic comparison; P4.4 proves properness of the actual RH family.",
+      "consumers": [
+        "P4.4"
+      ]
+    },
+    {
+      "id": "frobenius",
+      "paths": [
+        "TauCeti/Analysis/ODE/Frobenius.lean"
+      ],
+      "sections": [
+        "TauCeti.exists_frobenius_flat_coordinate"
+      ],
+      "supplied": "For a finite-dimensional real integrable graph field, a local product OpenPartialHomeomorph with a smooth inverse and the prescribed horizontal derivatives, at the stated regularity.",
+      "owned_here": "N1.5 constructs the submersion-chart graph field, proves curvature implies its integrability, and glues these local products for homotopy-invariant transport. N1.3 supplies the holomorphic counterpart.",
+      "consumers": [
+        "N1.5"
+      ]
+    },
+    {
+      "id": "chow",
+      "paths": [
+        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
+      ],
+      "sections": [
+        "4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11"
+      ],
+      "supplied": "For a separated finite-type morphism to a Noetherian base, a projective modification with quasi-projective source over that base; the source is projective when the original morphism is proper.",
+      "owned_here": "M1.2 uses this subtarget with coherent cohomology and proper direct images for the proper GAGA argument. The separate flattening and StableReduction branch of 4.12 is not a prerequisite.",
+      "consumers": [
+        "M1.2"
+      ]
+    }
+  ],
+  "supplier_files": {
+    "TauCetiRoadmap/ComplexKahlerGeometry/README.md": {
+      "sha256": "79fbf4c3834a827d6f01fa71a6c9355dd53b0029f76403c8c29e88ce2fefc71d",
+      "used_by_contracts": [
+        "complex"
+      ]
+    },
+    "TauCetiRoadmap/SmoothBundlesConnections/README.md": {
+      "sha256": "a9e5354007abee88192e045f712e1ed13c28953db0581a7f9021456a45df5d40",
+      "used_by_contracts": [
+        "smooth"
+      ]
+    },
+    "TauCetiRoadmap/DifferentialGeometry/README.md": {
+      "sha256": "a36ca56ded2066e2624a4f2346a390df1dd7701e5dac5de8f7a07ce7d7852385",
+      "used_by_contracts": [
+        "differential"
+      ]
+    },
+    "Completed/UniversalCovers/README.md": {
+      "sha256": "fbe227b0c3a1c352d6058e216db431c69444affe6b5f2ee0aa352909a751ddb6",
+      "used_by_contracts": [
+        "covers"
+      ]
+    },
+    "TauCetiRoadmap/ComplexCurveModuli/README.md": {
+      "sha256": "2d13341aad80c75562e23223f77c044de7a68c4732596a31e497e32db8954d1b",
+      "used_by_contracts": [
+        "curves"
+      ]
+    },
+    "TauCetiRoadmap/SchemeAndStackFoundations/README.md": {
+      "sha256": "07240fe176c74a5b17b3b608c93a846720d78ef82598c700d81cfcf1d0c31aef",
+      "used_by_contracts": [
+        "curves",
+        "stacks",
+        "quotient-predicates",
+        "quot",
+        "cohomology",
+        "deformation",
+        "field-picard",
+        "supports",
+        "surfaces",
+        "chow"
+      ]
+    },
+    "TauCetiRoadmap/AlgebraicVectorBundles/README.md": {
+      "sha256": "33c6d53fd0e59dbe374300372f136c36e3d1418ad837c6960f71f65b56a050ed",
+      "used_by_contracts": [
+        "bundles"
+      ]
+    },
+    "TauCetiRoadmap/RealAnalyticGeometry/README.md": {
+      "sha256": "2bab326be15f72924ea92dbddf011e18e92fa09366e283988d8b49284d8b937e",
+      "used_by_contracts": [
+        "analytic-coherence"
+      ]
+    },
+    "TauCetiRoadmap/JacobianChallenge/README.md": {
+      "sha256": "a03f0c60f9188e09fd799c9772cf2e0d4238184f8f1823b5cb9801a68a974477",
+      "used_by_contracts": [
+        "proper-cohomology",
+        "field-picard"
+      ]
+    },
+    "TauCetiRoadmap/FormalLaurentPuiseux/README.md": {
+      "sha256": "a5fe6e331bd4994841f1007c14ce9d00b92853a433158228d09745572fffbc22",
+      "used_by_contracts": [
+        "formal-series"
+      ]
+    },
+    "Mathlib/Analysis/Normed/Operator/Fredholm/Basic.lean": {
+      "sha256": "fd90c6bf222e0bbbad173b4761cf79962e32601968525004aaa1d5df11621449",
+      "used_by_contracts": [
+        "fredholm"
+      ]
+    },
+    "TauCeti/Analysis/Fredholm/Stabilization.lean": {
+      "sha256": "8a95ef38b63e11554454168b48e8431ea67b53648cd3fe3235c4596f830f7793",
+      "used_by_contracts": [
+        "fredholm"
+      ]
+    },
+    "TauCeti/Analysis/Normed/Operator/Splitting/Family.lean": {
+      "sha256": "79befa25fe4a1fd76259dfc057b6c31f42fdc6c363b34bcbd4f807d6dafd976d",
+      "used_by_contracts": [
+        "fredholm"
+      ]
+    },
+    "TauCeti/LinearAlgebra/Determinant/Line.lean": {
+      "sha256": "75505ed7f1e78d71f2fd78c9bf7d9206eb83d1e0c4c7a9174d582e3438323126",
+      "used_by_contracts": [
+        "fredholm"
+      ]
+    },
+    "Mathlib/Analysis/Analytic/Constructions.lean": {
+      "sha256": "c58c3b70843f217afc23a7ccd2c8943c46dde238c9a20f2303b3e0b84380965f",
+      "used_by_contracts": [
+        "inversion"
+      ]
+    },
+    "Mathlib/Analysis/Fourier/LpSpace.lean": {
+      "sha256": "7d86b8c70d21c45877f37792f9f81789c5f4551f41706afb4493958bb104065f",
+      "used_by_contracts": [
+        "lp"
+      ]
+    },
+    "Mathlib/MeasureTheory/Function/Holder.lean": {
+      "sha256": "65adef6841883cdeed515fcc4e5210823fa8760424ccd209508146b971c68156",
+      "used_by_contracts": [
+        "lp"
+      ]
+    },
+    "TauCetiRoadmap/PDE/README.md": {
+      "sha256": "566f1f7248a031ea483ba206711dbd72e4a9827a3ce04b54eb7ed52650d25d0e",
+      "used_by_contracts": [
+        "hilbert-transform"
+      ]
+    },
+    "TauCeti/Analysis/Contour/Cauchy/IntegralFormula.lean": {
+      "sha256": "7ddc59ee2531633e2956bf5c041b1d23b9c0cb58754bba167ebbab430edff8e8",
+      "used_by_contracts": [
+        "cauchy"
+      ]
+    },
+    "TauCeti/MeasureTheory/Integral/SchurTest.lean": {
+      "sha256": "07d5091667823941ff83db4c3740a7866f587897309e52ca6bbb38604fde4382",
+      "used_by_contracts": [
+        "cauchy"
+      ]
+    },
+    "TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md": {
+      "sha256": "c769dcb3789a0071faf7f2ad61e7af4d7eb3b8ad6800c40cf1af044756121570",
+      "used_by_contracts": [
+        "trace-ideal"
+      ]
+    },
+    "TauCetiRoadmap/RandomMatrices/README.md": {
+      "sha256": "fc4681d9f9392adedf1cc6b96bb2028e1a87207069639a5bf97b2004bdec0b49",
+      "used_by_contracts": [
+        "trace-determinant",
+        "airy-hm"
+      ]
+    },
+    "TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md": {
+      "sha256": "7c8793efbedd8cc2b5c1fa0f8944a4c390d16e837a74029eacb85ada6b4a79b9",
+      "used_by_contracts": [
+        "toeplitz"
+      ]
+    },
+    "TauCeti/Analysis/Complex/Conformal/Rouche.lean": {
+      "sha256": "3a75497db18686dd403b3e05e063b6392470c341487cba7fa8450f785fba9b78",
+      "used_by_contracts": [
+        "rouche"
+      ]
+    },
+    "TauCeti/Analysis/Analytic/ZeroCount.lean": {
+      "sha256": "f105f285f2f16e534677740cac89e1c3767d3f9300e50fac854d543474a59588",
+      "used_by_contracts": [
+        "rouche"
+      ]
+    },
+    "TauCeti/Analysis/Meromorphic/Germ.lean": {
+      "sha256": "057a45862ad4008f1a56d85b4e31d14ea4225560d1529a814bfb96b5c9e9e0b5",
+      "used_by_contracts": [
+        "meromorphic-germs"
+      ]
+    },
+    "TauCeti/Analysis/Meromorphic/PrincipalPart.lean": {
+      "sha256": "621cdec0f665f6cb0dfcc1ca8b326aac134369d9205fabadb94e0379470375c2",
+      "used_by_contracts": [
+        "meromorphic-germs"
+      ]
+    },
+    "TauCeti/Analysis/Complex/RiemannSurface/FunctionField.lean": {
+      "sha256": "35861dc852d823abcbc305c9950c04fb98a6a55492440b511e99455ff64c71f9",
+      "used_by_contracts": [
+        "curve-functions"
+      ]
+    },
+    "TauCeti/Analysis/Complex/RiemannSurface/FunctionField/Comap.lean": {
+      "sha256": "5f6c150741c31a463cacac1fc4075a24e34461bbd9681034d94179ddc618efd9",
+      "used_by_contracts": [
+        "curve-functions"
+      ]
+    },
+    "TauCetiRoadmap/LieGroupoidsPoisson/README.md": {
+      "sha256": "e7ec3bdf66bda315ef64ca3a7478fa8eb7348b427d7ac158370fb405ef604ab9",
+      "used_by_contracts": [
+        "poisson"
+      ]
+    },
+    "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md": {
+      "sha256": "934d5a975005b5f7c728df41cb5a0aadf979a068e6759e95ac101f486fe77972",
+      "used_by_contracts": [
+        "reduction"
+      ]
+    },
+    "Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean": {
+      "sha256": "7b2b7c58ee2bef6efd8a96b41cf72f39bd6c698be34bc36c3c31111a01b52926",
+      "used_by_contracts": [
+        "gamma"
+      ]
+    },
+    "Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean": {
+      "sha256": "665151fba6c625519d3174c09a5136361950d0ebdfb7644e199b6672d273df75",
+      "used_by_contracts": [
+        "gamma"
+      ]
+    },
+    "Mathlib/Analysis/SpecialFunctions/Gamma/Deriv.lean": {
+      "sha256": "6bfec4313c29559f99c4ea493c8538d143ade63016c7bde1f6c5cff2eaca31b1",
+      "used_by_contracts": [
+        "gamma"
+      ]
+    },
+    "Mathlib/NumberTheory/Bernoulli.lean": {
+      "sha256": "b119d5cd4c5cd31d4207019b5107b90095322bfef1aa148d5f98d169254cca60",
+      "used_by_contracts": [
+        "gamma"
+      ]
+    },
+    "Mathlib/NumberTheory/BernoulliPolynomials.lean": {
+      "sha256": "761a78d3ba870cf49939158625fd0afdc11d10f1064735269026604766ec0e04",
+      "used_by_contracts": [
+        "gamma"
+      ]
+    },
+    "Mathlib/Topology/Maps/Proper/Basic.lean": {
+      "sha256": "956cbdf3c53988b08fd447d51613c7b04b96fd663806ad2674727936aed2a7e0",
+      "used_by_contracts": [
+        "proper"
+      ]
+    },
+    "TauCeti/Analysis/ODE/Frobenius.lean": {
+      "sha256": "cc111d653c0b32f5552f51853d0bcc28c8e051a1c6acaef53d5e1021f36e4c7f",
+      "used_by_contracts": [
+        "frobenius"
+      ]
+    }
+  },
+  "original_geometry_reference_audit": [
+    {
+      "old_ref": "roadmap:ComplexKahlerGeometry §K1/K3.0/K4/K7.1",
+      "consumers": [
+        "N1.1",
+        "N1.3",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9",
+        "M3.2",
+        "A1.5",
+        "P4.1",
+        "P7.3",
+        "P8.4"
+      ],
+      "status": "live; narrow by consumer",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K1. Complex structures and type calculus",
+          "lines": [
+            96,
+            192
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Complex-manifold inverse/implicit-function transport, tangent/type calculus and native complex form adapters."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField",
+          "lines": [
+            296,
+            390
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Finite-dimensional holomorphic/analytic calculus, holomorphic stalks, one-variable finite-pole fraction fields and chart transport."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K4. Holomorphic and Hermitian bundles",
+          "lines": [
+            444,
+            567
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Native holomorphic bundle/sheaf equivalence, tensor/dual/pullback, sheaf-operator connections, curvature and flat local-system correspondence.",
+          "short_excerpt": "K4 does not construct algebraic analytification."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K7.1. Projective charts and orientation",
+          "lines": [
+            1407,
+            1443
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Projectivization carrier, projective charts, and biholomorphism with OnePoint ℂ in dimension one."
+        }
+      ],
+      "actual_scope": "Actual generic complex-manifold and holomorphic-bundle foundations; K4 also provides the nonsingular flat-connection/local-system dictionary previously attributed to an absent proposal.",
+      "not_supplied": "No holomorphic nonlinear ODE parameter theorem, nonlinear completeness, meromorphic/logarithmic lattice correspondence, algebraic analytification or singular analytic-space category.",
+      "replacement_prerequisites": [
+        "roadmap:ComplexKahlerGeometry §K1/K3.0/K4",
+        "roadmap:ComplexKahlerGeometry §K3.MeromorphicGermField/K7.1 (observer consumers)"
+      ],
+      "owned_obligations": [
+        "N1.1",
+        "N1.3",
+        "N1.6",
+        "N1.7",
+        "N1.8",
+        "N1.9",
+        "M1.1",
+        "M1.2"
+      ]
+    },
+    {
+      "old_ref": "roadmap:ComplexCurveModuli §D0/D2.0",
+      "consumers": [
+        "N1.7",
+        "M1.2",
+        "M4.1"
+      ],
+      "status": "live; D2.0 has absent external carrier supplier",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "section": "D0.3 (genus-zero normalization) and D0 supported point-pushing",
+          "lines": [
+            25,
+            52
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "support_paraphrase": "Native sphere/Möbius/triple-normalization comparison and supported surface isotopies."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "section": "D2.0 Native manifold and local-ringed-space instance",
+          "lines": [
+            65,
+            67
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "support_paraphrase": "Adapter from native complex manifolds to the generic analytic-space category; explicitly consumes ComplexComparisonPartII C−1.1 rather than constructing it."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "section": "D3–D5 (stable marked analytic charts)",
+          "lines": [
+            74,
+            138
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "support_paraphrase": "Stable-curve deformation and universal-chart groupoids; not a generic atlas for unstable one- or two-pointed rational curves."
+        }
+      ],
+      "actual_scope": "Native curve and marked-curve comparison theorems. D0.3 is an exact genus-zero supplier; smooth stable charts require D3–D5, not just D0/D2.0.",
+      "not_supplied": "D2.0 cannot resolve the missing generic analytic-space carrier by itself. These sections do not provide all pointed-curve atlases for g=0,n≤2, the finite-jet time problem, or the determinant transport.",
+      "replacement_prerequisites": [
+        "roadmap:ComplexCurveModuli §D0.3 and D3–D5 in the stable range",
+        "roadmap:SchemeAndStackFoundations §4.15 in the stable algebraic range",
+        "target:M1.2 (analytic carrier, unstable quotient charts, jets and markings)"
+      ],
+      "owned_obligations": [
+        "M1.2",
+        "M4.1",
+        "N1.7"
+      ]
+    },
+    {
+      "old_ref": "roadmap:FormalConnectionsOpers §F2–F3",
+      "consumers": [
+        "M1.1",
+        "M3.1",
+        "P4.1",
+        "P7.1"
+      ],
+      "status": "absent from current main",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K4 holomorphic connection paragraph",
+          "lines": [
+            493,
+            516
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Supplies holomorphic sheaf connections and the flat local-system dictionary. K4 itself links an unmerged FormalConnectionsOpers snapshot; it does not supply formal meromorphic differential modules."
+        }
+      ],
+      "actual_scope": "No file named FormalConnectionsOpers exists in the audited upstream tree. A fixed proposal link in another README is not an implemented or current-main supplier.",
+      "not_supplied": "Algebraic meromorphic sheaf connections, relative/logarithmic poles, formal differential-module gauge groupoids, ramified descent, formal horizontal deformation and analytification comparisons must have explicit owners.",
+      "replacement_prerequisites": [
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L2B",
+        "roadmap:ComplexKahlerGeometry §K4",
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "target:M1.1",
+        "target:M1.2",
+        "target:M3.1"
+      ],
+      "owned_obligations": [
+        "GF01",
+        "GF02",
+        "GF03",
+        "GF08"
+      ]
+    },
+    {
+      "old_ref": "roadmap:PadicDifferentialEquationsAndRigidCohomology §RD.6.52a",
+      "consumers": [
+        "M1.1",
+        "P4.1"
+      ],
+      "status": "absent from current main",
+      "live_exact_refs": [],
+      "actual_scope": "No roadmap or section is present in current main. FormalLaurentPuiseux is scalar formal algebra and is not the Levelt–Turrittin theorem.",
+      "not_supplied": "Finite-ramification differential-module normal forms, constant-field treatment and equivariant descent, including the rank-two ramified comparison used by the full classical application.",
+      "replacement_prerequisites": [
+        "roadmap:FormalLaurentPuiseux §L1–L7",
+        "target:M1.1 (formal normal forms and descent)"
+      ],
+      "owned_obligations": [
+        "GF02"
+      ]
+    },
+    {
+      "old_ref": "roadmap:AlgebraicModuliForArithmeticGeometry §5.1",
+      "consumers": [
+        "M4.2"
+      ],
+      "status": "absent from current main",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.18. Stacks in groupoids, stackification and 2-fibre products",
+          "lines": [
+            2745,
+            2816
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Generic site-level stackification and 2-fibre products, plus fppf instances."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.23. Moduli functors, fine and coarse moduli spaces, Keel–Mori, tame stacks",
+          "lines": [
+            3021,
+            3067
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Coarse-space definitions and finite-inertia existence; not scalar Gm rigidification.",
+          "short_excerpt": "with finite inertia"
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.2–4.6. Artinian coefficients, deformation functors, hulls, obstructions and examples",
+          "lines": [
+            5110,
+            5338
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Elementary deformation foundations, not a general Artin algebraicity or all-kernel obstruction theorem."
+        }
+      ],
+      "actual_scope": "The cited roadmap is absent. Current SSF gives carriers and restricted criteria but no general reductive GIT/rigidification theorem.",
+      "not_supplied": "Gm rigidification, construction of the stable coarse family, its separated/quasi-projective geometry, unrestricted coarse base-change claims, and connection-specific framed versality. Keel–Mori cannot be applied to Gm inertia.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §1.18–1.23/4.2–4.6/4.14",
+        "target:M2.1 (bounded GIT and scalar rigidification)",
+        "target:M2.2 (actual deformation complex)",
+        "target:M4.2 (Cartier determinant-fiber and properness comparison)"
+      ],
+      "owned_obligations": [
+        "GF05",
+        "GF06",
+        "GF11"
+      ]
+    },
+    {
+      "old_ref": "roadmap:AlgebraicModuliForArithmeticGeometry §5.1/7.1/8",
+      "consumers": [
+        "M2.1",
+        "P4.4"
+      ],
+      "status": "absent from current main",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.18. Stacks in groupoids, stackification and 2-fibre products",
+          "lines": [
+            2745,
+            2816
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Generic site-level stackification and 2-fibre products, plus fppf instances."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.23. Moduli functors, fine and coarse moduli spaces, Keel–Mori, tame stacks",
+          "lines": [
+            3021,
+            3067
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Coarse-space definitions and finite-inertia existence; not scalar Gm rigidification.",
+          "short_excerpt": "with finite inertia"
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.2–4.6. Artinian coefficients, deformation functors, hulls, obstructions and examples",
+          "lines": [
+            5110,
+            5338
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Elementary deformation foundations, not a general Artin algebraicity or all-kernel obstruction theorem."
+        }
+      ],
+      "actual_scope": "The cited roadmap is absent. Current SSF gives carriers and restricted criteria but no general reductive GIT/rigidification theorem.",
+      "not_supplied": "Gm rigidification, construction of the stable coarse family, its separated/quasi-projective geometry, unrestricted coarse base-change claims, and connection-specific framed versality. Keel–Mori cannot be applied to Gm inertia.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §1.18–1.23/4.2–4.6/4.14",
+        "target:M2.1 (bounded GIT and scalar rigidification)",
+        "target:M2.2 (actual deformation complex)",
+        "target:M4.2 (Cartier determinant-fiber and properness comparison)"
+      ],
+      "owned_obligations": [
+        "GF05",
+        "GF06",
+        "GF11"
+      ]
+    },
+    {
+      "old_ref": "roadmap:ComplexComparisonPartII §C−1.1/C0.3",
+      "consumers": [
+        "M1.2",
+        "A1.1",
+        "A1.5",
+        "P4.2",
+        "P4.3",
+        "P8.2",
+        "P8.3"
+      ],
+      "status": "absent from current main; partial live replacement",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K3.HolomorphicStalk and K4",
+          "lines": [
+            317,
+            390
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Local holomorphic rings, finite-pole meromorphic germs and holomorphic bundles/sheaves."
+        },
+        {
+          "path": "TauCetiRoadmap/RealAnalyticGeometry/README.md",
+          "section": "R3.2 item 0. Coherent analytic module-sheaf carrier and calculus",
+          "lines": [
+            728,
+            810
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/RealAnalyticGeometry/README.md",
+          "support_paraphrase": "Coherent analytic sheaf calculus on the supplied manifold structure sheaf; this is not general scheme analytification."
+        },
+        {
+          "path": "TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "section": "D2.0 Native manifold and local-ringed-space instance",
+          "lines": [
+            65,
+            67
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexCurveModuli/README.md",
+          "support_paraphrase": "A comparison consuming, not defining, the missing C−1.1 category."
+        }
+      ],
+      "actual_scope": "No ComplexComparisonPartII file is present. K4 directly handles holomorphic bundles and their gluing. General nonreduced analytic spaces and algebraic analytification remain unsupplied.",
+      "not_supplied": "Complex analytic-space carrier, nonreduced coherent quotients, open gluing, products/fibre products, finite-type complex scheme analytification, coherent pullback/connection comparisons and analytic base-change.",
+      "replacement_prerequisites": [
+        "roadmap:ComplexKahlerGeometry §K3/K4",
+        "roadmap:RealAnalyticGeometry §R3.2 item 0 (coherent sheaf calculus)",
+        "target:M1.2 (generic analytic spaces and analytification; algebraic/holomorphic base change)"
+      ],
+      "owned_obligations": [
+        "GF03"
+      ]
+    },
+    {
+      "old_ref": "roadmap:ComplexComparisonPartII §C3.2d.2/C3.2f.1–2",
+      "consumers": [
+        "M2.3",
+        "P6.1"
+      ],
+      "status": "absent from current main; smooth fixed-field partial replacement",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/JacobianChallenge/README.md",
+          "section": "Layer D. Projective Picard representability and the curve neutral component",
+          "lines": [
+            218,
+            331
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/JacobianChallenge/README.md",
+          "support_paraphrase": "Projective geometrically integral schemes over a field and smooth curve Picard/Jacobian; coherent field-base-change and the smooth-curve identity component."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "3.4 Picard groups and 4.6 line-bundle deformation",
+          "lines": [
+            4789,
+            4875
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Picard groups/descent and line-bundle lifting; no broad relative Picard representability theorem."
+        }
+      ],
+      "actual_scope": "Current JacobianChallenge Layer D covers the fixed-field geometrically integral case. It explicitly assigns general relative Picard spaces to the absent AlgebraicModuli proposal.",
+      "not_supplied": "Relative Picard for projective flat curves with universal O, including nonreduced boundary curves Y; arbitrary-base comparison and relative identity-component smoothness. A smooth Jacobian theorem cannot replace this.",
+      "replacement_prerequisites": [
+        "roadmap:JacobianChallenge §Layers C–D (their actual scope)",
+        "roadmap:SchemeAndStackFoundations §1.1/2.6/3.4/4.6/4.14",
+        "target:M2.3 (relative Picard extension)",
+        "target:P6.1 (nonreduced boundary comparison and additive component)"
+      ],
+      "owned_obligations": [
+        "GF07",
+        "GF12"
+      ]
+    },
+    {
+      "old_ref": "roadmap:ComplexComparisonPartII §C5.6",
+      "consumers": [
+        "M4.1",
+        "M4.2",
+        "P4.3"
+      ],
+      "status": "absent from current main; nonsingular live replacement",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K4. Flat holomorphic connection/local-system correspondence",
+          "lines": [
+            493,
+            516
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Horizontal local frames and equivalence with finite-dimensional complex local systems on the punctured curve."
+        }
+      ],
+      "actual_scope": "K4 supplies the nonsingular correspondence on the punctured curve; no current-main C5.6 theorem is available.",
+      "not_supplied": "Logarithmic extension with prescribed exponents, resonance and retained lattices/flags, regular-singular algebraic/analytic comparison, and rank-one fixed-residue RH isomorphism. For general rank the map is not an inverse on resonant or reducible strata.",
+      "replacement_prerequisites": [
+        "roadmap:ComplexKahlerGeometry §K4",
+        "target:M1.2 (independent rank-one determinant transport)",
+        "target:M4.1 (logarithmic extension and full RH map)",
+        "target:M4.2 (rank-one determinant RH and Cartesian comparison)"
+      ],
+      "owned_obligations": [
+        "GF09",
+        "GF11"
+      ]
+    },
+    {
+      "old_ref": "roadmap:ComplexComparisonPartII §C5.6 regular-singular correspondence, with chosen-logarithm lattice comparison",
+      "consumers": [
+        "G1.1"
+      ],
+      "status": "absent from current main; nonsingular live replacement",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "section": "K4. Flat holomorphic connection/local-system correspondence",
+          "lines": [
+            493,
+            516
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/ComplexKahlerGeometry/README.md",
+          "support_paraphrase": "Horizontal local frames and equivalence with finite-dimensional complex local systems on the punctured curve."
+        }
+      ],
+      "actual_scope": "K4 supplies the nonsingular correspondence on the punctured curve; no current-main C5.6 theorem is available.",
+      "not_supplied": "Logarithmic extension with prescribed exponents, resonance and retained lattices/flags, regular-singular algebraic/analytic comparison, and rank-one fixed-residue RH isomorphism. For general rank the map is not an inverse on resonant or reducible strata.",
+      "replacement_prerequisites": [
+        "roadmap:ComplexKahlerGeometry §K4",
+        "target:M1.2 (independent rank-one determinant transport)",
+        "target:M4.1 (logarithmic extension and full RH map)",
+        "target:M4.2 (rank-one determinant RH and Cartesian comparison)"
+      ],
+      "owned_obligations": [
+        "GF09",
+        "GF11"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §1.17",
+      "consumers": [
+        "P4.2"
+      ],
+      "status": "live; materially narrower than generic quotient construction",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.17. Categorical and geometric quotients, and Artin’s bootstrap",
+          "lines": [
+            2624,
+            2744
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Definitions, Artin bootstrap for a flat lfp locally-surjective representable cover, and finite-group projective quotients. General quotient and flat-base-change construction theorems are explicitly excluded.",
+          "short_excerpt": "outside its scope"
+        }
+      ],
+      "actual_scope": "Exact quotient predicates and finite-group theorem at stated hypotheses; no reductive GIT for the conjugation group.",
+      "not_supplied": "Affine GLr character quotients and the Stokes/framing quotients required by M4.1/P4.2. These require constructed invariants and actual quotient comparisons.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §1.17 (predicates only)",
+        "target:M2.1 (reductive GIT foundation)",
+        "target:M4.1 (character quotient)",
+        "target:P4.2 (wild framing and Stokes descent)"
+      ],
+      "owned_obligations": [
+        "GF05",
+        "GF10"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §1.18/1.23",
+      "consumers": [
+        "M1.1",
+        "M3.3"
+      ],
+      "status": "live; criteria require hypothesis checks",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.18. Stacks in groupoids, stackification and 2-fibre products",
+          "lines": [
+            2745,
+            2816
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Generic site-level carriers and stackification universal properties."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.23. Moduli functors, fine and coarse spaces; Keel–Mori; tame stacks",
+          "lines": [
+            3021,
+            3067
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Fine/coarse interfaces, finite-inertia coarse existence, flat base change and tame local structures."
+        }
+      ],
+      "actual_scope": "Correct basic stack input. The specified determinant stack has μr inertia over C; the unfixed stable stack has Gm inertia.",
+      "not_supplied": "Connection-specific descent, universal-object covers, Gm rigidification and arbitrary coarse base change are not automatic.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §1.18–1.23"
+      ],
+      "owned_obligations": [
+        "M1.1",
+        "M2.1",
+        "M3.3",
+        "GF05"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §1.22",
+      "consumers": [
+        "P8.2"
+      ],
+      "status": "live; algebraic QCoh scope",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "1.22. Quasi-coherent modules on stacks",
+          "lines": [
+            2989,
+            3020
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "QCoh carrier, pullback, presentation equivalence, and qualified pushforward."
+        }
+      ],
+      "actual_scope": "Algebraic quasi-coherent presentation and descent. It is appropriate for algebraic line/tensor descent after checking inertia action.",
+      "not_supplied": "Holomorphic Fredholm determinant-line descent, analytic RHP sewing, or descent of a line with nontrivial stabilizer action to a coarse space.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §1.22",
+        "roadmap:ComplexKahlerGeometry §K4",
+        "target:A1.1",
+        "target:P8.2"
+      ],
+      "owned_obligations": [
+        "P8.2"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+      "consumers": [
+        "M2.2",
+        "P6.3",
+        "P8.2"
+      ],
+      "status": "live; C-linear complex and obstruction scope must be explicit",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.2. Leray and Čech spectral sequences",
+          "lines": [
+            3309,
+            3329
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Abelian sheaf cohomology and acyclic-cover Čech comparison."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.6. Quasi-coherent cohomology",
+          "lines": [
+            3437,
+            3481
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "QCoh direct images, flat base change, Serre vanishing and projective cohomology."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.20. Relative dualising complexes and modules, Serre duality, curve comparison",
+          "lines": [
+            4275,
+            4389
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Relative duality and coherent termwise Serre pairing, with CM/purity/Noetherian hypotheses."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "3.3. Degrees of vector bundles, Riemann–Roch and Serre duality on curves",
+          "lines": [
+            4713,
+            4788
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Higher-rank coherent Euler degree and curve duality."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.2–4.6. Deformation foundations",
+          "lines": [
+            5110,
+            5338
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Elementary small-extension obstruction theory; arbitrary-kernel compatibility is not included in 4.5."
+        }
+      ],
+      "actual_scope": "The numbered references remain correct. They supply scalar/sheaf, coherent termwise and elementary deformation foundations.",
+      "not_supplied": "The ∇-commutator is C-linear, not O-linear. The total Čech complex, ramified three-term cone, paired differential calculation and arbitrary-kernel connection obstruction functor are owned here.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "target:M2.2"
+      ],
+      "owned_obligations": [
+        "GF06",
+        "M2.4",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/4.2–4.6",
+      "consumers": [
+        "M2.4"
+      ],
+      "status": "live; C-linear complex and obstruction scope must be explicit",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.2. Leray and Čech spectral sequences",
+          "lines": [
+            3309,
+            3329
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Abelian sheaf cohomology and acyclic-cover Čech comparison."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.6. Quasi-coherent cohomology",
+          "lines": [
+            3437,
+            3481
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "QCoh direct images, flat base change, Serre vanishing and projective cohomology."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.20. Relative dualising complexes and modules, Serre duality, curve comparison",
+          "lines": [
+            4275,
+            4389
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Relative duality and coherent termwise Serre pairing, with CM/purity/Noetherian hypotheses."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "3.3. Degrees of vector bundles, Riemann–Roch and Serre duality on curves",
+          "lines": [
+            4713,
+            4788
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Higher-rank coherent Euler degree and curve duality."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.2–4.6. Deformation foundations",
+          "lines": [
+            5110,
+            5338
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Elementary small-extension obstruction theory; arbitrary-kernel compatibility is not included in 4.5."
+        }
+      ],
+      "actual_scope": "The numbered references remain correct. They supply scalar/sheaf, coherent termwise and elementary deformation foundations.",
+      "not_supplied": "The ∇-commutator is C-linear, not O-linear. The total Čech complex, ramified three-term cone, paired differential calculation and arbitrary-kernel connection obstruction functor are owned here.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.2/2.6/2.20/3.3/4.2–4.6",
+        "target:M2.2"
+      ],
+      "owned_obligations": [
+        "GF06",
+        "M2.4",
+        "P6.3",
+        "P8.2"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §2.20/3.3",
+      "consumers": [
+        "M2.3"
+      ],
+      "status": "live",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.20. Relative duality and 3.3. Vector-bundle curve duality",
+          "lines": [
+            4275,
+            4389
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "CM coherent duality plus vector-bundle Euler characteristic, degree and curve comparison."
+        }
+      ],
+      "actual_scope": "Correct foundations for the determinant dimension calculation after actual deformation-complex comparisons.",
+      "not_supplied": "Relative Picard, rank-one de Rham moduli, determinant-map smoothness, trace-free orthogonal splitting and the 2g subtraction.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.20/3.3",
+        "target:M2.2",
+        "target:M2.3"
+      ],
+      "owned_obligations": [
+        "GF07"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §4.2–4.6",
+      "consumers": [
+        "M3.1"
+      ],
+      "status": "live; elementary deformation floor",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.2–4.6. Deformations, hulls and obstruction examples",
+          "lines": [
+            5110,
+            5338
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Artinian coefficient category, set-valued Schlessinger functors, hulls and elementary obstruction theory."
+        }
+      ],
+      "actual_scope": "Correct infinitesimal-deformation floor.",
+      "not_supplied": "The actual formal horizontal extension of a meromorphic connection and strong kernel-lattice uniqueness; full C-linear deformation complex; arbitrary-kernel coherence.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §4.2–4.6",
+        "target:M1.1",
+        "target:M2.2",
+        "target:M3.1"
+      ],
+      "owned_obligations": [
+        "GF06",
+        "GF08"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §4.14",
+      "consumers": [
+        "M2.1",
+        "P4.4",
+        "P6.2",
+        "P7.3"
+      ],
+      "status": "live; projective/Noetherian restrictions",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.14. Hilbert and Quot schemes",
+          "lines": [
+            5706,
+            5724
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Projective X over Noetherian S with relatively very ample L and coherent E; Quot/Hilbert and flat projective Hom/Isom constructions."
+        }
+      ],
+      "actual_scope": "Supplies parameter schemes and base change in the exact Noetherian projective regime.",
+      "not_supplied": "Boundedness of parabolic connections, reductive GIT, stable replacement and proper RH. Analytic time base changes must follow algebraic construction and the separately proved analytification/pullback comparison.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §4.14",
+        "target:M2.1",
+        "target:M1.2"
+      ],
+      "owned_obligations": [
+        "GF03",
+        "GF05",
+        "P4.4",
+        "P6.2",
+        "P7.3"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+      "consumers": [
+        "P6.1",
+        "P6.2",
+        "P6.3",
+        "P7.2",
+        "P7.3"
+      ],
+      "status": "live; surface family comparisons remain owned",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "2.7. Cohomology with supports and local cohomology",
+          "lines": [
+            3482,
+            3538
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Support localization/excision; Noetherian colim-Ext and flat base-change comparisons."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "3.4. Picard groups",
+          "lines": [
+            4789,
+            4875
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Divisor/Picard class, unit and excision sequences, not a relative Picard representing object."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.11. Modifications and strict transforms",
+          "lines": [
+            5528,
+            5612
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Proper modifications and strict transforms with explicit retained open and qc assumptions."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "4.17. Strict normal crossings divisors",
+          "lines": [
+            6075,
+            6108
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Reduced SNC divisors and normal-crossing resolution; multiplicities of a total transform are not SNC."
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "section": "5.9–5.10. Surface intersection and adjunction",
+          "lines": [
+            7129,
+            7272
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "support_paraphrase": "Smooth projective surface pairing, adjunction, RR and numerical lattice; arithmetic relative dimension-two formula is not an arbitrary-base surface-family theorem."
+        }
+      ],
+      "actual_scope": "Section numbers and the generic surface foundations are correct.",
+      "not_supplied": "Anticanonical Y may be nonreduced while D=Yred is SNC. Its logarithmic tangent sheaf, relative Pic0, relative Picard lattice, deformation pairing, moduli/complement isomorphism and family time-line theorem remain P6.1–P6.3 and P7-owned.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.7/3.4/4.11/4.17/5.9–5.10",
+        "target:M2.3 (relative Picard)",
+        "target:P6.1–P6.3"
+      ],
+      "owned_obligations": [
+        "GF12",
+        "GF13"
+      ]
+    },
+    {
+      "old_ref": "roadmap:JacobianChallenge §Layer C",
+      "consumers": [
+        "P6.3"
+      ],
+      "status": "live; arbitrary-base theorem is conditional",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/JacobianChallenge/README.md",
+          "section": "Layer C. Relative coherent cohomology and base change",
+          "lines": [
+            143,
+            217
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/JacobianChallenge/README.md",
+          "support_paraphrase": "Proper coherent finiteness over locally Noetherian S; flat base change for qcqs maps; finite projective cohomology complexes for coherent S-flat coefficients; Grauert requires reduced base and locally constant cohomology dimensions."
+        }
+      ],
+      "actual_scope": "Correct proper coherent foundation, with separate hypotheses for each conclusion.",
+      "not_supplied": "A constant rank calculation on complex points alone proves neither local freeness on a nonreduced base nor arbitrary base change; P6.3 must prove its boundary coefficient flatness and actual base-change maps.",
+      "replacement_prerequisites": [
+        "roadmap:JacobianChallenge §Layer C",
+        "roadmap:SchemeAndStackFoundations §2.7",
+        "target:P6.3"
+      ],
+      "owned_obligations": [
+        "GF13"
+      ]
+    },
+    {
+      "old_ref": "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L1B",
+      "consumers": [
+        "M1.1",
+        "M2.4",
+        "A1.1",
+        "C1.2",
+        "P6.1",
+        "P7.1"
+      ],
+      "status": "live; missing L2 for geometric carrier",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "section": "L0A–L0C. Sheaves, finite local freeness and polynomial operations",
+          "lines": [
+            215,
+            268
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "support_paraphrase": "Tensor/dual/End/determinant and arbitrary-pullback comparisons on algebraic sheaves."
+        },
+        {
+          "path": "TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "section": "L1A–L1B. Relative Spec",
+          "lines": [
+            269,
+            305
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "support_paraphrase": "Relative Spec and affine anti-equivalence."
+        },
+        {
+          "path": "TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "section": "L2A–L2B. Structured linear schemes and geometric vector bundles",
+          "lines": [
+            306,
+            369
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/AlgebraicVectorBundles/README.md",
+          "support_paraphrase": "The actual FinLocFree ≃ GeomVB equivalence and totalSpace=linearSpec(Edual)."
+        }
+      ],
+      "actual_scope": "Original range correctly supplies sheaf operations and relative Spec; geometric bundle comparison is in L2A–L2B.",
+      "not_supplied": "These are algebraic carriers. Holomorphic complex finite-dimensional bundles and determinant lines require CKG K4 and the own analytification comparison.",
+      "replacement_prerequisites": [
+        "roadmap:AlgebraicVectorBundles §L0A–L0C/L1A–L2B",
+        "roadmap:ComplexKahlerGeometry §K4 (analytic consumers)"
+      ],
+      "owned_obligations": [
+        "GF01",
+        "GF03"
+      ]
+    },
+    {
+      "old_ref": "roadmap:SmoothBundlesConnections §B1.5/B5",
+      "consumers": [
+        "N1.1",
+        "N1.5",
+        "P4.2"
+      ],
+      "status": "live; smooth/principal restrictions",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "section": "B1.5. Ehresmann connections and Ehresmann’s fibration theorem",
+          "lines": [
+            498,
+            538
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "support_paraphrase": "Smooth complementary distributions, local/maximal lifts and proper-surjective-submersion fibration theorem."
+        },
+        {
+          "path": "TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "section": "B5.0. Horizontal lifts and the group equation",
+          "lines": [
+            1072,
+            1114
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "support_paraphrase": "Complete transport for principal connections by Lie-group evolution; smooth parameter families on common intervals.",
+          "short_excerpt": "arbitrary Ehresmann connections do not inherit this completeness"
+        },
+        {
+          "path": "TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "section": "B5.2. Holonomy and flat connections",
+          "lines": [
+            1209,
+            1292
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SmoothBundlesConnections/README.md",
+          "support_paraphrase": "Flat principal torsor/local-system groupoid and covering comparison, with native fundamental groupoid."
+        }
+      ],
+      "actual_scope": "Valid smooth floor. B1.5 does not claim all nonlinear connections complete; B5 completeness belongs to principal connections.",
+      "not_supplied": "N1.1 nonlinear holomorphic splitting/curvature, N1.2 continuous-time local Lipschitz extension, N1.3 holomorphic parameter dependence and N1.5 complete nonlinear monodromy must remain own results. No SmoothBundlesConnectionsPartII is present in main.",
+      "replacement_prerequisites": [
+        "roadmap:SmoothBundlesConnections §B1.5/B5.0/B5.2",
+        "target:N1.1–N1.5"
+      ],
+      "owned_obligations": [
+        "N1.1",
+        "N1.2",
+        "N1.3",
+        "N1.5"
+      ]
+    },
+    {
+      "old_ref": "roadmap:DifferentialGeometry §Layers 0–1 and Layer 3/3.5",
+      "consumers": [
+        "N1.2",
+        "N1.8",
+        "N1.9"
+      ],
+      "status": "live; distinguish actual smooth floor from own Lipschitz theorem",
+      "live_exact_refs": [
+        {
+          "path": "TauCetiRoadmap/DifferentialGeometry/README.md",
+          "section": "Layers 0–1. Differential forms and exterior derivative",
+          "lines": [
+            268,
+            340
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/DifferentialGeometry/README.md",
+          "support_paraphrase": "Native real smooth forms, wedge, exterior derivative; complex coefficients require CKG K1 comparison."
+        },
+        {
+          "path": "TauCetiRoadmap/DifferentialGeometry/README.md",
+          "section": "Layer 3. Flows, items 3.1–3.5",
+          "lines": [
+            371,
+            401
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/DifferentialGeometry/README.md",
+          "support_paraphrase": "Native local/maximal smooth flows, escape/completeness/naturality and time-dependent smooth flow adapter."
+        }
+      ],
+      "actual_scope": "Correct smooth flow floor. Pinned TauCeti has Geometry/Manifold/Flow/TimeDependent.lean: jointly Cn vector fields, n≥1.",
+      "not_supplied": "Continuous-time uniformly local-Lipschitz fields generated by a merely C1 path do not automatically meet a jointly C1 time-field premise. N1.2 owns that extension; N1.9 owns uniform finite-chart stability and exit control.",
+      "replacement_prerequisites": [
+        "roadmap:DifferentialGeometry §0–1/3.1–3.5",
+        "target:N1.2",
+        "target:N1.9"
+      ],
+      "owned_obligations": [
+        "N1.2",
+        "N1.9"
+      ]
+    },
+    {
+      "old_ref": "roadmap:UniversalCovers §completed covering and lifting interface",
+      "consumers": [
+        "N1.5",
+        "P4.2",
+        "P9.3"
+      ],
+      "status": "live under Completed; replace vague address",
+      "live_exact_refs": [
+        {
+          "path": "Completed/UniversalCovers/README.md",
+          "section": "Standing hypotheses; Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8",
+          "lines": [
+            12,
+            125
+          ],
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/Completed/UniversalCovers/README.md",
+          "support_paraphrase": "Based-path universal cover, covering/homotopy lifting, group action and pointed/unpointed classification with explicit topological hypotheses."
+        }
+      ],
+      "actual_scope": "Use Completed/UniversalCovers and native TauCeti/Mathlib declarations. The smooth/complex chart-comap universal-cover instance is also present in the pinned TauCeti dependency.",
+      "not_supplied": "A covering theorem does not provide nonlinear horizontal completeness or a horizontal-section descent theorem; deck-invariance characterizes descent only for the universal or a specified regular cover, while general cover descent uses its actual equivalence relation.",
+      "replacement_prerequisites": [
+        "roadmap:Completed/UniversalCovers §Stage 0.2–0.4/Stage 1.5/Stage 2.6–2.8",
+        "target:N1.5"
+      ],
+      "owned_obligations": [
+        "N1.5",
+        "N1.7",
+        "P4.2",
+        "P9.3"
+      ]
+    }
+  ],
+  "original_analytic_reference_audit": [
+    {
+      "id": "AD01",
+      "old_reference": "HeegaardFloer §2.2/F0.0; proposed HeegaardFloerPartII F0.0C",
+      "consumers": [
+        "A1.1",
+        "P8.1"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/HeegaardFloer/README.md",
+          "locator": "§2.2/F0.0",
+          "title": "Generic Fredholm maps, sections and determinant lines",
+          "line_start": 1376,
+          "line_end": 1544,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/HeegaardFloer/README.md#L1376-L1544"
+        }
+      ],
+      "supplier_scope": "Real Banach-manifold Fredholm section theory, real stabilized determinant bundle det ker(T) tensor det coker(T)*, overlap/composition signs, and orientation-cover transport. The generic scalar-valued pointwise determinant and stabilization primitives are already native and work over C.",
+      "not_supplied": "No HeegaardFloerPartII directory exists at this main commit. F0.0 is not a holomorphic complex determinant-bundle theorem, and orientation transport is not linear parallel transport. A1.1 uses the DUAL convention.",
+      "replacement_prerequisites": [
+        "native:Mathlib.Analysis.Normed.Operator.Fredholm.Basic — ContinuousLinearMap.IsFredholm, nonempty_fredholmPackage and finite-dimensional kernel/cokernel",
+        "native:TauCeti.Analysis.Fredholm.Stabilization — IsFredholm.exists_stabilization_kernel_coordinates",
+        "native:TauCeti.Analysis.Normed.Operator.Splitting.Family — contDiffAt_kerSection and kernelHomeomorph",
+        "native:TauCeti.LinearAlgebra.Determinant.Line — detLine, detLineCongr and their composition laws",
+        "roadmap:HeegaardFloer §2.2/F0.0 — real stabilization/sign comparison only"
+      ],
+      "owned_obligation": "A1.1 owns the complex holomorphic bundle gluing and canonical section on finite-dimensional complex-manifold bases, the comparison with the dual of the native pointwise determinant line, holomorphic base change and Hilbert-bundle descent. Express finite-dimensional sign calibration and stabilizer comparison as outputs. Remove every proposed-owner reference to F0.0C.",
+      "severity": "critical",
+      "status": "missing_supplier_and_scope_correction",
+      "native_evidence": [
+        {
+          "path": "Mathlib/Analysis/Normed/Operator/Fredholm/Basic.lean",
+          "declarations": "IsFredholm.nonempty_fredholmPackage",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Analysis/Normed/Operator/Fredholm/Basic.lean"
+        },
+        {
+          "path": "TauCeti/Analysis/Fredholm/Stabilization.lean",
+          "declarations": "IsFredholm.exists_stabilization_kernel_coordinates",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Fredholm/Stabilization.lean"
+        },
+        {
+          "path": "TauCeti/Analysis/Normed/Operator/Splitting/Family.lean",
+          "declarations": "contDiffAt_kerSection; kernelHomeomorph",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Normed/Operator/Splitting/Family.lean"
+        },
+        {
+          "path": "TauCeti/LinearAlgebra/Determinant/Line.lean",
+          "declarations": "LinearMap.detLine; detLineCongr",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/LinearAlgebra/Determinant/Line.lean"
+        },
+        {
+          "path": "TauCeti/Analysis/Fredholm/DeterminantLine.lean",
+          "declarations": "IsFredholm.finrank_detLine",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Fredholm/DeterminantLine.lean"
+        }
+      ]
+    },
+    {
+      "id": "AD02",
+      "old_reference": "OperatorTheory §OperatorIdeals OI-B23/OI-B30; complex bounded-Fredholm and local-splitting foundations",
+      "consumers": [
+        "A1.1",
+        "A1.6",
+        "P8.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md",
+          "locator": "OI-B01–OI-B19",
+          "title": "Ideal-family interface",
+          "line_start": 294,
+          "line_end": 333,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md#L294-L333"
+        },
+        {
+          "path": "TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md",
+          "locator": "OI-B29/OI-B30/OI-B23",
+          "title": "Nuclear gauge / Trace-class family / Trace-class family completeness",
+          "line_start": 349,
+          "line_end": 352,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/OperatorTheory/OperatorIdeals/README.md#L349-L352"
+        }
+      ],
+      "supplier_scope": "Finite-gauge ideal carrier, its normed-space structure and two-sided ideal inequalities; nuclear gauge and complete trace-class carrier.",
+      "not_supplied": "No determinant construction, Fredholm-splitting theorem, holomorphic line bundle, general RHP index theorem or trace logarithmic derivative is supplied by OI-B23/B30.",
+      "replacement_prerequisites": [
+        "A1.1: replace this dependency with AD01 native Fredholm/stabilization APIs; trace class is unnecessary for its abstract theorem",
+        "A1.6/P8.2: roadmap:OperatorTheory/OperatorIdeals OI-B01–OI-B19, OI-B23, OI-B29–OI-B30"
+      ],
+      "owned_obligation": "A1.6 constructs the holomorphic-family determinant adapter. P8.2 proves actual trace-class realizability where used; a general Fredholm realization need not be a trace-class perturbation of identity.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD03",
+      "old_reference": "OperatorTheory bounded-operator foundations; proposed Cauchy contour extension; foundation: Fourier–Plancherel, Hilbert-transform bound, Schur estimates",
+      "consumers": [
+        "A1.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/PDE/README.md",
+          "locator": "§2.3/B10",
+          "title": "Calderón–Zygmund theory",
+          "line_start": 1187,
+          "line_end": 1239,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/PDE/README.md#L1187-L1239"
+        }
+      ],
+      "supplier_scope": "PDE B10 includes the real-line Hilbert transform with multiplier -i sign(xi), Cauchy kernel and L2 operator norm one. Native TauCeti SchurTest supplies an unweighted integral-kernel estimate. Native Lp/Fourier/contour Cauchy APIs supply the carriers.",
+      "not_supplied": "The OperatorTheory landing page supplies no numbered Cauchy contour theorem. Real-line boundedness and unweighted Schur do not alone prove cross-branch endpoint estimates or Plemelj on the declared contour class.",
+      "replacement_prerequisites": [
+        "roadmap:PDE §2.3/B10 — real-line Hilbert transform and its L2 multiplier normalization",
+        "native:Mathlib Lp, complex Fourier–Plancherel and bounded linear maps",
+        "native:TauCeti.MeasureTheory.Integral.SchurTest",
+        "native:TauCeti.Analysis.Contour.Cauchy.IntegralFormula and homology Cauchy formula"
+      ],
+      "owned_obligation": "A1.2 owns the contour carrier, coordinate/measure transport, finite C1,alpha-arc decomposition, Plemelj, weighted cross-branch estimate, ray decay, reconstruction and endpoint/removability criteria. Add a weighted Schur sublemma: for the kernel bound C/(s+t) at a transverse vertex use weight s^(-1/2), the identity integral_0^infinity t^(-1/2)/(s+t) dt = pi s^(-1/2), and weighted Cauchy–Schwarz/Fubini. The native unweighted row/column bound is not valid for that kernel.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": [
+        {
+          "path": "TauCeti/MeasureTheory/Integral/SchurTest.lean",
+          "declarations": "lintegral_rpow_lintegral_mul_le",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/MeasureTheory/Integral/SchurTest.lean"
+        }
+      ]
+    },
+    {
+      "id": "AD04",
+      "old_reference": "RandomMatrices §8.3",
+      "consumers": [
+        "A1.6",
+        "P8.2",
+        "P8.3"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/RandomMatrices/README.md",
+          "locator": "§8.3",
+          "title": "Determinantal point processes from continuous kernels",
+          "line_start": 984,
+          "line_end": 1028,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/RandomMatrices/README.md#L984-L1028"
+        }
+      ],
+      "supplier_scope": "Explicitly owns generic trace-class trace, exterior powers, determinant series and trace-norm continuity before specializing to continuous positive Hermitian contraction kernels and determinantal processes.",
+      "not_supplied": "The continuous-kernel point-process constructor has positivity, contraction and continuity hypotheses; it is not the scope restriction of the separately named generic determinant theory. Neither general RHP trace-class realizability nor the holomorphic-family/variational formulas follow from this locator alone.",
+      "replacement_prerequisites": [
+        "roadmap:RandomMatrices §8.3 — generic trace-class determinant, exterior-power series and trace-norm continuity, not its DPP constructor",
+        "roadmap:OperatorTheory/OperatorIdeals OI-B01–OI-B19/OI-B23/OI-B29–OI-B30"
+      ],
+      "owned_obligation": "A1.6 proves holomorphic dependence and compact-uniform determinant convergence using the generic series and continuity; P8.3 proves d log det(I-K) = -Tr((I-K)^(-1)dK) on the invertible locus and the actual integrable-kernel variational identity. Avoid citing a quantitative determinant bound absent from the supplier statement: either prove it as an A1.6 supporting lemma or use continuity on the compact set K0(K) plus a finite-cover argument for compact-uniform convergence.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD05",
+      "old_reference": "OperatorTheory §ToeplitzOperators T3",
+      "consumers": [
+        "P8.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md",
+          "locator": "T3",
+          "title": "The shift algebra and Fredholm symbols",
+          "line_start": 124,
+          "line_end": 187,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md#L124-L187"
+        }
+      ],
+      "supplier_scope": "For continuous invertible matrix symbols on the circle, block Toeplitz Fredholmness and index equal minus determinant winding; Hardy/unitary and finite-block identification laws.",
+      "not_supplied": "Zero index does not imply invertibility for matrix symbols. Scalar Coburn does not extend to blocks. Circle Toeplitz theory does not automatically cover arbitrary contours, sectorial singularities, resonant lattices or ramified RHPs.",
+      "replacement_prerequisites": [
+        "roadmap:OperatorTheory/ToeplitzOperators T1–T3 — fixed-circle Hardy model and matrix-symbol Fredholm index"
+      ],
+      "owned_obligation": "P8.2 owns its chosen closed-contour-to-Hardy comparison, the actual holomorphic family and index-zero verification, then separate sectorial/ramified/resonant adapters. State normalized solvability iff invertibility, not index zero iff solvability.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD06",
+      "old_reference": "FormalLaurentPuiseux §L1–L7",
+      "consumers": [
+        "C1.1"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/FormalLaurentPuiseux/README.md",
+          "locator": "L1",
+          "title": "Formal substitutions and coordinate groups",
+          "line_start": 70,
+          "line_end": 111,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/FormalLaurentPuiseux/README.md#L70-L111"
+        },
+        {
+          "path": "TauCetiRoadmap/FormalLaurentPuiseux/README.md",
+          "locator": "L3",
+          "title": "Residue, primitives and coefficient duality",
+          "line_start": 140,
+          "line_end": 194,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/FormalLaurentPuiseux/README.md#L140-L194"
+        }
+      ],
+      "supplier_scope": "L1 owns coefficient/order/substitution/parameter group laws. L3 ALREADY owns finite-dimensional vector-valued Laurent carriers on HahnModule, basis-independent scalar extension, duality and naturality.",
+      "not_supplied": "All series use valuation topology, with discrete coefficient field. Formal Laurent convergence is not analytic convergence of complex meromorphic germs. L4–L7 concern ramification, algebraic closure and Galois theory and are not necessary for this cancellation lemma.",
+      "replacement_prerequisites": [
+        "roadmap:FormalLaurentPuiseux L1 and L3 — formal coefficient/substitution and finite-dimensional vector-valued comparisons",
+        "native:TauCeti.Analysis.Meromorphic.Germ and PrincipalPart — meromorphicGerms.principalPart, principalPart_eq_iff, principalPart_eq_sum_coeff and analytic regular remainder"
+      ],
+      "owned_obligation": "C1.1 owns the finite-dimensional convergent-germ adapter to the native scalar principal part, its basis independence, the exact finite cancellation identity, analytic denominator bound, compact-uniform convergence and corrected nonlinear-parameter substitution. It must not reconstruct L3 vector-valued formal Laurent calculus or assert that valuation convergence proves complex compact-uniform convergence.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": [
+        {
+          "path": "TauCeti/Analysis/Meromorphic/PrincipalPart.lean",
+          "declarations": "principalPart_eq_iff; principalPart_eq_sum_coeff; coe_sub_evalInvSub_principalPart",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Meromorphic/PrincipalPart.lean"
+        }
+      ]
+    },
+    {
+      "id": "AD07",
+      "old_reference": "FormalLaurentPuiseux §L1–L7",
+      "consumers": [
+        "P1.4",
+        "P9.3"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/FormalLaurentPuiseux/README.md",
+          "locator": "L1–L4",
+          "title": "Formal substitutions; continuous differentials; residue; ramified levels",
+          "line_start": 70,
+          "line_end": 232,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/FormalLaurentPuiseux/README.md#L70-L232"
+        },
+        {
+          "path": "TauCetiRoadmap/FormalLaurentPuiseux/README.md",
+          "locator": "L5–L7",
+          "title": "Newton–Puiseux; finite extensions; absolute Galois topology",
+          "line_start": 233,
+          "line_end": 346,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/FormalLaurentPuiseux/README.md#L233-L346"
+        }
+      ],
+      "supplier_scope": "Formal substitutions, rank-one differential/residue calculus, ramified exponent embeddings, finite-extension and formal algebraic-closure descriptions under their separate characteristic/algebraic-closedness hypotheses.",
+      "not_supplied": "No Levelt–Turrittin connection theorem, Katz-slope classification, analytic Stokes data or completeness of a Painlevé degeneration list. L7 absolute Galois topology is irrelevant unless a target explicitly uses inertia/generator comparisons.",
+      "replacement_prerequisites": [
+        "roadmap:FormalLaurentPuiseux L1–L4; use L5–L6 only for a stated Newton–Puiseux/finite-extension step"
+      ],
+      "owned_obligation": "P1.1–P1.4 own the rank-two formal-connection classification and marking/time reductions; P9.3 owns the boundary parameter dictionary. Prune the blanket L1–L7 edge unless the actual proof invokes L7.",
+      "severity": "moderate",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD08",
+      "old_reference": "LieGroupoidsPoisson §G4.6A; proposed complex relative finite-algebra extension",
+      "consumers": [
+        "C1.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/LieGroupoidsPoisson/README.md",
+          "locator": "G4.6A",
+          "title": "Linear structures, within Linear Poisson structures and coadjoint orbits",
+          "line_start": 1323,
+          "line_end": 1354,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/LieGroupoidsPoisson/README.md#L1323-L1354"
+        }
+      ],
+      "supplier_scope": "Positive Lie–Poisson on the dual of a finite-dimensional real Lie algebra; negative algebroid convention; coadjoint equivariance; fibre-negation sign comparison.",
+      "not_supplied": "No relative complex algebraic/analytic O_B-Lie algebra, arbitrary-base-change symmetric-algebra construction, finite-flat algebra Frobenius pairing, complex quotient existence or relative orbit flatness.",
+      "replacement_prerequisites": [
+        "roadmap:LieGroupoidsPoisson G4.6A — smooth real sign convention and fibre-negation comparison",
+        "roadmap:AlgebraicVectorBundles L0A–L0C/L1A–L1B — finite locally free duals/tensors, at their actual scope"
+      ],
+      "owned_obligation": "C1.2 owns the relative bracket on Sym(L), its sheaf/local-frame gluing and Jacobi/base-change laws, GL_n(A) and its coadjoint action, holomorphic/algebraic sign comparison and conditional KKS/reduction transport. The reusable complex-relative theorem is an owned target here, not a proposed external prerequisite.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD09",
+      "old_reference": "foundation: relative Cartier divisors, curve differential forms and residue/dualizing-module comparison for the optional residue adapter",
+      "consumers": [
+        "C1.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "locator": "§2.20",
+          "title": "Relative dualising complexes and modules, Serre duality, curve comparison",
+          "line_start": 4275,
+          "line_end": 4389,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md#L4275-L4389"
+        }
+      ],
+      "supplier_scope": "Relative dualizing machinery with its flat/finite-presentation/CM and base-change hypotheses, and smooth differential-form comparisons. This is a lower carrier theorem, not the exact divisor-residue comparison.",
+      "not_supplied": "The canonical pairing for a finite flat Cartier divisor in a smooth curve, its explicit residue normalization and analytic realization are not directly stated by this supplier. A general finite locally free algebra need not be Frobenius.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.20 — relative dualizing module and smooth-curve differential form comparison under its stated hypotheses",
+        "target:C1.2 — finite-flat Cartier adjunction/residue supporting theorem"
+      ],
+      "owned_obligation": "C1.2 includes, as an additional-hypothesis theorem, the adjunction omega_(P/B) ≅ omega_(C/B)(P)|P and the finite-flat duality p_*omega_(P/B) ≅ Hom_B(p_*O_P,O_B), with residue-normalized trace, base change and parameter-change compatibility. For Q monic of degree m, prove perfectness of lambda_Q(f) = coefficient_(m-1)(f mod Q), then compare with residues and glue. Replace every optional label by this explicit theorem.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD10",
+      "old_reference": "SymplecticGeometry §HamiltonianReduction R2–R3",
+      "consumers": [
+        "P11.1",
+        "C1.2"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md",
+          "locator": "R2",
+          "title": "Coadjoint orbits and KKS",
+          "line_start": 127,
+          "line_end": 156,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md#L127-L156"
+        },
+        {
+          "path": "TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md",
+          "locator": "R3",
+          "title": "Regular reduction and its universal property",
+          "line_start": 187,
+          "line_end": 261,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SymplecticGeometry/HamiltonianReduction/README.md#L187-L261"
+        }
+      ],
+      "supplier_scope": "Real smooth finite-dimensional homogeneous coadjoint-orbit KKS geometry. Regular reduction with equivariant moment map, regular value and free proper action, unique descended form, shifting and reduction in stages.",
+      "not_supplied": "Complex holomorphic/algebraic quotient existence, GIT stability, relative orbit flatness through pole collision, smoothness of the special fibre or base-change compatibility of a collision quotient.",
+      "replacement_prerequisites": [
+        "roadmap:SymplecticGeometry/HamiltonianReduction R2 and R3 — smooth-real sign and regular-reduction comparison only"
+      ],
+      "owned_obligation": "P11.1 constructs the actual complex relative local-condition orbit/reduction family on its stated locus; proves quotient existence, smoothness/flatness, form descent and comparison with the connection moduli. C1.2 only transports already verified data. Do not use free-proper real reduction as an automatic complex GIT quotient theorem.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD11",
+      "old_reference": "JacobianChallenge §Layer C (with broad SchemeAndStackFoundations dependency lists)",
+      "consumers": [
+        "P6.3"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/JacobianChallenge/README.md",
+          "locator": "Layer C",
+          "title": "Relative coherent cohomology and base change",
+          "line_start": 143,
+          "line_end": 217,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/JacobianChallenge/README.md#L143-L217"
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "locator": "§2.7",
+          "title": "Cohomology with supports and local cohomology",
+          "line_start": 3482,
+          "line_end": 3538,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md#L3482-L3538"
+        },
+        {
+          "path": "TauCetiRoadmap/SchemeAndStackFoundations/README.md",
+          "locator": "§2.6",
+          "title": "Quasi-coherent cohomology",
+          "line_start": 3437,
+          "line_end": 3481,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/SchemeAndStackFoundations/README.md#L3437-L3481"
+        }
+      ],
+      "supplier_scope": "Jacobian Layer C supplies coherent proper pushforwards and finite cohomology without flatness, plus distinct flat-base-change and proper-flat-coefficient cohomology/base-change criteria. SSF2.7 supplies localization/excision and Noetherian supported/native local-cohomology comparisons.",
+      "not_supplied": "A specific first logarithmic boundary-layer space is one-dimensional, injects into H1_D, has locally free relative pushforward or commutes with arbitrary base change. Constant fibre dimension on a nonreduced base does not suffice.",
+      "replacement_prerequisites": [
+        "roadmap:SchemeAndStackFoundations §2.6 — actual coherent/derived sheaf-cohomology carrier",
+        "roadmap:SchemeAndStackFoundations §2.7 — supported cohomology, localization triangle and Noetherian comparison",
+        "roadmap:JacobianChallenge Layer C, item 2 — proper flat-coefficient cohomology/base-change criteria"
+      ],
+      "owned_obligation": "P6.3 constructs the logarithmic tangent bundle and boundary quotient for the actual family, represents the first boundary-layer line by the derived/cohomological complex, proves its injection and intersection-matrix identity, and proves the exact base-change criterion on the chosen base. For arbitrary nonreduced base change, exhibit a locally split finite-projective complex in the relevant degrees or the surjectivity/flatness conditions that imply the claimed locally free rank-one pushforward. It must not assume local-cohomology dimension one or identify the full H1_D with the time line.",
+      "severity": "major",
+      "status": "scope_correction",
+      "native_evidence": []
+    },
+    {
+      "id": "AD12",
+      "old_reference": "AnalyticNumberTheoryPartII §§4.3–4.3a",
+      "consumers": [
+        "P10.3"
+      ],
+      "verified_targets": [],
+      "supplier_scope": "No such roadmap is present in the upstream tree. No Barnes G function was found in the pinned Mathlib/TauCeti source search (references to D. W. Barnes in Lie algebra files are unrelated).",
+      "not_supplied": "The canonical Barnes G carrier, normalization, recurrence/domain bookkeeping, zeros and sectorial asymptotics.",
+      "replacement_prerequisites": [
+        "target:A1.7 — independent canonical Barnes G construction",
+        "source:NIST DLMF §5.17, equations 5.17.1/5.17.3/5.17.5",
+        "source:Nemes, arXiv:1406.2535v2, §1 equation (1.1), Theorems 1.1–1.2; proofs §§2–3"
+      ],
+      "owned_obligation": "Append independent framework target A1.7, which retains the separately reusable theorem that constructs the canonical entire Barnes G from its Weierstrass product, proves normalization, the Gamma recurrence on its actual meromorphic domain, zeros at z=-n of multiplicity n+1 and no other zeros, and branch-pinned logarithmic sector asymptotics with an explicit uniform remainder. This supporting theorem precedes the two connection-formula applications and does not depend on them. Name its source formulas; do not define G by recurrence plus G(1)=1 alone.",
+      "severity": "critical",
+      "status": "missing_supplier",
+      "native_evidence": []
+    },
+    {
+      "id": "AD13",
+      "old_reference": "RandomMatrices §8.4–8.5",
+      "consumers": [
+        "P10.3",
+        "P10.4"
+      ],
+      "verified_targets": [
+        {
+          "path": "TauCetiRoadmap/RandomMatrices/README.md",
+          "locator": "§8.4",
+          "title": "Bulk and edge limits",
+          "line_start": 1029,
+          "line_end": 1045,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/RandomMatrices/README.md#L1029-L1045"
+        },
+        {
+          "path": "TauCetiRoadmap/RandomMatrices/README.md",
+          "locator": "§8.5",
+          "title": "GOE: Pfaffians and Painlevé II",
+          "line_start": 1046,
+          "line_end": 1062,
+          "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/ffac5139fe4794a132eb540a89e1b973070aad69/TauCetiRoadmap/RandomMatrices/README.md#L1046-L1062"
+        }
+      ],
+      "supplier_scope": "Airy function with ODE, normalization and required uniform asymptotic tail estimates; Airy Fredholm distribution; scalar Hastings–McLeod existence/uniqueness, real pole-freeness, and F1/F2 Fredholm differential identities.",
+      "not_supplied": "Intrinsic connection-moduli phase point, its observer/jet comparison, normalization dictionary with a chosen Painlevé Hamiltonian or all ILP18 connection constants.",
+      "replacement_prerequisites": [
+        "roadmap:RandomMatrices §8.4 — Airy/Fredholm normalization and tails",
+        "roadmap:RandomMatrices §8.5 — exact Hastings–McLeod scalar theorem and F1/F2 identities"
+      ],
+      "owned_obligation": "P10.4 owns only the phase-point/jet adapter and independence of reference time, with complex analytic continuation comparison. P10.3 owns conversion into its tau normalization and the selected connection-constant calculations. Do not duplicate scalar HM existence/pole-freeness.",
+      "severity": "none",
+      "status": "verified_keep_with_boundary",
+      "native_evidence": []
+    },
+    {
+      "id": "AD14",
+      "old_reference": "foundation: holomorphic functions, Rouché theorem and argument principle",
+      "consumers": [
+        "A1.6"
+      ],
+      "verified_targets": [],
+      "supplier_scope": "Pinned native TauCeti.Analysis.Complex.Conformal.Rouche supplies disc and null-homologous closed piecewise-C1 contour Rouché theorems with multiplicity/winding counts, and Analysis.Analytic.ZeroCount supplies the zero-count carrier.",
+      "not_supplied": "An arbitrary bounded domain with an unspecified piecewise smooth boundary is not yet a chosen admissible boundary cycle; identify winding one inside and zero outside, with holes oriented correctly.",
+      "replacement_prerequisites": [
+        "native:TauCeti.Analysis.Complex.Conformal.Rouche — rouche, rouche_nullHomologous",
+        "native:TauCeti.Analysis.Analytic.ZeroCount"
+      ],
+      "owned_obligation": "A1.6 owns the boundary-cycle/domain adapter or states the local-zero conclusion first for finitely many disjoint closed discs. Preserve the more general domain theorem by explicitly supplying a finite positively oriented piecewise-C1 boundary cycle with its winding characterization. Native Rouché itself is consumed.",
+      "severity": "moderate",
+      "status": "scope_correction",
+      "native_evidence": [
+        {
+          "path": "TauCeti/Analysis/Complex/Conformal/Rouche.lean",
+          "declarations": "rouche; rouche_nullHomologous",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Complex/Conformal/Rouche.lean"
+        },
+        {
+          "path": "TauCeti/Analysis/Analytic/ZeroCount.lean",
+          "declarations": "analytic zero-count carrier",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Analysis/Analytic/ZeroCount.lean"
+        }
+      ]
+    },
+    {
+      "id": "AD15",
+      "old_reference": "foundation: bounded-operator Neumann series and holomorphic inversion",
+      "consumers": [
+        "A1.1",
+        "A1.3"
+      ],
+      "verified_targets": [],
+      "supplier_scope": "Mathlib.Analysis.Analytic.Constructions provides analyticAt_inverse on Banach-algebra units, and the normed-algebra geometric-series API supplies a concrete inverse when the norm is below one.",
+      "not_supplied": "A topology/analytic notion on operator families, all variable-space transport or the connection-moduli RHP realization.",
+      "replacement_prerequisites": [
+        "native:Mathlib.Analysis.Analytic.Constructions — analyticAt_inverse and analyticAt_inverse_one_sub",
+        "native:Mathlib bounded-operator Banach algebra and Neumann series"
+      ],
+      "owned_obligation": "Use these APIs for the fixed-Hilbert-space inverse and then prove the map from the actual jump Banach space L2 intersection Linfinity into bounded operators is continuous linear/bilinear. A1.3 proves the stated rho-uniform estimate and holomorphic dependence; A1.1 compares local inverses to the stabilized kernel atlas.",
+      "severity": "moderate",
+      "status": "scope_correction",
+      "native_evidence": [
+        {
+          "path": "Mathlib/Analysis/Analytic/Constructions.lean",
+          "declarations": "analyticAt_inverse; analyticAt_inverse_one_sub",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Analysis/Analytic/Constructions.lean"
+        }
+      ]
+    }
+  ],
+  "major_resolution_summary": [
+    "Replace nonexistent FormalConnectionsOpers, PadicDifferential..., AlgebraicModuliForArithmeticGeometry and ComplexComparisonPartII suppliers by real current foundations and explicit M1.1–M2.3/M4.1 constructions.",
+    "Use Completed/UniversalCovers, the native complex Fredholm/stabilization APIs, native meromorphic curve functions and actual Frobenius coordinates.",
+    "Distinguish finite-inertia coarse-space criteria from central Gm rigidification; own reductive invariant theory/GIT and analytic presentation comparisons.",
+    "Separate proper relative direct images from absolute proper coherent GAGA; consume only the chow_lemma subtarget, not its independent flattening branch.",
+    "Retain relative p^(-1)O_B-linearity of the connection deformation complex, nonreduced Picard coefficients, affine square-zero tests and all-source resonant lattice comparisons.",
+    "Use pointwise determinant continuity plus compact image instead of an unsupported quantitative supplier bound; construct stabilization differentials before asserting infinite-dimensional traces.",
+    "Add the independent A1.7 Barnes G target instead of attributing it to an unrelated number-theory roadmap.",
+    "Keep full irregular properness, boundary families, actual RHP realizations, collision admissibility and all application comparisons in their specified P targets."
+  ],
+  "review_records": [
+    "submission_review_geometry_r1.json",
+    "submission_review_analysis_r1.json",
+    "submission_review_geometry_r2.json",
+    "submission_review_analysis_r2.json",
+    "submission_review_geometry_r3.json",
+    "submission_review_analysis_r3.json"
+  ]
+}

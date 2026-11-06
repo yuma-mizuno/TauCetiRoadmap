@@ -1,0 +1,47 @@
+{
+  "meaning": "Mechanical consistency and content preservation; not proof of mathematical truth or human approval.",
+  "passed": true,
+  "checks": 4329,
+  "passed_checks": 4329,
+  "failed_checks": 0,
+  "baseline_source_independently_compared": true,
+  "counts": {
+    "parts": 6,
+    "general_parts": 4,
+    "layers": 19,
+    "targets": 78,
+    "general_targets": 30,
+    "api_laws": 217,
+    "diagnostics": 263,
+    "internal_edges": 333,
+    "supporting_constructions": 32
+  },
+  "external_contracts": 35,
+  "distinct_supplier_files": 38,
+  "source_records": 34,
+  "categories": {
+    "targets": 657,
+    "dependencies": 583,
+    "documents": 1308,
+    "boundaries": 65,
+    "registries": 8,
+    "supplier_files": 49,
+    "links": 311,
+    "timeless_prose": 20,
+    "metadata": 1,
+    "sources": 89,
+    "preservation": 697,
+    "baseline_source": 541
+  },
+  "inputs_sha256": {
+    "README.md": "81c15816b186b118f470059d020987aef9f7959fc5c5c86e0be623a96f312ba1",
+    "README.ja.md": "e10c2a2b107f005b17727c93a07ff0c438d769805a34e54649ae13b23394a046",
+    "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+    "sources.toml": "fa86367fd6c42852dd4f607c7a7cd031166dc8fbe3258cba0703b0d12f251d8d",
+    "design/plan.json": "dfb8c5e9f0aa3abf5dbebf5934a9c9cda302627445661d00d1b8c4963470f524",
+    "design/dependencies.json": "230b1ce7abfeef4c94a86733361ea90f52606ee5f7a554a734f67bc5037d7091",
+    "design/reuse_graph.json": "23a697297abee6f66026b2b2a1c9695d1a243f7696b4541f447189112d024439",
+    "design/reuse_registry.json": "485f3b461b98967a24537d0334df41e690b9de673e2ff8da49f40bd7b3cf706b"
+  },
+  "failures": []
+}

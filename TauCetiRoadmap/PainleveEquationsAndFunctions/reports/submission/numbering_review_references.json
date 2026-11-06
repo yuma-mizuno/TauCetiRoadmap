@@ -1,0 +1,96 @@
+{
+  "schema": "tauceti-roadmap/numbering-reference-review-v1",
+  "verdict": "pass_within_scope",
+  "reviewer": "Separate delegated reference-review session within the authoring task",
+  "model": "ChatGPT (GPT-6 Astra Pro)",
+  "baseline_commit": "089ae2b8698b5e01523978ba6797e8891dc0a0dd",
+  "scope": "Reference meaning, numerical readdressing, noncontiguous analytic ranges, source/supplier numbering, English/Japanese agreement of references, and file/fragment links in the ten-layer reorganization.",
+  "reviewed_snapshot_sha256": {
+    "README.md": "1f4af5281c9a10174e5ea01e5254689a999161ab7f638423a01bdc7927b9484e",
+    "README.ja.md": "6cacf36f53fdd2c8b504655e3c3a5de223c3243c7e5f0791b869681bc67b6196",
+    "design/plan.json": "83feeafa7e754ca6d8bb9a4ecbdf54257e6a31265c9243df553c69aad8e624e5",
+    "design/dependencies.json": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
+    "design/reuse_graph.json": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
+    "design/reuse_registry.json": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
+    "sources.toml": "5ecb724f6ee828771d54e919092bd2461d3a6ee4f611710ab99dc6b11887e293",
+    "Suggested.lean": "e57dc5d04c780e0e1cfa6c1af488a69956263fe22814b035d6a9c74a3f43c68c",
+    "reports/submission/numbering.json": "e6bb8efcb637b470d80fed7eab1918276d6f30c9e9caed9a1cf5780004e3b598"
+  },
+  "findings": [
+    {
+      "id": "NUMREF-01",
+      "severity": "must_fix",
+      "status": "closed",
+      "title": "Obsolete P7 label in the surface dependency contract",
+      "observed": "The first integrated snapshot retained P7 constructs the geometric transformations in README.md and design/dependencies.json, although no such layer remained.",
+      "required_fix": "Use the exact new transformation target range5.4–5.6 in the owned extension text and keep the translated row aligned.",
+      "verification": "The final English row and structured owned_here use5.4–5.6; the Japanese local ownership range is aligned. The only remaining letter-number references in the live documents are the legitimate external G4.6A and scalar equation P34."
+    }
+  ],
+  "open_findings": [],
+  "verification": [
+    {
+      "check": "Target-level plan string reference comparison",
+      "count": 3359,
+      "result": "pass",
+      "method": "Independent comparison of all paired scalar strings in the78 target objects after context-qualified legacy-address substitution and expansion of legacy layer phrases. No numerical sequence mismatch."
+    },
+    {
+      "check": "English and Japanese complete target blocks",
+      "count": 156,
+      "result": "pass",
+      "method": "Compare all78 owning target blocks in each language against the pre-numbering text with independently qualified and mapped addresses. No numerical sequence mismatch; new heading levels and role labels do not affect the mathematical references."
+    },
+    {
+      "check": "Local and cross-document links",
+      "english": 160,
+      "japanese": 159,
+      "result": "pass",
+      "method": "Resolve every local path and explicit fragment, including cross-language links."
+    },
+    {
+      "check": "Unique explicit anchors",
+      "english": 131,
+      "japanese": 131,
+      "result": "pass"
+    },
+    {
+      "check": "External URL multiset",
+      "result": "pass",
+      "method": "Each language retains exactly the original external URLs with the original multiplicities."
+    },
+    {
+      "check": "External dependency contracts",
+      "count": 35,
+      "result": "pass",
+      "method": "Supplier IDs, paths, supplied statements and source-section numbers unchanged. The sole section-string change renumbers local consumer commentary M1.1 to1.1 in formal-series. All consumer IDs map exactly."
+    },
+    {
+      "check": "Bibliographic source records",
+      "count": 34,
+      "result": "pass",
+      "method": "All source data outside cited_for are unchanged except two explicitly local roadmap pointers: VDPS09 roadmap9.4→7.4, and GMR23 correction now names the generic lemma9.1 and its application9.5. Cited_for arrays map exactly; source theorem/section/page/equation numerals remain unchanged."
+    },
+    {
+      "check": "Split analytic ownership ranges",
+      "result": "pass",
+      "detail": "The seven general analytic targets are exactly6.1,8.1–8.4,9.3–9.4. The appendix and main scope table retain that set; no endpoint-only6.1–8.4 range is used to represent it."
+    },
+    {
+      "check": "Mixed-scope relative references",
+      "result": "pass",
+      "detail": "The Japanese five-point RH paragraph maps the cited general Betti result to2.5 and its own strong connection to2.8. The appendix shared-theorem table maps to2.4,0.4,0.5. N range endpoints, C/P local references inside source descriptions, and residual P11 plan metadata are correctly mapped."
+    },
+    {
+      "check": "Obsolete local layer prefixes and doubled prefixes",
+      "result": "pass",
+      "detail": "No obsolete N/M/A/C/P/G local layer or target label survives in the live English/Japanese specifications. Legitimate supplier G4.6A and equation P34 are retained; no doubled legacy prefix is introduced."
+    }
+  ],
+  "limitations": [
+    "This is an editorial/reference-preservation review. It does not certify the78 construction/theorem targets or replace the previously scoped mathematical reviews.",
+    "External papers were not newly reread for this numbering-only review; their citation locators were checked for preservation against the published pre-numbering snapshot.",
+    "No Lean build, roadmap worker, AI-provider job, PR creation or external message was run as part of this review.",
+    "The reviewer had previously prepared the context-qualification manifest, so this is a separately executed integrated-candidate review within the authoring task, not an independent human review."
+  ]
+}

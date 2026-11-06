@@ -17,8 +17,8 @@ also requires the constructions, full basic API, naturality, comparisons and app
 stated there. The theorem bodies marked `sorry` are proof targets, not completed proofs.
 
 The prototypes concern the reusable floor: the actual tangent splitting and its vertical
-curvature (N1.1), an autonomous specialization of proper-semiconjugacy completeness (N1.4),
-and evaluation of a holomorphic observation along a curve (N1.7). They use native Mathlib
+curvature (0.1), an autonomous specialization of proper-semiconjugacy completeness (0.4),
+and evaluation of a holomorphic observation along a curve (0.7). They use native Mathlib
 tangent bundles and hom bundles, Tau Ceti's maximal-flow domain and completeness predicate,
 and Tau Ceti's meromorphic functions on Riemann surfaces. They do not replace these carriers
 with private versions. The full time-dependent continuation theorem, moduli constructions,
@@ -33,7 +33,7 @@ open scoped Manifold ContDiff
 
 namespace TauCetiRoadmap.PainleveEquationsAndFunctions
 
-/-! ## N1.1: a splitting of the actual tangent map -/
+/-! ## 0.1: a splitting of the actual tangent map -/
 
 section NonlinearConnection
 
@@ -68,26 +68,26 @@ def NonlinearConnection.horizontal (h : NonlinearConnection I J proj) (x : M) :
   (h.lift x).range
 
 /-- The vertical and horizontal subspaces are complementary; this is a consequence of the
-right-inverse identity, rather than additional data in the connection object (N1.1). -/
+right-inverse identity, rather than additional data in the connection object (0.1). -/
 theorem NonlinearConnection.isCompl_vertical_horizontal (h : NonlinearConnection I J proj)
     (x : M) : IsCompl (mfderiv I J proj x).ker (h.horizontal x) := by
   sorry
 
 /-- The horizontal spaces form a `C¹` distribution in Tau Ceti's native distribution API,
 of rank equal to the dimension of the base. This constructs local frames from the tangent
-splitting; a distribution or frame is not assumed as additional data (N1.1). -/
+splitting; a distribution or frame is not assumed as additional data (0.1). -/
 theorem NonlinearConnection.isContMDiffDistribution_horizontal
     [FiniteDimensional 𝕜 E] [FiniteDimensional 𝕜 F]
     (h : NonlinearConnection I J proj) :
     TauCeti.IsContMDiffDistribution I 1 (Module.finrank 𝕜 F) h.horizontal := by
   sorry
 
-/-- Lift an actual base vector field through the specified tangent splitting (N1.1). -/
+/-- Lift an actual base vector field through the specified tangent splitting (0.1). -/
 def NonlinearConnection.liftVectorField (h : NonlinearConnection I J proj)
     (X : ∀ b : B, TangentSpace J b) : ∀ x : M, TangentSpace I x :=
   fun x ↦ h.lift x (X (proj x))
 
-/-- Curvature in the sign convention `[hX,hY] - h[X,Y]` (N1.1). The expression uses
+/-- Curvature in the sign convention `[hX,hY] - h[X,Y]` (0.1). The expression uses
 Mathlib's manifold Lie bracket and is subsequently proved to be a vertical tensor. -/
 def NonlinearConnection.curvatureOn (h : NonlinearConnection I J proj)
     (X Y : ∀ b : B, TangentSpace J b) (x : M) : TangentSpace I x :=
@@ -95,7 +95,7 @@ def NonlinearConnection.curvatureOn (h : NonlinearConnection I J proj)
     h.lift x (mlieBracket J X Y (proj x))
 
 /-- Curvature takes values in the vertical tangent space. Neither flatness nor any global
-existence hypothesis is used (N1.1). -/
+existence hypothesis is used (0.1). -/
 theorem NonlinearConnection.curvatureOn_mem_vertical
     [FiniteDimensional 𝕜 E] [FiniteDimensional 𝕜 F] [I.Boundaryless] [J.Boundaryless]
     (h : NonlinearConnection I J proj)
@@ -107,16 +107,16 @@ theorem NonlinearConnection.curvatureOn_mem_vertical
 
 end NonlinearConnection
 
-/-! ## N1.4: proper semiconjugacy, with a possibly singular target -/
+/-! ## 0.4: proper semiconjugacy, with a possibly singular target -/
 
-/-- Autonomous specialization of N1.4 on the native maximal-flow carrier. A proper
+/-- Autonomous specialization of 0.4 on the native maximal-flow carrier. A proper
 semiconjugacy to a complete continuous flow implies completeness of the source field.
 The target is only a topological space; its transport need not be differentiable, and the
 semiconjugacy need not be injective or locally invertible. Properness is stated explicitly
 as compactness of inverse images, exactly the condition used in the continuation argument.
 
 The semiconjugacy identity is required at every point and every time of its maximal-flow
-domain, including points on exceptional fibres. The full N1.4 theorem concerns piecewise
+domain, including points on exceptional fibres. The full 0.4 theorem concerns piecewise
 `C¹` base paths and continuous-time lifted equations; it is not replaced by this autonomous
 specialization. -/
 theorem isCompleteVectorField_of_proper_semiconjugacy
@@ -135,13 +135,13 @@ theorem isCompleteVectorField_of_proper_semiconjugacy
     TauCeti.IsCompleteVectorField X := by
   sorry
 
-/-! ## N1.7: observations with the exceptional constant-infinity case excluded explicitly -/
+/-! ## 0.7: observations with the exceptional constant-infinity case excluded explicitly -/
 
 /-- A holomorphic observation on a complex phase manifold, evaluated on a holomorphic
 curve, defines a native meromorphic function as soon as one value is finite. The witness
 is essential: a curve can lie entirely in the infinity divisor even if the observation is
 nonconstant on the phase space. No connection, completeness or symplectic hypothesis is
-needed for this evaluation operation (N1.7). -/
+needed for this evaluation operation (0.7). -/
 def meromorphicObservation
     {E M S : Type*} [NormedAddCommGroup E] [NormedSpace ℂ E]
     [FiniteDimensional ℂ E]

@@ -1,0 +1,165 @@
+{
+  "schema": "tauceti-roadmap/numbering-review-v1",
+  "reviewer": "ChatGPT (GPT-6 Astra Pro), separate delegated geometry/structure reviewer session",
+  "verdict": "pass_within_scope",
+  "scope": "Independent review of numerical regrouping, actual changed target text, source/reference preservation and reusable mathematical organization. This is not a renewed proof or correctness review of every theorem.",
+  "previous_commit": "089ae2b8698b5e01523978ba6797e8891dc0a0dd",
+  "snapshot_sha256": {
+    "README.md": "1f4af5281c9a10174e5ea01e5254689a999161ab7f638423a01bdc7927b9484e",
+    "README.ja.md": "6cacf36f53fdd2c8b504655e3c3a5de223c3243c7e5f0791b869681bc67b6196",
+    "design/plan.json": "83feeafa7e754ca6d8bb9a4ecbdf54257e6a31265c9243df553c69aad8e624e5",
+    "design/dependencies.json": "4d0fd642608377030eb7a818b2135207bb1d97b6976857735298c44ce90dc310",
+    "design/reuse_graph.json": "d2d3682b09859f66dd5c63aca4182fdbd26cb2c90b70e0f655ba371ff0743406",
+    "design/reuse_registry.json": "ebd6b01b3087fabb7b4f11ddfda325488653695583d00916870792569c8fa39e",
+    "sources.toml": "5ecb724f6ee828771d54e919092bd2461d3a6ee4f611710ab99dc6b11887e293",
+    "Suggested.lean": "e57dc5d04c780e0e1cfa6c1af488a69956263fe22814b035d6a9c74a3f43c68c",
+    "reports/submission/numbering.json": "e6bb8efcb637b470d80fed7eab1918276d6f30c9e9caed9a1cf5780004e3b598"
+  },
+  "coverage": {
+    "targets": 78,
+    "layers": 10,
+    "layer_target_counts": [
+      9,
+      6,
+      10,
+      12,
+      9,
+      6,
+      5,
+      5,
+      8,
+      8
+    ],
+    "general_targets": 30,
+    "painleve_targets": 44,
+    "independent_five_point_targets": 4,
+    "internal_edges": 333,
+    "api_laws": 217,
+    "diagnostics": 263,
+    "supporting_constructions": 32,
+    "forward_prerequisite_edges": 0
+  },
+  "content_audit": {
+    "method": "Compared the actual old and new target dictionaries leaf by leaf. Explicit target substitutions were checked independently of the migration script; all remaining contextual-reference/ownership-prose changes were read in context. Mathematical formulas and bibliographic source locators were compared separately.",
+    "initial_candidate_changed_string_leaves": 983,
+    "explicit_reference_substitutions": 781,
+    "semantic_part_labels": 78,
+    "contextual_reference_or_prose_leaves_inspected": 124,
+    "dict_or_list_structure_changes": 0,
+    "changed_target_math_spans": 0,
+    "final_followup": "Re-read the final sentence-case correction and confirmed the final core hashes; its target statement changes only capitalization after the reference migration.",
+    "document_formula_multisets": {
+      "README.md": {
+        "before": 249,
+        "after": 249,
+        "exact_multiset_preserved": true
+      },
+      "README.ja.md": {
+        "before": 237,
+        "after": 237,
+        "exact_multiset_preserved": true
+      }
+    },
+    "external_url_multisets": {
+      "README.md": {
+        "before": 56,
+        "after": 56,
+        "exact_multiset_preserved": true
+      },
+      "README.ja.md": {
+        "before": 56,
+        "after": 56,
+        "exact_multiset_preserved": true
+      }
+    },
+    "source_registry_non_cited_for_changes": [
+      {
+        "source": "VDPS09",
+        "field": "version_note",
+        "before": "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §9.4; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved.",
+        "after": "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.4; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved."
+      },
+      {
+        "source": "GMR23",
+        "field": "locator",
+        "before": "Theorem 2, pp. 1391–1392, (12)–(15), only with the corrected coefficient-index lemma in roadmap 11.1; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1 p.1441, explicitly nonramified",
+        "after": "Theorem 2, pp. 1391–1392, (12)–(15), only with the corrected coefficient-index lemma in target 9.1, applied in target 9.5; Definitions 3–4 and Theorem 12, §4.2, pp. 1428–1429; brackets (96)–(97); Theorem 13, §4.3, pp. 1435–1436; §5.1 p.1441, explicitly nonramified"
+      }
+    ],
+    "surviving_old_layer_addresses_in_active_files": {
+      "README.md": [],
+      "README.ja.md": [],
+      "design/plan.json": [],
+      "design/dependencies.json": [],
+      "design/reuse_graph.json": [],
+      "design/reuse_registry.json": [],
+      "sources.toml": [],
+      "Suggested.lean": []
+    }
+  },
+  "organization": {
+    "assessment": "Each of the ten layers has a mathematical construction or theorem package as its outcome. The twelve classical construction targets are coherent specializations of earlier general theories; target count alone was not used as the measure of complexity.",
+    "intrinsic_coordinate_boundary": "Intrinsic tau sections occupy Layer 6; classical coordinate comparisons occupy Layer 7. Painlevé targets in Layers 3–6 have no transitive coordinate prerequisite.",
+    "reusable_general_targets": [
+      "0.1–0.9",
+      "1.1–1.6",
+      "2.1–2.6",
+      "6.1",
+      "8.1–8.4",
+      "9.1–9.4"
+    ],
+    "independent_application_targets": "2.7–2.10",
+    "reuse_visibility": "The leading EN/JA tables list the same 30 general targets explicitly. Mixed layers label each target by scope, and the independent five-point application is visibly separated from the general construction."
+  },
+  "findings": [
+    {
+      "id": "NR-GEO-01",
+      "severity": "medium",
+      "status": "closed",
+      "problem": "The surfaces contract retained old P6/P7 layer addresses in English/Japanese prose and design/dependencies.json.",
+      "resolution": "Boundary comparisons now reference targets 5.1–5.3 and transformations targets 5.4–5.6; the active-file old-layer scan is empty.",
+      "paths": [
+        "README.md",
+        "README.ja.md",
+        "design/dependencies.json"
+      ]
+    },
+    {
+      "id": "NR-GEO-02",
+      "severity": "medium",
+      "status": "closed",
+      "problem": "Two source-registry annotations retained local roadmap numbers: VDPS09 roadmap §9.4 and GMR23 roadmap 11.1. The README bibliography had already been renumbered.",
+      "resolution": "VDPS09 points to target 7.4; GMR23 identifies general target 9.1 and its application in 9.5. Actual source theorem, section, equation, page and version locators are retained.",
+      "paths": [
+        "sources.toml"
+      ]
+    },
+    {
+      "id": "NR-GEO-03",
+      "severity": "low",
+      "status": "closed",
+      "problem": "Regrouping introduced sentence-initial lowercase targets in target 3.8 and plural Targets 2.5–2.6 additionally supplies in the moduli introduction.",
+      "resolution": "The sentence starts Targets and the plural subject takes supply. These are navigation-language corrections with no mathematical change.",
+      "paths": [
+        "README.md",
+        "design/plan.json"
+      ]
+    }
+  ],
+  "open_findings": [],
+  "verification": {
+    "validator_exit_code": 0,
+    "checks": 6448,
+    "passed_checks": 6448,
+    "failed_checks": 0,
+    "original_source_independently_compared": true,
+    "published_previous_plan_independently_compared": true,
+    "lean_build_run": false
+  },
+  "limits": [
+    "This audit verifies the regrouping and reference changes; it does not prove the 78 mathematical targets.",
+    "Historical R1–R3 reviews retain their original snapshot identities and are not represented as reviews of these newly numbered bytes.",
+    "The reviewer authored the updated validator earlier; the actual-content inspection and separate literal/formula/source comparisons provide evidence beyond that validator run.",
+    "No new Lean build, worker run, external review request or human approval is claimed."
+  ]
+}

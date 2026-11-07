@@ -1,0 +1,162 @@
+{
+  "scope": "Exact rational identities for the finite eight-model sigma inventory; no analytic or Lean proof claim.",
+  "sympy_version": "1.14.0",
+  "check_count": 29,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "I: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "I: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "II: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "II: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D6_IMS: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D6_IMS: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "IV_IMS: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "IV_IMS: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "V_IMS: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "V_IMS: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D7: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D7: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D8: forward sigma identity",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D8: reconstruction Jacobian",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "I: standard scalar equation",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "II: standard scalar equation",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D6: standard scalar dictionary",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "IV: standard scalar dictionary Q=2q",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "V: standard scalar dictionary",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "VI: corrected standard scalar dictionary",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D7: square-time scalar dictionary",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "III_D8: square-time scalar dictionary",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "D7: VDPS09 q equation conjugacy",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "D7: VDPS09 p equation conjugacy",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "D8: VDPS09 q equation conjugacy",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "D8: VDPS09 p equation conjugacy",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "D8: time-only Hamiltonian correction",
+      "pass": true,
+      "residual": "0"
+    },
+    {
+      "name": "VI: corrected forward sigma identity",
+      "pass": true,
+      "residual_polynomial_terms": 0
+    },
+    {
+      "name": "VI: reject coefficient A+theta_inf-1",
+      "pass": true,
+      "expected_nonzero_residual": "-85995/16",
+      "point": {
+        "q": 3,
+        "p": 2,
+        "t": 2,
+        "theta0": 1,
+        "theta1": 2,
+        "thetat": 3,
+        "thetainf": 4
+      }
+    }
+  ]
+}

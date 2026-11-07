@@ -1,8 +1,14 @@
 # Submission review and verification record
 
-The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 57 targets in Layers 0–7. This record distinguishes the current scope audit from historical mathematical reviews, build receipts and browser inspections.
+The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 57 targets in Layers 0–7. The API revision is recorded first; the remaining sections retain the history of scope changes, mathematical reviews, build receipts and browser inspections.
 
-## Scope and preservation
+## API revision after the reviewed working snapshot
+
+The [API review response](../api-review/REVIEW.md) records the resolution of R01–R08 and C01–C09 against `d59dd62f39e96a680baf3656fc4398dfa8de7fb2`, including the supplementary 4.3 dependency correction. Its [validation record](../api-review/validation.json) contains 992 passing checks and 0 failures for the current bytes. The current plan has 57 targets, 8 layers, 169 API items, 197 diagnostics and 251 internal edges. The target identities, general/application division and representative Lean interfaces are retained.
+
+The scope, preservation, build and browser records below describe their earlier snapshots. Their assertions that definitions and formulas were unchanged apply to those earlier revisions; the API revision intentionally changes the affected contracts and adds sigma formulas. No historical receipt is presented as a new inspection of these files.
+
+## Historical scope and preservation
 
 The user requested removal of the development applications, all of Layer 8 including the Hastings–McLeod comparison, and confluence in Layer 9. [scope_revision.json](scope_revision.json) pins the preceding specification at `8eaf4ed294dfeee63b0fe5603331a185f0379a70`, records the exact removed targets and suppliers, and fingerprints the resulting specification.
 
@@ -20,7 +26,7 @@ General definitions, hypotheses, API items and prerequisite lists of the retaine
 
 The retained target bodies have identical ordered TeX payloads to the preceding specification in both languages. Summary prose, scope tables, bibliography and ownership lists are synchronized. The registries drop six unused sources and nine unused contracts. At the scope-reduction snapshot, `Suggested.lean` and `metadata.toml` were unchanged; the subsequent directory rename also renames the Lean namespace.
 
-## Current structure
+## Structure before the API revision
 
 | Layer | Targets | Mathematical milestone |
 |---|---:|---|
@@ -35,7 +41,7 @@ The retained target bodies have identical ordered TeX payloads to the preceding 
 
 The plan has 21 general targets, 36 application targets, 154 API items, 181 diagnostics, 243 internal prerequisite edges and 27 supporting constructions. The external registry contains 26 contracts against 22 distinct supplier files; the source registry contains 28 records.
 
-## Current verification
+## Verification before the API revision
 
 [validation.json](validation.json) records 6,135 passing mechanical checks and no failures. These cover document/plan correspondence, target ownership, counts, prerequisite resolution and order, acyclicity, general/application boundaries, supplier paths, source records, Markdown math forms, table structure and local links. The scope audit checks each retained target against the pinned preceding specification, including the complete declared field-edit inventory and formula preservation in both languages.
 

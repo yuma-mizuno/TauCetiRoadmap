@@ -10,7 +10,7 @@ year = 2023
 venue = "SIGMA 19 (2023), 013, 72 pages"
 doi = "10.3842/SIGMA.2023.013"
 locator_scheme = "theorem"
-locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
+locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 3.3, 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 4.3–4.4, 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
 url = "https://sigma-journal.com/2023/013/"
 version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article's own numbering. The generic factorized ramified setting is retained; this source alone is not evidence for unrestricted global properness."
 cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4"]
@@ -53,7 +53,7 @@ arxiv = "0902.1702v5"
 locator_scheme = "section"
 locator = "§2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22)"
 url = "https://arxiv.org/abs/0902.1702v5"
-version_note = "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.4; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved."
+version_note = "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.2; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved."
 cited_for = ["3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "0.7", "0.8"]
 
 [[source]]
@@ -64,7 +64,7 @@ year = 2006
 venue = "Séminaires et Congrès 14 (2006), 103–167"
 arxiv = "math/0501007v2"
 locator_scheme = "theorem"
-locator = "Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definition 3.5; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10"
+locator = "Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definitions 3.5 and 4.9; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10"
 url = "https://arxiv.org/abs/math/0501007v2"
 version_note = "Published in 2006; cited bytes are arXiv v2, 6 March 2005, 58 PDF pages. All target locators follow the downloaded version. The detailed global geometric comparison is for PVI; transferring its mechanism to other profiles is a proof target."
 cited_for = ["3.8", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.2", "5.4", "5.5", "5.6", "7.1", "7.2", "7.4", "0.4", "0.5", "0.7"]
@@ -266,10 +266,10 @@ year = 2013
 venue = "Journal of Algebraic Geometry 22 (2013), 407–480; cited preprint arXiv math/0602004v2"
 arxiv = "math/0602004v2"
 locator_scheme = "theorem"
-locator = "Theorems 2.1–2.2, preprint pp. 5–6; regular-singular reconstruction in §1; properness proof in §6"
+locator = "Theorems 2.1–2.2, preprint pp. 5–6; Definition 4.3 (set-valued functor modulo base-line twists); regular-singular reconstruction in §1; properness proof in §6"
 url = "https://arxiv.org/abs/math/0602004v2"
 version_note = "The fetched unversioned PDF identifies itself as arXiv math/0602004v2, 6 June 2012, 45 pages, 625670 bytes. Locators use that preprint, not journal pagination. Theorem 2.2 retains exponent parameters by a fiber product and requires the stated genus/rank/pole inequality and generic stability weights. Fixed-determinant specialization is used only after the explicit Cartesian comparison. Certified records inspected bytes/provenance, not mathematical proof completion."
-cited_for = ["4.2", "4.3", "4.4", "2.5", "2.6"]
+cited_for = ["1.3", "2.5", "2.6", "3.8", "4.2", "4.3", "4.4"]
 
 [[source]]
 id = "SGA1XII"
@@ -357,3 +357,17 @@ locator_scheme = "section"
 locator = "Chapter1, reductive invariant theory and construction of quotients; coupled to I23 Theorem5.1 and its actual framed filtered-connection construction"
 version_note = "Use as a primary proof source for the GIT prefix. No unverified subtheorem number is asserted here; the exact moduli linearization and Hilbert–Mumford equality are proof targets."
 cited_for = ["1.3", "2.5", "4.2"]
+
+[[source]]
+id = "IMS18"
+authors = "Kohei Iwaki; Olivier Marchal; Axel Saenz"
+title = "Painlevé equations, topological type property and reconstruction by the topological recursion"
+year = 2018
+venue = "Journal of Geometry and Physics 124 (2018), 16–54"
+doi = "10.1016/j.geomphys.2017.10.009"
+arxiv = "1601.02517v7"
+locator_scheme = "equation"
+locator = "§2.2, equations (2.18)–(2.30), specialized to ℏ = 1; the precise Hamiltonian and sigma conventions are fixed in roadmap §7.4"
+url = "https://arxiv.org/abs/1601.02517v7"
+version_note = "Cited version is arXiv v7, 9 October 2017. The eight-model inventory in §7.4 fixes its formulas explicitly and checks the sigma identities from the Hamilton vector fields; its PVI Hamiltonian uses the verified coefficient (Σ−θ∞)(Σ+θ∞−2)/4. This comparison does not infer an inverse on singular sigma branches."
+cited_for = ["7.4"]

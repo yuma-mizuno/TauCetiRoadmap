@@ -565,15 +565,19 @@ Construct the stack of stable objects of §1.1 over the admitted time problem §
 
 In unfixed-determinant mode the stable scalar inertia is Gm. With a specified determinant identification it is μr; determinant fixing and rigidification are different operations. Construct the determinant morphism and the comparison with the moduli problem having specified determinant, reserving the smoothness and relative dimension calculation for §1.5. Establish the needed coarse-space base-change comparison through these local gerbe presentations. Nonemptiness is an additional consumer assertion, not a theorem for every numerical input. Locally empty moduli are retained; the family becomes a surjective analytic submersion only after restricting B to its open nonempty-fiber locus.
 
+On each admitted curve/time chart, write 𝔐 for the stack of actual families and 𝔐ʳⁱᵍ for its scalar rigidification. In unfixed-determinant mode define Q(S) to be the set of families over C_S modulo isomorphisms after tensoring by p_S*L for a line bundle L on S, with the canonical relative connection along C_S/S and the transported decorations. In fixed-determinant mode such a twist also carries a trivialization L⊗r ≅ O_S compatible with the determinant identification. Construct the natural maps π₀𝔐→Q→h_M, the rigidification 𝔐→𝔐ʳⁱᵍ, and the comparisons Q^sh ≅ h_(𝔐ʳⁱᵍ) ≅ h_M, where Q^sh is the fppf sheafification on the algebraic test bases. On the admitted analytic bases use the corresponding analytic sheafification. These comparisons retain the distinction between an actual family, its scalar rigidification, and a class modulo base line-bundle twists; §2.5 uses the last set-valued functor for its comparison with I13.
+
+For a trivialized ℙ¹-family and an ordered splitting type a=(a₁≥⋯≥a_r) with Σa_j=d, define Bun_a as the full substack of bundles that are fppf-locally on the base isomorphic to ⊕_j O(a_j), without retaining a chosen isomorphism. Prove its locally closed immersion into Bun_(r,d) and identify its geometric points with splitting type a; retain this relative subfunctor on nonreduced bases. Define 𝔐_a by pullback along the bundle-forgetting map 𝔐→Bun_(r,d), and construct its scalar-rigidified locally closed image M_a↪M. The definition descends under changes of the ℙ¹ presentation. For every framed matrix chart used, specify its map to 𝔐_a, its framing quotient and its actual image in M_a. Prove that the balanced locus, defined by a₁−a_r≤1, is open, and give the complement of each chart in its stated ambient moduli space.
+
 **Hypotheses**
 
 - The numerical and admitted local data of 1.1 and the time family of 1.2; a fixed stability chamber; all bundle types. No nonemptiness assumption is imposed on the construction.
 
 **API**
 
-- Identify geometric points and families up to the appropriate arrows, with an explicit coarse-map universal property.
+- Construct the actual-family stack, scalar rigidification, line-twist quotient Q and its stated sheafification comparisons, together with the coarse-map universal property.
 - Prove restriction and admissible base-change comparisons, including determinant fibers.
-- Compare framed charts with their actual moduli loci. Fixed splitting-type strata on ℙ¹ are locally closed; the balanced locus is open, including the trivial-bundle locus in degree zero. Prove each inclusion and closure comparison, and record the complement of every chart used.
+- Construct 𝔐_a and M_a for each splitting type used, prove their locally closed inclusions and the openness of the balanced locus, and compare each framed chart through its specified quotient and actual image. In degree zero the balanced locus is the trivial-bundle locus. Record each chart complement; no unspecified closure equality is required.
 - For a change of weights, identify the actual common stable locus and the resulting comparison there; do not export an automatic global isomorphism.
 
 **Tests and falsification cases**
@@ -581,6 +585,7 @@ In unfixed-determinant mode the stable scalar inertia is Gm. With a specified de
 - A stable object may have scalar automorphisms before rigidification. A set-valued quotient that claims all stabilizers were trivial fails this example.
 - A family can leave a trivial-bundle chart by bundle jumping while remaining in the moduli space. Its phase path is not declared singular for that reason.
 - In the extension family 0 → O(−1) → E_t → O(1) → 0, E₀ = O(−1) ⊕ O(1) while E_t = O ⊕ O for t ≠ 0. The two splitting strata pull back to {0} and its complement in A¹; the first is not open. The full connection moduli must retain such bundle jumps on the permitted connection locus.
+- Pulling the preceding bundle family back to t=0 makes the balanced stratum empty, although the pullback of its closure in A¹ is the point. Closure is not treated as commuting with arbitrary base change.
 - An admitted totally ramified generic local model is irreducible as a formal differential module, hence a global connection containing it has no proper ∇-invariant subbundle and is stable for every weight (I23 Remark 2.9). This assertion is not exported to arbitrary ramified blocks.
 
 **Supporting constructions owned by this target.**
@@ -602,7 +607,7 @@ In unfixed-determinant mode the stable scalar inertia is Gm. With a specified de
 
 Construct the deformation complex from infinitesimal endomorphisms preserving the local structures, permitted variations of the connection, and all relations of the factorized ramified structures. Begin with the two-term connection complex G•. In the ramified case retain the full cone F• = Cone(G• → S•ram[1])[−1], including degrees 0, 1 and 2, both differentials and the local factorization terms. A two-term replacement requires a proved quasi-isomorphism. Identify infinitesimal automorphisms, tangent vectors and obstruction classes by hypercohomology and construct the trace/Serre-duality pairing.
 
-The commutator with ∇ is a ℂ-linear first-order differential operator and is generally not O-linear. Work with sheaves of ℂ-vector spaces, coherent underlying terms, Čech totalization and the actual termwise duality calculation; do not silently place this differential in D(QCoh). Prove presentation and cover independence by chain maps and quasi-isomorphisms. Construct the trace morphism to the determinant deformation complex and its trace-free fiber, with signs and local factorization compatibility. This target supplies the comparison maps; §1.5 must prove the resulting smooth determinant-map and dimension statements. Scalar gauge automorphisms and genuine infinitesimal determinant variation are separate directions.
+The commutator with ∇ is a ℂ-linear first-order differential operator and is generally not O-linear. Work with sheaves of ℂ-vector spaces, coherent underlying terms, Čech totalization and the actual termwise duality calculation; do not silently place this differential in D(QCoh). Prove presentation and cover independence by chain maps and quasi-isomorphisms. Construct the trace chain map tr:F•→D• to the determinant deformation complex and compare its homotopy fiber with the deformation complex for a specified determinant, including signs and local factorization compatibility. This target owns the chain map, homotopy-fiber comparison and dual complex; §1.5 owns the scalar section, direct-sum splitting, orthogonality, smooth determinant-map and dimension theorems. Scalar gauge automorphisms and genuine infinitesimal determinant variation are separate directions.
 
 **Hypotheses**
 
@@ -612,7 +617,7 @@ The commutator with ∇ is a ℂ-linear first-order differential operator and is
 
 - Give the differential, local compatibility equations and the map from an infinitesimal family to its cocycle.
 - Prove gauge-change and coboundary compatibility in both directions.
-- Construct the trace-free/determinant decomposition and the dual complex with its signs.
+- Construct tr:F•→D•, the specified-determinant comparison with its homotopy fiber, and the dual complex with its signs. The scalar splitting is proved in §1.5.
 - Prove naturality of the pairing under input isomorphisms and admissible base change.
 
 **Tests and falsification cases**
@@ -642,7 +647,7 @@ The commutator with ∇ is a ℂ-linear first-order differential operator and is
 
 Use §1.4 to prove obstruction vanishing and smoothness of the stable moduli family in the admitted domain. Identify its relative tangent bundle by first hypercohomology. For unfixed determinant and a nonempty stable fiber, derive dim M_b = 2r²(g−1)+2+r(r−1)deg P. The local trace polar parts are fixed in this formula.
 
-For the fixed-determinant export, construct the determinant moduli of line connections with those trace polar parts, locally an affine bundle of rank g over Picᵈ(C_b), and prove that its tangent complex is the regular de Rham complex O_C → Ω¹_C. Over ℂ, build a compatible trace map and scalar section using 1/r at the full deformation-complex level, including ramified relations. Prove the induced determinant map is smooth on the stated stable locus, with surjective tangent map onto a 2g-dimensional determinant tangent space. Identify the specified-determinant coarse family with the relevant fiber after its gerbe comparison. Only then deduce dim M_b^det = 2(r²−1)(g−1)+r(r−1)deg P. Prove that the trace pairing splits orthogonally into the trace-free and scalar directions and is nondegenerate on the fixed-determinant tangent space. Rank-one fixed-determinant fibers are zero-dimensional.
+For the fixed-determinant export, construct the determinant moduli of line connections with those trace polar parts, locally an affine bundle of rank g over Picᵈ(C_b), and prove that its tangent complex is the regular de Rham complex O_C → Ω¹_C. For the trace chain map tr:F•→D• constructed in §1.4, build over ℂ the scalar chain-map section s using 1/r, including all ramified relations, and prove tr∘s=id. Construct the resulting direct-sum quasi-isomorphism F• ≃ F•det ⊕ D•, where F•det is the specified-determinant homotopy fiber already compared in §1.4. Prove the induced determinant map is smooth on the stated stable locus, with surjective tangent map onto a 2g-dimensional determinant tangent space. Identify the specified-determinant coarse family with the relevant fiber after its gerbe comparison. Only then deduce dim M_b^det = 2(r²−1)(g−1)+r(r−1)deg P. Prove that the trace pairing splits orthogonally into the trace-free and scalar directions and is nondegenerate on the fixed-determinant tangent space. Rank-one fixed-determinant fibers are zero-dimensional.
 
 The fixed-determinant dimension and symplectic theorems use the deformation-functor comparison, smooth determinant map and orthogonal trace splitting constructed in 1.5. Prove these comparisons on the full stated complex before restricting to a determinant fiber. The unfixed-determinant theorem and the genus-zero dimension agreement have the scopes stated above.
 
@@ -654,7 +659,7 @@ The fixed-determinant dimension and symplectic theorems use the deformation-func
 **API**
 
 - Identify the relative tangent sheaf and prove base-change compatibility for tangent and obstruction calculations.
-- Construct the determinant deformation map, its scalar section and the trace-free fiber, including all local compatibility equations.
+- For §1.4's trace map and specified-determinant homotopy fiber, construct the scalar section s, prove tr∘s=id and the direct-sum comparison, and verify all local compatibility equations.
 - Prove smoothness and orthogonal trace decomposition before subtracting 2g determinant directions.
 - Return separate unfixed- and fixed-determinant dimension theorems with their exact hypotheses.
 
@@ -753,7 +758,9 @@ Prove existence and uniqueness up to the specified isomorphism restricting to th
 
 **General theory.**
 
-Compare the two-parameter strong extensions and their mixed infinitesimal term to prove h([v,w])=[h(v),h(w)]. Prove that holomorphic integral sections carry the corresponding strong integrable total connections. This bracket calculation uses the algebraic extension comparison, not a global Riemann–Hilbert theorem.
+Compare the two-parameter strong extensions and their mixed infinitesimal term to prove h([v,w])=[h(v),h(w)]. This bracket calculation uses the algebraic extension comparison, not a global Riemann–Hilbert theorem.
+
+For a holomorphic horizontal section s:V→M of the rigidified phase family, pull back the scalar gerbe and the universal-object cover of §1.3. After shrinking to time charts V_i admitting such a lift, construct a representative decorated family (E_i,∇_i) on C_(V_i) and a strong integrable total connection restricting to its relative connection. Retain the chosen representative and its identification with s|_(V_i); in fixed-determinant mode the total determinant is the transport certified in §1.2. For a change of representative by a base line bundle L, choose on sufficiently small charts a compatible integrable connection on L and compare total connections by the tensor formula ∇_tot′=∇_tot⊗1+1⊗p*∇_L and connection-preserving isomorphisms. In fixed-determinant mode the induced connection on L⊗r must be trivial under its specified trivialization. A global bundle with total connection is an output only with connection-preserving transition isomorphisms satisfying the triple-overlap cocycle. Without that descent datum, the output consists of local objects over the pulled-back gerbe, not a total connection on every representative of the coarse section.
 
 Use the actual trace cocycles and strong-extension comparison to prove that the constructed horizontal variation preserves the relative symplectic form ω. Flatness of an arbitrary splitting alone would not imply that assertion. Define Ω(v,w)=ω(v−h(dπv),w−h(dπw)), prove dΩ=0 and ker Ω=im h, and deduce preservation of ω by local horizontal transport. The generic differential-form equivalence in NonlinearConnections §0.6 can organize this final calculation, but it cannot supply trace-form preservation as an unproved premise. In a one-dimensional time chart, only after a symplectic trivialization and local exactness have been supplied, derive Ω=dq∧dp+dH∧dt in relative dimension two, and the analogous sum in higher even dimension. Scalar Hamiltonians are local primitives attached to charts.
 
@@ -764,6 +771,7 @@ Use the actual trace cocycles and strong-extension comparison to prove that the 
 **API**
 
 - Compute the mixed two-parameter extension term and obtain the bracket identity and flat horizontal distribution.
+- For a specified horizontal section construct local representative families with strong total connections; construct their comparisons under compatible base line-connection twists, and prove descent for supplied connection-preserving transition maps and their cocycle.
 - Recover the relative form by vertical restriction and the horizontal distribution as the kernel.
 - Prove admissible base-change naturality for the relative form, the actual splitting and the closed total form.
 - Compare two Hamiltonian potentials in a fixed chart: their difference is constant along connected phase fibers.
@@ -775,8 +783,9 @@ Use the actual trace cocycles and strong-extension comparison to prove that the 
 - H and H + t² give the same vertical vector field and extended two-form, but different scalar functions.
 - On a symplectic fiber, Ω has no nonzero vertical kernel vector; degenerating ω to zero would fail this characterization.
 - On ℂ²×ℂ with ω=dq∧dp, h(∂t)=∂t+q∂q is flat because the base has dimension one, but its flow scales ω. This fails the trace-form preservation obligation.
+- In unfixed-determinant mode, on ℙ¹_z×ℙ¹_B with the only polar section z=∞, E=pr_B*O(1) with relative connection d_z represents a constant rank-one coarse horizontal section. A total connection regular in the B-direction would restrict at z=0 to a holomorphic connection on O(1), which cannot exist. The section therefore supplies local representatives, not a total connection on this global representative.
 
-*Needs:* Internal: 1.4, 1.6, 2.1, 0.6; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
+*Needs:* Internal: 1.3, 1.4, 1.6, 2.1, 0.6; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
 **Source scope and owned proof:** I23 Theorem 11.6, Definition 11.4 and Corollary 11.8. The flatness proof and the trace-form variation are separate obligations.
 
@@ -798,7 +807,7 @@ Record the natural comparison isomorphisms for identity and composite base chang
 
 - Give the stack-level comparison 1-isomorphisms and their coherent 2-isomorphisms; descend the corresponding phase-space comparisons.
 - Prove equality of pullback splitting and forms with the outputs constructed after base change.
-- Preserve source and target maps of the NonlinearConnections morphisms and specify the exact domains of all parameter correspondences.
+- For each presentation or base-change comparison F:M′→M over f:B′→B constructed here, prove π∘F=f∘π′, dF∘h′=h∘df, F*ω=ω′ and F*Ω=Ω′ on its stated domain. Domains for changes of weights are supplied by §1.3; genuine geometric transformations and their parameter maps are constructed in §5.4.
 
 **Tests and falsification cases**
 
@@ -847,9 +856,9 @@ Give a single consumer certificate listing local-model admission, the actual tim
 
 **General theory.**
 
-For the logarithmic subproblem of §1.1, construct the topologically marked family of representation varieties of the punctured curves, their affine conjugacy quotients and the prescribed-local-character subfamilies. Keep the residue-exponent parameter λ on the de Rham side and the exponential characteristic-polynomial parameter a=rh(λ) on the Betti side. Repeat the bounded construction of §1.3 over the simultaneous residue parameter space Λ, and prove its comparison with the I13 family; the horizontal splitting is relative to fixed λ, so varying λ is not a time direction. On a marking cover the Betti family is identified by transport with a fixed character variety times the time base. This gives complete transport along all admissible time paths even when the character variety is singular; no smooth Betti tangent bundle is required.
+For the logarithmic subproblem of §1.1, construct the topologically marked family of representation varieties of the punctured curves, their affine conjugacy quotients and the prescribed-local-character subfamilies. Write Rep_r(C,D)_a for this ordinary affine character quotient with the prescribed local characteristic-polynomial data a; it forgets logarithmic lattices and parabolic flags. Keep the residue-exponent parameter λ on the de Rham side and the exponential characteristic-polynomial parameter a=rh(λ) on the Betti side. Repeat the bounded construction of §1.3 over the simultaneous residue parameter space Λ, and prove its comparison with the I13 family; the horizontal splitting is relative to fixed λ, so varying λ is not a time direction. On a marking cover the Betti family is identified by transport with a fixed character variety times the time base. This gives complete transport along all admissible time paths even when the character variety is singular; no smooth Betti tangent bundle is required.
 
-Construct the holomorphic Riemann–Hilbert map from the entire stable logarithmic parabolic moduli of §1.3, including allowed reducible and resonant objects and all bundle types. Define it through the local system of horizontal sections and its conjugacy-quotient class, and prove descent from the universal-object cover. Identify this logarithmic moduli problem, its weights and residue ordering with the exact moduli functor used by I13; a matrix-chart comparison is insufficient. Prove that the actual strong splitting of §2.1 is semiconjugate to the marked Betti transport at every point, using the total integrable extension with its logarithmic lattices and the analytic dependence of local solutions. Prove local horizontal-lift existence independently of Riemann–Hilbert invertibility. At resonant or reducible points the map may have positive-dimensional fibers and is not replaced by an inverse map.
+Construct the holomorphic Riemann–Hilbert map from the entire stable logarithmic parabolic moduli of §1.3, including allowed reducible and resonant objects and all bundle types. Define it through the local system of horizontal sections and its conjugacy-quotient class, and prove descent from the universal-object cover. Let Q_log be §1.3's set-valued functor of stable logarithmic families modulo tensoring by a line bundle from the base. On locally Noetherian schemes, construct a natural isomorphism Q_log ≅ M_I13 to the functor in I13 Definition 4.3, with the same weights, residue ordering and equivalence relation. Compare the fppf sheafifications, the scalar rigidification and the coarse spaces through the named maps of §1.3; prove the induced coarse-space isomorphism separately. Construct the corresponding comparisons after analytification using analytic sheafification. This does not identify the groupoid of actual families directly with a set-valued functor. Prove that the actual strong splitting of §2.1 is semiconjugate to the marked Betti transport at every point, using the total integrable extension with its logarithmic lattices and the analytic dependence of local solutions. Prove local horizontal-lift existence independently of Riemann–Hilbert invertibility. At resonant or reducible points the map may have positive-dimensional fibers and is not replaced by an inverse map.
 
 For a certified determinant transport, show that taking determinant of monodromy agrees with the rank-one Riemann–Hilbert map and that the prescribed determinant is a transported Betti section. Export the Hausdorff locally compact marked target and the full semiconjugacy as inputs to NonlinearConnections §0.4, without asserting properness until §2.6 or deducing source completeness here.
 
@@ -862,13 +871,14 @@ For a certified determinant transport, show that taking determinant of monodromy
 
 - Construct the marked affine Betti target with its complete path transport and state the retained residue/character parameter map.
 - Prove the all-points Riemann–Hilbert semiconjugacy for the actual strong source splitting, including the map on singular target strata.
-- Identify the full logarithmic moduli functor with I13 and prove compatibility with determinant, presentation change and analytic base change.
+- Construct Q_log ≅ M_I13, its sheafification comparison and the induced coarse-space isomorphism; prove their compatibility with the maps from the actual-family stack and its rigidification, determinant, Riemann–Hilbert, presentation change and analytic base change. For fixed determinant use the compatible line twists with an r-th-power trivialization from §1.3.
 
 **Tests and falsification cases**
 
 - An open subset where Riemann–Hilbert is an isomorphism does not include all stable resonant or reducible objects. The semiconjugacy statement must be checked on their actual moduli points.
 - Two residue parameters differing by allowed integer shifts can have the same local monodromy eigenvalues; retain λ rather than identifying the de Rham families over the a-parameter.
 - A singular affine character variety is still a Hausdorff locally compact analytic space with complete marked transport; requiring a nonsingular target would discard exactly the strata needed by the proper-map continuation argument.
+- For a fixed stable object E₀ over a point, the families E₀⊠O and E₀⊠O(1) over ℙ¹ have the same unfixed-determinant Q_log class although they need not be isomorphic as bundles. Their actual-family groupoids therefore cannot be identified with M_I13.
 
 **Supporting constructions owned by this target.**
 
@@ -880,7 +890,7 @@ For a certified determinant transport, show that taking determinant of monodromy
 
 *Needs:* Internal: 1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4, 0.3; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15).
 
-**Source scope and owned proof:** I13 §2 (the marked Riemann–Hilbert map), §6 and §8 (isomonodromic deformation). Full comparison of its moduli functor and strong splitting with this framework, including exceptional strata and determinant compatibility, is explicitly owned.
+**Source scope and owned proof:** I13 Definition 4.3 and §4 (the set-valued moduli functor and its moduli space), §2 (the marked Riemann–Hilbert map), §6 (analytic comparison) and §8 (isomonodromic deformation). The named stack, rigidification, line-twist and sheafification comparisons, all-points strong-splitting comparison, and determinant compatibility are owned here.
 
 <a id="target-2-6"></a>
 ### 2.6 Properness of the logarithmic Riemann–Hilbert family
@@ -895,7 +905,7 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 
 **Hypotheses**
 
-- The entire logarithmic moduli problem and Riemann–Hilbert map of 2.5, identified with I13; r≥2, n≥1 and fixed genus, degree and residue data with d+Σᵢⱼλⱼ^(i)=0.
+- The full logarithmic coarse moduli family and Riemann–Hilbert map of 2.5, with its Q_log ≅ M_I13 and induced coarse-space comparisons; r≥2, n≥1 and fixed genus, degree and residue data with d+Σᵢⱼλⱼ^(i)=0.
 - Generic weights satisfying stable=semistable; g=0 requires rn−2r−2>0; g=1 requires n>1; g≥2 requires n≥1.
 - Fixed-determinant restriction additionally requires the proved Cartesian determinant comparison, rank-one regular-singular correspondence and certified transported determinant section.
 
@@ -928,7 +938,7 @@ Export the proper semiconjugacy certificate consisting of §§2.5–2.6. A consu
 - `M-early-unfolding` — Construct the finite-flat auxiliary family and both generic-fiber comparison maps as part of the proof of closedness.
 - `M-strong-lift` — Prove existence/uniqueness inside the total-pole and kernel-lattice extension class, mixed-term flatness and actual trace-form preservation.
 - `M-coherent-export` — Prove canonical pullback/presentation comparisons, 2-coherence and the general construction theorem independently of all specialized consumers.
-- `M-regular-RH-proper` — Identify the entire logarithmic moduli functor with I13, prove all-points strong-splitting semiconjugacy, exact family properness and the Cartesian fixed-determinant restriction. Source completeness belongs to the generic NonlinearConnections theorem, applied downstream.
+- `M-regular-RH-proper` — Identify the logarithmic base-line-twist quotient Q_log with I13 Definition 4.3 and compare the induced coarse spaces, prove all-points strong-splitting semiconjugacy, exact family properness and the Cartesian fixed-determinant restriction. Source completeness belongs to the generic NonlinearConnections theorem, applied downstream.
 
 ### Primary sources and exact use
 
@@ -1011,7 +1021,7 @@ Use MeromorphicConnectionModuli §1.2 for the admitted deformation problem, its 
 
 **API.**
 
-- Identify the fixed-parameter/time tangent decomposition through the imported construction.
+- On each smooth presentation p:T→Θ of the admitted input problem, construct the relative time tangent bundle T_(T/Θ) and the exact sequence 0→T_(T/Θ)→T_T→p*T_Θ→0. For its fixed-exponent fiber Bθ identify T_(T/Θ)|_(Bθ) with T_(Bθ), and compare other admitted base changes through their actual tangent maps. Prove that presentation-change differentials preserve this sequence. A direct-sum decomposition requires a chosen local product presentation and its explicit change-of-splitting law.
 - Verify the determinant lift and genus-zero coordinate-change coherence required by the classical restriction.
 
 **Checks.**
@@ -1019,6 +1029,7 @@ Use MeromorphicConnectionModuli §1.2 for the admitted deformation problem, its 
 - Four ordered logarithmic points have one modulus after quotient by PGL₂: 4 − 3 = 1; its cross-ratio avoids 0, 1 and ∞.
 - A change τ = 2t multiplies the displayed horizontal generator by 1/2; retaining its coefficient unchanged gives a different parametrized system.
 - Two solutions with different movable pole sets use the same Bθ. A base that deletes one solution's poles fails this requirement.
+- Under t′=t+θ and θ′=θ, the relative time tangent line is unchanged but ∂_θ at fixed t becomes ∂_(θ′) at fixed t′ plus ∂_(t′). A complement to the time directions is therefore attached to the chosen product coordinates.
 
 *Needs:* Internal: 3.1, 1.2.
 
@@ -1164,11 +1175,32 @@ Apply MeromorphicConnectionModuli §§1.5–1.6 to the family and complex identi
 
 **Hypotheses.**
 
-- All stable resonant, reducible and apparent strata allowed by the fixed local conditions; generic ramified local irreducibility.
+- The full stable moduli of §3.5 with its admitted rank-two local conditions and external exponent parameter space Θ; the local logarithmic comparison of §2.5. Nonemptiness of any named locus is a separate assertion.
 
-Prove that the construction retains all w-stable logarithmic resonance, reducible and apparent-singularity strata allowed by its fixed local moduli conditions. Describe how the local filtration resolves the ambiguity of repeated eigenvalues. Record nonemptiness separately. At generic ramified points use the irreducibility theorem rather than inventing reducible objects there. Targets 4.1–4.4 will identify the images of these already constructed strata in the character space. A vanishing leading irregular coefficient changes the input stratum and is covered by the coefficient-boundary comparison in §7.3. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2 and §3.)
+Construct the following named subobjects, their inclusions in the full phase family M and their compatible pullbacks. No simultaneous disjoint stratification or flatness of all these loci is required.
 
-*Needs:* Internal: 3.1, 3.5, 3.6, 3.7.
+At each logarithmic marked point a_i and each n∈ℤ, define the resonance hyperplane Res_(i,n)⊂Θ by λ_(i,0)−λ_(i,1)=n, including n=0, and define the corresponding phase locus by pullback along M→Θ. Retain the integer index rather than treating their union as one finite algebraic stratification. Describe how the parabolic flag records data when residues coincide.
+
+Define the invariant-line incidence moduli 𝓘_red whose objects are stable decorated connections together with a saturated ∇-invariant rank-one subbundle L⊂E; in a family L and E/L are locally free. Construct its forgetful map to the stable stack and the phase family. On a geometric fiber M_b define Red(M_b) as the image of this map, and define the reducible family subfunctor of h_M by requiring every geometric fiber to lie in Red(M_b). Keep this subfunctor separate from 𝓘_red: a family in the former does not include a chosen relative invariant line. Prove pullback compatibility for the incidence construction, its forgetful map and this fiberwise reducibility condition.
+
+At a logarithmic marked point use the actual local monodromy T_i from §2.5, before passing to an affine character quotient. Define App_i^lin⊂M^an by T_i=I and App_i^proj⊂M^an by [T_i]=1 in PGL₂. Construct these analytic subobjects on universal-object charts and descend the equations under conjugacy and changes of representative; prove compatibility with admitted analytic base change. The first is the ordinary apparent-point convention, while the second records projectively apparent points. Scalarizing by a chosen cyclic vector can create additional apparent poles away from the marked divisor; those are presentation data constructed in §7.2, not these fixed-marked-point loci.
+
+Prove that the full stable moduli retains every point of these subobjects allowed by its local conditions, and record the hypotheses for each nonemptiness claim. An admitted totally ramified generic local model makes Red(M_b) empty by the formal irreducibility theorem. Targets 4.1–4.4 compare the images of the subobjects defined here with their Betti conditions. A vanishing leading irregular coefficient changes the admitted input and belongs to §7.3's coefficient-boundary comparison. (I23, §2 and Remark 2.9; IIS06, §4, especially Theorems 4.10–4.12; VDPS09, §2.2, §3 and §4.2.)
+
+**API.**
+
+- Construct each indexed resonance locus as a pullback, with its inclusion and base-change identity.
+- Construct 𝓘_red and its forgetful map, identify its geometric-point image with reducibility, and provide the separate fiberwise reducible subfunctor.
+- Construct App_i^lin and App_i^proj using the stated local monodromy equations, their inclusion App_i^lin⊂App_i^proj, and their analytic descent and base-change comparisons.
+- Keep each locus's local conditions and nonemptiness hypotheses attached to its later image and invariant-curve comparisons.
+
+**Checks.**
+
+- The local connection d+(1/2)I dz/z has monodromy −I: it belongs to App_i^proj but not App_i^lin. Equality of a coarse local character with that of the identity is not substituted for the matrix equation T_i=I.
+- A logarithmic residue with repeated eigenvalues can have nontrivial unipotent monodromy, so resonance alone does not place a point in either apparent locus.
+- The generic totally ramified formal model has no invariant rank-one submodule; its global reducible incidence is empty.
+
+*Needs:* Internal: 2.5, 3.1, 3.5, 3.6, 3.7.
 
 #### Examples
 
@@ -1317,14 +1349,15 @@ BOA14's cited family-transport theorem has untwisted scope. Extend its isotopy c
 **API.**
 
 - Construct restriction, gluing, gauge-conjugation and change-of-marking functors.
-- Distinguish the decorated groupoid, its categorical quotient and the locus where it represents individual orbits.
+- Construct the forgetful functor Forθ from the decorated Betti groupoid to the ordinary representation/Stokes groupoid, forgetting logarithmic lattices and flags while retaining the prescribed formal grading, Stokes maps and deck action. Construct the map qθ from this ordinary groupoid to its closed-constraint affine character quotient Rθ, and set βθ = qθ ∘ Forθ. Prove the quotient universal property on the ordinary framed representation space and identify the locus where quotient points represent individual orbits.
+- Prove that Forθ, qθ and βθ commute with transport and changes of marking, with the natural isomorphisms retained at groupoid stages.
 - Prove local product descriptions over simply connected admissible time neighborhoods and their continuation along finite chains.
 - Define the complete transport on the coarse quotient and its lift on any required decoration space.
 
 **Checks.**
 
 - θ and θ + 1 give the same exponential eigenvalue but need not give the same logarithmic lattice; the comparison target retains θ.
-- A reducible representation and its semisimplification can have the same coarse character. The quotient is not declared a faithful encoding of all connection objects.
+- A reducible representation and its semisimplification can have the same coarse character. Distinct flags over scalar local monodromy can also give distinct decorated objects with the same ordinary character. These are two separate losses of information, through quotient formation and through Forθ.
 - Transport around a nontrivial loop may act nontrivially on the fiber; completeness does not imply trivial monodromy.
 
 **Supporting constructions owned by this target.**
@@ -1340,27 +1373,32 @@ BOA14's cited family-transport theorem has untwisted scope. Extend its isotopy c
 
 **Hypotheses.**
 
-- The full stable moduli family of 3.5/3.8, the strong splitting of targets 3.9–3.12, and the decorated analytic reconstruction and Betti family of 4.1–4.2. Holomorphic descent and all-source horizontal compatibility are to be proved; an inverse is asserted only on the specified irreducible/nonresonant locus.
+- The full stable moduli family of 3.5/3.8, the splitting and flatness of 3.9–3.10, the presentation and base-change comparisons of 3.12, and the decorated analytic reconstruction and Betti family of 4.1–4.2. Holomorphic descent, all-source horizontal compatibility and the inverse comparisons on the loci defined below are outputs; no total two-form is an additional input to this target.
 
 The regular-singular RH map and its all-point horizontal compatibility are imported through MeromorphicConnectionModuli §2.5, after identifying the same parabolic moduli and residue-parameter target. This import does not discharge the irregular local reconstruction.
 
-Construct RHθ: Mθᵃⁿ → Rθ over Bθ by the analytic classification and prove that it is holomorphic. Prove that it sends every horizontal trajectory of §3.9 to the transport of §4.2, including trajectories inside resonance, reducible and exceptional loci. On the stated stable irreducible/nonresonant open locus prove the inverse comparison; elsewhere record the actual fibers and decoration data rather than asserting injectivity. Compare the integrable-extension construction with the local analytic reconstruction, and descend from universal-object covers. (IIS06, Theorems 4.10–4.12; IS12, Theorem 5.1; I23, §9 and §11.)
+Construct RHθ: Mθᵃⁿ → Rθ over Bθ by composing the decorated analytic classification with βθ of §4.2 on universal-object covers, then prove holomorphic descent. Prove that it sends every horizontal trajectory of §3.9 to the transport of §4.2, including trajectories inside the resonance, reducible and marked apparent loci defined in §3.8. Compare the integrable-extension construction with the local analytic reconstruction.
+
+Fix the inverse domains for each admitted profile. For the four-logarithmic-point profile, let Vθ be the union of the smooth loci of the character surfaces Rθ,b over b ∈ Bθ, and put Uθ = RHθ⁻¹(Vθ). Prove the determinant and marking comparison with IIS06 Definition 4.9 and apply Theorem 4.10 on these loci; smooth character points on resonant exponent fibers remain in Vθ. For each other profile, let Vθ be the ordinary character locus whose generalized monodromy object is irreducible and whose logarithmic exponent differences satisfy λᵢ,₁ − λᵢ,₂ ∉ ℤ at every logarithmic pole. Here irreducible means that there is no common rank-one subobject compatible with global monodromy, the formal grading, every Stokes map and the deck action. Define Uθ by the same exponent condition and the absence of a saturated ∇-invariant line subbundle. The admitted distinct leading eigenvalues at unramified irregular poles and the condition a₁₀ ≠ 0 at ramified poles are retained. If an exponent fiber has a logarithmic integral difference, this chosen inverse locus for a non-four-logarithmic profile is empty.
+
+For the latter profiles, prove local uniqueness of the logarithmic lattice and labelled flag from the nonresonant exponent lifts, of the unramified irregular lattice and filtration from the labelled formal summands, and of the ramified lattice and factorized-structure class from the prescribed w² = z model with deck descent. Prove that these reconstructions depend holomorphically on their admitted parameters and glue to a stable connection with the fixed determinant and degree. This establishes Uθ = RHθ⁻¹(Vθ) and constructs a holomorphic inverse jθ: Vθ → Uθ with RHθ|Uθ ∘ jθ = id and jθ ∘ RHθ|Uθ = id. Prove the two identities and compatibility with admitted base changes and marking changes for both choices of loci. The non-four-logarithmic loci are not defined as smooth character loci. Outside Uθ, retain the actual fibers and decoration data. (IIS06, Definition 4.9 and Theorems 4.10–4.12; IS12, Theorem 5.1 in its generic unramified scope; I23, Proposition 3.3, Corollaries 4.3–4.4, §9 and §11. The relative ramified reconstruction and descent required here are owned by this target.)
 
 The theorem's all-strata scope is a construction target: the generic unramified theorem is one of its inputs, not a replacement for the missing resonant or ramified comparison. No scalar equation is used in the extension across these loci.
 
 **API.**
 
 - Construct the holomorphic RH map from the universal-object cover and prove descent and base-change naturality.
-- Compare the decorated local reconstruction with the forgetful ordinary character quotient.
-- Prove horizontal compatibility at every retained point and the inverse theorem only on its stated open locus.
+- Identify the local-to-global RH construction with the composite through Forθ and qθ of §4.2.
+- Construct the explicitly defined open loci Uθ, Vθ and the inverse jθ, and prove both inverse identities and their base-change and marking naturality.
+- Prove horizontal compatibility at every retained point, independently of whether it lies in Uθ.
 
 **Checks.**
 
 - Two distinct points on an exceptional fiber can have the same ordinary character; the construction must not choose one as an inverse.
-- At a resonant logarithmic point, equal eigenvalues do not justify deleting either the allowed scalar or unipotent stratum.
+- At a resonant logarithmic point, equal eigenvalues do not justify deleting either the allowed scalar or unipotent stratum. In the four-logarithmic-point case, resonance of the parameter does not exclude smooth character points from Vθ.
 - Retaining exponent lifts distinguishes θ from θ + 1 even when their ordinary exponential eigenvalues agree.
 
-*Needs:* Internal: 3.5, 3.8, 3.9, 3.10, 4.1, 4.2, 1.2, 2.5.
+*Needs:* Internal: 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2, 1.2, 2.5.
 
 <a id="target-4-4"></a>
 ### 4.4 Proper comparison for the full classical input class
@@ -1373,9 +1411,11 @@ The theorem's all-strata scope is a construction target: the generic unramified 
 
 On the four-logarithmic-point branch, verify 2·4 − 2·2 − 2 = 2 > 0 and the fixed-determinant/marking comparison, then apply MeromorphicConnectionModuli §2.6 (I13, Theorem 2.2). The source retains the exponent parameters by a fiber product. No general irregular properness is inferred from this regular-singular theorem; the all-classical extension below remains an owned target.
 
-For each admitted degree-four rank-two input and every allowed exponent parameter, prove that RHθ is proper as a map of the whole time family, with the exponent lift retained in its target, on the full stable moduli space of §3.5. Establish the corresponding family statement on admitted parameter charts; properness of each fixed-time map is not sufficient. The target has the ordinary generalized character data with its fixed closed constraints; no solution-dependent open subset is removed. State surjectivity onto the realizable component separately from properness. This includes resonant logarithmic and stable reducible points and the generic ramified local structures defining the classical class. (IIS06, Definition 2.11 and Theorems 4.10–4.12; IS12, Theorem 5.1 and the scope warning of Remark 6.3; HEU10, Theorem 1.1.)
+For each admitted degree-four rank-two input and every allowed exponent parameter, prove that RHθ is proper as a map of the whole time family, with the exponent lift retained in its target, on the full stable moduli space of §3.5. Establish the corresponding family statement on admitted parameter charts; properness of each fixed-time map is not sufficient. Use exactly the admitted input, nonemptiness and weight-chamber conditions of §§3.3 and 3.5. Define Rθᵃᵈᵐ := Rθ, the whole ordinary generalized character quotient constructed in §4.2. Its defining data are the local characteristic-polynomial constraints at logarithmic poles, the prescribed formal grading and formal monodromy at irregular poles, the permitted Stokes factors and their deck relations, the global product relation, and the fixed determinant character, with the exponent lift retained. These conditions are independent of RH and its image. Separately from properness, prove that for every b ∈ Bθ and r ∈ Rθ,b there exists m ∈ Mθ,bᵃⁿ with RHθ(m) = r. No component of this independently defined target is discarded. This includes the scalar and unipotent logarithmic strata, reducible characters and the generic ramified local structures admitted by the classical input. (IIS06, Definition 2.11 and Theorems 4.10–4.12; IS12, Theorem 5.1 and the scope warning of Remark 6.3; HEU10, Theorem 1.1.)
 
 The required extension is owned here. Develop the proof through four concrete intermediate results: boundedness of local lattices uniformly over compact families of generalized characters with fixed exponent lifts; extension of the retained flags and factorized structures in a relative projective parameter space with their closed incidence relations; semistable replacement after the necessary base change and elementary modifications, followed by semistable = stable for the chosen weights and uniqueness in the separated moduli problem; and compatibility of these extensions with global gluing and the analytic moduli topology. Stability is open but is not thereby preserved by arbitrary limits. Verify that these results give compact inverse images of compact subsets, rather than merely closed fibers or pointwise solvability. A projective flag variety alone does not prove the theorem, since the underlying connection may also escape.
+
+For surjectivity, construct local realizations of each allowed ordinary character, glue on bundles of the prescribed degree and determinant, and prove that a stable decorated representative exists. For a reducible coarse character, this representative may come from a nonsemisimple object with the same coarse character; the semisimple representative is not assumed to be stable. Verify that stable replacement preserves this prescribed character and all fixed local constraints. These existence statements are separate from the compactness argument and do not follow merely from closedness of the RH image.
 
 HEU10's universal strong isomonodromic deformation gives an independent possible route to the continuation conclusion of §4.6. Such a route must establish the identification of the time bases, extension of local decorations, determinant and stability preservation, bundle-jumping compatibility, descent, and equality with §3.9. It does not by itself prove the properness required in this target. I23's global foliation theorem and IS12's generic theorem also do not discharge it. The compactness theorem remains an explicit internal proof-development task.
 
@@ -1468,14 +1508,17 @@ Apply NonlinearConnections §0.5 to the flatness of §3.10 and completeness of �
 
 **Hypotheses.**
 
-- The classical phase family and a specified candidate observer/domain; non-indeterminacy and any required lift are proof obligations.
+- The classical phase family, a candidate observation Q with its declared domain, and the class of horizontal sections on which evaluation is claimed. For each such section, supply one of the admissibility certificates below; a non-identically-infinite certificate is additionally required for scalar meromorphic evaluation.
 
-Use the observable notion of NonlinearConnections §0.7 on the classical phase family. Own the construction of each claimed classical morphism to ℙ¹, or its stated rational domain and resolution/lift comparison. Prove defined pullback along every claimed solution stratum and exclude an identically infinite pullback before calling the result a scalar meromorphic function. Observers, their domains and normalization remain explicit data; the generic evaluation theorem does not supply these application-specific verifications.
+Construct a conditional application of the observable notion of NonlinearConnections §0.7. The admissibility certificate is an actual holomorphic ℙ¹-valued map on a neighborhood of the section image; or compatible local numerator–denominator presentations whose restrictions are not both identically zero; or a specified resolution, holomorphic observation and holomorphic lift, with independence proved on the claimed domain or the lift retained as marking. From these data construct the admissible evaluation, using one-variable cancellation or the specified lift as appropriate, and prove the required overlap comparisons. The observer, its domain, the claimed solution strata and normalization remain explicit. A certificate excluding an identically infinite evaluation is separate from admissibility as an ℙ¹-valued observation.
+
+Each concrete observation target supplies its candidate and proves these input conditions on every solution stratum for which it claims evaluation. In particular, §7.2 owns the standard q candidates, their domains and overlaps, cancellation or lift and choice-independence proofs, non-infinity conditions and coverage for the classical profiles. This target applies to those proved certificates and does not depend on that later construction.
 
 **API.**
 
-- Construct the actual classical observer and verify its pullback/lift domain.
-- Compare its normalizations and overlap maps using the general observable naturality law.
+- From a candidate observation and its supplied admissibility certificates, construct the marked observation and evaluation of §0.7 on exactly the declared sections and domains.
+- Compare normalizations, local ratios and resolved lifts through the general observable naturality law, retaining any marking required for independence.
+- Export the separate non-infinity hypothesis consumed by §4.9.
 
 **Checks.**
 
@@ -1494,7 +1537,7 @@ Use the observable notion of NonlinearConnections §0.7 on the classical phase f
 
 - The proved time-curve dimension, the complete horizontal section and an observer with the verified pullback and non-infinity conditions.
 
-Verify the one-dimensional time conclusion of §3.4 and apply NonlinearConnections §0.7 to §§4.7–4.8. Every claimed non-identically-infinite scalar evaluation is meromorphic on the universal cover of the admitted time curve, with finite-order poles at its interior scalar singularities. Observer resolution and non-indeterminacy for every claimed stratum remain the application obligations of §4.8. The single-valued descent criterion is separate. This transfers one intrinsic theorem to the coordinate comparisons, rather than proving six scalar continuation theorems.
+Verify the one-dimensional time conclusion of §3.4 and apply NonlinearConnections §0.7 to §§4.7–4.8. Every claimed non-identically-infinite scalar evaluation is meromorphic on the universal cover of the admitted time curve, with finite-order poles at its interior scalar singularities. The observer, its resolution or cancellation and choice-independence certificates on every claimed stratum, and the non-infinity certificate are supplied by the corresponding concrete observation target as inputs to §4.8; §7.2 supplies them for the standard classical q. This evaluation theorem is conditional on those inputs. The single-valued descent criterion is separate. This transfers one intrinsic theorem to the coordinate comparisons, rather than proving six scalar continuation theorems.
 
 **API.**
 
@@ -1525,18 +1568,21 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 Define the comparison groupoid of smooth projective rational surfaces S with a nonzero effective anticanonical divisor Y, satisfying Y·Yᵢ = 0 for every irreducible component, with D = Y_red a simple normal-crossing divisor. Require additive type, expressed by the additive identity component of Pic⁰(Y), and nonfibered type: no elliptic fibration has a fiber nY with n ≥ 1. Retain markings when a root basis or normalized time is used. Construct the relative versions of these conditions. (STT02, Definitions 1.1 and 1.3, Proposition 1.2 and Tables 2–3.)
 
+Write Y = Σᵢ mᵢDᵢ. Fix the intersection pairing x·y on Pic(S), and use ⟨x,y⟩ = −x·y for root lengths. Define the boundary lattice R_∂ = Σᵢ ℤ[Dᵢ], its integral orthogonal complement R_∂^⊥ = {x ∈ Pic(S) : x·[Dᵢ] = 0 for every i}, and δ = [Y] = −K_S. Prove δ ∈ R_∂ ∩ R_∂^⊥ and δ·δ = 0. Retain these as sublattices of Pic(S), with δ present; no quotient by ℤδ is taken. Construct their marked relative versions and intersection-preserving transport. The symmetry roots, their integral span inside R_∂^⊥, and their parameter hyperplanes are the outputs of §5.5.
+
 **API.**
 
-- Extract the weighted boundary intersection graph and the orthogonal lattices in Pic(S).
+- Construct R_∂, R_∂^⊥ and δ inside Pic(S), their pairings with the declared sign, and the weighted boundary intersection graph.
 - Prove invariance under pair isomorphisms and compatibility with admissible families.
 - Compare the complement S \ D with its logarithmic tangent and two-form sheaves.
-- Distinguish the boundary-root lattice from a symmetry-root lattice.
+- Supply the inclusion R_∂^⊥ → Pic(S) and its marked-family comparisons to §5.5; the construction of a symmetry-root basis belongs to that target.
 
 **Checks.**
 
 - A smooth elliptic anticanonical boundary has elliptic Picard identity component, not additive, and is excluded.
 - A multiplicative cycle has multiplicative Picard identity component and is excluded.
 - Requiring a global affine-plane chart would exclude the D₈ case; that additional requirement is absent.
+- A boundary component of self-intersection −2 has squared root length 2, whereas δ has square zero and remains a nonzero Picard class. R_∂^⊥ is defined by all boundary components, not only by orthogonality to K_S.
 
 **Supporting constructions owned by this target.**
 
@@ -1553,21 +1599,23 @@ Define the comparison groupoid of smooth projective rational surfaces S with a n
 
 - The full classical phase family with the intrinsic form and splitting from targets 3.1–3.12, the pair framework of 5.1, and the stated markings/admissible base changes. Construction of the compactification, the eight boundary types, equality of its full complement with the phase family, and the form/distribution comparison are conclusions.
 
-Construct a compactification of the degree-four connection moduli family with the pair structure of §5.1, after the stated marking/base changes, and prove that its complement is the full phase family. Prove the extension and comparison of the symplectic form and time distribution, including exceptional curves and nontrivial bundle charts. Classify the additive normal-crossing boundary types as D₄, D₅, D₆, D₇, D₈, E₆, E₇ and E₈. These are affine boundary diagrams. (STT02, Proposition 1.2 and Tables 2–3; VDPS09, introduction and Table 1; IIS06, §10 for the fully established PVI comparison.)
+Construct a relative compactification S → B of the degree-four connection moduli family with the pair structure of §5.1, after the stated marking/base changes. With D = Y_red and U = S \ D, construct an isomorphism from the full phase family to U over B. Compare the symplectic form ω and the horizontal splitting h under this isomorphism on every chart of U, including exceptional curves and nontrivial bundle charts. Extend ω to a rational relative two-form ω̃ on S, represented by a section of Ω²_{S/B}(Y), and prove div(ω̃|S_b) = −Y_b on each fiber and agreement with ω on U. The regular horizontal splitting is defined on U; its chart-extension theorem covers all of U. No regular splitting over the compactification S is part of this comparison. Classify the additive normal-crossing boundary types as D₄, D₅, D₆, D₇, D₈, E₆, E₇ and E₈. These are affine boundary diagrams. (STT02, Proposition 1.2 and Tables 2–3; VDPS09, introduction and Table 1; IIS06, §10 for the fully established PVI comparison.)
 
-The all-profile comparison is a construction and proof target. VDPS09's introductory conjectural global comparison is not used as an established theorem. Prove overlap identifications, coverage and the extension at the omitted charts before asserting a global isomorphism. The compactification is not used to bypass §4.4 or to infer completeness merely from existence of a foliation.
+The all-profile comparison is a construction and proof target. VDPS09's introductory conjectural global comparison is not used as an established theorem. Prove overlap identifications, coverage and the extension at every omitted chart of U before asserting the global phase-family isomorphism. The compactification is not used to bypass §4.4 or to infer completeness merely from existence of a foliation.
 
 **API.**
 
 - Construct the relative compactification and its boundary divisor with its multiplicities and intersection pairing.
 - Prove the full open-complement comparison, including bundle-jumping and exceptional charts.
-- Compare the deformation and relative two-form under that isomorphism, and record the marking/base-change law.
+- Compare the deformation, relative symplectic form and regular horizontal splitting on U under that isomorphism, and prove the marking/base-change laws.
+- Construct the rational relative two-form on S with the stated fiberwise pole divisor Y and prove its restriction equals the form on U.
 
 **Checks.**
 
 - Two presentations of boundary type D₆ can have different formal pole data; the common boundary label alone is not a moduli isomorphism.
 - The D₈ complement must be retained even without the extra affine-plane hypothesis of older definitions.
 - An omitted exceptional curve invalidates the full-complement assertion even if the open rational chart and its scalar formula are correct.
+- The boundary pole orders of ω̃ are the multiplicities in Y, not those in D. A nonzero compactified Kodaira–Spencer time class can vanish after restriction to U; a regular time lift on all of S would instead force that compactified class to vanish.
 
 *Needs:* Internal: 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 5.1; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14).
 
@@ -1621,18 +1669,21 @@ Use the exact *Needs* list at each target and the cross-package registry in `des
 
 Construct elementary modifications along an invariant local flag, tensor product with an admitted rank-one connection, duality and relabeling as functors between the actual decorated moduli problems. Specify the new determinant, exponent and stability data and the locus on which the transformed object is stable. Use the kernel construction for a modification, its induced connection, and the inverse modification; retain the comparison arrows. Extend these functors to strong integrable families by preservation of the allowed pole filtration and kernel lattices. (IIS06, Definition 3.5 and §7; I23, §§2–4 and Definition 10.1.)
 
+For each operation g, construct its parameter-and-time map φ_g and the saturated stable domains 𝔘_g and 𝔘′_g on which the operation and its inverse have the required decorated types. Construct F_g: 𝔘_g → 𝔘′_g over φ_g, its inverse functor and the two natural inverse comparisons. For the coarse maps p_g: 𝔘_g → U_g and p′_g: 𝔘′_g → U′_g, construct the induced map F̄_g: U_g → U′_g and prove p′_g ∘ F_g ≃ F̄_g ∘ p_g by the coarse universal property, compatibly with pullback. For an asserted birational correspondence of the ambient coarse spaces, specify dense open subsets V_g and V′_g and prove that the restricted maps are mutual inverses. The horizontal and symplectic laws belong to §5.5; §7.4 compares the resulting coarse map with formulas in the charts of §7.2.
+
 **API.**
 
 - Construct the transformed bundle and connection before passing to coarse moduli, with their determinant and local-type formulas.
 - Prove pullback, composition and inverse comparisons on their specified domains.
 - Describe the change of weights or required wall-crossing correspondence instead of declaring stability invariant without proof.
-- Distinguish a functorial isomorphism of moduli problems, an open birational correspondence and a scalar solution substitution.
+- Construct F̄_g and the commuting coarse-moduli diagram over φ_g; for each birational claim exhibit the dense inverse opens and their inverse laws. Supply this geometric map and its domain to the coordinate comparison in §7.4.
 
 **Checks.**
 
 - Modifying along a one-dimensional quotient at a logarithmic pole changes the bundle degree by −1; leaving the determinant unchanged fails the determinant comparison.
 - Tensoring rank two by a line connection L changes the determinant by L², including its connection; it does not construct a square root of a previously fixed odd-degree determinant.
 - The inverse modification recovers the original decorated object with its arrow on the common admissible locus, while forgetting the distinguished flag need not permit the inverse.
+- The image of an object under F_g and under the induced coarse map must agree after applying p′_g. A coordinate formula alone does not discharge this descent diagram or the two inverse comparisons.
 
 *Needs:* Internal: 3.1, 3.5, 3.9, 1.1; [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B).
 
@@ -1643,16 +1694,16 @@ Construct elementary modifications along an invariant local flag, tensor product
 
 **Hypotheses.**
 
-- The connection functors of 5.4, the deformation pairing and intrinsic splitting of targets 3.5–3.12, and the marked-surface comparison of 5.2. Additional marked-pair reflections, their actual regular/birational domains, horizontal/symplectic extension and relations must be constructed and proved here.
+- The connection functors and descended maps of 5.4, the deformation pairing and intrinsic splitting of targets 3.5–3.12, the lattices of 5.1, and the marked-surface comparison of 5.2. Additional marked-pair reflections, their actual regular/birational domains, horizontal/symplectic extension and relations must be constructed and proved here.
 
-Prove that each admitted transformation intertwines h by applying the uniqueness of strong extensions to its transformed family. Prove the transformation law for ω by the induced map of deformation complexes and trace pairing. Construct the resulting action groupoid on the parameterized moduli family, and establish relations by natural isomorphisms of the functors. On a marked surface compare its action on Pic(S) with the corresponding integral root reflections and diagram automorphisms. State the actual symmetry root lattice and its parameter hyperplanes separately from the boundary root diagram. (IIS06, Theorem 7.4 and Theorem 10.13 for PVI; STT02, Tables 2–3 and the marked deformation construction.)
+For F̄_g over φ_g, prove dF̄_g ∘ h = h′ ∘ dφ_g on the relative time tangent bundles by applying the uniqueness of strong extensions to the transformed family. Compute F̄_g⁎ω′ by the induced map of deformation complexes and trace pairing, and prove F̄_g⁎ω′ = ω for each symplectic generator on its stated domain. Construct the resulting action groupoid on the parameterized moduli family, and establish relations by natural isomorphisms of the functors. On a marked surface compare its action on Pic(S) with the corresponding integral root reflections and diagram automorphisms. For each profile, construct the symmetry simple-root classes in the integral lattice R_∂^⊥ of §5.1, their span R_sym, their Cartan pairings and the associated parameter hyperplanes; identify explicitly when R_sym equals R_∂^⊥. Use the pairing ⟨x,y⟩ = −x·y and prove integrality of the reflection x ↦ x − 2⟨x,α⟩α/⟨α,α⟩ for each root α used. Retain δ in the lattice action, and specify an empty root system for a profile with no reflection roots. (IIS06, Theorem 7.4 and Theorem 10.13 for PVI; STT02, Tables 2–3 and the marked deformation construction.)
 
 The functors in §5.4 are not assumed to generate the full affine Weyl group. Construct the additional reflections on the moduli of marked pairs, identify the induced birational correspondence of connection moduli through §5.2, and prove its horizontal and symplectic extension on the claimed domain. The central PVI reflection is a required test: it is not generated merely by the local gauge modifications listed in §5.4. IIS06 Remark 7.5(2) describes a Fourier-transform realization; a Fourier–Laplace or middle-convolution implementation would likewise require its own functor and strong-extension comparison. The marked-surface construction is the specified route here. The PVI theorem is not cited as a theorem for every profile. Verify the actual reflection and Coxeter relations, effective-locus conditions and extension across chart complements before deriving rational Bäcklund formulas in §7.4. An identity of rational maps on a dense open set must be upgraded before claiming an everywhere defined automorphism.
 
 **API.**
 
-- Construct the marked-pair reflection correspondences and compare them with the connection-functor generators on their common domains.
-- Prove horizontal and symplectic intertwining, relations and compatibility with parameter changes.
+- Construct the profile-specific symmetry root data in R_∂^⊥, the marked-pair reflection correspondences and their comparison with the descended connection-functor generators on their common domains.
+- Prove the horizontal identity over φ_g, the relative two-form identity, relations and compatibility with parameter changes; deduce that the induced maps send horizontal solutions to horizontal solutions.
 - Record the regular domain and the extension theorem for each claimed global map.
 
 **Checks.**
@@ -1661,7 +1712,7 @@ The functors in §5.4 are not assumed to generate the full affine Weyl group. Co
 - A reflection squared must give the original marked family with its comparison arrow, not merely the same boundary diagram.
 - A birational formula with a pole on an invariant curve is not an automorphism of that curve until a regular extension is proved.
 
-*Needs:* Internal: 3.6, 3.7, 3.12, 5.2, 5.3, 5.4; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10).
+*Needs:* Internal: 3.6, 3.7, 3.12, 5.1, 5.2, 5.3, 5.4; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10).
 
 <a id="target-5-6"></a>
 ### 5.6 Invariant rational curves and Riccati dynamics
@@ -1843,25 +1894,28 @@ Compare with the JMU form only under the stated formal-normalization hypotheses:
 
 **Hypotheses.**
 
-- JMU/Hamiltonian comparison only on the generic unramified nonresonant locus; broader scalar normalization uses the finite-dimensional stabilization logarithmic form of the constructed RHP determinant section, a fixed frame and a base-point value on a regular time leaf. An infinite-dimensional trace expression additionally requires the verified trace-class realization and frame comparison.
+- JMU/Hamiltonian comparison only on the generic unramified nonresonant locus; broader scalar normalization uses the finite-dimensional stabilization logarithmic form of the constructed canonical RHP determinant section τ_T, a fixed nonvanishing frame e, a regular base point t₀ with τ_T(t₀) ≠ 0, and a chosen scalar value c ∈ ℂ× on the time leaf. An infinite-dimensional trace expression additionally requires the verified trace-class realization and frame comparison.
 
 On the JMU comparison locus of §6.4, choose a time coordinate and symplectic chart of the already constructed dynamics and derive the relation between the selected determinant-frame logarithmic derivative and the local Hamiltonian. Prove the exact coefficient and gauge, factorization and time-only correction terms from §6.4; do not silently identify different Hamiltonian conventions. A local primitive supplied by a symplectic chart is not a canonical function on the whole phase family. This Hamiltonian/JMU identity is restricted to that locus, and does not assert an additional ramified/resonant identity. (MAL04, Theorem 5.12 in its logarithmic Schlesinger scope; BERT10, §5.1, Proposition 5.1, with BERT16.)
 
-For every constructed marked RHP chart, including a ramified or resonant chart after its §6.3 adapter is proved, use the stabilization identity of §6.4: in a determinant frame, τ=det S and d log τ=Tr(S⁻¹dS) on the nonvanishing locus, with the proved correction under a frame change. A verified infinite-dimensional realization τ=u det(I−K) gives d log τ=d log u−Tr((I−K)⁻¹dK) on its own trace-class locus. Fix this actual logarithmic one-form and the frame prescription, then establish its scalar normalization by choosing a nonzero value in a determinant fiber at a regular base point. This normalization theorem does not require a JMU or Hamiltonian identification outside the generic comparison locus. (BERT17, Proposition 2.3 and formula (3.6).)
+For every constructed marked RHP chart, including a ramified or resonant chart after its §6.3 adapter is proved, write the fixed canonical section as τ_T = f e in the chosen determinant frame. In the stabilization frame of §6.4, f = det S and d log f = Tr(S⁻¹dS) on the nonvanishing locus. For e′ = a e the coefficient is f′ = a⁻¹f, so d log f′ = d log f − d log a. A verified infinite-dimensional realization f = u det(I−K) gives d log f = d log u − Tr((I−K)⁻¹dK) on its own trace-class locus. (BERT17, Proposition 2.3 and formula (3.6).)
 
-The differential-equation normalization is along a fixed-monodromy horizontal time leaf, away from the chosen divisor. There a closed scalar differential and a base-point value determine the representative on a simply connected domain. Any extension of this assertion to the full monodromy-and-time space must prove the required integrability after its frame corrections; simple connectedness alone does not remove curvature of a line connection.
+The coefficient f and its value f(t₀) are fixed by τ_T and e. Define the separately normalized scalar function f_norm = c f/f(t₀), and prove f_norm(t₀) = c, d log f_norm = d log f, and f_norm e = (c/f(t₀))τ_T. Thus choosing a base-point value gives a specified constant multiple of the canonical section, while retaining the original section and frame for comparison. Equivalently the chosen fiber value is c e(t₀); under a frame change transform c as the coefficient of that same fiber value. This normalization uses the stabilization logarithmic form and does not require a JMU or Hamiltonian identification outside the generic comparison locus.
+
+The differential-equation normalization is along a fixed-monodromy horizontal time leaf, away from the chosen divisor. A prescribed closed scalar logarithmic one-form and a nonzero base-point value determine a unique solution on a connected simply connected domain. Prove its equality with f_norm wherever that one-form equals d log f, and compute the holonomy obstruction to descent when such local solutions are continued around a loop. Any extension of this assertion to the full monodromy-and-time space must prove the required integrability after its frame corrections; simple connectedness alone does not remove curvature of a line connection.
 
 **API.**
 
 - On the specified JMU comparison locus, compare the symplectic/time convention of §3.11 with the variational identity and record all correction terms. On the broader RHP-adapter locus use the finite-dimensional stabilization identity with its prescribed determinant frame; use an infinite-dimensional trace formula only after its additional trace-class comparison has been proved.
 - Prove the transformation laws under a time change, a time-dependent symplectic chart change and a determinant-frame change.
-- Prove uniqueness of scalar normalization on a connected simply connected regular domain after its base-point value is fixed; state separately the holonomy obstruction to descent.
+- Construct f_norm = c f/f(t₀), its proportionality comparison with τ_T in the fixed frame, and its base-point and logarithmic-derivative laws. Prove uniqueness for the corresponding scalar differential equation on a connected simply connected regular domain, and identify the holonomy obstruction to descent.
 
 **Checks.**
 
 - If an identity uses d log τ = H dt, replacing H by H + c(t) requires multiplying τ by exp(∫c(t)dt), with the integration constant fixed.
-- For a new time u = f(t), the same logarithmic one-form has coefficient (dt/du)H; an unchanged scalar coefficient would fail the comparison.
+- For a new time u = φ(t), the same logarithmic one-form has coefficient (dt/du)H; an unchanged scalar coefficient would fail the comparison.
 - Two representatives differing by a nonzero constant define the same logarithmic derivative but are different normalized scalar functions until the base-point values agree.
+- For T_s(z) = sz in the standard determinant frame, f(s) = s. With s₀ = 1 and c = 2, f_norm(s) = 2s; it is the coefficient of twice the canonical section, while the original canonical coefficient remains s.
 
 *Needs:* Internal: 3.11, 3.12, 6.3, 6.4; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
@@ -1909,9 +1963,15 @@ Use NonlinearConnections §0.8, formulated for an observer bundle and its first-
 
 **Hypotheses.**
 
-- The profile classification of 3.4 and the already constructed intrinsic moduli, splitting, symplectic form and continuation theorem. The concrete charts, parameter/time substitutions, jet inverses and coverage/overlap comparisons for those profiles are outputs of this target.
+- The profile classification of 3.4 and the already constructed intrinsic moduli, splitting, symplectic form and continuation theorem. The local source-comparison lemmas, concrete charts and standard observers, parameter/time substitutions, jet inverses, observer-admissibility certificates and coverage/overlap comparisons for those profiles are outputs of this target.
 
-For every profile in §3.4 construct a concrete time/Darboux or equivalent symplectic chart from the connection moduli, with its inverse on its actual image. Identify h in this chart by the strong integrable extension of §3.9, apply §7.1, and prove the parameter and time-substitution dictionary to the standard equation below, including the required marking covers. The required comparison records the chosen local frames, the determinant convention, the chart domain, the momentum inverse, every denominator, and the omitted loci. Coverage of the full moduli space is the overlap theorem, not the claim that one rational chart covers it. Re-derive the scalar expression from the compatible system; the source corrections in §7.4 are part of the comparison. (VDPS09, §2.2, Table 1 and §4; IIS06, Theorems 10.6, 10.10 and 10.13; DLMF, §32.2(i), equations 32.2.1–32.2.6.)
+The source sign comparison is itself a lemma. In VDPS09 §4.1 the displayed equations p′ = F H_q, q′ = −F H_p, with F depending only on q, have kernel form dp ∧ dq/F + dH ∧ dt. The printed minus sign in that extended form is inconsistent with those equations, including the PI instance (44), (46), (47). On F ≠ 0, set Q = q, P = p/F(q), K(Q,P,t) = −H(F(Q)P,Q,t), using the source's argument order H(p,q,t); then dQ ∧ dP + dK ∧ dt is the negative of the correct source form and gives the convention of §3.11. Verify this identity directly before importing any source Hamiltonian.
+
+VDPS09's printed PV equation (3) also disagrees with its system (2) and Hamiltonian (5). Differentiating q′ = 2p/t gives the exponent term [θ₀²(q − 1)² − θ₁²q²]/[2q(q − 1)t²], in place of the printed θ₀²/(2qt²) + θ₁²/[2(q − 1)t²]. At t = 1, q = 2, p = 0, θ₀ = 0, θ₁ = 1, θ∞ = 1, the compatible system gives q″ = 2 while the printed scalar equation gives 7/2. Use this re-derived expression in the PV dictionary below. These two local algebraic lemmas are proved here before the presentation comparisons; §7.4 consumes them.
+
+For every profile in §3.4 construct a concrete time/Darboux or equivalent symplectic chart from the connection moduli, with its inverse on its actual image. Identify h in this chart by the strong integrable extension of §3.9, apply §7.1, and prove the parameter and time-substitution dictionary to the standard equation below, including the required marking covers. The required comparison records the chosen local frames, the determinant convention, the chart domain, the momentum inverse, every denominator, and the omitted loci. Coverage of the full moduli space is the overlap theorem, not the claim that one rational chart covers it. Re-derive the scalar expression from the compatible system using the source-comparison lemmas above. (VDPS09, §2.2, Table 1 and §4; IIS06, Theorems 10.6, 10.10 and 10.13; DLMF, §32.2(i), equations 32.2.1–32.2.6.)
+
+For each listed profile, construct its standard q as a candidate observer with the chosen cyclic vector or local frame, its actual rational domain and its overlap comparisons. A cyclic-vector apparent point is part of this presentation data, distinct from the marked-pole monodromy loci of §3.8. For each solution stratum on which a scalar conclusion is claimed, prove the cancellation or resolved-lift comparison, independence of the representative/lift, and the non-identically-infinite condition required by §4.8. Record precisely which strata are covered, which require another observer chart, and which retain phase data without a scalar value. These certificates, supplied here rather than by the general evaluation theorem, are the inputs to §§4.8–4.9.
 
 In the following output table, slopes are projective Katz invariants and their order is forgotten only for the classification table; an omitted pole is written “—”. All seventeen ordered profiles are recovered with the label-assignment and reindexing comparisons of §3.4. The number of external parameters is the dimension of the generic exponent family, not the number of initial conditions. Boundary diagrams are affine.
 
@@ -1946,7 +2006,7 @@ Each row is a theorem about a chart and a specified parameter map. The symbols �
 | Source variables and parameters | Standard variables and coefficients |
 |---|---|
 | IIS06 (1)–(2), with 2κ₀ + κ₁ + κ₂ + κ₃ + κ₄ = 1 | PVI: α = κ₄²/2, β = −κ₁²/2, γ = κ₂²/2, δ = (1 − κ₃²)/2 |
-| VDPS09 PV system (2)/(5), with the scalar correction in §7.4 | T = t, Q = q/(q − 1); (α,β,γ,δ) = (θ₁²/2,−θ₀²/2,1 − θ∞,−1/2) |
+| VDPS09 PV system (2)/(5), with the scalar expression derived above | T = t, Q = q/(q − 1); (α,β,γ,δ) = (θ₁²/2,−θ₀²/2,1 − θ∞,−1/2) |
 | VDPS09 degenerate PV system (8) | T = t², Q = q/(q − 1); (α,β,γ,δ) = (θ₁²/2,−θ₀²/2,−2,0) |
 | VDPS09 PIII(D₆), (14) | T = t, Q = q; (α,β,γ,δ) = (4(θ∞ + 1),−4θ₀,4,−4) |
 | VDPS09 PIII(D₇), (19) | t = T², Q(T) = Tq(T²); (α,β,γ,δ) = (4(θ∞ + 1),−8,4,0) |
@@ -1957,21 +2017,26 @@ Each row is a theorem about a chart and a specified parameter map. The symbols �
 
 For the Flaschka–Newell coordinate (34), choose c³ = 2 and set T = −ct, U(T) = cq(t). Then U″ = U′²/(2U) + 2U² − TU − θ₀²/(2U). Retain a chosen exponent sign a = ±θ₀. On U ≠ 0, Q = (U′ − a)/(2U) is the PII variable with α = a − 1/2; conversely U = Q′ + Q² + T/2. The exceptional branch U = 0, a = 0 cannot be reconstructed by division and keeps its full phase data. The square-time comparisons are local biholomorphisms on their nonzero domains or comparisons on the indicated covers; they are not global changes of coordinate on the same punctured line.
 
+The PI and PII comparison packages include the canonical Hamiltonians H_I = p²/2 − 2q³ − tq and H_II = p²/2 − (q² + t/2)p − cq, with c = α + 1/2, in the convention ω = dq ∧ dp, q′ = H_p, p′ = −H_q. Prove their extended-form comparison and momentum inverses here. These are inputs to the sigma comparisons of §7.4 and the seed checks of §7.5; neither supplies a prerequisite for this target.
+
 **API.**
 
+- Prove the source extended-form sign comparison and the compatible PV elimination before using the presentation dictionaries.
 - Export one comparison package per listed presentation, containing the explicit formulas, parameter map, inverse jet chart and overlap maps.
 - Compare the source-specific Hamiltonian and the convention of §3.11 by equality of extended forms.
 - Identify all excluded denominators and the phase charts through their allowed zero loci.
+- Construct each standard q and supply its domain, overlap, stratum-coverage, cancellation/lift and non-infinity certificates to §§4.8–4.9.
 - Deduce the standard scalar Painlevé property from §4.9 on every observer stratum covered by the comparison.
 
 **Checks.**
 
 - There are ten presentation rows and eight boundary types; identifying every row with a different classical equation fails both counts.
+- In the PV source check t = 1, q = 2, p = 0, θ₀ = 0, θ₁ = 1, θ∞ = 1, the compatible elimination gives q″ = 2, not the printed 7/2.
 - The standard PI scaling above changes both q and t. Rescaling t alone does not recover the coefficient 6 of q².
 - PII's two linear-system presentations have different local singularity data; equality of their scalar solution formulas is not equality of input objects.
 - A PIII comparison with γ = 4, δ = −4 cannot cover γ = δ = 0 by a nonzero scaling; the latter belongs to the boundary analysis of §7.3.
 
-*Needs:* Internal: 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 4.9, 5.2, 7.1.
+*Needs:* Internal: 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 4.8, 4.9, 5.2, 7.1.
 
 <a id="target-7-3"></a>
 ### 7.3 Complete coefficient-boundary coverage
@@ -2005,19 +2070,95 @@ Prove that the PIII cases cover all tuples; the two elementary alternatives may 
 
 **Hypotheses.**
 
-- The earlier geometric transformation, determinant-variation and coordinate-comparison results, on their actual stated domains. The sigma converse has its explicit reconstruction nondegeneracy hypothesis; source-sign corrections and the comparisons of Hamiltonian, sigma and linear-system displays are proved here.
+- The geometric transformations, determinant-variation results and coordinate comparisons on their actual domains. The source-sign and PV-elimination lemmas and the PI/PII Hamiltonian normalizations are supplied by §7.2. Sigma reconstruction uses the explicit analytic and nondegeneracy conditions below, with constant parameters and connected open time domains.
 
-For each admitted presentation, derive the displayed Hamiltonian system from h and ω, and derive the Lax-pair compatibility from the same strong total connection. For sigma equations, transformations and tau logarithmic derivatives, state a forward lemma and a converse only on the locus where the reconstruction has been proved. Track additive Hamiltonian functions of time, multiplicative tau normalizations, branch choices and exceptional derivatives explicitly. (DLMF, §§32.6–32.7; VDPS09, §4; IIS06, Theorem 10.13; BERT17, Proposition 2.3 and Theorem 3.3.)
+For each of the ten presentations in §7.2, derive the Hamiltonian system from h and ω and the Lax-pair compatibility from the same local representative strong total connection, using the local source comparisons proved there. Track additive Hamiltonian functions of time, multiplicative tau normalizations and branch choices. For every geometric transformation g from §§5.4–5.5, construct its coordinate expression Ψ_g and prove c′ ∘ F̄_g = Ψ_g ∘ c on the actual common domain of the charts c,c′ from §7.2. Identify which zero denominators are removed by another phase chart and which belong to the genuine indeterminacy of the geometric map. Scalar jet substitutions use the jet inverses of §7.1 on their stated domains. (VDPS09, §4; IIS06, Theorem 10.13; BERT17, Proposition 2.3 and Theorem 3.3.)
 
-The source sign comparison is itself a lemma. In VDPS09 §4.1 the displayed equations p′ = F H_q, q′ = −F H_p, with F depending only on q, have kernel form dp ∧ dq/F + dH ∧ dt. The printed minus sign in that extended form is inconsistent with those equations, including the PI instance (44), (46), (47). On F ≠ 0, set Q = q, P = p/F(q), K(Q,P,t) = −H(F(Q)P,Q,t), using the source's argument order H(p,q,t); then dQ ∧ dP + dK ∧ dt is the negative of the correct source form and gives the convention of §3.11. Verify this identity directly before importing any source Hamiltonian.
+The sigma comparisons use the following finite inventory of eight canonical models. Parameters and canonical coordinates are local to each row. Put s = σ, u = σ′ and v = σ″. In every model the Hamilton equations are q′ = K_p and p′ = −K_q. IMS18 is used with ℏ = 1; its sigma function need not equal its Hamiltonian. PI and PII use the DLMF convention of the explicit reconstruction statements below. The Flaschka–Newell and degenerate-PV presentations consume these models through the actual changes of variables and domains proved in §7.2, rather than introducing unnamed sigma normalizations.
 
-VDPS09's printed PV equation (3) also disagrees with its system (2) and Hamiltonian (5). Differentiating q′ = 2p/t gives the exponent term [θ₀²(q − 1)² − θ₁²q²]/[2q(q − 1)t²], in place of the printed θ₀²/(2qt²) + θ₁²/[2(q − 1)t²]. At t = 1, q = 2, p = 0, θ₀ = 0, θ₁ = 1, θ∞ = 1, the compatible system gives q″ = 2 while the printed scalar equation gives 7/2. The comparison uses the re-derived expression and then the PV substitution of §7.2.
+| Model | Fixed Hamiltonian and sigma observable S(t,q,p) | Exact sigma relation |
+|---|---|---|
+| PI | K = p²/2 − 2q³ − tq; S = K | DLMF 32.6.6, with definition 32.6.5 and reconstruction 32.6.7–8 |
+| PII | K = p²/2 − (q² + t/2)p − c q, c = α + 1/2; S = K | DLMF 32.6.13, with Hamiltonian 32.6.9 and reconstruction 32.6.14–15 |
+| PIII(D₆) | IMS18 (2.18) at ℏ = 1; S = tK + pq, as in (2.19) | IMS18 (2.20) |
+| PIII(D₇) | K = (q²p² + θqp + tp − q)/t; S = tK | E₇ = t²v² − (θu − 1)² − 4u²(s − tu) = 0 |
+| PIII(D₈) | K = (q²p² − q − t/q)/t; S = tK | E₈ = t²v² + 4tu³ − 4su² + 4u = 0 |
+| PIV | IMS18 (2.21); S = K + 2t(θ₀ + θ∞/3), as in (2.22) | IMS18 (2.23), with its three displayed sigma parameters |
+| PV | IMS18 (2.24); S = tK | IMS18 (2.26), with its displayed ν₁, ν₂, ν₃ |
+| PVI | K = K₁ from the formula below; S = t(t − 1)K₀ + (θ_t² − θ∞²)t/4 − (θ₀² + θ_t² − θ₁² − θ∞²)/8 | IMS18 (2.30), with the sigma definition (2.28)–(2.29) |
 
-For sigma reconstruction include the derivative-nondegeneracy hypothesis and analytic extension argument. For example, the PI sigma relation (σ″)² + 4(σ′)³ + 2tσ′ − 2σ = 0 admits σ ≡ 0, whereas q = −σ′ ≡ 0 does not solve q″ = 6q² + t. Thus the unqualified reverse implication is false. On the branch σ″ not identically zero, differentiating and then extending the resulting analytic identity gives the required reconstruction. The entire excluded branch is σ = at + 2a³ with a constant; its q = −a never solves PI on an open time domain. This explicitly identifies the spurious scalar branches of this sigma relation.
+For the PVI row, put A = θ₀ + θ₁ + θ_t and fix the rational Hamiltonian family
 
-Distinguish this PI obstruction from loss of phase information on a genuine invariant locus. In the PII normalization of §7.5, put c = α + 1/2 and σ = H. Direct differentiation gives σ′ = −p/2 and σ″ = 2qσ′ − c/2, hence q = (2σ″ + c)/(4σ′) and p = −2σ′ on σ′ ≠ 0. At c = 0 and p = 0, every Riccati trajectory q′ = −q² − t/2 has σ ≡ 0. These are genuine phase trajectories with distinct initial q, all having the same scalar sigma function. Retain that phase/initial-point data on this locus; there is no sigma-only inverse there. Isolated zeros of σ′ in the reconstructible branch require the stated analytic extension comparison, not totalized division.
+```math
+\begin{aligned}
+t(t-1)K_\varepsilon={}&q(q-1)(q-t)p^2
+ -\bigl[\theta_0(q-1)(q-t)+\theta_1q(q-t)
+ +(\theta_t-\varepsilon)q(q-1)\bigr]p\\
+&+\frac{(A-\theta_\infty)(A+\theta_\infty-2\varepsilon)}4(q-t)
+ +\frac{[(t-1)\theta_0+t\theta_1](\theta_t-\varepsilon)}2.
+\end{aligned}
+```
 
-*Needs:* Internal: 3.11, 5.4, 5.5, 6.4, 6.5, 7.1, 7.2, 7.3.
+Use K₁ for the dynamics and K₀ only in the displayed sigma observable. The coefficient −2ε and its comparison with IMS18 (2.27) and the standard scalar normalization of §7.2 are proved in this target; §7.2 does not consume this additional IMS18 convention. Prove E(t,S,XS,X²S) = 0 for every row directly from its fixed Hamiltonian, where X = ∂_t + K_p∂_q − K_q∂_p. This is the forward sigma statement; it is independent of a scalar tau normalization.
+
+The canonical D₇ and D₈ models above are fixed changes of VDPS09's Hamiltonian displays, not additional unlocated source formulas. For D₇ use VDPS09 (18)–(21), write its coordinates as (r,z), and let λ be its θ∞. Set θ = λ + 2, q = 1/r and p = −z − θr/2 − tr²/2. For D₈ use VDPS09 (23)–(26), with q = r and p = (z + r/2)/r²; the displayed K differs from the transformed negative source Hamiltonian by 1/(4t). Prove both changes intertwine the first-order systems on tr ≠ 0 and derive E₇ and E₈ by substitution. These comparisons retain the time-only Hamiltonian correction.
+
+| Model | Dictionary to the standard scalar equations of §7.2 |
+|---|---|
+| PI | T = t, Q = q |
+| PII | T = t, Q = q; α = c − 1/2 |
+| PIII(D₆) | T = t, Q = q; (α,β,γ,δ) = (4θ₀, 4(1 − θ∞), 4, −4) |
+| PIII(D₇) | t = T², Q(T) = T/q(T²); (α,β,γ,δ) = (4(θ − 1), −8, 4, 0) |
+| PIII(D₈) | t = T², Q(T) = q(T²)/T; (α,β,γ,δ) = (8, −8, 0, 0) |
+| PIV | T = t, Q = 2q; (α,β) = (2θ∞ − 1, −8θ₀²) |
+| PV | T = t, Q = q; (α,β,γ,δ) = ((θ₀ − θ₁ − θ∞)²/8, −(θ₀ − θ₁ + θ∞)²/8, θ₀ + θ₁ − 1, −1/2) |
+| PVI | T = t, Q = q; (α,β,γ,δ) = ((θ∞ − 1)²/2, −θ₀²/2, θ₁²/2, (1 − θ_t²)/2) |
+
+The square-time comparisons retain the nonzero cover and the chosen branch. Momentum comparisons use q′ = K_p on the common chart and prove equality of the corresponding extended forms, including the stated scale and time-only corrections. They are not inferred from equality of the scalar parameter tuples.
+
+For every fixed model construct a local converse as follows. Set S₀ = S, S₁ = XS and S₂ = X²S, and define Δ = (∂_qS₀)(∂_pS₁) − (∂_pS₀)(∂_qS₁). At a phase point x₀ where Δ ≠ 0 and E_v(t,S₀,S₁,S₂) ≠ 0, apply the holomorphic inverse theorem to the fixed map (t,q,p) ↦ (t,S₀,S₁). Construct inverse neighborhoods and the inverse branch I_{x₀}. The implicit function theorem identifies the germ of E = 0 through (t₀,S₀(x₀),S₁(x₀),S₂(x₀)) with the graph of S₂ transported by I_{x₀}; prove this identification using the forward identity. For a holomorphic sigma solution in that germ, define (q(t),p(t)) = I_{x₀}(t,σ(t),σ′(t)). Differentiating S₀ and S₁ gives the two equations dS_i((q′,p′) − (K_p,−K_q)) = 0, i = 0,1; the nonzero determinant Δ proves both Hamilton equations. Prove both inverse laws and analytic dependence on parameters. The point x₀ specifies the inverse branch; this local theorem does not identify distinct branches globally.
+
+These hypotheses define a concrete sufficient open domain. In PI, PII and PIV, Δ = −S₂ and E_v = 2v. In PV, D₇ and D₈, Δ = −tS₂ and E_v = 2t²v. In PIII(D₆), Δ = S₁ − tS₂ and E_v = 2t(tv − u). In PVI use the displayed determinant Δ and E_v = 2u t²(t − 1)²v. Thus, on the Hamiltonian domains, the additional conditions are respectively v ≠ 0; t ≠ 0 and v ≠ 0; t ≠ 0 and tv − u ≠ 0; and t(t − 1)uvΔ ≠ 0. The D₈ Hamiltonian also requires q ≠ 0. The stronger connected-branch PI and PII converses below extend beyond these pointwise conditions by their explicit identities. No classification of all excluded sigma solutions is required, and each claimed extension across a zero of a reconstruction denominator is a separate geometric comparison.
+
+For PI, use σ = H_I with H_I from §7.2. The equation is E_I = (σ″)² + 4(σ′)³ + 2tσ′ − 2σ = 0, and reconstruction is q = −σ′, p = −σ″ (DLMF 32.6.2–32.6.8). On a connected open time domain require holomorphic σ and σ″ not identically zero, equivalently a point at which σ″ ≠ 0. Differentiating gives E_I′ = 2σ″(σ‴ + 6(σ′)² + t); the identity theorem yields the Hamilton equations everywhere on that domain. Prove H_I(q,p,t) = σ from E_I = 0. The excluded affine branches are exactly σ = at + 2a³, and their constant q = −a never solves PI on an open time domain. In particular, σ ≡ 0 is a spurious scalar solution.
+
+For PII, fix c = α + 1/2 and σ = H_II with H_II from §7.2. Put u = σ′, v = σ″,
+
+```math
+E=v^2+4u^3+2u(tu-\sigma)-c^2/4,\qquad
+D=\sigma'''+6u^2+2tu-\sigma
+```
+
+The sigma equation is E = 0 (DLMF 32.6.13). Require holomorphic σ on a connected open time domain and v not identically zero. On the open subset u ≠ 0 define q = (2v+c)/(4u), p = −2u (DLMF 32.6.14–32.6.15). Prove the identities
+
+```math
+E'=2vD,\qquad p'-(2qp+c)=0,
+```
+
+```math
+q'-(p-q^2-t/2)=\frac{D}{2u}-\frac{E}{4u^2},\qquad
+H_{\mathrm{II}}(q,p,t)-\sigma=\frac{E}{2u}.
+```
+
+Since v is not identically zero, E = 0 implies D = 0 by the identity theorem. This proves both Hamilton equations and H_II = σ on u ≠ 0. No pointwise condition v ≠ 0 is needed there. Conversely, Hamilton trajectories satisfy σ′ = −p/2 and σ″ = 2qσ′ − c/2 and hence E = 0. At an isolated zero of u, extension of the reconstructed trajectory into the full phase space and comparison with the sigma observation is a separate consequence to prove using §4.6 and §§4.8–4.9 and the chart comparisons, rather than division by zero.
+
+If v ≡ 0, write σ = at+b. The sigma relation becomes 4a³−2ab = c²/4. For a ≠ 0, it gives b = 2a²−c²/(8a), but reconstruction yields constant q = c/(4a), p = −2a, incompatible with q′ = p−q²−t/2 on an open time domain. For a = 0, the sigma relation requires c = 0 and permits every b. The Hamilton identity forces b = 0; at b = 0 the genuine Riccati family p = 0, q′ = −q²−t/2 has σ ≡ 0. Retain its phase initial point: different q values give the same sigma function, so there is no sigma-only inverse on this family. Thus the affine spurious branches and loss of information on an invariant phase locus have separate contracts.
+
+**API.**
+
+- For the finite sigma inventory, construct each fixed sigma observation, prove its equation and parameter/time comparison, and construct the stated inverse branches with their actual nondegeneracy and domain conditions.
+- Prove the PI and PII forward identities, the analytic converse on the specified non-affine branches, and the affine-branch diagnostics; keep the PII Riccati phase data.
+- Construct the coordinate transformations Ψ_g and their commuting diagrams with F̄_g, including comparison of denominators with the geometric domains.
+- Compare Hamiltonian and tau logarithmic derivatives using §6.5's fixed-section coefficient and its separately normalized scalar function.
+
+**Checks.**
+
+- For PII with c = 0, σ(t) = t+2 satisfies E = 0 and σ′ = 1, but reconstructed q = 0, p = −2 has first Hamilton residual 2+t/2. At t = 0 that residual is 2, although H_II = σ. Checking only the sigma equation, nonzero denominator and Hamiltonian value would accept a spurious branch.
+- For PI, σ ≡ 0 passes the sigma equation but gives q ≡ 0, which does not solve PI. The condition σ″ not identically zero rejects it.
+- For PII at c = 0, distinct local solutions of q′ = −q²−t/2 all give the same σ ≡ 0; the inverse must retain their different phase initial points.
+- A coordinate Bäcklund formula and the descended transformation must have identical chart values on their common domain; a denominator vanishing in one chart alone does not determine whether the geometric map is undefined.
+
+*Needs:* Internal: 3.11, 4.6, 4.8, 4.9, 5.4, 5.5, 6.4, 6.5, 7.1, 7.2, 7.3; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
 
 <a id="target-7-5"></a>
 ### 7.5 Concrete normalizations and special-solution checks
@@ -2026,9 +2167,9 @@ Distinguish this PI obstruction from loss of phase information on a genuine inva
 
 **Hypotheses.**
 
-- The PI/PII connection-moduli comparisons already constructed in 7.2, the first-jet lemma and the admitted geometric transformations. The stated Hamiltonian normalizations, momentum inverse and seed solution identities must be derived; exceptional domains and the Riccati parameter α=−1/2 are retained.
+- The PI/PII connection-moduli comparisons already constructed in 7.2, the first-jet lemma and the admitted geometric transformations. The Hamiltonian normalizations and momentum inverse are supplied by 7.2; derive the seed solution identities here; exceptional domains and the Riccati parameter α=−1/2 are retained.
 
-Prove the PI chart H = p²/2 − 2q³ − tq and the PII chart H = p²/2 − (q² + t/2)p − (α + 1/2)q from the corresponding moduli charts, and apply §7.1. The PII jet inverse is p = q′ + q² + t/2. The polynomial chart covers all finite (q,q′), while poles use the other phase charts. Establish its parameter dictionary with §7.2. (VDPS09, §§4.10–4.11; DLMF, §§32.2, 32.6 and 32.9.)
+Use the PI chart H = p²/2 − 2q³ − tq and the PII chart H = p²/2 − (q² + t/2)p − (α + 1/2)q proved from the moduli comparisons in §7.2, and apply §7.1. The PII jet inverse is p = q′ + q² + t/2. The polynomial chart covers all finite (q,q′), while poles use the other phase charts. Establish its parameter dictionary with §7.2. (VDPS09, §§4.10–4.11; DLMF, §§32.2, 32.6 and 32.9.)
 
 Construct the rational and classical-function families generated from the proved seed objects by §§5.4–5.5's admitted transformations, and prove their formulas only as the resulting coordinate lemmas. No completeness classification of all rational or algebraic solutions is imported from these few seeds.
 
@@ -2055,17 +2196,17 @@ Boundary-value asymptotics, connection constants, Hastings–McLeod identificati
 
 ### References
 
-- **I13.** Michi-aki Inaba. *[Moduli of parabolic connections on a curve and Riemann–Hilbert correspondence](https://arxiv.org/abs/math/0602004v2)*. Journal of Algebraic Geometry 22 (2013), 407–480. Cited preprint: arXiv math/0602004v2, 6 June 2012; Theorems 2.1–2.2, preprint pp. 5–6; §§1, 6. The family properness theorem uses the exponent fiber product and its exact numerical/stability hypotheses.
+- **I13.** Michi-aki Inaba. *[Moduli of parabolic connections on a curve and Riemann–Hilbert correspondence](https://arxiv.org/abs/math/0602004v2)*. Journal of Algebraic Geometry 22 (2013), 407–480. Cited preprint: arXiv math/0602004v2, 6 June 2012; Theorems 2.1–2.2, preprint pp. 5–6; Definition 4.3; §§1, 4, 6. The family properness theorem uses the exponent fiber product and its exact numerical/stability hypotheses.
 
-- **I23.** Michi-aki Inaba. *[Moduli Space of Factorized Ramified Connections and Generalized Isomonodromic Deformation](https://sigma-journal.com/2023/013/)*. SIGMA 19 (2023), 013, 72 pages. Publisher version, 22 March 2023. Locators: Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 9.11 and 11.8; equations (8.2), (11.2) and (11.5).
+- **I23.** Michi-aki Inaba. *[Moduli Space of Factorized Ramified Connections and Generalized Isomonodromic Deformation](https://sigma-journal.com/2023/013/)*. SIGMA 19 (2023), 013, 72 pages. Publisher version, 22 March 2023. Locators: Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 3.3, 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 4.3–4.4, 9.11 and 11.8; equations (8.2), (11.2) and (11.5).
 
 - **IS12.** Michi-aki Inaba; Masa-Hiko Saito. *[Moduli of unramified irregular singular parabolic connections on a smooth projective curve](https://arxiv.org/abs/1203.0084v3)*. Kyoto Journal of Mathematics 53(2) (2013), 433–482. Cited version: arXiv 1203.0084v3 (22 November 2012); the key retains the preprint year. Locators: Theorem 5.1; Remark 6.3.
 
 - **HEU10.** Viktoria Heu. *[Universal isomonodromic deformations of meromorphic rank 2 connections on curves](https://www.numdam.org/item/AIF_2010__60_2_515_0/)*. Annales de l'Institut Fourier 60(2) (2010), 515–549. Published text through NUMDAM; printed pp. 515–549. Locators: Theorem 1.1; Definitions 2.3 and 2.10; §2.
 
-- **VDPS09.** Marius van der Put; Masa-Hiko Saito. *[Moduli spaces for linear differential equations and the Painlevé equations](https://arxiv.org/abs/0902.1702v5)*. Annales de l'Institut Fourier 59(7) (2009), 2611–2667. Cited version: arXiv 0902.1702v5 (12 November 2009); remaining internal inconsistencies are identified in §7.4. Locators: §2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22).
+- **VDPS09.** Marius van der Put; Masa-Hiko Saito. *[Moduli spaces for linear differential equations and the Painlevé equations](https://arxiv.org/abs/0902.1702v5)*. Annales de l'Institut Fourier 59(7) (2009), 2611–2667. Cited version: arXiv 0902.1702v5 (12 November 2009); the source-form sign and PV-elimination corrections are proved in §7.2. Locators: §2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22).
 
-- **IIS06.** Michi-aki Inaba; Katsunori Iwasaki; Masa-Hiko Saito. *[Dynamics of the Sixth Painlevé Equation](https://arxiv.org/abs/math/0501007v2)*. Séminaires et Congrès 14 (2006), 103–167. Cited version: arXiv math/0501007v2 (6 March 2005). Locators: Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definition 3.5; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10.
+- **IIS06.** Michi-aki Inaba; Katsunori Iwasaki; Masa-Hiko Saito. *[Dynamics of the Sixth Painlevé Equation](https://arxiv.org/abs/math/0501007v2)*. Séminaires et Congrès 14 (2006), 103–167. Cited version: arXiv math/0501007v2 (6 March 2005). Locators: Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definitions 3.5 and 4.9; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10.
 
 - **BOA01.** Philip Boalch. *[Symplectic Manifolds and Isomonodromic Deformations](https://arxiv.org/abs/2002.00052v1)*. Advances in Mathematics 163 (2001), 137–205. Cited version: arXiv 2002.00052v1, the author's 2020 deposit of the 2001 article. Locators: §§3–6; Theorems 7.1 and 7.3; §7.
 
@@ -2092,5 +2233,7 @@ Boundary-value asymptotics, connection constants, Hastings–McLeod identificati
 - **BERT16.** Marco Bertola. *[Corrigendum: The dependence on the monodromy data of the isomonodromic tau function](https://arxiv.org/abs/1601.04790v2)*. Communications in Mathematical Physics 381 (2021), 1445–1461. Cited version: arXiv 1601.04790v2 (19 September 2020), published in 2021 as Correction to: The Dependence on the Monodromy Data of the Isomonodromic Tau Function. The key retains the initial 2016 preprint year. Locators: Definition 2.1; Theorems 2.1 and 2.2.
 
 - **BERT17.** Marco Bertola. *[The Malgrange Form and Fredholm Determinants](https://arxiv.org/abs/1703.00046v4)*. SIGMA 13 (2017), 046, 12 pages. Cited version: arXiv 1703.00046v4, carrying the SIGMA publication text. Locators: §1; Theorem 2.2; Proposition 2.3; formula (3.6); Theorem 3.3; §3.1.2.
+
+- **IMS18.** Kohei Iwaki; Olivier Marchal; Axel Saenz. *[Painlevé equations, topological type property and reconstruction by the topological recursion](https://arxiv.org/abs/1601.02517v7)*. Journal of Geometry and Physics 124 (2018), 16–54. Cited version: arXiv 1601.02517v7 (9 October 2017), §2.2, equations (2.18)–(2.30), with ℏ = 1. The fixed Hamiltonian and sigma conventions, including the directly checked PVI coefficient, are stated explicitly in §7.4.
 
 - **DLMF.** P. A. Clarkson, *[Painlevé Transcendents, Chapter 32 of the NIST Digital Library of Mathematical Functions](https://dlmf.nist.gov/32)*. Version 1.2.8, released 15 September 2026. [§32.2](https://dlmf.nist.gov/32.2), equations 32.2.1–32.2.6; [§32.6](https://dlmf.nist.gov/32.6); [§32.7](https://dlmf.nist.gov/32.7); [§32.9](https://dlmf.nist.gov/32.9), especially equations 32.9.6 and 32.9.12. Standard scalar displays and normalization reference.

@@ -1,0 +1,4048 @@
+{
+  "baseline_commit": "d59dd62f39e96a680baf3656fc4398dfa8de7fb2",
+  "counts": {
+    "parts": 4,
+    "general_parts": 3,
+    "layers": 8,
+    "targets": 57,
+    "general_targets": 21,
+    "api_laws": 169,
+    "diagnostics": 197,
+    "internal_edges": 251,
+    "supporting_constructions": 27
+  },
+  "changed_targets": [
+    "1.3",
+    "1.4",
+    "1.5",
+    "2.2",
+    "2.3",
+    "2.5",
+    "2.6",
+    "3.2",
+    "3.8",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.8",
+    "4.9",
+    "5.1",
+    "5.2",
+    "5.4",
+    "5.5",
+    "6.5",
+    "7.2",
+    "7.4",
+    "7.5"
+  ],
+  "math_counts": {
+    "en": {
+      "before": 212,
+      "after": 216
+    },
+    "ja": {
+      "before": 200,
+      "after": 204
+    }
+  },
+  "input_sha256": {
+    "README.md": "b541b313d9280277c8cf484f30127cf7f39ff3661ff31911bb2dcbc714dda3c7",
+    "README.ja.md": "8f647bb30c17130ec7143630be1da0170c2c7d5c116bff4b4ce1ffd389304a4d",
+    "design/plan.json": "3ef4ea340967c96f5b306d4bbb47a270e7430ff0cab00092a995d60dfc5493dd",
+    "design/dependencies.json": "6df2ea5d201b2abf288e179327c9ad769cc2fa9cb1a79b53095bda72002d001b",
+    "design/reuse_graph.json": "acb248a734cc6fe34b999acd619093a5da1aea833c2dbc94159e20218ffac551",
+    "sources.toml": "10a8d54b06778c4b793e938e7bcee054c621e85d876b59d4f90478fcbc1bee95",
+    "Suggested.lean": "d910df12b2db44c9efe6ded57928d784e1b5a68903d23f92ec3cb2810399af5d",
+    "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81"
+  },
+  "checks": [
+    {
+      "check": "57 targets with unchanged identities",
+      "passed": true
+    },
+    {
+      "check": "8 unchanged numerical layers",
+      "passed": true
+    },
+    {
+      "check": "en target headings match plan",
+      "passed": true
+    },
+    {
+      "check": "en unique explicit anchors",
+      "passed": true
+    },
+    {
+      "check": "ja target headings match plan",
+      "passed": true
+    },
+    {
+      "check": "ja unique explicit anchors",
+      "passed": true
+    },
+    {
+      "check": "same revised target set in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.5.FlatProductCharts supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.7 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.7 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.7 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.7 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.7 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.7 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.7 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.7 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.7.ScalarCarrier supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.7 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.7 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.7 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.7 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.7 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "0.8 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "0.8 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.8 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "0.8 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "0.8 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.8 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.8 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "0.8 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "0.8 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "0.8 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "0.8 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "0.8 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "0.8 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.1.GF01 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.1.GF02 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.2.GF03 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.2.GF04 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.2.GF03a supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.2.Polarization supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.3.GF05 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.3.GF05a supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.3.PolarizationComparison supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.4.GF06 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.4.GF06a supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.4.RelativeLinearity supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.4.Versal supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.5.GF07 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.5.PicardObstructions supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "1.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "1.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "1.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "1.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "1.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "1.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "1.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "1.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "1.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "1.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.1.GF08 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.5.GF09 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.5.GF10 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.5.GF09a supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "2.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "2.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "2.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "2.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "2.6.GF09a supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "2.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "2.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "2.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "2.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "2.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.7 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.7 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.7 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.7 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.7 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.7 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.7 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.7 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.7 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.7 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.7 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.7 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.7 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.8 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.8 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.8 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.8 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.8 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.8 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.8 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.8 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.8 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.8 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.8 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.8 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.8 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.9 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.9 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.9 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.9 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.9 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.9 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.9 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.9 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.9 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.9 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.9 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.9 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.9 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.10 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.10 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.10 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.10 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.10 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.10 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.10 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.10 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.10 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.10 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.10 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.10 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.10 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.11 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.11 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.11 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.11 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.11 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.11 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.11 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.11 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.11 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.11 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.11 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.11 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.11 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "3.12 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "3.12 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.12 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "3.12 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "3.12 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.12 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.12 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "3.12 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "3.12 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "3.12 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "3.12 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "3.12 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "3.12 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.2.GF10 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.7 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.7 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.7 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.7 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.7 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.7 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.7 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.7 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.7 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.7 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.7 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.7 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.7 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.8 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.8 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.8 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.8 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.8 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.8 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.8 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.8 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.8 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.8 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.8 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.8 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.8 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "4.9 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "4.9 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.9 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "4.9 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "4.9 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.9 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.9 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "4.9 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "4.9 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "4.9 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "4.9 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "4.9 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "4.9 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.1.GF12 supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.3.BoundaryBaseChange supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "5.6 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "5.6 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.6 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "5.6 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "5.6 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.6 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.6 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "5.6 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "5.6 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "5.6 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "5.6 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "5.6 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "5.6 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "6.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "6.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.1.NativeComparison supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "6.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "6.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "6.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "6.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "6.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "6.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "6.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "6.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "6.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "6.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "6.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "6.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.3.Toeplitz supporting construction in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "6.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "6.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "6.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "6.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "6.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "6.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "6.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "6.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "6.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "6.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "6.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "6.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "6.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "6.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "6.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "6.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "6.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "6.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "6.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "6.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "7.1 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "7.1 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.1 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.1 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "7.1 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.1 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.1 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.1 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.1 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "7.1 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "7.1 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "7.1 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "7.1 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "7.2 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "7.2 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.2 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.2 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "7.2 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.2 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.2 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.2 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.2 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "7.2 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "7.2 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "7.2 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "7.2 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "7.3 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "7.3 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.3 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.3 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "7.3 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.3 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.3 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.3 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.3 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "7.3 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "7.3 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "7.3 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "7.3 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "7.4 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "7.4 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.4 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.4 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "7.4 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.4 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.4 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.4 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.4 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "7.4 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "7.4 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "7.4 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "7.4 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "7.5 statement in English target",
+      "passed": true
+    },
+    {
+      "check": "7.5 English hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.5 Japanese hypotheses in target",
+      "passed": true
+    },
+    {
+      "check": "7.5 Needs in both languages",
+      "passed": true
+    },
+    {
+      "check": "7.5 api text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.5 api stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.5 tests text in English target",
+      "passed": true
+    },
+    {
+      "check": "7.5 tests stable numbering",
+      "passed": true
+    },
+    {
+      "check": "7.5 prerequisites are named and unique",
+      "passed": true
+    },
+    {
+      "check": "7.5 prerequisites precede owner",
+      "passed": true
+    },
+    {
+      "check": "7.5 Needs agrees with internal graph",
+      "passed": true
+    },
+    {
+      "check": "7.5 Japanese Needs agrees with graph",
+      "passed": true
+    },
+    {
+      "check": "7.5 Needs agrees with external graph",
+      "passed": true
+    },
+    {
+      "check": "dependency graph exactly matches plan",
+      "passed": true
+    },
+    {
+      "check": "0.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.7 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.7 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.8 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "0.8 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "1.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "2.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "3.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.7 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.7 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.8 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.8 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.9 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.9 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.10 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.10 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.11 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.11 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.12 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "3.12 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.7 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.7 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.8 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.8 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.9 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "4.9 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.6 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "5.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "6.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "6.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "6.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "6.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "6.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "6.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "7.1 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "7.2 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "7.3 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "7.4 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "7.5 no dependency cycle",
+      "passed": true
+    },
+    {
+      "check": "contract complex consumers",
+      "passed": true
+    },
+    {
+      "check": "contract smooth consumers",
+      "passed": true
+    },
+    {
+      "check": "contract differential consumers",
+      "passed": true
+    },
+    {
+      "check": "contract covers consumers",
+      "passed": true
+    },
+    {
+      "check": "contract curves consumers",
+      "passed": true
+    },
+    {
+      "check": "contract stacks consumers",
+      "passed": true
+    },
+    {
+      "check": "contract quotient-predicates consumers",
+      "passed": true
+    },
+    {
+      "check": "contract quot consumers",
+      "passed": true
+    },
+    {
+      "check": "contract cohomology consumers",
+      "passed": true
+    },
+    {
+      "check": "contract deformation consumers",
+      "passed": true
+    },
+    {
+      "check": "contract bundles consumers",
+      "passed": true
+    },
+    {
+      "check": "contract ordinary-connections consumers",
+      "passed": true
+    },
+    {
+      "check": "contract formal-connections consumers",
+      "passed": true
+    },
+    {
+      "check": "contract analytic-spaces consumers",
+      "passed": true
+    },
+    {
+      "check": "contract coherent-gaga consumers",
+      "passed": true
+    },
+    {
+      "check": "contract differential-operators consumers",
+      "passed": true
+    },
+    {
+      "check": "contract algebraic-manifolds consumers",
+      "passed": true
+    },
+    {
+      "check": "contract proper-cohomology consumers",
+      "passed": true
+    },
+    {
+      "check": "contract field-picard consumers",
+      "passed": true
+    },
+    {
+      "check": "contract supports consumers",
+      "passed": true
+    },
+    {
+      "check": "contract surfaces consumers",
+      "passed": true
+    },
+    {
+      "check": "contract formal-series consumers",
+      "passed": true
+    },
+    {
+      "check": "contract fredholm consumers",
+      "passed": true
+    },
+    {
+      "check": "contract inversion consumers",
+      "passed": true
+    },
+    {
+      "check": "contract trace-ideal consumers",
+      "passed": true
+    },
+    {
+      "check": "contract trace-determinant consumers",
+      "passed": true
+    },
+    {
+      "check": "contract toeplitz consumers",
+      "passed": true
+    },
+    {
+      "check": "contract curve-functions consumers",
+      "passed": true
+    },
+    {
+      "check": "contract proper consumers",
+      "passed": true
+    },
+    {
+      "check": "contract frobenius consumers",
+      "passed": true
+    },
+    {
+      "check": "all derived counts",
+      "passed": true,
+      "detail": {
+        "parts": 4,
+        "general_parts": 3,
+        "layers": 8,
+        "targets": 57,
+        "general_targets": 21,
+        "api_laws": 169,
+        "diagnostics": 197,
+        "internal_edges": 251,
+        "supporting_constructions": 27
+      }
+    },
+    {
+      "check": "source keys unique",
+      "passed": true
+    },
+    {
+      "check": "source consumer targets valid",
+      "passed": true
+    },
+    {
+      "check": "1.1 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "1.2 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "1.3 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "1.4 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "1.5 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "1.6 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.1 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.2 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.3 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.4 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.5 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "2.6 source keys valid",
+      "passed": true
+    },
+    {
+      "check": "3.1 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.2 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.3 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.4 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.5 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.6 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.7 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.8 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.9 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.10 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.11 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "3.12 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.1 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.2 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.3 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.4 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.5 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.6 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.7 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.8 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "4.9 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.1 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.2 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.3 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.4 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.5 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "5.6 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "6.2 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "6.3 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "6.4 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "6.5 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "7.1 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "7.2 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "7.3 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "7.4 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "7.5 primary source key valid",
+      "passed": true
+    },
+    {
+      "check": "source correction owner is 7.2",
+      "passed": true
+    },
+    {
+      "check": "observer construction is owned by 7.2",
+      "passed": true
+    },
+    {
+      "check": "RH inverse and target specified",
+      "passed": true
+    },
+    {
+      "check": "unchanged representative Lean interfaces",
+      "passed": true
+    },
+    {
+      "check": "unchanged arXiv topic",
+      "passed": true
+    },
+    {
+      "check": "en GFM math syntax agrees with independent parser",
+      "passed": true
+    },
+    {
+      "check": "en existing TeX payloads retained",
+      "passed": true
+    },
+    {
+      "check": "en no forbidden operator macro",
+      "passed": true
+    },
+    {
+      "check": "en tables have consistent widths",
+      "passed": true
+    },
+    {
+      "check": "en no draft placeholders",
+      "passed": true
+    },
+    {
+      "check": "ja GFM math syntax agrees with independent parser",
+      "passed": true
+    },
+    {
+      "check": "ja existing TeX payloads retained",
+      "passed": true
+    },
+    {
+      "check": "ja no forbidden operator macro",
+      "passed": true
+    },
+    {
+      "check": "ja tables have consistent widths",
+      "passed": true
+    },
+    {
+      "check": "ja no draft placeholders",
+      "passed": true
+    },
+    {
+      "check": "PII E derivative",
+      "passed": true
+    },
+    {
+      "check": "PII second Hamilton equation",
+      "passed": true
+    },
+    {
+      "check": "PII first Hamilton residual identity",
+      "passed": true
+    },
+    {
+      "check": "PII Hamiltonian value identity",
+      "passed": true
+    },
+    {
+      "check": "PII counterexample satisfies sigma equation",
+      "passed": true
+    },
+    {
+      "check": "PII counterexample fails first Hamilton equation at zero",
+      "passed": true
+    },
+    {
+      "check": "PII affine branch equation",
+      "passed": true
+    },
+    {
+      "check": "PI differentiated sigma equation",
+      "passed": true
+    },
+    {
+      "check": "PI affine spurious branches",
+      "passed": true
+    },
+    {
+      "check": "tau normalization changes coefficient but not logarithmic derivative",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "passed": 992,
+    "failed": 0
+  },
+  "limits": [
+    "No full lake build or new Lean proof was performed.",
+    "Syntax parsing is not a visual inspection of the remote GitHub renderer.",
+    "Exact sigma calculations and contract checks do not prove the roadmap existence theorems."
+  ]
+}

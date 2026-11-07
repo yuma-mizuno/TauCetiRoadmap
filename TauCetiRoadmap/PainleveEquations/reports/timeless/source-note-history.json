@@ -1,0 +1,92 @@
+{
+  "baseline_commit": "2441b2fe3a68efbb628db17eae5f282d35cbb8bd",
+  "purpose": "Preserve retrieval history and verification limitations while the source registry records fixed editions and mathematical scope.",
+  "verification_scope": "This editorial revision does not certify new full-text source inspections. In particular, GR84 was checked only through the publisher table of contents; detailed subtheorem locators were not verified.",
+  "changes": [
+    {
+      "source": "I23",
+      "previous_note": "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article's own numbering. The generic factorized ramified setting is retained; this source alone is not evidence for unrestricted global properness.",
+      "current_note": "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article numbering and its generic factorized ramified hypotheses. Global RH properness for the admitted classical models is the theorem of roadmap §4.4."
+    },
+    {
+      "source": "IS12",
+      "previous_note": "The stable key IS12 follows the 2012 preprint; journal publication is 2013. The cited bytes are arXiv v3, 22 November 2012, 40 PDF pages, and locators follow that version. The unramified/generic parameter hypotheses and Remark 6.3 are essential.",
+      "current_note": "The key IS12 follows the 2012 preprint; journal publication is 2013. Cited version: arXiv v3, 22 November 2012, 40 PDF pages. Locators use that version, with its unramified generic-parameter hypotheses and Remark 6.3."
+    },
+    {
+      "source": "VDPS09",
+      "previous_note": "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.2; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved.",
+      "current_note": "Cited version: arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators use v5. Roadmap §7.2 fixes the Hamiltonian-form sign and PV coefficient by comparison with the displayed vector fields. The full moduli–surface comparison is the theorem of roadmap §5.2."
+    },
+    {
+      "source": "IIS06",
+      "previous_note": "Published in 2006; cited bytes are arXiv v2, 6 March 2005, 58 PDF pages. All target locators follow the downloaded version. The detailed global geometric comparison is for PVI; transferring its mechanism to other profiles is a proof target.",
+      "current_note": "Publication year: 2006. Cited version: arXiv v2, 6 March 2005, 58 PDF pages, with locators in that version. Its global geometric comparison concerns PVI; roadmap §5.2 constructs the comparison for all admitted profiles."
+    },
+    {
+      "source": "BOA01",
+      "previous_note": "The 2001 article was deposited on arXiv as 2002.00052v1 on 31 January 2020 for accessibility. The cited bytes are that 61-page deposit; theorem locators follow it. The local generic hypotheses of each construction remain in force.",
+      "current_note": "Cited version: the 61-page arXiv deposit 2002.00052v1 of 31 January 2020, reproducing the 2001 article. Theorem locators and local generic hypotheses use that version."
+    },
+    {
+      "source": "BOA14",
+      "previous_note": "The unversioned PDF fetch resolved to arXiv 1111.6228v3, 22 September 2012, as printed in the downloaded text; 61 PDF pages. Publication year is 2014. Locators follow v3 and its admissible-deformation hypotheses.",
+      "current_note": "Cited version: arXiv 1111.6228v3, 22 September 2012, 61 PDF pages. Publication year: 2014. Locators and admissible-deformation hypotheses use v3."
+    },
+    {
+      "source": "BY15",
+      "previous_note": "The unversioned PDF fetch resolved to arXiv v1, 26 December 2015, as printed in the downloaded text; 26 PDF pages. Used for twisted/ramified Stokes carriers and their actual algebraic constructions, not as a theorem of proper de Rham-to-Betti comparison on all strata.",
+      "current_note": "Cited version: arXiv v1, 26 December 2015, 26 PDF pages. Used for twisted and ramified Stokes carriers and their algebraic constructions. Proper de Rham-to-Betti comparison for the admitted classical models is the theorem of roadmap §4.4."
+    },
+    {
+      "source": "BERT17",
+      "previous_note": "The unversioned arXiv PDF request returned filename 1703.00046v4.pdf; the 12-page text has the SIGMA publication header (22 June 2017). The actual fetched URL and its byte hash are retained. The initial model uses analytic invertible closed-contour symbols of zero determinant winding.",
+      "current_note": "Cited version: arXiv 1703.00046v4, 12 pages, with the SIGMA publication header of 22 June 2017. The initial model uses analytic invertible closed-contour symbols of zero determinant winding."
+    },
+    {
+      "source": "DLMF",
+      "previous_note": "Official page text for §§32.2, 32.6, 32.7 and 32.9 was read through web retrieval on 5 November 2026. The chapter page displayed version 1.2.8, release 15 September 2026. Direct raw-byte retrieval of §32.2 returned HTTP 403; no raw snapshot or SHA-256 is claimed. Uncertified means byte provenance is not certified here, not that the page was unread. This secondary reference supplies standard displays and normalizations, not the intrinsic construction.",
+      "current_note": "Cited edition: version 1.2.8, released 15 September 2026, §§32.2, 32.6, 32.7 and 32.9. This secondary reference supplies the standard scalar displays and normalizations used in §§7.2–7.5."
+    },
+    {
+      "source": "I13",
+      "previous_note": "The fetched unversioned PDF identifies itself as arXiv math/0602004v2, 6 June 2012, 45 pages, 625670 bytes. Locators use that preprint, not journal pagination. Theorem 2.2 retains exponent parameters by a fiber product and requires the stated genus/rank/pole inequality and generic stability weights. Fixed-determinant specialization is used only after the explicit Cartesian comparison. Certified records inspected bytes/provenance, not mathematical proof completion.",
+      "current_note": "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is the set-valued functor modulo base-line twists. Theorem 2.2 retains exponent parameters through a fiber product and has the stated genus, rank, pole and generic-weight hypotheses. The fixed-determinant specialization uses the Cartesian comparison of roadmap §2.6."
+    },
+    {
+      "source": "GR84",
+      "previous_note": "Complex-space and proper-coherent analytic foundations; publisher table of contents verified. Detailed subtheorem locators are not claimed verified.",
+      "current_note": "Reference for complex analytic spaces and proper coherent analytic foundations. The analytic-space and coherent-comparison contracts in design/dependencies.json specify the precise results used by roadmap §1.2."
+    },
+    {
+      "source": "KED09",
+      "previous_note": "Read the one-dimensional finite-extension decomposition, exponential twist-regular summands and descent discussion in Theorem2.3.3. Specialize to ℂ((z)). The paper explicitly does not supply analytic Stokes theory. Relative generic I23 factorization remains a separate proof.",
+      "current_note": "Theorem 2.3.3 gives the one-dimensional finite-extension decomposition into exponential twists of regular differential modules, with descent; specialize to ℂ((z)). Roadmap §1.1 constructs the relative generic I23 factorization, and §4.1 constructs analytic Stokes data."
+    },
+    {
+      "source": "DEL70",
+      "previous_note": "Chosen logarithmic extension is not in general tensor-compatible. General prescribed resonant lattices/flags, their families and determinant comparisons remain explicit owned extensions; do not infer them from a bare equivalence with local systems. II6.6 supplies the exact proof route for bounded complexes with differential-operator differentials: analytify the O-linear principal-parts presentation, then compare the E1 terms of the hypercohomology spectral sequence using proper GAGA.",
+      "current_note": "II5.4 constructs a chosen logarithmic extension, which is not in general tensor-compatible; roadmap §§2.5–2.6 construct the comparisons for prescribed resonant lattices, flags, families and determinants. II6.6 gives the bounded differential-operator-complex comparison by analytifying the O-linear principal-parts presentation and applying proper GAGA to the E1 terms of its hypercohomology spectral sequence."
+    },
+    {
+      "source": "ACV03",
+      "previous_note": "Flat finitely presented central subgroup embedded functorially in inertia; the required cases are Gm and μr over ℂ. Connection-specific identification with the GIT coarse family is additional work.",
+      "current_note": "Rigidification by a flat finitely presented separated group scheme embedded functorially as a central subgroup of inertia; the cases used here are Gm and μr over ℂ. Roadmap §1.3 identifies the rigidification with the connection GIT coarse family."
+    },
+    {
+      "source": "PICREL",
+      "previous_note": "Proper flat fp family with O_T≅f_(T,*)O_(X_T) for every T gives Picard algebraic space; lfp/quasiseparated; relative dimension≤1 gives smoothness. Nonreduced curves and test bases are retained. Component representability/dimension and an additive Ga identification for Y are separate required comparisons.",
+      "current_note": "For a proper flat finitely presented family with O_T≅f_(T,*)O_(X_T) for every T, the relative Picard functor is a locally finitely presented, quasiseparated algebraic space; relative dimension at most one gives smoothness. Nonreduced curves and test bases are included. Roadmap §§1.5 and 5.1 construct the component, dimension and additive Ga comparisons."
+    },
+    {
+      "source": "MFK94",
+      "previous_note": "Use as a primary proof source for the GIT prefix. No unverified subtheorem number is asserted here; the exact moduli linearization and Hilbert–Mumford equality are proof targets.",
+      "current_note": "Primary proof source for GIT. Roadmap §1.3 constructs the moduli linearization, proves the Hilbert–Mumford stability comparison and identifies the resulting coarse family."
+    },
+    {
+      "source": "IMS18",
+      "previous_note": "Cited version is arXiv v7, 9 October 2017. The eight-model inventory in §7.4 fixes its formulas explicitly and checks the sigma identities from the Hamilton vector fields; its PVI Hamiltonian uses the verified coefficient (Σ−θ∞)(Σ+θ∞−2)/4. This comparison does not infer an inverse on singular sigma branches.",
+      "current_note": "Cited version: arXiv v7, 9 October 2017. Roadmap §7.4 fixes the eight-model Hamiltonian and sigma inventory and derives the identities from the Hamilton vector fields, with PVI coefficient (Σ−θ∞)(Σ+θ∞−2)/4. The inverse comparison has the local nondegeneracy hypotheses and singular-branch exceptions stated in §7.4."
+    }
+  ]
+}

@@ -12,7 +12,7 @@ doi = "10.3842/SIGMA.2023.013"
 locator_scheme = "theorem"
 locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 3.3, 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 4.3–4.4, 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
 url = "https://sigma-journal.com/2023/013/"
-version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article's own numbering. The generic factorized ramified setting is retained; this source alone is not evidence for unrestricted global properness."
+version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article numbering and its generic factorized ramified hypotheses. Global RH properness for the admitted classical models is the theorem of roadmap §4.4."
 cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4"]
 
 [[source]]
@@ -26,7 +26,7 @@ arxiv = "1203.0084v3"
 locator_scheme = "theorem"
 locator = "Theorem 5.1; Remark 6.3"
 url = "https://arxiv.org/abs/1203.0084v3"
-version_note = "The stable key IS12 follows the 2012 preprint; journal publication is 2013. The cited bytes are arXiv v3, 22 November 2012, 40 PDF pages, and locators follow that version. The unramified/generic parameter hypotheses and Remark 6.3 are essential."
+version_note = "The key IS12 follows the 2012 preprint; journal publication is 2013. Cited version: arXiv v3, 22 November 2012, 40 PDF pages. Locators use that version, with its unramified generic-parameter hypotheses and Remark 6.3."
 cited_for = ["4.3", "4.4"]
 
 [[source]]
@@ -53,7 +53,7 @@ arxiv = "0902.1702v5"
 locator_scheme = "section"
 locator = "§2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22)"
 url = "https://arxiv.org/abs/0902.1702v5"
-version_note = "Cited bytes are arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators follow v5, not the journal pagination. Remaining internal Hamiltonian-form sign and PV-coefficient inconsistencies are identified and corrected in roadmap §7.2; the version notice is not a guarantee that every displayed formula is consistent. Introductory conjectural global identifications are not treated as proved."
+version_note = "Cited version: arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators use v5. Roadmap §7.2 fixes the Hamiltonian-form sign and PV coefficient by comparison with the displayed vector fields. The full moduli–surface comparison is the theorem of roadmap §5.2."
 cited_for = ["3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "0.7", "0.8"]
 
 [[source]]
@@ -66,7 +66,7 @@ arxiv = "math/0501007v2"
 locator_scheme = "theorem"
 locator = "Definitions 2.1–2.2 and 2.11; Lemma 2.12; Definitions 3.5 and 4.9; Theorems 4.10–4.12, 5.15–5.16, 7.4, 10.6, 10.10 and 10.13; §§5, 7 and 10"
 url = "https://arxiv.org/abs/math/0501007v2"
-version_note = "Published in 2006; cited bytes are arXiv v2, 6 March 2005, 58 PDF pages. All target locators follow the downloaded version. The detailed global geometric comparison is for PVI; transferring its mechanism to other profiles is a proof target."
+version_note = "Publication year: 2006. Cited version: arXiv v2, 6 March 2005, 58 PDF pages, with locators in that version. Its global geometric comparison concerns PVI; roadmap §5.2 constructs the comparison for all admitted profiles."
 cited_for = ["3.8", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.2", "5.4", "5.5", "5.6", "7.1", "7.2", "7.4", "0.4", "0.5", "0.7"]
 
 [[source]]
@@ -80,7 +80,7 @@ arxiv = "2002.00052v1"
 locator_scheme = "theorem"
 locator = "§§3–6; Theorems 7.1 and 7.3; §7"
 url = "https://arxiv.org/abs/2002.00052v1"
-version_note = "The 2001 article was deposited on arXiv as 2002.00052v1 on 31 January 2020 for accessibility. The cited bytes are that 61-page deposit; theorem locators follow it. The local generic hypotheses of each construction remain in force."
+version_note = "Cited version: the 61-page arXiv deposit 2002.00052v1 of 31 January 2020, reproducing the 2001 article. Theorem locators and local generic hypotheses use that version."
 cited_for = ["3.11", "4.1", "4.7", "0.5", "0.6"]
 
 [[source]]
@@ -94,7 +94,7 @@ arxiv = "1111.6228v3"
 locator_scheme = "theorem"
 locator = "§10, Theorem 10.2; §7 for Stokes data"
 url = "https://arxiv.org/abs/1111.6228v3"
-version_note = "The unversioned PDF fetch resolved to arXiv 1111.6228v3, 22 September 2012, as printed in the downloaded text; 61 PDF pages. Publication year is 2014. Locators follow v3 and its admissible-deformation hypotheses."
+version_note = "Cited version: arXiv 1111.6228v3, 22 September 2012, 61 PDF pages. Publication year: 2014. Locators and admissible-deformation hypotheses use v3."
 cited_for = ["4.2"]
 
 [[source]]
@@ -107,7 +107,7 @@ arxiv = "1512.08091v1"
 locator_scheme = "theorem"
 locator = "Remark 3; Definitions 7 and 13; Proposition 19; Theorem 21; Corollary 22"
 url = "https://arxiv.org/abs/1512.08091v1"
-version_note = "The unversioned PDF fetch resolved to arXiv v1, 26 December 2015, as printed in the downloaded text; 26 PDF pages. Used for twisted/ramified Stokes carriers and their actual algebraic constructions, not as a theorem of proper de Rham-to-Betti comparison on all strata."
+version_note = "Cited version: arXiv v1, 26 December 2015, 26 PDF pages. Used for twisted and ramified Stokes carriers and their algebraic constructions. Proper de Rham-to-Betti comparison for the admitted classical models is the theorem of roadmap §4.4."
 cited_for = ["4.1", "4.2"]
 
 [[source]]
@@ -243,7 +243,7 @@ arxiv = "1703.00046v4"
 locator_scheme = "theorem"
 locator = "§1; Theorem 2.2; Proposition 2.3; formula (3.6); Theorem 3.3; §3.1.2"
 url = "https://arxiv.org/abs/1703.00046v4"
-version_note = "The unversioned arXiv PDF request returned filename 1703.00046v4.pdf; the 12-page text has the SIGMA publication header (22 June 2017). The actual fetched URL and its byte hash are retained. The initial model uses analytic invertible closed-contour symbols of zero determinant winding."
+version_note = "Cited version: arXiv 1703.00046v4, 12 pages, with the SIGMA publication header of 22 June 2017. The initial model uses analytic invertible closed-contour symbols of zero determinant winding."
 cited_for = ["6.2", "6.3", "6.4", "6.5", "7.4", "6.1"]
 
 [[source]]
@@ -255,7 +255,7 @@ venue = "DLMF, version 1.2.8, released 15 September 2026"
 locator_scheme = "section"
 locator = "§32.2(i), equations 32.2.1–32.2.6; §§32.6–32.7; §32.9, equations 32.9.6 and 32.9.12"
 url = "https://dlmf.nist.gov/32"
-version_note = "Official page text for §§32.2, 32.6, 32.7 and 32.9 was read through web retrieval on 5 November 2026. The chapter page displayed version 1.2.8, release 15 September 2026. Direct raw-byte retrieval of §32.2 returned HTTP 403; no raw snapshot or SHA-256 is claimed. Uncertified means byte provenance is not certified here, not that the page was unread. This secondary reference supplies standard displays and normalizations, not the intrinsic construction."
+version_note = "Cited edition: version 1.2.8, released 15 September 2026, §§32.2, 32.6, 32.7 and 32.9. This secondary reference supplies the standard scalar displays and normalizations used in §§7.2–7.5."
 cited_for = ["7.2", "7.3", "7.4", "7.5"]
 
 [[source]]
@@ -268,7 +268,7 @@ arxiv = "math/0602004v2"
 locator_scheme = "theorem"
 locator = "Theorems 2.1–2.2, preprint pp. 5–6; Definition 4.3 (set-valued functor modulo base-line twists); regular-singular reconstruction in §1; properness proof in §6"
 url = "https://arxiv.org/abs/math/0602004v2"
-version_note = "The fetched unversioned PDF identifies itself as arXiv math/0602004v2, 6 June 2012, 45 pages, 625670 bytes. Locators use that preprint, not journal pagination. Theorem 2.2 retains exponent parameters by a fiber product and requires the stated genus/rank/pole inequality and generic stability weights. Fixed-determinant specialization is used only after the explicit Cartesian comparison. Certified records inspected bytes/provenance, not mathematical proof completion."
+version_note = "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is the set-valued functor modulo base-line twists. Theorem 2.2 retains exponent parameters through a fiber product and has the stated genus, rank, pole and generic-weight hypotheses. The fixed-determinant specialization uses the Cartesian comparison of roadmap §2.6."
 cited_for = ["1.3", "2.5", "2.6", "3.8", "4.2", "4.3", "4.4"]
 
 [[source]]
@@ -300,7 +300,7 @@ year = 1984
 url = "https://link.springer.com/book/10.1007/978-3-642-69582-7"
 locator_scheme = "section"
 locator = "Chapter I, Complex Spaces (pp.1–37); Chapter X, Direct Image Theorem (pp.188–222)"
-version_note = "Complex-space and proper-coherent analytic foundations; publisher table of contents verified. Detailed subtheorem locators are not claimed verified."
+version_note = "Reference for complex analytic spaces and proper coherent analytic foundations. The analytic-space and coherent-comparison contracts in design/dependencies.json specify the precise results used by roadmap §1.2."
 cited_for = ["1.2", "1.3"]
 
 [[source]]
@@ -310,7 +310,7 @@ title = "Good formal structures for flat meromorphic connections, I: Surfaces"
 url = "https://arxiv.org/pdf/0811.0190v4"
 locator_scheme = "section"
 locator = "§2.1 (field and constants); §2.2 (regular modules and regulating lattices); Theorem2.3.3 and its proof; §2.4 (Deligne–Malgrange lattices)"
-version_note = "Read the one-dimensional finite-extension decomposition, exponential twist-regular summands and descent discussion in Theorem2.3.3. Specialize to ℂ((z)). The paper explicitly does not supply analytic Stokes theory. Relative generic I23 factorization remains a separate proof."
+version_note = "Theorem 2.3.3 gives the one-dimensional finite-extension decomposition into exponential twists of regular differential modules, with descent; specialize to ℂ((z)). Roadmap §1.1 constructs the relative generic I23 factorization, and §4.1 constructs analytic Stokes data."
 cited_for = ["1.1", "3.4", "4.1"]
 
 [[source]]
@@ -323,7 +323,7 @@ year = 1970
 url = "https://publications.ias.edu/sites/default/files/Number9.pdf"
 locator_scheme = "section"
 locator = "II §5, Proposition5.4 (extension for a section of ℂ→ℂ/ℤ); Corollary5.6 (nonresonant monodromy/residue comparison); Theorem5.9 (regular-singular algebraic/analytic correspondence); II §6.6 (principal-parts analytification of differential operators and proper hypercohomology comparison), PDF p.103 / printed p.101"
-version_note = "Chosen logarithmic extension is not in general tensor-compatible. General prescribed resonant lattices/flags, their families and determinant comparisons remain explicit owned extensions; do not infer them from a bare equivalence with local systems. II6.6 supplies the exact proof route for bounded complexes with differential-operator differentials: analytify the O-linear principal-parts presentation, then compare the E1 terms of the hypercohomology spectral sequence using proper GAGA."
+version_note = "II5.4 constructs a chosen logarithmic extension, which is not in general tensor-compatible; roadmap §§2.5–2.6 construct the comparisons for prescribed resonant lattices, flags, families and determinants. II6.6 gives the bounded differential-operator-complex comparison by analytifying the O-linear principal-parts presentation and applying proper GAGA to the E1 terms of its hypercohomology spectral sequence."
 cited_for = ["1.2", "1.4", "2.5", "2.6"]
 
 [[source]]
@@ -334,7 +334,7 @@ year = 2003
 url = "https://arxiv.org/pdf/math/0106211"
 locator_scheme = "section"
 locator = "§5.1, Theorem5.1.5 and construction; Stacks Project tag04V2 for hypotheses"
-version_note = "Flat finitely presented central subgroup embedded functorially in inertia; the required cases are Gm and μr over ℂ. Connection-specific identification with the GIT coarse family is additional work."
+version_note = "Rigidification by a flat finitely presented separated group scheme embedded functorially as a central subgroup of inertia; the cases used here are Gm and μr over ℂ. Roadmap §1.3 identifies the rigidification with the connection GIT coarse family."
 cited_for = ["1.3", "2.6"]
 
 [[source]]
@@ -344,7 +344,7 @@ title = "The Picard functor and its properties"
 url = "https://stacks.math.columbia.edu/tag/0D2C"
 locator_scheme = "section"
 locator = "Proposition99.11.8, tag0D2C; Lemma108.9.3, tag0DNI; Lemma108.9.5, tag0DPK; the Picard gerbe Lemma108.9.1 in tag0DMD"
-version_note = "Proper flat fp family with O_T≅f_(T,*)O_(X_T) for every T gives Picard algebraic space; lfp/quasiseparated; relative dimension≤1 gives smoothness. Nonreduced curves and test bases are retained. Component representability/dimension and an additive Ga identification for Y are separate required comparisons."
+version_note = "For a proper flat finitely presented family with O_T≅f_(T,*)O_(X_T) for every T, the relative Picard functor is a locally finitely presented, quasiseparated algebraic space; relative dimension at most one gives smoothness. Nonreduced curves and test bases are included. Roadmap §§1.5 and 5.1 construct the component, dimension and additive Ga comparisons."
 cited_for = ["1.5", "5.1"]
 
 [[source]]
@@ -355,7 +355,7 @@ year = 1994
 url = "https://link.springer.com/book/9783540569633"
 locator_scheme = "section"
 locator = "Chapter1, reductive invariant theory and construction of quotients; coupled to I23 Theorem5.1 and its actual framed filtered-connection construction"
-version_note = "Use as a primary proof source for the GIT prefix. No unverified subtheorem number is asserted here; the exact moduli linearization and Hilbert–Mumford equality are proof targets."
+version_note = "Primary proof source for GIT. Roadmap §1.3 constructs the moduli linearization, proves the Hilbert–Mumford stability comparison and identifies the resulting coarse family."
 cited_for = ["1.3", "2.5", "4.2"]
 
 [[source]]
@@ -369,5 +369,5 @@ arxiv = "1601.02517v7"
 locator_scheme = "equation"
 locator = "§2.2, equations (2.18)–(2.30), specialized to ℏ = 1; the precise Hamiltonian and sigma conventions are fixed in roadmap §7.4"
 url = "https://arxiv.org/abs/1601.02517v7"
-version_note = "Cited version is arXiv v7, 9 October 2017. The eight-model inventory in §7.4 fixes its formulas explicitly and checks the sigma identities from the Hamilton vector fields; its PVI Hamiltonian uses the verified coefficient (Σ−θ∞)(Σ+θ∞−2)/4. This comparison does not infer an inverse on singular sigma branches."
+version_note = "Cited version: arXiv v7, 9 October 2017. Roadmap §7.4 fixes the eight-model Hamiltonian and sigma inventory and derives the identities from the Hamilton vector fields, with PVI coefficient (Σ−θ∞)(Σ+θ∞−2)/4. The inverse comparison has the local nondegeneracy hypotheses and singular-branch exceptions stated in §7.4."
 cited_for = ["7.4"]

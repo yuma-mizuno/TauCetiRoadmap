@@ -268,8 +268,8 @@
         "F3.3–F3.4"
       ],
       "supplied": "Relative continuous differentials/completed tensors, formal-coordinate automorphisms and their pullback action, Tate coefficient descent, continuous/formal connection carrier and the left gauge groupoid; F3.4 stackification has its coefficient-cover essential-image criterion.",
-      "owned_here": "1.1 compares completions of the actual decorated bundles, verifies the extending-torsor criterion, and owns ramified decorated descent, Levelt–Turrittin and relative factorized models. Left gauge h corresponds to frame change g=h⁻¹. F8.1 is not a prerequisite for the time connection of 2.1–2.4.",
-      "supplied_ja": "相対連続微分・完備テンソル・形式座標自己同型と引戻し作用・Tate 係数の降下・形式接続・左ゲージ亜群。F3.4 の本質像には係数環の被覆条件を保持する。1.1 は実際の束の完備化、円板上への延長条件、分岐付加構造の降下、Levelt–Turrittin と相対因子化を担う。左作用 h とフレーム変換 g は h=g⁻¹ で比較する。F8.1 は 2.1–2.4 の時間接続の前提ではない。",
+      "owned_here": "1.1 compares completions of the actual decorated bundles, verifies the extending-torsor criterion, and owns ramified decorated descent, Levelt–Turrittin and relative factorized models. Left gauge h corresponds to frame change g=h⁻¹.",
+      "supplied_ja": "相対連続微分・完備テンソル・形式座標自己同型と引戻し作用・Tate 係数の降下・形式接続・左ゲージ亜群。F3.4 の本質像には係数環の被覆条件を保持する。1.1 は実際の束の完備化、円板上への延長条件、分岐付加構造の降下、Levelt–Turrittin と相対因子化を担う。左作用 h とフレーム変換 g は h=g⁻¹ で比較する。",
       "consumers": [
         "1.1"
       ],
@@ -337,8 +337,8 @@
         "C5.1: boundedOperatorHyperGaga"
       ],
       "supplied": "Characteristic-free all-order operator predicate/principal parts, universal jets, composition/localization/sheafification, analytification and absolute/relative proper bounded operator-complex GAGA at the stated hypotheses.",
-      "owned_here": "1.1 applies the first-order interface to meromorphic Leibniz operators; 1.2 compares decorated meromorphic data; 1.4 constructs the constrained deformation complex and ramified cone and verifies order, coherence, relative linearity, trace, duality and base-change comparisons. F2.2 symbols/Atiyah/PBW are not required.",
-      "supplied_ja": "標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。F2.2 の symbol・Atiyah・PBW は前提としない。",
+      "owned_here": "1.1 applies the first-order interface to meromorphic Leibniz operators; 1.2 compares decorated meromorphic data; 1.4 constructs the constrained deformation complex and ramified cone and verifies order, coherence, relative linearity, trace, duality and base-change comparisons.",
+      "supplied_ja": "標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。",
       "consumers": [
         "1.1",
         "1.2",
@@ -395,7 +395,7 @@
       ],
       "supplied": "Proper coherent pushforwards and separately stated flat-base-change and cohomology/base-change criteria; Grauert under its reduced-base and constant-rank assumptions.",
       "owned_here": "1.5 proves the relative Picard extension; 5.3 verifies boundary-coefficient flatness and the exact locally free/arbitrary-base-change criterion.",
-      "supplied_ja": "固有連接直像と、各仮定を区別した平坦基底変換・コホモロジー基底変換。相対Picard拡張は1.5、境界係数と任意基底変換の検証は5.3が担う。",
+      "supplied_ja": "固有連接直像と、各仮定を区別した平坦基底変換・コホモロジー基底変換。Grauertの定理には被約な基底と階数一定の仮定を課す。相対Picard拡張は1.5、境界係数の平坦性と局所自由性・任意基底変換の判定条件の検証は5.3が担う。",
       "consumers": [
         "1.2",
         "1.5",
@@ -430,8 +430,8 @@
         "2.7"
       ],
       "supplied": "Supported cohomology, localization/excision and the Noetherian colimit-of-Ext comparison with native local cohomology.",
-      "owned_here": "5.3 constructs its first boundary layer, injection and time-line comparison; it does not identify all supported cohomology with that line.",
-      "supplied_ja": "台付きコホモロジー、局所化・切除、NoetherianなExt余極限との比較。第一境界層・注入・時間直線は5.3が構成する。",
+      "owned_here": "5.3 constructs the first boundary-layer line, its injection into supported cohomology and its identification with the time line.",
+      "supplied_ja": "台付きコホモロジー、局所化・切除、NoetherianなExt余極限と局所コホモロジーとの比較。第一境界層の直線、台付きコホモロジーへの単射、および時間直線との同定は5.3が構成する。",
       "consumers": [
         "5.1",
         "5.2",

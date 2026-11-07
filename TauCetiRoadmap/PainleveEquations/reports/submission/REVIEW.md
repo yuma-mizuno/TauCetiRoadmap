@@ -1,12 +1,18 @@
 # Submission review and verification record
 
-The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 57 targets in Layers 0–7. The API revision is recorded first; the remaining sections retain the history of scope changes, mathematical reviews, build receipts and browser inspections.
+The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 57 targets in Layers 0–7. The timeless revision is recorded first; the remaining sections retain the history of API and scope changes, mathematical reviews, build receipts and browser inspections.
+
+## Timeless specification revision
+
+The [timeless review](../timeless/REVIEW.md) records a complete bilingual review and rewrite against `2441b2fe3a68efbb628db17eae5f282d35cbb8bd`. It preserves all 57 targets, 169 API items, 197 diagnostics, 251 internal edges and 27 supporting constructions while synchronizing the prose, source scopes and structured contracts. It also corrects proof ownership and the precision issues listed in that report. The [validation record](../timeless/validation.json) contains 1,382 passing checks and 0 failures, with input hashes for this revision. All 216 English and 204 Japanese TeX payloads are unchanged in order, and the Lean noncomment bytes are unchanged.
+
+The revised source registry contains bibliographic versions and mathematical scope. [source-note-history.json](../timeless/source-note-history.json) preserves the original retrieval history and verification limits of the seventeen edited notes. No new full build or remote rendering inspection is claimed.
 
 ## API revision after the reviewed working snapshot
 
-The [API review response](../api-review/REVIEW.md) records the resolution of R01–R08 and C01–C09 against `d59dd62f39e96a680baf3656fc4398dfa8de7fb2`, including the supplementary 4.3 dependency correction. Its [validation record](../api-review/validation.json) contains 992 passing checks and 0 failures for the current bytes. The current plan has 57 targets, 8 layers, 169 API items, 197 diagnostics and 251 internal edges. The target identities, general/application division and representative Lean interfaces are retained.
+The [API review response](../api-review/REVIEW.md) records the resolution of R01–R08 and C01–C09 against `d59dd62f39e96a680baf3656fc4398dfa8de7fb2`, including the supplementary 4.3 dependency correction. Its [validation record](../api-review/validation.json) contains 992 passing checks and 0 failures for the API-revision bytes committed as `2441b2fe3a68efbb628db17eae5f282d35cbb8bd`. That plan has 57 targets, 8 layers, 169 API items, 197 diagnostics and 251 internal edges. The target identities, general/application division and representative Lean interfaces are retained.
 
-The scope, preservation, build and browser records below describe their earlier snapshots. Their assertions that definitions and formulas were unchanged apply to those earlier revisions; the API revision intentionally changes the affected contracts and adds sigma formulas. No historical receipt is presented as a new inspection of these files.
+The scope, preservation, build and browser records below describe their earlier snapshots. Their assertions that definitions and formulas were unchanged apply to those earlier revisions; the API revision intentionally changes the affected contracts and adds sigma formulas. The timeless revision preserves that formula inventory. No historical receipt is presented as a new inspection of the current files.
 
 ## Historical scope and preservation
 

@@ -1,0 +1,5702 @@
+{
+  "baseline_commit": "2441b2fe3a68efbb628db17eae5f282d35cbb8bd",
+  "counts": {
+    "parts": 4,
+    "general_parts": 3,
+    "layers": 8,
+    "targets": 57,
+    "general_targets": 21,
+    "api_laws": 169,
+    "diagnostics": 197,
+    "internal_edges": 251,
+    "supporting_constructions": 27
+  },
+  "changed_targets": {
+    "en": [
+      "0.1",
+      "0.2",
+      "0.3",
+      "0.4",
+      "0.5",
+      "0.6",
+      "0.7",
+      "0.8",
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9",
+      "3.10",
+      "3.11",
+      "3.12",
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7",
+      "4.8",
+      "4.9",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5"
+    ],
+    "ja": [
+      "0.1",
+      "0.2",
+      "0.3",
+      "0.4",
+      "0.5",
+      "0.6",
+      "0.7",
+      "0.8",
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9",
+      "3.10",
+      "3.11",
+      "3.12",
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7",
+      "4.8",
+      "4.9",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5"
+    ]
+  },
+  "math_counts": {
+    "en": 216,
+    "ja": 204
+  },
+  "input_sha256": {
+    "README.md": "15985aaf27e2f5c14d825a51d2462afdd6b61d80b91c7f96e317c3ff08534abb",
+    "README.ja.md": "e4009d70fd291256e01048655e3b2d9f2881ec42b2fbb1e9729e0d562e6536b0",
+    "design/plan.json": "ceaca58e4b94e4bd67a05b091630b44cc918c7dc94b95e4c7544839be76e4d91",
+    "design/dependencies.json": "674ddbb39188672ef7baaeb6c59031d26342572b65b75bab475e48fa3a24fba4",
+    "design/reuse_graph.json": "acb248a734cc6fe34b999acd619093a5da1aea833c2dbc94159e20218ffac551",
+    "design/reuse_registry.json": "dc42add41a638062c8147db8ea295362a7ed94112f206f3906d3c4907cab4354",
+    "sources.toml": "30b2c753d5301cba2b9c228206624444774225de6c0c1f74957818cc297a96b0",
+    "Suggested.lean": "2ed767340b579fb0cc32bf9edffd5c9e7ff4224ea6acf9ef8dda61f5e50f48b2",
+    "metadata.toml": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+    "reports/timeless/check_timeless.py": "f977a960e69fbb6c763798d21567550bfb1ccdcb3cc8ee8762cc0f758f5c38e6",
+    "reports/timeless/source-note-history.json": "85d7e64b1231961209af4fbd35587a6fea043c8f64fc1c57718e0a02aafc8f6f"
+  },
+  "checks": [
+    {
+      "check": "57 targets and identities preserved",
+      "passed": true
+    },
+    {
+      "check": "8 numerical layers preserved",
+      "passed": true
+    },
+    {
+      "check": "dependency graph file unchanged",
+      "passed": true
+    },
+    {
+      "check": "reuse registry unchanged",
+      "passed": true
+    },
+    {
+      "check": "en headings match plan",
+      "passed": true
+    },
+    {
+      "check": "en explicit anchors unique",
+      "passed": true
+    },
+    {
+      "check": "en fragment links resolve",
+      "passed": true
+    },
+    {
+      "check": "en draft markers absent",
+      "passed": true
+    },
+    {
+      "check": "en review-response phrases absent",
+      "passed": true
+    },
+    {
+      "check": "ja headings match plan",
+      "passed": true
+    },
+    {
+      "check": "ja explicit anchors unique",
+      "passed": true
+    },
+    {
+      "check": "ja fragment links resolve",
+      "passed": true
+    },
+    {
+      "check": "ja draft markers absent",
+      "passed": true
+    },
+    {
+      "check": "ja review-response phrases absent",
+      "passed": true
+    },
+    {
+      "check": "layer 0 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 0 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 1 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 1 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 2 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 2 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 3 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 3 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 4 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 4 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 5 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 5 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 6 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 6 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "layer 7 English title",
+      "passed": true
+    },
+    {
+      "check": "layer 7 Japanese title",
+      "passed": true
+    },
+    {
+      "check": "0.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.1 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.2 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.3 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.4 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.5 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.6 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.7 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.7 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.7 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.7 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.7 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.7 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.7 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "0.8 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 English statement",
+      "passed": true
+    },
+    {
+      "check": "0.8 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "0.8 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "0.8 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 full Japanese contract synchronized",
+      "passed": true
+    },
+    {
+      "check": "0.8 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.8 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "0.8 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.1 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.2 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.3 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.4 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.5 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "1.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "1.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "1.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "1.6 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "1.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "1.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.1 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.2 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.3 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.4 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.5 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "2.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "2.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.6 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "2.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "2.6 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "2.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "2.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.1 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.6 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.7 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.7 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.7 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.7 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.7 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.7 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.7 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.7 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.7 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.7 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.7 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.7 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.8 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.8 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.8 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.8 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.8 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.8 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.8 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.8 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.8 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.8 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.8 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.8 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.9 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.9 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.9 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.9 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.9 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.9 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.9 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.9 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.9 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.9 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.9 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.9 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.10 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.10 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.10 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.10 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.10 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.10 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.10 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.10 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.10 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.10 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.10 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.10 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.11 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.11 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.11 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.11 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.11 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.11 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.11 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.11 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.11 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.11 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.11 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.11 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "3.12 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.12 English statement",
+      "passed": true
+    },
+    {
+      "check": "3.12 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.12 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "3.12 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.12 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.12 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.12 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "3.12 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "3.12 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.12 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "3.12 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.1 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.6 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.7 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.7 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.7 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.7 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.7 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.7 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.7 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.7 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.7 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.7 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.7 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.7 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.8 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.8 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.8 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.8 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.8 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.8 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.8 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.8 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.8 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.8 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.8 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.8 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "4.9 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.9 English statement",
+      "passed": true
+    },
+    {
+      "check": "4.9 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.9 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "4.9 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.9 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.9 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.9 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "4.9 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "4.9 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.9 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "4.9 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.1 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.2 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.3 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.5 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "5.6 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.6 English statement",
+      "passed": true
+    },
+    {
+      "check": "5.6 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.6 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "5.6 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.6 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.6 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.6 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "5.6 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "5.6 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.6 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "5.6 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "6.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "6.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.1 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.1 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "6.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "6.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "6.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "6.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.3 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "6.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "6.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.4 source scope synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "6.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "6.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "6.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "6.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "6.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "6.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "7.1 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.1 English statement",
+      "passed": true
+    },
+    {
+      "check": "7.1 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.1 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.1 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.1 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.1 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.1 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.1 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.1 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.1 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.1 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "7.2 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.2 English statement",
+      "passed": true
+    },
+    {
+      "check": "7.2 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.2 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.2 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.2 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.2 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.2 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.2 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.2 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.2 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.2 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "7.3 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.3 English statement",
+      "passed": true
+    },
+    {
+      "check": "7.3 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.3 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.3 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.3 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.3 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.3 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.3 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.3 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.3 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.3 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "7.4 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.4 English statement",
+      "passed": true
+    },
+    {
+      "check": "7.4 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.4 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.4 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.4 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.4 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.4 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.4 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.4 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.4 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.4 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "7.5 title synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.5 English statement",
+      "passed": true
+    },
+    {
+      "check": "7.5 English hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.5 Japanese hypotheses",
+      "passed": true
+    },
+    {
+      "check": "7.5 Needs synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.5 owner and prerequisites preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 api synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.5 api identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 bilingual api counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 tests synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.5 tests identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 bilingual tests counts preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 supporting constructions synchronized",
+      "passed": true
+    },
+    {
+      "check": "7.5 supporting identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "7.5 en dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.5 ja dependencies match graph",
+      "passed": true
+    },
+    {
+      "check": "7.5 valid preceding prerequisites",
+      "passed": true
+    },
+    {
+      "check": "graph edges agree with contracts",
+      "passed": true
+    },
+    {
+      "check": "graph nodes agree with target ownership",
+      "passed": true
+    },
+    {
+      "check": "0.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.7 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "0.8 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "1.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.2 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.3 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.4 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.5 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "2.6 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "3.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.7 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.8 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.9 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.10 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.11 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "3.12 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.7 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.8 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "4.9 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "5.6 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.1 general theory independent of applications",
+      "passed": true
+    },
+    {
+      "check": "6.1 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.2 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.3 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.4 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "6.5 geometric construction independent of Layer 7",
+      "passed": true
+    },
+    {
+      "check": "part nonlinear_connections registry matches plan",
+      "passed": true
+    },
+    {
+      "check": "part connection_moduli registry matches plan",
+      "passed": true
+    },
+    {
+      "check": "part analytic_theory registry matches plan",
+      "passed": true
+    },
+    {
+      "check": "part painleve registry matches plan",
+      "passed": true
+    },
+    {
+      "check": "supplier complex identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier complex consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier complex bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier smooth identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier smooth consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier smooth bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier differential identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier differential consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier differential bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier covers identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier covers consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier covers bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier curves identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier curves consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier curves bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier stacks identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier stacks consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier stacks bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier quotient-predicates identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier quotient-predicates consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier quotient-predicates bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier quot identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier quot consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier quot bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier cohomology identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier cohomology consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier cohomology bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier deformation identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier deformation consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier deformation bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier bundles identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier bundles consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier bundles bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier ordinary-connections identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier ordinary-connections consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier ordinary-connections bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-connections identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-connections consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-connections bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier analytic-spaces identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier analytic-spaces consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier analytic-spaces bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier coherent-gaga identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier coherent-gaga consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier coherent-gaga bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier differential-operators identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier differential-operators consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier differential-operators bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier algebraic-manifolds identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier algebraic-manifolds consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier algebraic-manifolds bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier proper-cohomology identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier proper-cohomology consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier proper-cohomology bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier field-picard identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier field-picard consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier field-picard bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier supports identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier supports consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier supports bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier surfaces identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier surfaces consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier surfaces bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-series identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-series consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier formal-series bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier fredholm identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier fredholm consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier fredholm bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier inversion identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier inversion consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier inversion bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-ideal identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-ideal consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-ideal bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-determinant identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-determinant consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier trace-determinant bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier toeplitz identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier toeplitz consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier toeplitz bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier curve-functions identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier curve-functions consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier curve-functions bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier proper identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier proper consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier proper bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "supplier frobenius identity and scope addresses preserved",
+      "passed": true
+    },
+    {
+      "check": "supplier frobenius consumers match plan",
+      "passed": true
+    },
+    {
+      "check": "supplier frobenius bilingual table synchronized",
+      "passed": true
+    },
+    {
+      "check": "all counts preserved and derived",
+      "passed": true,
+      "detail": {
+        "parts": 4,
+        "general_parts": 3,
+        "layers": 8,
+        "targets": 57,
+        "general_targets": 21,
+        "api_laws": 169,
+        "diagnostics": 197,
+        "internal_edges": 251,
+        "supporting_constructions": 27
+      }
+    },
+    {
+      "check": "reference convention has actual layer range",
+      "passed": true
+    },
+    {
+      "check": "M-local-presentation-descent summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-determinant-time summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-determinant-fiber summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-early-unfolding summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-strong-lift summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-coherent-export summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "M-regular-RH-proper summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:complex summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:curves summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:stacks summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:quot summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:cohomology summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:deformation summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:bundles summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:proper-cohomology summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:field-picard summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:formal-series summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:ordinary-connections summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:formal-connections summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:analytic-spaces summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:coherent-gaga summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:differential-operators summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "dependency:algebraic-manifolds summary synchronized",
+      "passed": true
+    },
+    {
+      "check": "source identities and locators preserved",
+      "passed": true
+    },
+    {
+      "check": "source-note provenance and limitations retained",
+      "passed": true
+    },
+    {
+      "check": "source keys unique and consumers valid",
+      "passed": true
+    },
+    {
+      "check": "0.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.7 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "0.8 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "1.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "2.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.7 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.8 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.9 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.10 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.11 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "3.12 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.7 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.8 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "4.9 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "5.6 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "6.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "6.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "6.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "6.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "6.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "7.1 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "7.2 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "7.3 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "7.4 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "7.5 source keys resolve",
+      "passed": true
+    },
+    {
+      "check": "I13 fixed version synchronized",
+      "passed": true
+    },
+    {
+      "check": "required Suggested opening disclaimer retained",
+      "passed": true
+    },
+    {
+      "check": "Lean noncomment bytes unchanged",
+      "passed": true
+    },
+    {
+      "check": "topic metadata unchanged",
+      "passed": true
+    },
+    {
+      "check": "sigma verification program unchanged",
+      "passed": true
+    },
+    {
+      "check": "en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "en independent GFM math parser agrees",
+      "passed": true
+    },
+    {
+      "check": "en table widths consistent",
+      "passed": true
+    },
+    {
+      "check": "en forbidden operator macro absent",
+      "passed": true
+    },
+    {
+      "check": "0.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.7 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.8 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.7 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.8 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.9 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.10 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.11 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.12 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.7 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.8 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.9 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.6 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.1 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.2 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.3 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.4 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.5 en exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "ja independent GFM math parser agrees",
+      "passed": true
+    },
+    {
+      "check": "ja table widths consistent",
+      "passed": true
+    },
+    {
+      "check": "ja forbidden operator macro absent",
+      "passed": true
+    },
+    {
+      "check": "0.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.7 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "0.8 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "1.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "2.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.7 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.8 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.9 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.10 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.11 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "3.12 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.7 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.8 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "4.9 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "5.6 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "6.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.1 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.2 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.3 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.4 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "7.5 ja exact ordered TeX unchanged",
+      "passed": true
+    },
+    {
+      "check": "git diff whitespace check",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "passed": 1382,
+    "failed": 0
+  },
+  "limits": [
+    "These checks establish document consistency and stated preservation properties, not roadmap theorem proofs.",
+    "No full lake build or new Lean proof was performed.",
+    "GFM syntax was parsed independently; this is not a visual inspection of the remote GitHub renderer."
+  ]
+}

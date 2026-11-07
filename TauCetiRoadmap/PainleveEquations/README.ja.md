@@ -49,7 +49,7 @@
 
 | 供給項目 | 正確な供給先 | 範囲と本ロードマップの担当 |
 |---|---|---|
-| <a id="dependency-complex"></a>complex | [ComplexKahlerGeometry](../../TauCetiRoadmap/ComplexKahlerGeometry/README.md) — K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1 | 複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則ODEは非線形接続の一般理論、解析化と有理型比較は有理型接続モジュライの一般理論が担う。 |
+| <a id="dependency-complex"></a>complex | [ComplexKahlerGeometry](../../TauCetiRoadmap/ComplexKahlerGeometry/README.md) — K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1 | 複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則 ODE は一般理論が担い、1.1–1.2 は共通の接続・解析化に対する有理型付加構造への適用を担う。 |
 | <a id="dependency-smooth"></a>smooth | [SmoothBundlesConnections](../../TauCetiRoadmap/SmoothBundlesConnections/README.md) — B1.5; B5.0; B5.2 | 滑らかなEhresmann分裂、固有沈め込みおよび主接続の移送を、それぞれの仮定の範囲で用いる。一般の非線形移送は0.1–0.5が担う。 |
 | <a id="dependency-differential"></a>differential | [DifferentialGeometry](../../TauCetiRoadmap/DifferentialGeometry/README.md) — Layers 0–1; 3.1–3.5 | 有限次元多様体・チャート・滑らかな局所／極大／時間依存flow。連続時間・相変数局所一様Lipschitzの定理は0.2、一階jetは0.8で証明する。 |
 | <a id="dependency-frobenius"></a>frobenius | `TauCeti.Analysis.ODE.Frobenius` — TauCeti.exists_frobenius_flat_coordinate | 有限次元の実可積分グラフ場から、明記した正則性の下で、滑らかな逆写像と水平微分を持つ局所積OpenPartialHomeomorphを得る。0.5が沈め込み座標への移送、曲率から可積分性、貼合せとホモトピー不変性を証明し、正則版は0.3を用いる。 |
@@ -58,12 +58,16 @@
 | <a id="dependency-stacks"></a>stacks | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 1.18–1.23 | スタック化・2ファイバー積・慣性・準連接層降下・有限慣性のKeel–Mori。Gmの剛化、GIT、gerbeと粗モジュライの比較は1.3が証明する。 |
 | <a id="dependency-quotient-predicates"></a>quotient-predicates | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 1.17 | 圏論的商・幾何学的商の定義と明記された有限群商。簡約群の不変式と指標商は1.3/2.5、Stokesの商は4.2で構成する。 |
 | <a id="dependency-quot"></a>quot | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.14 | Noetherian・射影的なQuot/HilbertとHom/Isom空間。接続の有界性・方程式・安定性は1.3、解析的引戻しは1.2が担う。 |
-| <a id="dependency-cohomology"></a>cohomology | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.2; 2.6; 2.20; 3.3 | Čech・層コホモロジー、連接な項、相対・Serre双対、次数・曲線Riemann–Roch。ℂ線形微分作用素の全複体と分岐の錐は1.4が構成する。 |
+| <a id="dependency-cohomology"></a>cohomology | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.2; 2.6; 2.20; 3.3 | Čech・層コホモロジー、連接な項、相対・Serre 双対、次数・曲線 Riemann–Roch。1.4 は制約付きの微分作用素変形複体・分岐錐・トレース・双対比較を構成し、一般の作用素・主部・GAGA は C5.1 を用いる。 |
 | <a id="dependency-deformation"></a>deformation | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.2–4.6 | Artin係数・変形関手・hull・基本的小拡大の障害。実際の接続コサイクルと平方零核・versal比較は1.4、強い水平延長は2.1で証明する。 |
-| <a id="dependency-bundles"></a>bundles | [AlgebraicVectorBundles](../../TauCetiRoadmap/AlgebraicVectorBundles/README.md) — L0A–L0C; L1A–L1B; L2A–L2B | 有限局所自由層、双対・テンソル・行列式、相対Specと幾何学的ベクトル束との同値。接続と解析化は1.1–1.2が担う。 |
-| <a id="dependency-analytic-coherence"></a>analytic-coherence | [RealAnalyticGeometry](../../TauCetiRoadmap/RealAnalyticGeometry/README.md) — R3.2 item 0 | 与えられた解析多様体の構造層上の連接解析加群。冪零元を含む一般複素解析空間、解析化、GAGA比較は1.2が構成する。 |
+| <a id="dependency-bundles"></a>bundles | [AlgebraicVectorBundles](../../TauCetiRoadmap/AlgebraicVectorBundles/README.md) — L0A–L0C; L1A–L1B; L2A–L2B | 有限局所自由層、双対・テンソル・行列式、相対 Spec と幾何学的ベクトル束との同値。1.1 は共通の通常／形式接続を用いて有理型付加構造を構成し、1.2 は共通の解析化をその対象へ適用する。 |
+| <a id="dependency-ordinary-connections"></a>ordinary-connections | [CrystallineCohomology](https://github.com/TauCetiProject/TauCetiRoadmap/blob/5231bad75352a6086d9952ff511636c8a8ddc6ac/TauCetiRoadmap/CrystallineCohomology/README.md) — CR.1.3: ordinary connection carrier and operations | 任意の可換基底環上の通常の接続・延長・曲率・水平射・基底変換・テンソル・Hom・双対。定義に可積分性は課さない。1.1 は共通の接続上で極の上界・付加構造・行列式・End⁰ と局所化の比較を構成する。 |
+| <a id="dependency-formal-connections"></a>formal-connections | [FormalConnectionsOpers](https://github.com/TauCetiProject/TauCetiRoadmap/blob/19aacea45eee77564f95118de8f55f72547a9fe0/TauCetiRoadmap/FormalConnectionsOpers/README.md) — F1.1–F1.3; F2.1; F3.3–F3.4 | 相対連続微分・完備テンソル・形式座標自己同型と引戻し作用・Tate 係数の降下・形式接続・左ゲージ亜群。F3.4 の本質像には係数環の被覆条件を保持する。1.1 は実際の束の完備化、円板上への延長条件、分岐付加構造の降下、Levelt–Turrittin と相対因子化を担う。左作用 h とフレーム変換 g は h=g⁻¹ で比較する。F8.1 は 2.1–2.4 の時間接続の前提ではない。 |
+| <a id="dependency-analytic-spaces"></a>analytic-spaces | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix | 冪零元を保持する単一の解析空間の圏、局所有限型スキームと局所分離有限型代数空間の解析化、連接層・テンソル・引戻し・étale 降下・固有射・通常の正則接続の比較。1.2 は実際の曲線・時間・モジュライ表示への適用、極と付加構造、滑らかな解析的引戻し、多様体比較とその次元・位相条件を担う。 |
+| <a id="dependency-coherent-gaga"></a>coherent-gaga | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C1.9 | 有限型複素スキーム・固有代数空間の射影的／固有連接 GAGA と全次数の固有直像比較。冪零元と標準交換写像を保持する。1.2 は曲線・束・行列式の構成で仮定と写像を確認し、1.4 は供給された作用素複体の定理を介して適用する。基底変換の仮定は保持する。 |
+| <a id="dependency-differential-operators"></a>differential-operators | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga | 標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。F2.2 の symbol・Atiyah・PBW は前提としない。 |
+| <a id="dependency-algebraic-manifolds"></a>algebraic-manifolds | [FormalConnectionsOpers](https://github.com/TauCetiProject/TauCetiRoadmap/blob/19aacea45eee77564f95118de8f55f72547a9fe0/TauCetiRoadmap/FormalConnectionsOpers/README.md) — F2.4: fixed-model analytification and sheaf/tangent comparisons | 微分次元一定の有限型分離滑らか複素スキームの固定モデル多様体、第二可算性、次元・構造層・接束・étale の比較。1.2 はスキームのチャートで適用し、供給された代数空間の解析化を介して実際のモジュライ比較を降下する。任意の滑らかな解析基底では解析チャートによる比較と Hausdorff・第二可算・次元条件を確認する。 |
 | <a id="dependency-proper-cohomology"></a>proper-cohomology | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md) — Layer C | 固有連接直像と、各仮定を区別した平坦基底変換・コホモロジー基底変換。相対Picard拡張は1.5、境界係数と任意基底変換の検証は5.3が担う。 |
-| <a id="dependency-chow"></a>chow | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.12, `chow_lemma` only; 0.9 and 4.11 | Noetherian基底への有限型分離射に対し、基底上準射影的となる射影的改変を供給し、元の射が固有なら改変後は基底上射影的となる。1.2はこの小目標と連接コホモロジー・固有直像をGAGAの証明に用い、4.12の別の平坦化・StableReductionの分岐は前提にしない。 |
 | <a id="dependency-field-picard"></a>field-picard | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14 | 体上の射影的幾何学的整スキームのPicard、滑らかな曲線のJacobian、線束降下・変形。非被約曲線を含む相対Picardは1.5が構成する。 |
 | <a id="dependency-supports"></a>supports | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.7 | 台付きコホモロジー、局所化・切除、NoetherianなExt余極限との比較。第一境界層・注入・時間直線は5.3が構成する。 |
 | <a id="dependency-surfaces"></a>surfaces | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 3.4; 4.11; 4.17; 5.9–5.10 | 因子・Picard群、ブローアップ・狭義変換、正規交叉、曲面交点・随伴・格子。非被約境界と相対変形は目標5.1–5.3、変換は目標5.4–5.6が担う。 |
@@ -74,7 +78,7 @@
 | <a id="dependency-trace-determinant"></a>trace-determinant | [RandomMatrices](../../TauCetiRoadmap/RandomMatrices/README.md) — 8.3, generic operator-theory prefix | 正の核への特殊化以前の一般的なトレース・外冪・Fredholm行列式級数・トレースノルム連続性。正則族の仮定と変分比較は6.4が担う。 |
 | <a id="dependency-toeplitz"></a>toeplitz | [OperatorTheory/ToeplitzOperators](../../TauCetiRoadmap/OperatorTheory/ToeplitzOperators/README.md) — T1–T3 | 円周Hardy模型と可逆行列記号の指数＝行列式回転数の負。6.3が実際の積分路・正則族・共鳴・分岐の比較を構成する。 |
 | <a id="dependency-curve-functions"></a>curve-functions | `TauCeti.Analysis.Complex.RiemannSurface.FunctionField`; `TauCeti.Analysis.Complex.RiemannSurface.FunctionField.Comap` — TauCeti.RiemannSurface.MeromorphicFunction; Nonconstant curve pullback and order comparison | Riemann面からOnePoint ℂへの正則写像と恒等的無限大を除く証人、引戻し・位数。相空間の観測許容性とスカラー降下は0.7が証明し、同じ関数の対象を用いる。 |
-| <a id="dependency-proper"></a>proper | `Mathlib.Topology.Maps.Proper.Basic` — IsProperMap | 位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長は0.4、解析比較は1.2、RH族の固有性は4.4が証明する。 |
+| <a id="dependency-proper"></a>proper | `Mathlib.Topology.Maps.Proper.Basic` — IsProperMap | 位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長は 0.4、実際の族への解析比較の適用は 1.2、RH 族の固有性は 4.4 が担う。 |
 
 ### 補助構成の一次文献
 
@@ -500,11 +504,11 @@ q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr)
 
 **本目標が担う補助構成。**
 
-- 既存の有限局所自由層を用い、相対有理型接続を基底線形な Leibniz 則を満たす一次微分作用素 E→E⊗Ω¹(P) として定義する。ゲージ亜群、テンソル・双対・行列式・End⁰、標識された相対 Cartier 因子での完備化、形式座標変換、分岐引戻しと降下を実際の層写像とコサイクル上で構成する。CKG K4 の供給は非特異な正則比較までとし、代数的対象の解析化比較は 1.2 が担う。大域的な階数 r のトレース除去や行列式の根を導入しない。
+- CrystallineCohomology CR.1.3 の通常の接続とテンソル・双対・基底変換を、FormalConnectionsOpers F2.1 の微分形式による接続およびテンソル対称性の比較を介して用いる。既存の有限局所自由層 E 上で、相対有理型接続 E→E⊗Ω¹(P) を一次の Leibniz 則により定義し、微分作用素・主部には ComplexComparisonPartII C5.1 の対象を用いる。P の補集合への局所化が共通の通常の接続を与え、極の上界が同じ層写像の条件であることを証明する。付加構造付きゲージ亜群を構成する。用いる各テンソル・双対・Hom について、誘導される極の上界と局所構造を構成し、許容域に入ると主張する場合はその条件を確認する。行列式・End⁰ との比較を実際の層とコサイクル上で証明する。各標識相対 Cartier 因子での完備化には FormalConnectionsOpers F1.1–F1.3・F2.1・F3.3–F3.4 の連続／形式的対象とゲージ亜群を用いる。完備化した束の接続との比較、形式座標変換との両立、許容局所構造の分岐引戻しと被覆変換による降下は本項目が証明する。完備化した GL_r torsor は形式円板上に延びるので、F3.4 の係数環の被覆に関する条件を確認し、任意の係数環上の全 torsor をそのスタック化と同一視しない。e′=e·g に対する A′=g⁻¹Ag+g⁻¹dg と F3.3 の左作用 h·A=hAh⁻¹−(dh)h⁻¹ を h=g⁻¹ で比較し、行列式・留数・分岐座標との両立を含める。代数的／解析的比較への適用は 1.2 が担う。大域的な階数 r のトレース除去や行列式の根を導入しない。
 
-- ℂ((z)) 上の有限階数微分加群について、有限分岐 z=wᵉ の後の指数因子と確定特異加群への Levelt–Turrittin 分解を証明し、定数、分岐指数の細分、形式座標変換、被覆変換による降下を扱う。FormalLaurentPuiseux はスカラー演算に用いる。I23 の有限段階の因子化モデルと基底変換は、先頭係数の非消滅・相異性を課した基底上で別途証明する。各ファイバーの分解から衝突を含む相対分解を推論しない。3.4 は階数 2・構造次数 4 に特殊化し、収束するセクター上の実現と Stokes 分類は 4.1 が担う。
+- FormalConnectionsOpers F2.1 の共通の連続／形式接続を用い、ℂ((z)) 上の有限階数微分加群について、有限分岐 z=wᵉ の後の指数因子と確定特異加群への Levelt–Turrittin 分解を証明し、定数、分岐指数の細分、形式座標変換、被覆変換による降下を扱う。FormalLaurentPuiseux はスカラー演算に用いる。この分解と降下は本項目が担い、形式 oper への簡約や非特異な形式接続の水平自明化で代用しない。I23 の有限段階の因子化モデルと基底変換は、先頭係数の非消滅・相異性を課した基底上で別途証明する。各ファイバーの分解から衝突を含む相対分解を推論しない。3.4 は階数 2・構造次数 4 に特殊化し、収束するセクター上の実現と Stokes 分類は 4.1 が担う。
 
-*必要な先行結果：* [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23).
+*必要な先行結果：* [Ordinary algebraic connections](#dependency-ordinary-connections) (CR.1.3: ordinary connection carrier and operations); [Continuous formal connections and gauge groupoids](#dependency-formal-connections) (F1.1–F1.3; F2.1; F3.3–F3.4); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts only); [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23).
 
 **文献の範囲と担当証明：** I23 の Definitions 2.1, 2.2, 2.4, 2.7–2.8、Definition 3.1、Proposition 3.3、Corollaries 4.3–4.4、§5 が局所範囲を支える。座標から独立した包装と2-圏的な整合性を伴う降下は本稿が担う証明課題であり、I23 で既にその包装が証明されているとの主張ではない。
 
@@ -540,15 +544,15 @@ q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr)
 
 **本目標が担う補助構成。**
 
-- 複素多重円板の連接イデアルによる商で局所表示される有限次元複素局所環付き空間の圏を、冪零元を保持して構成する。局所環射、開制限、連接閉部分空間、開貼合せ、積・ファイバー積の普遍性を証明する。局所解析には CKG K3 の正則芽と RealAnalyticGeometry R3.2 項目 0 を用いる。有限型分離複素スキームの解析化をアフィン埋込みと貼合せから構成し、表示独立性、関手性、開・閉埋込み、ファイバー積、連接層・有限局所自由層・微分・有理型接続と引戻しの比較を証明する。複素次元nが一定で、台となる位相空間がHausdorffかつ第二可算である滑らかな解析空間を、ℂⁿをモデルとする既存の複素多様体と同定する。成分ごとに次元が異なる滑らかな空間では、開かつ閉な各次元の部分空間ごとに比較する。非線形接続と有理型接続モジュライの構成で多様体として用いる各対象について、次元と位相的仮定を確認する。一般の解析空間では分離性を明記したまま保持し、滑らかさだけからHausdorff性や単一のモデル次元を推論しない。ComplexCurveModuli D2.0 は多様体の場合の比較として用いる。解析的固有性の基底変換と代数的固有写像の解析化比較を構成する。代数的構成は有限型 Noetherian 基底上で行い、任意の滑らかな複素基底からの正則引戻しはこの解析的比較を経由する。特異な Betti 標的も同じ対象を用いる。
+- ComplexComparisonPartII C−1.1–C−1.2 の単一の複素解析空間の圏、スキームおよび局所分離な有限型代数空間の解析化を、構造層・冪零元・開閉部分空間・ファイバー積・étale・滑らか・固有射の比較ごと用いる。連接層・有限局所自由層・解析的 étale 降下には C0.3–C0.5・C0.7 を用いる。実際の曲線・時間チャート・モジュライ表示について、供給された構成と表示写像および引戻しコサイクルとの一致を証明する。微分次元が一定の有限型分離滑らかスキームのチャートでは、FormalConnectionsOpers F2.4 の固定モデルの複素多様体と、複素点上恒等な構造層の比較を用いる。滑らかな代数空間では C−1.2・C0.7 を étale 表示に適用し、チャートの多様体比較が同じモジュライ対象へ降下することを証明する。任意の滑らかな解析基底については、複素次元 n が一定で Hausdorff・第二可算な滑らかな解析空間を、その解析的局所チャートと構造層を介して ℂⁿ をモデルとする既存の CKG 多様体と同定し、代数的チャートからの比較と両方が使える範囲で一致させる。次元が異なる場合は開かつ閉な各次元の部分空間で扱い、用いる各多様体の次元と位相的仮定を確認する。特異な Betti 標的や微小基底を含む一般の解析空間では、供給された対象と冪零元を保持する。供給された固有射の比較と解析的基底変換を実際の族に適用する。代数的構成は有限型 Noetherian 複素基底上のままとし、任意の滑らかな複素基底からの正則写像に沿う引戻しとコサイクル則を証明する。解析空間の圏、一般の代数空間の解析化、一般の étale 降下そのものは再構成しない。
 
 - 安定標識曲線のアトラスは安定性の仮定を確認して用いる。種数 0 の一標識・二標識の場合は、実際の PGL₂ 安定化群を保持する商亜群、有限ジェットの torsor、係数の開条件と適合する滑らかなアトラスを構成する。これを安定曲線の粗モジュライのチャートとして扱わない。標識切断を保つ相対的な滑らかな自明化から穿孔族の局所位相標識を作り、重なりで比較する。行列式の階数 1 の移送は、階数 1 局所系・指定対数格子・極部分の原始関数・dlog から独立に構成し、2.1 および後続の階数 r の RH 写像を前提にしない。
 
-- 冪零元を保持した有限型複素スキームについて SGA1 XII1.1–3.1 の解析化と連接層の比較を証明する。固有射 f:X→S と連接層 F に対し、q≥0 で (R^q f_*F)^an≅R^q f^an_*(F^an) を F に自然に構成し、仮定を明示した基底変換写像と両立することを証明する（XII4.2）。体 ℂ 上の固有 X では Coh(X)≃Coh(X^an) と連接コホモロジー比較を証明する（XII4.3–4.4）。射影的な場合は Serre no.12 定理1–3 を用いる証明を構成し、固有の場合は Chow と dévissage による拡張を証明する。有理型接続は Leibniz 作用素の O 線形な主部・ジェット表示を介して比較し、∇ 自体を O 線形な写像と見なさない。これにより RH 構成で使う代数的／正則な曲線・束の比較を得る。非固有の解析基底上の任意の解析的な族が大域的に代数化されるとは主張しない。
+- 許容される各代数的曲線族、および比較に用いる各固有スキーム・代数空間に、ComplexComparisonPartII C1.9 の固有連接 GAGA と固有直像比較を適用する。固有性・有限型・連接性を確認し、標準的な交換写像を本構成の曲線・束・行列式の写像と同定する。各基底変換定理で主張する正確な仮定を保持する。1.1 の有理型 Leibniz 作用素の比較には C5.1 の主部による解析化と C5.2 の通常の正則接続との対応を用い、極因子・旗・有限段階の分岐因子化構造・行列式・制限・引戻しとの両立を証明する。一般の解析化・固有 GAGA・直像比較定理は ComplexComparisonPartII から受け取る。非固有な解析基底上の任意の解析族の代数化は主張しない。
 
 - 非空の相対標識因子をもつ滑らかな固有曲線族について、その因子が各幾何学的ファイバーで正の次数を持ち、相対的に豊富であることを証明する。Noetherian代数基底の局所で十分正の倍数を相対的非常に豊富に取り、Quot表示に使う射影的埋込みを構成し、共通の正の倍数を介して、選んだ冪と切断の基底を比較する。得られるモジュライ表示の比較は、その構成の後の1.3で証明する。射影性と有界構成に必要な偏極を明記した入力から得る。
 
-*必要な先行結果：* 内部依存：1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Coherent analytic module sheaves](#dependency-analytic-coherence) (R3.2 item 0); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C); [Chow lemma for the proper GAGA proof](#dependency-chow) (4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11).
+*必要な先行結果：* 内部依存：1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Complex analytic spaces and analytification](#dependency-analytic-spaces) (C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix); [Fixed-model manifold realization of smooth schemes](#dependency-algebraic-manifolds) (F2.4: fixed-model analytification and sheaf/tangent comparisons); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: DifferentialOperatorAnalytification); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C).
 
 **文献の範囲と担当証明：** I23 §5 の曲線・ジェット・係数の時間スキームと §§10–11 が供給元である。一般の行列式輸送および座標降下のインターフェースは追加の証明課題であり、すべての行列式族が持ち上がるという仮定に置き換えない。
 
@@ -623,13 +627,13 @@ q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr)
 
 - 連接な基礎項と実際の ℂ 線形一次微分作用素をもつ複体を、ℂ ベクトル空間の層の Čech 全複体として構成し、細分・被覆独立性・錐の符号・トレース対・項別 Serre 双対との両立を証明する。O 線形でない微分を D(QCoh) の射にしない。分岐因子化の全関係を含む三項の錐について、実際の持上げコサイクルから自己同型・接空間・障害を同定する。ここで必要な有限次元平方零核への拡張、線形性、直和、基底変換を証明し、SSF4.5 の基本的小拡大だけから自動的に得たことにしない。
 
-- 固有な複素曲線上の有界な変形複体について、各微分作用素を有限階の主部表示を介して解析化する。主部の解析化比較と合成との両立を証明し、解析化後の微分の二乗も零となることを示す。各項に固有な連接 GAGA を適用し、収束する超コホモロジーのスペクトル系列を比較して、実際の分岐局所錐を含む代数的／解析的な超コホモロジー比較を得る。これは Deligne II6.6 の証明経路に従う。複体は連接 O 加群を項にもつ複素ベクトル空間の層の複体であり、接続による微分を連接 O 加群の導来圏の O 線形写像として扱わない。相対的な基底変換の主張は別に証明し、使用する定理の平坦性とコホモロジーに関する仮定を保持する。
+- ComplexComparisonPartII C5.1 の標数によらない有限階微分作用素・主部、DifferentialOperatorAnalytification、boundedOperatorHyperGaga を用いる。各固有複素曲線上の付加構造付き有界変形複体について、微分作用素の位数の上界、全項の連接性、解析化した微分と実際の局所条件との両立を証明する。供給された比較写像を、分岐三項錐の鎖写像と、因子化関係・トレース・双対ペアリングを含めて同定する。合成との両立および一般の固有な微分作用素複体の GAGA は C5.1 から受け取り、付加構造付き複体の構成と仮定・比較の確認は本項目が担う。連接 O 加群を基礎項とする複素ベクトル空間の層の複体として扱い、O 線形でない微分を D(Coh) の射にしない。相対族 p:C→B では p⁻¹O_B 線形性と固有・連接・有界の仮定を証明してから供給された相対比較を用い、追加のコホモロジー・基底変換の主張では正確な平坦性・有限性の仮定を保持する。symbol・Atiyah 列・Lie–Rinehart PBW は本構成の前提としない。
 
-- 相対族 p:C→B では層の p⁻¹O_B 加群構造と接続微分の p⁻¹O_B 線形性を保持する。O_C 線形ではない。基底の加群作用を含めてČech全複体・トレース・主部比較・基底変換写像を構成し、整合性を証明する。絶対的なℂ線形コホモロジーは各ファイバーとの比較であり、相対構造の代用ではない。
+- 相対族 p:C→B では層の p⁻¹O_B 加群構造と接続微分の p⁻¹O_B 線形性を保持する。O_C 線形ではない。基底の加群作用を含めて付加構造付き Čech 全複体とトレースを構成し、この複体上で C5.1 の主部・相対 GAGA の比較写像を同定して、主張する各基底変換写像との整合性を証明する。絶対的な ℂ 線形コホモロジーは各ファイバーとの比較であり、相対構造の代用ではない。
 
 - 実際の持上げ方程式と変形複体からフレーム付き微小変形とversalチャートを構成し、1.3でGITにより構成したモジュライの接空間・障害・持上げとの比較を証明する。この比較を先行するモジュライ構成の存在仮定にはしない。
 
-*必要な先行結果：* 内部依存：1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6).
+*必要な先行結果：* 内部依存：1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9).
 
 **文献の範囲と担当証明：** I23 §6、(6.9)、Proposition 6.3、§7 Proposition 7.2。行列式固定のファイバーと対応するトレース零複体は本稿が担う明示的比較である。
 
@@ -740,7 +744,7 @@ H 上の滑らかさを証明し、元の安定モジュライ・複体・形式
 
 **本目標が担う補助構成。**
 
-- 1.1 の形式的対象と 1.4 の実際の変形コサイクルを用い、許容される各双対数時間方向について、極加群 Ω¹(log D)⊗O(P−D)、核格子、因子化関係を保持する強い微小全接続を構成する。中心ファイバーの指定同定をもつ変形類の存在・一意性、行列式移送との一致、重なりと降下を証明し、rigidification 前の微小スカラー自己同型を保持する。混合時間方向の平坦性とトレース形式の保存は 2.2 が別々に証明し、正則基底変換のコヒーレンスは 2.3 が担う。形式 oper の等モノドロミー亜群や各ファイバーの形式標準形を、正則な時間分裂の証明の代用にしない。
+- 1.1 の形式的対象と 1.4 の実際の変形コサイクルを用い、許容される各双対数時間方向について、極加群 Ω¹(log D)⊗O(P−D)、核格子、因子化関係を保持する強い微小全接続を構成する。中心ファイバーの指定同定をもつ変形類の存在・一意性、行列式移送との一致、重なりと降下を証明し、rigidification 前の微小スカラー自己同型を保持する。混合時間方向の平坦性とトレース形式の保存は 2.2 が別々に証明し、正則基底変換のコヒーレンスは 2.3 が担う。FormalConnectionsOpers F8.1 の射は oper の reduction を忘れた形式接続の同型である。本構成では許容される不確定特異部の係数が時間とともに変化し、出力は時間基底上の大域的モジュライ族の分裂となる。この分裂は F8.1 を前提とせず構成し、各ファイバーの形式標準形で代用しない。
 
 *必要な先行結果：* 内部依存：1.1, 1.2, 1.3, 1.4, 1.5, 0.1; [Elementary deformation theory](#dependency-deformation) (4.2–4.6).
 

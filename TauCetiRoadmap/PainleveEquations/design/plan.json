@@ -67,10 +67,6 @@
             "scope": "Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence."
           },
           {
-            "contract": "dependency:analytic-coherence",
-            "scope": "Coherent analytic module-sheaf carriers and local calculus on the supplied analytic manifold structure sheaf."
-          },
-          {
             "contract": "dependency:proper-cohomology",
             "scope": "Proper coherent pushforwards and separately stated flat-base-change and cohomology/base-change criteria; Grauert under its reduced-base and constant-rank assumptions."
           },
@@ -81,6 +77,30 @@
           {
             "contract": "dependency:formal-series",
             "scope": "Formal substitutions, continuous differentials, finite-dimensional HahnModule comparisons, residue/duality, ramified exponent embeddings and the stated finite-extension algebra."
+          },
+          {
+            "contract": "dependency:ordinary-connections",
+            "scope": "Ordinary form connections over arbitrary commutative base rings, extension, curvature, horizontal maps, base change and tensor/Hom/dual operations; no integrability condition in the carrier."
+          },
+          {
+            "contract": "dependency:formal-connections",
+            "scope": "Relative continuous differentials/completed tensors, formal-coordinate automorphisms and their pullback action, Tate coefficient descent, continuous/formal connection carrier and the left gauge groupoid; F3.4 stackification has its coefficient-cover essential-image criterion."
+          },
+          {
+            "contract": "dependency:analytic-spaces",
+            "scope": "One analytic-space category retaining nilpotents, locally finite-type scheme and locally separated finite-type algebraic-space analytification, coherent/tensor/pullback and étale descent comparisons, proper-morphism comparison and the ordinary holomorphic-connection dictionary."
+          },
+          {
+            "contract": "dependency:coherent-gaga",
+            "scope": "Projective and proper coherent GAGA, all-degree proper direct-image comparison on finite-type complex schemes and proper-space comparison, with nilpotents and the stated canonical exchange maps."
+          },
+          {
+            "contract": "dependency:differential-operators",
+            "scope": "Characteristic-free all-order operator predicate/principal parts, universal jets, composition/localization/sheafification, analytification and absolute/relative proper bounded operator-complex GAGA at the stated hypotheses."
+          },
+          {
+            "contract": "dependency:algebraic-manifolds",
+            "scope": "Fixed-model complex manifold realization for separated smooth finite-type complex schemes of constant differential dimension, second countability, dimension and sheaf/tangent/étale comparisons with the same analytification."
           }
         ],
         "owned_proof_obligations": [
@@ -982,6 +1002,9 @@
             "where": "I23, Definitions 2.1, 2.2, 2.4, 2.7–2.8; Definition 3.1, Proposition 3.3, Corollaries 4.3–4.4 and §5. Coordinate-independent packaging and 2-coherent descent are owned proof obligations, not assertions that I23 already proves that packaging."
           },
           "prerequisites": [
+            "dependency:ordinary-connections",
+            "dependency:formal-connections",
+            "dependency:differential-operators",
             "dependency:formal-series",
             "dependency:bundles",
             "dependency:complex",
@@ -1041,7 +1064,7 @@
               "statement": "For A = 0 and frame change g = diag(z,1), g⁻¹dg = diag(1,0)dz/z; subtracting half its trace gives diag(1/2,−1/2)dz/z. The scalar discrepancy prevents gluing a rank-two trace-subtracted connection on E, while the induced End⁰(E) and PGL₂ connections glue."
             }
           ],
-          "readme_needs": "[Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23).",
+          "readme_needs": "[Ordinary algebraic connections](#dependency-ordinary-connections) (CR.1.3: ordinary connection carrier and operations); [Continuous formal connections and gauge groupoids](#dependency-formal-connections) (F1.1–F1.3; F2.1; F3.3–F3.4); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts only); [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23).",
           "source_scope": "I23, Definitions 2.1, 2.2, 2.4, 2.7–2.8; Definition 3.1, Proposition 3.3, Corollaries 4.3–4.4 and §5. Coordinate-independent packaging and 2-coherent descent are owned proof obligations, not assertions that I23 already proves that packaging.",
           "part": "connection_moduli",
           "scope_role": "framework",
@@ -1049,16 +1072,16 @@
           "supporting_constructions": [
             {
               "id": "1.1.GF01",
-              "statement": "On the existing finite locally free sheaf carrier define a relative meromorphic connection as a base-linear first-order Leibniz operator E→E⊗Ω¹(P), its gauge groupoid, tensor/dual/determinant/End⁰ operations, completion at a marked relative Cartier divisor, formal coordinate changes and ramified pullback/descent. Prove every operation on the actual sheaf maps and cocycles. CKG K4 supplies only the nonsingular holomorphic comparison; 1.2 constructs the algebraic-to-analytic comparison. No global trace-subtracted rank-r object or determinant root is introduced.",
-              "statement_ja": "既存の有限局所自由層を用い、相対有理型接続を基底線形な Leibniz 則を満たす一次微分作用素 E→E⊗Ω¹(P) として定義する。ゲージ亜群、テンソル・双対・行列式・End⁰、標識された相対 Cartier 因子での完備化、形式座標変換、分岐引戻しと降下を実際の層写像とコサイクル上で構成する。CKG K4 の供給は非特異な正則比較までとし、代数的対象の解析化比較は 1.2 が担う。大域的な階数 r のトレース除去や行列式の根を導入しない。"
+              "statement": "Use CrystallineCohomology CR.1.3's ordinary connection and tensor/dual/base-change operations, with FormalConnectionsOpers F2.1's form-carrier and tensor-symmetry comparisons. On the existing finite locally free sheaf E define a relative meromorphic connection E→E⊗Ω¹(P) by the first-order Leibniz rule, using ComplexComparisonPartII C5.1's operator/principal-parts interface. Prove that localization away from P gives the shared ordinary connection and that the polar bound is a condition on this same sheaf map. Construct the decorated gauge groupoid. For each tensor/dual/Hom operation used, construct its induced polar bound and local structures and verify any claimed admission; construct determinant and End⁰ comparisons on the actual sheaves and cocycles. For completion at each marked relative Cartier divisor, use FormalConnectionsOpers F1.1–F1.3, F2.1 and F3.3–F3.4's continuous/formal carriers and gauge groupoid. Prove the comparison of the completed bundle connection with that carrier, compatibility with formal coordinate changes, and ramified pullback and deck descent for the admitted local structures. The completed GL_r torsor extends across the formal disc; verify F3.4's coefficient-cover criterion rather than identifying its stackification with all torsors over every coefficient ring. For e′=e·g, compare A′=g⁻¹Ag+g⁻¹dg with F3.3's left gauge h·A=hAh⁻¹−(dh)h⁻¹ by h=g⁻¹, including determinant, residue and ramified-coordinate comparisons. The algebraic/analytic comparison is the application in 1.2. No global trace-subtracted rank-r object or determinant root is introduced.",
+              "statement_ja": "CrystallineCohomology CR.1.3 の通常の接続とテンソル・双対・基底変換を、FormalConnectionsOpers F2.1 の微分形式による接続およびテンソル対称性の比較を介して用いる。既存の有限局所自由層 E 上で、相対有理型接続 E→E⊗Ω¹(P) を一次の Leibniz 則により定義し、微分作用素・主部には ComplexComparisonPartII C5.1 の対象を用いる。P の補集合への局所化が共通の通常の接続を与え、極の上界が同じ層写像の条件であることを証明する。付加構造付きゲージ亜群を構成する。用いる各テンソル・双対・Hom について、誘導される極の上界と局所構造を構成し、許容域に入ると主張する場合はその条件を確認する。行列式・End⁰ との比較を実際の層とコサイクル上で証明する。各標識相対 Cartier 因子での完備化には FormalConnectionsOpers F1.1–F1.3・F2.1・F3.3–F3.4 の連続／形式的対象とゲージ亜群を用いる。完備化した束の接続との比較、形式座標変換との両立、許容局所構造の分岐引戻しと被覆変換による降下は本項目が証明する。完備化した GL_r torsor は形式円板上に延びるので、F3.4 の係数環の被覆に関する条件を確認し、任意の係数環上の全 torsor をそのスタック化と同一視しない。e′=e·g に対する A′=g⁻¹Ag+g⁻¹dg と F3.3 の左作用 h·A=hAh⁻¹−(dh)h⁻¹ を h=g⁻¹ で比較し、行列式・留数・分岐座標との両立を含める。代数的／解析的比較への適用は 1.2 が担う。大域的な階数 r のトレース除去や行列式の根を導入しない。"
             },
             {
               "id": "1.1.GF02",
-              "statement": "For a finite-rank differential module over ℂ((z)), prove the characteristic-zero Levelt–Turrittin decomposition after a finite extension z=wᵉ into exponential factors tensored with regular-singular modules, with constants, refinement of e, formal coordinate change and deck descent. Use FormalLaurentPuiseux for scalar arithmetic only. Separately prove, over the stated nonvanishing/distinct-leading-coefficient base loci, the finite-level factorized models and their coherent base-change comparisons required by I23. A fibrewise decomposition is not a relative decomposition across collisions. 3.4 applies this common result to rank two and structural degree four; 4.1 still owns convergent sectorial realization and Stokes classification.",
-              "statement_ja": "ℂ((z)) 上の有限階数微分加群について、有限分岐 z=wᵉ の後の指数因子と確定特異加群への Levelt–Turrittin 分解を証明し、定数、分岐指数の細分、形式座標変換、被覆変換による降下を扱う。FormalLaurentPuiseux はスカラー演算に用いる。I23 の有限段階の因子化モデルと基底変換は、先頭係数の非消滅・相異性を課した基底上で別途証明する。各ファイバーの分解から衝突を含む相対分解を推論しない。3.4 は階数 2・構造次数 4 に特殊化し、収束するセクター上の実現と Stokes 分類は 4.1 が担う。"
+              "statement": "On the shared continuous/formal connection carrier of FormalConnectionsOpers F2.1, for a finite-rank differential module over ℂ((z)), prove the characteristic-zero Levelt–Turrittin decomposition after a finite extension z=wᵉ into exponential factors tensored with regular-singular modules, with constants, refinement of e, formal coordinate change and deck descent. Use FormalLaurentPuiseux for scalar arithmetic only. This decomposition and its descent are owned here; neither formal oper reduction nor a nonsingular formal horizontal trivialization supplies them. Separately prove, over the stated nonvanishing/distinct-leading-coefficient base loci, the finite-level factorized models and their coherent base-change comparisons required by I23. A fibrewise decomposition is not a relative decomposition across collisions. 3.4 applies this common result to rank two and structural degree four; 4.1 still owns convergent sectorial realization and Stokes classification.",
+              "statement_ja": "FormalConnectionsOpers F2.1 の共通の連続／形式接続を用い、ℂ((z)) 上の有限階数微分加群について、有限分岐 z=wᵉ の後の指数因子と確定特異加群への Levelt–Turrittin 分解を証明し、定数、分岐指数の細分、形式座標変換、被覆変換による降下を扱う。FormalLaurentPuiseux はスカラー演算に用いる。この分解と降下は本項目が担い、形式 oper への簡約や非特異な形式接続の水平自明化で代用しない。I23 の有限段階の因子化モデルと基底変換は、先頭係数の非消滅・相異性を課した基底上で別途証明する。各ファイバーの分解から衝突を含む相対分解を推論しない。3.4 は階数 2・構造次数 4 に特殊化し、収束するセクター上の実現と Stokes 分類は 4.1 が担う。"
             }
           ],
-          "readme_needs_ja": "[Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23)."
+          "readme_needs_ja": "[Ordinary algebraic connections](#dependency-ordinary-connections) (CR.1.3: ordinary connection carrier and operations); [Continuous formal connections and gauge groupoids](#dependency-formal-connections) (F1.1–F1.3; F2.1; F3.3–F3.4); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts only); [Formal scalar and vector-valued Laurent algebra](#dependency-formal-series) (L1–L4; L5–L6 for finite-extension steps in 1.1); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23)."
         },
         {
           "id": "1.2",
@@ -1080,10 +1103,12 @@
             "target:1.1",
             "dependency:curves",
             "dependency:complex",
-            "dependency:analytic-coherence",
+            "dependency:analytic-spaces",
+            "dependency:algebraic-manifolds",
+            "dependency:coherent-gaga",
+            "dependency:differential-operators",
             "dependency:cohomology",
-            "dependency:proper-cohomology",
-            "dependency:chow"
+            "dependency:proper-cohomology"
           ],
           "api": [
             {
@@ -1129,7 +1154,7 @@
               "statement": "On a fixed positive-genus curve, changing a line connection by tη with nonzero holomorphic η generally changes a period and hence its rank-one monodromy. Fixed residues alone cannot certify a strong determinant transport."
             }
           ],
-          "readme_needs": "Internal: 1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Coherent analytic module sheaves](#dependency-analytic-coherence) (R3.2 item 0); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C); [Chow lemma for the proper GAGA proof](#dependency-chow) (4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11).",
+          "readme_needs": "Internal: 1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Complex analytic spaces and analytification](#dependency-analytic-spaces) (C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix); [Fixed-model manifold realization of smooth schemes](#dependency-algebraic-manifolds) (F2.4: fixed-model analytification and sheaf/tangent comparisons); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: DifferentialOperatorAnalytification); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C).",
           "source_scope": "I23 §5 constructs the curve/jet/coefficient time scheme and §§10–11 use it. The general determinant-transport and coordinate-descent interfaces are additional owned obligations; they cannot be replaced by a claim that every determinant family admits a lift.",
           "part": "connection_moduli",
           "scope_role": "framework",
@@ -1137,8 +1162,8 @@
           "supporting_constructions": [
             {
               "id": "1.2.GF03",
-              "statement": "Construct the category of finite-dimensional complex locally ringed spaces locally modeled by coherent ideal quotients of polydiscs, retaining nilpotents; prove local-ring morphism, open restriction, coherent closed quotient, open gluing, product and fibre-product universal properties. Use CKG K3 holomorphic germs and RealAnalyticGeometry R3.2 item 0 for the local coherent calculus. Construct analytification of separated finite-type complex schemes by affine embeddings and gluing, proving independence of presentation, functoriality, open/closed and fibre-product comparisons, analytification of coherent and finite locally free sheaves, differentials, meromorphic connections and their pullbacks. Identify smooth analytic spaces of a fixed complex dimension n whose underlying spaces are Hausdorff and second countable with the native CKG manifold carrier modeled on ℂⁿ. For a smooth space with components of different dimensions, make this comparison separately on each open-and-closed dimension locus. Verify the dimension and topological hypotheses for each manifold object used in the nonlinear-connection and meromorphic-moduli constructions. General analytic spaces retain their stated separation properties; smoothness alone does not imply Hausdorffness or a single global model dimension. Use ComplexCurveModuli D2.0 only as the manifold instance comparison. Construct analytic properness/base-change and the proper algebraic-to-analytic comparison used by the moduli families. Algebraic construction takes place over finite-type Noetherian complex bases; arbitrary holomorphic maps from smooth complex bases are handled by this analytic pullback theorem. Every singular Betti target uses this same carrier.",
-              "statement_ja": "複素多重円板の連接イデアルによる商で局所表示される有限次元複素局所環付き空間の圏を、冪零元を保持して構成する。局所環射、開制限、連接閉部分空間、開貼合せ、積・ファイバー積の普遍性を証明する。局所解析には CKG K3 の正則芽と RealAnalyticGeometry R3.2 項目 0 を用いる。有限型分離複素スキームの解析化をアフィン埋込みと貼合せから構成し、表示独立性、関手性、開・閉埋込み、ファイバー積、連接層・有限局所自由層・微分・有理型接続と引戻しの比較を証明する。複素次元nが一定で、台となる位相空間がHausdorffかつ第二可算である滑らかな解析空間を、ℂⁿをモデルとする既存の複素多様体と同定する。成分ごとに次元が異なる滑らかな空間では、開かつ閉な各次元の部分空間ごとに比較する。非線形接続と有理型接続モジュライの構成で多様体として用いる各対象について、次元と位相的仮定を確認する。一般の解析空間では分離性を明記したまま保持し、滑らかさだけからHausdorff性や単一のモデル次元を推論しない。ComplexCurveModuli D2.0 は多様体の場合の比較として用いる。解析的固有性の基底変換と代数的固有写像の解析化比較を構成する。代数的構成は有限型 Noetherian 基底上で行い、任意の滑らかな複素基底からの正則引戻しはこの解析的比較を経由する。特異な Betti 標的も同じ対象を用いる。"
+              "statement": "Use ComplexComparisonPartII C−1.1–C−1.2's single category of complex analytic spaces, scheme and locally separated finite-type algebraic-space analytification, with its ring sheaf, nilpotents, open/closed, fibre-product, étale, smooth and proper-morphism comparisons; use C0.3–C0.5 and C0.7 for coherent sheaves, finite locally free sheaves and analytic étale descent. For each actual curve, time chart and moduli presentation, prove that these supplied constructions identify the presentation maps and their pullback cocycles. On separated smooth finite-type scheme charts of constant differential dimension use FormalConnectionsOpers F2.4's fixed-model manifold realization and identity-on-complex-points sheaf comparison. For smooth algebraic spaces apply C−1.2 and C0.7 to their étale presentations and prove that the chart manifold comparisons descend to the same moduli object. For arbitrary smooth analytic bases identify a Hausdorff second-countable smooth analytic space of fixed complex dimension n with the native CKG manifold modeled on ℂⁿ through its analytic local charts and sheaf; compare with the supplied algebraic-chart realization whenever both apply. Work on each open-and-closed dimension locus when dimensions vary, and verify the dimension and topological hypotheses for every manifold used. General analytic spaces, including singular Betti targets and infinitesimal bases, retain the supplied carrier and nilpotents. Use the supplied proper-morphism comparison and analytic base change on the actual families. Algebraic construction remains over finite-type Noetherian complex bases; construct pullbacks along arbitrary holomorphic maps from smooth complex bases and prove their cocycle laws. This application does not reconstruct the analytic category, general space analytification or generic étale descent.",
+              "statement_ja": "ComplexComparisonPartII C−1.1–C−1.2 の単一の複素解析空間の圏、スキームおよび局所分離な有限型代数空間の解析化を、構造層・冪零元・開閉部分空間・ファイバー積・étale・滑らか・固有射の比較ごと用いる。連接層・有限局所自由層・解析的 étale 降下には C0.3–C0.5・C0.7 を用いる。実際の曲線・時間チャート・モジュライ表示について、供給された構成と表示写像および引戻しコサイクルとの一致を証明する。微分次元が一定の有限型分離滑らかスキームのチャートでは、FormalConnectionsOpers F2.4 の固定モデルの複素多様体と、複素点上恒等な構造層の比較を用いる。滑らかな代数空間では C−1.2・C0.7 を étale 表示に適用し、チャートの多様体比較が同じモジュライ対象へ降下することを証明する。任意の滑らかな解析基底については、複素次元 n が一定で Hausdorff・第二可算な滑らかな解析空間を、その解析的局所チャートと構造層を介して ℂⁿ をモデルとする既存の CKG 多様体と同定し、代数的チャートからの比較と両方が使える範囲で一致させる。次元が異なる場合は開かつ閉な各次元の部分空間で扱い、用いる各多様体の次元と位相的仮定を確認する。特異な Betti 標的や微小基底を含む一般の解析空間では、供給された対象と冪零元を保持する。供給された固有射の比較と解析的基底変換を実際の族に適用する。代数的構成は有限型 Noetherian 複素基底上のままとし、任意の滑らかな複素基底からの正則写像に沿う引戻しとコサイクル則を証明する。解析空間の圏、一般の代数空間の解析化、一般の étale 降下そのものは再構成しない。"
             },
             {
               "id": "1.2.GF04",
@@ -1147,8 +1172,8 @@
             },
             {
               "id": "1.2.GF03a",
-              "statement": "Prove the analytification functor and coherent comparison in SGA1 XII1.1–3.1 on complex finite-type schemes, retaining nilpotents. For a proper morphism f:X→S and coherent F, prove (R^q f_*F)^an≅R^q f^an_*(F^an), naturally in F, for q≥0, and its compatibility with the base-change maps under their stated hypotheses (SGA1 XII4.2). For an absolute proper complex X prove Coh(X)≃Coh(X^an), with the coherent cohomology comparison (XII4.3–4.4); the projective step uses Serre no.12 Theorems1–3, and the proper step uses Chow and dévissage. Transport meromorphic connection data through the O-linear principal-parts/jet presentation of a Leibniz operator, not by falsely treating ∇ as an O-linear map. These comparisons supply the algebraic/holomorphic curve and bundle objects used in the RH construction. They do not assert algebraization of an arbitrary analytic family over a nonproper analytic base.",
-              "statement_ja": "冪零元を保持した有限型複素スキームについて SGA1 XII1.1–3.1 の解析化と連接層の比較を証明する。固有射 f:X→S と連接層 F に対し、q≥0 で (R^q f_*F)^an≅R^q f^an_*(F^an) を F に自然に構成し、仮定を明示した基底変換写像と両立することを証明する（XII4.2）。体 ℂ 上の固有 X では Coh(X)≃Coh(X^an) と連接コホモロジー比較を証明する（XII4.3–4.4）。射影的な場合は Serre no.12 定理1–3 を用いる証明を構成し、固有の場合は Chow と dévissage による拡張を証明する。有理型接続は Leibniz 作用素の O 線形な主部・ジェット表示を介して比較し、∇ 自体を O 線形な写像と見なさない。これにより RH 構成で使う代数的／正則な曲線・束の比較を得る。非固有の解析基底上の任意の解析的な族が大域的に代数化されるとは主張しない。",
+              "statement": "Apply ComplexComparisonPartII C1.9's proper coherent GAGA and proper direct-image comparison to each admitted algebraic curve family and each proper scheme or algebraic space for which a comparison is used. Verify properness, finite-type and coherence hypotheses and identify the canonical exchange maps with the curve, bundle and determinant maps used here, retaining the exact hypotheses of each claimed base-change theorem. Use C5.1's principal-parts analytification and C5.2's ordinary holomorphic-connection dictionary to compare 1.1's meromorphic Leibniz operators: prove compatibility with the polar divisor, flags, finite-level factorized ramified structures, determinant, restriction and pullback. The generic analytification, proper GAGA and direct-image theorems remain supplied by ComplexComparisonPartII. No algebraization of an arbitrary analytic family over a nonproper analytic base is asserted.",
+              "statement_ja": "許容される各代数的曲線族、および比較に用いる各固有スキーム・代数空間に、ComplexComparisonPartII C1.9 の固有連接 GAGA と固有直像比較を適用する。固有性・有限型・連接性を確認し、標準的な交換写像を本構成の曲線・束・行列式の写像と同定する。各基底変換定理で主張する正確な仮定を保持する。1.1 の有理型 Leibniz 作用素の比較には C5.1 の主部による解析化と C5.2 の通常の正則接続との対応を用い、極因子・旗・有限段階の分岐因子化構造・行列式・制限・引戻しとの両立を証明する。一般の解析化・固有 GAGA・直像比較定理は ComplexComparisonPartII から受け取る。非固有な解析基底上の任意の解析族の代数化は主張しない。",
               "source_keys": [
                 "SGA1XII",
                 "SERREGAGA",
@@ -1161,7 +1186,7 @@
               "statement_ja": "非空の相対標識因子をもつ滑らかな固有曲線族について、その因子が各幾何学的ファイバーで正の次数を持ち、相対的に豊富であることを証明する。Noetherian代数基底の局所で十分正の倍数を相対的非常に豊富に取り、Quot表示に使う射影的埋込みを構成し、共通の正の倍数を介して、選んだ冪と切断の基底を比較する。得られるモジュライ表示の比較は、その構成の後の1.3で証明する。射影性と有界構成に必要な偏極を明記した入力から得る。"
             }
           ],
-          "readme_needs_ja": "内部依存：1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Coherent analytic module sheaves](#dependency-analytic-coherence) (R3.2 item 0); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C); [Chow lemma for the proper GAGA proof](#dependency-chow) (4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11)."
+          "readme_needs_ja": "内部依存：1.1; [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Complex analytic spaces and analytification](#dependency-analytic-spaces) (C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix); [Fixed-model manifold realization of smooth schemes](#dependency-algebraic-manifolds) (F2.4: fixed-model analytification and sheaf/tangent comparisons); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: DifferentialOperatorAnalytification); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C)."
         },
         {
           "id": "1.3",
@@ -1278,7 +1303,9 @@
           "prerequisites": [
             "target:1.3",
             "dependency:cohomology",
-            "dependency:deformation"
+            "dependency:deformation",
+            "dependency:differential-operators",
+            "dependency:coherent-gaga"
           ],
           "api": [
             {
@@ -1319,7 +1346,7 @@
               "statement": "With ω = dq ∧ dp, the ordered tangent pair (∂q, ∂p) has pairing +1 and the reversed pair −1; a reversed trace convention must be corrected before transport formulas are used."
             }
           ],
-          "readme_needs": "Internal: 1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6).",
+          "readme_needs": "Internal: 1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9).",
           "source_scope": "I23 §6, (6.9), Proposition 6.3 and §7, Proposition 7.2. The fixed-determinant fiber and its compatible trace-free complex are explicit owned comparisons.",
           "part": "connection_moduli",
           "scope_role": "framework",
@@ -1332,8 +1359,8 @@
             },
             {
               "id": "1.4.GF06a",
-              "statement": "For the bounded deformation complexes on a proper complex curve, construct analytification of each differential operator through its finite-order principal-parts presentation. Prove the principal-parts analytification comparison and compatibility with composition, so that the analytified differential still squares to zero. Apply proper coherent GAGA term by term and the convergent hypercohomology spectral sequences to obtain the algebraic–analytic hypercohomology comparison, including the actual local ramified cone. This follows the proof route of Deligne II6.6. The complex is a complex of sheaves of complex vector spaces with coherent O-module terms; its connection differential is not treated as an O-linear map in the derived category of coherent O-modules. Relative base-change claims are separate and retain the exact flatness and cohomological hypotheses of the source being used.",
-              "statement_ja": "固有な複素曲線上の有界な変形複体について、各微分作用素を有限階の主部表示を介して解析化する。主部の解析化比較と合成との両立を証明し、解析化後の微分の二乗も零となることを示す。各項に固有な連接 GAGA を適用し、収束する超コホモロジーのスペクトル系列を比較して、実際の分岐局所錐を含む代数的／解析的な超コホモロジー比較を得る。これは Deligne II6.6 の証明経路に従う。複体は連接 O 加群を項にもつ複素ベクトル空間の層の複体であり、接続による微分を連接 O 加群の導来圏の O 線形写像として扱わない。相対的な基底変換の主張は別に証明し、使用する定理の平坦性とコホモロジーに関する仮定を保持する。",
+              "statement": "Use ComplexComparisonPartII C5.1's characteristic-free finite-order operator/principal-parts interface, DifferentialOperatorAnalytification and boundedOperatorHyperGaga. For the bounded decorated deformation complex on each proper complex curve, prove the order bounds, coherence of every term and compatibility of the analytified differential with the actual local constraints. Identify the supplied comparison with the chain maps of the ramified three-term cone, including its factorization relations, trace and duality pairings. Composition compatibility and the generic proper operator-complex GAGA theorem are supplied by C5.1; constructing this decorated complex and checking those hypotheses and identifications are owned here. Work with sheaves of complex vector spaces and coherent underlying O-module terms, not with a non-O-linear differential in D(Coh). For relative p:C→B use the supplied relative comparison only after proving p⁻¹O_B-linearity and its proper/coherent/bounded hypotheses; every further cohomology/base-change assertion retains its exact flatness and finiteness hypotheses. Neither symbols, Atiyah sequences nor Lie–Rinehart PBW is a prerequisite of this construction.",
+              "statement_ja": "ComplexComparisonPartII C5.1 の標数によらない有限階微分作用素・主部、DifferentialOperatorAnalytification、boundedOperatorHyperGaga を用いる。各固有複素曲線上の付加構造付き有界変形複体について、微分作用素の位数の上界、全項の連接性、解析化した微分と実際の局所条件との両立を証明する。供給された比較写像を、分岐三項錐の鎖写像と、因子化関係・トレース・双対ペアリングを含めて同定する。合成との両立および一般の固有な微分作用素複体の GAGA は C5.1 から受け取り、付加構造付き複体の構成と仮定・比較の確認は本項目が担う。連接 O 加群を基礎項とする複素ベクトル空間の層の複体として扱い、O 線形でない微分を D(Coh) の射にしない。相対族 p:C→B では p⁻¹O_B 線形性と固有・連接・有界の仮定を証明してから供給された相対比較を用い、追加のコホモロジー・基底変換の主張では正確な平坦性・有限性の仮定を保持する。symbol・Atiyah 列・Lie–Rinehart PBW は本構成の前提としない。",
               "source_keys": [
                 "DEL70",
                 "SGA1XII"
@@ -1341,8 +1368,8 @@
             },
             {
               "id": "1.4.RelativeLinearity",
-              "statement": "For the relative family p:C→B retain the p⁻¹O_B-module action on the sheaves and the p⁻¹O_B-linearity of the connection differential. It is not O_C-linear. Construct the Čech total complex, trace, principal-parts comparisons and every claimed base-change map with that base-module action, then prove compatibility. Absolute ℂ-linear cohomology is its fiberwise comparison, not a substitute for this relative structure.",
-              "statement_ja": "相対族 p:C→B では層の p⁻¹O_B 加群構造と接続微分の p⁻¹O_B 線形性を保持する。O_C 線形ではない。基底の加群作用を含めてČech全複体・トレース・主部比較・基底変換写像を構成し、整合性を証明する。絶対的なℂ線形コホモロジーは各ファイバーとの比較であり、相対構造の代用ではない。"
+              "statement": "For the relative family p:C→B retain the p⁻¹O_B-module action on the sheaves and the p⁻¹O_B-linearity of the connection differential. It is not O_C-linear. Construct the decorated Čech total complex and trace with that base-module action; identify C5.1's supplied principal-parts and relative GAGA maps on this complex and prove compatibility with each claimed base-change map. Absolute ℂ-linear cohomology is its fiberwise comparison, not a substitute for this relative structure.",
+              "statement_ja": "相対族 p:C→B では層の p⁻¹O_B 加群構造と接続微分の p⁻¹O_B 線形性を保持する。O_C 線形ではない。基底の加群作用を含めて付加構造付き Čech 全複体とトレースを構成し、この複体上で C5.1 の主部・相対 GAGA の比較写像を同定して、主張する各基底変換写像との整合性を証明する。絶対的な ℂ 線形コホモロジーは各ファイバーとの比較であり、相対構造の代用ではない。"
             },
             {
               "id": "1.4.Versal",
@@ -1350,7 +1377,7 @@
               "statement_ja": "実際の持上げ方程式と変形複体からフレーム付き微小変形とversalチャートを構成し、1.3でGITにより構成したモジュライの接空間・障害・持上げとの比較を証明する。この比較を先行するモジュライ構成の存在仮定にはしない。"
             }
           ],
-          "readme_needs_ja": "内部依存：1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6)."
+          "readme_needs_ja": "内部依存：1.3; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Differential operators, principal parts and analytic comparison](#dependency-differential-operators) (C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga); [Proper coherent GAGA and direct images](#dependency-coherent-gaga) (C1.9)."
         },
         {
           "kind": "construction",
@@ -1597,8 +1624,8 @@
           "supporting_constructions": [
             {
               "id": "2.1.GF08",
-              "statement": "Using 1.1 formal carriers and 1.4 actual deformation cocycles, construct the strong infinitesimal total connection over each admitted dual-number time direction, with pole module Ω¹(log D)⊗O(P−D), kernel lattices and factorized relations. Prove existence and uniqueness of the deformation class with its specified central identification, preserve the determinant transport, and prove overlap/descent comparisons; scalar infinitesimal automorphisms must remain accounted for before rigidification. 2.2 proves mixed-time flatness and trace-form preservation separately, and 2.3 proves coherent arbitrary holomorphic base change. A formal oper isomonodromy groupoid or a fibrewise formal normal form is not the holomorphic time splitting.",
-              "statement_ja": "1.1 の形式的対象と 1.4 の実際の変形コサイクルを用い、許容される各双対数時間方向について、極加群 Ω¹(log D)⊗O(P−D)、核格子、因子化関係を保持する強い微小全接続を構成する。中心ファイバーの指定同定をもつ変形類の存在・一意性、行列式移送との一致、重なりと降下を証明し、rigidification 前の微小スカラー自己同型を保持する。混合時間方向の平坦性とトレース形式の保存は 2.2 が別々に証明し、正則基底変換のコヒーレンスは 2.3 が担う。形式 oper の等モノドロミー亜群や各ファイバーの形式標準形を、正則な時間分裂の証明の代用にしない。"
+              "statement": "Using 1.1 formal carriers and 1.4 actual deformation cocycles, construct the strong infinitesimal total connection over each admitted dual-number time direction, with pole module Ω¹(log D)⊗O(P−D), kernel lattices and factorized relations. Prove existence and uniqueness of the deformation class with its specified central identification, preserve the determinant transport, and prove overlap/descent comparisons; scalar infinitesimal automorphisms must remain accounted for before rigidification. 2.2 proves mixed-time flatness and trace-form preservation separately, and 2.3 proves coherent arbitrary holomorphic base change. FormalConnectionsOpers F8.1 defines arrows by isomorphisms of underlying formal connections after forgetting the oper reduction. Here the admitted irregular coefficients may vary with time, and the output is a splitting of the global moduli family over that time base. Construct this splitting independently of F8.1; a fibrewise formal normal form does not supply it.",
+              "statement_ja": "1.1 の形式的対象と 1.4 の実際の変形コサイクルを用い、許容される各双対数時間方向について、極加群 Ω¹(log D)⊗O(P−D)、核格子、因子化関係を保持する強い微小全接続を構成する。中心ファイバーの指定同定をもつ変形類の存在・一意性、行列式移送との一致、重なりと降下を証明し、rigidification 前の微小スカラー自己同型を保持する。混合時間方向の平坦性とトレース形式の保存は 2.2 が別々に証明し、正則基底変換のコヒーレンスは 2.3 が担う。FormalConnectionsOpers F8.1 の射は oper の reduction を忘れた形式接続の同型である。本構成では許容される不確定特異部の係数が時間とともに変化し、出力は時間基底上の大域的モジュライ族の分裂となる。この分裂は F8.1 を前提とせず構成し、各ファイバーの形式標準形で代用しない。"
             }
           ],
           "readme_needs_ja": "内部依存：1.1, 1.2, 1.3, 1.4, 1.5, 0.1; [Elementary deformation theory](#dependency-deformation) (4.2–4.6)."

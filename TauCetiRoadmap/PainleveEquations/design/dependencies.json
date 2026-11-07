@@ -16,8 +16,8 @@
         "K7.1"
       ],
       "supplied": "Complex inverse/implicit-function and tangent calculus; holomorphic germs and one-variable meromorphic germs; holomorphic bundle/sheaf equivalence and nonsingular flat connections/local systems; projective charts.",
-      "owned_here": "The nonlinear-connection theory owns nonlinear connections, holomorphic ODEs, transport and observations. The meromorphic-moduli theory owns meromorphic/analytic-moduli comparisons. K4 does not supply algebraic analytification.",
-      "supplied_ja": "複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則ODEは非線形接続の一般理論、解析化と有理型比較は有理型接続モジュライの一般理論が担う。",
+      "owned_here": "The nonlinear-connection theory owns nonlinear connections, holomorphic ODEs, transport and observations. 1.1–1.2 own the meromorphic/decorated applications of the shared connection and analytification interfaces; K4 supplies the nonsingular holomorphic comparison.",
+      "supplied_ja": "複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則 ODE は一般理論が担い、1.1–1.2 は共通の接続・解析化に対する有理型付加構造への適用を担う。",
       "consumers": [
         "0.1",
         "0.3",
@@ -105,7 +105,7 @@
         "SchemeAndStackFoundations 4.15"
       ],
       "supplied": "Genus-zero Möbius normalization and supported point-pushing; stable marked-curve deformation charts in the stable range.",
-      "owned_here": "1.2 constructs unstable one-/two-pointed quotient charts, finite jets, local markings and determinant transport. Its analytic category is constructed there; D2.0 is only an instance comparison.",
+      "owned_here": "1.2 constructs unstable one-/two-pointed quotient charts, finite jets, local markings and determinant transport. Analytic spaces and analytification are supplied by ComplexComparisonPartII, with the fixed-model scheme comparison from FormalConnectionsOpers F2.4.",
       "supplied_ja": "種数0のMöbius正規化と点の移動、安定範囲の標識曲線変形チャート。1・2標点の商チャート、有限jet、局所標識、行列式移送は1.2が構成する。",
       "consumers": [
         "1.2",
@@ -180,8 +180,8 @@
         "3.3"
       ],
       "supplied": "Čech and sheaf cohomology, coherent terms, relative/Serre duality, degrees and curve Riemann–Roch at the stated hypotheses.",
-      "owned_here": "1.4 constructs C-linear differential-operator hypercohomology and the ramified cone; coherent underlying terms do not make its differential O-linear.",
-      "supplied_ja": "Čech・層コホモロジー、連接な項、相対・Serre双対、次数・曲線Riemann–Roch。ℂ線形微分作用素の全複体と分岐の錐は1.4が構成する。",
+      "owned_here": "1.4 constructs the constrained C-linear differential-operator deformation complex and ramified cone, its trace and duality comparisons, using C5.1 for the generic operator/principal-parts and GAGA theory. Coherent underlying terms do not make the differential O-linear.",
+      "supplied_ja": "Čech・層コホモロジー、連接な項、相対・Serre 双対、次数・曲線 Riemann–Roch。1.4 は制約付きの微分作用素変形複体・分岐錐・トレース・双対比較を構成し、一般の作用素・主部・GAGA は C5.1 を用いる。",
       "consumers": [
         "1.2",
         "1.4",
@@ -225,8 +225,8 @@
         "L2A–L2B"
       ],
       "supplied": "Finite locally free sheaves, duals/tensors/determinants, relative Spec and the geometric vector-bundle equivalence.",
-      "owned_here": "Meromorphic connections and analytification are 1.1–1.2.",
-      "supplied_ja": "有限局所自由層、双対・テンソル・行列式、相対Specと幾何学的ベクトル束との同値。接続と解析化は1.1–1.2が担う。",
+      "owned_here": "1.1 constructs decorated meromorphic connections using the shared ordinary/formal carriers; 1.2 applies the shared analytification to these objects.",
+      "supplied_ja": "有限局所自由層、双対・テンソル・行列式、相対 Spec と幾何学的ベクトル束との同値。1.1 は共通の通常／形式接続を用いて有理型付加構造を構成し、1.2 は共通の解析化をその対象へ適用する。",
       "consumers": [
         "1.1",
         "1.6",
@@ -235,20 +235,153 @@
       ]
     },
     {
-      "id": "analytic-coherence",
-      "title": "Coherent analytic module sheaves",
+      "id": "ordinary-connections",
+      "title": "Ordinary algebraic connections",
       "paths": [
-        "TauCetiRoadmap/RealAnalyticGeometry/README.md"
+        "TauCetiRoadmap/CrystallineCohomology/README.md"
       ],
       "sections": [
-        "R3.2 item 0"
+        "CR.1.3: ordinary connection carrier and operations"
       ],
-      "supplied": "Coherent analytic module-sheaf carriers and local calculus on the supplied analytic manifold structure sheaf.",
-      "owned_here": "1.2 constructs general complex analytic spaces, nilpotent quotients, analytification and GAGA comparisons.",
-      "supplied_ja": "与えられた解析多様体の構造層上の連接解析加群。冪零元を含む一般複素解析空間、解析化、GAGA比較は1.2が構成する。",
+      "supplied": "Ordinary form connections over arbitrary commutative base rings, extension, curvature, horizontal maps, base change and tensor/Hom/dual operations; no integrability condition in the carrier.",
+      "owned_here": "1.1 constructs the polar-bound and decoration conditions on the shared connection and proves determinant/End⁰ and localized comparisons, without a second ordinary connection carrier.",
+      "supplied_ja": "任意の可換基底環上の通常の接続・延長・曲率・水平射・基底変換・テンソル・Hom・双対。定義に可積分性は課さない。1.1 は共通の接続上で極の上界・付加構造・行列式・End⁰ と局所化の比較を構成する。",
+      "consumers": [
+        "1.1"
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 857,
+        "commit": "5231bad75352a6086d9952ff511636c8a8ddc6ac"
+      }
+    },
+    {
+      "id": "formal-connections",
+      "title": "Continuous formal connections and gauge groupoids",
+      "paths": [
+        "TauCetiRoadmap/FormalConnectionsOpers/README.md"
+      ],
+      "sections": [
+        "F1.1–F1.3",
+        "F2.1",
+        "F3.3–F3.4"
+      ],
+      "supplied": "Relative continuous differentials/completed tensors, formal-coordinate automorphisms and their pullback action, Tate coefficient descent, continuous/formal connection carrier and the left gauge groupoid; F3.4 stackification has its coefficient-cover essential-image criterion.",
+      "owned_here": "1.1 compares completions of the actual decorated bundles, verifies the extending-torsor criterion, and owns ramified decorated descent, Levelt–Turrittin and relative factorized models. Left gauge h corresponds to frame change g=h⁻¹. F8.1 is not a prerequisite for the time connection of 2.1–2.4.",
+      "supplied_ja": "相対連続微分・完備テンソル・形式座標自己同型と引戻し作用・Tate 係数の降下・形式接続・左ゲージ亜群。F3.4 の本質像には係数環の被覆条件を保持する。1.1 は実際の束の完備化、円板上への延長条件、分岐付加構造の降下、Levelt–Turrittin と相対因子化を担う。左作用 h とフレーム変換 g は h=g⁻¹ で比較する。F8.1 は 2.1–2.4 の時間接続の前提ではない。",
+      "consumers": [
+        "1.1"
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 1056,
+        "commit": "19aacea45eee77564f95118de8f55f72547a9fe0"
+      }
+    },
+    {
+      "id": "analytic-spaces",
+      "title": "Complex analytic spaces and analytification",
+      "paths": [
+        "TauCetiRoadmap/ComplexComparisonPartII/README.md"
+      ],
+      "sections": [
+        "C−1.1–C−1.2",
+        "C0.3–C0.5",
+        "C0.7",
+        "C5.2: ordinary connection comparison prefix"
+      ],
+      "supplied": "One analytic-space category retaining nilpotents, locally finite-type scheme and locally separated finite-type algebraic-space analytification, coherent/tensor/pullback and étale descent comparisons, proper-morphism comparison and the ordinary holomorphic-connection dictionary.",
+      "owned_here": "1.2 verifies these constructions on the actual curve/time/moduli presentations, extends the comparison to polar and decorated data, and constructs smooth analytic pullback and manifold comparisons with their actual topological/dimension hypotheses.",
+      "supplied_ja": "冪零元を保持する単一の解析空間の圏、局所有限型スキームと局所分離有限型代数空間の解析化、連接層・テンソル・引戻し・étale 降下・固有射・通常の正則接続の比較。1.2 は実際の曲線・時間・モジュライ表示への適用、極と付加構造、滑らかな解析的引戻し、多様体比較とその次元・位相条件を担う。",
       "consumers": [
         "1.2"
-      ]
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 848,
+        "commit": "fa9bfa5892bc24d60762bb1fbfc61f09f8be9043"
+      }
+    },
+    {
+      "id": "coherent-gaga",
+      "title": "Proper coherent GAGA and direct images",
+      "paths": [
+        "TauCetiRoadmap/ComplexComparisonPartII/README.md"
+      ],
+      "sections": [
+        "C1.9"
+      ],
+      "supplied": "Projective and proper coherent GAGA, all-degree proper direct-image comparison on finite-type complex schemes and proper-space comparison, with nilpotents and the stated canonical exchange maps.",
+      "owned_here": "1.2 checks the proper-family/coherence hypotheses and identifies maps on the actual curve, bundle and determinant constructions; 1.4 uses these comparisons through the supplied operator-complex theorem, preserving base-change hypotheses.",
+      "supplied_ja": "有限型複素スキーム・固有代数空間の射影的／固有連接 GAGA と全次数の固有直像比較。冪零元と標準交換写像を保持する。1.2 は曲線・束・行列式の構成で仮定と写像を確認し、1.4 は供給された作用素複体の定理を介して適用する。基底変換の仮定は保持する。",
+      "consumers": [
+        "1.2",
+        "1.4"
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 848,
+        "commit": "fa9bfa5892bc24d60762bb1fbfc61f09f8be9043"
+      }
+    },
+    {
+      "id": "differential-operators",
+      "title": "Differential operators, principal parts and analytic comparison",
+      "paths": [
+        "TauCetiRoadmap/ComplexComparisonPartII/README.md"
+      ],
+      "sections": [
+        "C5.1: shared algebraic operators/principal parts",
+        "C5.1: DifferentialOperatorAnalytification",
+        "C5.1: boundedOperatorHyperGaga"
+      ],
+      "supplied": "Characteristic-free all-order operator predicate/principal parts, universal jets, composition/localization/sheafification, analytification and absolute/relative proper bounded operator-complex GAGA at the stated hypotheses.",
+      "owned_here": "1.1 applies the first-order interface to meromorphic Leibniz operators; 1.2 compares decorated meromorphic data; 1.4 constructs the constrained deformation complex and ramified cone and verifies order, coherence, relative linearity, trace, duality and base-change comparisons. F2.2 symbols/Atiyah/PBW are not required.",
+      "supplied_ja": "標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。F2.2 の symbol・Atiyah・PBW は前提としない。",
+      "consumers": [
+        "1.1",
+        "1.2",
+        "1.4"
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 848,
+        "commit": "fa9bfa5892bc24d60762bb1fbfc61f09f8be9043"
+      },
+      "consumer_sections": {
+        "1.1": [
+          "C5.1: shared algebraic operators/principal parts only"
+        ],
+        "1.2": [
+          "C5.1: DifferentialOperatorAnalytification"
+        ],
+        "1.4": [
+          "C5.1: shared algebraic operators/principal parts",
+          "C5.1: DifferentialOperatorAnalytification",
+          "C5.1: boundedOperatorHyperGaga"
+        ]
+      }
+    },
+    {
+      "id": "algebraic-manifolds",
+      "title": "Fixed-model manifold realization of smooth schemes",
+      "paths": [
+        "TauCetiRoadmap/FormalConnectionsOpers/README.md"
+      ],
+      "sections": [
+        "F2.4: fixed-model analytification and sheaf/tangent comparisons"
+      ],
+      "supplied": "Fixed-model complex manifold realization for separated smooth finite-type complex schemes of constant differential dimension, second countability, dimension and sheaf/tangent/étale comparisons with the same analytification.",
+      "owned_here": "1.2 applies this on scheme charts and descends the actual moduli comparisons via the supplied algebraic-space analytification; arbitrary smooth analytic bases require their analytic-chart comparison and verified Hausdorff/second-countable/dimension hypotheses.",
+      "supplied_ja": "微分次元一定の有限型分離滑らか複素スキームの固定モデル多様体、第二可算性、次元・構造層・接束・étale の比較。1.2 はスキームのチャートで適用し、供給された代数空間の解析化を介して実際のモジュライ比較を降下する。任意の滑らかな解析基底では解析チャートによる比較と Hausdorff・第二可算・次元条件を確認する。",
+      "consumers": [
+        "1.2"
+      ],
+      "source_revision": {
+        "repository": "TauCetiProject/TauCetiRoadmap",
+        "pull_request": 1056,
+        "commit": "19aacea45eee77564f95118de8f55f72547a9fe0"
+      }
     },
     {
       "id": "proper-cohomology",
@@ -469,8 +602,8 @@
         "IsProperMap"
       ],
       "supplied": "Topological proper maps and the compact-preimage and base-change properties under their actual topological hypotheses.",
-      "owned_here": "0.4 proves complete-lift transfer. 1.2 proves analytic/algebraic comparison; 4.4 proves properness of the actual RH family.",
-      "supplied_ja": "位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長は0.4、解析比較は1.2、RH族の固有性は4.4が証明する。",
+      "owned_here": "0.4 proves complete-lift transfer. 1.2 applies the supplied analytic/algebraic comparison to the actual families; 4.4 proves properness of the actual RH family.",
+      "supplied_ja": "位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長は 0.4、実際の族への解析比較の適用は 1.2、RH 族の固有性は 4.4 が担う。",
       "consumers": [
         "4.4"
       ]
@@ -489,22 +622,6 @@
       "supplied_ja": "有限次元の実可積分グラフ場から、明記した正則性の下で、滑らかな逆写像と水平微分を持つ局所積OpenPartialHomeomorphを得る。0.5が沈め込み座標への移送、曲率から可積分性、貼合せとホモトピー不変性を証明し、正則版は0.3を用いる。",
       "consumers": [
         "0.5"
-      ]
-    },
-    {
-      "id": "chow",
-      "title": "Chow lemma for the proper GAGA proof",
-      "paths": [
-        "TauCetiRoadmap/SchemeAndStackFoundations/README.md"
-      ],
-      "sections": [
-        "4.12, chow_lemma subtarget only; prerequisites 0.9 and 4.11"
-      ],
-      "supplied": "For a separated finite-type morphism to a Noetherian base, a projective modification with quasi-projective source over that base; the source is projective when the original morphism is proper.",
-      "owned_here": "1.2 uses this subtarget with coherent cohomology and proper direct images for the proper GAGA argument. The separate flattening and StableReduction branch of 4.12 is not a prerequisite.",
-      "supplied_ja": "Noetherian基底への有限型分離射に対し、基底上準射影的となる射影的改変を供給し、元の射が固有なら改変後は基底上射影的となる。1.2はこの小目標と連接コホモロジー・固有直像をGAGAの証明に用い、4.12の別の平坦化・StableReductionの分岐は前提にしない。",
-      "consumers": [
-        "1.2"
       ]
     }
   ]

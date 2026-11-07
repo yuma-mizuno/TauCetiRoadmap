@@ -1,0 +1,114 @@
+{
+  "schema": "tauceti-roadmap/ownership-boundary-revision-v1",
+  "baseline_commit": "f1e42d67f322d69d84a5b4ff9e4eb72307abfec3",
+  "branch": "codex/painleve-roadmap-working",
+  "method": "Read pinned supplier contracts, assign common constructions to their stated owners and retain the decorated applications and comparison proofs in the existing targets; verify preservation and synchronization against the committed baseline.",
+  "meaning": "This records roadmap specifications and a local ownership revision, not implementation completion, full mathematical proof validation or agreement from other PR authors.",
+  "suppliers": [
+    {
+      "pull_request": 857,
+      "roadmap": "CrystallineCohomology",
+      "commit": "5231bad75352a6086d9952ff511636c8a8ddc6ac",
+      "sections": [
+        "CR.1.3"
+      ]
+    },
+    {
+      "pull_request": 848,
+      "roadmap": "ComplexComparisonPartII",
+      "commit": "fa9bfa5892bc24d60762bb1fbfc61f09f8be9043",
+      "sections": [
+        "C−1.1–C−1.2",
+        "C0.3–C0.5",
+        "C0.7",
+        "C1.9",
+        "C5.1",
+        "C5.2 connection comparison prefix"
+      ]
+    },
+    {
+      "pull_request": 1056,
+      "roadmap": "FormalConnectionsOpers",
+      "commit": "19aacea45eee77564f95118de8f55f72547a9fe0",
+      "sections": [
+        "F1.1–F1.3",
+        "F2.1",
+        "F2.4 fixed-model comparison",
+        "F3.3–F3.4",
+        "F8.1 for scope distinction only"
+      ]
+    }
+  ],
+  "local_ownership": [
+    {
+      "target": "1.1",
+      "retained": "Decorated meromorphic connections, polar bounds and admission of operations; comparison with shared ordinary/formal connections; extending formal GL_r torsors; matrix convention h=g⁻¹; ramified decorated descent; general finite-rank Levelt–Turrittin and relative factorized models."
+    },
+    {
+      "target": "1.2",
+      "retained": "Admitted curve/time problem and determinant transport; application of shared analytification and GAGA to actual presentations; polar/flag/factorization/determinant comparison; manifold realization on the actual smooth moduli and analytic bases, verifying topology and dimension."
+    },
+    {
+      "target": "1.4",
+      "retained": "Constrained deformation complex and ramified three-term cone; order/coherence and relative base-linearity proofs; trace/duality and canonical operator-complex comparison on the actual objects."
+    },
+    {
+      "target": "2.1",
+      "retained": "Strong total extensions and nonlinear horizontal splitting as time/irregular coefficients vary, independently of F8.1 formal oper isomorphisms."
+    }
+  ],
+  "preservation": {
+    "targets": 57,
+    "general_targets": 21,
+    "application_targets": 36,
+    "internal_edges": 243,
+    "api_laws": 154,
+    "diagnostics": 181,
+    "supporting_constructions": 27,
+    "all_target_main_statements_hypotheses_api_and_diagnostics_unchanged": true,
+    "all_internal_dependencies_unchanged": true,
+    "protected_files_unchanged": [
+      "Suggested.lean",
+      "metadata.toml",
+      "design/reuse_graph.json",
+      "design/reuse_registry.json",
+      "sources.toml"
+    ],
+    "submission_commit_unchanged": "8b189c883fcdf1ce901b2fc39e2126cb28611103"
+  },
+  "documents": {
+    "README.md": {
+      "sha256": "218dd52348ffbadd78b5a086edbc7fe1e15ea46a7b49dd92050f7860d6bd7f70",
+      "dependency_contracts": 30,
+      "unchanged_headings": true,
+      "unchanged_unrelated_prose": true,
+      "plan_paragraphs_and_dependency_anchors_synchronized": true
+    },
+    "README.ja.md": {
+      "sha256": "a2d15418cc3361f0481268ab50d8f112864a7910ae7048ebaf6eab1efc04017c",
+      "dependency_contracts": 30,
+      "unchanged_headings": true,
+      "unchanged_unrelated_prose": true,
+      "plan_paragraphs_and_dependency_anchors_synchronized": true
+    }
+  },
+  "new_contract_consumer_prefixes": {
+    "1.1": [
+      "C5.1: shared algebraic operators/principal parts only"
+    ],
+    "1.2": [
+      "C5.1: DifferentialOperatorAnalytification"
+    ],
+    "1.4": [
+      "C5.1: shared algebraic operators/principal parts",
+      "C5.1: DifferentialOperatorAnalytification",
+      "C5.1: boundedOperatorHyperGaga"
+    ]
+  },
+  "repository_checks": {
+    "check_roadmap_topics": "173 roadmaps valid",
+    "git_diff_check": "passed"
+  },
+  "lean_build": "Not rerun; Suggested.lean unchanged. Existing missing-dependency build limitation is not resolved by this prose revision.",
+  "external_writes": "No comment, review or message to other PR authors."
+}

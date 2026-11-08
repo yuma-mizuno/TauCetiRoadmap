@@ -13,7 +13,7 @@ locator_scheme = "theorem"
 locator = "Definitions 2.1–2.8; Remark 2.9; Theorems 5.1, 7.5, 8.1, 9.7 and 11.6; equation (6.9); Propositions 3.3, 6.3, 7.2, 8.2–8.3, 10.7 and 10.10; Definitions 10.1 and 11.4; Corollaries 4.3–4.4, 9.11 and 11.8; equations (8.2), (11.2) and (11.5)"
 url = "https://sigma-journal.com/2023/013/"
 version_note = "Publisher PDF, final form 23 February 2023, published 22 March 2023; 72 PDF pages. Locators use the article numbering and its generic factorized ramified hypotheses. Global RH properness for the admitted classical models is the theorem of roadmap §4.4."
-cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4"]
+cited_for = ["3.1", "3.2", "3.3", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "4.1", "4.3", "4.4", "4.5", "4.6", "5.4", "0.6", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4"]
 
 [[source]]
 id = "IS12"
@@ -27,7 +27,7 @@ locator_scheme = "theorem"
 locator = "Theorem 5.1; Remark 6.3"
 url = "https://arxiv.org/abs/1203.0084v3"
 version_note = "The key IS12 follows the 2012 preprint; journal publication is 2013. Cited version: arXiv v3, 22 November 2012, 40 PDF pages. Locators use that version, with its unramified generic-parameter hypotheses and Remark 6.3."
-cited_for = ["4.3", "4.4"]
+cited_for = ["4.3", "4.6"]
 
 [[source]]
 id = "HEU10"
@@ -40,7 +40,7 @@ locator_scheme = "theorem"
 locator = "Theorem 1.1; Definitions 2.3 and 2.10; §2"
 url = "https://www.numdam.org/item/AIF_2010__60_2_515_0/"
 version_note = "NUMDAM/CEDRAM copy of the published article; 36 PDF pages including the repository cover. Printed page numbers are 515–549. The source's trace-free rank-two setting and its universal deformation base are retained."
-cited_for = ["3.2", "3.12", "4.4"]
+cited_for = ["3.2", "3.12"]
 
 [[source]]
 id = "VDPS09"
@@ -54,7 +54,7 @@ locator_scheme = "section"
 locator = "§2.2, Table 1, preprint pp. 18–19; §3; §4.1 and §§4.3–4.11; equations (12), (17) and (22)"
 url = "https://arxiv.org/abs/0902.1702v5"
 version_note = "Cited version: arXiv v5, 12 November 2009, 44 PDF pages. Section and page locators use v5. Roadmap §7.2 fixes the Hamiltonian-form sign and PV coefficient by comparison with the displayed vector fields. The full moduli–surface comparison is the theorem of roadmap §5.2."
-cited_for = ["3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "0.7", "0.8"]
+cited_for = ["4.4", "3.3", "3.4", "3.8", "4.2", "4.8", "5.2", "7.1", "7.2", "7.4", "7.5", "0.7", "0.8"]
 
 [[source]]
 id = "IIS06"
@@ -268,7 +268,7 @@ arxiv = "math/0602004v2"
 locator_scheme = "theorem"
 locator = "Theorems 2.1–2.2, preprint pp. 5–6; Definition 4.3 (set-valued functor modulo base-line twists); regular-singular reconstruction in §1; Proposition 5.3; §6, Lemma 6.1, Propositions 6.1–6.2 and the proof of Theorem 2.2"
 url = "https://arxiv.org/abs/math/0602004v2"
-version_note = "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is compared with the four-logarithmic specialization of the family functor of §1.3. Section 6 supplies logarithmic extension, stable-replacement and compactness arguments for the lemmas of §4.4. Proposition 5.3 and the proof of Theorem 2.2 supply the genus-zero source irreducibility and character-locus geometry for its fiberwise conclusions. Theorem 2.2 is compared with the resulting genus-zero rank-two four-logarithmic theorem, retaining the exponent fiber product, generic weights with stable=semistable, and 2·4−2·2−2=2>0. Determinant-relative and fixed-determinant families use the restriction comparison of §4.3."
+version_note = "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is compared with the four-logarithmic specialization of the family functor of §1.3. Proposition 5.3 and the proof of Theorem 2.2 supply the genus-zero source irreducibility and character-locus geometry for its fiberwise conclusions. Theorem 2.2 is compared with the resulting genus-zero rank-two four-logarithmic theorem, retaining the exponent fiber product, generic weights with stable=semistable, and 2·4−2·2−2=2>0. Determinant-relative and fixed-determinant families use the restriction comparison of §4.3."
 cited_for = ["1.3", "4.2", "4.3", "4.4"]
 
 [[source]]
@@ -384,3 +384,15 @@ locator = "§2.2, equations (2.18)–(2.30), specialized to ℏ = 1; the precise
 url = "https://arxiv.org/abs/1601.02517v7"
 version_note = "Cited version: arXiv v7, 9 October 2017. Roadmap §7.4 fixes the eight-model Hamiltonian and sigma inventory and derives the identities from the Hamilton vector fields, with PVI coefficient (Σ−θ∞)(Σ+θ∞−2)/4. The inverse comparison has the local nondegeneracy hypotheses and singular-branch exceptions stated in §7.4."
 cited_for = ["7.4"]
+
+[[source]]
+id = "BV89"
+authors = "D. G. Babbitt and V. S. Varadarajan"
+title = "Local moduli for meromorphic differential equations"
+year = 1989
+venue = "Astérisque 169–170 (1989)"
+locator_scheme = "theorem"
+locator = "Part I, Theorem 4.5.1"
+url = "https://numdam.org/item/AST_1989__169-170__1_0/"
+version_note = "Local Malgrange–Sibuya construction. Chartwise parameter dependence and the comparison with the prescribed decorations are proved in §4.1."
+cited_for = ["4.1"]

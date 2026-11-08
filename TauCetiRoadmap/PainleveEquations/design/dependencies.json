@@ -143,11 +143,30 @@
         "1.17"
       ],
       "supplied": "Categorical/geometric quotient definitions, Artin bootstrap and the stated finite-group projective quotients.",
-      "owned_here": "1.3 constructs reductive invariant theory. 4.2 constructs the classical representation and character quotients, wild framing groupoids and Stokes quotients.",
+      "owned_here": "The reductive GIT contract supplies general invariant theory. 4.2 constructs the classical representation and character quotients, wild framing groupoids and Stokes quotients.",
       "supplied_ja": "圏論的・幾何学的商の定義、Artinのbootstrap、および指定された有限群の射影商。不変式論は1.3で構成し、古典的な表現・指標商、wildなフレーム亜群とStokes商は4.2で構成する。",
       "consumers": [
         "1.3",
         "4.2"
+      ]
+    },
+    {
+      "id": "reductive-git",
+      "title": "Reductive GIT for the connection and Stokes framing groups",
+      "paths": [
+        "TauCetiRoadmap/AlgebraicModuliForArithmeticGeometry/README.md"
+      ],
+      "sections": [
+        "gap:reductive-connection-git"
+      ],
+      "supplied": "Finite generation and affine reductive quotients, linearized relatively ample line bundles, relative invariant Proj and stable geometric quotients with Hilbert–Mumford over ℂ.",
+      "owned_here": "Sections 1.3 and 4.2–4.4 construct the actual framed spaces, actions, stability comparisons and applications of the quotient theorems.",
+      "supplied_ja": "複素簡約群の有限生成, アフィン商, 相対豊富な線形化, 相対不変 Proj, 安定商および Hilbert–Mumford 判定法.",
+      "consumers": [
+        "1.3",
+        "4.2",
+        "4.3",
+        "4.4"
       ]
     },
     {
@@ -164,7 +183,6 @@
       "supplied_ja": "Noetherian・射影的なQuot/HilbertとHom/Isom空間。接続の有界性・方程式・安定性は1.3、解析的引戻しは1.2が担う。",
       "consumers": [
         "1.3",
-        "4.4",
         "5.2",
         "5.6"
       ]

@@ -4,8 +4,6 @@ Construct differential Painlevé equations as flat nonlinear connections on modu
 
 The roadmap contains 55 construction and theorem targets in eight layers: 19 targets of reusable general theory and 36 targets for the classical Painlevé application.
 
-[日本語版](README.ja.md) · [Structured mathematical plan](design/plan.json) · [External dependency contracts](design/dependencies.json)
-
 ## Structure
 
 Each layer develops one mathematical construction or theorem package. General results retain their own hypotheses, conclusions and proof ownership when placed alongside an application.
@@ -40,12 +38,12 @@ External roadmaps supply the results listed in the dependency contracts. Each co
 
 ## Addresses and conventions
 
-Layers are numbered 0–7, and targets are numbered consecutively within each layer, as in 0.1 and 0.2. Internal addresses have the form target:0.1. Literature and supplier sections use their source numbering. The *Needs* lists specify proof prerequisites; [design/reuse_registry.json](design/reuse_registry.json) records the general-theory and application groups. Each target states its hypotheses, constructions and comparison laws.
+Layers are numbered 0–7, and targets are numbered consecutively within each layer, as in 0.1 and 0.2. Literature and supplier sections use their source numbering. The *Needs* lists specify proof prerequisites. Each target states its hypotheses, constructions and comparison laws.
 
 <a id="external-dependencies"></a>
 ## External dependency contracts
 
-Roadmap references specify constructions and theorems with their hypotheses; library references specify declarations and APIs. The table identifies the supplied results and the constructions assigned to this roadmap. Detailed records are in [design/dependencies.json](design/dependencies.json).
+Roadmap references specify constructions and theorems with their hypotheses. Library references specify declarations and APIs. The table identifies the supplied results and the constructions assigned to this roadmap.
 
 | Contract | Exact supplier | Scope and local extension |
 |---|---|---|
@@ -1693,7 +1691,7 @@ In the PII chart of §7.5 the curve p = 0 is invariant at α = −1/2. Its Ricca
 
 Construct the holomorphic determinant line and canonical section for general index-zero Fredholm families in §6.1, then apply this construction to the marked Painlevé RHP families in §§6.2–6.5. For these families construct the operator realization, prove its index and holomorphic dependence, and establish the line/frame comparisons and the stated JMU/Hamiltonian identities. For a trace-class realization with its determinant comparison, use the generic trace-class determinant of RandomMatrices §8.3.
 
-Bibliographic information and source locators are listed in [sources.toml](sources.toml). The construction models are MAL04 and BERT17; the JMU comparison uses BERT10 with the corrections in BERT16 at the precise loci stated below. Real orientation lines, Toeplitz index results and trace-class determinants retain their distinct scopes.
+Bibliographic information and source locators are listed in the [references](#references). The construction models are MAL04 and BERT17. The JMU comparison uses BERT10 with the corrections in BERT16 at the precise loci stated below. Real orientation lines, Toeplitz index results and trace-class determinants retain their distinct scopes.
 
 <a id="target-6-1"></a>
 ### 6.1 Holomorphic determinant lines for index-zero Fredholm families
@@ -2117,6 +2115,8 @@ Construct the rational and classical-function families in the orbits of the prov
 The scalar equation may have an apparent denominator at a regular geometric initial point. A denominator-cleared polynomial identity may also admit functions absent from the original equation. Use first-jet charts and observer overlap maps to distinguish geometric continuation from these extra scalar solutions and to compare solution germs on their actual domains.
 
 ### References
+
+<a id="references"></a>
 
 - **I13.** Michi-aki Inaba. *[Moduli of parabolic connections on a curve and Riemann–Hilbert correspondence](https://arxiv.org/abs/math/0602004v2)*. Journal of Algebraic Geometry 22 (2013), 407–480. Cited preprint: arXiv math/0602004v2, 6 June 2012; Theorems 2.1–2.2, Definition 4.3, Proposition 5.3, and §6, Lemma 6.1, Propositions 6.1–6.2 and the proof of Theorem 2.2. The logarithmic extension, stable-replacement and compactness arguments supply the corresponding lemmas of §4.4; Proposition 5.3 and the proof of Theorem 2.2 supply its fiberwise irreducibility and character-locus geometry. The four-logarithmic specialization retains the exponent fiber product and the exact numerical and stability hypotheses.
 

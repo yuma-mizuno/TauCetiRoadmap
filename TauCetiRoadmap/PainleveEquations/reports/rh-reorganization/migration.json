@@ -1,0 +1,165 @@
+{
+  "baseline_commit": "5377bc5e0288937e1fbde0d6bd4a50748720041e",
+  "removed_targets": [
+    "2.5",
+    "2.6"
+  ],
+  "revised_targets": [
+    "1.3",
+    "2.4",
+    "3.8",
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4"
+  ],
+  "scope": {
+    "general": "Retain admitted arbitrary-genus/rank/polar-degree connection moduli and strong isomonodromic construction in1.1–2.4.",
+    "riemann_hilbert": "Require full classical rank-two genus-zero structural-degree-four RH comparisons inLayer4, with the I13 use specialized to four logarithmic poles.",
+    "local_monodromy": "Construct at each logarithmic pole in3.8 before apparent loci, with noLayer4 prerequisite."
+  },
+  "local_monodromy_delta": {
+    "added": [
+      "0.3",
+      "1.2"
+    ],
+    "removed": [
+      "2.5"
+    ],
+    "retained": [
+      "3.1",
+      "3.5",
+      "3.6",
+      "3.7"
+    ]
+  },
+  "proof_migration": [
+    {
+      "from": "2.5 supporting local construction",
+      "to": "3.8 and4.1",
+      "retained": "3.8 actual punctured-disk monodromy;4.1 local reconstruction with exponent lifts, lattices, flags, resonance/repetition/integer shifts, family dependence/descent and all permitted global bundle types."
+    },
+    {
+      "from": "2.5 character-family construction",
+      "to": "4.2",
+      "specialized": "Rank-two genus-zero structural-degree-four classical profiles; PVI auxiliary unfixed GL2 four-point target with complete lambda fiber product. Quotient/GIT scope, singular Hausdorff locally compact target, marking and complete fixed-lambda transport retained."
+    },
+    {
+      "from": "2.5 Q_log and I13 Definition4.3 comparison",
+      "to": "4.3",
+      "specialized": "Q_PVI is unfixed determinant degree-d rank-two four-logarithmic-point actual families modulo base-line twists. Compare on locally Noetherian bases, fppf/analytic sheafifications, scalar rigidification and coarse moduli separately. Fixed determinant mu2 and square-trivialized twists remain separate."
+    },
+    {
+      "from": "2.5 full RH map and all-point semiconjugacy",
+      "to": "4.3",
+      "retained": "Full stable sources, allowed reducible/resonant/apparent and bundle strata; actual maps and analytic/presentation/base-change comparisons. Strong splitting from2.4/3.9, local strong representatives2.2, existence0.3 independent of RH inverse."
+    },
+    {
+      "from": "2.5 determinant compatibility",
+      "to": "4.3",
+      "retained": "Construct rank-one RH map via1.5/4.1 and commutative determinant/RH square on same time/exponent base; certify determinant-character section via1.2."
+    },
+    {
+      "from": "2.6 full-family I13 properness",
+      "to": "4.4",
+      "specialized": "Only g=0,r=2,n=4 with2*4-2*2-2=2>0, generic stable=semistable weights, degree/residue equation and full lambda target. Prove total-family properness and analytic-base-change preservation; retain source surjectivity/bimeromorphicity for this auxiliary family."
+    },
+    {
+      "from": "2.6 rank-one determinant restriction",
+      "to": "4.4",
+      "retained": "Prove rank-one RH isomorphism with prescribed trace residues/lattice, both sides pulled back to full lambda base. Prove Gm/mu2 gerbe comparison and fixed-determinant coarse fiber-product identity, then proper base change."
+    },
+    {
+      "from": "2.5-2.6 continuation inputs",
+      "to": "4.2-4.4 then4.5-4.6",
+      "retained": "Complete target transport, all-point semiconjugacy and properness feed0.4 via4.6; local horizontal existence uses0.3 independently. Arbitrary genus/rank continuation is not exported."
+    },
+    {
+      "from": "2.5-2.6 generality and examples",
+      "to": "out of mandatory RH scope",
+      "removed": "Global RH/properness required for arbitrary(g,r,n), genus-one/higher-genus numerical gates, g0r2n5 andn3 examples as global RH applications. Their underlying general geometric constructions1.1-2.4 remain."
+    }
+  ],
+  "determinant_squares": {
+    "commutative": "det_B o RH_log^un = RH1 o det_dR. The overall determinant/RH square is not declared Cartesian.",
+    "cartesian": "M_L^det,an is isomorphic to (M_log^un)^an fiber-product over R_log^un with R_det(L), the determinant-character section restriction. Horizontal arrows are the fixed-determinant inclusions.",
+    "reason": "Rank-one RH being an isomorphism does not make the whole rank-two determinant/RH square Cartesian; that would force rank-two RH globally to be an isomorphism."
+  },
+  "preserved_classical_contracts": [
+    "4.3 PVI inverse over fiberwise smooth character loci via direct IIS06 comparison",
+    "4.3 other-profile irreducible/nonresonant inverse domains and local uniqueness/lattice/deck reconstruction",
+    "4.4 irregular-family compactness and stable replacement on admitted input class",
+    "4.4 independently defined full target R_adm=R and separately quantified all-component surjectivity",
+    "4.2 decorated forgetful -> ordinary representation/Stokes groupoid -> affine quotient",
+    "4.5-4.9 unchanged"
+  ],
+  "source_consumer_changes": {
+    "I13": {
+      "removed": [
+        "2.5",
+        "2.6",
+        "3.8"
+      ],
+      "retained": [
+        "1.3",
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "scope": "1.3 only points to the PVI comparison; 4.2 constructs the four-point exponent target, 4.3 proves the specialized Definition4.3 functor/map comparison, and 4.4 applies Theorem2.2 exactly at g=0,r=2,n=4."
+    },
+    "DEL70": {
+      "removed": [
+        "2.5",
+        "2.6"
+      ],
+      "added": [
+        "3.8",
+        "4.1"
+      ],
+      "retained": [
+        "1.2",
+        "1.4"
+      ],
+      "transitive_consumers": [
+        "4.3",
+        "4.4"
+      ],
+      "scope": "3.8 local spectral comparison is foundations-owned. 4.1 owns prescribed logarithmic lattices/flags, resonant comparisons, determinant tensor shifts and algebraic/analytic reconstruction. 4.3 and 4.4 use the resulting comparison."
+    },
+    "IIS06": {
+      "unchanged": [
+        "4.3",
+        "4.4"
+      ],
+      "scope": "4.3 compares directly with the fixed-determinant PVI functor and markings for the inverse over fiberwise smooth character loci; no4.4 prerequisite."
+    },
+    "I23": {
+      "unchanged": [
+        "4.1",
+        "4.3",
+        "4.4"
+      ],
+      "scope": "Local/ramified and geometric-flow scope unchanged; no attribution of all-classical properness or surjectivity to I23."
+    },
+    "IS12": {
+      "unchanged": [
+        "4.3",
+        "4.4"
+      ],
+      "scope": "Generic unramified scope unchanged."
+    }
+  },
+  "direct_external_consumers_added": {
+    "complex": [
+      "3.8"
+    ],
+    "covers": [
+      "3.8"
+    ],
+    "curves": [
+      "4.2"
+    ]
+  },
+  "historical_reports": "Existing reports and receipts remain bound to their own baseline snapshots."
+}

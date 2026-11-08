@@ -268,8 +268,8 @@ arxiv = "math/0602004v2"
 locator_scheme = "theorem"
 locator = "Theorems 2.1–2.2, preprint pp. 5–6; Definition 4.3 (set-valued functor modulo base-line twists); regular-singular reconstruction in §1; properness proof in §6"
 url = "https://arxiv.org/abs/math/0602004v2"
-version_note = "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is the set-valued functor modulo base-line twists. Theorem 2.2 retains exponent parameters through a fiber product and has the stated genus, rank, pole and generic-weight hypotheses. The fixed-determinant specialization uses the Cartesian comparison of roadmap §2.6."
-cited_for = ["1.3", "2.5", "2.6", "3.8", "4.2", "4.3", "4.4"]
+version_note = "Cited version: arXiv math/0602004v2, 6 June 2012, 45 pages. Locators use that preprint. Definition 4.3 is the set-valued functor modulo base-line twists. Roadmap §§4.3–4.4 use its rank-two genus-zero four-logarithmic-point specialization. Theorem 2.2 retains exponent parameters through a fiber product and has generic weights with stable=semistable; its numerical condition here is 2·4−2·2−2=2>0. The fixed-determinant family is obtained through the Cartesian restriction square proved in §4.4."
+cited_for = ["1.3", "4.2", "4.3", "4.4"]
 
 [[source]]
 id = "SGA1XII"
@@ -279,7 +279,7 @@ url = "https://arxiv.org/pdf/math/0206203v2"
 locator_scheme = "section"
 locator = "XII Theorem and Definition 1.1 (analytification); §2 (coherent sheaf comparison); §3.1 (morphism properties, including properness); Theorem 4.2 (proper relative direct-image comparison); Corollary 4.3 (cohomology); Theorem 4.4 (proper coherent GAGA)"
 version_note = "Complex schemes locally of finite type and analytic spaces retaining nilpotents. Proper f gives coherent higher-direct-image comparison. Proper absolute X gives the coherent-category equivalence. The proof begins with projective space and passes to proper schemes by Chow and dévissage."
-cited_for = ["1.2", "1.3", "1.4", "2.5"]
+cited_for = ["1.2", "1.3", "1.4", "4.3"]
 
 [[source]]
 id = "SERREGAGA"
@@ -323,8 +323,8 @@ year = 1970
 url = "https://publications.ias.edu/sites/default/files/Number9.pdf"
 locator_scheme = "section"
 locator = "II §5, Proposition5.4 (extension for a section of ℂ→ℂ/ℤ); Corollary5.6 (nonresonant monodromy/residue comparison); Theorem5.9 (regular-singular algebraic/analytic correspondence); II §6.6 (principal-parts analytification of differential operators and proper hypercohomology comparison), PDF p.103 / printed p.101"
-version_note = "II5.4 constructs a chosen logarithmic extension, which is not in general tensor-compatible; roadmap §§2.5–2.6 construct the comparisons for prescribed resonant lattices, flags, families and determinants. II6.6 gives the bounded differential-operator-complex comparison by analytifying the O-linear principal-parts presentation and applying proper GAGA to the E1 terms of its hypercohomology spectral sequence."
-cited_for = ["1.2", "1.4", "2.5", "2.6"]
+version_note = "II5.4 constructs a chosen logarithmic extension, which is not in general tensor-compatible. Roadmap §3.8 constructs local logarithmic monodromy, and §§4.1–4.4 construct the classical comparisons for prescribed resonant lattices, flags, families and determinants. II6.6 gives the bounded differential-operator-complex comparison by analytifying the O-linear principal-parts presentation and applying proper GAGA to the E1 terms of its hypercohomology spectral sequence."
+cited_for = ["1.2", "1.4", "3.8", "4.1"]
 
 [[source]]
 id = "ACV03"
@@ -335,7 +335,7 @@ url = "https://arxiv.org/pdf/math/0106211"
 locator_scheme = "section"
 locator = "§5.1, Theorem5.1.5 and construction; Stacks Project tag04V2 for hypotheses"
 version_note = "Rigidification by a flat finitely presented separated group scheme embedded functorially as a central subgroup of inertia; the cases used here are Gm and μr over ℂ. Roadmap §1.3 identifies the rigidification with the connection GIT coarse family."
-cited_for = ["1.3", "2.6"]
+cited_for = ["1.3", "4.3", "4.4"]
 
 [[source]]
 id = "PICREL"
@@ -356,7 +356,7 @@ url = "https://link.springer.com/book/9783540569633"
 locator_scheme = "section"
 locator = "Chapter1, reductive invariant theory and construction of quotients; coupled to I23 Theorem5.1 and its actual framed filtered-connection construction"
 version_note = "Primary proof source for GIT. Roadmap §1.3 constructs the moduli linearization, proves the Hilbert–Mumford stability comparison and identifies the resulting coarse family."
-cited_for = ["1.3", "2.5", "4.2"]
+cited_for = ["1.3", "4.2"]
 
 [[source]]
 id = "IMS18"

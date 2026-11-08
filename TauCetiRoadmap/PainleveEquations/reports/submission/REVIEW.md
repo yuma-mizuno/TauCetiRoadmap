@@ -1,10 +1,16 @@
 # Submission review and verification record
 
-The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 57 targets in Layers 0–7. The timeless revision is recorded first; the remaining sections retain the history of API and scope changes, mathematical reviews, build receipts and browser inspections.
+The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 55 targets in Layers 0–7: 19 framework targets and 36 classical Painlevé application targets. The classical RH scope revision is recorded first; the remaining sections retain the history of API and scope changes, mathematical reviews, build receipts and browser inspections.
+
+## Classical Riemann–Hilbert scope revision
+
+The [RH scope review](../rh-reorganization/REVIEW.md) records the bilingual reorganization against `5377bc5e0288937e1fbde0d6bd4a50748720041e`. Layer 2 contains the general isomonodromic-connection construction in 2.1–2.4; the classical RH maps, their complete target transport and properness are owned in Layer 4. The separate general logarithmic RH targets 2.5–2.6 are removed, with the PVI comparisons specialized and integrated into 4.1–4.4. Section 3.8 constructs local logarithmic monodromy before its apparent loci.
+
+The [migration record](../rh-reorganization/migration.json) identifies the retained proof responsibilities and scope restrictions. The [validation record](../rh-reorganization/validation.json) binds 1,944 passing checks, 0 failures and 0 skips to their inputs. The plan contains 55 targets, 171 API items, 195 diagnostics, 249 internal prerequisite edges and 23 supporting-construction bullets. All 216 English and 204 Japanese TeX payloads are retained in order. The other 48 retained numbered sections, representative Lean file, topic metadata and historical validation programs are unchanged. No full build or new remote-browser inspection is claimed.
 
 ## Timeless specification revision
 
-The [timeless review](../timeless/REVIEW.md) records a complete bilingual review and rewrite against `2441b2fe3a68efbb628db17eae5f282d35cbb8bd`. It preserves all 57 targets, 169 API items, 197 diagnostics, 251 internal edges and 27 supporting constructions while synchronizing the prose, source scopes and structured contracts. It also corrects proof ownership and the precision issues listed in that report. The [validation record](../timeless/validation.json) contains 1,382 passing checks and 0 failures, with input hashes for this revision. All 216 English and 204 Japanese TeX payloads are unchanged in order, and the Lean noncomment bytes are unchanged.
+The [timeless review](../timeless/REVIEW.md), committed as `5377bc5e0288937e1fbde0d6bd4a50748720041e`, records a complete bilingual review and rewrite against `2441b2fe3a68efbb628db17eae5f282d35cbb8bd`. It preserves all 57 targets, 169 API items, 197 diagnostics, 251 internal edges and 27 supporting constructions while synchronizing the prose, source scopes and structured contracts. It also corrects proof ownership and the precision issues listed in that report. The [validation record](../timeless/validation.json) contains 1,382 passing checks and 0 failures, with input hashes for this revision. All 216 English and 204 Japanese TeX payloads are unchanged in order, and the Lean noncomment bytes are unchanged.
 
 The revised source registry contains bibliographic versions and mathematical scope. [source-note-history.json](../timeless/source-note-history.json) preserves the original retrieval history and verification limits of the seventeen edited notes. No new full build or remote rendering inspection is claimed.
 

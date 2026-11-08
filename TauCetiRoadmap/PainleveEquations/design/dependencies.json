@@ -16,8 +16,8 @@
         "K7.1"
       ],
       "supplied": "Complex inverse/implicit-function and tangent calculus; holomorphic germs and one-variable meromorphic germs; holomorphic bundle/sheaf equivalence and nonsingular flat connections/local systems; projective charts.",
-      "owned_here": "The nonlinear-connection theory owns nonlinear connections, holomorphic ODEs, transport and observations. 1.1–1.2 own the meromorphic/decorated applications of the shared connection and analytification interfaces; K4 supplies the nonsingular holomorphic comparison.",
-      "supplied_ja": "複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則 ODE は一般理論が担い、1.1–1.2 は共通の接続・解析化に対する有理型付加構造への適用を担う。",
+      "owned_here": "The nonlinear-connection theory owns nonlinear connections, holomorphic ODEs, transport and observations. 1.1–1.2 own the meromorphic/decorated applications of the shared connection and analytification interfaces; K4 supplies the nonsingular holomorphic comparison. 3.8 constructs the local logarithmic monodromy family and its holomorphic parameter and base-change comparisons.",
+      "supplied_ja": "複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則 ODE は一般理論が担い、1.1–1.2 は共通の接続・解析化に対する有理型付加構造への適用を担う。 3.8は対数極の局所モノドロミー族と、その正則なパラメータ依存性・基底変換の比較を構成する。",
       "consumers": [
         "0.1",
         "0.3",
@@ -27,7 +27,7 @@
         "1.1",
         "1.2",
         "2.2",
-        "2.5",
+        "3.8",
         "4.1",
         "5.6",
         "6.1",
@@ -85,11 +85,12 @@
         "Stage 2.6–2.8"
       ],
       "supplied": "Native covering, path and homotopy lifting, universal covers and their fundamental-group interfaces.",
-      "owned_here": "0.5 constructs the nonlinear action and horizontal descent; general-cover descent uses the actual fiber relation, not deck invariance without normality.",
-      "supplied_ja": "既存の被覆・経路とホモトピーの持上げ・普遍被覆・基本群。非線形作用と水平降下は0.5で構成し、非正規被覆では実際のファイバー関係を用いる。",
+      "owned_here": "0.5 constructs the nonlinear action and horizontal descent; general-cover descent uses the actual fiber relation, not deck invariance without normality. 3.8 constructs local monodromy from marked loops and proves its homotopy and basepoint comparisons.",
+      "supplied_ja": "既存の被覆・経路とホモトピーの持上げ・普遍被覆・基本群。非線形作用と水平降下は0.5で構成し、非正規被覆では実際のファイバー関係を用いる。 3.8は標識付きループから局所モノドロミーを構成し、ホモトピーと基点変更の比較を証明する。",
       "consumers": [
         "0.5",
         "0.7",
+        "3.8",
         "4.2",
         "7.3"
       ]
@@ -110,7 +111,7 @@
       "supplied_ja": "種数0のMöbius正規化と点の移動、安定範囲の標識曲線変形チャート。1・2標点の商チャート、有限jet、局所標識、行列式移送は1.2が構成する。",
       "consumers": [
         "1.2",
-        "2.5"
+        "4.2"
       ]
     },
     {
@@ -142,8 +143,8 @@
         "1.17"
       ],
       "supplied": "Categorical/geometric quotient definitions, Artin bootstrap and the stated finite-group projective quotients.",
-      "owned_here": "Reductive invariant theory and actual character quotients are 1.3/2.5; wild framing and Stokes quotients are 4.2.",
-      "supplied_ja": "圏論的商・幾何学的商の定義と明記された有限群商。簡約群の不変式と指標商は1.3/2.5、Stokesの商は4.2で構成する。",
+      "owned_here": "1.3 constructs reductive invariant theory. 4.2 constructs the classical representation and character quotients, wild framing groupoids and Stokes quotients.",
+      "supplied_ja": "圏論的・幾何学的商の定義、Artinのbootstrap、および指定された有限群の射影商。不変式論は1.3で構成し、古典的な表現・指標商、wildなフレーム亜群とStokes商は4.2で構成する。",
       "consumers": [
         "1.3",
         "4.2"

@@ -222,17 +222,17 @@
           {
             "target": "4.2",
             "owner": "PainleveEquations",
-            "obligation": "Construct the classical ordinary and Stokes character quotients with exponent lifts and closed spectral constraints. Prove complete marked Betti transport, including singular fibers and the good rank-two ramified class by deck-equivariant isotopy and descent."
+            "obligation": "Construct the classical ordinary and Stokes character quotients, exponent fiber products and determinant morphisms, together with complete marked transport on singular fibers and the required decoration spaces. Prove the rank-two ramified transport comparisons by deck-equivariant isotopy and descent."
           },
           {
             "target": "4.3",
             "owner": "PainleveEquations",
-            "obligation": "Construct the full classical RH map, holomorphic descent and all-points horizontal semiconjugacy. For PVI construct the auxiliary unfixed-determinant family and its base-line-twist functor, sheafification and coarse-space comparison with I13 Definition 4.3 specialized to rank two on the four-punctured projective line."
+            "obligation": "Construct the full classical RH map, holomorphic descent and all-point horizontal semiconjugacy. Prove the rank-one regular-singular RH isomorphism and the coarse determinant-restriction lemma on the admitted determinant-relative families, with scalar-gerbe, marking and base-change comparisons. Construct the common irreducible/nonresonant inverse, its PVI extension to smooth character fibers, and the four-logarithmic Q_PVI/I13 comparison."
           },
           {
             "target": "4.4",
             "owner": "PainleveEquations",
-            "obligation": "Prove relative properness of RH for every admitted classical parameter and stable stratum, including uniform lattice bounds and stable replacement. Separately prove surjectivity onto the independently defined entire ordinary character quotient Rθᵃᵈᵐ := Rθ. For PVI specialize I13 to g=0, r=2, n=4 and prove the Cartesian fixed-determinant restriction using the rank-one RH comparison; construct the irregular properness proof for the stated admitted models."
+            "obligation": "Prove the logarithmic, unramified irregular and ramified irregular extension and lattice-boundedness theorems, then construct quotient-compatible global bounded reconstruction and connection-preserving stable replacement. Prove whole-family properness and separately construct stable representatives of every character in the independently defined full ordinary target. Derive the auxiliary four-logarithmic properness, surjectivity and bimeromorphicity through the determinant-relative comparisons of §4.3 and compare with I13 Theorem 2.2."
           },
           {
             "target": "5.2",
@@ -269,11 +269,13 @@
             "url": "https://arxiv.org/abs/math/0602004v2",
             "pdf": "https://arxiv.org/pdf/math/0602004v2",
             "locators": [
-              "Definitions 1.1, 2.2 and 4.3",
-              "Theorems 2.1–2.2",
-              "§§4, 6 and 8; regular-singular reconstruction and surjectivity"
+              "Definition 4.3",
+              "Theorems 2.1–2.2, preprint pp. 5–6",
+              "§1: regular-singular reconstruction",
+              "Proposition 5.3",
+              "§6: Lemma 6.1, Propositions 6.1–6.2 and the proof of Theorem 2.2"
             ],
-            "scope": "For the four-logarithmic-point Painlevé profile, §§4.3–4.4 compare the rank-two genus-zero base-line-twist functor and coarse spaces with I13 and prove the fixed-determinant restriction of its family RH theorem."
+            "scope": "Compare the constructions of §§4.2–4.4 with the rank-two genus-zero four-logarithmic specialization of I13. Section 4.3 owns the family-functor, sheafification, coarse and determinant-restriction comparisons. Section 4.4 uses the logarithmic extension and compactness arguments within the shared proof and identifies the resulting auxiliary family theorem with Theorem 2.2."
           }
         ]
       }
@@ -2663,14 +2665,14 @@
           "id": "4.1",
           "kind": "construction",
           "name": "sectorialStokesDescent",
-          "title": "Sectorial local systems and ramified analytic descent",
-          "statement": "Construct the analytic classification of the permitted local meromorphic connections by formal graded data, sectorial solutions and Stokes transition maps, retaining resonant logarithmic lattices and flags. Prove sectorial existence, overlap uniqueness, cocycle identities and analytic dependence on the admissible time parameters. At a ramified point perform the construction on the finite cover and prove equivariant descent, including the deck permutation of the exponential factors. Use the formal classification for the asymptotic types and the sectorial existence and uniqueness theorems for their analytic realization. (I23, §9, Theorem 9.7 and Corollary 9.11; BOA01, §§3–6; HEU10, §2; BY15, Remark 3 and Definitions 7 and 13.)\n\nAt each logarithmic marked point, use the actual local horizontal system and monodromy T_i of §3.8 to construct regular-singular reconstruction with the prescribed residue lifts, logarithmic lattice and parabolic flag. Include repeated and resonant residues and the integer lattice shifts needed to realize the chosen lifts. Prove the local algebraic/analytic comparison, analytic dependence on admitted families, and descent under changes of representative, coordinate, basepoint, loop marking and frame. The equivalence is between decorated objects; forgetting the lattice and flag gives the ordinary monodromy comparison. After gluing, the algebraic/analytic comparison of §1.2 retains every permitted bundle type.\n\nFor the rank-one determinant data, perform the same logarithmic construction with the prescribed trace residues and lattice. Compute determinant compatibility on the actual local lattices and residue sums. Deligne II5.4 supplies an extension for a chosen section of ℂ→ℂ/ℤ; this chosen extension is generally not tensor-compatible. Include the required integer lattice shifts in the determinant comparison. Retain the spectral convention exp(−2πiλ) and the actual resonant monodromy matrices from §3.8; identify a monodromy matrix with exp(−2πi Res) up to conjugacy only under the nonresonance hypotheses of Deligne II5.6. Use Deligne II5.9 with the stated erratum for the regular-singular algebraic/analytic correspondence. The global determinant restriction is constructed in §§4.3–4.4.",
+          "title": "Local Riemann–Hilbert reconstruction and descent",
+          "statement": "Construct the analytic correspondence between the permitted local meromorphic connections and Stokes-filtered local systems on the oriented boundary circle. A logarithmic model has only the zero exponential factor and uses the actual horizontal system and monodromy T_i of §3.8. At a ramified point construct the filtration on the finite cover and its equivariance under the deck permutation of exponential factors. Prove sectorial existence, overlap uniqueness, cocycle identities and coherent descent, with analytic dependence on admitted time/exponent charts. (SAB12, Definition 2.22 and Theorem 5.8; I23, §9; BOA01, §§3–6; BY15, Remark 3 and Definitions 7 and 13.)\n\nRetain the holomorphic lattices, polar conditions, residue lifts, flags and factorized structures of §1.1 as decorations of this meromorphic correspondence. Construct their relative reconstruction and prove full faithfulness on decorated objects. At logarithmic poles include repeated and resonant residues and the integer lattice shifts realizing the prescribed lifts. Prove comparison under changes of representative, coordinate, basepoint, loop marking, frame and sectorial normalization. Glue with the local system on the punctured curve, and apply §1.2 to obtain the algebraic/analytic comparison on every permitted bundle type. (SAB12, Proposition 5.12; I23, Proposition 3.3 and Corollaries 4.3–4.4.)\n\nProve determinant compatibility using the actual exterior-power lattices, trace residues, Stokes maps and deck action. The determinant has the admitted regular-singular local type. Construct its rank-one reconstruction with the prescribed lattice and residue sums. Deligne II5.4 gives an extension for a chosen section of ℂ→ℂ/ℤ, which is generally not tensor-compatible; include the integer lattice shifts in the determinant comparison. This comparison includes resonance. Retain exp(−2πiλ) as the spectral convention; compare the actual monodromy matrix with exp(−2πi Res) up to conjugacy only under Deligne II5.6's nonresonance hypotheses. Use Deligne II5.9 with its erratum for the regular-singular algebraic/analytic correspondence.",
           "hypotheses": [
             "The admitted classical rank-two local types, the logarithmic monodromy construction of §3.8, resonant logarithmic lattice data, and the finite ramified covering with deck action. Include the rank-one regular-singular local data of the determinant connection."
           ],
           "locator": {
-            "source": "I23",
-            "where": "§9 Theorem 9.7/Corollary 9.11; BOA01 §§3–6; BY15 Definitions 7/13"
+            "source": "SAB12",
+            "where": "SAB12 Definition 2.22, Proposition 5.5, Theorem 5.8 and Proposition 5.12; I23 §9, Proposition 3.3 and Corollaries 4.3–4.4; BOA01 §§3–6; BY15 Definitions 7/13. Construct the specified lattice, flag, determinant and admitted-family comparisons on the meromorphic correspondence."
           },
           "prerequisites": [
             "target:1.1",
@@ -2686,25 +2688,20 @@
             {
               "id": "4.1.api.1",
               "role": "construction or compatibility law",
-              "statement": "Construct solution-sector restriction, refinement and change of sectorial normalization."
+              "statement": "Construct restriction, refinement and changes of sectorial normalization, and prove their composition and descent laws for all three local types."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.1.api.2",
-              "statement": "Recover the actual local analytic connection and prove full faithfulness on decorated objects, including the logarithmic exponent, lattice and flag comparisons."
+              "statement": "Recover the actual decorated analytic connection, with its exponent lifts, lattice and flags, and prove full faithfulness and analytic family dependence."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.1.api.3",
-              "statement": "Prove analytic family dependence and coherent descent, and construct the rank-one determinant/lattice comparison with its stated resonance and tensor conventions."
+              "statement": "Construct the determinant/lattice comparison and rank-one reconstruction with their resonance and tensor conventions, compatible with gluing and admitted base change."
             },
             {
               "id": "4.1.api.4",
-              "role": "construction or compatibility law",
-              "statement": "Compare the logarithmic, unramified and ramified descriptions through the same descent language."
-            },
-            {
-              "id": "4.1.api.5",
               "role": "construction or compatibility law",
               "statement": "Prove that integrable time extension is equivalent to strong local constancy of these data at the stated local scope."
             }
@@ -2736,7 +2733,8 @@
             "許容された古典的な階数 2 の局所型、§3.8 の対数的モノドロミーの構成、共鳴する対数格子のデータ、および有限分岐被覆と被覆変換の作用を入力とする。行列式接続の階数 1 の確定特異な局所データも含める。"
           ],
           "additional_source_refs": [
-            "DEL70 II §5: Proposition 5.4, Corollary 5.6 and Theorem 5.9 with the April 1971 erratum; construct the prescribed resonant-lattice, flag, determinant and family comparisons"
+            "DEL70 II §5: Proposition 5.4, Corollary 5.6 and Theorem 5.9 with the April 1971 erratum; construct the prescribed resonant-lattice, flag, determinant and family comparisons",
+            "SAB12 Definition 2.22, Proposition 5.5, Theorem 5.8 and Proposition 5.12: ramified Stokes filtrations, regular-singular specialization, local meromorphic correspondence and curve gluing"
           ]
         },
         {
@@ -2744,7 +2742,7 @@
           "kind": "construction",
           "name": "completeBettiTransport",
           "title": "The Betti family and complete transport",
-          "statement": "For every admitted rank-two, genus-zero, structural-degree-four profile, construct the marked Betti family by the following gluing and quotient procedures. The four-logarithmic-point profile also uses the auxiliary unfixed-determinant character family defined below for comparison with I13.\n\nConstruct the generalized monodromy groupoid by gluing the local data of §4.1 with the global local system on the punctured curve. Keep the enriched groupoid with logarithmic lattices and flags distinct from the ordinary affine character quotient obtained by forgetting those decorations. In the ordinary quotient impose the closed spectral-invariant and determinant constraints, and retain the exponent parameter θ as a separate fiber-product coordinate. At resonance use the entire closed spectral-constraint locus, including its scalar and allowed unipotent strata. Construct locally constant transport along admissible marked deformations, including changes of Stokes-sector presentations. Prove composition and inverse laws and completeness along every compact path in Bθ. This groupoid and topological construction defines transport on singular character fibers as well. (VDPS09, §§1–3; BOA14, §10, Theorem 10.2; BY15, Proposition 19, Theorem 21 and Corollary 22.)\n\nFor PVI, let T be an admitted chart of four ordered points on ℙ¹ and T̃ its chosen marking cover. Construct the finite-type framed GL₂ representation varieties, their reductive affine conjugacy quotients Rep₂(C,D), and the map to the space A₂^(4) of four monic quadratic local characteristic polynomials with nonzero constant terms whose product is 1. Let Λ₂^(4)(d) be the space of the two ordered residue lifts at each of the four poles satisfying d+Σᵢⱼλⱼ^(i)=0, and let rh:Λ₂^(4)(d)→A₂^(4) send those lifts to the characteristic polynomials with eigenvalues exp(−2πiλⱼ^(i)). After analytification construct the full analytic fiber product R_log^un = (Rep₂(C,D)×_T T̃)×_(A₂^(4))Λ₂^(4)(d). Retain λ in this target, including repeated and resonant values. Variation of λ is an external parameter direction; the complete time transport is relative to fixed λ.\n\nConstruct the rank-one Betti family for the determinant character and the determinant map from R_log^un. For the four-logarithmic-point fixed-determinant input, construct Rθ by the prescribed determinant-character restriction. Compare these restrictions with transport of the rank-one data certified in §1.2 and realized in §4.1. Prove that the analytified character families and their exponent pullbacks are Hausdorff and locally compact, including their singular points. On a simply connected marking chart identify each fixed-exponent Betti family with its character fiber times the time chart, and compare these products on overlaps. (I13, §2 and the character-family construction used in Theorem 2.2.)\n\nBOA14's cited family-transport theorem has untwisted scope. Extend its isotopy construction to the rank-two ramified objects of BY15 by retaining the exponential covering, grading and deck action, constructing deck-compatible equivalences of the Stokes groupoids, and descending the framing action and closed spectral constraints. Prove independence, composition and homotopy compatibility before concatenating local products along a compact path. Use BY15 for the ramified local objects and quasi-Hamiltonian/Poisson quotient geometry, and prove the family-transport comparison through these relative isotopies.",
+          "statement": "For every admitted profile, glue §4.1's decorated local data with the local system on the punctured curve. Construct the forgetful functor Forθ to the ordinary representation/Stokes groupoid and its affine quotient map qθ, and set βθ = qθ ∘ Forθ. Forθ forgets the holomorphic lattices, flags and factorized extension choices while retaining the prescribed formal grading, Stokes maps and deck action. The ordinary target retains the local characteristic-polynomial constraints, formal grading and monodromy, Stokes factors, deck relations, global product relation and specified determinant character. These conditions define the entire closed-constraint quotient Rθ independently of RH. Retain the exponent lifts as separate fiber-product coordinates, including the scalar and allowed unipotent strata at resonance. Construct the determinant morphism to the rank-one character family, its version with the compatible regular-singular determinant varying, and restriction along a prescribed determinant-character section. (VDPS09, §§1–3; BY15, Proposition 19, Theorem 21 and Corollary 22.)\n\nIn the four-logarithmic-point specialization, let T be an admitted chart of four ordered points on ℙ¹, T̃ its marking cover and Rep₂(C,D) the unfixed-determinant GL₂ conjugacy quotient. Let A₂^(4) consist of four monic quadratic local characteristic polynomials with nonzero constant terms whose product is 1. Write Λ₂^(4)(d) for the two ordered residue lifts at each pole satisfying d+Σᵢⱼλⱼ^(i)=0, and rh:Λ₂^(4)(d)→A₂^(4) for the characteristic polynomials with eigenvalues exp(−2πiλⱼ^(i)). The construction gives, after analytification, R_log^un = (Rep₂(C,D)×_T T̃)×_(A₂^(4))Λ₂^(4)(d), with its determinant morphism and fixed-determinant restrictions. Retain the full λ-coordinate and compare with I13's character-family construction in §2. Variation of λ is an external parameter direction; time transport fixes λ.\n\nProve that these analytified character families and exponent pullbacks are Hausdorff and locally compact, including singular points. Construct product descriptions over simply connected admissible time charts and compare them under changes of marking and Stokes-sector presentation. Prove independence, composition, inverse and homotopy laws, then concatenate along compact paths to obtain complete transport. For the ramified types extend BOA14 §10, Theorem 10.2's untwisted isotopy construction by retaining the exponential covering, formal grading and deck action of BY15, constructing deck-compatible groupoid equivalences and descending the framing action and closed constraints. The construction acts on singular coarse fibers and on the required decoration spaces.",
           "hypotheses": [
             "The local analytic data of 4.1 over the admitted marked time problem of 3.2, retained exponent lifts, and fixed closed spectral/determinant constraints; singular affine quotients are permitted."
           ],
@@ -2765,33 +2763,23 @@
           "api": [
             {
               "id": "4.2.api.1",
-              "role": "specialization or import compatibility",
-              "statement": "Construct restriction, gluing, gauge-conjugation and change-of-marking functors."
+              "role": "construction or compatibility law",
+              "statement": "Construct restriction, gluing, gauge-conjugation and change-of-marking functors, retaining their natural isomorphisms."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.2.api.2",
-              "statement": "Construct the four-point GL₂ character family, its full exponent fiber product R_log^un, its rank-one determinant map and the specified-determinant restrictions, with their analytic and marking comparisons."
+              "statement": "Construct Forθ, qθ and βθ, prove the quotient universal property and identify the locus where quotient points represent individual orbits."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.2.api.3",
-              "statement": "Construct the forgetful functor Forθ from the decorated Betti groupoid to the ordinary representation/Stokes groupoid, forgetting logarithmic lattices and flags while retaining the prescribed formal grading, Stokes maps and deck action. Construct the map qθ from this ordinary groupoid to its closed-constraint affine character quotient Rθ, and set βθ = qθ ∘ Forθ. Prove the quotient universal property on the ordinary framed representation space and identify the locus where quotient points represent individual orbits."
+              "statement": "Construct the determinant morphisms and restrictions, including the four-point GL₂ specialization R_log^un with its full exponent coordinate."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.2.api.4",
-              "statement": "Prove that Forθ, qθ and βθ commute with transport and changes of marking, with the natural isomorphisms retained at groupoid stages."
-            },
-            {
-              "id": "4.2.api.5",
-              "role": "specialization or import compatibility",
-              "statement": "Prove local product descriptions over simply connected admissible time neighborhoods and their continuation along finite chains."
-            },
-            {
-              "id": "4.2.api.6",
-              "role": "specialization or import compatibility",
-              "statement": "Define the complete transport on the coarse quotient and its lift on any required decoration space."
+              "statement": "Prove local products and complete transport, and their compatibility with Forθ, qθ, βθ, determinant restrictions and changes of marking."
             }
           ],
           "tests": [
@@ -2822,8 +2810,8 @@
           "supporting_constructions": [
             {
               "id": "4.2.GF10",
-              "statement": "Construct the finite-type framed representation varieties for the classical profiles and their affine quotients using the invariant-theory results of §1.3, then apply §1.2 analytification and the stated analytic exponent pullbacks. Prove Hausdorff/local-compactness and marked product transport at singular points. Construct the wild/Stokes framing groupoid and quotient, applying reductive invariant theory at the reductive framing-group stages and explicit descent at the other quotient stages, while retaining the local unipotent Stokes groups. Prove root/deck isotopy, ramified descent, stabilizer compatibility and holomorphicity on every admitted stratum. Express the universal properties of these constructed quotients using SSF1.17.",
-              "statement_ja": "古典的各プロファイルの有限型フレーム付き表現多様体を構成し、§1.3 の不変式論によってそのアフィン商を構成した後、§1.2 の解析化と明記した解析的な指数による引戻しを適用する。特異点を含む Hausdorff 性・局所コンパクト性・標識付き積移送を証明する。wild/Stokes のフレーム亜群と商を構成し、簡約なフレーム群による段階では簡約群の不変式論を、それ以外の商の段階では明示的な降下を用い、局所 Stokes 群の冪単性を保持する。根・被覆変換を保つ isotopy、分岐降下、安定化群との両立、および許容される各層での正則性を証明する。構成した商の普遍性を SSF1.17 の述語によって表す。"
+              "statement": "Construct the finite-type framed representation/Stokes varieties and their affine quotients using §1.3, and apply §1.2 analytification and the exponent pullbacks. Use reductive invariant theory at the reductive framing-group stages and explicit descent at the other quotient stages, retaining the local unipotent Stokes groups. Prove root/deck isotopy, ramified descent, stabilizer compatibility, holomorphicity and Hausdorff/local-compactness on every admitted stratum. Express the constructed quotient universal properties using SSF1.17.",
+              "statement_ja": "有限型のフレーム付き表現・Stokes 多様体とそのアフィン商を §1.3 を用いて構成し、§1.2 の解析化と指数による引戻しを適用する。簡約なフレーム群による段階では簡約群の不変式論を、それ以外の商の段階では明示的な降下を用い、局所 Stokes 群の冪単性を保持する。根・被覆変換と両立する同位変形、分岐降下、安定化群との両立性、および許容される各層での正則性・Hausdorff 性・局所コンパクト性を証明する。構成した商の普遍性を SSF1.17 を用いて表す。"
             }
           ],
           "readme_needs_ja": "内部依存：1.2, 1.3, 3.2, 4.1; [Quotient predicates](#dependency-quotient-predicates) (1.17); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8); [Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15).",
@@ -2836,13 +2824,13 @@
           "kind": "construction",
           "name": "fullPhaseRiemannHilbert",
           "title": "Riemann–Hilbert and compatibility on the whole phase space",
-          "statement": "For the four-logarithmic-point profile, apply §1.3 over the algebraic four-point time and residue base T×Λ₂^(4)(d) of §4.2 to construct the auxiliary unfixed-determinant moduli M_log^un of rank-two, degree-d stable parabolic connections on ℙ¹. Use the full residue space Λ₂^(4)(d), the specified residue ordering and the chosen stability weights. Let Q_PVI(S) be its set-valued functor of actual families on C_S modulo isomorphisms after tensoring by a line bundle from S, with the canonical relative connection on that pullback line and the transported flags.\n\nOn locally Noetherian test schemes construct the natural isomorphism Q_PVI ≅ M_I13|_(g=0,r=2,n=4) to I13 Definition 4.3 with exactly these data and this equivalence relation. Compare the fppf sheafifications, scalar rigidifications and coarse moduli through the maps of §1.3, and construct the induced coarse-space isomorphism. Construct the corresponding analytic comparisons with analytic sheafification and prove compatibility with admitted holomorphic base changes. Write M̃_log^un := (M_log^un)ᵃⁿ×_T T̃ for the marked analytic pullback. The auxiliary unfixed-determinant stack has scalar inertia Gm. For the fixed-determinant classical source of §3.5 retain its determinant identification, μ₂ inertia and the base-line twists equipped with an L⊗2 trivialization, as in §1.3. These are separate moduli functors. (I13, Definition 4.3 and §4.)\n\nConstruct RHθ: Mθᵃⁿ → Rθ over Bθ by composing the decorated analytic classification with βθ of §4.2 on universal-object covers, then prove holomorphic descent. By the same construction obtain RH_log^un: M̃_log^un → R_log^un for the auxiliary PVI family. Use the regular-singular comparison of §4.1 and the analytification/descent of §1.2 to identify RH_log^un with the I13 map on the four-logarithmic-point family. Prove compatibility of the functor and coarse-space comparisons with the maps from actual families and their rigidifications, residue and determinant data, presentation changes and analytic base change.\n\nFor the holomorphic flat splitting of §2.4 on the auxiliary PVI family and that of §§3.9–3.10 on each classical fixed-determinant family, apply §0.3 to obtain local horizontal sections through every initial point, independently of RH invertibility. On these sections use the local representatives, strong total connections and connection-preserving comparisons of §2.2. Their horizontal local systems and Stokes data give precisely the transport of §4.2; descend this comparison to every source point, including trajectories inside the resonance, reducible and marked apparent loci of §3.8. Compare these integrable-extension constructions with the local analytic reconstruction and prove all-point horizontal compatibility. §4.5 records the classical local-existence conclusion.\n\nConstruct the determinant maps from the marked auxiliary de Rham and Betti families to their corresponding rank-one families over the same time/exponent base T̃×Λ₂^(4)(d). Use §1.5 for the rank-one de Rham moduli and §4.1 to construct its regular-singular RH map RH₁. Prove det_B ∘ RH_log^un = RH₁ ∘ det_dR using the actual logarithmic lattices. This is the commutative determinant/RH square. In fixed-determinant mode the prescribed line connection and its certified transport give the corresponding determinant-character section. The rank-one isomorphism and the Cartesian square for the fixed-determinant restriction are proved in §4.4.\n\nFix the inverse domains for each admitted profile. For the four-logarithmic-point profile, let Vθ be the union of the smooth loci of the character surfaces Rθ,b over b ∈ Bθ, and put Uθ = RHθ⁻¹(Vθ). Construct the direct comparison of the fixed-determinant moduli functors and markings with IIS06 Definition 4.9 and apply Theorem 4.10 on these loci; smooth character points on resonant exponent fibers remain in Vθ. For each other profile, let Vθ be the ordinary character locus whose generalized monodromy object is irreducible and whose logarithmic exponent differences satisfy λᵢ,₁ − λᵢ,₂ ∉ ℤ at every logarithmic pole. Here irreducible means that there is no common rank-one subobject compatible with global monodromy, the formal grading, every Stokes map and the deck action. Define Uθ as the geometric irreducibility locus complementary to the reducible locus of §3.8, with the same exponent condition: its geometric points have no saturated ∇-invariant line subbundle. The admitted distinct leading eigenvalues at unramified irregular poles and the condition a₁₀ ≠ 0 at ramified poles are retained. If an exponent fiber has a logarithmic integral difference, this chosen inverse locus for a non-four-logarithmic profile is empty.\n\nFor the latter profiles, prove local uniqueness of the logarithmic lattice and labelled flag from the nonresonant exponent lifts, of the unramified irregular lattice and filtration from the labelled formal summands, and of the ramified lattice and factorized-structure class from the prescribed w² = z model with deck descent. Prove that these reconstructions depend holomorphically on their admitted parameters and glue to a stable connection with the fixed determinant and degree. This establishes Uθ = RHθ⁻¹(Vθ) and constructs a holomorphic inverse jθ: Vθ → Uθ with RHθ|Uθ ∘ jθ = id and jθ ∘ RHθ|Uθ = id. Prove the two identities and compatibility with admitted base changes and marking changes for both choices of loci. For the non-four-logarithmic profiles, the inverse domains are the irreducible/nonresonant loci specified above. Outside Uθ, retain the actual fibers and decoration data. (IIS06, Definition 4.9 and Theorems 4.10–4.12; IS12, Theorem 5.1 in its generic unramified scope; I23, Proposition 3.3, Corollaries 4.3–4.4, §9 and §11. Construct the relative ramified reconstruction and descent as part of this comparison.)\n\nConstruct the map, descent and horizontal comparison on all admitted strata using §4.1 and the universal-object charts of §3.5. IS12 Theorem 5.1 supplies the generic unramified comparison; prove the resonant and ramified comparisons through the integrable-extension and analytic reconstruction maps above.",
+          "statement": "Construct RHθ: Mθᵃⁿ → Rθ by composing §4.1's forward decorated analytic correspondence with βθ on §1.3's universal-object covers, and prove holomorphic descent, presentation independence and admitted analytic base-change compatibility. Use this construction also in determinant-relative form: the base retains the compatible regular-singular line connection, and a prescribed section gives the fixed-determinant family. Construct the relative coarse family on universal-line covers and prove its descent using §1.3.\n\nConstruct the marked rank-one de Rham and Betti families D_dR and D_B over the same time/exponent base, with the trace residues, degree and logarithmic lattice retained. Prove that their RH₁ is an analytic isomorphism by §1.5 and §4.1's rank-one reconstruction, including family and marking compatibility. Use the determinant/lattice comparison of §4.1 to prove det_B ∘ RH = RH₁ ∘ det_dR. This determinant/RH square is commutative.\n\nProve a coarse determinant-restriction lemma on these admitted families. In this lemma M^un, R^un and M_L^det denote marked analytic coarse spaces; the superscript un means that no determinant identification is chosen. Let (L,∇L) be a compatible line connection over their common time/exponent base. Put δ_L=RH₁(L,∇L) and R_det(L)=det_B⁻¹(δ_L). Construct an isomorphism M_L^det ≅ M^un ×_(R^un) R_det(L), with the determinant identification retained in the actual-family source of M_L^det. Prove it by mutually inverse coarse morphisms on §1.3's presentations and their universal properties, accounting for Gm inertia, μ₂ inertia and base-line twists with square trivialization. A Cartesian square of actual-family stacks alone is insufficient: prove descent of these inverse morphisms and their admitted analytic base-change laws. Carry out the comparison over universal-line covers of D_dR as well, and descend it to identify the determinant-relative coarse family with the corresponding pullback of M^un. Prove compatibility with the certified determinant transport. The Cartesian assertion concerns this restriction square.\n\nFor four logarithmic points, §1.3 gives M_log^un over T×Λ₂^(4)(d); write M̃_log^un=(M_log^un)ᵃⁿ×_T T̃. Match the ordered residues, degree, generic weights and actual-family equivalence with I13 Definition 4.3: Q_PVI(S) consists of families modulo isomorphism after a base-line twist with its canonical relative connection and transported flags. Construct Q_PVI ≅ M_I13|_(g=0,r=2,n=4) on locally Noetherian test schemes and the induced fppf, analytic-sheafification and coarse comparisons through §1.3. Identify the resulting RH_log^un: M̃_log^un → R_log^un with I13's map, retaining the full λ-coordinate and all marking and base-change laws. Its determinant line has degree d and trace residue Σⱼλⱼ^(i) at each pole.\n\nFor every profile define Vθ^nr by irreducibility of the ordinary generalized monodromy object and λᵢ,₁−λᵢ,₂ ∉ ℤ at each logarithmic pole. Irreducibility excludes a common rank-one subobject compatible with global monodromy, formal grading, Stokes maps and deck action. Let Uθ^nr be the complement of §3.8's reducible locus with the same exponent condition. Prove that Uθ^nr and Vθ^nr are open. Prove local uniqueness of the logarithmic lattice and labelled flag from the nonresonant lifts, of the unramified lattice and filtration from the labelled formal summands, and of the ramified lattice and factorized-structure class from the prescribed w²=z model with deck descent. Retain the distinct leading eigenvalues and a₁₀ ≠ 0 hypotheses. Prove holomorphic dependence and gluing to a stable connection of the prescribed degree and determinant; establish Uθ^nr=RHθ⁻¹(Vθ^nr) and a two-sided inverse jθ^nr. This includes the four-logarithmic-point profile. On a logarithmically resonant parameter fiber Vθ^nr is empty.\n\nFor four logarithmic points, prove the stronger inverse theorem with Vθ the union of the smooth loci of Rθ,b and Uθ=RHθ⁻¹(Vθ), including smooth points on resonant exponent fibers. Compare the fixed-determinant functors and markings with IIS06 Definition 4.9 and Theorem 4.10, and prove that this inverse extends jθ^nr. For the other profiles set (Uθ,Vθ,jθ)=(Uθ^nr,Vθ^nr,jθ^nr). Prove both inverse identities and their marking and base-change laws; retain every fiber and decoration outside Uθ. The irregular reconstruction uses IS12 Theorem 5.1 in its generic unramified scope and the relative ramified comparisons of I23 Proposition 3.3, Corollaries 4.3–4.4 and §§9/11.\n\nApply §0.3 to the holomorphic flat splittings of §2.4 and §§3.9–3.10 to obtain local horizontal sections through every initial point. Use §2.2's strong total representatives on these sections and prove that their local systems and Stokes data give §4.2's transport. Descend to all source points, including resonance, reducible and apparent loci, and to the determinant-relative and four-logarithmic auxiliary families. This all-point comparison is independent of RH invertibility; §4.5 records local existence.",
           "hypotheses": [
-            "The full stable moduli family of 3.5 with the loci of 3.8, the splitting and flatness of 3.9–3.10, the presentation and base-change comparisons of 3.12, and the decorated analytic reconstruction and Betti family of 4.1–4.2."
+            "The full stable moduli family of 3.5 with the loci of 3.8, the splitting and flatness of 3.9–3.10, the comparisons of 3.12, and the reconstruction and Betti family of 4.1–4.2. Allow compatible regular-singular determinant lines to vary over their rank-one moduli base, within the same genus-zero, rank-two, structural-degree-four data and weight chambers."
           ],
           "locator": {
             "source": "IIS06",
-            "where": "IIS06 Definition 4.9 and Theorems 4.10–4.12; IS12 Theorem 5.1; I23 Proposition 3.3, Corollaries 4.3–4.4, §§9/11. Relative ramified reconstruction on the stated irreducible/nonresonant loci is an owned extension."
+            "where": "IIS06 Definition 4.9 and Theorems 4.10–4.12 for the PVI smooth-character inverse; IS12 Theorem 5.1 in its generic unramified scope; I23 Proposition 3.3, Corollaries 4.3–4.4 and §§9/11. Construct the rank-one RH isomorphism and coarse determinant-restriction comparisons on the admitted determinant-relative families."
           },
           "prerequisites": [
             "target:0.3",
@@ -2853,6 +2841,7 @@
             "target:2.2",
             "target:2.3",
             "target:2.4",
+            "target:3.3",
             "target:3.5",
             "target:3.8",
             "target:3.9",
@@ -2865,82 +2854,77 @@
             {
               "role": "construction or compatibility law",
               "id": "4.3.api.1",
-              "statement": "Construct the auxiliary unfixed-determinant PVI source and Q_PVI ≅ M_I13|_(g=0,r=2,n=4), its sheafification and coarse-space comparisons, and their analytic, marking and base-change laws."
+              "statement": "Construct the RH maps through Forθ and qθ, with holomorphic descent, presentation independence and admitted base-change laws."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.3.api.2",
-              "statement": "Construct the holomorphic RH maps from the universal-object covers and prove descent and base-change naturality."
+              "statement": "Prove the rank-one RH isomorphism, commutative determinant/RH square and coarse determinant-restriction lemma, including descent when the compatible determinant varies."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.3.api.3",
-              "statement": "Construct the commutative determinant/RH square and identify the prescribed determinant-character section under its certified time transport."
+              "statement": "Construct the four-logarithmic Q_PVI/I13 comparison and identify the specialized RH map with its full time/exponent and actual-family data."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.3.api.4",
-              "statement": "Identify the local-to-global RH construction with the composite through Forθ and qθ of §4.2."
+              "statement": "Construct jθ^nr for every profile and the stronger PVI inverse on smooth character fibers, with both inverse identities and their compatibility laws."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.3.api.5",
-              "statement": "Construct the explicitly defined open loci Uθ, Vθ and the inverse jθ, and prove both inverse identities and their base-change and marking naturality."
-            },
-            {
-              "role": "construction or compatibility law",
-              "id": "4.3.api.6",
-              "statement": "Prove horizontal compatibility at every retained point, independently of whether it lies in Uθ."
+              "statement": "Prove all-point horizontal compatibility for the full source and determinant-relative families."
             }
           ],
           "tests": [
             {
               "id": "4.3.tests.1",
               "kind": "compatibility",
-              "statement": "Two distinct points on an exceptional fiber can have the same ordinary character, so a two-sided inverse cannot be defined on that fiber."
+              "statement": "Distinct points of an exceptional RH fiber can have the same ordinary character; no two-sided inverse exists on that fiber."
             },
             {
               "kind": "regression or compatibility check",
               "id": "4.3.tests.2",
-              "statement": "At a resonant logarithmic point the source contains both the allowed scalar and unipotent strata. In the four-logarithmic-point case Vθ contains the smooth character points on resonant parameter fibers."
+              "statement": "The source retains scalar and unipotent logarithmic strata. The PVI smooth-character inverse includes smooth resonant points even when Vθ^nr is empty."
             },
             {
               "id": "4.3.tests.3",
               "kind": "characterisation",
-              "statement": "Retaining exponent lifts distinguishes θ from θ + 1 even when their ordinary exponential eigenvalues agree."
+              "statement": "Retaining exponent lifts distinguishes θ from θ+1 even when their exponential eigenvalues agree."
             },
             {
               "kind": "regression or compatibility check",
               "id": "4.3.tests.4",
-              "statement": "For a fixed stable object E₀, the families E₀⊠O and E₀⊠O(1) over ℙ¹ have the same unfixed-determinant Q_PVI class but need not be isomorphic as actual families. In fixed-determinant mode a base-line twist requires the specified square trivialization."
+              "statement": "For a fixed stable object E₀, E₀⊠O and E₀⊠O(1) over ℙ¹ have the same unfixed-determinant Q_PVI class but need not be isomorphic as actual families. A fixed-determinant base-line twist requires a square trivialization."
             }
           ],
-          "readme_needs": "Internal: 0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2.",
+          "readme_needs": "Internal: 0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.3, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2.",
           "role": "painleve-specific-construction-or-comparison",
           "additional_source_refs": [
-            "I13 Definition 4.3 and §§4, 6: the rank-two genus-zero four-logarithmic-point functor and coarse-space comparison",
-            "IIS06 Definition 4.9 and Theorem 4.10: the fixed-determinant PVI inverse domains"
+            "I13 Definition 4.3 and §4: the rank-two genus-zero four-logarithmic family-functor, sheafification and coarse-space comparison",
+            "IIS06 Definition 4.9 and Theorem 4.10: the fixed-determinant PVI smooth-character inverse and its compatibility with the common irreducible/nonresonant inverse"
           ],
           "part": "painleve",
           "scope_role": "application",
           "owner": "PainleveEquations:4.3",
-          "readme_needs_ja": "内部依存：0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2.",
+          "readme_needs_ja": "内部依存：0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.3, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2.",
           "hypotheses_ja": [
-            "§3.5 の安定モジュライ族全体と §3.8 の各部分、§§3.9–3.10 の分裂と平坦性、§3.12 の表示変更・基底変換の比較、および §§4.1–4.2 の付加構造付き解析的再構成と Betti 族を入力とする。"
+            "§3.8 の各軌跡を保持した §3.5 の全安定モジュライ族、§§3.9–3.10 の分裂と平坦性、§3.12 の比較、および §§4.1–4.2 の再構成と Betti 族を入力とする。同じ種数零・階数二・構造的次数四のデータと重みの部屋の範囲で、両立する確定特異な行列式線接続が階数 1 のモジュライ基底上を変化する場合も扱う。"
           ]
         },
         {
           "id": "4.4",
           "kind": "theorem",
           "name": "properClassicalRiemannHilbert",
-          "title": "Proper comparison for the full classical input class",
-          "statement": "For the auxiliary four-logarithmic-point family of §4.3, apply I13 Theorem 2.2 in precisely the specialization g=0, r=2, n=4. Verify 2·4 − 2·2 − 2 = 2 > 0, the residue/degree relation d+Σᵢⱼλⱼ^(i)=0, and the generic weights with stable=semistable. Use Q_PVI ≅ M_I13|_(g=0,r=2,n=4) and the induced coarse-space and analytic comparisons of §4.3. The target is the entire exponent fiber product R_log^un of §4.2. Prove properness of RH_log^un for the total time-and-exponent family, and its preservation under every admitted analytic base change. Record the surjectivity and bimeromorphicity supplied by the same source theorem on this auxiliary family, with their full parameter scope.\n\nFor the fixed-determinant restriction, let D_dR be the rank-one logarithmic de Rham family used in §4.3, pulled back to T×Λ₂^(4)(d), with trace residue Σⱼλⱼ^(i) at each pole, degree d and the prescribed logarithmic lattice. Write D̃_dR := D_dRᵃⁿ×_T T̃ for its marked analytic pullback, and let D_B be the corresponding marked determinant-character family over T̃×Λ₂^(4)(d), with λ retained. Prove that RH₁:D̃_dR→D_B is an isomorphism. Use §1.5 for the line-connection moduli and §4.1 for the regular-singular reconstruction; verify uniqueness with the prescribed residues and lattice and the analytic family and marking comparisons. Compute determinants on the actual lattices, including integer shifts of a chosen Deligne extension. Apply the lattice-level determinant comparison of §4.1 at all admitted residue parameters, including resonance; the nonresonance restriction concerns only the matrix comparison with exp(−2πi Res).\n\nFor a specified determinant line connection (L,∇L), write δ_L=RH₁(L,∇L) for its Betti section and R_det(L) for the inverse image of δ_L under det_B:R_log^un→D_B. Let M̃_L^det be the marked analytic pullback of the fixed-determinant coarse source M_L^det, with the determinant identification retained in its actual-family stack. Prove M̃_L^det ≅ M̃_log^un ×_(R_log^un) R_det(L). Establish this Cartesian restriction square from the commutative determinant/RH square of §4.3 and the rank-one isomorphism, including the Gm-to-μ₂ scalar-gerbe comparison and the base-line twists with square trivialization. Prove that (L,∇L) and δ_L have the certified time transport of §1.2, and that the square commutes with the admitted time/exponent base changes. This square gives fixed-determinant family properness by proper analytic base change. The determinant/RH square itself is asserted to commute; the Cartesian assertion concerns the restriction square with horizontal inclusions into the auxiliary rank-two families.\n\nFor the profiles with an irregular pole, prove relative properness through the lattice bounds and extension results below.\n\nFor each admitted degree-four rank-two input and every allowed exponent parameter, prove that RHθ is proper as a map of the whole time family, with the exponent lift retained in its target, on the full stable moduli space of §3.5. Establish properness of the total map on each admitted parameter chart, with time varying over its whole base. Use exactly the admitted input, nonemptiness and weight-chamber conditions of §§3.3 and 3.5. Define Rθᵃᵈᵐ := Rθ, the whole ordinary generalized character quotient constructed in §4.2. Its defining data are the local characteristic-polynomial constraints at logarithmic poles, the prescribed formal grading and formal monodromy at irregular poles, the permitted Stokes factors and their deck relations, the global product relation, and the fixed determinant character, with the exponent lift retained. These conditions are independent of RH and its image. Separately from properness, prove that for every b ∈ Bθ and r ∈ Rθ,b there exists m ∈ Mθ,bᵃⁿ with RHθ(m) = r. Prove this existence statement on every component of the independently defined target. This includes the scalar and unipotent logarithmic strata, reducible characters and the generic ramified local structures admitted by the classical input. (IIS06, Definition 2.11 and Theorems 4.10–4.12; IS12, Theorem 5.1 and the scope warning of Remark 6.3; HEU10, Theorem 1.1.)\n\nFor each profile with an irregular pole, prove relative compactness through the following four intermediate results: boundedness of local lattices uniformly over compact families of generalized characters with fixed exponent lifts; extension of the retained flags and factorized structures in a relative projective parameter space with their closed incidence relations; semistable replacement after the necessary base change and elementary modifications, followed by semistable = stable for the chosen weights and uniqueness in the separated moduli problem; and compatibility of these extensions with global gluing and the analytic moduli topology. For a degenerating stable family, the replacement step must supply a stable limiting object; openness of the stable locus alone does not ensure this. For every compact subset K of the character family, prove compactness of RHθ⁻¹(K) by controlling both the underlying connections and their decoration parameters.\n\nFor surjectivity, construct local realizations of each allowed ordinary character, glue on bundles of the prescribed degree and determinant, and prove that a stable decorated representative exists. For a reducible coarse character, this representative may come from a nonsemisimple object with the same coarse character; the semisimple representative is not assumed to be stable. Verify that stable replacement preserves this prescribed character and all fixed local constraints. Prove these existence statements for every prescribed character independently of the compactness argument.\n\nFor four logarithmic poles use the I13 theorem and the determinant restriction square above; for the irregular profiles use the stated relative compactness construction. HEU10 Theorem 1.1 concerns universal strong isomonodromic deformation; its application to classical continuation requires comparison of the time bases, extension of local decorations, determinant and stability preservation, bundle-jumping compatibility, descent and agreement with §3.9. I23's global foliation theorem supplies the geometric time distribution under its moduli hypotheses, and IS12 Theorem 5.1 supplies the generic unramified RH theorem. Establish the remaining relative compactness assertions for the admitted classical profiles through the lattice and stable-replacement arguments.\n\nTogether with the complete target transport of §4.2 and all-point compatibility of §4.3, return the proper-semiconjugacy certificate used by §4.6 to apply NonlinearConnections §0.4. Local horizontal existence is the independent application of §0.3 in §4.5.",
+          "title": "Properness and stable realization for classical families",
+          "statement": "Prove properness of RHθ for the whole time/exponent family and its preservation under admitted analytic base changes. Prove the determinant-relative version with the compatible regular-singular line connection varying over its rank-one base, using the coarse comparisons of §4.3. The argument uses the following local extension and global reconstruction theorems for all admitted profiles.\n\nFor each compact subset K of the full character family, prove uniform bounds that include its time and exponent projections. On the local presentation charts construct reference lattices E⁰ and an integer N with zᴺE⁰ ⊆ E ⊆ z⁻ᴺE⁰ for the required representatives, and parameterize the finite lattice quotients and decorations. Obtain the bounds from the following three local theorems together with the quotient-compatible global reconstruction below. The noncollision and nonvanishing conditions remain those of the admitted parameter base.\n\nFor logarithmic models, prove bounded reconstruction with the prescribed residue lifts, including repeated and resonant values, scalar and unipotent monodromy, and the required integral lattice shifts. Extend the flags in relative projective parameter spaces with the closed residue-incidence equations. For unramified irregular models, prove bounded reconstruction from the labelled formal summands and Stokes data, and extension of their lattices, filtrations and sectorial comparisons while the leading eigenvalues remain distinct. For ramified models, prove these statements on w²=z with deck action; construct projective parameter spaces for the finite lattice and flag quotients and prove that the admitted factorized-structure classes extend with a₁₀ ≠ 0 and descend. In each case prove compatibility with gluing, analytic base change and §4.1's determinant comparison. Use these local theorems at every occurrence of the corresponding model in a profile.\n\nUse §1.3's bounded Quot presentations and these local bounds to construct the global compact parameter sets covering RHθ⁻¹(K). Control degeneration in the ordinary affine quotient by parameterizing representations, their irreducible constituents and extension data, including nonsemisimple representatives of reducible coarse characters. Prove bounded reconstruction after changes of framing and local presentation, and compatibility with the coarse quotient; a choice of semisimple representative alone does not parameterize the source.\n\nConstruct the required semistable replacement after base change and elementary modifications. Prove that the resulting limit is an actual connection with the Leibniz identity and identity connection symbol, has the prescribed degree, determinant, polar and formal data, and represents the limiting coarse character. Extend the retained decorations using the local theorems. Prove semistability of the replacement, use the chosen weights to obtain stability, and use separatedness for uniqueness of the coarse extensions that agree on the generic base, retaining the actual-family scalar and line-twist comparisons. Verify that the extension maps from the compact parameter sets are continuous in the analytic moduli topology, agree under presentation changes and cover every source point over K. This proves compactness of RHθ⁻¹(K), then properness using the Hausdorff/local-compactness comparisons. The argument controls the whole time/exponent family, including bundle jumps and logarithmically resonant fibers, independently of the inverse loci of §4.3. (I13, §6, Lemma 6.1 and Propositions 6.1–6.2, for the logarithmic stable-replacement and compactness arguments.)\n\nDefine Rθᵃᵈᵐ := Rθ, the entire ordinary quotient of §4.2 with its closed spectral, formal, Stokes, deck, global-product and determinant constraints and retained exponent lifts. Separately prove that for every allowed exponent parameter, b ∈ Bθ and r ∈ Rθ,b there is m ∈ Mθ,bᵃⁿ with RHθ(m)=r, on every component of this independently defined target. Construct local realizations, glue on bundles of the prescribed degree and determinant, and prove existence of a stable decorated representative. For a reducible coarse character allow nonsemisimple representatives with that same character. Prove that the choices and replacements preserve the prescribed coarse character and fixed local constraints. Include all admitted scalar, unipotent, resonant and generic ramified strata.\n\nSpecialize these results to four logarithmic models. Through §4.3's determinant-relative coarse comparison and rank-one isomorphism, derive properness and surjectivity of RH_log^un on the entire time/exponent fiber product R_log^un, with admitted analytic base change. Verify g=0, r=2, n=4, 2·4−2·2−2=2>0, d+Σᵢⱼλⱼ^(i)=0 and the generic weights in the comparison with I13 Theorem 2.2. For every allowed (t,λ), prove irreducibility of the auxiliary source and target fibers and density of the PVI smooth-character inverse locus in both from the four-point moduli and character-space presentations (I13, Proposition 5.3 and the proof of Theorem 2.2 in §6). Combine these geometric conclusions with §4.3's stronger inverse theorem to deduce fiberwise bimeromorphicity and analytic resolution, including resonant exponent fibers, and the corresponding total-family conclusions.\n\nIS12 Theorem 5.1 has generic unramified scope, with the restriction in Remark 6.3; prove the remaining local extension and total-family compactness assertions above. I23's global foliation supplies the time distribution under its moduli hypotheses. HEU10 Theorem 1.1 concerns universal strong isomonodromic deformation: compare its time bases, decorations, determinant and stability, bundle jumps, descent and splitting with §3.9 before using it for classical continuation.\n\nTogether with §4.2's complete target transport and §4.3's all-point compatibility, return the proper-semiconjugacy certificate for §4.6 and NonlinearConnections §0.4. Local horizontal existence is the independent application of §0.3 in §4.5.",
           "hypotheses": [
-            "The RH map constructed in 4.3 for the full admitted classical time/parameter family, with exponent lifts and closed character constraints retained, and every allowed stable source stratum."
+            "The RH maps and determinant-relative comparisons of 4.3, the admitted data and nonempty stable fibers of 3.3–3.5, and the chosen weight chambers with semistable=stable. Retain all allowed exponent parameters, local strata and bundle types."
           ],
           "locator": {
-            "source": "IIS06",
-            "where": "IIS06 Definition 2.11 and Theorems 4.10–4.12; IS12 Theorem 5.1 and Remark 6.3. The full-classical properness and surjectivity onto the independently defined full ordinary quotient are separately owned proof targets."
+            "source": "I13",
+            "where": "I13 §6, Lemma 6.1 and Propositions 6.1–6.2, for logarithmic stable replacement and compactness; Proposition 5.3 and the §6 proof of Theorem 2.2 for PVI irreducibility and density; Theorem 2.2 for the four-logarithmic comparison; IS12 Theorem 5.1 and Remark 6.3 at the generic unramified scope. Prove the three local extension theorems, quotient-compatible global compactness and separate full-target stable realization for the admitted classical profiles."
           },
           "prerequisites": [
             "target:1.1",
@@ -2964,52 +2948,69 @@
             {
               "role": "construction or compatibility law",
               "id": "4.4.api.1",
-              "statement": "Prove properness, surjectivity and bimeromorphicity of the auxiliary unfixed-determinant PVI family in the exact four-point I13 specialization, with the full exponent fiber-product target."
+              "statement": "Prove the logarithmic, unramified and ramified lattice bounds and extension theorems, uniformly over compact sets in the full time/exponent target."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.4.api.2",
-              "statement": "Construct the rank-one regular-singular RH isomorphism and the Cartesian fixed-determinant restriction square on coarse moduli, including the scalar-gerbe and transported-section comparisons."
+              "statement": "Construct quotient-compatible global bounded reconstruction and connection-preserving stable replacement, and prove analytic compactness of every RH inverse image of a compact set."
             },
             {
               "role": "construction or compatibility law",
               "id": "4.4.api.3",
-              "statement": "Prove family properness and the separately quantified surjectivity onto the full independently defined target for each admitted classical profile, and supply the proper-semiconjugacy certificate."
+              "statement": "Prove determinant-relative family properness, its admitted base-change and restriction laws, and the proper-semiconjugacy certificate."
+            },
+            {
+              "role": "construction or compatibility law",
+              "id": "4.4.api.4",
+              "statement": "Prove surjectivity onto every component of the independently defined full ordinary target by stable realization."
+            },
+            {
+              "role": "construction or compatibility law",
+              "id": "4.4.api.5",
+              "statement": "Derive the auxiliary four-logarithmic properness, surjectivity and fiberwise and total-family bimeromorphicity through the determinant-relative comparison and the PVI smooth-character inverse theorem."
             }
           ],
           "tests": [
             {
               "kind": "regression or compatibility check",
               "id": "4.4.tests.1",
-              "statement": "The PVI numerical condition is 2·4 − 2·2 − 2 = 2 > 0; the theorem also retains the degree/residue relation, generic weights, all exponent values and the moduli-functor comparison."
+              "statement": "Vθ^nr can be empty on a resonant exponent fiber; compactness and stable realization still concern that entire fiber."
             },
             {
               "kind": "regression or compatibility check",
               "id": "4.4.tests.2",
-              "statement": "Deleting an exceptional source fiber can destroy properness even when the generic RH map is an isomorphism. The full stable source is used."
+              "statement": "A compactification by connection operators can have a degenerate-symbol boundary. The limiting object here must satisfy the Leibniz rule with identity symbol."
             },
             {
               "kind": "regression or compatibility check",
               "id": "4.4.tests.3",
-              "statement": "The commutative determinant/RH square and the Cartesian fixed-determinant restriction square have different objects. Verify the displayed fiber-product identity for the latter before invoking proper base change."
+              "statement": "Deleting an exceptional source fiber can destroy properness even when RH is generically an isomorphism. The full stable source is used."
             },
             {
               "kind": "regression or compatibility check",
               "id": "4.4.tests.4",
-              "statement": "A genus-zero determinant moduli fiber has dimension zero; the rank-one isomorphism and the scalar-gerbe comparison still determine the actual fixed-determinant restriction."
+              "statement": "The PVI numerical inequality is 2·4−2·2−2=2>0; retain the degree/residue equation, generic weights and full exponent fiber product."
+            },
+            {
+              "kind": "regression or compatibility check",
+              "id": "4.4.tests.5",
+              "statement": "The determinant/RH square is commutative; only the coarse restriction square proved in §4.3 is Cartesian. Dimension zero of a genus-zero rank-one fiber does not establish that comparison."
             }
           ],
           "readme_needs": "Internal: 1.1, 1.2, 1.3, 1.5, 2.3, 2.4, 3.3, 3.5, 3.6, 3.7, 3.8, 4.1, 4.2, 4.3; [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Native topological properness](#dependency-proper) (IsProperMap).",
           "role": "painleve-specific-construction-or-comparison",
           "additional_source_refs": [
-            "I13 Theorem 2.2 specialized to g=0, r=2, n=4; fixed-determinant family properness by the Cartesian restriction square constructed here"
+            "I13 §6, Lemma 6.1 and Propositions 6.1–6.2: logarithmic replacement and compactness arguments at their stated hypotheses",
+            "I13 Proposition 5.3 and the §6 proof of Theorem 2.2: independent PVI irreducibility and density inputs",
+            "I13 Theorem 2.2 specialized to g=0, r=2, n=4: comparison with the auxiliary four-logarithmic theorem derived from the common proof and §4.3's determinant-relative comparisons"
           ],
           "part": "painleve",
           "scope_role": "application",
           "owner": "PainleveEquations:4.4",
           "readme_needs_ja": "内部依存：1.1, 1.2, 1.3, 1.5, 2.3, 2.4, 3.3, 3.5, 3.6, 3.7, 3.8, 4.1, 4.2, 4.3; [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Native topological properness](#dependency-proper) (IsProperMap).",
           "hypotheses_ja": [
-            "指数の持上げと閉じた指標条件を保持した、許容される古典的時間・パラメータ族全体に対して §4.3 で構成した RH 写像、および許容される安定な始域のすべての層を入力とする。"
+            "§4.3 の RH 写像と行列式に相対的な比較、§§3.3–3.5 の許容データと非空の安定ファイバー、および半安定=安定を満たす選択された重みの部屋を入力とする。許容されるすべての指数パラメータ、局所的な層、束型を保持する。"
           ]
         },
         {
@@ -4514,9 +4515,9 @@
     "layers": 8,
     "targets": 55,
     "general_targets": 19,
-    "api_laws": 171,
-    "diagnostics": 195,
-    "internal_edges": 249,
+    "api_laws": 169,
+    "diagnostics": 196,
+    "internal_edges": 250,
     "supporting_constructions": 23
   },
   "reference_convention": {

@@ -1,5 +1,15 @@
 # Submission review and verification record
 
+## Shared classical Riemann–Hilbert proof structure
+
+The [shared RH proof review](../rh-sharing/REVIEW.md) records the bilingual revision against `fa5beb6d40adf6b8b96db4116b0aeabf781074fc`. Sections 4.1–4.4 share the local reconstruction, Betti-family construction, determinant restriction and global properness/stable-realization proofs across all admitted classical profiles, including PVI. The stronger PVI inverse and fiberwise bimeromorphicity statements remain specialized consequences with their geometric proof obligations. The 55 target identities and the 19 framework/36 application division are retained.
+
+The [validation record](../rh-sharing/validation.json) fingerprints the revised specification, structured contracts and source registry. The other 51 numbered sections, representative Lean file, topic metadata and historical checkers and receipts are unchanged. No full build or new GitHub visual-rendering inspection is claimed.
+
+## Earlier review introduction
+
+The following introduction and review sections describe their recorded snapshots.
+
 The current specification is [README.md](../../README.md), with [README.ja.md](../../README.ja.md) as its Japanese version. It contains 55 targets in Layers 0–7: 19 framework targets and 36 classical Painlevé application targets. The classical RH scope revision is recorded first; the remaining sections retain the history of API and scope changes, mathematical reviews, build receipts and browser inspections.
 
 ## Classical Riemann–Hilbert scope revision

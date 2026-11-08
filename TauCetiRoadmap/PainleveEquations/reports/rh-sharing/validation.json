@@ -1,0 +1,313 @@
+{
+  "baseline_commit": "fa5beb6d40adf6b8b96db4116b0aeabf781074fc",
+  "coverage": {
+    "parser_helpers": [
+      "sections",
+      "fields",
+      "ancestors",
+      "source_mentions",
+      "strings",
+      "math_spans",
+      "table_width_errors",
+      "pandoc_math"
+    ],
+    "historical_main_programs_run": false,
+    "numbered_sections": {
+      "total": 55,
+      "authorized": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "changed": {
+        "en": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4"
+        ],
+        "ja": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4"
+        ]
+      },
+      "unchanged_en": 51,
+      "unchanged_ja": 51
+    },
+    "japanese_metadata": {
+      "full_contracts": 8,
+      "hypotheses": 43,
+      "supporting_items": 23
+    },
+    "contract_fields": [
+      "title",
+      "statement",
+      "hypotheses",
+      "api",
+      "tests",
+      "supporting",
+      "source_scope",
+      "Needs",
+      "existing Japanese fields"
+    ],
+    "counts": {
+      "parts": 4,
+      "general_parts": 3,
+      "layers": 8,
+      "targets": 55,
+      "general_targets": 19,
+      "api_laws": 169,
+      "diagnostics": 196,
+      "internal_edges": 250,
+      "supporting_constructions": 23,
+      "application_targets": 36
+    },
+    "sources": {
+      "total": 30,
+      "added": [
+        "SAB12"
+      ],
+      "consumer_changes": {
+        "HEU10": {
+          "before": [
+            "3.2",
+            "3.12",
+            "4.1",
+            "4.4"
+          ],
+          "after": [
+            "3.2",
+            "3.12",
+            "4.4"
+          ]
+        },
+        "IIS06": {
+          "before": [
+            "3.8",
+            "4.3",
+            "4.4",
+            "4.5",
+            "4.6",
+            "4.7",
+            "4.8",
+            "4.9",
+            "5.2",
+            "5.4",
+            "5.5",
+            "5.6",
+            "7.1",
+            "7.2",
+            "7.4",
+            "0.4",
+            "0.5",
+            "0.7"
+          ],
+          "after": [
+            "3.8",
+            "4.3",
+            "4.5",
+            "4.6",
+            "4.7",
+            "4.8",
+            "4.9",
+            "5.2",
+            "5.4",
+            "5.5",
+            "5.6",
+            "7.1",
+            "7.2",
+            "7.4",
+            "0.4",
+            "0.5",
+            "0.7"
+          ]
+        },
+        "SAB12": {
+          "before": [],
+          "after": [
+            "4.1"
+          ]
+        },
+        "SGA1XII": {
+          "before": [
+            "1.2",
+            "1.3",
+            "1.4",
+            "4.3"
+          ],
+          "after": [
+            "1.2",
+            "1.3",
+            "1.4"
+          ]
+        },
+        "KED09": {
+          "before": [
+            "1.1",
+            "3.4",
+            "4.1"
+          ],
+          "after": [
+            "1.1",
+            "3.4"
+          ]
+        },
+        "ACV03": {
+          "before": [
+            "1.3",
+            "4.3",
+            "4.4"
+          ],
+          "after": [
+            "1.3"
+          ]
+        },
+        "MFK94": {
+          "before": [
+            "1.3",
+            "4.2"
+          ],
+          "after": [
+            "1.3"
+          ]
+        }
+      }
+    },
+    "math": {
+      "counts": {
+        "en": {
+          "baseline": 216,
+          "current": 216
+        },
+        "ja": {
+          "baseline": 204,
+          "current": 204
+        }
+      },
+      "changed_target_payloads": {
+        "en": [],
+        "ja": []
+      },
+      "pandoc_available": true
+    },
+    "historical_files_preserved": 7
+  },
+  "input_sha256": {
+    "README.md": {
+      "current": "810a527262fcd8d873c0263506e9566dba64f03caab1f31dd916aba0e6dc1d64",
+      "baseline": "dad815187d1a439cde45407ac1cf1859c98a148c26b0aae98236659119e2a1e7"
+    },
+    "README.ja.md": {
+      "current": "396cf099d487ef5e8800002641c35de4977884973db43aa87a8dc579d4d41197",
+      "baseline": "6667b11c8ebd623455730776ec568e8136013e3d88eeb0563c2b572ddddec35e"
+    },
+    "design/plan.json": {
+      "current": "586fc4c151e16c567ad95e8a60061b76521a35b694dd74b856576603aebbae90",
+      "baseline": "ae549acc6733d747bfae2a174859cb67e8325e052fd727ff3fdd3c99fa782d8f"
+    },
+    "design/dependencies.json": {
+      "current": "dacc7b9704a4bf4612699a1e334114ceb36b3a5e84204a5185d15b42539e9c8a",
+      "baseline": "dacc7b9704a4bf4612699a1e334114ceb36b3a5e84204a5185d15b42539e9c8a"
+    },
+    "design/reuse_graph.json": {
+      "current": "7f66e5370e0213ef41412f33758ed36b81eb2b87f6547998aaf96278b55c976c",
+      "baseline": "b1e946d0c25d0af75b201854f71aef75a86e23f265a1a7584e90b113eafc4943"
+    },
+    "design/reuse_registry.json": {
+      "current": "9f9d86dcee69cf2b5845c899c45a0d58e93ee4b1497341f12b8551544b71ba70",
+      "baseline": "9f9d86dcee69cf2b5845c899c45a0d58e93ee4b1497341f12b8551544b71ba70"
+    },
+    "sources.toml": {
+      "current": "a4e0c2f5f498e06a778b667a858fa5f0a34e9a3193a3d9fd15accecee811f4e4",
+      "baseline": "d11d42ea4537ac3ae2e41feeb3ea255c48a9899e9563295c7478c4a05bf6ffa1"
+    },
+    "Suggested.lean": {
+      "current": "2ed767340b579fb0cc32bf9edffd5c9e7ff4224ea6acf9ef8dda61f5e50f48b2",
+      "baseline": "2ed767340b579fb0cc32bf9edffd5c9e7ff4224ea6acf9ef8dda61f5e50f48b2"
+    },
+    "metadata.toml": {
+      "current": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81",
+      "baseline": "b50aa2bc22ec2d67eaaff1124873e26fcf41a6b052574bc2989ebaa36f067a81"
+    },
+    "reports/rh-reorganization/REVIEW.md": {
+      "current": "8e72900031a424adb7ba78824e82c4e0d806672fc9b505f5b4ec52e33dab6d3a",
+      "baseline": "8e72900031a424adb7ba78824e82c4e0d806672fc9b505f5b4ec52e33dab6d3a"
+    },
+    "reports/rh-reorganization/check_reorganization.py": {
+      "current": "25f7799c3b18fc46bd8f378abac905a125705350f610633cc8b456c912742ecd",
+      "baseline": "25f7799c3b18fc46bd8f378abac905a125705350f610633cc8b456c912742ecd"
+    },
+    "reports/rh-reorganization/migration.json": {
+      "current": "88dd29304ede46490f94b2806db8ca441f952b65bb69384e98f7c3a1086578cb",
+      "baseline": "88dd29304ede46490f94b2806db8ca441f952b65bb69384e98f7c3a1086578cb"
+    },
+    "reports/rh-reorganization/validation.json": {
+      "current": "412c0b707c993d2ae94928418aa4d6c13e6d640d5124610fb97d761c23defb73",
+      "baseline": "412c0b707c993d2ae94928418aa4d6c13e6d640d5124610fb97d761c23defb73"
+    },
+    "reports/submission/REVIEW.md": {
+      "current": "6a815861b2c648fb3e8f5ad24249217b83a80cefbe4a1d12027d429912624f4f",
+      "baseline": "24fc1da362c431b4d06f7a5081dc37ccddc7994e775a6854271e83479d3028b6"
+    },
+    "reports/submission/check_math_rendering.py": {
+      "current": "6a781868a3279edbf7610f0429cd54dc01191da00a5f157cf2c02e9c456acdcc",
+      "baseline": "6a781868a3279edbf7610f0429cd54dc01191da00a5f157cf2c02e9c456acdcc"
+    },
+    "reports/timeless/REVIEW.md": {
+      "current": "e7276c058bd40a77f66e7323f3d2fd468c7224c687dbb28d80f451a64677886d",
+      "baseline": "e7276c058bd40a77f66e7323f3d2fd468c7224c687dbb28d80f451a64677886d"
+    },
+    "reports/timeless/check_timeless.py": {
+      "current": "f977a960e69fbb6c763798d21567550bfb1ccdcb3cc8ee8762cc0f758f5c38e6",
+      "baseline": "f977a960e69fbb6c763798d21567550bfb1ccdcb3cc8ee8762cc0f758f5c38e6"
+    }
+  },
+  "failures": [],
+  "limits": [
+    "Structural consistency and preservation are checked; the roadmap theorem statements and shared-proof scope require mathematical review.",
+    "Existing Japanese metadata is checked exactly; bilingual mathematical equivalence is not inferred from equal item counts.",
+    "No Lean build or theorem proof is performed; GFM parsing is not a visual inspection of GitHub."
+  ],
+  "checker_sha256": "d456437e2bbb015b5b5f59866aadf33d0c96b823fbb99badd083a2dafe00bffc",
+  "changed_input_files": [
+    "README.md",
+    "README.ja.md",
+    "design/plan.json",
+    "design/reuse_graph.json",
+    "sources.toml",
+    "reports/submission/REVIEW.md"
+  ],
+  "summary": {
+    "gates": 22,
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0
+  },
+  "checked_gates": [
+    "required inputs present",
+    "baseline bytes match the pinned Git object manifest",
+    "target inventory and order preserved",
+    "numbered edits confined to authorized targets",
+    "every numbered contract parses",
+    "target identities and bilingual ownership preserved",
+    "EN/JA contract fields match the plan",
+    "bilingual Needs match prerequisite declarations",
+    "API, diagnostic and supporting addresses unique",
+    "prerequisites are known, unique and preceding",
+    "reuse graph matches contracts",
+    "DAG and general/local proof independence",
+    "part registry and general frameworks preserved",
+    "all counts derived from contracts",
+    "layer titles and numbering synchronized",
+    "external scopes, consumers and bilingual tables synchronized",
+    "bibliographic identities and all explicit source consumers resolve",
+    "Markdown tables, unique anchors and fragment links valid",
+    "math preserved outside edit scope and independently parsed",
+    "active prose has no draft or review-response markers",
+    "Suggested, topic metadata and historical receipts retained",
+    "inputs stable during verification"
+  ]
+}

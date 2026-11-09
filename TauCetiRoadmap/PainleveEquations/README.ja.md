@@ -50,26 +50,29 @@
 | 供給項目 | 正確な供給先 | 範囲と本ロードマップの担当 |
 |---|---|---|
 | <a id="dependency-complex"></a>complex | [ComplexKahlerGeometry](../../TauCetiRoadmap/ComplexKahlerGeometry/README.md) — K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1 | 複素逆・陰関数と接束計算、正則芽・一変数有理型芽、正則束と層の同値、非特異な平坦接続と局所系、射影空間のチャート。非線形接続と正則 ODE は一般理論が担い、1.1–1.2 は共通の接続・解析化に対する有理型付加構造への適用を担う。 3.8は対数極の局所モノドロミー族と、その正則なパラメータ依存性・基底変換の比較を構成する。 |
-| <a id="dependency-smooth"></a>smooth | [SmoothBundlesConnections](../../TauCetiRoadmap/SmoothBundlesConnections/README.md) — B1.5; B5.0; B5.2 | 滑らかなEhresmann分裂、固有沈め込みおよび主接続の移送を、それぞれの仮定の範囲で用いる。一般の非線形移送は0.1–0.5が担う。 |
+| <a id="dependency-smooth"></a>smooth | SmoothBundlesConnections B1.5, B5.0, B5.2 | 滑らかな実 Ehresmann 接続と引戻し・制限・極大水平持上げは B1.5 を用いる. §§0.1–0.3 は非全射の沈め込み, C¹ 分裂と連続時間の持上げ, 正則な場合を扱う. B5.0 と B5.2 は各節で定める束と主束の移送を供給する. |
 | <a id="dependency-differential"></a>differential | [DifferentialGeometry](../../TauCetiRoadmap/DifferentialGeometry/README.md) — Layers 0–1; 3.1–3.5 | 有限次元多様体・チャート・滑らかな局所／極大／時間依存flow。連続時間・相変数局所一様Lipschitzの定理は0.2、一階jetは0.8で証明する。 |
+| <a id="dependency-ode"></a>ode | Mathlib の時間依存 ODE | IsPicardLindelof, exists_eq_forall_mem_Icc_hasDerivWithinAt, exists_forall_mem_closedBall_eq_hasDerivWithinAt_lipschitzOnWith, ODE_solution_unique_of_mem_Icc を用いる. §0.2 は多様体上の貼合せとコンパクト延長を扱う. |
 | <a id="dependency-frobenius"></a>frobenius | `TauCeti.Analysis.ODE.Frobenius` — TauCeti.exists_frobenius_flat_coordinate | 有限次元の実可積分グラフ場から、明記した正則性の下で、滑らかな逆写像と水平微分を持つ局所積OpenPartialHomeomorphを得る。0.5が沈め込み座標への移送、曲率から可積分性、貼合せとホモトピー不変性を証明し、正則版は0.3を用いる。 |
 | <a id="dependency-covers"></a>covers | [Completed/UniversalCovers](../../Completed/UniversalCovers/README.md) — Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8 | 既存の被覆・経路とホモトピーの持上げ・普遍被覆・基本群。非線形作用と水平降下は0.5で構成し、非正規被覆では実際のファイバー関係を用いる。 3.8は標識付きループから局所モノドロミーを構成し、ホモトピーと基点変更の比較を証明する。 |
 | <a id="dependency-curves"></a>curves | [ComplexCurveModuli](../../TauCetiRoadmap/ComplexCurveModuli/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15 | 種数0のMöbius正規化と点の移動、安定範囲の標識曲線変形チャート。1・2標点の商チャート、有限jet、局所標識、行列式移送は1.2が構成する。 |
 | <a id="dependency-stacks"></a>stacks | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 1.18–1.23 | スタック化・2ファイバー積・慣性・準連接層降下・有限慣性のKeel–Mori。Gmの剛化、GIT、gerbeと粗モジュライの比較は1.3が証明する。 |
 | <a id="dependency-quotient-predicates"></a>quotient-predicates | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 1.17 | 圏論的・幾何学的商の定義、Artinのbootstrap、および指定された有限群の射影商。不変式論は1.3で構成し、古典的な表現・指標商、wildなフレーム亜群とStokes商は4.2で構成する。 |
-| <a id="dependency-reductive-git"></a>reductive-git | AlgebraicModuliForArithmeticGeometry, gap:reductive-connection-git | 複素簡約群の有限生成, アフィン商, 相対豊富な線形化, 相対不変 Proj, 安定商および Hilbert–Mumford 判定法. |
+| <a id="dependency-reductive-git"></a>reductive-git | AlgebraicModuliForArithmeticGeometry | 複素数体上のアフィン線形簡約群に対する相対不変式 Proj と安定な幾何学的商（gap:reductive-connection-git）, および相対 Hilbert–Mumford 判定（gap:relative-hilbert-mumford）を用いる. §§1.3, 4.2–4.4 は実際の枠付き空間, 群作用, 線形化と数値比較を構成する. |
 | <a id="dependency-quot"></a>quot | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.14 | Noetherian・射影的なQuot/HilbertとHom/Isom空間。接続の有界性・方程式・安定性は1.3、解析的引戻しは1.2が担う。 |
 | <a id="dependency-cohomology"></a>cohomology | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.2; 2.6; 2.20; 3.3 | Čech・層コホモロジー、連接な項、相対・Serre 双対、次数・曲線 Riemann–Roch。1.4 は制約付きの微分作用素変形複体・分岐錐・トレース・双対比較を構成し、一般の作用素・主部・GAGA は C5.1 を用いる。 |
 | <a id="dependency-deformation"></a>deformation | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 4.2–4.6 | Artin係数・変形関手・hull・基本的小拡大の障害。実際の接続コサイクルと平方零核・versal比較は1.4、強い水平延長は2.1で証明する。 |
 | <a id="dependency-bundles"></a>bundles | [AlgebraicVectorBundles](../../TauCetiRoadmap/AlgebraicVectorBundles/README.md) — L0A–L0C; L1A–L1B; L2A–L2B | 有限局所自由層、双対・テンソル・行列式、相対 Spec と幾何学的ベクトル束との同値。1.1 は共通の通常／形式接続を用いて有理型付加構造を構成し、1.2 は共通の解析化をその対象へ適用する。 |
 | <a id="dependency-ordinary-connections"></a>ordinary-connections | [CrystallineCohomology](https://github.com/TauCetiProject/TauCetiRoadmap/blob/5231bad75352a6086d9952ff511636c8a8ddc6ac/TauCetiRoadmap/CrystallineCohomology/README.md) — CR.1.3: ordinary connection carrier and operations | 任意の可換基底環上の通常の接続・延長・曲率・水平射・基底変換・テンソル・Hom・双対。定義に可積分性は課さない。1.1 は共通の接続上で極の上界・付加構造・行列式・End⁰ と局所化の比較を構成する。 |
 | <a id="dependency-formal-connections"></a>formal-connections | [FormalConnectionsOpers](https://github.com/TauCetiProject/TauCetiRoadmap/blob/19aacea45eee77564f95118de8f55f72547a9fe0/TauCetiRoadmap/FormalConnectionsOpers/README.md) — F1.1–F1.3; F2.1; F3.3–F3.4 | 相対連続微分・完備テンソル・形式座標自己同型と引戻し作用・Tate 係数の降下・形式接続・左ゲージ亜群。F3.4 の本質像には係数環の被覆条件を保持する。1.1 は実際の束の完備化、円板上への延長条件、分岐付加構造の降下、Levelt–Turrittin と相対因子化を担う。左作用 h とフレーム変換 g は h=g⁻¹ で比較する。 |
-| <a id="dependency-analytic-spaces"></a>analytic-spaces | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix | 冪零元を保持する単一の解析空間の圏、局所有限型スキームと局所分離有限型代数空間の解析化、連接層・テンソル・引戻し・étale 降下・固有射・通常の正則接続の比較。1.2 は実際の曲線・時間・モジュライ表示への適用、極と付加構造、滑らかな解析的引戻し、多様体比較とその次元・位相条件を担う。 |
-| <a id="dependency-coherent-gaga"></a>coherent-gaga | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C1.9 | 有限型複素スキーム・固有代数空間の射影的／固有連接 GAGA と全次数の固有直像比較。冪零元と標準交換写像を保持する。1.2 は曲線・束・行列式の構成で仮定と写像を確認し、1.4 は供給された作用素複体の定理を介して適用する。基底変換の仮定は保持する。 |
-| <a id="dependency-differential-operators"></a>differential-operators | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/fa9bfa5892bc24d60762bb1fbfc61f09f8be9043/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga | 標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。 |
+| <a id="dependency-analytic-spaces"></a>analytic-spaces | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/3cf1bed88b57c2ddda0fe262b3b949d419bf4783/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C−1.1–C−1.2; C0.3–C0.5; C0.7; C5.2: ordinary connection comparison prefix | 冪零元を保持する単一の解析空間の圏、局所有限型スキームと局所分離有限型代数空間の解析化、連接層・テンソル・引戻し・étale 降下・固有射・通常の正則接続の比較。1.2 は実際の曲線・時間・モジュライ表示への適用、極と付加構造、滑らかな解析的引戻し、多様体比較とその次元・位相条件を担う。 |
+| <a id="dependency-regular-singular"></a>regular-singular | ComplexComparisonPartII C5.6 | RegularSingular, CanonicalLogExtension, 選んだ帯域でのモノドロミーの共役と対数格子の判定を用いる. §§3.8, 4.1, 4.3 は実際の付加構造, 共鳴指数の持上げ, 行列式との比較を行う. |
+| <a id="dependency-coherent-gaga"></a>coherent-gaga | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/3cf1bed88b57c2ddda0fe262b3b949d419bf4783/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C1.9 | 有限型複素スキーム・固有代数空間の射影的／固有連接 GAGA と全次数の固有直像比較。冪零元と標準交換写像を保持する。1.2 は曲線・束・行列式の構成で仮定と写像を確認し、1.4 は供給された作用素複体の定理を介して適用する。基底変換の仮定は保持する。 |
+| <a id="dependency-differential-operators"></a>differential-operators | [ComplexComparisonPartII](https://github.com/TauCetiProject/TauCetiRoadmap/blob/3cf1bed88b57c2ddda0fe262b3b949d419bf4783/TauCetiRoadmap/ComplexComparisonPartII/README.md) — C5.1: shared algebraic operators/principal parts; C5.1: DifferentialOperatorAnalytification; C5.1: boundedOperatorHyperGaga | 標数によらない全階の微分作用素・主部・普遍 jet・合成・局所化・層化・解析化と、絶対／相対の固有な有界作用素複体の GAGA。1.1 は一次 Leibniz 作用素、1.2 は有理型付加構造への比較、1.4 は制約付き変形複体・分岐錐と位数・連接性・相対線形性・トレース・双対・基底変換の確認を担う。 |
 | <a id="dependency-algebraic-manifolds"></a>algebraic-manifolds | [FormalConnectionsOpers](https://github.com/TauCetiProject/TauCetiRoadmap/blob/19aacea45eee77564f95118de8f55f72547a9fe0/TauCetiRoadmap/FormalConnectionsOpers/README.md) — F2.4: fixed-model analytification and sheaf/tangent comparisons | 微分次元一定の有限型分離滑らか複素スキームの固定モデル多様体、第二可算性、次元・構造層・接束・étale の比較。1.2 はスキームのチャートで適用し、供給された代数空間の解析化を介して実際のモジュライ比較を降下する。任意の滑らかな解析基底では解析チャートによる比較と Hausdorff・第二可算・次元条件を確認する。 |
 | <a id="dependency-proper-cohomology"></a>proper-cohomology | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md) — Layer C | 固有連接直像と、各仮定を区別した平坦基底変換・コホモロジー基底変換。Grauertの定理には被約な基底と階数一定の仮定を課す。相対Picard拡張は1.5、境界係数の平坦性と局所自由性・任意基底変換の判定条件の検証は5.3が担う。 |
-| <a id="dependency-field-picard"></a>field-picard | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14 | 体上の射影的幾何学的整スキームのPicard、滑らかな曲線のJacobian、線束降下・変形。非被約曲線を含む相対Picardは1.5が構成する。 |
+| <a id="dependency-field-picard"></a>field-picard | [JacobianChallenge](../../TauCetiRoadmap/JacobianChallenge/README.md); [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14 | 体上の射影的幾何学的整スキームのPicard、滑らかな曲線のJacobian、線束降下・変形。相対 Picard には別の供給契約を用いる. |
+| <a id="dependency-relative-picard"></a>relative-picard | ComplexComparisonPartII §§C3.2d.2–C3.2d.3, C3.2f.1–C3.2f.2 と AlgebraicModuliForArithmeticGeometry §7.3 | 前者から相対 Picard 代数空間と単位成分の判定を, 後者から制限同型を指定した Artin 基底上の線束の持上げを得る. §1.5 は曲線族の仮定を検証し, 線接続の torsor を構成する. §5.1 は境界の仮定を検証し, 単位成分を計算する. |
 | <a id="dependency-supports"></a>supports | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 2.7 | 台付きコホモロジー、局所化・切除、NoetherianなExt余極限と局所コホモロジーとの比較。第一境界層の直線、台付きコホモロジーへの単射、および時間直線との同定は5.3が構成する。 |
 | <a id="dependency-surfaces"></a>surfaces | [SchemeAndStackFoundations](../../TauCetiRoadmap/SchemeAndStackFoundations/README.md) — 3.4; 4.11; 4.17; 5.9–5.10 | 因子・Picard群、ブローアップ・狭義変換、正規交叉、曲面交点・随伴・格子。非被約境界と相対変形は目標5.1–5.3、変換は目標5.4–5.6が担う。 |
 | <a id="dependency-formal-series"></a>formal-series | [FormalLaurentPuiseux](../../TauCetiRoadmap/FormalLaurentPuiseux/README.md) — L1–L4; L5–L6 for finite-extension steps in 1.1 | 形式代入・連続微分・有限次元HahnModule・留数・分岐と有限拡大の代数。微分加群標準形と降下は1.1が担う。 |
@@ -81,6 +84,8 @@
 | <a id="dependency-curve-functions"></a>curve-functions | `TauCeti.Analysis.Complex.RiemannSurface.FunctionField`; `TauCeti.Analysis.Complex.RiemannSurface.FunctionField.Comap` — TauCeti.RiemannSurface.MeromorphicFunction; Nonconstant curve pullback and order comparison | Riemann面からOnePoint ℂへの正則写像と恒等的無限大を除く証人、引戻し・位数。相空間の観測許容性とスカラー降下は0.7が証明し、同じ関数の対象を用いる。 |
 | <a id="dependency-proper"></a>proper | `Mathlib.Topology.Maps.Proper.Basic` — IsProperMap | 位相的固有写像と各仮定の下でのコンパクト逆像・基底変換。水平延長は 0.4、実際の族への解析比較の適用は 1.2、RH 族の固有性は 4.4 が担う。 |
 
+相対 Hilbert–Mumford 判定を, アフィンな X₀ 上の射影的な G 同変射 X→X₀ と G 線形化された相対豊富な可逆層 ℒ に適用する. X と X₀ は有限型複素スキーム, G はアフィン線形簡約群とする. 極限を持つ各一径数部分群について, 極限点の ℒ のファイバーに v↦tʷv で作用するとき, 半安定性には w≥0 を, 安定性には非自明な一径数部分群に対して w>0 を要求する. 中心部分群で割って判定する場合は, その部分群が表示と線形化された層の両方に自明に作用することを確かめ, 商群に降りた作用に判定を適用する. この符号規約では w は双対直線上の重みの負である（GHH15, Definition 3.1）.
+
 ### 補助構成の一次文献
 
 - **SGA1XII.** A. Grothendieck et al.; Exposé XII by M. Raynaud. [Revêtements étales et groupe fondamental (SGA 1), Exposé XII: Géométrie algébrique et géométrie analytique](https://arxiv.org/pdf/math/0206203v2). XII Theorem and Definition 1.1 (analytification); §2 (coherent sheaf comparison); §3.1 (morphism properties, including properness); Theorem 4.2 (proper relative direct-image comparison); Corollary 4.3 (cohomology); Theorem 4.4 (proper coherent GAGA).
@@ -91,6 +96,12 @@
 - **ACV03.** D. Abramovich, A. Corti and A. Vistoli. [Twisted bundles and admissible covers](https://arxiv.org/pdf/math/0106211). §5.1, Theorem5.1.5 and construction; Stacks Project tag04V2 for hypotheses.
 - **PICREL.** The Stacks Project Authors. [The Picard functor and its properties](https://stacks.math.columbia.edu/tag/0D2C). Proposition99.11.8, tag0D2C; Lemma108.9.3, tag0DNI; Lemma108.9.5, tag0DPK; the Picard gerbe Lemma108.9.1 in tag0DMD.
 - **MFK94.** D. Mumford, J. Fogarty and F. Kirwan. [Geometric Invariant Theory, third edition](https://link.springer.com/book/9783540569633). Chapter1, reductive invariant theory and construction of quotients; coupled to I23 Theorem5.1 and its actual framed filtered-connection construction.
+- **GHH15.** M. G. Gulbrandsen, L. H. Halle and K. Hulek. [A relative Hilbert–Mumford criterion](https://arxiv.org/abs/1404.7267). Manuscripta Mathematica 148 (2015), 283–301. Proposition 2.6 は相対商の射影性を与える. 相対数値判定には Corollary 1.1 と Theorem 3.3 を用いる. Definition 3.1 は §1.1 の幾何的直線束の規約を使う.
+- **KMS93.** Ivan Kolář, Peter W. Michor and Jan Slovák. [Natural Operations in Differential Geometry](https://www.emis.de/monographs/KSM/kmsbookh.pdf). Springer, 1993. §9.3, p. 78, and Theorem 9.8, p. 81.
+- **Teschl12.** Gerald Teschl. [Ordinary Differential Equations and Dynamical Systems](https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf). AMS, 2012. Theorem 2.2, p. 38, and Corollary 2.15, pp. 52–53.
+- **IY08.** Yulij Ilyashenko and Sergei Yakovenko. [Lectures on Analytic Differential Equations](https://www.wisdom.weizmann.ac.il/~yakov/thebook1.pdf). Theorem 1.1, pp. 1–2 of the author draft linked here.
+- **IIS Part II.** Michi-aki Inaba, Katsunori Iwasaki and Masa-Hiko Saito. [Moduli of Stable Parabolic Connections, Riemann–Hilbert Correspondence and Geometry of Painlevé Equation of Type VI, Part II](https://arxiv.org/pdf/math/0605025). Theorem 4.1, preprint p. 11.
+- **JK94.** Nalini Joshi and Martin D. Kruskal. [A Direct Proof that Solutions of the Six Painlevé Equations Have No Movable Singularities Except Poles](https://doi.org/10.1002/sapm1994933187). Studies in Applied Mathematics 93 (1994), 187–207.
 
 <a id="layer-0"></a>
 
@@ -126,7 +137,7 @@
 
 **一般理論。**
 
-$`\pi:M\to B`$ を、境界を持たない有限次元 Hausdorff・第二可算な滑らかな多様体の間の滑らかな沈め込みとする。実非線形接続とは $`d\pi\circ h=\mathrm{id}`$ を満たす $`C^1`$ ベクトル束分裂 $`h:\pi^*TB\to TM`$ である。正則版では複素多様体、正則な沈め込み、正則分裂を用いる。$`\pi`$ の全射性・固有性は定義に含めない。曲率・微分形式・滑らかな Frobenius 理論を使う箇所では実分裂を滑らかと仮定し、$`C^1`$ 版は個々の経路の持上げに用いる。
+滑らかな全射沈め込み π:M→B には SmoothBundlesConnections B1.5 の Ehresmann 分布を用いる. ker(dπ) の補分布上で dπ を逆にすると分裂 h が得られ, その像から分布が復元される. 引戻し, 制限, 極大水平持上げにも B1.5 をその仮定の下で用いる. この構成を非全射の沈め込み, 区分的 C¹ 経路に沿う C¹ 分裂, および正則沈め込みの正則分裂へ拡張する. 多様体は境界なし, 有限次元, Hausdorff, 第二可算とする. 曲率と実微分形式には滑らかな分裂を用いる（KMS93, §9.3, p. 78 および Theorem 9.8, p. 81）.
 
 射 $`(F,f):(M\to B,h)\to(N\to C,k)`$ は、$`\rho F=f\pi`$ および $`dF\circ h=k\circ df`$ を満たす実際の滑らかな写像の組とする。正則圏では正則写像を用いる。恒等射と合成は写像の恒等射と合成である。同型は射、逆射、および両方向の逆射の恒等式からなる。
 
@@ -158,7 +169,7 @@ $`\pi:M\to B`$ を、境界を持たない有限次元 Hausdorff・第二可算�
 
 **一般理論。**
 
-有限次元座標領域上の $`y'=F(t,y)`$ について、$`F`$ が時間について連続で、相変数について局所一様 Lipschitz である場合の局所存在・一意性を証明する。十分小さい閉じた時間・相変数の箱で定数を一様に取る。沈め込み座標 $`\pi(z,y)=z`$ では、$`C^1`$ 基底経路 $`\gamma`$ と $`C^1`$ 分裂から $`y'=A(\gamma(t),y)\gamma'(t)`$ を得る。積分方程式の縮小写像論法で局所解を構成し、一意性・制限との整合性を証明し、座標解を貼り合わせて各初期点を通る一意な極大水平持上げを構成する。有限個の $`C^1`$ 区分を持つ経路では区切り点で解を連結する。
+沈め込み座標 π(z,y)=z では, C¹ 基底経路 γ に沿う持上げ方程式は y′=A(γ(t),y)γ′(t) である. 右辺が時間に連続で相変数について局所一様 Lipschitz であることを確かめ, 十分小さい閉じた時間・相変数の箱上で Mathlib の存在・一意性定理を適用する. 座標解を貼り合わせて一意な極大持上げを構成し, 有限個の C¹ 区分を連結する. コンパクト延長には Teschl12, Corollary 2.15, pp. 52–53 を用い, 滑らかな自律系に特殊化したときの結論を Tau Ceti の eventually_flowOf_notMem と比較する.
 
 コンパクト延長補題を証明する。基底経路の有限端点まで定義された部分的水平持上げの像が $`M`$ の一つのコンパクト集合に含まれるなら、その端点を越えて延長できる。コンパクト集合付近の有限個の沈め込み座標、一様な局所存在時間、集積点と一意性により端点値と延長を得る。局所一意性により、集積点への収束と延長の一意性を証明する。同じ座標形式の通常の非自律 ODE にもこの補題を提供する。
 
@@ -172,7 +183,7 @@ $`C^1`$ 経路の速度は連続であるだけなので、自律化した場 $`
 
 **API.**
 
-- 連続時間 Picard–Lindelöf 座標定理と、局所持上げに必要な初期値への連続依存を証明する。
+- Mathlib の局所解に対し, 局所持上げに必要な初期値への連続依存を証明する.
 - 一意な極大水平持上げを構成し、制限、定義される範囲での逆向き経路、有限個の C¹ 区分の連結との整合性を証明する。
 - 部分持上げが一つのコンパクト集合に含まれれば有限端点を越えて延長することを、実際の非自律 ODE の正則性を用いて証明する。
 
@@ -182,7 +193,7 @@ $`C^1`$ 経路の速度は連続であるだけなので、自律化した場 $`
 - $`y'=y^2,\ y(0)=1`$ の解は $`y(t)=1/(1-t)`$ であり、アフィン相直線内では $`t=1`$ を越えて延長しない。コンパクト包含の仮定が破れている。
 - $`\gamma(s)=|s-1/2|^{3/2}`$ は $`C^1`$ だが、$`\gamma'`$ は $`1/2`$ で $`C^1`$ ではない。持上げ方程式は連続時間 ODE として適用範囲内にあるが、$`C^1`$ 自律化を仮定できない。
 
-*必要な先行結果：* 内部依存：0.1; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5).
+*必要な先行結果：* 内部依存：0.1; [Smooth differential calculus and flows](#dependency-differential) (Layers 0–1; 3.1–3.5); [Mathlib の時間依存 ODE](#dependency-ode).
 
 **出典と適用範囲.** 局所 ODE の構成とコンパクト延長補題により、target:0.4 の固有半共役定理およびコンパクト包含の判定に用いる解析接続の議論を与える。
 
@@ -589,13 +600,13 @@ q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr)
 
 **本目標が担う補助構成。**
 
-- フィルター付き接続の有界性を証明した上で SSF4.14 から有限型のパラメータ空間を構成し、簡約フレーム群、線形化、選んだ有理放物重みに対する Hilbert–Mumford 条件との同値を指定する。必要な不変式の有限生成、安定な幾何学的商・アフィン圏論的商を証明し、I23 の範囲で実際のモジュライ普遍性・分離性・準射影性を得る。Isom 層の fppf 商とスタック化によって中心 Gm の rigidification を作り、その gerbe・基底変換の普遍性と GIT 粗モジュライとの比較を証明する。行列式同定を含む場合の μr 慣性は別に比較し、有限慣性の Keel–Mori を使う箇所を限定する。各テンソルのスカラー作用が自明であることと粗モジュライの基底変換をこの表示上で証明する。
+- フィルター付き接続の有界性を証明し, SchemeAndStackFoundations §4.14 から有限型のパラメータスキームと接続・因子分解の方程式を構成する. 数値判定に用いるアフィン上の射影的表示, GL 枠群, 相対豊富な線形化を指定する. 中心スカラーで割って安定性を判定する場合は線形化の降下を確かめ, 商群に相対 Hilbert–Mumford 判定を適用する. 放物安定性との同値, モジュライの普遍性, スカラー剛化, GIT 商との粗比較を証明する. 行列式同定がある場合は μᵣ 慣性を保持し, 有限慣性の Keel–Mori の適用範囲と粗商の基底変換をこの表示上で確かめる.
 
 - 有限型の代数的な曲線・時間チャートごとに、有界なフレーム付き Quot 表示の解析化が、1.2 で許容する滑らかな複素基底からの任意の正則基底変換後に、対応する解析的な族を表すことを証明する。十分正のねじりによる局所解析的生成、連接な解析的直像と基底変換、正則フレームと因子化接続の方程式、実際の関係の降下を構成する。これにより、各許容された滑らかな解析基底上で、2.3 に用いる解析的モジュライ比較を構成する。これらの表示写像を介して解析的商と構成済み GIT 商の解析化を同定する。1.4 で変形複体を構成し、そのフレーム付き微小変形と versal チャートを、ここで GIT により構成したモジュライ空間と比較する。
 
 - 1.2 で構成した正の冪と射影的埋込みから得られる有界な Quot/GIT 表示を比較する。まず両表示と実際の点の関手への写像を構成し、その後で証明したモジュライの普遍性から互いに逆の比較写像と、合成・基底変換の法則を得る。これにより、明記した曲線の安定性問題における補助的な偏極・フレームの選択からの独立性を証明する。
 
-*必要な先行結果：* 内部依存：1.1, 1.2; [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23); [Quotient predicates](#dependency-quotient-predicates) (1.17); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); AlgebraicModuliForArithmeticGeometry (gap:reductive-connection-git).
+*必要な先行結果：* 内部依存：1.1, 1.2; [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14); [Stacks, inertia and restricted coarse-space criteria](#dependency-stacks) (1.18–1.23); [Quotient predicates](#dependency-quotient-predicates) (1.17); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [簡約 GIT](#dependency-reductive-git) (gap:reductive-connection-git, gap:relative-hilbert-mumford).
 
 **文献の範囲と担当証明：** I23 Theorem 5.1 と §§7–10 が許容モジュライの構成を与える。このモジュライ問題に対し、指定行列式、剛化、粗空間の基底変換の比較を構成する。
 
@@ -671,11 +682,11 @@ q''=\bigl(A_t+A A_q+B A_p\bigr)\bigl(t,q,P(t,q,q')\bigr)
 
 **本目標が担う補助構成。**
 
-- 局所 Noetherian 基底上の射影的・平坦・有限表示の複素曲線族について、任意の基底変換後の O_B≅p_*O_C を仮定して fppf 相対 Picard 代数空間を構成する。連接コホモロジーの基底変換と、以下に明記する affine な平方零試験と相対コホモロジー次元によって相対的滑らかさを得る線束変形の証明を含める。単位成分・次元一定性の仮定を明示し、曲線や基底の非被約試験も保持する。JacobianChallenge C–D は連接コホモロジーと体上の幾何学的整な特殊例に限って用いる。滑らかな標識曲線では相対 Picᵈ と rigidify した Poincaré 束、適合するトレース極部分を固定した線接続のアフィン torsor を構成し、正則 de Rham 接複体・次元 2g・トレースとスカラーの分解・行列式写像の滑らかさを証明する。非被約曲線の Picard 定理はパンルヴェ固有の結果を前提にせず 5.1 に供給する。
+- 局所 Noetherian 基底上の射影的・平坦・有限表示の複素曲線族について, O_B≅p_*O_C が任意の基底変換後も成り立つことを確かめ, 供給された fppf 相対 Picard 代数空間を適用する. コホモロジーと基底変換の計算から, 単位成分の次元が局所一定であることを示す. 次のアフィンな平方零試験を用いて, 非被約な曲線や基底を含めて単位成分の判定を適用する. 滑らかな標識曲線では次数 d の部分と標識切断に沿って剛化された Poincaré 族を用い, 両立するトレース極部分を持つ線接続のアフィン torsor を構成する. 正則 de Rham 接複体, 次元 2g, トレースとスカラーの分解, 行列式写像の滑らかさを証明する.
 
-- 形式的滑らかさは、準連接イデアル I を持つ affine な平方零肥厚 T₀↪T に局所化して検証する。平坦性により C_T 内の C_T0 のイデアルを p*I と同定する。H²(C_T0,p*I) に値を取る障害、制限同型を指定した持上げの同型類に対する H¹(C_T0,p*I) の torsor、および H⁰ から得る微小自己同型を構成する。固有かつ相対次元が高々1であることから q>1 で R^q p_*(p*I)=0 を証明し、基底の affine 性と Leray により H²=0 を得る。一般の試験基底は開被覆または fppf 降下で扱い、局所有限表示の判定から滑らかさを導く。絶対 H² の消滅には試験基底の affine 性を用い、一般の基底での結果は降下によって得る。PICREL tags 0D2C・0DNI・0DPJ・0DPK を用いる。
+- 形式的滑らかさは、準連接イデアル I を持つ affine な平方零肥厚 T₀↪T に局所化して検証する。平坦性により C_T 内の C_T0 のイデアルを p*I と同定する。H²(C_T0,p*I) に値を取る障害、制限同型を指定した持上げの同型類に対する H¹(C_T0,p*I) の torsor、および H⁰ から得る微小自己同型を構成する。固有かつ相対次元が高々1であることから q>1 で R^q p_*(p*I)=0 を証明し、基底の affine 性と Leray により H²=0 を得る。一般の試験基底は開被覆または fppf 降下で扱い、局所有限表示の判定から滑らかさを導く。絶対 H² の消滅には試験基底の affine 性を用い、一般の基底での結果は降下によって得る。Artin 基底上では, この計算と供給された制限同型付き持上げを比較する.
 
-*必要な先行結果：* 内部依存：1.3, 1.4; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Picard over a field and Picard foundations](#dependency-field-picard) (JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C).
+*必要な先行結果：* 内部依存：1.3, 1.4; [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Picard over a field and Picard foundations](#dependency-field-picard) (JacobianChallenge Layer D; SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C); [相対 Picard 代数空間と単位成分](#dependency-relative-picard) (ComplexComparisonPartII §§C3.2d.2–C3.2d.3, C3.2f.1–C3.2f.2, AlgebraicModuliForArithmeticGeometry §7.3).
 
 **文献の範囲と担当証明：** I23 Theorem 7.5 と行列式による障害解析が、行列式非固定の滑らかさを与える。cone 全体の分解、直交性、行列式写像の滑らかさを証明し、明記した行列式固定の結論を得る。
 
@@ -761,7 +772,7 @@ H 上の滑らかさを証明し、元の安定モジュライ・複体・形式
 
 剛化された相空間族の正則な水平切断 s:V→M に対し、§1.3 のスカラージェルブと普遍対象被覆を引き戻す。この被覆への持上げを持つ十分小さい時間チャート V_i 上で、代表となる付加構造付き族 (E_i,∇_i) と、その相対接続を制限として持つ強い可積分全接続を構成する。選んだ代表と s|_(V_i) との同一視を保持し、行列式固定の場合、全行列式接続は §1.2 で検証した輸送と一致させる。基底線束 L による代表の変更では、十分小さいチャート上で L に適合する可積分接続を選び、テンソル公式 ∇_tot′=∇_tot⊗1+1⊗p*∇_L と接続を保つ同型によって全接続を比較する。行列式固定の場合、L⊗r 上の誘導接続は指定した自明化に関して自明でなければならない。大域的な束と全接続を出力するには、接続を保つ遷移同型と三重共通部分でのコサイクル則を要する。この降下データを与えない場合、出力は引き戻したジェルブ上の局所対象であり、粗切断の任意の代表上に全接続があるとは主張しない。
 
-実際のトレースコサイクルと強い延長の比較により、構成した水平変化が相対シンプレクティック形式 ω を保つことを証明する。任意の分裂の平坦性だけからこの保存性は従わない。Ω(v,w)=ω(v−h(dπv),w−h(dπw)) を定義し、dΩ=0 と ker Ω=im h を証明して、局所水平輸送による ω の保存を導く。これらの計算で証明した平坦性とトレース形式の保存に、NonlinearConnections §0.6 の微分形式の恒等式を適用する。シンプレクティック自明化と必要な局所完全性を備える時間1次元のチャート上で、相対次元2では Ω=dq∧dp+dH∧dt、高い偶数次元では対応する和を導く。スカラー Hamilton 関数はチャートに付随する局所原始関数である。
+実際のトレースコサイクルと強い延長の比較により、構成した水平変化が相対シンプレクティック形式 ω を保つことを証明する。任意の分裂の平坦性だけからこの保存性は従わない。Ω(v,w)=ω(v−h(dπv),w−h(dπw)) を定義し、dΩ=0 と ker Ω=im h を証明して、局所水平輸送による ω の保存を導く。これらの計算で証明した平坦性とトレース形式の保存に、§0.6 の微分形式の恒等式を適用する。シンプレクティック自明化と必要な局所完全性を備える時間1次元のチャート上で、相対次元2では Ω=dq∧dp+dH∧dt、高い偶数次元では対応する和を導く。スカラー Hamilton 関数はチャートに付随する局所原始関数である。
 
 **入力条件**
 
@@ -910,11 +921,11 @@ H 上の滑らかさを証明し、元の安定モジュライ・複体・形式
 
 - MeromorphicConnectionModuli 1.1 の対象、その射、行列式、および許容局所構造を用いる。
 
-MeromorphicConnectionModuli §1.1 で構成する付加構造付き接続の圏を、同じ対象と射を用いて扱う。§3.3 の種数 0・階数 2 の制限に対する行列式・局所付加構造・重み・標識を記録する。パンルヴェの文献で用いられる局所表示を、フィルトレーション・対数格子・分岐降下を保って、この同じ対象と比較する。内在的な随伴・射影的構成には End⁰(E) と誘導された PGLᵣ 接続を用いる。これらの構成は、大域的平方根をもたない行列式も含め、許容されるすべての行列式に対して定義される。（I23, §§2–4.）
+§1.1 で構成する付加構造付き接続の圏を、同じ対象と射を用いて扱う。§3.3 の種数 0・階数 2 の制限に対する行列式・局所付加構造・重み・標識を記録する。パンルヴェの文献で用いられる局所表示を、フィルトレーション・対数格子・分岐降下を保って、この同じ対象と比較する。内在的な随伴・射影的構成には End⁰(E) と誘導された PGLᵣ 接続を用いる。これらの構成は、大域的平方根をもたない行列式も含め、許容されるすべての行列式に対して定義される。（I23, §§2–4.）
 
 **構成・法則（API）**
 
-- 対象・射・引戻しを MeromorphicConnectionModuli §1.1 のものと同定する。
+- 対象・射・引戻しを §1.1 のものと同定する。
 - 古典的制限で用いる、奇数次数の行列式および共鳴・分岐表示との比較を構成する。
 
 **検証事項**
@@ -937,7 +948,7 @@ MeromorphicConnectionModuli §1.1 で構成する付加構造付き接続の圏�
 
 - 取り込んだ付加構造付き入力と許容変形問題、および固定指数データを用いる。古典的行列式の時間方向への持ち上げとの比較は、この適用で確認する。
 
-許容変形問題、座標変更の射、標識被覆、固定指数パラメータは MeromorphicConnectionModuli §1.2 を用いる。古典的部分圏では、留数を固定した確定特異な行列式接続が、その契約で必要な時間方向への持ち上げをもつことを確認する。この時間問題における種数 0 の局所切片と接写像を同定する。縮約された versal 変形問題を §3.3 の入力とし、その次元を §3.4 で証明する。強いモノドロミー保存では、座標変更に沿う移送によって解析データを比較する。不確定特異点の多項式表示は、その座標に応じて変わる。（HEU10, Theorem 1.1; I23, §§5, 11.）
+許容変形問題、座標変更の射、標識被覆、固定指数パラメータは §1.2 を用いる。古典的部分圏では、留数を固定した確定特異な行列式接続が、その契約で必要な時間方向への持ち上げをもつことを確認する。この時間問題における種数 0 の局所切片と接写像を同定する。縮約された versal 変形問題を §3.3 の入力とし、その次元を §3.4 で証明する。強いモノドロミー保存では、座標変更に沿う移送によって解析データを比較する。不確定特異点の多項式表示は、その座標に応じて変わる。（HEU10, Theorem 1.1; I23, §§5, 11.）
 
 **構成・法則（API）**
 
@@ -1016,9 +1027,9 @@ MeromorphicConnectionModuli §1.1 で構成する付加構造付き接続の圏�
 
 **入力条件**
 
-- 古典的入力 3.3 と MeromorphicConnectionModuli §1.3 の一般の安定モジュライ構成を用いる。
+- 古典的入力 3.3 と §1.3 の一般の安定モジュライ構成を用いる。
 
-§3.3 に MeromorphicConnectionModuli §1.3 を適用する。行列式・安定性・局所モデルの許容条件を古典的入力について確認し、その出力を古典的な全安定モジュライ問題と同定する。有界性は一般構成から得る。スタック、剛化、粗モジュライ族、普遍対象をもつエタール被覆は、一般構成から得られたものを用いる。許容されるすべての束の型と、剛化前の実際の μ₂ 固定部分群を保持する。balanced な部分を含め、各古典的枠付きチャートとその局所閉像または開像との比較を構成し、全モジュライ空間における各像の補集合を指定する。（I23, Theorem 5.1.）
+§3.3 に §1.3 を適用する。行列式・安定性・局所モデルの許容条件を古典的入力について確認し、その出力を古典的な全安定モジュライ問題と同定する。有界性は一般構成から得る。スタック、剛化、粗モジュライ族、普遍対象をもつエタール被覆は、一般構成から得られたものを用いる。許容されるすべての束の型と、剛化前の実際の μ₂ 固定部分群を保持する。balanced な部分を含め、各古典的枠付きチャートとその局所閉像または開像との比較を構成し、全モジュライ空間における各像の補集合を指定する。（I23, Theorem 5.1.）
 
 **構成・法則（API）**
 
@@ -1043,7 +1054,7 @@ MeromorphicConnectionModuli §1.1 で構成する付加構造付き接続の圏�
 
 - §3.5 の族と、その行列式および局所構造を用いる。
 
-MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ特殊化する。古典的な無限小の族とゲージが、そのコサイクルとコバウンダリーに対応することを証明する。分岐を伴う三項錐複体全体と、ℂ 線形微分作用素・Čech 構成を用いる。交換子微分は一般には O 線形でない。より短い表示を用いる場合は、指定した擬同型によって錐複体全体と比較する。同じ複体上で行列式制限とトレースの符号規約を確認する。（I23, equation (6.9), Propositions 6.3 and 7.2.）
+§1.4 を、§3.5 の行列式を固定した族へ特殊化する。古典的な無限小の族とゲージが、そのコサイクルとコバウンダリーに対応することを証明する。分岐を伴う三項錐複体全体と、ℂ 線形微分作用素・Čech 構成を用いる。交換子微分は一般には O 線形でない。より短い表示を用いる場合は、指定した擬同型によって錐複体全体と比較する。同じ複体上で行列式制限とトレースの符号規約を確認する。（I23, equation (6.9), Propositions 6.3 and 7.2.）
 
 **構成・法則（API）**
 
@@ -1052,9 +1063,9 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 
 **検証事項**
 
-- u による無限小ゲージ変換は、接続の代表元を u の交換子微分だけ変える。その接空間での類は 0 である。
-- 行列式の同定を指定しない場合、スカラーには無限小自己同型の方向がある。標数 0 でその同定を固定すると、この方向は除かれるが、有限の固定部分群 μ₂ は剛化するまで残る。
-- ω = dq ∧ dp の下では、順序付き接ベクトル対 (∂q, ∂p) のペアリングは +1、逆順では −1 である。トレースの規約が逆の場合、移送公式を用いる前に補正しなければならない。
+- 安定な PVI 対象の行列式を保つスカラー自己同型は ±I である. 双対数上では (1+εa)I の行列式が 1+2εa なので, 行列式固定の複体では無限小スカラーゲージは消える.
+- 傾き 5/2 の PI の分岐極では, 形式的有理型接続の跡零水平自己準同型は二重被覆 w²=z 上で1次元の対角部分をなす. デッキ対合が対角の二成分を交換するため, 降下後は零になる.
+- ℙ¹ 上の行列式固定の安定な PVI 対象では, 変形複体の超コホモロジーの次元は h⁰=h²=0, h¹=2 である. 旗と行列式を固定したまま留数固有値を動かすと, 四極それぞれで跡零の対角方向が一つ増え, h¹=6 になる.
 
 *必要な先行結果：* 内部依存：3.5, 1.4.
 
@@ -1067,7 +1078,7 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 
 - §§3.5–3.6 の古典的族と変形複体、および一般変形構成との比較を用いる。
 
-§§3.5–3.6 で同定した族と複体に MeromorphicConnectionModuli §§1.5–1.6 を適用する。行列式ファイバーとの比較を確認する。種数 0 では Jacobian の次元は零である。一般定理に g = 0、r = 2、deg P = 4 を代入して滑らかさと相対次元 2 を導き、トレース形式の非退化性と相対閉性を導く。一般のシンプレクティック構成に含まれる補助的有限平坦展開変形、単純接続モジュライ、一般部分での二つの対数的擬同型、および滑らかな族での稠密性の議論を用いる。その中心安定ファイバー・複体・形式を、許容される非被約基底変換と両立する形で古典的族と同定する。（I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.）
+§§3.5–3.6 で同定した族と複体に §§1.5–1.6 を適用する。行列式ファイバーとの比較を確認する。種数 0 では Jacobian の次元は零である。一般定理に g = 0、r = 2、deg P = 4 を代入して滑らかさと相対次元 2 を導き、トレース形式の非退化性と相対閉性を導く。一般のシンプレクティック構成に含まれる補助的有限平坦展開変形、単純接続モジュライ、一般部分での二つの対数的擬同型、および滑らかな族での稠密性の議論を用いる。その中心安定ファイバー・複体・形式を、許容される非被約基底変換と両立する形で古典的族と同定する。（I23, Theorems 7.5 and 8.1, Propositions 8.2–8.3.）
 
 **構成・法則（API）**
 
@@ -1103,7 +1114,7 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 
 円板の制限・細分化との両立、標識付き正向きループのホモトピーに対する不変性、およびフレーム・基点・正則な円板座標の変更に対する共役の比較を証明する。基点を変更するときは、基点間を結ぶ道を保持する。対応する比較射を恒等則・合成則とともに構成する。普遍対象の変更と許容解析的基底変換との両立性を、それぞれの比較写像の下で証明する。パラメータ基底上の線束 L の引戻しでテンソルした後の自己同型を T_i⊗id_L と同定する。これらの比較は、実際の族の自己同型の恒等式とする。この構成は a_i の穴あき近傍だけを用い、他の標点に不確定特異な極がある場合にも適用する。
 
-∇ = d + A の規約と、対数的な次数付き留数 λ_(i,0), λ_(i,1) に対し、指数差が整数である場合も含め、局所対数方程式から charpoly(T_i)(X) = (X − exp(−2πiλ_(i,0)))(X − exp(−2πiλ_(i,1))) を証明する。共鳴時にも実際のモノドロミー自己同型を保持する。その固有値だけでは Jordan 構造は決まらない。対数格子と放物旗は接続データに含める。（DEL70, II §5。）
+∇ = d + A の規約と、対数的な次数付き留数 λ_(i,0), λ_(i,1) に対し、指数差が整数である場合も含め、局所対数方程式から charpoly(T_i)(X) = (X − exp(−2πiλ_(i,0)))(X − exp(−2πiλ_(i,1))) を証明する。共鳴時にも実際のモノドロミー自己同型を保持する。その固有値だけでは Jordan 構造は決まらない。対数格子と放物旗は接続データに含める。（ComplexComparisonPartII C5.6）.
 
 この局所モノドロミーをアフィン指標商を取る前に用い、T_i=I で App_i^lin⊂M^an を、PGL₂ 内の [T_i]=1 で App_i^proj⊂M^an を定義する。普遍対象のチャート上でこれらの解析的部分対象を構成し、共役と代表の変更に関して方程式を降下させ、許容解析的基底変換との両立性を証明する。前者を通常の意味の見かけの特異点、後者を射影的な見かけの特異点の規約とする。選んだ cyclic vector によるスカラー化が標点因子の外に作る見かけの極は、§7.2 が構成する表示データであり、ここで定義する固定標点の部分とは別である。
 
@@ -1124,7 +1135,7 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 - 重複固有値を持つ対数留数でも、非自明なユニポテントモノドロミーを持ちうる。したがって、共鳴だけではいずれの見かけの特異点の部分にも入らない。
 - 一般的位置の全分岐形式模型には不変な階数1部分加群がないため、その大域的な可約入射モジュライは空である。
 
-*必要な先行結果：* 内部依存：0.3, 1.2, 3.1, 3.5, 3.6, 3.7; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8).
+*必要な先行結果：* 内部依存：0.3, 1.2, 3.1, 3.5, 3.6, 3.7; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8); [確定特異な接続の比較](#dependency-regular-singular) (ComplexComparisonPartII C5.6).
 
 #### 例
 
@@ -1139,7 +1150,7 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 
 - 構成済みの古典的モジュライ・時間問題を用いる。その局所構造と行列式の移送が、強い拡張の契約を満たすことを確認する。
 
-§3.2 の時間問題と §3.5 の族に、§§3.6–3.7 の比較を用いて MeromorphicConnectionModuli §2.1 を適用する。核格子・対数的旗・分岐降下を含め、一般構成の強い拡張を古典的な普遍対象のチャートと同定する。全空間での極のクラスは Ω¹_X(log D) ⊗ O_X(P − D) である。対数極での時間係数の正則性も含め、動く座標での生成元 dz/zᵐ と dε/zᵐ⁻¹ との比較を証明する。強い拡張の存在・一意性・貼合せの定理を特殊化し、それらが誘導する NonlinearConnections §0.1 の意味での接分裂として h を構成する。（I23, Definition 10.1, Propositions 10.7 and 10.10.）
+§3.2 の時間問題と §3.5 の族に、§§3.6–3.7 の比較を用いて §2.1 を適用する。核格子・対数的旗・分岐降下を含め、一般構成の強い拡張を古典的な普遍対象のチャートと同定する。全空間での極のクラスは Ω¹_X(log D) ⊗ O_X(P − D) である。対数極での時間係数の正則性も含め、動く座標での生成元 dz/zᵐ と dε/zᵐ⁻¹ との比較を証明する。強い拡張の存在・一意性・貼合せの定理を特殊化し、それらが誘導する §0.1 の意味での接分裂として h を構成する。（I23, Definition 10.1, Propositions 10.7 and 10.10.）
 
 **構成・法則（API）**
 
@@ -1163,7 +1174,7 @@ MeromorphicConnectionModuli §1.4 を、§3.5 の行列式を固定した族へ�
 
 - 3.9 で同定した強い分裂と、一般の二パラメータ拡張問題の制限比較を用いる。
 
-MeromorphicConnectionModuli §2.2 と §3.9 の同定により、古典的族上で h([v,w]) = [h(v),h(w)] を得る。二パラメータの強い拡張の比較が、この時間問題へ制限できることを確認する。この制限により、代数的な強い拡張の構成から、許容された各形式プロファイルの括弧恒等式を得る。（I23, Theorem 11.6.）
+§2.2 と §3.9 の同定により、古典的族上で h([v,w]) = [h(v),h(w)] を得る。二パラメータの強い拡張の比較が、この時間問題へ制限できることを確認する。この制限により、代数的な強い拡張の構成から、許容された各形式プロファイルの括弧恒等式を得る。（I23, Theorem 11.6.）
 
 **構成・法則（API）**
 
@@ -1180,7 +1191,7 @@ MeromorphicConnectionModuli §2.2 と §3.9 の同定により、古典的族上
 
 - §§3.7, 3.9 の相対形式と分裂、§3.10 の平坦性、およびモジュライのシンプレクティック保存定理との比較を用いる。
 
-MeromorphicConnectionModuli §2.2 のシンプレクティック保存定理を古典的族へ特殊化する。この保存恒等式と §3.10 の平坦性の下で (π,h,ω) に NonlinearConnections §0.6 を適用し、閉じた全二形式 Ω(v,w) = ω(v − h(dπv), w − h(dπw))、その核と移送の法則を得る。その垂直方向への制限を相対トレース形式と同定する。十分小さな局所 Darboux・時間チャートを選び、必要な局所完全性を証明して、座標表示 dq ∧ dp + dH ∧ dt を導く。（I23, Definition 11.4 and Corollary 11.8.）
+§2.2 のシンプレクティック保存定理を古典的族へ特殊化する。この保存恒等式と §3.10 の平坦性の下で (π,h,ω) に §0.6 を適用し、閉じた全二形式 Ω(v,w) = ω(v − h(dπv), w − h(dπw))、その核と移送の法則を得る。その垂直方向への制限を相対トレース形式と同定する。十分小さな局所 Darboux・時間チャートを選び、必要な局所完全性を証明して、座標表示 dq ∧ dp + dH ∧ dt を導く。（I23, Definition 11.4 and Corollary 11.8.）
 
 **構成・法則（API）**
 
@@ -1204,7 +1215,7 @@ MeromorphicConnectionModuli §2.2 のシンプレクティック保存定理を�
 
 - 一般構成の古典的制限として確認された対象と、実際の表示変更の射を用いる。
 
-MeromorphicConnectionModuli §§2.3–2.4 を用い、目標3.1–3.12の対象を、一つの一般構成の古典的制限として同定する。表示・ゲージ・許容基底変換の比較を整合的に保持する。古典的な標識と時間切片についてコサイクル図式を確認する。ラベル・行列式・安定性の部屋の変更には、指定した定義域上の許容される射または対応を用いる。§7.2 の座標比較と、これらの幾何学的比較写像との可換性を証明する。
+§§2.3–2.4 を用い、目標3.1–3.12の対象を、一つの一般構成の古典的制限として同定する。表示・ゲージ・許容基底変換の比較を整合的に保持する。古典的な標識と時間切片についてコサイクル図式を確認する。ラベル・行列式・安定性の部屋の変更には、指定した定義域上の許容される射または対応を用いる。§7.2 の座標比較と、これらの幾何学的比較写像との可換性を証明する。
 
 **構成・法則（API）**
 
@@ -1242,7 +1253,7 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 
 相対 Stokes 逆構成では, 小さなパラメータチャート上で一様な指数減衰を持つ扇形被覆を選ぶ. 模型の基本解によって水平コサイクルを表し, 単位行列との差が極で任意次数まで消えることを示す. 角度に依存する 1 の分割で滑らかに分解し, 小円板上で Cauchy–Green 作用素と一様収束する Neumann 級数を用いて ∂̄ 方程式を解く. パラメータに関する正則性, 共通の形式展開, および極次数の上界を証明する. 有限の冪零厚化を含む族について, 順構成と射に関する両側の比較も示す. 分岐被覆上では同変に再構成し, 平均射影で格子を降下する. (局所 Malgrange–Sibuya 構成は BV89, Part I, Theorem 4.5.1.)
 
-実際の外冪格子、トレース留数、Stokes 写像、被覆変換の作用を用いて、行列式との両立性を証明する。行列式は許容された確定特異な局所型を持つ。指定された格子と留数和を持つ階数 1 の再構成を行う。Deligne II5.4 は ℂ→ℂ/ℤ の切断を選んだ延長を与えるが、この延長は一般にはテンソル積と両立しない。行列式の比較には整数格子シフトを含める。この比較は共鳴を含む。固有値の規約 exp(−2πiλ) を保持し、実際のモノドロミー行列と exp(−2πi Res) を共役の違いを除いて比較するのは、Deligne II5.6 の非共鳴条件の下に限る。確定特異接続の代数的・解析的対応には、正誤表を適用した Deligne II5.9 を用いる。
+実際の外冪格子、トレース留数、Stokes 写像、被覆変換の作用を用いて、行列式との両立性を証明する。行列式は許容された確定特異な局所型を持つ。指定された格子と留数和を持つ階数 1 の再構成を行う。ComplexComparisonPartII C5.6 の RegularSingular と CanonicalLogExtension を用いる. ℂ→ℂ/ℤ の切断を選んだ延長は, 一般にはテンソル積と両立しない.行列式の比較には整数格子シフトを含める。この比較は共鳴を含む。固有値の規約 exp(−2πiλ) を保持し、実際のモノドロミー行列と exp(−2πi Res) を共役の違いを除いて比較するのは、Deligne II5.6 の非共鳴条件の下に限る。確定特異接続の代数的・解析的対応には、正誤表を適用した Deligne II5.9 を用いる。
 
 **構成・法則（API）**
 
@@ -1257,7 +1268,7 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 - 非自明な冪単対数モノドロミー行列は、二つの固有値がともに 1 でも、単位行列とは異なる。
 - 二次被覆上では、z を一周させると二つの形式的指数の枝が交換される。被覆変換の作用を入れずに各枝が個別に元に戻るとする扇形構成は、降下を満たさない。
 
-*必要な先行結果：* 内部依存：1.1, 1.2, 3.1, 3.2, 3.8, 3.9, 3.10; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1).
+*必要な先行結果：* 内部依存：1.1, 1.2, 3.1, 3.2, 3.8, 3.9, 3.10; [Complex manifolds, holomorphic bundles and observations](#dependency-complex) (K1; K3.0; K3.HolomorphicStalk; K3.MeromorphicGermField; K4; K7.1); [確定特異な接続の比較](#dependency-regular-singular) (ComplexComparisonPartII C5.6).
 
 <a id="target-4-2"></a>
 ### 4.2 Betti 族と完備な移送
@@ -1293,7 +1304,7 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 
 - 有限型のフレーム付き表現・Stokes 多様体とそのアフィン商を §1.3 を用いて構成し、§1.2 の解析化と指数による引戻しを適用する。簡約なフレーム群による段階では簡約群の不変式論を、それ以外の商の段階では明示的な降下を用い、局所 Stokes 群の冪単性を保持する。根・被覆変換と両立する同位変形、分岐降下、安定化群との両立性、および許容される各層での正則性・Hausdorff 性・局所コンパクト性を証明する。構成した商の普遍性を SSF1.17 を用いて表す。
 
-*必要な先行結果：* 内部依存：1.2, 1.3, 3.2, 4.1; [Quotient predicates](#dependency-quotient-predicates) (1.17); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8); [Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); AlgebraicModuliForArithmeticGeometry (gap:reductive-connection-git).
+*必要な先行結果：* 内部依存：1.2, 1.3, 3.2, 4.1; [Quotient predicates](#dependency-quotient-predicates) (1.17); [Covering spaces and universal covers](#dependency-covers) (Stage 0.2–0.4; Stage 1.5; Stage 2.6–2.8); [Smooth bundle and connection foundations](#dependency-smooth) (B1.5; B5.0; B5.2); [Marked-curve charts](#dependency-curves) (ComplexCurveModuli D0.3, D3–D5; SchemeAndStackFoundations 4.15); [簡約 GIT](#dependency-reductive-git) (gap:reductive-connection-git).
 
 <a id="target-4-3"></a>
 ### 4.3 相空間全体上での Riemann–Hilbert 対応と両立性
@@ -1308,7 +1319,11 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 
 §4.2 の枠付き表示 X に対し, 時間・指数チャートごとに接続の安定性を有理 GIT 線形化と比較する. 全分岐極がない場合, 階数 1 の Stokes 部分対象から復元した束の飽和不変直線を得る. その次数は留数の持上げの和の負である. αᵢⱼ を実際の次数付き成分に対応する放物重みとし, cᵢ を対数点では 1, 非分岐不確定点では厚化の長さ mᵢ とする. 有効 Betti 重み βᵢⱼ = cᵢαᵢⱼ − Re λᵢⱼ を用いる. 対数共鳴点では入射条件の直線とその実際の留数の持上げから誘導重みを計算する. 階数 1 の Stokes 部分対象が取りうる枝と旗の各パターンでは, 留数の持上げの和は整数でなければならない. チャートを縮め, 現れうる各パターンでその整数を一定にする. 有限個の安定性の符号と共鳴点での二つの有効重みの順序を保つ有理ベクトル β′ を一つ選ぶ.
 
-各対数極では有効重みの大きい方の入射直線を用いる. 共鳴点でシフトが異なる場合, 元の放物重みの差の絶対値は 1 未満なので, シフトの小さい方がこの直線を選ぶ. シフトが等しい場合は対応する留数旗を用いる. 非共鳴チャートで添字を交換する場合はスペクトル射影で補空間の固有直線を得る. 共通の分母を払う正整数 K を選び, 旗の線束 𝒪(K(β′ᵢ,high−β′ᵢ,low)) と, 指数の差が −K(β′ᵢ₁−β′ᵢ₂) となる非分岐トーラスの指標を用いる. 大域枠の重みが (−a,a), a>0 である非自明な一径数部分群について, 枠付きデータに極限が存在する条件が重み a の直線 W が階数 1 の Stokes 部分対象となる条件と一致することを, リンクの可逆性, Stokes 関係式, 形式モノドロミーから示す. W が選ぶ重みを β′ᵢ(W) と書く. 極限での線束ファイバーの重みが 2Ka(½ Σᵢⱼ β′ᵢⱼ − Σᵢ β′ᵢ(W)) になることを示す. 符号の規約を確認し, 厳密不等式と弱い不等式を接続の安定性と半安定性に対応させる. 全分岐極があれば, その有限な形式枠群と可逆なリンクによって, 極限を持つ非自明な一径数部分群は存在しない. この場合は旗の相対豊富な線形化を用いる. §4.1 の族と射に関する逆構成で X の安定商を全安定接続族の解析化と比較する. 自明に作用するスカラー中心, 局所的な商の表示, 解析的基底変換, および指定行列式を照合し, チャート上で重み付き Betti 商との解析同型を得る. この同型の下で通常の RH 写像は X→X₀ が誘導する写像である.
+各対数極では有効重みの大きい方の入射直線を用いる. 共鳴点でシフトが異なる場合, 元の放物重みの差の絶対値は 1 未満なので, シフトの小さい方がこの直線を選ぶ. シフトが等しい場合は対応する留数旗を用いる. 非共鳴チャートで添字を交換する場合はスペクトル射影で補空間の固有直線を得る. 共通の分母を払う正整数 K を選び, 旗の線束 𝒪(K(β′ᵢ,high−β′ᵢ,low)) と, 指数の差が −K(β′ᵢ₁−β′ᵢ₂) となる非分岐トーラスの指標を用いる.
+
+§4.2 の射影的な入射射と上の線形化に相対 Hilbert–Mumford 判定を適用する. 枠群は有限の分岐因子も含めて ℂ 上線形簡約である. 大域枠の重みが (−a,a), a>0 である一径数部分群について, 極限の存在が, 重み a の直線 W が階数 1 の Stokes 部分対象であり局所の重みが可逆なリンクを通して一致することと同値であると示す. 大域成分が自明で極限が存在する場合は, 可逆なリンクにより局所成分も自明である. W が選ぶ有効重みを β′ᵢ(W) と書くと, 極限点での線形化された可逆層の重みは 2Ka (½ Σᵢⱼ β′ᵢⱼ − Σᵢ β′ᵢ(W)) である. この重みの正値・非負条件をそれぞれ接続の安定・半安定の傾き不等式と照合する. 全分岐極があれば, 有限の形式的枠群と可逆なリンクにより, 極限を持つ非自明な一径数部分群は存在しない. この場合も相対豊富な旗の線形化を用いる.
+
+§4.1 の逆対応を実際の族と射に適用し, X の安定商と安定解析接続の全族を比較する. 有限スカラー中心, 局所商表示, 解析的基底変換, 指定された行列式を保持する. この同型の下で通常の RH 写像は X→X₀ が誘導する写像になる.
 
 同じ時間・指数基底上に、トレース留数、次数、対数格子を保持した標識付き階数 1 の de Rham 族 D_dR と Betti 族 D_B を構成する。§1.5 と §4.1 の階数 1 の再構成によって、それらの RH₁ が解析的同型であることを、族および標識との両立性を含めて証明する。§4.1 の行列式・格子の比較を用いて det_B ∘ RH = RH₁ ∘ det_dR を証明する。この行列式・RH 図式は可換である。
 
@@ -1332,12 +1347,13 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 
 **検証事項**
 
+- 対数極で Δ=β′ᵢ,high−β′ᵢ,low とおく. 大域枠の重みが (−a,a) のとき, 旗の因子 𝒪(KΔ) の重みは入射直線が W なら −KaΔ, それ以外なら +KaΔ である. 後者では入射直線の極限が重み −a の直線になる.
 - RH の例外ファイバー上の異なる点が同じ通常の指標を持ちうる。そのファイバー上には両側逆写像は存在しない。
 - 始域はスカラーおよび冪単の対数的な層を保持する。PVI の滑らかな指標部分上の逆写像は、Vθ^nr が空でも、滑らかな共鳴点を含む。
 - 指数の持上げを保持することで、指数化された固有値が同じでも θ と θ+1 を区別する。
 - 固定した安定対象 E₀ に対し、ℙ¹ 上の E₀⊠O と E₀⊠O(1) は、行列式非固定の Q_PVI では同じ類を持つが、実際の族として同型とは限らない。行列式固定の場合、基底線束によるテンソルには二乗の自明化が必要である。
 
-*必要な先行結果：* 内部依存：0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.3, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2; AlgebraicModuliForArithmeticGeometry (gap:reductive-connection-git).
+*必要な先行結果：* 内部依存：0.3, 1.1, 1.2, 1.3, 1.5, 2.2, 2.3, 2.4, 3.3, 3.5, 3.8, 3.9, 3.10, 3.12, 4.1, 4.2; [簡約 GIT](#dependency-reductive-git) (gap:reductive-connection-git, gap:relative-hilbert-mumford); [確定特異な接続の比較](#dependency-regular-singular) (ComplexComparisonPartII C5.6).
 
 <a id="target-4-4"></a>
 ### 4.4 古典的な族の固有性と安定な実現
@@ -1348,15 +1364,15 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 
 - 十の古典プロファイルの許容時間・加法的指数基底, §4.3 の行列式に相対的な RH 写像, および安定と半安定が一致する放物重みの chamber を用いる. 許容される共鳴・可約の各層, 一般分岐型, およびすべての束の分裂型を含める.
 
-時間・指数チャート上で §4.2 の G 同変な射影射 X→X₀ と §4.3 の有理線形化を用いる. 相対豊富な線束を ℒ とし, 次数 n の成分を Γ(X,ℒⁿ)^G とする次数付き環の Proj を構成する. この商から X₀//G への射が射影的であることを示す. 次数付き環の有限生成に加え, 射影射による順像と簡約性から次数零部分が Γ(X₀,𝒪)^G 上有限であることを示す. 引き戻したチャート上では半安定商を使い, 安定と半安定の一致を適用する. この射を解析化して基底変換し, §4.3 の解析同型によって通常の RH 写像と同定する. 有理線形化は, 共鳴する層をまたぐ場合も, 加法的指数チャート上で一定である. チャートごとの射影的な表示から許容時間・指数の全族での固有性と, 解析的基底変換による保存を得る. 両立する行列式接続が動く場合も局所枠上で同じ比較を行い, §4.3 によって降下する.
+§4.2 の G 同変な射影射 X→X₀ と §4.3 の有理線形化に対し, 分母を払って相対不変式 Proj の供給定理を適用する. ComplexComparisonPartII §C−1.1 により射影的な商射を解析化し, 固有性を得て, 時間・加法的指数チャートへ引き戻す. 局所分離な代数空間の表示は §C−1.2 によりエタール関係を用いて解析化する. チャート上で安定と半安定が一致することを用い, 引き戻した安定幾何学的商が解析的安定商スタックの粗空間となることを §4.3 の表示上で証明する. 共鳴する層でも線形化を保ったまま, この写像を通常の RH 写像と同定する. こうして許容時間・指数の全族およびその解析的基底変換上で固有性を得る. 両立する行列式接続が動く場合は, 局所枠上で同じ比較を行い §4.3 により降下する.
 
 固定した時間・指数の各ファイバーで全射性を示す. 既約な通常 Stokes 対象に §4.1 の局所付加構造を加え, 指定の行列式と次数を持つ接続へ貼り合わせる. 既約性によりこの接続は安定である. 全分岐極を持つ型では二つの枝の交換によりすべての Stokes 対象が既約である. 全分岐極のない五つの型では, 可約な粗指標は階数 1 の Stokes 対象二つの直和で表されることを示す. 穴あき球面上では局所の枝と固有値の選択から定まる階数 1 指標は有限個である. VDPS09 §§3.1, 3.2, 3.4, 3.7, 3.9 の三次曲面と, 固定パラメータでの五つの通常の商を同定する. その際に標識と行列式の規格化を照合する. 不確定型の四つでは方程式を A(x,y)z+B(x,y)=0 と書き, 許容パラメータの全域で A と B が互いに素であることを確認する. 四対数型では z に関する判別式の四次と二次の項を比較し, 平方にならないことを示す. これにより各曲面は既約で, 既約指標の部分は稠密である. RH 写像の像はこの部分を含み, 固有性により閉じているため, 通常のファイバー全体に一致する.
 
-四対数極への特殊化を I13 Theorem 2.2 および IIS06 Theorem 4.10 と比較し, §4.3 の安定性, 次数, 留数, 行列式の仮定を保持する. I13 Proposition 5.3 と §6 を用い, PVI のより強い逆写像定理に必要な既約性と稠密性を確認する. §4.3 と合わせて, 共鳴を含む固定パラメータのファイバー上での双有理性と解析的特異点解消, および対応する全族の比較を得る.
+四対数極への特殊化を I13 Theorem 2.2 および IIS06 Theorem 4.10 と比較し, §4.3 の安定性, 次数, 留数, 行列式の仮定を保持する. I13 Proposition 5.3 と §6 を用い, PVI のより強い逆写像定理に必要な既約性と稠密性を確認する. §4.3 と合わせて, 共鳴を含む固定パラメータのファイバー上での双有理性と解析的特異点解消, および対応する全族の比較を得る. IS12 Theorem 5.1 は非共鳴・既約な不分岐の範囲で逆対応を与える. 残る許容型と各層では, 上の入射条件, 安定性, 商および稠密性の議論により固有性と全射性を証明する.
 
 **構成・法則（API）**
 
-- 不変式環の Proj から通常のアフィン商への相対射影射を構成し, 次数零部分の有限性も示す.
+- 相対射影性を供給定理から得て, 実際の解析的安定商と粗空間の比較を証明する.
 - 各時間・加法的指数チャートでの解析的基底変換を実際の通常 RH 写像と同定する.
 - 行列式に相対的な場合を含む全パラメータ族での固有性と解析的基底変換の法則を証明する.
 - 既約な対象の実現, 非分岐型の可約粗指標の有限性, 像の閉性を用いて標的全体への全射性を証明する.
@@ -1370,7 +1386,7 @@ Hamilton チャート H = p²/2 − 2q³ − tq は水平核を表すが、核�
 - I13 との比較で 2·4−2·2−2=2>0 を確認する. 次数と留数の等式, 一般の重み, 保持した指数ファイバー積も確認する.
 - 行列式が変化する場合は局所的な行列式枠上で射影的な表示を確かめる. 固定行列式への制限には §4.3 の粗空間上の Cartesian 比較を用いる.
 
-*必要な先行結果：* 内部依存： 1.2, 1.3, 3.3, 4.1, 4.2, 4.3; [Native topological properness](#dependency-proper) (IsProperMap); AlgebraicModuliForArithmeticGeometry (gap:reductive-connection-git).
+*必要な先行結果：* 内部依存： 1.2, 1.3, 3.3, 4.1, 4.2, 4.3; [Native topological properness](#dependency-proper) (IsProperMap); [簡約 GIT](#dependency-reductive-git) (gap:reductive-connection-git); [複素解析空間と解析化](#dependency-analytic-spaces) (ComplexComparisonPartII §§C−1.1–C−1.2).
 
 #### 例
 
@@ -1385,7 +1401,7 @@ RH の例外ファイバーは射影曲線になりうる。その上の選択�
 
 - §§3.9–3.10 の正則平坦分裂と、その許容パラメータ・チャートを用いる。
 
-幾何学的パンルヴェ芽を、§§3.9–3.10 の正則平坦分裂に対する、初期点を指定した NonlinearConnections §0.3 の意味での水平切断の芽とする。許容された古典的パラメータ・チャート上で同時正則性の仮定を確認し、§0.3 を適用して評価の全単射、局所存在・一意性、およびパラメータへの正則依存性を得る。
+幾何学的パンルヴェ芽を、§§3.9–3.10 の正則平坦分裂に対する、初期点を指定した §0.3 の意味での水平切断の芽とする。許容された古典的パラメータ・チャート上で同時正則性の仮定を確認し、§0.3 を適用して評価の全単射、局所存在・一意性、およびパラメータへの正則依存性を得る。
 
 **構成・法則（API）**
 
@@ -1413,6 +1429,8 @@ RH の例外ファイバーは射影曲線になりうる。その上の選択�
 
 得られた解析族に強い可積分な全接続が入ることを示す. 対数極では旗付きの実際の模型を動く極座標で移し, 時間成分が正則で旗を保つことを示す. 非分岐不確定極では留数を固定し, 指数多項式の全微分を用いる. 全分岐極では w²=z 上で奇な不確定形式を積分し, 基底変換を戻して降下を確かめる. 被覆上の奇な指数原始関数を q₁ とすると, 基底 (1,w) で非対角時間成分は d_time(q₁/w) と行列 [[0,z],[1,0]] の積である. 空間成分の極次数が高々 m, 時間成分が高々 m−1 であること, 核格子の保存, および行列式留数の補正 ½ を確認する. 固定した扇形遷移が全模型に関して水平であることを用いる. 再構成した族を双対数の時間方向に制限し, 強い拡張の一意性によりその微分を既存の分裂と同定する. これにより指定された分裂の幾何学的パンルヴェ性を得る. (I23, Definition 10.1, Proposition 10.7. PVI は IIS06, Theorem 5.12. 一般非分岐の場合は IS12, §6, Theorem 6.3.)
 
+四対数極では IIS06 Theorem 5.12 と比較し, 非共鳴かつ既約な不分岐の場合は IS12 Theorem 6.3 と比較する. 全許容範囲での主張は上の再構成から証明する.
+
 §4.4 の固有 RH 写像, §4.2 の通常の移送, および §4.3 の全点での両立性から, §0.4 も適用する. 局所一意性により, 例外ファイバー内の初期点も含めて, 再構成から得た持ち上げと一致することを示す.
 
 **構成・法則（API）**
@@ -1437,7 +1455,7 @@ RH の例外ファイバーは射影曲線になりうる。その上の選択�
 
 - 完備平坦な古典的接続と、そのシンプレクティック保存恒等式を用いる。
 
-§3.10 の平坦性と §4.6 の完備性に NonlinearConnections §0.5 を適用する。一般構成により、実際の終点移送、基本亜群の作用、各古典的初期点を通る普遍被覆上の水平切断を得る。その終点写像を、§3.9 の接続に対する水平持上げと同定する。シンプレクティック保存には §3.11 と NonlinearConnections §0.6 を用いる。得られた被覆変換・モノドロミー作用で初期点が固定される場合に、ちょうど降下する。完備性だけから Bθ 上での一価性を導かない。
+§3.10 の平坦性と §4.6 の完備性に §0.5 を適用する。一般構成により、実際の終点移送、基本亜群の作用、各古典的初期点を通る普遍被覆上の水平切断を得る。その終点写像を、§3.9 の接続に対する水平持上げと同定する。シンプレクティック保存には §3.11 と §0.6 を用いる。得られた被覆変換・モノドロミー作用で初期点が固定される場合に、ちょうど降下する。完備性だけから Bθ 上での一価性を導かない。
 
 **構成・法則（API）**
 
@@ -1461,7 +1479,7 @@ RH の例外ファイバーは射影曲線になりうる。その上の選択�
 
 - 古典的相空間族、定義域を明示した観測量候補 Q、および評価を主張する水平切断の範囲を入力とする。各切断について以下のいずれかの許容性の証明を与える。スカラー有理型評価には、さらに評価が恒等的に無限大でないことの証明を要求する。
 
-許容性のデータを備えた観測量候補に、NonlinearConnections §0.7 の観測量の構成を適用する。許容性の入力は、切断の像の近傍で定義された実際の正則な ℙ¹ 値写像、または、切断への制限がともに恒等的に零とはならない両立する局所的な分子・分母の表示、または、指定された解消・正則観測量・正則持上げである。最後の場合には、主張する定義域上で選択からの独立性を証明するか、持上げを標識として保持する。これらのデータから、一変数の共通零点の除去または指定された持上げを用いて許容された評価を構成し、必要な重なりの比較を証明する。観測量、定義域、対象とする解の層、および正規化を、指定する評価データの一部として保持する。評価が恒等的に ∞ でないことの証明は、ℙ¹ 値観測量としての許容性とは別の入力である。
+許容性のデータを備えた観測量候補に、§0.7 の観測量の構成を適用する。許容性の入力は、切断の像の近傍で定義された実際の正則な ℙ¹ 値写像、または、切断への制限がともに恒等的に零とはならない両立する局所的な分子・分母の表示、または、指定された解消・正則観測量・正則持上げである。最後の場合には、主張する定義域上で選択からの独立性を証明するか、持上げを標識として保持する。これらのデータから、一変数の共通零点の除去または指定された持上げを用いて許容された評価を構成し、必要な重なりの比較を証明する。観測量、定義域、対象とする解の層、および正規化を、指定する評価データの一部として保持する。評価が恒等的に ∞ でないことの証明は、ℙ¹ 値観測量としての許容性とは別の入力である。
 
 各具体的観測量の構成目標が、候補を与え、評価を主張する解の各層でこれらの入力条件を証明する。古典的各プロファイルについて、§7.2 で標準的な q 候補、定義域と重なり、および共通零点の除去または持上げ・選択独立性・非恒等的無限大・被覆の各条件の証明を構成する。これらの証明を、上記の評価構成の入力とする。
 
@@ -1488,7 +1506,7 @@ RH の例外ファイバーは射影曲線になりうる。その上の選択�
 
 - 証明済みの時間曲線の次元、完備な水平切断、および引戻しと非恒等的無限大条件を確認した観測量を用いる。
 
-§3.4 の時間一次元性という結論を確認し、§§4.7–4.8 に NonlinearConnections §0.7 を適用する。恒等的に ∞ ではないと確認した各スカラー評価は、許容時間曲線の普遍被覆上で有理型となり、内部のスカラー特異点では有限位数の極をもつ。観測量、主張する各層での解消または共通零点の除去と選択独立性の証明、および非恒等的無限大の証明は、対応する具体的観測量の構成目標が §4.8 への入力として与える。標準的な古典的 q については §7.2 がそれらを供給する。これらの条件の下で、各観測量に同じ有理型評価定理を適用する。一価な降下には、§0.7 のスカラー観測の不変性による判定を用いる。
+§3.4 の時間一次元性という結論を確認し、§§4.7–4.8 に §0.7 を適用する。恒等的に ∞ ではないと確認した各スカラー評価は、許容時間曲線の普遍被覆上で有理型となり、内部のスカラー特異点では有限位数の極をもつ。観測量、主張する各層での解消または共通零点の除去と選択独立性の証明、および非恒等的無限大の証明は、対応する具体的観測量の構成目標が §4.8 への入力として与える。標準的な古典的 q については §7.2 がそれらを供給する。これらの条件の下で、各観測量に同じ有理型評価定理を適用する。一価な降下には、§0.7 のスカラー観測の不変性による判定を用いる。
 
 **構成・法則（API）**
 
@@ -1533,36 +1551,22 @@ Y = Σᵢ mᵢDᵢ と書く。Pic(S) の交点形式を x·y とし、ルート
 
 **本目標が担う補助構成。**
 
-- 非被約でありうる反標準境界 Y について、射影的・固有・平坦な族、普遍的 O、H² 消滅、および単位成分の仮定を証明し、§1.5 の相対 Picard の構成を適用する。正規化・単数・逐次冪零肥厚の完全列により単位成分を計算し、加法型を定める加法群との比較を証明する。D=Y_red を SNC とし、Θ(−log D) をそのイデアルを保つ導分として構成する。重複度は Y に属し、SNC の述語には入れない。実際の曲面族上で相対 Picard 格子・交点・変形の比較を証明する。SSF5.9 は体上の曲面または算術曲面の交点形式を与える。これらの形式と相対 Picard の構成を用いて、許容された任意基底上の族の比較を構成する。
+- 非被約でありうる反標準境界 Y について、射影的・固有・平坦な族、普遍的 O、H² 消滅、および単位成分の仮定を証明し、§1.5 のアフィンな平方零試験を用いて, 供給された相対 Picard 代数空間と単位成分の判定を適用する. 正規化・単数・逐次冪零肥厚の完全列により単位成分を計算し、加法型を定める加法群との比較を証明する。D=Y_red を SNC とし、Θ(−log D) をそのイデアルを保つ導分として構成する。重複度は Y に属し、SNC の述語には入れない。実際の曲面族上で相対 Picard 格子・交点・変形の比較を証明する。SSF5.9 は体上の曲面または算術曲面の交点形式を与える。これらの形式と相対 Picard の構成を用いて、許容された任意基底上の族の比較を構成する。
 
-*必要な先行結果：* 内部依存：1.5; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B).
+*必要な先行結果：* 内部依存：1.5; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Algebraic vector bundles and finite locally free sheaves](#dependency-bundles) (L0A–L0C; L1A–L1B; L2A–L2B); [相対 Picard 代数空間と単位成分](#dependency-relative-picard) (ComplexComparisonPartII §§C3.2d.2–C3.2d.3, C3.2f.1–C3.2f.2).
 
 <a id="target-5-2"></a>
-### 5.2 コンパクト化と 8 つの境界型
+### 5.2 PVI のコンパクト化と8つの境界型
 
-**パンルヴェへの適用。**
+IIS Part II, Theorem 4.1 の重み, 行列式, 標識を持つ四対数極の PVI 相空間族を用いる. 安定な放物 φ 接続による相対コンパクト化を構成し, 時間・指数基底上の相対ブローアップ曲面 S と同定する. det φ の消滅因子と相対反標準因子 Y の一致を重複度まで証明する. D を Y の被約台とし, U=S∖D とおく. 安定相空間族全体を U と同定し, 例外曲線と束が跳躍するチャートを含めて, 相対シンプレクティック形式と水平分裂を比較する. 流れと座標の比較には IIS06 §§5, 10 を用いる. 各ファイバー上で因子が −Y となる S 上の相対有理 2 形式を構成し, U への制限が相空間の形式に一致することを証明する.
 
-**入力条件**
-
-- 目標3.1–3.12の内在的形式と分裂を備える古典的相空間族全体、§5.1の対の枠組み、および指定した標識と許容基底変換を入力とする。
-
-明示した標識付けと基底変換の後で、§5.1 の対の構造を備えた次数 4 の接続モジュライ族の相対コンパクト化 S → B を構成する。D = Y_red, U = S \ D と置き、相空間族全体から U への B 上の同型を構成する。例外曲線と非自明な束のチャートを含む U の全チャート上で、この同型によるシンプレクティック形式 ω と水平分裂 h の比較を証明する。ω を S 上の有理相対 2 形式 ω̃ に延長し、Ω²_{S/B}(Y) の切断として表す。各ファイバーで div(ω̃|S_b) = −Y_b を満たし、U 上で ω に一致することを証明する。正則な水平分裂とそのチャートへの延長定理の定義域は U であり、延長定理は U 全体を覆う。S 上で構成する延長は、極因子 Y を持つ有理 2 形式である。加法型正規交差境界の型を D₄, D₅, D₆, D₇, D₈, E₆, E₇, E₈ に分類する。これらはアフィン型の境界図式である。（STT02, Proposition 1.2 および Tables 2–3; VDPS09, introduction および Table 1; 完全に確立された PVI の比較については IIS06, §10。）
-
-初期の座標チャートの補集合を含む U の全チャートについて、重なりの同定、被覆性、および延長を証明し、許容された各プロファイルの比較を構成する。IIS06 §10 は PVI の比較を与え、VDPS09 の序文の大域比較は予想として述べられている。§4.6 の完全な移送は接続モジュライ上で構成する.
-
-**構成・法則（API）**
-
-- 相対コンパクト化と、その境界因子の重複度および交点形式を構成する。
-- 束の跳躍と例外チャートを含む、開補集合全体の比較を証明する。
-- その同型により U 上の変形、相対シンプレクティック形式、および正則な水平分裂を比較し、標識と基底変換に関する法則を証明する。
-- 各ファイバーで指定された極因子 Y を持つ S 上の有理相対 2 形式を構成し、U への制限がそのシンプレクティック形式に一致することを証明する。
+STT02, Proposition 1.2 および Tables 2–3 を用い, §5.1 の加法型対に現れる8つのアフィン境界図式を分類する. 接続の族全体とコンパクト化の補集合の大域比較は PVI を対象とする. 他の型の明示的な局所接続チャートは §7.2 で比較する.
 
 **検証事項**
 
-- 境界型 D₆ の 2 つの表示は、異なる形式的極データを持ちうる。境界のラベルが共通であるだけでは、モジュライの同型にはならない。
-- D₈ の補集合を、アフィン平面チャートの仮定を課さずに含める。
-- 開いた有理チャートとそのスカラー式が正しくても、例外曲線を 1 つ省略すると、補集合全体についての主張は成り立たなくなる。
-- ω̃ の境界での極の位数には、D ではなく Y の重複度を用いる。コンパクト化上の非零の Kodaira–Spencer 時間類が U への制限で消えることはありうるが、S 全体への正則な時間持上げがあれば、コンパクト化上のその類自体が消える。
+- IIS Part II, Theorem 4.1 の四対数極, 次数 −1 の行列式, 放物重みの不等式を照合する.
+- det φ=0 の補集合と安定接続族を, PVI の例外曲線を含めて比較する.
+- 2 形式の極の位数を Y の各成分の重複度と照合する.
 
 *必要な先行結果：* 内部依存：3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 5.1; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Quot/Hilbert and parameter schemes](#dependency-quot) (4.14).
 
@@ -1573,9 +1577,9 @@ Y = Σᵢ mᵢDᵢ と書く。Pic(S) の交点形式を x·y とし、ルート
 
 **入力条件**
 
-- §§5.1–5.2の許容された非ファイバー型加法的対の族と、目標3.9–3.12の内在的時間分裂を入力とする。
+- §5.1 の非ファイバー型加法的対の族を用いる. 接続モジュライの時間方向との比較には §5.2 の PVI の同定を用いる.
 
-F = Θ_S(−log D), N_D = O_S(D)/O_S とする。L = H⁰(D,F ⊗ N_D) を構成し、これらの対に対して L が 1 次元であることを証明し、局所コホモロジーへの単射を構成する。L の族と基底変換に関する定理を確立し、その Kodaira–Spencer 像を §3.9 の時間方向と比較する。境界の交点形式から連結写像と交点行列の恒等式を内在的に証明し、許容された境界グラフを統一的に扱う。（TER02, Theorem 2.1 および Proposition 2.1; STT02, Theorem 3.1。）
+F = Θ_S(−log D), N_D = O_S(D)/O_S とする。L = H⁰(D,F ⊗ N_D) を構成し、これらの対に対して L が 1 次元であることを証明し、局所コホモロジーへの単射を構成する。L の族と基底変換に関する定理を確立し、PVI の比較族上で, その Kodaira–Spencer 像を §3.9 の時間方向と同定する. 境界の交点形式から連結写像と交点行列の恒等式を内在的に証明し、許容された境界グラフを統一的に扱う。（TER02, Theorem 2.1 および Proposition 2.1; STT02, Theorem 3.1。）
 
 第一境界層の構成は、直線と台付きコホモロジー全体への単射を与える。TER02 Conjecture 2.1 はその空間全体との一致を扱い、ST04 Appendix A の結果はそこで指定された追加仮定の下で適用される。直線の生成元は、時間の正規化の選択に依存する。変形の比較と、指定した代数的補集合上での一意性によって、持ち上げられた分布の等しさを証明する。
 
@@ -1593,7 +1597,7 @@ F = Θ_S(−log D), N_D = O_S(D)/O_S とする。L = H⁰(D,F ⊗ N_D) を構成
 
 **本目標が担う補助構成。**
 
-- SchemeAndStackFoundations 2.6・2.7 の準連接層のコホモロジー、台付きコホモロジー、局所化完全列、および Noether 条件下の Ext の帰納極限との比較を用いる。JacobianChallenge Layer C の固有射による連接層の順像と、そこで個別に指定された基底変換条件を用いる。対数的曲面の族について、F と N_D を層として構成し、第一境界層の単射、および連結写像と交点行列の比較を構成する。相対 H⁰(D,F⊗N_D) が可逆層となるための固有性・係数平坦性・コホモロジー基底変換の仮定を証明し、有限射影複体または正確な全射性条件を用いて、非被約基底を含む任意基底変換との両立性を証明する。台付き H¹_D への単射を通して、この直線を Kodaira–Spencer の時間直線と比較する。
+- SchemeAndStackFoundations 2.6・2.7 の準連接層のコホモロジー、台付きコホモロジー、局所化完全列、および Noether 条件下の Ext の帰納極限との比較を用いる。JacobianChallenge Layer C の固有射による連接層の順像と、そこで個別に指定された基底変換条件を用いる。対数的曲面の族について、F と N_D を層として構成し、第一境界層の単射、および連結写像と交点行列の比較を構成する。相対 H⁰(D,F⊗N_D) が可逆層となるための固有性・係数平坦性・コホモロジー基底変換の仮定を証明し、有限射影複体または正確な全射性条件を用いて、非被約基底を含む任意基底変換との両立性を証明する。台付き H¹_D への単射を通して、PVI の比較族上でこの直線を Kodaira–Spencer の時間直線と比較する.
 
 *必要な先行結果：* 内部依存：3.9, 3.10, 3.11, 3.12, 5.1, 5.2; [Cohomology with supports](#dependency-supports) (2.7); [Divisors, modifications and surface intersections](#dependency-surfaces) (3.4; 4.11; 4.17; 5.9–5.10); [Cohomology, duality and curve degree](#dependency-cohomology) (2.2; 2.6; 2.20; 3.3); [Elementary deformation theory](#dependency-deformation) (4.2–4.6); [Proper coherent direct images and base change](#dependency-proper-cohomology) (Layer C).
 
@@ -1641,7 +1645,7 @@ F = Θ_S(−log D), N_D = O_S(D)/O_S とする。L = H⁰(D,F ⊗ N_D) を構成
 
 φ_g 上の F̄_g について、変換された族に強拡張の一意性を適用し、相対時間接束上で dF̄_g ∘ h = h′ ∘ dφ_g を証明する。変形複体とトレースペアリングに誘導される写像により F̄_g⁎ω′ を計算し、各シンプレクティック生成元について指定した定義域上で F̄_g⁎ω′ = ω を証明する。パラメータ付きモジュライ族上に得られる作用亜群を構成し、関手の自然同型によって関係式を確立する。標識付き曲面上では、Pic(S) への作用を、対応する整ルート反射および図式の自己同型と比較する。各プロファイルについて、§5.1 の整格子 R_∂^⊥ 内の対称性単純ルートの類、それらが張る R_sym、Cartan ペアリング、および対応するパラメータ超平面を構成し、R_sym が R_∂^⊥ に一致する場合を明示する。双線形形式 ⟨x,y⟩ = −x·y を用い、採用する各ルート α について反射 x ↦ x − 2⟨x,α⟩α/⟨α,α⟩ の整性を証明する。格子への作用では δ を保持し、反射ルートを持たないプロファイルには空のルート系を指定する。（PVI については IIS06, Theorem 7.4 および Theorem 10.13; STT02, Tables 2–3 および標識付き変形の構成。）
 
-§5.4 の関手と標識付き対のモジュライ上の追加の反射を合わせて、対称性の作用を構成する。§5.2 を通して接続モジュライに誘導される双有理対応を同定し、指定した定義域上で水平かつシンプレクティックな延長を証明する。標識付き対の反射には、§5.4 の局所ゲージ基本変換では生成されない PVI の中央反射を含める。IIS06 Remark 7.5(2) は Fourier 変換による実現を記述する。Fourier–Laplace 変換または中間畳み込みによる実現には、付加構造付きモジュライ問題の間の関手と、その強拡張の比較が必要である。ここでの追加の反射には、標識付き曲面による構成を用いる。引用した IIS06 の定理は PVI を対象とし、他の各プロファイルの主張はその標識付き対との比較によって確立する。反射関係式と Coxeter 関係式、有効領域の条件、およびチャートの補集合を越える延長を証明し、これらの結果を §7.4 の座標比較に供給する。各大域自己同型について、稠密開集合上の有理写像の恒等式に加えて、指定した定義域全体への正則な延長を証明する。
+§5.4 の関手と標識付き対のモジュライ上の追加の反射を合わせて、対称性の作用を構成する。PVI では §5.2 を通して標識付き対の対応を接続族全体に移し, 水平分裂とシンプレクティック形式を比較する. 他の型には §5.4 の接続の関手をその定義域上で用い, §7.2 の局所チャートで照合する. 標識付き対の反射には、§5.4 の局所ゲージ基本変換では生成されない PVI の中央反射を含める。IIS06 Remark 7.5(2) は Fourier 変換による実現を記述する。Fourier–Laplace 変換または中間畳み込みによる実現には、付加構造付きモジュライ問題の間の関手と、その強拡張の比較が必要である。ここでの追加の反射には、標識付き曲面による構成を用いる。引用した IIS06 の定理は PVI を対象とする. 反射関係式と Coxeter 関係式、有効領域の条件、およびチャートの補集合を越える延長を証明し、これらの結果を §7.4 の座標比較に供給する。各大域自己同型について、稠密開集合上の有理写像の恒等式に加えて、指定した定義域全体への正則な延長を証明する。
 
 **構成・法則（API）**
 
@@ -1675,7 +1679,7 @@ ST04 Theorem 3.1 の仮定の下で、これら内部のノード曲線の配置
 - h の不変曲線族への制限を構成し、その時間方向への射影が引き続き分裂であることを証明する。
 - 誘導される Möbius ゲージ則によって 2 つの射影座標を比較し、局所的な階数 2 の線形化を比較する。
 - 許容された幾何学的変換が曲線族全体に沿って正則同型として延長されるとき、その変換によって保たれることを証明する。そうでない場合は閉包を構成し、必要な曲線の性質と不変性を別に証明する。
-- ノード曲線の条件と可約接続または例外 RH ファイバーとの比較は、その同定が証明された表示においてのみ行う。
+- ノード曲線の条件と可約接続または例外 RH ファイバーとの比較は、§5.2 の PVI の同定を通して行う.
 
 **検証事項**
 
@@ -1749,7 +1753,7 @@ ST04 Theorem 3.1 の仮定の下で、これら内部のノード曲線の配置
 
 - §6.1 の正則な複素指数 0 の行列式構成と、作用素族の同型および基底変換に関する法則を用いる。
 
-標識付きパンルヴェ作用素族に対する行列式構成を、AnalyticRHPAndDeterminants §6.1 の正則な複素指数 0 の行列式線束、標準切断、有限次元安定化、整合的な比較写像によって指定する。同じ複素作用素の対象上で L_T = det(ker T)* ⊗ det(coker T) とする。必要な入力は、正則な指数 0 の作用素族と、§6.1 の恒等則・合成則・切断との両立を満たす比較写像である。これらの族と比較は、標識付き接続データから §6.3 で構成する。この適用の線束と切断は、上記の双対規約による §6.1 の対象の引戻しである。
+標識付きパンルヴェ作用素族に対する行列式構成を、§6.1 の正則な複素指数 0 の行列式線束、標準切断、有限次元安定化、整合的な比較写像によって指定する。同じ複素作用素の対象上で L_T = det(ker T)* ⊗ det(coker T) とする。必要な入力は、正則な指数 0 の作用素族と、§6.1 の恒等則・合成則・切断との両立を満たす比較写像である。これらの族と比較は、標識付き接続データから §6.3 で構成する。この適用の線束と切断は、上記の双対規約による §6.1 の対象の引戻しである。
 
 **構成・法則（API）**
 
@@ -1877,7 +1881,7 @@ JMU 形式との比較は、明示した形式的正規化の仮定の下での�
 
 - 古典的時間曲線、非線形接続を備えた相曲面、局所観測量、およびジェット同型領域を用いる。一般ジェット定理はシンプレクティック形式もパンルヴェ性も仮定しない。
 
-観測束とその第一ジェット束で定式化された NonlinearConnections §0.8 を用いる。古典的時間曲線と相曲面について局所観測量を与え、誘導されたジェット写像が指定領域で同型となることを証明する。その領域で、水平芽とスカラー二階方程式の芽との一般の同値を適用する。時間・相座標で h(∂t) = ∂t + A∂q + B∂p、J(t,q,p) = (t,q,A) と書き、p = P(t,q,v) が指定領域上の逆写像であるとき、座標比較は q″ = (A_t + A A_q + B A_p)(t,q,P(t,q,q′)) となる。連鎖律の定理と内在的ジェット構成は一般枠組みに置く。A_p ≠ 0 が与えるのは局所逆だけである。個々の古典的チャートの構成は §7.2 が担う。有理型延長にはさらに §4.9 を用い、それをジェット定理の仮定にはしない。
+観測束とその第一ジェット束で定式化された §0.8 を用いる。古典的時間曲線と相曲面について局所観測量を与え、誘導されたジェット写像が指定領域で同型となることを証明する。その領域で、水平芽とスカラー二階方程式の芽との一般の同値を適用する。時間・相座標で h(∂t) = ∂t + A∂q + B∂p、J(t,q,p) = (t,q,A) と書き、p = P(t,q,v) が指定領域上の逆写像であるとき、座標比較は q″ = (A_t + A A_q + B A_p)(t,q,P(t,q,q′)) となる。連鎖律の定理と内在的ジェット構成は一般枠組みに置く。A_p ≠ 0 が与えるのは局所逆だけである。個々の古典的チャートの構成は §7.2 が担う。有理型延長にはさらに §4.9 を用い、それをジェット定理の仮定にはしない。
 
 **構成・法則（API）**
 
@@ -1956,6 +1960,17 @@ Flaschka–Newell 座標 (34) では、c³ = 2 を選び、T = −ct, U(T) = cq(
 
 PI と PII の比較パッケージには、ω = dq ∧ dp, q′ = H_p, p′ = −H_q の規約で、H_I = p²/2 − 2q³ − tq および H_II = p²/2 − (q² + t/2)p − cq, c = α + 1/2 という標準ハミルトニアンを含める。拡大形式の比較と運動量の逆写像は本項目で証明する。これらのハミルトニアンと比較を、§7.4 のシグマモデルと §7.5 の種解の検証に用いる。
 
+[Suggested.lean](Suggested.lean) は PI, PII, PIV の複素平面上での延長, 原始的な PIII と通常・退化 PV の対数時間平面上での延長, および PVI の ℂ∖{0,1} の正則普遍被覆上での延長を定式化する. 対数時間では初期時刻 t₀ の持上げ s₀ に exp(s₀)=t₀ を要求し, s₀ の近傍で初期の解と一致させる. PVI でも選んだ持上げの近傍で一致させる. §§4.8–4.9 で実現される解の芽には幾何学的構成を適用し, 独立なスカラー定理には JK94 の直接の解析接続の証明を用いる. 分母が消えない初期正則円板の仮定を確認し, 単連結な時間被覆にモノドロミー定理を適用する. 原始係数の条件は §7.3 に記す.
+
+| Lean の目標 | 方程式 | 延長先 |
+|---|---|---|
+| `painleveI_meromorphic_extension` | PI | 複素平面 |
+| `painleveII_meromorphic_extension` | PII | 複素平面 |
+| `painleveIII_meromorphic_extension` | 原始的な PIII | 対数時間平面 |
+| `painleveIV_meromorphic_extension` | PIV | 複素平面 |
+| `painleveV_meromorphic_extension` | 通常・退化 PV | 対数時間平面 |
+| `painleveVI_meromorphic_extension` | PVI | ℂ∖{0,1} の正則普遍被覆 |
+
 **構成・法則（API）**
 
 - 表示の対応表を使う前に、文献の拡大形式の符号比較と両立する PV 系からの消去を証明する。
@@ -1973,7 +1988,7 @@ PI と PII の比較パッケージには、ω = dq ∧ dp, q′ = H_p, p′ = �
 - PII の二つの線形系による表示は、異なる局所特異点データを持つ。スカラー解の式が等しいことは、入力対象が等しいことではない。
 - γ = 4, δ = −4 に対する PIII の比較は、非零のスケーリングによって γ = δ = 0 を覆うことができない。後者は §7.3 の境界解析に属する。
 
-*必要な先行結果：* 内部依存：3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 4.8, 4.9, 5.2, 7.1.
+*必要な先行結果：* 内部依存：3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 4.8, 4.9, 7.1.
 
 <a id="target-7-3"></a>
 ### 7.3 係数境界の完全な被覆

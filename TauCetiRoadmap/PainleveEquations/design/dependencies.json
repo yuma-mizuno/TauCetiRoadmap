@@ -46,9 +46,9 @@
         "B5.0",
         "B5.2"
       ],
-      "supplied": "Smooth Ehresmann splittings, proper-submersion and principal-connection transport within their respective hypotheses.",
-      "owned_here": "0.1–0.5 own nonlinear connection objects, continuous-time local lifting, holomorphic parameter dependence and complete nonlinear transport. No properness of the phase projection is assumed.",
-      "supplied_ja": "滑らかなEhresmann分裂、固有沈め込みおよび主接続の移送を、それぞれの仮定の範囲で用いる。一般の非線形移送は0.1–0.5が担う。",
+      "supplied": "Smooth real Ehresmann distributions, pullbacks, restrictions and maximal smooth horizontal lifts at B1.5, and bundle and principal transport at B5.0 and B5.2.",
+      "owned_here": "Sections 0.1–0.3 extend to nonsurjective submersions, C¹ splittings and piecewise-C¹ paths, and holomorphic splittings. Sections 0.4–0.5 develop proper semiconjugacy and horizontal descent.",
+      "supplied_ja": "B1.5 は滑らかな実 Ehresmann 分布, 引戻し, 制限, 極大水平持上げを供給する. B5.0 と B5.2 は各節で指定した束と主束の移送を供給する.",
       "consumers": [
         "0.1",
         "0.5",
@@ -144,7 +144,7 @@
       ],
       "supplied": "Categorical/geometric quotient definitions, Artin bootstrap and the stated finite-group projective quotients.",
       "owned_here": "The reductive GIT contract supplies general invariant theory. 4.2 constructs the classical representation and character quotients, wild framing groupoids and Stokes quotients.",
-      "supplied_ja": "圏論的・幾何学的商の定義、Artinのbootstrap、および指定された有限群の射影商。不変式論は1.3で構成し、古典的な表現・指標商、wildなフレーム亜群とStokes商は4.2で構成する。",
+      "supplied_ja": "圏論的・幾何学的商の定義, Artin の bootstrap, 指定された有限群の射影商. 一般の不変式論は簡約 GIT の供給契約を用い, §4.2 が古典的な表現・指標商と Stokes 商を構成する.",
       "consumers": [
         "1.3",
         "4.2"
@@ -157,11 +157,12 @@
         "TauCetiRoadmap/AlgebraicModuliForArithmeticGeometry/README.md"
       ],
       "sections": [
-        "gap:reductive-connection-git"
+        "gap:reductive-connection-git",
+        "gap:relative-hilbert-mumford"
       ],
-      "supplied": "Finite generation and affine reductive quotients, linearized relatively ample line bundles, relative invariant Proj and stable geometric quotients with Hilbert–Mumford over ℂ.",
+      "supplied": "Relative invariant Proj over the ordinary affine quotient, stable geometric quotient comparison, and the relative Hilbert–Mumford criterion for affine linearly reductive complex groups on projective-over-affine presentations.",
       "owned_here": "Sections 1.3 and 4.2–4.4 construct the actual framed spaces, actions, stability comparisons and applications of the quotient theorems.",
-      "supplied_ja": "複素簡約群の有限生成, アフィン商, 相対豊富な線形化, 相対不変 Proj, 安定商および Hilbert–Mumford 判定法.",
+      "supplied_ja": "複素数体上のアフィン線形簡約群に対する相対不変式 Proj, 安定幾何学的商との比較, およびアフィン上の射影的表示に対する相対 Hilbert–Mumford 判定.",
       "consumers": [
         "1.3",
         "4.2",
@@ -311,15 +312,16 @@
         "C5.2: ordinary connection comparison prefix"
       ],
       "supplied": "One analytic-space category retaining nilpotents, locally finite-type scheme and locally separated finite-type algebraic-space analytification, coherent/tensor/pullback and étale descent comparisons, proper-morphism comparison and the ordinary holomorphic-connection dictionary.",
-      "owned_here": "1.2 verifies these constructions on the actual curve/time/moduli presentations, extends the comparison to polar and decorated data, and constructs smooth analytic pullback and manifold comparisons with their actual topological/dimension hypotheses.",
+      "owned_here": "1.2 verifies these constructions on the actual curve/time/moduli presentations, extends the comparison to polar and decorated data, and constructs smooth analytic pullback and manifold comparisons with their actual topological/dimension hypotheses. Section 4.4 uses C−1.1 for properness under scheme analytification and C−1.2 for locally separated algebraic-space presentations, and proves the analytic stable coarse comparison.",
       "supplied_ja": "冪零元を保持する単一の解析空間の圏、局所有限型スキームと局所分離有限型代数空間の解析化、連接層・テンソル・引戻し・étale 降下・固有射・通常の正則接続の比較。1.2 は実際の曲線・時間・モジュライ表示への適用、極と付加構造、滑らかな解析的引戻し、多様体比較とその次元・位相条件を担う。",
       "consumers": [
-        "1.2"
+        "1.2",
+        "4.4"
       ],
       "source_revision": {
         "repository": "TauCetiProject/TauCetiRoadmap",
         "pull_request": 848,
-        "commit": "fa9bfa5892bc24d60762bb1fbfc61f09f8be9043"
+        "commit": "3cf1bed88b57c2ddda0fe262b3b949d419bf4783"
       }
     },
     {
@@ -433,8 +435,8 @@
         "SchemeAndStackFoundations 1.1, 2.6, 3.4, 4.6, 4.14"
       ],
       "supplied": "Picard representability for projective geometrically integral schemes over a field, smooth-curve Jacobians, line-bundle descent and deformation.",
-      "owned_here": "1.5 constructs relative Picard under projective flat finite presentation and universal functions, including nonreduced curves; 5.1 verifies its boundary hypotheses.",
-      "supplied_ja": "体上の射影的幾何学的整スキームのPicard、滑らかな曲線のJacobian、線束降下・変形。非被約曲線を含む相対Picardは1.5が構成する。",
+      "owned_here": "Section 1.5 applies the separate relative Picard contract and proves the determinant comparison on the actual moduli.",
+      "supplied_ja": "体上の射影的幾何学的整スキームの Picard, 滑らかな曲線の Jacobian, 線束の降下と変形. 相対 Picard には別の供給契約を用いる.",
       "consumers": [
         "1.5"
       ]
@@ -642,6 +644,63 @@
       "supplied_ja": "有限次元の実可積分グラフ場から、明記した正則性の下で、滑らかな逆写像と水平微分を持つ局所積OpenPartialHomeomorphを得る。0.5が沈め込み座標への移送、曲率から可積分性、貼合せとホモトピー不変性を証明し、正則版は0.3を用いる。",
       "consumers": [
         "0.5"
+      ]
+    },
+    {
+      "id": "ode",
+      "title": "Mathlib time-dependent ODE",
+      "paths": [
+        "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "Mathlib/Analysis/ODE/ExistUnique.lean"
+      ],
+      "sections": [
+        "IsPicardLindelof",
+        "exists_eq_forall_mem_Icc_hasDerivWithinAt",
+        "exists_forall_mem_closedBall_eq_hasDerivWithinAt_lipschitzOnWith",
+        "ODE_solution_unique_of_mem_Icc"
+      ],
+      "supplied": "Time-dependent local existence and uniqueness in coordinates.",
+      "owned_here": "Section 0.2 proves manifold gluing, maximal lifting, concatenation and compact extension.",
+      "supplied_ja": "座標上の時間依存 ODE の局所存在と一意性.",
+      "consumers": [
+        "0.2"
+      ]
+    },
+    {
+      "id": "regular-singular",
+      "title": "Regular-singular comparison",
+      "paths": [
+        "TauCetiRoadmap/ComplexComparisonPartII/README.md"
+      ],
+      "sections": [
+        "C5.6: RegularSingular and CanonicalLogExtension"
+      ],
+      "supplied": "Regular-singular correspondence, canonical logarithmic extension, monodromy conjugacy in the chosen strip and the logarithmic-lattice criterion.",
+      "owned_here": "Sections 3.8, 4.1 and 4.3 compare actual decorated families, resonant lifts and determinants.",
+      "supplied_ja": "確定特異対応, 標準対数延長, 選んだ帯域でのモノドロミーの共役と対数格子の判定.",
+      "consumers": [
+        "3.8",
+        "4.1",
+        "4.3"
+      ]
+    },
+    {
+      "id": "relative-picard",
+      "title": "Relative Picard spaces and identity components",
+      "paths": [
+        "TauCetiRoadmap/ComplexComparisonPartII/README.md",
+        "TauCetiRoadmap/AlgebraicModuliForArithmeticGeometry/README.md"
+      ],
+      "sections": [
+        "ComplexComparisonPartII C3.2d.2–C3.2d.3 and C3.2f.1–C3.2f.2",
+        "AlgebraicModuliForArithmeticGeometry 7.3"
+      ],
+      "supplied": "Relative Picard representability, the identity-component criterion, and framed Artinian line-bundle lifting.",
+      "owned_here": "Section 1.5 verifies the affine lifting and cohomology hypotheses and constructs the line-connection torsor. Section 5.1 verifies the boundary hypotheses and computes the additive identity component.",
+      "supplied_ja": "相対 Picard の表現可能性, 単位成分の判定, 制限同型を指定した Artin 基底上の線束の持上げ.",
+      "consumers": [
+        "1.5",
+        "5.1"
       ]
     }
   ]

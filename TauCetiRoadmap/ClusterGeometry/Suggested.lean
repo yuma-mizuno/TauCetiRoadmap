@@ -1,19 +1,24 @@
 module
 
 import Mathlib
+import TauCeti.AlgebraicGeometry.Scheme.Normal
 
 /-!
 # Cluster geometry: target signatures
 
 The roadmap is `README.md`; this file is not the roadmap or an exhaustive checklist.
-It states the headline theorems expressible against the pinned APIs. The geometric
-recognition theorem uses native scheme gluing data; the seed decorations determine
-the gluing data to which it applies.
+It states the headline theorems expressible against the pinned APIs. Exact-overlap
+recognition uses native scheme gluing data; the seed decorations determine the
+gluing data to which it applies. Extension of automorphisms across a codimension-two
+complement uses native schemes, opens and codimension, together with Tau Ceti's
+normal-scheme predicate, Hartogs and affine reconstruction.
 
 The following headline theorems are not statable at the pins:
 
 * Realization and comparison of marked cluster atlases need the mutable-family seed
   pattern, its marked geometric charts, and mutation-compatible atlas morphisms.
+  The canonical open immersion of a maximal A locus into the spectrum of its upper
+  algebra also needs these carriers and their marked upper-algebra comparison.
 * Quotient realization, coherent descent, and invariance under changes of stack
   presentation need algebraic-stack quotient charts, their actual overlap
   groupoids, representable open immersions, and compatible two-morphisms. The
@@ -25,6 +30,8 @@ The following headline theorems are not statable at the pins:
 * Recovery of sections across a frozen boundary needs the marked boundary models
   and the preceding character-graded section carriers. General scheme Hartogs
   results are supplied by the existing dependencies.
+* Fixed-object stacks and finite-cyclic equivariant objects need the algebraic-stack
+  carrier, its two-fiber products, and coherent action data.
 
 These statements remain part of the mathematical specification in `README.md`.
 -/
@@ -34,6 +41,8 @@ open AlgebraicGeometry CategoryTheory
 namespace TauCetiRoadmap.ClusterGeometry
 
 universe u
+
+/-! ## Layer 0: marked scheme atlases and realization -/
 
 /-- A morphism from a glued scheme whose restrictions to all charts are open
 immersions is an open immersion exactly when every prescribed overlap is the
@@ -47,6 +56,20 @@ theorem isOpenImmersion_iff_exact_overlaps
       ∀ i j : D.J,
         IsPullback (D.f i j) (D.t i j ≫ D.f j i)
           (D.ι i ≫ f) (D.ι j ≫ f) := by
+  sorry
+
+/-! ## Layer 5: global comparison, reconstruction and fixed objects -/
+
+/-- Every automorphism of an open subscheme of an integral normal affine
+Noetherian scheme whose complement has codimension at least two extends uniquely
+to the whole affine scheme. The displayed equation says that the extension
+restricts to the given automorphism. -/
+theorem extendAutomorphism_of_codimension_two
+    (Y : Scheme.{u}) [IsIntegral Y]
+    [TauCeti.AlgebraicGeometry.IsNormalScheme Y] [IsAffine Y] [IsNoetherian Y]
+    (U : Y.Opens) (hcodim : ∀ x : Y, x ∉ U → 2 ≤ Order.coheight x)
+    (e : U.toScheme ≅ U.toScheme) :
+    ∃! E : Y ≅ Y, U.ι ≫ E.hom = e.hom ≫ U.ι := by
   sorry
 
 end TauCetiRoadmap.ClusterGeometry

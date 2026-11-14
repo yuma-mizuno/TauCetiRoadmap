@@ -19,6 +19,11 @@ The following headline theorems are not statable at the pins:
   pattern, its marked geometric charts, and mutation-compatible atlas morphisms.
   The canonical open immersion of a maximal A locus into the spectrum of its upper
   algebra also needs these carriers and their marked upper-algebra comparison.
+* Intrinsic cluster Poisson realization needs the algebraic Poisson bracket,
+  its localization and etale transport, the normalized X seed forms, and the
+  gerbe-valued X charts with Cartesian transitions. A graded A quotient does
+  not supply these interfaces or choose its X Poisson form. The roadmap gives
+  their construction from the existing derivation and differential APIs.
 * Quotient realization, coherent descent, and invariance under changes of stack
   presentation need algebraic-stack quotient charts, their actual overlap
   groupoids, representable open immersions, and compatible two-morphisms. The
@@ -33,9 +38,10 @@ The following headline theorems are not statable at the pins:
 * Fixed-object stacks and finite-cyclic equivariant objects need the algebraic-stack
   carrier, its two-fiber products, and coherent action data.
 * The undecorated double Bott--Samelson realization needs the actual positive-word
-  flag configurations, their decorated chamber-minor atlases, and the preceding
-  quotient-stack and character-line interfaces. Its rank-one coordinate checks
-  are not substitutes for that moduli comparison.
+  flag configurations, their direct X coordinates and Poisson transitions, and
+  the quotient-gerbe recognition interfaces. Its decorated chamber-minor atlas
+  supplies an additional comparison. The direct five-flag Poisson surface and
+  its geometric chart cover remain part of the README specification.
 
 These statements remain part of the mathematical specification in `README.md`.
 -/

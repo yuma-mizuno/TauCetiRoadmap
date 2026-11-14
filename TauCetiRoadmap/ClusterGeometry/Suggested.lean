@@ -24,6 +24,10 @@ The following headline theorems are not statable at the pins:
   gerbe-valued X charts with Cartesian transitions. A graded A quotient does
   not supply these interfaces or choose its X Poisson form. The roadmap gives
   their construction from the existing derivation and differential APIs.
+  The full ambient structure additionally needs the Cartan action complex,
+  its completed signed dg-Lie and Maurer--Cartan simplicial carrier, torsor
+  presentation invariance, and standard log-canonical gerbe-model comparisons.
+  A transverse bracket alone does not state this headline.
 * Quotient realization, coherent descent, and invariance under changes of stack
   presentation need algebraic-stack quotient charts, their actual overlap
   groupoids, representable open immersions, and compatible two-morphisms. The
@@ -37,11 +41,14 @@ The following headline theorems are not statable at the pins:
   results are supplied by the existing dependencies.
 * Fixed-object stacks and finite-cyclic equivariant objects need the algebraic-stack
   carrier, its two-fiber products, and coherent action data.
-* The undecorated double Bott--Samelson realization needs the actual positive-word
-  flag configurations, their direct X coordinates and Poisson transitions, and
-  the quotient-gerbe recognition interfaces. Its decorated chamber-minor atlas
-  supplies an additional comparison. The direct five-flag Poisson surface and
-  its geometric chart cover remain part of the README specification.
+* The main undecorated double Bott--Samelson theorem concerns the entire stack
+  of torsors with flag chains, defined independently of seed charts. It needs
+  the equivalence with its full torus-quotient presentation, the ambient
+  Cartan Poisson datum, and the cluster-gerbe recognition interfaces. The
+  full decorated X construction supplies that datum through a finite etale
+  comparison and an invariant Poisson quotient. The four-flag full-stack
+  class, invisible on its cluster open, and nontrivial torsor families are
+  required tests; the five-flag surface supplies a different scalar-bracket test.
 
 These statements remain part of the mathematical specification in `README.md`.
 -/

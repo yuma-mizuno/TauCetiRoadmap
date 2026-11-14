@@ -32,6 +32,10 @@ The following headline theorems are not statable at the pins:
   results are supplied by the existing dependencies.
 * Fixed-object stacks and finite-cyclic equivariant objects need the algebraic-stack
   carrier, its two-fiber products, and coherent action data.
+* The undecorated double Bott--Samelson realization needs the actual positive-word
+  flag configurations, their decorated chamber-minor atlases, and the preceding
+  quotient-stack and character-line interfaces. Its rank-one coordinate checks
+  are not substitutes for that moduli comparison.
 
 These statements remain part of the mathematical specification in `README.md`.
 -/

@@ -13,8 +13,11 @@ module category. Fundamental-module existence and classification lack those
 carriers and the spectral-family construction. Rational R-matrix existence,
 the real-simple head and socle theorem, and the pairwise tensor-product simplicity
 theorem lack these modules and their rational and specialized intertwiners.
-The simple-class basis and commutativity theorem lack the abelian quantum affine
-module category on which its exact Grothendieck ring is to be constructed.
+The simple-class basis, commutativity and polynomial-presentation theorems lack
+the abelian quantum affine module category on which its exact Grothendieck ring
+is to be constructed, as well as the fundamental spectral isomorphism classes.
+The local exchange-reality theorem lacks the same modules, tensor products and
+specialized R-matrices.
 The categorical-mutation comparison and the monoidal-categorification interface
 lack the quantum affine category and its monoidal seeds.
 

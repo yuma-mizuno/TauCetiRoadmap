@@ -7,6 +7,10 @@ import Mathlib
 
 The roadmap is `README.md`; this file is not the roadmap. Its purpose is to state
 the roadmap's headline theorems against the pinned APIs when their carriers exist.
+General quantum enveloping algebras and integrable representation theory are
+supplier inputs. The README records six declared supplier gaps for the general
+strings, extremal/global-basis theory, crystal rules and completed canonical
+element; the targets here concern their affine specializations and applications.
 
 The level-zero theorem lacks the derived quantum affine algebra and its type-1
 module category. Fundamental-module existence and classification lack those

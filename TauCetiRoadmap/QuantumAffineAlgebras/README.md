@@ -63,8 +63,11 @@ I, entries aᵢⱼ = ⟨hᵢ,αⱼ⟩, primitive positive marks aᵢ and comarks
 positive integral symmetrizer dᵢ. Use the full affine weight datum with fundamental
 weights Λᵢ, primitive null root δ = Σᵢaᵢαᵢ, primitive central coroot
 c = Σᵢcᵢhᵢ, and classical weight lattice Pcl = P/ℤδ. The kernel and primitivity
-conditions making this quotient valid are part of §1.1. Choose the affine node
-0 with a₀ = 1, taking the long node in A₂ₙ⁽²⁾, and put I₀ = I∖{0}.
+conditions making this quotient valid are part of §1.1. Choose the standard
+affine node 0 of KKOP20 §2.1: the remaining simple reflections generate the
+classical Weyl group, a₀=1, and c₀=1 except that c₀=2 in A₂ₙ⁽²⁾, where
+0 is the long node. Put I₀=I∖{0}. The condition a₀=1 alone would not
+specify an admissible node in every twisted type (K02 (4.15)).
 
 Let k be the algebraic closure of ℂ(q) inside the complex Puiseux-series field,
 with q transcendental. Put qᵢ = q raised
@@ -258,6 +261,10 @@ The API includes:
   `cl(tⁿΛ₀)=(1+2n)cl(Λ₀)−2n cl(Λ₁)`, so its iterates are distinct.
   On level zero, t fixes the classical class. Quotienting by c rather than
   δ would fail this comparison.
+- In D₄⁽³⁾ with marks (1,2,1) and comarks (1,2,3), the last node also
+  has mark 1 but is not the allowed affine node. Choosing it instead would
+  give the two proposed basis vectors (3,0,−1),(0,3,−2), which miss the
+  level-zero vector (1,1,−1). The standard-node condition rules this out.
 
 *Needs:* KacMoody §§0.1–0.3 and 2.1; the supplied full lattice pairing.
 

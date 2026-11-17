@@ -1,4 +1,4 @@
-# Roadmap: quantum enveloping algebras, part II: affine representations and monoidal categorification
+# Roadmap: quantum affine algebras, finite-dimensional representations and monoidal categorification
 
 **Summary.** Build the finite-dimensional integrable representation theory of
 quantum affine algebras of every affine type over a generic parameter field.
@@ -18,7 +18,9 @@ mutation.
 
 ## Scope and ownership
 
-This is the affine representation-theory continuation of
+The subject is quantum affine algebras and the finite-dimensional representation
+theory needed for monoidal categorification. The general quantum enveloping
+algebra is consumed from
 [QuantumEnvelopingAlgebras](../QuantumEnvelopingAlgebras/README.md). Its
 §§0.1, 1.0–1.5 and 2.1 own the datum, intrinsic quantum algebra, full torus,
 Hopf structure, triangular decomposition, Serre presentation, Borel pairing and

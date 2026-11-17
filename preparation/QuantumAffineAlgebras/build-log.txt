@@ -1,0 +1,20 @@
+Targeted roadmap module build
+UTC start: 2026-11-17T06:06:13.697716+00:00
+cwd: /workspace/scratch/889845af25ea/TauCetiRoadmap
+PATH: /workspace/scratch/889845af25ea/tools/lean-4.36.0-rc2-linux/bin:/usr/local/bin:/usr/bin:/bin
+Suggested.lean SHA256: bb9f98ed7b53837251bdbfe197011d622205bb40ad063a2b189ba765ff37b4a1
+$ lean --version
+Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)
+exit: 0
+$ lake --version
+Lake version 5.0.0-src+b35cb10 (Lean version 4.36.0-rc2)
+exit: 0
+$ git rev-parse HEAD
+d3ac19d0a6b41289ce54bce02b4a31050a4cee42
+exit: 0
+$ lake build TauCetiRoadmap.QuantumAffineAlgebras.Suggested
+✔ [18238/18239] Built TauCetiRoadmap.QuantumAffineAlgebras.Suggested (32s)
+Build completed successfully (18239 jobs).
+exit: 0
+UTC end: 2026-11-17T06:07:45.152777+00:00
+Scope: docstring-only namespace module importing Mathlib; build verifies parsing/import resolution, not elaboration of absent mathematical declarations.

@@ -1,0 +1,191 @@
+schema = "tauceti-roadmap-sources/v1"
+roadmap = "QuantumAffineAlgebras"
+
+[[source]]
+id = "K02"
+authors = "Masaki Kashiwara"
+title = "On level zero representations of quantized affine algebras"
+year = 2002
+venue = "Duke Mathematical Journal 112 (2002), 117–175"
+arxiv = "math/0010293v2"
+locator_scheme = "section"
+locator = "Sections 4.1–4.2, 5.2, 8–9; Theorems 5.17, 9.1–9.2; Propositions 9.3–9.5"
+url = "https://arxiv.org/abs/math/0010293v2"
+fetched_from = "https://arxiv.org/pdf/math/0010293v2"
+fetched_at = "2026-11-17T05:44:42Z"
+sha256 = "0ef927db8fda3cd0b9e75a1f9477e74819566b77a5b69527da626b48a9533cdf"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v2, 18 September 2012; article published in 2002"
+cited_for = ["Affine root data and affinization", "Fundamental modules and normalized R-matrices"]
+
+[[source]]
+id = "AK97"
+authors = "Tatsuya Akasaka, Masaki Kashiwara"
+title = "Finite-dimensional representations of quantum affine algebras"
+year = 1997
+venue = "Publications of the Research Institute for Mathematical Sciences 33 (1997), 839–867"
+locator_scheme = "section"
+locator = "Sections 1.1–1.3; Theorem 1.2; Appendix A, equations (A.1)–(A.6)"
+url = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/akasaka.pdf"
+fetched_from = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/akasaka.pdf"
+fetched_at = "2026-11-17T05:44:48Z"
+sha256 = "babfb3cba1593da4bdbee15512902e2a9c0c2855d8f0e1aa2f69ae78f1b0f84a"
+licence_class = "author-page"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "Author-hosted PDF; exact bytes identified by SHA-256, not asserted to be an arXiv version"
+cited_for = ["Fundamental modules", "Spectral parameters and duality", "Normalized R-matrices"]
+
+[[source]]
+id = "CP98"
+authors = "Vyjayanthi Chari, Andrew Pressley"
+title = "Twisted Quantum Affine Algebras"
+year = 1998
+venue = "Communications in Mathematical Physics 196 (1998), 461–476"
+arxiv = "q-alg/9611002v2"
+locator_scheme = "section"
+locator = "Theorem 1.3; Theorem 3.1; Proposition 3.2; Corollary 3.3"
+url = "https://arxiv.org/abs/q-alg/9611002v2"
+fetched_from = "https://arxiv.org/pdf/q-alg/9611002v2"
+fetched_at = "2026-11-17T05:44:53Z"
+sha256 = "23921b699a4e9187796103c9262b5066fb065540203d83b2b1fe14af07dc68fa"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v2, 22 September 1997; article published in 1998"
+cited_for = ["Twisted quantum affine representation conventions", "Simple-module classification"]
+
+[[source]]
+id = "KKOP20"
+authors = "Masaki Kashiwara, Myungho Kim, Se-Jin Oh, Euiyong Park"
+title = "Monoidal categorification and quantum affine algebras"
+year = 2020
+venue = "Compositio Mathematica 156 (2020), 1039–1077"
+doi = "10.1112/S0010437X20007137"
+arxiv = "1910.08307v2"
+locator_scheme = "section"
+locator = "Sections 2.1–2.2 and 5; Definitions 6.1–6.3, 6.5 and 6.7"
+url = "https://arxiv.org/abs/1910.08307v2"
+fetched_from = "https://arxiv.org/pdf/1910.08307v2"
+fetched_at = "2026-11-17T05:44:58Z"
+sha256 = "7271a2b104a4ff95c232370331f0996f59e7b260ccc321fd9941b539b0c3dad0"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v2, 29 September 2020"
+cited_for = ["Finite-dimensional integrable representation category", "R-matrices", "Monoidal categorification definition"]
+
+[[source]]
+id = "KKOP22"
+authors = "Masaki Kashiwara, Myungho Kim, Se-Jin Oh, Euiyong Park"
+title = "Monoidal categorification and quantum affine algebras II"
+year = 2022
+arxiv = "2103.10067v3"
+locator_scheme = "section"
+locator = "Sections 2.1–2.3 and 7.1–7.2; Definitions 7.2–7.3 and 7.6–7.7"
+url = "https://arxiv.org/abs/2103.10067v3"
+fetched_from = "https://arxiv.org/pdf/2103.10067v3"
+fetched_at = "2026-11-17T05:45:03Z"
+sha256 = "e62d291f9f16e4d50c767594f5bc4627427ae83ea1e1c395bf3ec79ed6e85f44"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v3, 31 March 2022"
+cited_for = ["Affine type conventions", "Fundamental modules and spectral equivalence", "Monoidal seeds and locally finite endpoint"]
+
+[[source]]
+id = "KKKO15"
+authors = "Seok-Jin Kang, Masaki Kashiwara, Myungho Kim, Se-Jin Oh"
+title = "Simplicity of heads and socles of tensor products"
+year = 2015
+venue = "Compositio Mathematica 151 (2015), 377–396"
+doi = "10.1112/S0010437X14007799"
+arxiv = "1404.4125v2"
+locator_scheme = "section"
+locator = "Section 2; Theorem 3.12; Lemma 3.15; Corollary 3.16"
+url = "https://arxiv.org/abs/1404.4125v2"
+fetched_from = "https://arxiv.org/pdf/1404.4125v2"
+fetched_at = "2026-11-17T05:45:08Z"
+sha256 = "c48790deb0cbf99c9b6ade60b923f7aa0ae3c581331748c019005314874aa544"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v2, 27 June 2014; article published in 2015"
+cited_for = ["Real simple modules", "Simple heads and socles of tensor products"]
+
+[[source]]
+id = "H10"
+authors = "David Hernandez"
+title = "Simple tensor products"
+year = 2010
+venue = "Inventiones Mathematicae 181 (2010), 649–675"
+doi = "10.1007/s00222-010-0256-9"
+arxiv = "0907.3002v2"
+locator_scheme = "theorem"
+locator = "Theorem 1.1"
+url = "https://arxiv.org/abs/0907.3002v2"
+fetched_from = "https://arxiv.org/pdf/0907.3002v2"
+fetched_at = "2026-11-17T05:45:12Z"
+sha256 = "fc68447dc98874c84a794cdac221f70a13fb81933774998395400f10c2200c67"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v2, 7 May 2010"
+cited_for = ["Pairwise simplicity criterion for finite tensor products"]
+
+[[source]]
+id = "CP95"
+authors = "Vyjayanthi Chari, Andrew Pressley"
+title = "Quantum Affine Algebras and their Representations"
+year = 1995
+venue = "Representations of Groups, CMS Conference Proceedings 16 (1995), 59–78"
+arxiv = "hep-th/9411145v1"
+locator_scheme = "theorem"
+locator = "Proposition 3.2; Theorem 3.3; Proposition 3.4; Corollary 3.5"
+url = "https://arxiv.org/abs/hep-th/9411145v1"
+fetched_from = "https://arxiv.org/pdf/hep-th/9411145v1"
+fetched_at = "2026-11-17T05:45:16Z"
+sha256 = "b451f21de59072f8fa501d3532c2d5f02ac3495ff8a6cb34ca811b7af7dfd8aa"
+licence_class = "open-repository"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "arXiv v1, 18 November 1994; article published in 1995"
+cited_for = ["Untwisted simple-module classification and Drinfeld polynomials"]
+
+[[source]]
+id = "K94"
+authors = "Masaki Kashiwara"
+title = "Crystal bases of modified quantized enveloping algebra"
+year = 1994
+venue = "Duke Mathematical Journal 73 (1994), 383–413"
+locator_scheme = "theorem"
+locator = "Lemma 8.2.1 and Proposition 8.2.2, printed pages 406–407"
+url = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/enveloping.pdf"
+fetched_from = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/enveloping.pdf"
+fetched_at = "2026-11-17T06:10:14Z"
+sha256 = "83017382ae6e325b44502b318b80f8c6f91a70fc0cbbc1b7e1b19b781e5599cf"
+licence_class = "author-page"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "Author-hosted scanned article; exact bytes identified by SHA-256"
+cited_for = ["4.2"]
+
+[[source]]
+id = "K91"
+authors = "Masaki Kashiwara"
+title = "On crystal bases of the q-analogue of universal enveloping algebras"
+year = 1991
+venue = "Duke Mathematical Journal 63 (1991), 465–516"
+locator_scheme = "theorem"
+locator = "Theorems 2, 4, 6 and 7, printed pages 466–467"
+url = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/duke-crystal.pdf"
+fetched_from = "https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/duke-crystal.pdf"
+fetched_at = "2026-11-17T06:14:06Z"
+sha256 = "b5f23b106e37b9b2a58b8ae635087692fdc805bfefb9000ccded7a8ca2f3242d"
+licence_class = "author-page"
+status = "certified"
+accessed = "2026-11-17"
+version_note = "Author-hosted scanned article; exact bytes identified by SHA-256"
+cited_for = ["4.2"]

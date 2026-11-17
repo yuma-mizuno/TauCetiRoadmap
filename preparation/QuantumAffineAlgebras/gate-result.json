@@ -1,0 +1,57 @@
+{
+  "name": "QuantumAffineAlgebras",
+  "ok": true,
+  "counts": {
+    "set_option": 0,
+    "blob": 0,
+    "latex": 0,
+    "tex": 0,
+    "prnum": 0,
+    "sorry-data": 0,
+    "sorry-examples": 0,
+    "residue": 0,
+    "private-paths": 0,
+    "imports": 0,
+    "mathlib-subimports": 0,
+    "no-import-mathlib": 0,
+    "lean-lines": 0,
+    "statement-hygiene": 0,
+    "forbidden": 0,
+    "dropped": 0,
+    "readme-ids-missing": 0,
+    "empty-sections": 0,
+    "round-labels": 0,
+    "long-fences": 0,
+    "layer-ids": 0,
+    "target-ids": 0,
+    "depcheck": 0,
+    "metadata": 0,
+    "stray-files": 0,
+    "dirty": 0,
+    "outside-folder": 0,
+    "source-material": 0,
+    "build": 0
+  },
+  "notes": [],
+  "details": {},
+  "reviewed_commit": "9f9a91680f97a98778950d2e202d1444d0b9d967",
+  "upstream_baseline": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+  "worker_commit": "162470c202cff60e47b8d3339f2d609a6bb40d45",
+  "merged_supplier_count": 259,
+  "options": {
+    "base": "upstream/main",
+    "build_cmd": "lake build {module}",
+    "roadmap_files": [
+      "README.md",
+      "Suggested.lean",
+      "metadata.toml"
+    ],
+    "outside_folder_allow": [],
+    "statement_hygiene": true
+  },
+  "file_sha256": {
+    "README.md": "fed2f3c086c8140fd233a88f43563deea917c008353cfa9790eede61e0a16187",
+    "Suggested.lean": "bb9f98ed7b53837251bdbfe197011d622205bb40ad063a2b189ba765ff37b4a1",
+    "metadata.toml": "59159a8bb65b50330403f417dd20d78640e3689e84ba3e06af27866690a2574e"
+  }
+}

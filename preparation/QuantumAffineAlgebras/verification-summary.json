@@ -1,0 +1,21 @@
+{
+  "roadmap_targets": 28,
+  "authored_checks": 95,
+  "minimum_checks_per_target": 3,
+  "layers": 9,
+  "symbolic_matrix_assertions": 39,
+  "full_worker_gate": "passed: every reported counter is zero",
+  "metadata_command": "python3 .github/scripts/check_roadmap_topics.py",
+  "metadata_output": "Roadmap topics valid (290 roadmaps).",
+  "metadata_exit_code": 0,
+  "source_manifest_command": "python3 -m tauceti_roadmap_worker --conf source-service.toml sources check sources.toml",
+  "source_manifest_output": "sources.toml: 0 problem(s)",
+  "source_manifest_exit_code": 0,
+  "primary_changed_files": [
+    "TauCetiRoadmap/QuantumAffineAlgebras/README.md",
+    "TauCetiRoadmap/QuantumAffineAlgebras/Suggested.lean",
+    "TauCetiRoadmap/QuantumAffineAlgebras/metadata.toml"
+  ],
+  "remote_readme_exact_content_match": true,
+  "remote_readme_git_blob": "b3cc6b6095da46ef57e747a5acda915dc8ec393b"
+}

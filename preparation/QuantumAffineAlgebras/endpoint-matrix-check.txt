@@ -1,0 +1,60 @@
+Cartan e 00: zero
+Cartan f 00: zero
+commutator 00: zero
+Cartan e 01: zero
+Cartan f 01: zero
+commutator 01: zero
+Serre e01: zero
+Serre f01: zero
+Cartan e 10: zero
+Cartan f 10: zero
+commutator 10: zero
+Cartan e 11: zero
+Cartan f 11: zero
+commutator 11: zero
+Serre e10: zero
+Serre f10: zero
+level zero: zero
+intertwining e0: zero
+intertwining f0: zero
+intertwining K0: zero
+intertwining e1: zero
+intertwining f1: zero
+intertwining K1: zero
+inverse: zero
+identity at t=1: zero
+det R = (q**2*t - 1)/(q**2 - t)
+expected determinant difference = 0
+e0 u = Matrix([[0, 0, 0, -(-a + b*q**2)/q]])
+f0 u = Matrix([[-(-a + b*q**2)/(a*b*q), 0, 0, 0]])
+ell e0 = Matrix([[-a*q**2 + b, 0, 0, 0]])
+ell f0 = Matrix([[0, 0, 0, -(a*q**2 - b)/(a*b)]])
+e1 u: zero
+f1 u: zero
+ell e1: zero
+ell f1: zero
+Z stable under e0: zero
+Z stable under f0: zero
+Z stable under K0: zero
+Z stable under e1: zero
+Z stable under f1: zero
+Z stable under K1: zero
+Z e0 = aq f1: zero
+Z f0 = (aq)^-1 e1: zero
+Z e1 = Matrix([[0, (q**2 + 1)/q, 0], [0, 0, 1], [0, 0, 0]])
+Z f1 = Matrix([[0, 0, 0], [1, 0, 0], [0, (q**2 + 1)/q, 0]])
+Z K1 = Matrix([[q**2, 0, 0], [0, 1, 0], [0, 0, q**(-2)]])
+fixed seed q=2,a=3,b=5: R = Matrix([[1, 0, 0, 0], [0, 9/7, -4/7, 0], [0, -4/7, 15/7, 0], [0, 0, 0, 1]])
+fixed seed determinant = 17/7
+fixed seed e0 u = Matrix([[0, 0, 0, -17/2]])
+fixed seed f0 u = Matrix([[-17/30, 0, 0, 0]])
+boundary q=2,t=4: (t-q^2)R = Matrix([[0, 0, 0, 0], [0, -3, 6, 0], [0, 6, -12, 0], [0, 0, 0, 0]])
+boundary pole rank = 1
+boundary q=2,t=1/4: R = Matrix([[1, 0, 0, 0], [0, 4/5, 2/5, 0], [0, 2/5, 1/5, 0], [0, 0, 0, 1]])
+boundary zero rank = 3
+boundary reverse composite1: zero
+boundary reverse composite2: zero
+q=2,a=3: actual monic-z r_XY = Matrix([[0, 0, 0, 0], [0, -3/4, 3/2, 0], [0, 3/2, -3, 0], [0, 0, 0, 0]])
+q=2,a=3: actual monic-z r_YX = Matrix([[-15, 0, 0, 0], [0, -12, -6, 0], [0, -6, -3, 0], [0, 0, 0, -15]])
+q=2,a=3: denominator d_XY(z)=z-1; d_YX(z)=z-16
+All symbolic assertions passed.

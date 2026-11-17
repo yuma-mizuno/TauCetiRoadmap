@@ -22,7 +22,8 @@ This is the affine representation-theory continuation of
 [QuantumEnvelopingAlgebras](../QuantumEnvelopingAlgebras/README.md). Its
 §§0.1, 1.0–1.5 and 2.1 own the datum, intrinsic quantum algebra, full torus,
 Hopf structure, triangular decomposition, Serre presentation, Borel pairing and
-braid operators. Specialize those objects; do not introduce a second quantum
+braid operators; §5.3 constructs the modified algebra in its finite-type scope.
+Specialize those objects; do not introduce a second quantum
 enveloping algebra. The subalgebra without the degree direction, its central
 quotient, the finite-dimensional affine category, spectral families, normalized
 fundamental modules and R-matrices are owned here. Both untwisted and twisted
@@ -38,8 +39,9 @@ be Artinian; it is not the Artinian-ring theorem of its §4.1.
 geometric seeds, polynomial frozen coefficients, and locally finite classical
 patterns. No cluster-algebra construction is repeated here.
 
-The affine extremal modules and the supporting results needed to construct
-fundamental modules are targets of Layer 4. They do not presume a general
+The affine extension of the weight-idempotent sector construction, the affine
+extremal modules and the supporting results needed to construct fundamental
+modules are targets of Layer 4. They do not presume a general
 quantum crystal or global-basis library. General integrable category O, path
 crystals, integral forms and root-of-unity representation theory retain their
 own scopes. Drinfeld presentations and highest-ℓ-weight arguments may be used
@@ -117,6 +119,10 @@ converse about all real simple objects is imposed.
   finitely supported functions: subalgebras, quotients, comparison maps and
   graded constructions. A new mathematical structure is installed on these
   carriers only after its defining laws are proved.
+- `jacobson_density` in `RingTheory/SimpleModule/Basic.lean`: interpolation
+  on a finite set by an algebra element for a semisimple module, for maps
+  linear over its endomorphism ring. Section 4.2 uses it to prove absolute
+  simplicity of the rational models with scalar endomorphisms.
 
 ### From Tau Ceti
 
@@ -151,6 +157,13 @@ Consume §§0.1 and 1.0–1.3a for the full datum, intrinsic generic algebra, Ho
 structure, triangular decomposition and Serre comparison; §§1.4–1.5 for the
 homogeneous nilpotent/Borel pairings; and §2.1 for braid operators. The completed
 canonical element and its affine spectral action are new targets in §5.1.
+Section 2.3 supplies Verma modules, the quantum Casimir and the character
+formula for integrable highest-weight modules; these are reused in the
+auxiliary dominant-weight cases of §4.2.
+Section 5.3 supplies the finite-type modified algebra, its weight-idempotent
+sector construction and Laurent form. Section 4.2 here extends that same
+construction to the affine datum and proves the crystal/global-basis results;
+the finite-type scope of the supplied theorem is not silently enlarged.
 
 ### From TauCetiRoadmap.KacMoody
 
@@ -205,6 +218,15 @@ with P = (⊕ᵢℤΛᵢ) ⊕ ℤδ and its dual, so that Pcl identifies with th
 simple-coroot eigenvalue lattice. Define level by ⟨c,λ⟩ and Pcl⁰ as its kernel.
 Construct the finite classical Weyl group and the translation subgroup of the
 affine Weyl group (K02 §4.1, pp.11–17; KKOP20 §2.1, pp.5–6).
+Fix the lifts by `α_i=Σ_j a_ji Λ_j+δ_i0 δ`; a₀=1 makes their null-root
+sum equal to δ. This pins the section used in spectral affinization.
+
+Construct the rational symmetric form on Pcl⁰⊗ℚ characterized by
+`(cl(α_i),λ)=d_i⟨h_i,λ⟩` for i∈I₀, using the inverse finite Cartan
+matrix. Prove nondegeneracy and Weyl invariance and verify the same formula
+for i=0 using Σᵢaᵢcl(αᵢ)=0 and Σᵢcᵢ⟨hᵢ,λ⟩=0. This weight–weight
+form supplies the toral factor in §5.1; it is distinct from the supplied
+weight/coroot pairing.
 
 For i∈I₀ put `π_i = (c_0 Λ_i − c_i Λ_0)/gcd(c_0,c_i)` and ϖᵢ = cl(πᵢ).
 Prove these are a basis of Pcl⁰. Define a basic level-zero weight to be one whose
@@ -227,7 +249,8 @@ The API includes:
 **Checks.**
 
 - In A₁⁽¹⁾, a = c = (1,1), π₁ = Λ₁−Λ₀ and m₁ = 1; the class of δ is zero
-  while δ is a nonzero element of P.
+  while δ is a nonzero element of P. With d₁=1 the classical form has
+  `(ϖ₁,ϖ₁)=1/2`, since cl(α₁)=2ϖ₁.
 - In A₂⁽²⁾ with long node 0, `A = ((2,−1),(−4,2))`, a = (1,2), c = (2,1),
   π₁ = 2Λ₁−Λ₀, and s₁s₀π₁ = π₁+δ. Thus m₁ = 1. The expression
   Λ₁−Λ₀ has level −1 and cannot replace π₁.
@@ -301,8 +324,14 @@ finite-dimensional type-1 module the local-nilpotence conditions follow from
 finite weight support. This identifies the definition with KKOP's
 finite-dimensional integrable category (KKOP20 §2.1, p.7; AK97 §1.1, pp.3–4).
 
-Prove the rank-one divided-power string identities on each i-restriction over
-k. In particular, if eᵢv = 0 and Kᵢv = qᵢⁿv, then
+For the proof support in Layer 4, establish the rank-one string decomposition
+for every integrable full-P weight module over ℚ(q) or k: a vector of weight
+λ has a unique finite expression `Σ_r f_i^(r)v_r`, where
+`r≥max(0,−⟨h_i,λ⟩)` and `v_r∈ker(e_i)∩M_(λ+rα_i)`.
+This does not require the whole module to be
+finite-dimensional. Prove local finite-dimensionality and semisimplicity of
+these rank-one restrictions from their divided-power identities. In
+particular, if eᵢv = 0 and Kᵢv = qᵢⁿv, then
 `e_i f_i^(r) v = [n−r+1]_i f_i^(r−1) v` for r≥1. Use the finite strings to
 prove Weyl invariance of weight multiplicities. This is the weight theory of
 these restrictions, with the field and generators just specified, rather than
@@ -328,6 +357,9 @@ The API includes:
 - For a highest vector of i-weight 2, the r = 1 string coefficient is
   `[2]_i = q_i+q_i^-1`; for i-weight 0 it is 0. This detects ordinary
   integers substituted for quantum integers.
+- In a rank-one highest-weight-2 module plus the unit, the lowest vector
+  has i-weight −2 and its allowed string index is r=2. Allowing r=1
+  would add the invisible term fᵢ(1)=0 from the unit and destroy uniqueness.
 
 *Needs:* Layer 1; the native finite-module category, internal direct sums and
 submodule APIs; QuantumEnvelopingAlgebras §1.3a for the rank-one relations.
@@ -368,6 +400,11 @@ anti-equivalences DₛDᵢ ≅ Id and DᵢDₛ ≅ Id. A double use of the same 
 the action by S² or S⁻² and is not identified with the identity without an
 additional intertwiner (KKOP20 §2.1, p.8; QuantumGroups §8.5).
 
+Prove the tensor-intersection lemma for these modules: if X⊆M₁⊗M₂ and
+Y⊆M₂⊗M₃ are submodules and X⊗M₃⊆M₁⊗Y, there is a submodule
+Z⊆M₂ with X⊆M₁⊗Z and Z⊗M₃⊆Y. This uses tensor linear algebra and
+the Hopf action, and precedes its R-matrix applications (KKOP20 Lemma 2.10).
+
 The API includes:
 
 - `(M⊗N)_λ = ⊕_(μ+ν=λ) M_μ⊗N_ν` and weights of either dual obtained by
@@ -385,6 +422,9 @@ The API includes:
 - On source generators, `S²(e_i)=q_i^-2 e_i` and `S²(f_i)=q_i^2 f_i`.
   The identity map on V(a) does not identify this twist with its original
   action when eᵢ acts nontrivially.
+- For three two-dimensional trivial modules and a line Z in the middle one,
+  X=M₁⊗Z and Y=Z⊗M₃ give X⊗M₃=M₁⊗Y of dimension 4. The middle
+  submodule in the intersection lemma is precisely that line.
 
 *Needs:* §§1.2 and 2.1–2.2; QuantumGroups §8.5 and the native finite
 Hopf-module monoidal/rigid structures; exactness of tensor over a field.
@@ -475,7 +515,8 @@ Layers 1–2; native scalar extension, Laurent polynomial and localization APIs.
 
 ### 4.1 Extremal vectors and their universal modules
 
-For an integrable P-weight module over the full U and u of weight λ, call u
+Use the full algebra over either ℚ(q) or k. For an integrable P-weight module
+and u of weight λ, call u
 extremal when there are vectors u_w of weight wλ, indexed by the affine Weyl
 group, with u₁ = u and the following conditions for n = ⟨hᵢ,wλ⟩:
 
@@ -510,44 +551,124 @@ The API includes:
 *Needs:* §§1.1–1.2 and 2.1's integrable weight-string theory, used for full
 P-weights; QuantumEnvelopingAlgebras §§1.1–1.3a and 2.1; native algebra quotients.
 
-### 4.2 Basic extremal-module structure
+### 4.2 Rational forms and basic extremal-module structure
 
-For every basic level-zero λ prove E(λ) is nonzero and simple as a full
-U-module, has weights in `(λ+Q) ∩ conv(Wλ)`, has finite-dimensional weight
-spaces, and has one-dimensional weight space at every point of Wλ. Prove that
-an element stabilizing λ fixes its canonical extremal vector, and that
-`wt(E(λ)) ∩ (λ+ℤδ)` is the δ-periodic part of Wλ. Also prove that every nonzero
-integrable U-module generated by an extremal vector of this basic weight is
-isomorphic to E(λ) (K02 Propositions 5.8, 5.15, 5.16, pp.21–24).
+Construct the supporting bases first over F₀=ℚ(q), before extension to k.
+Put A₀={f∈F₀ : f is regular at q=0}, A∞=bar(A₀) and A=ℚ[q,q⁻¹], with
+bar(q)=q⁻¹. Use the bar fixing eᵢ,fᵢ and reversing full-torus generators in
+the source presentation, transported through §1.2. Prove comparison with the
+source's rational parameter form under the reparametrization in the
+Conventions. No bar on the algebraically closed k fixing ℂ is required.
 
-This target owns these structural conclusions, including the restricted
-crystal/global-basis arguments if that proof route is chosen. In that route
-construct the rank-one Kashiwara operators from the string decomposition, the
-stable lattice at q = 0 and its crystal quotient for E(λ), and the bar-invariant
-integral lift needed to prove the stated finite-weight and cyclicity conclusions
-(K02 §§2.2–3.1 and 5.1–5.2). The existence of such a basis is not a hypothesis
-of the structure theorem and is not imported from an unnamed supplier.
+For the affine extremal modules E_F₀(λ) of §4.1, construct the divided-power
+Laurent form E_A(λ) and the bar fixing the cyclic generator. Define the
+Kashiwara operators from §2.1's unique finite string decomposition: for u of
+weight μ use `u=Σ_n f_i^(n)u_n`, with `n≥max(0,−⟨h_i,μ⟩)` and
+`u_n∈ker(e_i)∩M_(μ+nα_i)`. Construct a weight-graded A₀-lattice L(λ)
+stable under these operators and a crystal basis B(λ) of L(λ)/qL(λ), with
+the two induced operators inverse wherever nonzero. Prove regularity on
+finite-type subdiagrams and compatibility with normalized Weyl transport.
+Prove that the natural reduction map
+
+```
+L(λ) ∩ bar(L(λ)) ∩ E_A(λ) → L(λ)/qL(λ)
+```
+
+is an isomorphism of ℚ-vector spaces. Its inverse on B(λ) is the global
+basis G(b); prove its scalar-extension basis property and compatibility with
+rank-one divided-power filtrations. This is the balanced-triple existence
+theorem, not merely existence of three spanning lattices (K02 §2.4,
+Definitions 2.2–2.3).
+
+The proof support is explicitly owned here. Use the supplied skew derivatives
+to define the negative-half Kashiwara operators, the A₀-span L(∞) of
+lowering words on 1, and their nonzero residues B(∞). Prove their
+crystal/global-basis existence and the auxiliary dominant highest/lowest
+module cases needed in the induction (K91 Theorems 2, 4, 6 and 7, journal
+pp.466–467; proofs §§2–4 and 6–7). The positive half follows by the
+Chevalley comparison. Reuse the Verma modules and highest-weight character
+formula of QuantumEnvelopingAlgebras §2.3 for these auxiliary modules, with
+the extremal presentation of §4.1 at dominant or antidominant weights.
+Extend the weight-idempotent construction of
+QuantumEnvelopingAlgebras §5.3 to this affine datum: the sector U_F₀1_λ is
+the cyclic quotient with `K_y1_λ=q^⟨y,λ⟩1_λ`; their direct sum has the
+locally unital multiplication and divided-power Laurent form specified
+there. Prove these laws without a finite-type assumption and agreement with
+the supplier on finite-type subdata. Transport the source generators through
+§1.2. Construct the balanced highest–lowest tensor bases and their
+stabilization to a modified-sector basis (K94 Proposition 2.1.1 and
+Theorem 2.1.2, journal pp.391–392). Prove the sectors'
+crystal identification with `B(∞)⊗T_λ⊗B(−∞)`, the star anti-involution and
+the commuting ordinary and star crystal actions (K94 Theorems 3.1.1, 4.3.2
+and §5; K02 §2.2). These basis existence statements are supporting targets,
+not hypotheses imported from an unnamed crystal roadmap.
+
+In the λ-sector let Bext(λ) consist of the crystal elements whose star is
+extremal, and let Iλ be the F₀-span of G(b) for b outside Bext(λ). Prove
+Iλ is a left submodule and that the quotient has the universal property of
+E_F₀(λ). Prove that its surviving global basis gives the lattices above,
+compatibly with normalized Weyl transport (K94 Lemma 8.2.1 and Proposition
+8.2.2, journal pp.406–407).
+
+For basic level-zero λ prove E_F₀(λ) is nonzero and simple, with weights in
+`(λ+Q)∩conv(Wλ)`, finite-dimensional weight spaces, and multiplicity one
+at each point of Wλ. Prove the stabilizer fixes the normalized extremal
+vector and
+`wt(E_F₀(λ))∩(λ+ℤδ)=Wλ∩(λ+ℤδ)`.
+The proof includes the basic-weight extremal-orbit and stabilizer lemmas and
+the bounded-length Schubert covering giving finite multiplicities (K02
+Theorem 5.5, Propositions 5.8, 5.12, 5.15 and 5.16; the Schubert subsets
+used in this argument are constructed as in its §2.3). Deduce that every
+nonzero integrable module generated by a basic extremal vector is this
+universal module.
+
+Prove that the linear-relations construction, normalized Weyl transport and
+period quotient commute with scalar extension. Prove absolute simplicity by
+native `jacobson_density`: a simple F₀-algebra module with endomorphism
+algebra F₀ remains simple after any field extension. Indeed density can
+isolate any one of the finitely many independent F₀-vectors in a nonzero
+extended vector. Here an endomorphism is scalar because the generating
+extremal weight space has dimension one. The same scalar-extension lemma
+is available for the finite fundamental quotient in §4.3. This gives the
+stated structural conclusions over k without assuming a valuation or a bar
+on arbitrary k-modules.
 
 **Checks.**
 
-- In A₁⁽¹⁾ for λ = π₁, the orbit weights π₁+nδ all occur with multiplicity
-  1. E(π₁) is infinite-dimensional despite each weight space being finite.
-- Stabilizing λ gives the same normalized vector, not merely an arbitrary
-  scalar multiple. This is the condition needed to define a δ-translation
-  independently of the chosen Weyl element.
-- The weight 0 is not basic and E(0) is one-dimensional; it has no positive
-  δ-period. The period conclusion must not be asserted for all level-zero
-  weights.
+- For λ=0, the rational Laurent form, crystal lattice and global basis are
+  A, A₀ and {1}; the balanced-triple map sends 1 to 1. This supporting
+  check does not call 0 basic or assign it a positive δ-period.
+- In A₁⁽¹⁾, every orbit weight π₁+nδ of E(π₁) has dimension one, although
+  E(π₁) is infinite-dimensional.
+- In F₀u, the three lattices A₀u, A∞u and (q−1)Au span the same space,
+  and the Laurent form is bar-stable. Their triple intersection is zero,
+  whereas A₀u/qA₀u has dimension one. Spanning and bar stability do not
+  imply the balanced-triple theorem.
+- In A₂⁽¹⁾, λ=Λ₁−Λ₀ satisfies ⟨h₂,λ⟩=0 and s₂λ=λ. The nonidentity
+  stabilizer element s₂ sends u to `f₂^(0)u=u`, with scalar exactly 1.
 
-*Needs:* §§1.1 and 4.1; the explicit supporting constructions in this target.
+*Needs:* §§1.1–1.2, 4.1 and §2.1's full-weight string decomposition;
+QuantumEnvelopingAlgebras §§1.1–1.3a for halves and divided powers, §2.3 for
+the auxiliary highest-weight inputs, and §5.3
+for the finite-type sector construction being extended; native Jacobson density.
+The affine sector, basis existence, crystal and
+Schubert-subset constructions stated here are owned supporting targets.
 
 ### 4.3 Fundamental modules and spectral periodicity
 
-For λ = πᵢ use §4.2 and the Weyl-transport comparison of §1.1 to construct the
+For λ = πᵢ use §4.2, the weight transport of §1.1 and the module transport
+of §4.1 to construct the
 unique U′-linear automorphism zᵢ of E(πᵢ), of degree mᵢδ, sending its extremal
 generator to the canonical vector of weight πᵢ+mᵢδ. Define
 `F_i = E(π_i)/(z_i−1)E(π_i)`. Prove finite-dimensionality, integrability,
-simplicity and the one-dimensional dominant extremal weight ϖᵢ. Prove the
+simplicity and the one-dimensional dominant extremal weight ϖᵢ. On its
+rational form prove that the inherited global basis has a finite regular
+simple crystal: the extremal weights form one classical Weyl orbit and the
+dominant extremal weight occurs once (K02 Definition 4.9 and Theorem 5.17).
+Own the tensor compatibility of these crystal lattices and prove that tensor
+products of simple crystals are simple and that a finite-dimensional
+integrable module with simple crystal is simple (K02 Lemma 4.11 and
+Proposition 4.12). This is the good-module support used in §5.2. Prove the
 normalized finite extremal-family characterization, and uniqueness of Fᵢ up
 to isomorphism, with the basic-weight transport for A₂ₙ⁽²⁾ included
 (K02 (5.6)–(5.7), Theorem 5.17, pp.24–25; AK97 §1.3, p.5).
@@ -598,10 +719,15 @@ Theorem 1.2 does not extend the classification to sign-twisted modules.
 
 Treat surjectivity, injectivity and permutation-independence as parts of this
 theorem, not consequences of extremal-module existence. A proof using
-highest-ℓ-weights must establish the required induced highest-ℓ-weight modules,
-simple quotients and polynomial classification in its untwisted and folded
-cases (CP95 §§2–3; CP98 §§2–3). The untwisted eigenvalue formula is not imposed
-on twisted types. No proof input here is Grothendieck-ring commutativity.
+highest-ℓ-weights must construct the current realization and prove its
+comparison with §1.2's derived algebra at central level zero (CP95 Theorem
+2.2; CP98 Theorem 1.3). Establish its induced highest-ℓ-weight modules,
+unique simple quotients and polynomial classification in both untwisted
+and folded cases. Identify elementary polynomial data with the actual
+Fᵢ(a) of §4.3, including the aᵐⁱ identifications and normalization changes,
+before applying polynomial factorization (CP95 §§2–3; CP98 §§2–3;
+KKOP22 §2.2). The untwisted eigenvalue formula is not imposed on twisted
+types. No proof input here is Grothendieck-ring commutativity.
 
 The API includes:
 
@@ -632,7 +758,7 @@ from either the entire product or its head in a prescribed tensor order.
 
 ### Dependencies
 
-Layers 1–3; QuantumEnvelopingAlgebras §§1.1–1.3a and 2.1. No crystal or
+Layers 1–3; QuantumEnvelopingAlgebras §§1.1–1.3a, 2.1, 2.3 and 5.3. No crystal or
 classification statement is assumed from a roadmap without a specified target.
 
 ## Layer 5: rational and specialized R-matrices
@@ -654,7 +780,7 @@ using finite classical weight support and nilpotence in the finite-type
 positive directions. The completion is part of the construction, not an
 infinite sum assumed to lie in U′⊗U′. Prove naturality, the two tensor identities
 and the Yang–Baxter identity on three independent spectral families
-(K02 §7, pp.29–31; KKOP20 §2.2, (2.7)–(2.9), pp.9–10).
+(K02 §7, pp.29–31; KKOP20 §2.2, (2.5)–(2.7), pp.9–10).
 
 The API includes:
 
@@ -669,7 +795,8 @@ The API includes:
   intertwiner is the appropriate unitor comparison.
 - In the rank-one example the rational normalized matrix displayed below has
   a Laurent-series expansion at z = 0; the universal matrix differs by a
-  scalar series and a toral factor before normalization.
+  nonzero scalar series. Its toral factor is already incorporated in the
+  construction of the universal matrix.
 - The imaginary-root terms have unbounded spectral degrees. They cannot be
   replaced by a finite element of U′⊗U′, although each coefficient of the
   action is defined by a finite calculation.
@@ -726,7 +853,7 @@ powers of z, and prove basis independence. Construct
 `r_M,N = (d_M,N(z) Rᴺ_M,N(z))|_(z=1)` and prove it is a nonzero U′-linear map
 M⊗N→N⊗M. Minimality of d proves that all coefficients of the cleared matrix
 cannot have a common factor z−1. Multiplication by a different Laurent unit
-changes r by a nonzero scalar (KKOP20 §2.2, (2.10)–(2.15), pp.10–12).
+changes r by a nonzero scalar (KKOP20 §2.2, (2.8)–(2.13), pp.10–11).
 
 The API includes:
 
@@ -739,6 +866,24 @@ The API includes:
 - the relation between normalized rational identities and compositions of
   specialized maps, including the possibility that such a composition is zero.
 
+For general nonzero M,N, define rational renormalizability by existence of a
+nonzero scalar Laurent series c(z) such that c(z)Rᵁₘ,ₙ(z) maps the Laurent
+lattices into each other. When it exists, divide out the common polynomial
+factors of its coefficients to obtain a primitive Laurent-lattice map,
+unique up to a Laurent unit, with nonzero specialization at every a∈k×.
+Its specialization at 1 defines r up to a nonzero scalar, agreeing with
+the simple-pair construction above.
+
+Prove closure of rational renormalizability under tensoring either argument
+when the two constituent pairs are renormalizable, and under taking nonzero
+subquotients of either argument (KKOP20 Propositions 2.11(ii)–(iii) and
+2.12). Prove the nonvanishing consequence of §2.3's tensor-intersection
+lemma: if M₂ is simple and φ₁:L→M₂⊗M₃, φ₂:M₁⊗M₂→L′ are nonzero,
+then `(φ₂⊗Id)∘(Id⊗φ₁)` is nonzero. Hence, with the common crossing
+factor simple, the specialized two-step R composition agrees with the
+tensor-product r up to a nonzero scalar (Proposition 2.11(i)–(iii)). These
+are the particular nonsimple-module intertwiners needed in Layer 7.
+
 **Checks.**
 
 - For V(1),V(1), the denominator in the second spectral variable is z−q²;
@@ -748,8 +893,11 @@ The API includes:
 - With either factor the unit, d=1. Multiplying d by z−1 would give zero
   on specialization, so an arbitrary denominator-clearing polynomial is not
   a valid replacement for the minimal denominator.
+- The pair (X⊗Y,1) is renormalizable even though X⊗Y has length 2;
+  its map is the unitor comparison of rank 4. Its nonzero simple
+  subquotients Z and 1 give the rank-3 and rank-1 unit comparisons.
 
-*Needs:* §§3.1–3.2 and 5.2; native polynomial divisibility, localization and
+*Needs:* §§2.3, 3.1–3.2 and 5.1–5.2; native polynomial divisibility, localization and
 finite-dimensional linear algebra.
 
 ### Examples
@@ -976,11 +1124,13 @@ that it is not proved in the cited KKKO15 theorem: this target includes the
 additional tensor-intersection argument, rather than attributing that proof
 to the wrong theorem.
 
-The supporting argument owns the elementary containment lemma for submodules
-of a triple tensor product over a field, the factorization of specialized
-R-matrices through images, and the implication from a scalar nonzero rₘ,ₘ
-to simplicity of M⊗M. State and prove those lemmas on the actual tensor
-modules. Prove also that for real simple M the maps sending a simple N to
+Use the tensor-intersection lemma of §2.3 and the renormalizability and
+nonvanishing composition results of §5.3. The supporting argument owns
+factorization of specialized R-matrices through images and the
+criterion that a simple M is real if and only if its nonzero rₘ,ₘ is scalar.
+For the reverse implication use KKKO15 Theorem 3.12 with its actual scalar
+self-R hypothesis, without assuming reality first. Prove these statements on
+the actual tensor modules. Prove also that for real simple M the maps sending a simple N to
 the head of M⊗N, and to the head of N⊗M, are injective on isomorphism
 classes (KKKO15 Corollary 3.14). Deduce that if one of M,N is real,
 commutation is equivalent to strong commutation.
@@ -1104,12 +1254,16 @@ isomorphic objects or applying a simultaneous spectral shift.
 ### 8.2 Fundamental spectral components
 
 On Σ, join two distinct fundamental classes when their modules do not
-commute. This is a well-defined undirected graph. Since fundamental modules
-are real, §7.2 identifies its edges with nonsimple tensor products. Relate the
-edges to poles in one of the two normalized fundamental R-matrices by the
-good-module simplicity criterion (K02 Proposition 9.4(iii); KKOP22 §2.2,
-pp.12–14). With Σ defined by actual isomorphism classes, the construction
-includes the twisted spectral identifications.
+commute. This is a well-defined undirected graph (KKOP22 §2.2, pp.12–14).
+Since fundamental modules are real, §7.2 identifies its edges with nonsimple
+tensor products. Prove these are exactly the pairs for which at least one
+of dₘ,ₙ(1),dₙ,ₘ(1) vanishes. If both are nonzero, the normalized inverse
+identity specializes to an isomorphism, and §7.2 gives simplicity. Conversely,
+if the tensor is simple, the nonzero primitive r is an isomorphism; its value
+on the dominant extremal tensor is d(1) times a nonzero vector, so d(1)≠0
+in both orders. This proof applies to all shifted fundamental classes and
+requires no unproved good-dual hypothesis. The quotient Σ includes the
+twisted spectral identifications.
 
 For a chosen connected component σ₀, define 𝒞⁰ by the Serre tensor closure
 of its fundamental modules. This is the category denoted 𝒞ᵍ⁰, with its chosen
@@ -1275,7 +1429,7 @@ categorification to be a specified ring isomorphism
 `Φ : 𝒜 ≅ K₀(𝒟)` such that for every cluster monomial m there exists a real
 simple object L of 𝒟 with Φ(m)=[L]. The quantifier includes all seeds reached
 by finite mutation words, all finitely supported nonnegative exponents and
-the empty monomial (KKOP20 Introduction, pp.2–3; KKOP22 §7.2, p.64).
+the empty monomial (KKOP20 Introduction, pp.2–3).
 
 Prove invariance of this property under exact tensor equivalence of 𝒟 and
 under a specified isomorphism of cluster patterns. Given a family of
@@ -1416,6 +1570,18 @@ cluster algebra still requires the ring isomorphism and mutation coverage in
 
 ## References
 
+- **K91.** Masaki Kashiwara, *On crystal bases of the q-analogue of universal
+  enveloping algebras*, Duke Mathematical Journal 63 (1991), 465–516;
+  [author PDF](https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/duke-crystal.pdf).
+  Theorems 2, 4, 6 and 7 give the half and auxiliary highest-weight crystal
+  and global-basis existence statements used in §4.2.
+- **K94.** Masaki Kashiwara, *Crystal bases of modified quantized enveloping
+  algebra*, Duke Mathematical Journal 73 (1994), 383–413;
+  [author PDF](https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/enveloping.pdf).
+  Proposition 2.1.1 and Theorem 2.1.2 supply the modified-basis existence;
+  Theorems 3.1.1 and 4.3.2 and §5 supply the modified crystal constructions;
+  Lemma 8.2.1 and Proposition 8.2.2 give the extremal quotient and its
+  inherited global basis.
 - **K02.** Masaki Kashiwara, *On level-zero representations of quantized affine
   algebras*, Duke Mathematical Journal 112 (2002), 117–175;
   [arXiv math/0010293v2](https://arxiv.org/abs/math/0010293v2).
@@ -1462,4 +1628,6 @@ cluster algebra still requires the ring isomorphism and mutation coverage in
   *Monoidal categorification and quantum affine algebras II*;
   [arXiv 2103.10067v3](https://arxiv.org/abs/2103.10067v3).
   Section 2.2 specifies the spectral-component categories; §§7.1–7.2 give
-  the classical cluster and ordinary monoidal-categorification conventions.
+  the countable classical seed and monoidal-mutation conventions. Its
+  Λ-categorification Definition 7.7 is stronger data than the ordinary
+  predicate used here.

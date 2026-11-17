@@ -1,0 +1,263 @@
+{
+  "primary_commit": "42a40c74cd66cf8b51d8456e835db66fb392c6e8",
+  "files": [
+    {
+      "path": "README.md",
+      "chars": 5109,
+      "bytes": 7677,
+      "sha256": "d18f82903b9da2916e05d389046554517abdccd1f4ff5361953a62c7b50e4023"
+    },
+    {
+      "path": "self-review.md",
+      "chars": 14492,
+      "bytes": 14583,
+      "sha256": "a2df972906600f1ed5cdc1b040fb937264952c15f9104a361b4ae948f6f55ab1"
+    },
+    {
+      "path": "review.json",
+      "chars": 1683,
+      "bytes": 1683,
+      "sha256": "5e535b47721a8bdd2a6861bf63cb361bcf9e4ef0566cb6971b99d197ab3a8c2c"
+    },
+    {
+      "path": "verification-summary.json",
+      "chars": 1907,
+      "bytes": 1907,
+      "sha256": "c509a497a03ea31443899f6a04f63729c7754beed39cca09f82e2635c07e6ca8"
+    },
+    {
+      "path": "sources.toml",
+      "chars": 8255,
+      "bytes": 8307,
+      "sha256": "f361641a4bf3936b473938db6beb4b63ff8b7498bbd539c7e0265d2c765fd38f"
+    },
+    {
+      "path": "native-api-locations.md",
+      "chars": 9886,
+      "bytes": 9917,
+      "sha256": "680ba57d2d5a4b3d2b943ec71852999e3e032f5c2239267c5a4c3f669fd01199"
+    },
+    {
+      "path": "gate-result.json",
+      "chars": 30084,
+      "bytes": 30084,
+      "sha256": "bfec7ca203364f6dbf41542c895988f8f08b1716188345e214b13b339c9a28b9"
+    },
+    {
+      "path": "run-gate.py",
+      "chars": 9790,
+      "bytes": 9790,
+      "sha256": "d1a5aefd6665bf7c2845fe6f47494e8ff9f5781752d65d5ffd88a210a2233714"
+    },
+    {
+      "path": "gate-log.txt",
+      "chars": 731,
+      "bytes": 731,
+      "sha256": "53ba04cbcf92c780d6c793e02758b9e679e012dcacf022a9e31a864d1751f102"
+    },
+    {
+      "path": "build-log.txt",
+      "chars": 981,
+      "bytes": 983,
+      "sha256": "97b3a9cd2bda5e0f9b12fde68a4a39c3df1c6aeea4cda32a9a9505c3a331f39a"
+    },
+    {
+      "path": "build-summary.md",
+      "chars": 4369,
+      "bytes": 4373,
+      "sha256": "d1d0bd604342b47ac75fc5721a4c29f18962980aec2b24f25236adc5f0e80141"
+    },
+    {
+      "path": "foundations-review.md",
+      "chars": 15750,
+      "bytes": 15961,
+      "sha256": "ab9089c008851e16a77ca1b9c03ada57e6fef0e0536d7844b92df2adaf5ccad3"
+    },
+    {
+      "path": "foundations-review-final.md",
+      "chars": 8928,
+      "bytes": 8971,
+      "sha256": "62e280eff35b08eb8b6d02c6b3b87c6b49a892361c5b77cb701e8116e100f438"
+    },
+    {
+      "path": "endpoint-review.md",
+      "chars": 12248,
+      "bytes": 12416,
+      "sha256": "15a11164493b88d578c7c3b5a5793cc94ba3d111f6cf9fd5b5ecc478837d54c4"
+    },
+    {
+      "path": "endpoint-review-final.md",
+      "chars": 7138,
+      "bytes": 7248,
+      "sha256": "408aa9fa40daf993acd86da9dfb942750abc8dea072096a2b5eed91b3d9e60d0"
+    },
+    {
+      "path": "structure-review-final.md",
+      "chars": 29411,
+      "bytes": 30097,
+      "sha256": "669686e94097bc1388504e2b3bbc8f9ff9a92f756d81d0bca789114bbe148918"
+    },
+    {
+      "path": "structure-review-verdict.json",
+      "chars": 873,
+      "bytes": 873,
+      "sha256": "1765bc6a70d3267bd1ecc9e44e00f538f078bf75aa330c0dfbb70f777185f826"
+    },
+    {
+      "path": "endpoint-matrix-check.py",
+      "chars": 3618,
+      "bytes": 3618,
+      "sha256": "543de6de6bc01187f9c6a9e630f66afab5df01687c35ba9505f2b6f2e9f749b6"
+    },
+    {
+      "path": "endpoint-matrix-check.txt",
+      "chars": 1963,
+      "bytes": 1963,
+      "sha256": "daf4ff1cc25325bc888bf5058630bb932eb48d27fa11aa79175f0876967c7d29"
+    },
+    {
+      "path": "foundations-supplier-review.md",
+      "chars": 14283,
+      "bytes": 14413,
+      "sha256": "d074b69535ac1c05b3c4c4b72c9da1bd10548c799421a7b1987f973b6c5dbba5"
+    },
+    {
+      "path": "pr-ownership-review.md",
+      "chars": 15756,
+      "bytes": 15861,
+      "sha256": "9968b1425ea2e75a8f959423939e07251bf265ebb4f56af639eb430e2ac328f7"
+    },
+    {
+      "path": "structure-review-revision.md",
+      "chars": 14456,
+      "bytes": 14581,
+      "sha256": "7fe68e3be5deb6915ef780259b2fb5c9e6ce6d866433819392e585f39370e388"
+    },
+    {
+      "path": "structure-review-revision.json",
+      "chars": 1203,
+      "bytes": 1203,
+      "sha256": "b3bf149f4089f6543fac33feadec5d88fb965bfb4e9ee6dca5f5cafb6b584fec"
+    },
+    {
+      "path": "open-pr-inventory.md",
+      "chars": 14782,
+      "bytes": 14826,
+      "sha256": "28dbec672fd95da438cd989f6ded16e57aeef698c4e10de4948e1319b6cb3cf2"
+    },
+    {
+      "path": "open-pr-inventory.json",
+      "chars": 878150,
+      "bytes": 878249,
+      "sha256": "22ceca780f74b3b219bdf0f507813ad6aa2a86123c19b23876b1c24962b5687e"
+    },
+    {
+      "path": "open-pr-inventory-initial.json",
+      "chars": 853923,
+      "bytes": 854024,
+      "sha256": "9d745f3eb4cad05892df5ba1499910e5bedfad923cec9b6743d17fc2a9631684"
+    },
+    {
+      "path": "open-pr-inventory-refresh.json",
+      "chars": 178380,
+      "bytes": 178481,
+      "sha256": "32a7c5f4bedf45acc7e63ae438bd546d0bd5ddb97b42a1d49733a433d7e6435a"
+    },
+    {
+      "path": "open-pr-merged-during-audit.json",
+      "chars": 877,
+      "bytes": 877,
+      "sha256": "a208cfe42af5ead65d417988355f4ccd75255089e8bf7b8ea6c8df4c8e4d8027"
+    },
+    {
+      "path": "open-pr-term-search-summary.json",
+      "chars": 8894,
+      "bytes": 8896,
+      "sha256": "611e2a6f3952d9aeec0a4462181279cfd156296e03f00bd4f74dc335d69d3856"
+    },
+    {
+      "path": "historical-supplier-prs.json",
+      "chars": 1970,
+      "bytes": 1972,
+      "sha256": "d6a495521952c6e7cecc9ad324f33628f5bcea2318070d19c78c522980542ce1"
+    },
+    {
+      "path": "open-pr-neighbours.py",
+      "chars": 3776,
+      "bytes": 3780,
+      "sha256": "3bb2636c7621ab7aba7b13a00d9ae37547ef81bddad3f33e2fd01d8a470d517e"
+    },
+    {
+      "path": "open-pr-neighbours.json",
+      "chars": 810,
+      "bytes": 810,
+      "sha256": "61067522fe339a2da92cf24f1cfd125b8d269459f60eeb753b832f1d2067d15b"
+    },
+    {
+      "path": "open-pr-neighbours.md",
+      "chars": 1207,
+      "bytes": 1215,
+      "sha256": "d8dce672477979a6c9236eecadf93ecd99933993e526c2433a14fbac4da7cb7b"
+    },
+    {
+      "path": "source-locator-count.py",
+      "chars": 2398,
+      "bytes": 2399,
+      "sha256": "531baddd38eb18cb1282c34b6ee4feeb3b52b5c0120a6986d729ada1052f50be"
+    },
+    {
+      "path": "source-locator-delta.json",
+      "chars": 10978,
+      "bytes": 10978,
+      "sha256": "c00aa241d63b0082302ebdd5106f7a6874fc5cff7ab878c5f06dc0380fb6f93e"
+    },
+    {
+      "path": "generic-supplier-boundary.md",
+      "chars": 19689,
+      "bytes": 19853,
+      "sha256": "0fe485b8939f9686b6329a7c285023923f20d498226d3552060fd79424a52072"
+    },
+    {
+      "path": "pr-dependency-review-plan.md",
+      "chars": 11456,
+      "bytes": 11477,
+      "sha256": "31116fc69b34c0c8ae8cdd1eb0d6b78fb1c919c5b74fdd6af100bae0880158d3"
+    },
+    {
+      "path": "design/plan.json",
+      "chars": 171232,
+      "bytes": 175301,
+      "sha256": "d167a8261ccb883a5a82d5b3d77022e943c5e2cd064a28a250b13d1b233578e5"
+    },
+    {
+      "path": "design/README.md",
+      "chars": 89760,
+      "bytes": 92567,
+      "sha256": "631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4"
+    },
+    {
+      "path": "design-plan-validation.json",
+      "chars": 703,
+      "bytes": 703,
+      "sha256": "a1324476b95a335d22145007d33060beaebcca88277f008f3670f3e4bcc6b282"
+    },
+    {
+      "path": "build-design-plan.py",
+      "chars": 20849,
+      "bytes": 21092,
+      "sha256": "b9882a5ee15bed7d66250c59471f704abe1017a0e625fec0e2e155a9e868f284"
+    },
+    {
+      "path": "quasi-r-check.py",
+      "chars": 1700,
+      "bytes": 1700,
+      "sha256": "2942f920b428a41b3e74e7156410ae51fd0c9c2ccb4315872b7280835cfcce9d"
+    },
+    {
+      "path": "quasi-r-check.txt",
+      "chars": 303,
+      "bytes": 303,
+      "sha256": "f25dade94b5d48c9c2b073d927980b88393229b56759895d3adc738b34d04124"
+    }
+  ]
+}

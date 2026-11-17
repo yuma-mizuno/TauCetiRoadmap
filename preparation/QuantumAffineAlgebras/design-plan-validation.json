@@ -1,0 +1,18 @@
+{
+  "validator": "unmodified tauceti_roadmap_worker.lanes.design.validate_plan",
+  "problems": [],
+  "readme_sha256": "631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4",
+  "plan_sha256": "d167a8261ccb883a5a82d5b3d77022e943c5e2cd064a28a250b13d1b233578e5",
+  "summary": "design of QuantumAffineAlgebras: 9 layers, 28 targets, 97 tests, 6 gaps (6 for suppliers)",
+  "parent": null,
+  "conditional_gaps": [
+    "completed-canonical-element",
+    "integrable-string-decomposition",
+    "universal-extremal-module",
+    "extremal-global-basis-model",
+    "crystal-schubert-strata",
+    "crystal-tensor-rule"
+  ],
+  "all_local_dependencies_earlier": true,
+  "internal_proof_locator_count": 2
+}

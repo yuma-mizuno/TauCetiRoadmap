@@ -1,0 +1,7 @@
+PASS Xi Delta(e) = barDelta(e) Xi
+PASS Xi Delta(f) = barDelta(f) Xi
+PASS Xi commutes with Delta(K)
+PASS inverse-swapped nilpotent coefficient
+PASS KKOP normalized middle block at spectral ratio 0
+PASS K02 normalized middle block at spectral ratio infinity
+6 symbolic matrix checks passed; SymPy 1.14.0.

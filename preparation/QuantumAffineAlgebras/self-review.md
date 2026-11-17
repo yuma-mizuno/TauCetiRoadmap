@@ -1,143 +1,225 @@
-# Review of QuantumAffineAlgebras (package, final self-review)
+# Review of QuantumAffineAlgebras (package, supplier-boundary revision)
 
-**Verdict:** accepted. **Remaining findings: 0; blocking findings: 0.**
+**Verdict:** accepted, conditional on the six declared supplier gaps below.
+**Remaining findings: 0; blocking findings: 0.**
 
 ## Reviewed result and authority
 
-This is the self-review requested by the author, applying the TauCetiRoadmapWorker design, package, review and red-team criteria to a preparatory branch. It is not a verdict issued by the project's worker service or an upstream maintainer. No pull request, issue comment or review request has been sent upstream.
+This is the author-requested preparatory self-review using the pinned
+TauCetiRoadmapWorker design, package, review and red-team criteria. It combines
+the root author's review with three separate agent passes within the same model
+family. It is not the project's official worker service, a two-family review,
+or upstream maintainer approval. No upstream PR, comment or review request has
+been created.
 
-- Repository: `yuma-mizuno/TauCetiRoadmap`.
-- Primary branch: `quantum-affine-algebras`.
-- Reviewed commit: `9f9a91680f97a98778950d2e202d1444d0b9d967`.
-- Upstream baseline: `c6ef576569501d342dec5a31a9938c9549dc6a00`.
-- Worker rules/code: `162470c202cff60e47b8d3339f2d609a6bb40d45`.
-- README SHA256: `fed2f3c086c8140fd233a88f43563deea917c008353cfa9790eede61e0a16187`.
-- Suggested.lean SHA256: `bb9f98ed7b53837251bdbfe197011d622205bb40ad063a2b189ba765ff37b4a1`.
+- Primary commit: `42a40c74cd66cf8b51d8456e835db66fb392c6e8` on `yuma-mizuno/TauCetiRoadmap`, branch
+  `quantum-affine-algebras`.
+- Main comparison: `4b6909559eb5e50a1cc8b86522723fb6e9db69bf`.
+- Worker rules and code: `162470c202cff60e47b8d3339f2d609a6bb40d45`.
+- README SHA256: `631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4`.
+- Suggested.lean SHA256: `fea5fbc078c55a7410222589b3da47976749bbb8d2d162392d718c655c3bc389`.
 - Review date: 2026-11-17.
 
-The primary change contains exactly `README.md`, `Suggested.lean` and `metadata.toml` under `TauCetiRoadmap/QuantumAffineAlgebras/`. Review evidence is kept separately so that it does not enter the proposed roadmap-only diff. The mathematical text is a Part II extension of QuantumEnvelopingAlgebras and is organized by its construction dependencies.
+The main comparison advanced during the public PR audit. It added two unrelated
+roadmaps and changed repository README/templates; all relevant general suppliers
+and the library pins stayed unchanged. The candidate branch retains exactly
+three changed files under `TauCetiRoadmap/QuantumAffineAlgebras/` relative to
+main's merge base. It has 9 layers, 28 numbered targets and 97 authored Checks,
+with at least three Checks per target. These are specification checks, not
+97 completed Lean proofs.
 
-## Review method and findings disposition
+## Corrections to the previous completion report
 
-The root author reviewed the whole result and coordinated three separate passes: quantum-affine foundations, R-matrices and the monoidal endpoint, and repository/source/ownership structure. These were separate agent passes within the same model family, not a claim of the worker's two-family external red-team service. Initial findings remain in the adjacent reports; the final reports identify the exact corrected README hash.
+The previous report did not establish comprehensive ownership coverage against
+open PR heads: its gate had main suppliers but no open-head input collection.
+This revision supplies that missing evidence. The earlier title also presented
+the project as QuantumEnvelopingAlgebras Part II and owned general quantum
+representation constructions inside its affine layer. The author's correction
+is now reflected in the actual definitions and dependencies, not only the title.
 
-The foundations pass accepted Conventions, suppliers and Layers 1–4 with no remaining P1/P2/P3. The endpoint pass accepted Layers 5–9 and the complete rank-one example with no remaining repairable findings. The source/structure pass also accepted the same hash with no remaining findings; its full record is `structure-review-final.md`.
+The standalone title is **quantum affine algebras, finite-dimensional
+representations and monoidal categorification**, and `design/plan.json` has
+`parent: null`. General strings, universal extremal modules, crystal/global
+bases, Schubert strata, the tensor rule and completed quasi-R construction are
+supplier contracts. Affine restriction, level zero, basic-weight structure,
+periodic fundamental quotients, all-affine classification, spectral R-matrices,
+exact K0 and the monoidal endpoint remain local targets.
 
-Substantive repairs included:
+This report supersedes the earlier unconditional acceptance and its limited
+open-PR coverage. Earlier mathematical reports remain evidence for unchanged
+passages at their explicitly recorded old hashes.
 
-| Defect found | Repair now present |
-| --- | --- |
-| A mark-one affine node need not be the standard node | The standard KKOP node, classical-Weyl condition and comark condition are explicit; the alternate node in D₄⁽³⁾ supplies a concrete negative test. |
-| Rank-one string uniqueness lacked its lower index bound | Both uses impose r≥max(0,−⟨hᵢ,λ⟩); the highest-weight-2 module plus the unit demonstrates the failure without it. |
-| A q=0 lattice and bar were requested directly over an algebraic closure | Crystal/global-basis work is over ℚ(q), with a specified balanced triple; scalar extension is a separate theorem. |
-| Crystal/global-basis existence was hidden behind a proof sketch | K91 half/highest-weight support, K94 balanced modified-sector support, the star-extremal quotient and finite-multiplicity arguments are explicit owned targets. |
-| A finite-type modified carrier risked being used as an all-affine theorem | The affine extension and compatibility with the existing finite-type construction are explicit; no owner file is changed. |
-| Fundamental tensor powers depended backwards on R-matrix theory | The simple-crystal construction supplies the noncircular support; its realness consequence is presented in Layer 7. |
-| Polynomial classification lacked its current-realization bridge | Both current comparisons, highest-ℓ-weight induction and identification with the constructed fundamental spectral modules are explicit. |
-| The universal R-matrix lacked its weight–weight toral form | §1.1 constructs the form on Pcl⁰⊗ℚ with the exact symmetrizer normalization. |
-| Real-simple proofs required intertwiners on particular nonsimple products | §5.3 owns conditional renormalizability, tensor/subquotient closure and the simple-middle-factor nonvanishing lemma. |
-| Pole criteria risked dropping a good-dual hypothesis | §8.2 derives the required criterion from normalized inverse identities, primitive specialization and real commutation. |
-| Ordinary and Λ-categorification references were conflated | §9.4 cites KKOP20's introduction for the ordinary one-way predicate; KKOP22's stronger definition is distinguished. |
-| Several source pages and equations were inaccurate | The final reports verify the corrected CP95/CP98 pages and KKOP20 universal/renormalization equation ranges. |
+## Declared conditions of acceptance
 
-No finding was dismissed to obtain a passing result. Corrections were applied to the primary branch and reread before final acceptance.
+The worker explicitly permits conditional acceptance of a precise declared
+supplier gap when the same slug and named owner occur in the README and
+`design/plan.json` (`prompts/sections/gaps-and-order.md`, `prompts/review.md`).
+Each of the following six contracts is atomic, hypothesis-explicit, minimal for
+the chosen construction and attached to a named planned target. None is claimed
+to exist at an invented section number.
+
+| Gap | Supplier | Required construction |
+| --- | --- | --- |
+| `integrable-string-decomposition` | KacMoodyPartII | Unique integrable rank-one strings over Q(q) and its extensions, including the correct lower index bound |
+| `universal-extremal-module` | KacMoodyPartII | The full-datum universal integrable extremal module and normalized family |
+| `extremal-global-basis-model` | KacMoodyPartII | Rational balanced global basis and star-extremal modified-sector model, with regular ambient crystal structures |
+| `crystal-schubert-strata` | KacMoodyPartII | General Bruhat-indexed Schubert subsets/strata and their star/maximal-raising laws |
+| `crystal-tensor-rule` | KacMoodyPartII | Tensor crystal theorem for the specified coproduct and full or admissible quotient weight grading |
+| `completed-canonical-element` | QuantumEnvelopingAlgebras | Normalized completed quasi-R element constructed from the nilpotent pairing, including its comparison with the raw canonical tensors |
+
+KacMoody and QuantumEnvelopingAlgebras on main explicitly assign general quantum
+integrable representation theory to a future KacMoody Part II. That planned
+successor has no folder on main or in the audited open PRs. Its name appears
+only as a declared owner in the proposed order, never as a merged supplier or
+fabricated open README. The actual main KacMoody roadmap remains classical.
+The declared general prerequisites are the conditions on the completed affine
+specification; they have not been implemented or approved by a future owner.
+
+The intended direction is KacMoody → QuantumEnvelopingAlgebras → the planned
+general quantum representation theory → QuantumAffineAlgebras. No general
+contract requires the consumer's affine category or classification. The
+mechanical check cannot inspect the outgoing graph of an unwritten supplier;
+the mathematical contract review checks that absence of circularity separately.
 
 ## Verified sound
 
-### Mechanical gates and scope
+### Complete public PR inventory
 
-The unmodified worker `run_gate` was executed on the clean reviewed commit, with `base='upstream/main'`, default three-file allowance, statement hygiene enabled, no outside-folder allowance and `build_cmd='lake build {module}'`. The configured main supplier set includes every named supplier. The separate structural audit also inspected nested/completed roadmaps.
+The initial collection covered 453 open PRs, all 1,406 changed filenames,
+499 touched-folder READMEs and 494 Suggested.lean files at exact verified heads.
+The complete refresh at 2026-11-17 07:02:57 UTC found 451 open PRs: #872 and
+#879 had merged; #117 alone changed its head. The updated #117 files were read.
+The final gate uses all 497 current README snapshots and all 324 main roadmap
+names. There are zero missing READMEs and zero head mismatches. The final
+snapshot also contains 492 Suggested.lean files, searched for hidden ownership.
 
-Every reported gate count is zero, including dependency checks, README/Lean identifiers, source material, dirty tree, files outside the folder, metadata and build. The exact machine-readable output is `gate-result.json`. The repository's own metadata command also passed:
+This means complete inventory and content-search coverage followed by focused
+reading of the relevant contracts. It does not claim line-by-line mathematical
+review of every unrelated roadmap. No current PR supplies the required general
+quantum crystal/global-basis or quantum-affine foundation. The closest candidates
+and their exact heads are documented in [open-pr-inventory.md](open-pr-inventory.md)
+and [pr-ownership-review.md](pr-ownership-review.md).
 
-```text
-python3 .github/scripts/check_roadmap_topics.py
-Roadmap topics valid (290 roadmaps).
-```
+Historical #2363 and #1125 (QuantumEnvelopingAlgebras) and #1124 (KacMoody)
+are merged; their main text, rather than their old PR descriptions, determines
+the supplier contracts. The root reviewer independently fetched their metadata.
 
-`git diff --check upstream/main...HEAD` passed. The final diff has three files, with no changes to the toolchain, package pins, supplier roadmaps or repository configuration. The remote README was fetched back at the exact reviewed commit and compared byte-for-byte with the local final text.
+The closest mathematical overlap is #1775, ModularCharactersAndBlocks §1.2:
+stable-lattice reduction for finite groups over a p-modular system. It does not
+provide §6.2's arbitrary k-algebra/equal-characteristic local-ring theorem.
+The latter remains an explicitly stated supporting variant with its full
+torsion-quotient proof. Section 6.1 likewise descends existing modulewise
+Jordan–Hölder multiplicities for finite-dimensional modules, rather than
+assuming the Artinian-ring hypothesis of the native FGModuleCat theorem.
 
-The README has nine numbered layers, 28 numbered target subsections and 95 authored check bullets, with at least three per target. These are mathematical checks reviewed in prose, not 95 completed Lean proofs.
+### Worker and build checks
 
-### Headline theorems and Suggested.lean
+The **unmodified** full `run_gate` passed on the clean reviewed commit. It used
+the default three-file allowance, no outside-folder allowance, statement hygiene,
+`base='upstream/main'`, and `build_cmd='lake build {module}'`. Open PRs were not
+put into the merged set. The input collection contains 821 main/open README
+tuples, and the proposed order is labelled local, not the worker board's official
+order. Every counter is zero, including dependency, identifier, hygiene, source
+material, dirty tree, scope and build checks. See [gate-result.json](gate-result.json)
+and [gate-log.txt](gate-log.txt).
 
-The headline targets are level zero; existence of fundamental modules; simple spectral classification; generic simplicity and rational R-matrices; simple-class coordinates, Grothendieck commutativity and polynomial presentation; real-simple head/socle and cancellation; pairwise tensor simplicity; local exchange reality; and categorical/algebraic mutation and the monoidal-categorification interface.
+The complete `design/plan.json` passed the unchanged worker plan validator.
+Its six slugs match every README gap reference; all typed local prerequisites
+precede their targets. The verdict passed the unchanged package-verdict validator
+with the same declared gap set. The repo metadata command returned
+`Roadmap topics valid (290 roadmaps).`; `git diff --check upstream/main...HEAD`
+passed. The ten-source manifest check returned `0 problem(s)`.
 
-At the pinned libraries the actual derived quantum-affine algebra, type-1 category, spectral modules, normalized intertwiners and monoidal seeds are absent. Each unavailable headline and its missing carrier is named in the module docstring. The worker's `lean-form.md` explicitly permits a documentation-only module in this case. There is no invented free predicate, admitted data, fake carrier or padding declaration.
+The target build validates the actual `Suggested.lean`: an import/docstring and
+empty namespace whose docstring names every unavailable headline carrier.
+It does not claim to implement the planned quantum-affine mathematics. Native
+pins remain TauCeti `2fd255d997f47c0b5d834ee416c7015d55444ce5` and Mathlib
+`1b1ccf4b088b32fa3f23f2de1127433254a81e1e`, with Lean 4.36.0-rc2.
+No toolchain, manifest or supplier file was changed.
 
-The exact command
+The three revision passes are [foundations and mathematical contracts](foundations-supplier-review.md),
+[open-PR ownership and source comparison](pr-ownership-review.md), and
+[worker structure and dependency validation](structure-review-revision.md).
+Each accepts the same final README hash, conditional on the same six gaps.
 
-```text
-lake build TauCetiRoadmap.QuantumAffineAlgebras.Suggested
-```
+### Adversarial repairs in this revision
 
-passed with exit 0 under Lean 4.36.0-rc2 and the pinned TauCeti/Mathlib revisions. The full gate reran the targeted build on the final clean commit and reported `build=0`. This verifies the import/documentation/namespace module, not a formalization of future mathematical theorems. The earlier full output and pin fingerprints are retained in `build-log.txt` and `build-summary.md`.
+| Issue found | Repair and explicit witness |
+| --- | --- |
+| General constructions still owned by the affine roadmap | Generic rank-one, extremal, global-basis, Schubert, tensor and completion targets moved to six supplier contracts; the local targets now construct affine adapters and consequences |
+| Full Borel pairing mistaken for a finite degreewise dual pair | The completed element uses the nondegenerate nilpotent halves; the infinite torus is kept in the separately constructed weight factor |
+| Raw inverse-pairing element confused with normalized quasi-R | At rank one raw degree one is +(q−q⁻¹)E⊗F, whereas source Ξ has −(q−q⁻¹)e⊗f; the normalization comparison is required |
+| Source completion in the wrong spectral direction | Inverting the swapped K02 intertwiner gives the KKOP z=0 expansion; the middle block is ((1−q⁻²,q⁻¹),(q⁻¹,0)) |
+| Two star actions inferred inside every extremal sector | Regular ordinary/star structures are on the ambient modified crystal; star-Weyl maps compare the λ and wλ models |
+| Ambiguous Weyl operators | §4.1 uses U-linear universal maps E(wλ)→E(λ) sending the generator to u_w, then restricts them to U′ |
+| Evaluation modules required to lift to the degree torus | The string theorem is applied rank-one-wise; the tensor contract permits Pbar with descending coroot pairings, instantiated at Pcl |
+| Normalization of crystal lattices silently identified | e=qᵢ² eHat and f=qᵢ⁻² fHat transport actions, bar and lattices together, with spectral relabeling compared |
+| Imprecise K91 tensor locator | Visually verified §2.4 Theorem 1 and (2.4.3), pp.475–476; strings are §2.2, p.473, and the coproduct is (1.4.3), p.472 |
 
-### Adversarial values and boundaries
+Additional checks preserve the negative string-index bound in L(2)⊕1, both
+annihilations at extremal pairing zero, division by [2] at pairing two,
+χ_t's trivial derived action and full weight tδ, the balanced-triple
+counterexample (q−1)A, and the A₂⁽²⁾ and D₄⁽³⁾ normalization tests. The
+native Jacobson-density argument still gives absolute simplicity from the
+one-dimensional cyclic extremal weight space.
 
-The table records representative computed or explicitly derived values for every target, including all mathematical findings and the headline boundary cases. The adjacent agent reports give the source-hypothesis comparisons behind the general statements.
+[quasi-r-check.py](quasi-r-check.py) verifies six symbolic matrix equalities
+for source e/f/K intertwining, inverse-and-swap, and both spectral limits;
+[quasi-r-check.txt](quasi-r-check.txt) records their success. The foundations
+review independently checked the rank-one degree-two coefficients on L(2)⊗L(2).
+The earlier 39 assertions for the unchanged full A₁⁽¹⁾ rational matrix and
+exchange example remain recorded in [endpoint-matrix-check.txt](endpoint-matrix-check.txt).
+These are convention checks, not proofs of a general supplier theorem.
 
-| Target | Values compared / boundary witness | Result |
-| --- | --- | --- |
-| 1.1 | A₂⁽²⁾: a=(1,2), c=(2,1), π₁=2Λ₁−Λ₀, level 0; Λ₁−Λ₀ has level −1. D₄⁽³⁾ alternate-node vectors miss (1,1,−1). | Correct normalizations and necessary standard-node restriction. |
-| 1.2 | A₂⁽²⁾ with d=(4,1): C=K₀K₁²=q^(2c); K₀²K₁ has nonzero root pairing. | Marks/comarks are not interchanged. |
-| 2.1 | Highest i-weight 2: eᵢfᵢv=(qᵢ+qᵢ⁻¹)v. Lowest i-weight −2 needs r≥2; the extra r=1 unit term is zero. | Quantum coefficient and string uniqueness bounds agree. |
-| 2.2 | Unit: dimension/length (1,1); V(a): (2,1); zero: (0,0). | Dimension is a length bound, not its definition. |
-| 2.3 | V(a)⊗V(b) weight dimensions 1,2,1; S²(eᵢ)=qᵢ⁻²eᵢ. The middle-line intersection fixture has dimension 2·1·2=4. | Tensor, dual and containment conventions agree. |
-| 3.1 | Shifting V(b) by a multiplies e₀'s coefficient b by a, giving ab; a=0 would make f₀ undefined. | Multiplicative nonzero shifts. |
-| 3.2 | V(b)'s Laurent rank is 2 and its z=a quotient is V(ab); independent x,y give ax,by. | Affinization is not a finite-dimensional object before specialization. |
-| 4.1 | At n=0 both eᵢ and fᵢ annihilate; at n=2 the reflection vector is fᵢ²u/[2]ᵢ. | Both inequalities and divided powers are necessary. |
-| 4.2 | A₀u∩A∞u∩(q−1)Au=0 but A₀u/qA₀u has dimension 1. In A₂⁽¹⁾, s₂ fixes Λ₁−Λ₀ and sends u to f₂^(0)u=u. | Balance and exact stabilizer normalization are separate proven targets. |
-| 4.3 | A₁⁽¹⁾: m₁=1 and V(a)≅V(b) iff a=b. A₂⁽²⁾: π₁ has h₁-weight 2 and m₁=1. | The period is not the chosen symmetrizer. |
-| 4.4 | The multiset {V(a),V(aq²)} has top constituent Z of dimension 3 and lower constituent 1; total dimension 4. | Distinguished constituent is not the whole tensor or every ordered head. |
-| 5.1 | The unit intertwiner is 1; fixed spectral degree and classical weight shift determine a full root degree. | Formal completion has a defined coefficientwise action. |
-| 5.2 | det R(t)=(q²t−1)/(q²−t). At q=2,t=5/3 the middle block is ((9/7,−4/7),(−4/7,15/7)), determinant 17/7. | Rational normalization and generic invertibility checked. |
-| 5.3 | At q=2,t=4 the cleared map has rank 1; at t=1/4 the regular map has rank 3; both composites are zero. The unit pair on X⊗Y has rank 4. | Nonzero specialization need not be invertible. |
-| 6.1 | [X⊗Y]=[Z]+[1] has coefficient sum 2 and dimension 4; [V(a)] has coefficient sum 1. | Exact simple-class coordinates. |
-| 6.2 | For Q=R/(tⁿ), dim Q[t]=dim Q/tQ=1. The two rank-2 k[x] special fibres have zero and nonzero nilpotent x, both class 2[k]. | Generic isomorphism gives equal classes without isomorphic special fibres. |
-| 6.3 | [X][Y]=[Y][X]=[Z]+1, while Hom(1,X⊗Y)=0 and dim Hom(1,Y⊗X)=1. Dimensions give 2·2=3+1. | K₀ commutativity does not assert a braiding. |
-| 6.4 | The fundamental monomial XY equals the simple-basis vector Z plus 1; its leading coefficient is 1. | Unitriangular presentation, with spectral duplicates removed. |
-| 7.1 | V(a) has dimension 2 and is real prime; its square has dimension 4 and is real nonprime; the unit is real nonprime. | Reality and primeness are distinct. |
-| 7.2 | r_X,Y has image 1=head(XY)=socle(YX); r_Y,X has image Z of dimension 3. | Head/socle orientation and nonzero images. |
-| 7.3 | Empty product is 1. XʳZˢ has fundamental multiplicities (r+s,s), while the pair X,Y has length 2. | Repetitions use reality; pairwise badness is detected. |
-| 7.4 | The sequence 0→Z→X⊗Y→1→0 has simple Z⊗Y and 1⊗Y; Y² has dimension 4 and is simple. | Local exchange-reality fixture. |
-| 8.1 | The closure of the empty family has only weight 0, hence eᵢ=fᵢ=0 and K₀=ℤ. | Unit inclusion and splitting of its extensions. |
-| 8.2 | In A₁⁽¹⁾ the component is a q^(2ℤ), with neighbor ratios q² and q⁻²; no loop at ratio 1. | Both tensor orders are needed for the graph. |
-| 9.1 | Two unit objects satisfy the categorical family condition but their classes satisfy x−y=0. | Algebraic independence is an extra realization condition. |
-| 9.2 | Column (0,1) exchanges X↔Y with ends Z,1; a zero column would give equal simple head/socle and length 2. | Local involutivity and the zero-column obstruction. |
-| 9.3 | xy=z+1 gives y=(z+1)/x in the fraction field; dim[Z]=3 is not a unit of ℤ. | Exchange division is not inversion of a frozen module. |
-| 9.4 | Empty cluster algebra ℤ with finite sums of the unit is a complete example; the single nontrivial exchange alone supplies no global ring isomorphism. | The final predicate and application boundary agree. |
+### Source and prose independence
 
-The rank-one script independently verified 39 symbolic matrix identities, including all six generator intertwining equations, the inverse, Serre relations, invariant subspace Z, its evaluation parameter aq and the two zero boundary composites. Its script and exact output are included as `endpoint-matrix-check.py` and `endpoint-matrix-check.txt`. Evaluation at q=2 is an arithmetic test of the rational formulas, not a claimed field embedding fixing ℂ from ℂ(q) to ℂ.
+The revised text has 78 explicit research-source locator bundles; the largest
+share is KKOP20, 26/78 (33.3%). The source delta review made 16 fresh passage
+comparisons across K91, K94, K02 and KKOP20, including the new contracts and
+completion orientation. The previous 80-passage/10-source comparison is retained
+only for unchanged passages. No copied exposition or reproduced source table,
+figure or exercise list was found. The order follows the construction
+dependencies, not a copied source table of contents.
 
-## Ownership and dependency audit
+Source independence: 16 fresh comparisons across 4 sources, plus the explicitly
+scoped earlier evidence for unchanged passages; largest share KKOP20 26 of 78
+locator bundles; contents compared: independent.
 
-Overlap check: read QuantumEnvelopingAlgebras, KacMoody, QuantumGroups, GrothendieckEulerForms and ClusterAlgebras. QuantumEnvelopingAlgebras owns the intrinsic algebra, Hopf structure, pairings, braid operators, Verma/character inputs and finite-type modified construction; KacMoody owns the realization and Weyl group; QuantumGroups owns the generic finite Hopf-module category; GrothendieckEulerForms owns exact K₀ and bilinear descent; ClusterAlgebras owns ordinary seeds, finite-word mutation and noninverted frozen coefficients. The affine extensions, spectral representation theory, R-matrices and categorical interfaces are owned here.
-
-The general quantum-crystal Part II mentioned by older scope descriptions has no concrete target folder at the inspected main snapshot. The precise affine-specific basis proof obligations required here are therefore owned explicitly, rather than attributed to a nonexistent supplier. The finite-type modified construction is extended with a comparison, not duplicated. Library declarations and their actual hypotheses are recorded in `native-api-locations.md`.
-
-No upward supplier edge or cycle was found. In particular the classifier does not use K₀ commutativity, fundamental existence does not use later R-matrices, and the local reality/mutation argument uses the polynomial-domain theorem and scalar self-R criterion without hidden Λ invariants.
-
-## Sources and expression
-
-Ten primary sources were acquired from arXiv or author pages and identified by exact PDF-byte hashes in `sources.toml`. Scanned K91/K94 theorem pages were read visually; their metadata and proof locators were checked against the actual pages. No source PDF, scan, OCR text, figure or copied exposition is included in either branch.
-
-Source independence: 80 passage comparisons across 10 sources (72 explicit locator bundles and 8 additional prose comparisons); no copied exposition or reused table/figure found. KKOP20 has the largest share, 25 of 72 locator bundles (34.7%). Its contents were read and the roadmap arrangement is independent. K91 theorem pages were visually verified; the full-service OCR limitation is recorded below.
-
-Research link: The roadmap supplies the quantum-affine module, R-matrix and real-simple theory used by Kashiwara–Kim–Oh–Park's monoidal categorification work, using Kashiwara's fundamental-module construction and Kang–Kashiwara–Kim–Oh's head/socle theorems. The connection is stated in KKOP20 and the roadmap's Layer 9; no new categorification theorem is claimed.
+Research link: Kashiwara's level-zero theory and fundamental modules,
+Chari–Pressley's all-affine classification, and the real-simple tensor theory
+supply the categories and exchange operations used in the KKOP ordinary
+monoidal-categorification predicate. The revised roadmap consumes the general
+quantum foundations and retains this affine construction chain.
 
 ## Not verifiable
 
-- No official worker job, upstream CI run, external reviewer approval or complete job-board package inventory was available or requested. This is a local, evidence-backed self-review under the inspected worker rules. The supplied main snapshot and discoverable relevant open work were checked as described in the structural report.
-- The mathematical constructions are roadmap targets, not completed Lean implementations. The actual pinned carriers needed for their headline statements do not yet exist; the documentation-only Suggested module makes that limitation explicit.
-- K91’s full worker-service OCR completion was not verified: automatic approval review blocked an unexpected telemetry contact. The rejected action was not retried. Its cited theorem pages were already visually verified and were also transcribed with standalone local Tesseract. All required source statements were read; the ten-source manifest check passed with 0 problems.
-
-## Source issues
-
-- **Misprint** in AK97 at §1.3, p.5, the unnumbered period formula before (1.7): the source identifies the entire Weyl orbit with a δ-arithmetic progression; it should intersect the orbit with the starting weight's δ-line; affects a stated result. In A₁⁽¹⁾ the finite reflection sends π₁ to −π₁, outside that δ-line. The roadmap uses the corrected orbit intersection.
-- **Error** in AK97 at Theorem 1.2, p.6, read literally without the intended integrability restriction: the local statement covers every finite-dimensional irreducible; it should require type-1 integrability, or separately account for sign twists; affects a stated result. The one-dimensional sign character in §2.1 is the counterexample; the roadmap states the restricted theorem explicitly.
+- The worker's internal board packages and official merge order were not
+  available. The public main/open-PR inventory is now complete at its recorded
+  cutoff; the proposed order is explicitly local.
+- The six general supplier contracts are not implemented or concretely
+  packaged by this work. Acceptance is conditional on them, as declared.
+- The full K91 service OCR was not completed after automatic approval review
+  rejected the earlier telemetry-capable wrapper. It was not retried. Required
+  pages were read from the local PDF with offline Tesseract assistance and
+  visual verification; no source theorem used here remained unread for that reason.
+- Future headline proofs cannot be checked in Lean before their native carriers
+  exist. The actual documentation-only module was built successfully.
 
 ## For the human reviewers
 
-- The review is preparatory and does not substitute for a maintainer's publication decision or the project's external worker review. No upstream action has been taken.
-- No source expression or formalization from another repository has been imported; the included formulas and checks are mathematical statements and independent calculations. No unresolved source-license question was found in the legal acquisition record.
+No author decision blocks this preparatory result. The eventual general supplier
+must close the six declared contracts. This review does not authorize an upstream
+PR or issue/board notification, and none has been sent.
+
+## Publication and progress
+
+The two revision commits were pushed to the author's existing fork branch:
+`23ca49278737c113ab7540d9015adc2de07a176f` centers the subject on quantum affine
+algebras; `42a40c74cd66cf8b51d8456e835db66fb392c6e8` consumes the general foundations through declared contracts
+and includes the mathematical repairs above. The remote README and Suggested.lean
+were fetched at the exact final commit and matched the local files byte for byte.
+Their Git blob IDs are `dce1bba05548ae69d201756a1ec1ccfbd14296dc` and
+`f2782e2e5e754ad472291aa06d60b6aeaa13fb09`, respectively.
+
+The review evidence is published separately on `quantum-affine-algebras-review`.
+Original papers and the full public-PR text snapshots are not committed.

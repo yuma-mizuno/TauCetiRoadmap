@@ -1,0 +1,4553 @@
+{
+  "refreshed_at": "2026-11-17T07:02:57Z",
+  "endpoint": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/pulls?state=open&sort=created&direction=asc&per_page=100",
+  "pages": [
+    100,
+    100,
+    100,
+    100,
+    51,
+    0
+  ],
+  "count": 451,
+  "all_453_heads_unchanged": false,
+  "changes": {
+    "added": [],
+    "removed": [
+      {
+        "number": 872,
+        "title": "Commutative algebra for deformation theory and patching, part II: Kawasaki's Cohen–Macaulay blowing-ups",
+        "head": "d046bf8610f616f21b60ef2bcfdbac271bd569ab"
+      },
+      {
+        "number": 879,
+        "title": "Roadmap: finite flat group schemes and integral p-adic Hodge theory",
+        "head": "9a9505b7491afef2f15cfd425a52c223cafa68d5"
+      }
+    ],
+    "changed_heads": [
+      {
+        "number": 117,
+        "old_head": "7789316220ddb35971e363198061e0c6baa998e9",
+        "new_head": "7db30a3f61545185a80ca698fb543f8418370d75"
+      }
+    ],
+    "changed_bases": []
+  },
+  "pull_requests": [
+    {
+      "number": 117,
+      "title": "feat: a roadmap for the Laguerre and Jacobi orthogonal polynomials, and their L² bases",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/117",
+      "head_sha": "7db30a3f61545185a80ca698fb543f8418370d75",
+      "base_sha": "4dc1e15b7938f9ae21ca7d196b05c63029bbf06f",
+      "updated_at": "2026-11-17T06:59:36Z"
+    },
+    {
+      "number": 151,
+      "title": "Roadmap: Poincaré’s classical nonintegrability theorem for the planar CR3BP",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/151",
+      "head_sha": "cc5f962e9b94b3d390abb58f227abd4822f43256",
+      "base_sha": "e1bd0a96c76c002ca65fbea430e2a483b94ef02f",
+      "updated_at": "2026-10-27T22:51:58Z"
+    },
+    {
+      "number": 196,
+      "title": "feat: add cohomological comparison and point counting roadmaps",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/196",
+      "head_sha": "4bd72379658126cbe9be935656396f0c9dac4de0",
+      "base_sha": "b77c28d9cf8d670be7ab2c8d2d089482aecc4e05",
+      "updated_at": "2026-11-06T14:21:33Z"
+    },
+    {
+      "number": 237,
+      "title": "Add incompressible flows and Navier–Stokes roadmap",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/237",
+      "head_sha": "25bd83b487fc07334168053ab41537da53f3cec7",
+      "base_sha": "25ca958da52d570fddc83198e0deb19b11aa8a4d",
+      "updated_at": "2026-11-06T12:51:50Z"
+    },
+    {
+      "number": 257,
+      "title": "Add roadmap: equitable partitions and finite operator reduction",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/257",
+      "head_sha": "62d083ffda98463c66a5f00fd0c1c30699ea7533",
+      "base_sha": "25ca958da52d570fddc83198e0deb19b11aa8a4d",
+      "updated_at": "2026-11-06T12:51:53Z"
+    },
+    {
+      "number": 258,
+      "title": "Add roadmap: finite spectral graph theory and continuous-time quantum walks",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/258",
+      "head_sha": "162e2aff82994cbfce565e1616941b3be4c4e42e",
+      "base_sha": "25ca958da52d570fddc83198e0deb19b11aa8a4d",
+      "updated_at": "2026-11-06T12:51:55Z"
+    },
+    {
+      "number": 259,
+      "title": "Add roadmap: finite discrete-time quantum walks",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/259",
+      "head_sha": "7904ea4d3a06422b63f3751565a3aaf41b3d89bd",
+      "base_sha": "25ca958da52d570fddc83198e0deb19b11aa8a4d",
+      "updated_at": "2026-11-06T12:51:58Z"
+    },
+    {
+      "number": 260,
+      "title": "Add roadmap: structured block operators and certified fast application",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/260",
+      "head_sha": "945f5e6ae7678d7f03b27b3b04f26882697309ea",
+      "base_sha": "25ca958da52d570fddc83198e0deb19b11aa8a4d",
+      "updated_at": "2026-11-06T12:52:01Z"
+    },
+    {
+      "number": 271,
+      "title": "Add roadmap: planar and surface topology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/271",
+      "head_sha": "421e11470b49c4cad6e863b496e3a03a5bbd01da",
+      "base_sha": "fa41b3747f56d4e77bd69e7099c1be4f2e4959ba",
+      "updated_at": "2026-11-16T13:41:32Z"
+    },
+    {
+      "number": 284,
+      "title": "roadmap: refine the homotopy-sphere and surgery targets",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/284",
+      "head_sha": "64bdd7e2617444b54417df9a0a486cebe9a161ec",
+      "base_sha": "ad0502eda36a39827b922d62f5d2a04042c3de2c",
+      "updated_at": "2026-11-16T14:49:19Z"
+    },
+    {
+      "number": 323,
+      "title": "roadmap: Gorenstein homological algebra",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/323",
+      "head_sha": "59db1165034d2cb1657e903c70a62f9a73e0a906",
+      "base_sha": "8fd8e0fd6fa9b7173019d5ddb420c76c1a217e5e",
+      "updated_at": "2026-11-06T12:52:11Z"
+    },
+    {
+      "number": 334,
+      "title": " Differential Forms & Smooth Flows",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/334",
+      "head_sha": "a01a8ad481a3b7c75205ead4fd04965530b28a6f",
+      "base_sha": "c7d2663eeb5695cefa20fc762caa202dbe026ab0",
+      "updated_at": "2026-11-06T12:52:14Z"
+    },
+    {
+      "number": 341,
+      "title": "feat: add the OrthogonalFactorization roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/341",
+      "head_sha": "d6490d0f399c95ef70ebf1af647d6546afb71566",
+      "base_sha": "93d118965b336f893fdec7922b54ce0061b42854",
+      "updated_at": "2026-11-06T12:52:16Z"
+    },
+    {
+      "number": 417,
+      "title": "feat: roadmap for point processes and random measures",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/417",
+      "head_sha": "234a33ddcf36bd7f66cb46e95647466601592451",
+      "base_sha": "44d5c9b8820e650b932d83ff6ee973d8cd5b8e64",
+      "updated_at": "2026-11-07T12:37:24Z"
+    },
+    {
+      "number": 432,
+      "title": "Add roadmap: Kleinian groups, hyperbolic 3-manifolds, and arithmetic volume",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/432",
+      "head_sha": "4eec6e26dd10f477a23e36af70e5a6d5b2b1f453",
+      "base_sha": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "updated_at": "2026-11-17T06:03:11Z"
+    },
+    {
+      "number": 453,
+      "title": "feat: add the CommRingFactorizationSystems roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/453",
+      "head_sha": "391c0775f4aa002ae9ce277fadba0663be843f3c",
+      "base_sha": "dc60e0064d31e62a5bc6c0cc7c2009f4b504d232",
+      "updated_at": "2026-11-06T12:52:27Z"
+    },
+    {
+      "number": 480,
+      "title": "Add roadmap: Hamiltonian systems and moment maps",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/480",
+      "head_sha": "ef23c040f46db294dfdad30ebe2608f8b42bdb10",
+      "base_sha": "4b002f622e9d68b627bdce9f6224897305a68bdc",
+      "updated_at": "2026-11-07T10:45:41Z"
+    },
+    {
+      "number": 545,
+      "title": "Add roadmap for stating abundance for projective klt varieties",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/545",
+      "head_sha": "b042eccb0a5f606fcafd7b7d69ee45c2e1709a0e",
+      "base_sha": "cf533a06caf40add06d9a6f978a3a0ff8a313e80",
+      "updated_at": "2026-11-08T00:29:21Z"
+    },
+    {
+      "number": 617,
+      "title": "fix(LocalFieldsRamification): supply Hasse–Arf arithmetic and complete graded norms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/617",
+      "head_sha": "da24d08da257bfbffa14b0ee83aff5f361de2b44",
+      "base_sha": "c1107359463a6249b47ce20bb22c66c259330d25",
+      "updated_at": "2026-11-13T16:58:26Z"
+    },
+    {
+      "number": 717,
+      "title": "Add a roadmap for certified permutation-group computation",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/717",
+      "head_sha": "6a9ba06f2adc96eaad00849da88b225eb21c1d33",
+      "base_sha": "44d5c9b8820e650b932d83ff6ee973d8cd5b8e64",
+      "updated_at": "2026-11-06T12:52:38Z"
+    },
+    {
+      "number": 775,
+      "title": "ProfiniteArithmetic: native APIs and complete Frattini-kernel families",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/775",
+      "head_sha": "7f47395f9cb6b27ba3418236641893938d531d84",
+      "base_sha": "fa41b3747f56d4e77bd69e7099c1be4f2e4959ba",
+      "updated_at": "2026-10-30T17:57:10Z"
+    },
+    {
+      "number": 850,
+      "title": "Inverse Galois theory and arithmetic fundamental groups",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/850",
+      "head_sha": "ae4cbfc4e2a8e7e502f9e85103acb9fbbd24a3c8",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T06:30:35Z"
+    },
+    {
+      "number": 851,
+      "title": "Geometry of numbers, quadratic forms and homogeneous arithmetic",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/851",
+      "head_sha": "81b8a645429839e7b88d3ad19fabb1dcfb766ac4",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T06:31:03Z"
+    },
+    {
+      "number": 852,
+      "title": "Néron models and semistable abelian varieties",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/852",
+      "head_sha": "623434832ba49a77cf51ced4235a056cbe3dcc77",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T09:48:15Z"
+    },
+    {
+      "number": 869,
+      "title": "Selmer groups, Selmer complexes and Iwasawa cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/869",
+      "head_sha": "8e1b4ae0e34a2f3e7946037a66e52f62d0331161",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:48:17Z"
+    },
+    {
+      "number": 870,
+      "title": "Néron models and semistable abelian varieties, part II: genus-one fibrations and rational elliptic surfaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/870",
+      "head_sha": "9d01aa2222a7adf909b70cadcf8b064e74ba8637",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:48:20Z"
+    },
+    {
+      "number": 873,
+      "title": "Lefschetz pencils, nearby cycles and vanishing cycles",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/873",
+      "head_sha": "306b5f0126ea64a2af8caf52ec6140a49c30a169",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T09:48:24Z"
+    },
+    {
+      "number": 875,
+      "title": "Classical analytic étale cohomology: the classical inputs to the étale cohomology of diamonds",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/875",
+      "head_sha": "e72c5ad3d38dfe6a43c56ac3588c596138a4fc98",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:48:26Z"
+    },
+    {
+      "number": 913,
+      "title": "Roadmap: modular curves, part II — uniformization, integral boundary and Hecke cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/913",
+      "head_sha": "12ed4124be9a4200ac35a0ef9f3399c997e85bd0",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:48:30Z"
+    },
+    {
+      "number": 920,
+      "title": "Roadmap: global Galois deformation rings",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/920",
+      "head_sha": "9e4960f7e8e48048ae4e936e4a60c66a45c17af5",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:48:32Z"
+    },
+    {
+      "number": 922,
+      "title": "Roadmap: étale cohomology of diamonds and its four operations",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/922",
+      "head_sha": "9e9df998250538ed3c5b19072cbc82ad247deeaa",
+      "base_sha": "1487730cf478a70b24dee554836508d7265125b2",
+      "updated_at": "2026-11-16T09:48:34Z"
+    },
+    {
+      "number": 923,
+      "title": "Roadmap: local Galois deformation rings and their components",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/923",
+      "head_sha": "ba39a4322ced93f220dfb273ed1a75a49380bcb9",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:48:37Z"
+    },
+    {
+      "number": 924,
+      "title": "Roadmap: automorphic L-functions and local factors",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/924",
+      "head_sha": "19069a602eabade925880ca520a00532236f850d",
+      "base_sha": "395e0f9be8a3d414252f439eb2828005e9074f2f",
+      "updated_at": "2026-11-16T20:42:05Z"
+    },
+    {
+      "number": 925,
+      "title": "Roadmap: automorphic spectral theory and trace distributions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/925",
+      "head_sha": "759fa5bcd1e8d8c8b46ec028b0f610af20d911da",
+      "base_sha": "fb9986102130e6f6ce8ef8af6d84117c2ca56e59",
+      "updated_at": "2026-11-16T20:42:08Z"
+    },
+    {
+      "number": 927,
+      "title": "Roadmap: six operations and duality for diamonds",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/927",
+      "head_sha": "a795f1d2c5053d618d67a9d577f74d3cd5c328a0",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:48:44Z"
+    },
+    {
+      "number": 928,
+      "title": "Roadmap: algebraic modular forms and Serre weights",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/928",
+      "head_sha": "329c4498f68f49a44d85534e2398f566e3700e57",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T10:24:21Z"
+    },
+    {
+      "number": 929,
+      "title": "Roadmap: Deligne weights, purity and the Weil bounds",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/929",
+      "head_sha": "ff93d18191c4507d86638e2037b548c9e5c5b606",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T22:20:38Z"
+    },
+    {
+      "number": 931,
+      "title": "Roadmap: GL₂ automorphic representations and transfer",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/931",
+      "head_sha": "9b8725e15b8b7afde3cffa9c80cc95eeccf6bfce",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:42:13Z"
+    },
+    {
+      "number": 933,
+      "title": "Roadmap: complex Shimura varieties and canonical models",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/933",
+      "head_sha": "314489c275933349752a42633b39b6e60544cdc1",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-16T20:42:20Z"
+    },
+    {
+      "number": 934,
+      "title": "Add roadmap: quaternionic modular forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/934",
+      "head_sha": "bed3af745b4b09645e5164c6f73fea0803da70b3",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:48:55Z"
+    },
+    {
+      "number": 936,
+      "title": "Four-manifold topology, controlled surgery and geometric examples",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/936",
+      "head_sha": "a5aec09737437db03aedda8f99d5117899e62347",
+      "base_sha": "4d169a92dae6edd99e8992099740dc18b25e86ab",
+      "updated_at": "2026-11-16T09:48:57Z"
+    },
+    {
+      "number": 964,
+      "title": "FarguesFontaineDiamonds: the Fargues–Fontaine curve as a diamond",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/964",
+      "head_sha": "f96f9b6cb701423b931fe029382e1f80c6906dcf",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T09:48:59Z"
+    },
+    {
+      "number": 965,
+      "title": "AdicCoefficientsAndComparisons: adic coefficients and scheme–v-sheaf comparisons",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/965",
+      "head_sha": "3d07598deebdbb613f45bc9067cab63031c18f97",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T09:49:02Z"
+    },
+    {
+      "number": 966,
+      "title": "PELModuli: Siegel and PEL moduli problems",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/966",
+      "head_sha": "ba3718550711d4d3504cc1e0582eee08e1179721",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:42:23Z"
+    },
+    {
+      "number": 968,
+      "title": "ModularSymbolsPadicLFunctions: modular symbols and analytic p-adic L-functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/968",
+      "head_sha": "59250eede07719e3a2aa9cba7b5d4599235017d6",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:42:25Z"
+    },
+    {
+      "number": 970,
+      "title": "Roadmap: small ramification and abelian-variety base cases",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/970",
+      "head_sha": "62c25a3c71112296608ce170df83694b68dab3c5",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:42:28Z"
+    },
+    {
+      "number": 986,
+      "title": "PolynomialGaloisGroups: radical criterion and explicit field embeddings",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/986",
+      "head_sha": "1604b18a29d34be4967ea64a69f7a3c8814671cc",
+      "base_sha": "11d488eae3968854c57c9a2cca7eb8cd6861c277",
+      "updated_at": "2026-11-16T14:12:39Z"
+    },
+    {
+      "number": 989,
+      "title": "SemisimpleAlgebras: consume the pinned Mathlib and Tau Ceti theory; own simple-source Skolem–Noether",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/989",
+      "head_sha": "54c7750d5185008da72c09314527f7bcad2d4b7e",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:28:06Z"
+    },
+    {
+      "number": 999,
+      "title": "Roadmap: endoscopic transfer and unitary trace comparison",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/999",
+      "head_sha": "1af544e9da14e16169633bdd9ae0c85473ad9628",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:42:30Z"
+    },
+    {
+      "number": 1000,
+      "title": "Roadmap: Arakelov geometry and heights of abelian varieties",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1000",
+      "head_sha": "52d37e9a3fff0c62eec5e4d5edf144aaaadf3442",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:42:32Z"
+    },
+    {
+      "number": 1001,
+      "title": "Roadmap: weights and purity in étale cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1001",
+      "head_sha": "c6f2ea0b8d45e985e53d91dfad4965ed4e904044",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T23:12:12Z"
+    },
+    {
+      "number": 1002,
+      "title": "Roadmap: p-adic differential equations, rigid cohomology and p-adic weights",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1002",
+      "head_sha": "457e49f7fa2b9b2c246c69544485f2e32c267a40",
+      "base_sha": "7342e8fdd66944f4b6774ca84fc3ba304b4f7299",
+      "updated_at": "2026-11-16T20:42:37Z"
+    },
+    {
+      "number": 1004,
+      "title": "Roadmap: Faltings finiteness and isogeny theorems",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1004",
+      "head_sha": "f1f8fc99a92477fa3aab538c9317a745d2633bbb",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:42:39Z"
+    },
+    {
+      "number": 1005,
+      "title": "Roadmap: Hilbert modular varieties and quaternionic Shimura curves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1005",
+      "head_sha": "3cac94e0e5778b4724e82d3ba29ad341242420db",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:42:42Z"
+    },
+    {
+      "number": 1006,
+      "title": "Roadmap: regular algebraic automorphic Galois representations (Part II)",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1006",
+      "head_sha": "902b7068bc38090c011e756fbb5f3763bc6e1f02",
+      "base_sha": "4c4f8f52238b8ead04f806021f79201c6d499982",
+      "updated_at": "2026-11-16T20:42:45Z"
+    },
+    {
+      "number": 1007,
+      "title": "Roadmap: Galois representations attached to modular and Hilbert modular forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1007",
+      "head_sha": "65e99093897b19c56050bb15e78691010707eb99",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:42:47Z"
+    },
+    {
+      "number": 1013,
+      "title": "Weight and level optimisation of residual modular representations",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1013",
+      "head_sha": "9f2eed785718a2bfd395c58fa70e965e2a5f591b",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:42:50Z"
+    },
+    {
+      "number": 1015,
+      "title": "Noncompact quantum symmetry and particle representations roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1015",
+      "head_sha": "73be053c01fe41be050219c67fc5fb9d07edf214",
+      "base_sha": "11d488eae3968854c57c9a2cca7eb8cd6861c277",
+      "updated_at": "2026-11-16T20:42:52Z"
+    },
+    {
+      "number": 1017,
+      "title": "Heights, rational points and obstructions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1017",
+      "head_sha": "ece41e24aa4406c0cd28311986d01d5567b4b58f",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T20:42:54Z"
+    },
+    {
+      "number": 1018,
+      "title": "Modularity and modular parametrisations of elliptic curves over ℚ",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1018",
+      "head_sha": "e4cd919c2d55c162b4e1b031b2d0fd3350cc2200",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:42:57Z"
+    },
+    {
+      "number": 1019,
+      "title": "Hida and Coleman families, periods, and p-adic L-functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1019",
+      "head_sha": "d797632e05b48ebd4fe28208c114592baaf2930b",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:42:59Z"
+    },
+    {
+      "number": 1020,
+      "title": "Classical Serre modularity over ℚ",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1020",
+      "head_sha": "e8c52645f18670f203b0536f49645abd6f19936f",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-16T20:43:02Z"
+    },
+    {
+      "number": 1021,
+      "title": "Anabelian geometry and nonabelian Chabauty",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1021",
+      "head_sha": "c71ec32dc38dfe440499094cd76e5f2da0e1e06b",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-17T06:48:49Z"
+    },
+    {
+      "number": 1034,
+      "title": "Commutative algebra for deformation theory and patching",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1034",
+      "head_sha": "22d490773bc450676855eab06c6e67f346108018",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:49:43Z"
+    },
+    {
+      "number": 1035,
+      "title": "Completed cohomology, homology and arithmetic towers, Part II",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1035",
+      "head_sha": "e9263dc6f931b05714b5d4d81dc1e7fb368e751c",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:43:07Z"
+    },
+    {
+      "number": 1036,
+      "title": "Abelian varieties of GL₂-type and modularity of ℚ-curves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1036",
+      "head_sha": "cb6cb1bf9127a01ba326028bd106eaf3f8c31470",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:09Z"
+    },
+    {
+      "number": 1038,
+      "title": "Shimura data, Hermitian domains and adelic level structures",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1038",
+      "head_sha": "6eee3daeaddb9f5a5b5bc29bbd1bf9cec08547c4",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:43:11Z"
+    },
+    {
+      "number": 1039,
+      "title": "Dirichlet p-adic L-functions, special values and Eisenstein measures",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1039",
+      "head_sha": "d3b43929f5219a1db2a039ed1e66edb38cf61a12",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T20:43:14Z"
+    },
+    {
+      "number": 1040,
+      "title": "Étale cohomology foundations, part II: refined duality, perverse decomposition and local traces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1040",
+      "head_sha": "8f73cc36e51daa3bb0ad7dc7d9af77fce5c44fbe",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:43:16Z"
+    },
+    {
+      "number": 1043,
+      "title": "Coleman integration and noncritical Dirichlet L-values",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1043",
+      "head_sha": "9d45df98d3d8fd5eaaca6e1e2481088ce6e8d5cc",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T22:38:40Z"
+    },
+    {
+      "number": 1044,
+      "title": "Integral A_inf cohomology and Breuil–Kisin–Fargues structures",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1044",
+      "head_sha": "d02775ef0c797ee258b3ea17ec583b13d2f67d52",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:49:59Z"
+    },
+    {
+      "number": 1046,
+      "title": "Effective Diophantine methods and exact rational points",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1046",
+      "head_sha": "9c393ae43dcd8587c15ec7fbe5f0ca7af3a42027",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T22:38:42Z"
+    },
+    {
+      "number": 1047,
+      "title": "CompactGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1047",
+      "head_sha": "7fcba97fac984aaa6707819633b879bdf3accee3",
+      "base_sha": "641eaf3866fac3e357aaa586df38b26fb9a92849",
+      "updated_at": "2026-11-16T20:43:23Z"
+    },
+    {
+      "number": 1048,
+      "title": "Modularity of elliptic curves over imaginary quadratic fields (unconditional)",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1048",
+      "head_sha": "74684b88c394435f9c89fb875e084a14622aec66",
+      "base_sha": "6cb4f526dff88cf475fc68737e2f111d221766f9",
+      "updated_at": "2026-11-16T22:38:44Z"
+    },
+    {
+      "number": 1053,
+      "title": "Toroidal compactifications and boundary geometry",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1053",
+      "head_sha": "4e3083c45745a9560ae84b19b49aadf04ffc81f1",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:43:28Z"
+    },
+    {
+      "number": 1057,
+      "title": "Prismatic cohomology, Part I: delta rings, prisms and relative cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1057",
+      "head_sha": "c0c3cf09ebd4b73f462e3450d3c2421747f58e15",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T09:50:10Z"
+    },
+    {
+      "number": 1058,
+      "title": "GrothendieckTeichmuller: the profinite Grothendieck–Teichmüller group",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1058",
+      "head_sha": "03c1ca75416d2b3ba0a7e8e2b908a43e49edcf21",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T08:42:23Z"
+    },
+    {
+      "number": 1059,
+      "title": "EllipticPeriods: elliptic functions, periods and complex multiplication",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1059",
+      "head_sha": "d3006692e64de14d8dace553af4e0aab2fc1d9fd",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T06:45:21Z"
+    },
+    {
+      "number": 1060,
+      "title": "GrothendieckInfinityGroupoids: Grothendieck ∞-groupoids: globular theories, coherators and their models",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1060",
+      "head_sha": "c3bae702445e1c79b68b6f09d08e6e0f3739d097",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T23:19:45Z"
+    },
+    {
+      "number": 1061,
+      "title": "LefschetzStructures: Lefschetz structures and algebraic operators on cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1061",
+      "head_sha": "e1fe84342e353f474d590eada1b4a97ecc5bfcad",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T09:34:05Z"
+    },
+    {
+      "number": 1062,
+      "title": "p-adic Hodge theory and geometric comparison",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1062",
+      "head_sha": "f91945302a0f3b25c661a164634d398ab98a3a66",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:43:30Z"
+    },
+    {
+      "number": 1063,
+      "title": "Metaplectic groups, Weil representations and automorphic theta kernels",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1063",
+      "head_sha": "1dab48e236370ae35f4fe3edf801cab625f22709",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:43:32Z"
+    },
+    {
+      "number": 1064,
+      "title": "p-adic cohomology comparisons",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1064",
+      "head_sha": "830e42424ba1ddd3da983473fd83429464184dbe",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:35Z"
+    },
+    {
+      "number": 1065,
+      "title": "Prismatic cohomology, Part II: Nygaard filtration, absolute prisms and q-de Rham theory",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1065",
+      "head_sha": "7c47f52a1b772b3f2f079e4f9bac3c4559ef2762",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T09:50:19Z"
+    },
+    {
+      "number": 1066,
+      "title": "Ordinary automorphic forms and ordinary modularity lifting",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1066",
+      "head_sha": "e9064128ace433fe5be1724c3ef88a2b1584ef7c",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:37Z"
+    },
+    {
+      "number": 1069,
+      "title": "Automorphic bundles and classical automorphic forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1069",
+      "head_sha": "1de55715cd7f97e965e54488dbff224fac0e88e9",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:40Z"
+    },
+    {
+      "number": 1070,
+      "title": "Prismatic cohomology, Part III: étale and syntomic comparisons and F-crystals",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1070",
+      "head_sha": "4a860b55b28472aadc72dc93c44ce9e52c0f1a03",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T09:50:25Z"
+    },
+    {
+      "number": 1071,
+      "title": "GL₂ modularity lifting",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1071",
+      "head_sha": "038e4ea368608cd7d7dc15d37b16e22753b5890a",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:43:42Z"
+    },
+    {
+      "number": 1075,
+      "title": "Potential modularity and compatible systems",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1075",
+      "head_sha": "62af31086c17c3954213f9fd17f42491c18830d4",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:45Z"
+    },
+    {
+      "number": 1080,
+      "title": "Prismatic cohomology, Part IV: logarithmic prismatic cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1080",
+      "head_sha": "57f0c7ae26e6e1c704fb48f47a72bf4f31daf96b",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:43:47Z"
+    },
+    {
+      "number": 1081,
+      "title": "Potential automorphy infrastructure",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1081",
+      "head_sha": "eeb6a5b99815537ccf1198d682d43be13ca12d4f",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:38:47Z"
+    },
+    {
+      "number": 1083,
+      "title": "Instanton Floer theory: admissible, reducible and framed models",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1083",
+      "head_sha": "0b47a8ff14cb84f24d09ce059748142d72d6b9f1",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:50:37Z"
+    },
+    {
+      "number": 1084,
+      "title": "Hodge–Tate theory, canonical subgroups and automorphic period maps",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1084",
+      "head_sha": "c6ed07fc51d7e4b4d1b78bf2afeb499769663663",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:52Z"
+    },
+    {
+      "number": 1085,
+      "title": "Shimura towers and perfectoid representability",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1085",
+      "head_sha": "884245255f5a14c8ea53ff06b2380bd027be4fef",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:54Z"
+    },
+    {
+      "number": 1087,
+      "title": "Reusable infrastructure for torsion in arithmetic cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1087",
+      "head_sha": "1f49a766ddc4b3e113da267709bf7537ca5506b0",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:57Z"
+    },
+    {
+      "number": 1090,
+      "title": "Igusa varieties, compactified period fibres and torsion concentration",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1090",
+      "head_sha": "d692c6ffe9fe3282d44b18ac2baaa09750774637",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:43:59Z"
+    },
+    {
+      "number": 1146,
+      "title": "Include smooth Banach theory in the representation family",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1146",
+      "head_sha": "e5e836494f4de83bf5b458f5bff49526fd66a53b",
+      "base_sha": "350e970ce49f707a327909beac0b7b7c782cc7ee",
+      "updated_at": "2026-11-16T20:44:02Z"
+    },
+    {
+      "number": 1154,
+      "title": "InductionRestrictionPartII: fixed fibers, parity obstructions and reduced multipliers",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1154",
+      "head_sha": "a3cedf1ee0fd10e7290851adbffc3fa9ab6e3e1f",
+      "base_sha": "b757328112ce279d11a8ce0f69b47c4870bd163c",
+      "updated_at": "2026-11-16T09:50:52Z"
+    },
+    {
+      "number": 1158,
+      "title": "Spectral manifolds: reconstruction, real structures and products",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1158",
+      "head_sha": "5295e0e8671b38e76e5e42f8d9e27b01a89ebb48",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:44:04Z"
+    },
+    {
+      "number": 1169,
+      "title": "Teichmüller geometry: marked surfaces, finite actions and generic lattices",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1169",
+      "head_sha": "417bd2705bd7516ba9dd8a545795dcf327318366",
+      "base_sha": "f149af642055600f4f77de7fe9ccd5878a8087ed",
+      "updated_at": "2026-11-16T20:44:06Z"
+    },
+    {
+      "number": 1171,
+      "title": "ArithmeticStatisticsPartI: families, heights and local specifications",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1171",
+      "head_sha": "38b54bc79dd6c2cd434591b158d052e7d2221729",
+      "base_sha": "9ce83111b9fff77e520512483757a703012ce669",
+      "updated_at": "2026-11-16T20:44:08Z"
+    },
+    {
+      "number": 1172,
+      "title": "ArithmeticStatisticsPartIV: finite groups, matrix laws and moment tools",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1172",
+      "head_sha": "058901cb6178ca51c4b6040ba9e446d90cf082ff",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:44:11Z"
+    },
+    {
+      "number": 1173,
+      "title": "ArithmeticStatisticsPartII: integral orbit dictionaries",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1173",
+      "head_sha": "c5b15682f1a176afe96b2ec07636407f62eebcfe",
+      "base_sha": "01daf250606d39997d2109d4ee56840547182064",
+      "updated_at": "2026-11-16T20:44:13Z"
+    },
+    {
+      "number": 1174,
+      "title": "ArithmeticStatisticsPartIII: uniform orbit counts and sieves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1174",
+      "head_sha": "4a3584c51a2aa753680160171750a649ddcc46fd",
+      "base_sha": "8192659dd933d098dace7e7be4058b7eacf61285",
+      "updated_at": "2026-11-16T20:44:16Z"
+    },
+    {
+      "number": 1175,
+      "title": "ArithmeticStatisticsPartV: fields and class-group statistics",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1175",
+      "head_sha": "2a99ce1538c80cf4b8b3bf275f00948fc56e4820",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:44:19Z"
+    },
+    {
+      "number": 1176,
+      "title": "ArithmeticStatisticsPartVI: Selmer averages and arithmetic applications",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1176",
+      "head_sha": "ca973dc92ef1c24504546466d0d8b139e22df349",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T20:44:21Z"
+    },
+    {
+      "number": 1178,
+      "title": "ArithmeticStatisticsPartVII: quadratic probability models and twist applications",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1178",
+      "head_sha": "bc684358dbec8f83af8e9b67d3f823bb40217624",
+      "base_sha": "e213fddf84b4de172cf2706a346492eac2aef872",
+      "updated_at": "2026-11-16T20:44:23Z"
+    },
+    {
+      "number": 1179,
+      "title": "ArithmeticStatisticsPartVIII: function-field distributions and geometric statistics",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1179",
+      "head_sha": "882274e896b150f730f9652c6480a417d77c4871",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:44:25Z"
+    },
+    {
+      "number": 1180,
+      "title": "ModularityAndLanglandsExtensions: modularity and Langlands extensions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1180",
+      "head_sha": "01bc07cb4cc1ab8ea81351722e0d74ccfe122476",
+      "base_sha": "6ca082e93850fd51e25e974f1b727d6dc9b80a7d",
+      "updated_at": "2026-11-16T22:38:49Z"
+    },
+    {
+      "number": 1181,
+      "title": "Orthogonal and spin groups: native interfaces and compatible adelic comparisons",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1181",
+      "head_sha": "d86fb458119178c63e397e12f85f621a3f6b103d",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-10T03:03:48Z"
+    },
+    {
+      "number": 1182,
+      "title": "CrystallineLocalGlobalCompatibilityCM: crystalline local–global compatibility and Barsotti–Tate automorphy lifting over CM fields",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1182",
+      "head_sha": "cb5cbd7fa132c9d2603a9b9ae5d26dac415c358a",
+      "base_sha": "a45705e9f6fc85139ea4e735e68ebf39b1039f8f",
+      "updated_at": "2026-11-16T22:38:52Z"
+    },
+    {
+      "number": 1202,
+      "title": "LanglandsParameterStacks: parameter stacks, invariant theory and spectral coefficients",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1202",
+      "head_sha": "04801e3e01a735f36f1d655acb3179d8de855512",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T15:28:50Z"
+    },
+    {
+      "number": 1205,
+      "title": "VectorBundlesAndIsocrystals: isocrystals, vector bundles and Banach–Colmez spaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1205",
+      "head_sha": "c1b63b800c69e9a1682fac26f41d1bcdf660f71d",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:44:33Z"
+    },
+    {
+      "number": 1207,
+      "title": "Complete spin representation roadmap against current Clifford APIs",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1207",
+      "head_sha": "c87113d10a7e934e085b957af3d6e90659c0b465",
+      "base_sha": "4d169a92dae6edd99e8992099740dc18b25e86ab",
+      "updated_at": "2026-11-17T06:52:33Z"
+    },
+    {
+      "number": 1208,
+      "title": "WeilConjectures: Weil conjectures and cohomological zeta functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1208",
+      "head_sha": "71279d663f1e717bb5d7059418fdfe05e3da4d58",
+      "base_sha": "71c8f211b9a1ff240418b04d9c4c7e2a73cfcb51",
+      "updated_at": "2026-11-16T20:44:35Z"
+    },
+    {
+      "number": 1209,
+      "title": "RelativeFarguesFontaine: relative Fargues–Fontaine curves and period geometry",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1209",
+      "head_sha": "068d2afc2e7cf4bdc77216a42eff0d90f5523b58",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T20:44:37Z"
+    },
+    {
+      "number": 1222,
+      "title": "OrthogonalTamagawaAndLatticeMass: comparisons, arbitrary masses and class counts",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1222",
+      "head_sha": "d4f1571fa0d5cdd3af86679ad8e2a6888581b813",
+      "base_sha": "5996bd15cbe206a505b20b327a42c3856ffc351e",
+      "updated_at": "2026-11-16T20:44:40Z"
+    },
+    {
+      "number": 1223,
+      "title": "Add roadmap: random graphs, Fraïssé limits, and first-order asymptotic laws",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1223",
+      "head_sha": "f297bb05c395a1dc661fa51e7270c6242e5fd46b",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-17T02:48:00Z"
+    },
+    {
+      "number": 1225,
+      "title": "Jacobian challenge, Part II: relative Jacobians, theta bundles and universal differences",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1225",
+      "head_sha": "c997aa574f872dd0ae608422fe690e9d93a7bfa9",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:51:37Z"
+    },
+    {
+      "number": 1230,
+      "title": "Artin v-stacks, solid and lisse coefficient categories",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1230",
+      "head_sha": "e6747720ec600f628d4f19bbb0a364588481ceb7",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:44:42Z"
+    },
+    {
+      "number": 1231,
+      "title": "Mordell finiteness by the Lawrence–Venkatesh method",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1231",
+      "head_sha": "4bf88fa58c0d0f9bf0f165162683940ca7f90c85",
+      "base_sha": "0a79ce7a4edf41b0b1b75962fec75fbf6093c512",
+      "updated_at": "2026-11-16T20:44:44Z"
+    },
+    {
+      "number": 1232,
+      "title": "Relative Jacobians and integral models of curves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1232",
+      "head_sha": "748430a427888e79aa592318f2f43ea2e3bb57c1",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:51:46Z"
+    },
+    {
+      "number": 1235,
+      "title": "Roadmap: geometric Satake and fusion",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1235",
+      "head_sha": "392d28ee5b14629578575d590e1171cfdda86b9f",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:44:47Z"
+    },
+    {
+      "number": 1241,
+      "title": "Roadmap: Bun_G and Newton strata",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1241",
+      "head_sha": "65fe201204341f8f8c97f988f4209063efd3e6d0",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:44:49Z"
+    },
+    {
+      "number": 1252,
+      "title": "Roadmap: Hecke stacks and local shtuka cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1252",
+      "head_sha": "7b6a2e26c3e483d5ff60da1d232edbcac6a76aed",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:44:51Z"
+    },
+    {
+      "number": 1254,
+      "title": "Roadmap: complex multiplication and explicit reciprocity",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1254",
+      "head_sha": "36aadba3a841ebc951a5c300a0a859f51123970c",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:44:54Z"
+    },
+    {
+      "number": 1264,
+      "title": "Roadmap: the Eisenstein ideal and rational torsion",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1264",
+      "head_sha": "e49787cc1028f9274f69691955e0284d176eb26c",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:44:56Z"
+    },
+    {
+      "number": 1266,
+      "title": "Roadmap: hermitian K-theory of Poincaré categories",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1266",
+      "head_sha": "8d4143be00c76c822c283b65e89b401885b17fff",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:52:00Z"
+    },
+    {
+      "number": 1270,
+      "title": "Roadmap: completed cohomology and local–global compatibility",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1270",
+      "head_sha": "0c236a02a795507b863ba5f12b5fde414ae95729",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:44:59Z"
+    },
+    {
+      "number": 1272,
+      "title": "Roadmap: Euler systems, Kolyvagin systems and higher-rank descent",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1272",
+      "head_sha": "a0e5702e0f5b85010330ac6bf1352520ba5429a7",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:52:05Z"
+    },
+    {
+      "number": 1281,
+      "title": "Roadmap: K-theory of finite and local fields",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1281",
+      "head_sha": "f92d21bc881e0aa3585cf9a9c4ab2de63388f69b",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T09:52:07Z"
+    },
+    {
+      "number": 1285,
+      "title": "Specify K3 surfaces, periods, cones and Torelli",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1285",
+      "head_sha": "a23ff3aac402dd25590e3515e7f67d20f4f7d22c",
+      "base_sha": "28c3fcaabd60f314b93ca09e262400dc11b35eb2",
+      "updated_at": "2026-11-17T00:26:00Z"
+    },
+    {
+      "number": 1286,
+      "title": "Specify Enriques surfaces, projective models and automorphisms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1286",
+      "head_sha": "1ed6f57dd4c2e38e25d6a9962ec8c69c9ff854cc",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-17T00:26:03Z"
+    },
+    {
+      "number": 1311,
+      "title": "Roadmap: Euler systems and the cyclotomic main conjecture",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1311",
+      "head_sha": "096363baff2a1e13a1cb348f85b8acb7b3a74def",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:45:04Z"
+    },
+    {
+      "number": 1313,
+      "title": "Roadmap: motives and algebraic cycles",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1313",
+      "head_sha": "4cfd9b703dfedaf8596b66e9737b743fc29ac532",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:52:18Z"
+    },
+    {
+      "number": 1316,
+      "title": "Add roadmap: spaces of countable structures and the López–Escobar theorem",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1316",
+      "head_sha": "60f81ce31adf41a239588f20b8c7a22e03dff112",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-17T06:50:26Z"
+    },
+    {
+      "number": 1319,
+      "title": "Add roadmap: Ehrenfeucht–Mostowski models and Hanf numbers for Lω₁ω",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1319",
+      "head_sha": "84bb2ec36d3ec18451999d76ad5b74d87beb5b7d",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-17T03:00:20Z"
+    },
+    {
+      "number": 1325,
+      "title": "Correct general-growth semigroups and specify representation interfaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1325",
+      "head_sha": "5156af852210c63ac4d6e4e7a25838f4c422ee86",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T10:52:52Z"
+    },
+    {
+      "number": 1330,
+      "title": "EnhancedDerivedSheaves E1.6: consume §0.3 regularity criterion",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1330",
+      "head_sha": "856fe7ab4dd4005dbc2344f29ebd172779ba80ee",
+      "base_sha": "c4d22422c3f1aaa3d806c42f432953c26cb91969",
+      "updated_at": "2026-11-06T12:53:15Z"
+    },
+    {
+      "number": 1335,
+      "title": "ArithmeticDynamics: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1335",
+      "head_sha": "ae79f44feb91663b2aef9341a9de929ddeb0d7b0",
+      "base_sha": "0e8b058a97cc4f9401d2679313e0e937761c1024",
+      "updated_at": "2026-11-16T22:38:55Z"
+    },
+    {
+      "number": 1336,
+      "title": "ErdosProgressionPowers: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1336",
+      "head_sha": "fb2426473966facdbee957f5bb5bafd50389eb2c",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-16T22:38:57Z"
+    },
+    {
+      "number": 1339,
+      "title": "GlobalNumberFields: all-rank regulator bounds and order Picard functoriality",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1339",
+      "head_sha": "b294e273e012ba16353b519d03d3105462719682",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-10T18:20:22Z"
+    },
+    {
+      "number": 1351,
+      "title": "QWittVectors: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1351",
+      "head_sha": "4728b2a213521cae485d6f0cd902490fc5176190",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:52:26Z"
+    },
+    {
+      "number": 1360,
+      "title": "ColemanIntegrationPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1360",
+      "head_sha": "e2c0f1fbea6dce3243a142db3a55ab0acc55d650",
+      "base_sha": "bf3417a2ea2a56d1d16f56487a5e3f470fd278c2",
+      "updated_at": "2026-11-16T22:39:00Z"
+    },
+    {
+      "number": 1364,
+      "title": "CohomologyComparisonsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1364",
+      "head_sha": "0d00ac6661d976fe347657caafabd47cb9913ee7",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T22:39:02Z"
+    },
+    {
+      "number": 1375,
+      "title": "K3SurfacesAndSymplecticBoundedness: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1375",
+      "head_sha": "cc2efa82cc0691a6ece73761dba588d7ec9efea8",
+      "base_sha": "28c3fcaabd60f314b93ca09e262400dc11b35eb2",
+      "updated_at": "2026-11-17T00:26:05Z"
+    },
+    {
+      "number": 1391,
+      "title": "QSeriesPartitionsAndMockModularForms: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1391",
+      "head_sha": "4735f07172c19286c459df3f4fc877cb92127eb8",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T20:45:17Z"
+    },
+    {
+      "number": 1403,
+      "title": "SelmerIwasawaCohomologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1403",
+      "head_sha": "4f2c89a56fe78a461673dcb9fab9fd4dbb3c50ca",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:45:20Z"
+    },
+    {
+      "number": 1404,
+      "title": "GanGrossPrasadUnitaryGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1404",
+      "head_sha": "a73dc0c9944eb48bf00e10874c994a0c3bb29891",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T22:39:05Z"
+    },
+    {
+      "number": 1405,
+      "title": "AbelianSchemesAndArithmeticModuliPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1405",
+      "head_sha": "6684834bd8430fc1a6c701f372ae6ff987e4365f",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:45:25Z"
+    },
+    {
+      "number": 1406,
+      "title": "EffectiveClassNumbers: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1406",
+      "head_sha": "471be8d0d6db635d9d691a79accc9bbaebb6ea85",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-16T22:39:08Z"
+    },
+    {
+      "number": 1408,
+      "title": "ComputationalNumberTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1408",
+      "head_sha": "a901968a061eb6b10405ae04af8c2e1e5d0eaa3c",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-16T22:39:11Z"
+    },
+    {
+      "number": 1411,
+      "title": "IntegralLattices: dyadic classification, reduction of forms and local densities; QuadraticFormInvariants: Checks",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1411",
+      "head_sha": "60aa3a4f37d0734962ec0ec7bdd8764f3f8bbfd5",
+      "base_sha": "33620f6d4e481df60985db445d1079373fe0ae73",
+      "updated_at": "2026-11-16T22:09:02Z"
+    },
+    {
+      "number": 1418,
+      "title": "ArithmeticKTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1418",
+      "head_sha": "d682d86dcd72411fdfc066862ff8822c1f72003f",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:45:33Z"
+    },
+    {
+      "number": 1419,
+      "title": "PolynomialGaloisGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1419",
+      "head_sha": "285e665b33ae9431bd2df64bb2016cffaf1637ea",
+      "base_sha": "a07e2024f391f3022520c3f8ad194912b3eab614",
+      "updated_at": "2026-11-16T22:39:13Z"
+    },
+    {
+      "number": 1420,
+      "title": "MultiquadraticPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1420",
+      "head_sha": "2d8ad483997b1813361238a032c7f305089376ea",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:45:38Z"
+    },
+    {
+      "number": 1422,
+      "title": "OverconvergentAutomorphicForms: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1422",
+      "head_sha": "b6ce911b6a5a384a70030e024706549476dd884b",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:45:41Z"
+    },
+    {
+      "number": 1423,
+      "title": "HeegnerPointEulerSystems: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1423",
+      "head_sha": "e9fc187f206237c7256c9f8dd7d9664a8900c8ee",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-17T00:26:07Z"
+    },
+    {
+      "number": 1424,
+      "title": "Polylogarithms: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1424",
+      "head_sha": "bd1c355d4b1911dc824d5a7305ea474d2fefc316",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:39:18Z"
+    },
+    {
+      "number": 1425,
+      "title": "HabiroRings: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1425",
+      "head_sha": "dd008cd17b72485b82bc138e4d4b27ebfc81321e",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:39:21Z"
+    },
+    {
+      "number": 1427,
+      "title": "HabiroNahmSeries: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1427",
+      "head_sha": "4b68a8d6bdf00a5821bed7e44c3923c412c2e712",
+      "base_sha": "a07e2024f391f3022520c3f8ad194912b3eab614",
+      "updated_at": "2026-11-16T22:39:24Z"
+    },
+    {
+      "number": 1428,
+      "title": "HabiroCohomologyFoundations: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1428",
+      "head_sha": "410d53676adb928bad2c1a07113d5b0c65d13197",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:45:54Z"
+    },
+    {
+      "number": 1430,
+      "title": "K3BlochGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1430",
+      "head_sha": "cf5467c337b7511ac249ee2ad904a8e827b9c88f",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T22:39:26Z"
+    },
+    {
+      "number": 1432,
+      "title": "K2SymbolsBrauerPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1432",
+      "head_sha": "4916d30c1dd5c96e4b48c2272b3fddf3c8c35e32",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:46:00Z"
+    },
+    {
+      "number": 1458,
+      "title": "SolidAnalyticRings: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1458",
+      "head_sha": "afa637a50adec1e55894232231e6081889a90660",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:46:02Z"
+    },
+    {
+      "number": 1461,
+      "title": "BorelRegulators: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1461",
+      "head_sha": "c564441e8b2ece794039faa3e718e222e06ad01d",
+      "base_sha": "72d2b66ff21616da10318efb2acda19311dae82a",
+      "updated_at": "2026-11-16T22:39:29Z"
+    },
+    {
+      "number": 1466,
+      "title": "HabiroCohomologyFoundationsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1466",
+      "head_sha": "fefa1f2b46182e3ca058f17dca0881e815dc00be",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:39:32Z"
+    },
+    {
+      "number": 1469,
+      "title": "HabiroNumberFields: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1469",
+      "head_sha": "2c1e0cbdea99ab9dd030c116ca2878275830f8c1",
+      "base_sha": "1759538757f8229957d4fe3d0200c11085ea923f",
+      "updated_at": "2026-11-16T22:39:35Z"
+    },
+    {
+      "number": 1470,
+      "title": "MotivicEtaleKTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1470",
+      "head_sha": "d1c5de6996dcbb320ab38d754d201f0680027781",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T09:53:31Z"
+    },
+    {
+      "number": 1474,
+      "title": "FunctionFieldArithmetic: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1474",
+      "head_sha": "4cac1f81428ecc0fb612eca6666785c7f294890c",
+      "base_sha": "f24d841ca2b1f5f3bed62643bbf420d237e83d1c",
+      "updated_at": "2026-11-16T22:39:37Z"
+    },
+    {
+      "number": 1484,
+      "title": "EllipticCurveModularityWild3Adic: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1484",
+      "head_sha": "690b0592655aec9f258d6479fe7b05e5455b1f51",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:46:15Z"
+    },
+    {
+      "number": 1487,
+      "title": "GrossZagierAndArithmeticHeights: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1487",
+      "head_sha": "9d72f01f41f0729a58f362ce12af8d7a8fdabefe",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:39:40Z"
+    },
+    {
+      "number": 1488,
+      "title": "EnriquesSurfacesAndIntegralNonexistence: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1488",
+      "head_sha": "4a347b3fc15bed3dd263df15d37b7db4acf04d08",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-17T00:26:10Z"
+    },
+    {
+      "number": 1489,
+      "title": "EllipticKTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1489",
+      "head_sha": "4a5466c35b16b93212a2de72b9c7d614f118fdd6",
+      "base_sha": "ae2562cd6d39ddeac99ac18bdf78e6e46a068586",
+      "updated_at": "2026-11-16T22:39:42Z"
+    },
+    {
+      "number": 1490,
+      "title": "GlobalShtukasAndFunctionFieldLanglands: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1490",
+      "head_sha": "de1f7c1ed1666a9b71e22b5b8b3e7ab125ef5a2f",
+      "base_sha": "ae2562cd6d39ddeac99ac18bdf78e6e46a068586",
+      "updated_at": "2026-11-16T22:39:45Z"
+    },
+    {
+      "number": 1491,
+      "title": "EllipticCurveModularityPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1491",
+      "head_sha": "99111f0b0692e5912c83dfb6e2d5104f305fa97b",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T22:39:48Z"
+    },
+    {
+      "number": 1492,
+      "title": "ClassicalGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1492",
+      "head_sha": "a8badcd06b16a3a125b84a9a0b00ce9eae81eef3",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T20:46:30Z"
+    },
+    {
+      "number": 1493,
+      "title": "RefinedTraceMethods: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1493",
+      "head_sha": "91f73dcc49f34e4054b27f6f92b6d14254695444",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:39:50Z"
+    },
+    {
+      "number": 1494,
+      "title": "TropicalAndBerkovichArithmetic: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1494",
+      "head_sha": "0390796e2e1bfbf0559b3db3d29516d94ffa1c8a",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:39:53Z"
+    },
+    {
+      "number": 1496,
+      "title": "PeriodsAndSpecialValues: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1496",
+      "head_sha": "8f85555cf01c55083218b9cb3d9a78064ebcbb15",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:26:13Z"
+    },
+    {
+      "number": 1498,
+      "title": "PadicHodgeRegulators: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1498",
+      "head_sha": "0c9e8c60d22b07983ab704a014a4dcb9d35ea217",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:39:57Z"
+    },
+    {
+      "number": 1499,
+      "title": "ModularIwasawaMainConjectures: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1499",
+      "head_sha": "4d87fc8b4890baa983025221cbdd1c55e591aee5",
+      "base_sha": "666d57e012c2b68897048e89d7e702a5b2d23ff7",
+      "updated_at": "2026-11-17T00:26:16Z"
+    },
+    {
+      "number": 1504,
+      "title": "CongruenceSpectralGap: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1504",
+      "head_sha": "a40d0b852a3b2ff08066ff02e82dabcdd5abb647",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-17T00:26:19Z"
+    },
+    {
+      "number": 1506,
+      "title": "Manifold optimization : roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1506",
+      "head_sha": "344c8feb0f2c0ae0b5f85c6e62ea17322c5ab17c",
+      "base_sha": "4aeb1cc1f6feb6ec6d7ac4e892307d67006acbd2",
+      "updated_at": "2026-11-16T12:22:12Z"
+    },
+    {
+      "number": 1511,
+      "title": "AdmissiblePairsAndPadicHodgeStructures: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1511",
+      "head_sha": "794d213e733dd453a00692881a742ae82189925e",
+      "base_sha": "a40f789bb1f70beb442d9fe8dffd861bd269cc63",
+      "updated_at": "2026-11-16T20:46:48Z"
+    },
+    {
+      "number": 1516,
+      "title": "EffectiveBoundsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1516",
+      "head_sha": "0ef98e6faa544c14e0999276ee9ddd435690aab7",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:46:51Z"
+    },
+    {
+      "number": 1519,
+      "title": "StratifiedSpacesAndTameTopology: stratified spaces, tubular data and tame topology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1519",
+      "head_sha": "96086c5a7bfe3b00448b3a115558bccb8aea5d37",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-15T15:20:29Z"
+    },
+    {
+      "number": 1520,
+      "title": "GrothendieckTopoi: Grothendieck topoi",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1520",
+      "head_sha": "64b01c52983f15252b7881b3380ef60f3d3c971b",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T23:07:36Z"
+    },
+    {
+      "number": 1521,
+      "title": "HomotopyTheoryOfCategories: basic localizers, test categories, direct categories, derivators and 2-groups",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1521",
+      "head_sha": "46d6fae4473d28ef1b7a1ba68d2a573796161d93",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T09:03:40Z"
+    },
+    {
+      "number": 1522,
+      "title": "GroupSchemesOverABase: group schemes over a base",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1522",
+      "head_sha": "744fcb46164fd65ebbfd44ecc0d43ea0d4504de0",
+      "base_sha": "eb4a735b91b57a80ce1923eb88f7eba2a92ab87c",
+      "updated_at": "2026-11-16T06:45:55Z"
+    },
+    {
+      "number": 1523,
+      "title": "Pseudoline arrangements and oriented matroids",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1523",
+      "head_sha": "837b31e4cd8da5bd7cf1dd6eef77fcb5967fb5df",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-15T11:15:25Z"
+    },
+    {
+      "number": 1531,
+      "title": "ArithmeticStatistics: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1531",
+      "head_sha": "1e931c33cbcc9a438cc25c643e2678bc01d4ce4e",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:46:54Z"
+    },
+    {
+      "number": 1543,
+      "title": "AutomorphicPadicLFunctionsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1543",
+      "head_sha": "08a106e13008bbd99db172bdaebe0cf3402633fa",
+      "base_sha": "7922565e8b5d3420ff251821a1b3b042fabe96c8",
+      "updated_at": "2026-11-17T00:26:22Z"
+    },
+    {
+      "number": 1545,
+      "title": "EllipticLegendreCharacterInterfaces: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1545",
+      "head_sha": "df72341447126f5c60a5d9fd9fea7ede9f4b9a05",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:54:20Z"
+    },
+    {
+      "number": 1547,
+      "title": "CountingBundlesAndHallAlgebrasOfCurves: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1547",
+      "head_sha": "e22a59e1b5cc1906afe933fe8a6c212cc518b492",
+      "base_sha": "a8132fb235144b25aba003881cc74e35d7d15f36",
+      "updated_at": "2026-11-16T22:40:06Z"
+    },
+    {
+      "number": 1549,
+      "title": "ClassicalAdicEtaleCohomologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1549",
+      "head_sha": "3cf97a576f3b0e379e9b2a8ee522494db65a02aa",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:47:02Z"
+    },
+    {
+      "number": 1609,
+      "title": "Sobolev differential forms on R^n",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1609",
+      "head_sha": "e8a0ed0486bfaa8753c286b2400b1b1d4c79eda8",
+      "base_sha": "dfdf40cfe509b26e5041cd579cf329a5d568f52b",
+      "updated_at": "2026-11-08T22:46:48Z"
+    },
+    {
+      "number": 1614,
+      "title": "PDE Mixed Boundary Conditions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1614",
+      "head_sha": "f019834452df4d5e467bcead845417ed0ede9f9e",
+      "base_sha": "4adc7e3d0b68a8bb9974126e7411667cb533255f",
+      "updated_at": "2026-11-15T00:55:03Z"
+    },
+    {
+      "number": 1615,
+      "title": "InfinitaryModelExistence: repair the well-ordering consistency property and explain projective classes",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1615",
+      "head_sha": "8c93fecf42ddba2f46c2fcbfcec24d0efe3f2fe3",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-17T02:50:06Z"
+    },
+    {
+      "number": 1616,
+      "title": "BorelEquivalenceRelations: consume Tau Ceti's descriptive set theory and state only the two open targets",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1616",
+      "head_sha": "b4d6f21d02810018c612891d57be43f4f58f1e7d",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-14T22:12:52Z"
+    },
+    {
+      "number": 1630,
+      "title": "EnhancedDerivedSheaves: definitional order and the spectral module comparison (amendment)",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1630",
+      "head_sha": "0514180906fd196b8c53163d24feb7fd07e8f7df",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-15T02:17:54Z"
+    },
+    {
+      "number": 1634,
+      "title": "LocalFiniteGroupTheory: roadmap",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1634",
+      "head_sha": "0c409c92b3d62cae104bcbdd64c9bb4ee41daf53",
+      "base_sha": "d2e0f0d323cf817cdf8a11c7a2fabd0a3f0ec828",
+      "updated_at": "2026-11-14T03:51:30Z"
+    },
+    {
+      "number": 1643,
+      "title": "ChromaticHomotopyTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1643",
+      "head_sha": "815443c9d4a2fcb5c70c248f85f020cc05d373f3",
+      "base_sha": "a40f789bb1f70beb442d9fe8dffd861bd269cc63",
+      "updated_at": "2026-11-16T22:40:09Z"
+    },
+    {
+      "number": 1644,
+      "title": "EllAdicHomotopyTypesAndWeights: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1644",
+      "head_sha": "88b06c918a5f04aaa6a9275e045a7c5341fd8027",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:26:24Z"
+    },
+    {
+      "number": 1645,
+      "title": "SymplecticReidemeisterTorsionModSquares: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1645",
+      "head_sha": "d54bae5a643137fd1127cacd78ce3433c73c8488",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T22:40:14Z"
+    },
+    {
+      "number": 1647,
+      "title": "AnalyticToricGeometryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1647",
+      "head_sha": "de81660ff4435929c12c2b5ed47924e470c3abc0",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:47:12Z"
+    },
+    {
+      "number": 1686,
+      "title": "ArithmeticDynamicsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1686",
+      "head_sha": "f35733fb219a5efc16b5877e336714c1e635ea0b",
+      "base_sha": "a40f789bb1f70beb442d9fe8dffd861bd269cc63",
+      "updated_at": "2026-11-16T22:40:17Z"
+    },
+    {
+      "number": 1687,
+      "title": "AnalyticStacks: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1687",
+      "head_sha": "dd5bc8331c3433503e0f9269b0633291d1c1a3fc",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:40:19Z"
+    },
+    {
+      "number": 1691,
+      "title": "GeometryOfNumbersAndQuadraticArithmeticPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1691",
+      "head_sha": "0cb101e2dae34ea8fc361aa6936564130f1740b9",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:47:19Z"
+    },
+    {
+      "number": 1692,
+      "title": "AnticyclotomicLocalUnits: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1692",
+      "head_sha": "f6d99f7686ad921362a27f72f90c98f269ed3831",
+      "base_sha": "19ff3decd82e88ad7ac48712ee799fb1244a40b8",
+      "updated_at": "2026-11-17T00:26:27Z"
+    },
+    {
+      "number": 1693,
+      "title": "DiophantineApproximationAndTranscendencePartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1693",
+      "head_sha": "f36c2a55253a758d9db1807f9bd8aba1d1cd117b",
+      "base_sha": "4d169a92dae6edd99e8992099740dc18b25e86ab",
+      "updated_at": "2026-11-17T06:52:29Z"
+    },
+    {
+      "number": 1694,
+      "title": "AlgebraicTopologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1694",
+      "head_sha": "ccdd821b0aa04b5ef1c682f75d51e145ea90d03e",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:47:23Z"
+    },
+    {
+      "number": 1695,
+      "title": "ComplexMultiplicationAndExplicitReciprocityPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1695",
+      "head_sha": "8c1992c782a4e4ddcd29e3e8870f776d3e8a98c9",
+      "base_sha": "a40f789bb1f70beb442d9fe8dffd861bd269cc63",
+      "updated_at": "2026-11-16T22:40:25Z"
+    },
+    {
+      "number": 1696,
+      "title": "FuchsianOrbifoldsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1696",
+      "head_sha": "f577399bdbc07164927c87b239c4f618e985f416",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:47:28Z"
+    },
+    {
+      "number": 1697,
+      "title": "DrinfeldModulesAndTModulesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1697",
+      "head_sha": "9090b6aaf0ff6ab2a339aaf103a95acd09a2a17f",
+      "base_sha": "a40f789bb1f70beb442d9fe8dffd861bd269cc63",
+      "updated_at": "2026-11-17T00:26:30Z"
+    },
+    {
+      "number": 1707,
+      "title": "feat: roadmap for hyperelliptic curves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1707",
+      "head_sha": "91861b57ffbe77d16c829cb96afaa2b25c3fa898",
+      "base_sha": "623f5d698439199b0f1266d281bd2685cfb28b9e",
+      "updated_at": "2026-11-17T00:26:32Z"
+    },
+    {
+      "number": 1708,
+      "title": "feat: roadmap for finite group invariants",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1708",
+      "head_sha": "8d408403c48a0522751ea616047dc368b9df16ca",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:47:36Z"
+    },
+    {
+      "number": 1711,
+      "title": "feat: roadmap for artin representations",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1711",
+      "head_sha": "9054814adfe98205062c112dd39f90922804ffbf",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:47:39Z"
+    },
+    {
+      "number": 1712,
+      "title": "feat: roadmap for character sums over finite fields",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1712",
+      "head_sha": "e5a47de6116b5cccf6af6a9adc5db3faa8d05b2f",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:47:42Z"
+    },
+    {
+      "number": 1714,
+      "title": "feat: roadmap for siegel modular forms",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1714",
+      "head_sha": "37392356f48a5eee2c59b99086d48946ae2a765c",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-17T00:26:35Z"
+    },
+    {
+      "number": 1715,
+      "title": "feat: roadmap for elliptic curve periods and modular parametrizations",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1715",
+      "head_sha": "91ab26b2e24336f027c6c25ce060521d4f3f247b",
+      "base_sha": "c99407021ca54e77e61223896e876565b8c18aa4",
+      "updated_at": "2026-11-17T00:26:38Z"
+    },
+    {
+      "number": 1716,
+      "title": "feat: roadmap for hypergeometric motives",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1716",
+      "head_sha": "68b0f5fd1dc9583df7ff4290495c52e8794b88be",
+      "base_sha": "e6f6358d839d6d1f6cebc0296cbf4f33026969c0",
+      "updated_at": "2026-11-16T20:47:50Z"
+    },
+    {
+      "number": 1717,
+      "title": "feat: roadmap for maass forms",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1717",
+      "head_sha": "19038d816d08ce1d791820b77ab3dd890884372e",
+      "base_sha": "c99407021ca54e77e61223896e876565b8c18aa4",
+      "updated_at": "2026-11-16T20:47:52Z"
+    },
+    {
+      "number": 1718,
+      "title": "feat: roadmap for number fields of bounded discriminant",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1718",
+      "head_sha": "b4cc7c92dd7db8a0f532004b86b49b4cb88cd125",
+      "base_sha": "3cf73427bb5fc76055e144dde8bd8fb99fb82e29",
+      "updated_at": "2026-11-16T09:55:19Z"
+    },
+    {
+      "number": 1719,
+      "title": "feat: roadmap for bianchi modular forms",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1719",
+      "head_sha": "58973fceee57e868b4701cdf9c5772a6b884dcfa",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-16T22:40:40Z"
+    },
+    {
+      "number": 1720,
+      "title": "feat: roadmap for abelian varieties over finite fields",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1720",
+      "head_sha": "15405958f7907b63264935668f1f762d25d4a924",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:26:41Z"
+    },
+    {
+      "number": 1721,
+      "title": "feat: roadmap for half-integral weight modular forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1721",
+      "head_sha": "d7e7ece5e4fa0cd2ffee1678b817b47065f71f3b",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:48:01Z"
+    },
+    {
+      "number": 1722,
+      "title": "feat: roadmap for quaternion arithmetic",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1722",
+      "head_sha": "0b75fee59867f41d68ee84f4b840e3b19c407dda",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:48:03Z"
+    },
+    {
+      "number": 1723,
+      "title": "feat: roadmap for lattice packings and perfect forms",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1723",
+      "head_sha": "cbcf644b56a02cc553b39672302f2288ad208e31",
+      "base_sha": "2485dfb343c49b1200ac00de6975664fe592fee4",
+      "updated_at": "2026-11-16T20:48:06Z"
+    },
+    {
+      "number": 1724,
+      "title": "feat: roadmap for hilbert modular forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1724",
+      "head_sha": "02ea1526dd9151a9f8cfc05b5ed3e24ddd51bf6a",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:48:09Z"
+    },
+    {
+      "number": 1725,
+      "title": "feat: roadmap for sato-tate groups",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1725",
+      "head_sha": "1cfaabae8fed4b16a5e25b32769bfa7a9ed24e8c",
+      "base_sha": "3ace260a7d2dce47fb3d8345b32a7219bcd26afc",
+      "updated_at": "2026-11-16T22:40:45Z"
+    },
+    {
+      "number": 1726,
+      "title": "feat: roadmap for canonical models and gonality",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1726",
+      "head_sha": "ed909376f779b9799948e0ba645175bd259c676b",
+      "base_sha": "7342e8fdd66944f4b6774ca84fc3ba304b4f7299",
+      "updated_at": "2026-11-16T20:48:15Z"
+    },
+    {
+      "number": 1727,
+      "title": "feat: roadmap for adelic images and modular curves",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1727",
+      "head_sha": "e4f956aea537d829c8dcbb8b9fbf924a05615155",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:26:44Z"
+    },
+    {
+      "number": 1728,
+      "title": "feat: roadmap for group actions on riemann surfaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1728",
+      "head_sha": "3d4ce6999d3bd047abe5c5000f1609e25c78fd70",
+      "base_sha": "19ff3decd82e88ad7ac48712ee799fb1244a40b8",
+      "updated_at": "2026-11-17T00:26:47Z"
+    },
+    {
+      "number": 1729,
+      "title": "feat: roadmap for curves over finite fields",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1729",
+      "head_sha": "6930552b8d0604378894f0b2907d18f284ed4fec",
+      "base_sha": "d03a6213d8b43b7578f041e00ccf93645d3300b1",
+      "updated_at": "2026-11-16T22:40:53Z"
+    },
+    {
+      "number": 1730,
+      "title": "feat: roadmap for hilbert modular surfaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1730",
+      "head_sha": "7ebdf0c1df8ea2ef0f47c8cc209b8033142d6811",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:48:26Z"
+    },
+    {
+      "number": 1732,
+      "title": "RankZeroOneBSDPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1732",
+      "head_sha": "27e8ab0889da8d3c4f2f2c3a0f206cf3ce7632e4",
+      "base_sha": "666d57e012c2b68897048e89d7e702a5b2d23ff7",
+      "updated_at": "2026-11-17T00:26:49Z"
+    },
+    {
+      "number": 1733,
+      "title": "StableHomotopyKTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1733",
+      "head_sha": "0bccf340ef072b72dd4e9909ada5bf039c129b69",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:40:59Z"
+    },
+    {
+      "number": 1734,
+      "title": "SheafTheoreticSmithTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1734",
+      "head_sha": "f19b8c8e18862703715706b799ba13a556182f00",
+      "base_sha": "19ff3decd82e88ad7ac48712ee799fb1244a40b8",
+      "updated_at": "2026-11-16T22:41:01Z"
+    },
+    {
+      "number": 1735,
+      "title": "DirectSummandsAndBigCohenMacaulay: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1735",
+      "head_sha": "03c84cc17c6f349caf028a581117cc4b25916ba1",
+      "base_sha": "7c8b29245d29187d29872b7bfa58787d2a9bfe24",
+      "updated_at": "2026-11-16T09:56:01Z"
+    },
+    {
+      "number": 1736,
+      "title": "ExceptionalThetaCorrespondencesForG2: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1736",
+      "head_sha": "15fa6a69aec87916f344bdbae2b5dd263e89ec07",
+      "base_sha": "eb4a735b91b57a80ce1923eb88f7eba2a92ab87c",
+      "updated_at": "2026-11-16T22:41:04Z"
+    },
+    {
+      "number": 1737,
+      "title": "ExoticMonoidalStructuresAndAbstractAutomorphicity: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1737",
+      "head_sha": "dd6884908239a2f60a348756a7ab37e29138c725",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:41:07Z"
+    },
+    {
+      "number": 1738,
+      "title": "FaltingsFinitenessAndIsogenyTheoremsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1738",
+      "head_sha": "84ba045a2e1a269158961c2c325e0d4f6383dc90",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:41:09Z"
+    },
+    {
+      "number": 1739,
+      "title": "GaloisSectionsPadicPeriodMaps: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1739",
+      "head_sha": "7a94d6e21ac7601985594bfdb6a1797f1a2ecb8f",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:41:12Z"
+    },
+    {
+      "number": 1742,
+      "title": "GeneralAlgebraicKTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1742",
+      "head_sha": "b519c2f37ff3d37d5fef913483ba34a10620d951",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T22:41:14Z"
+    },
+    {
+      "number": 1743,
+      "title": "EtaleDualityAndPerverseSheavesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1743",
+      "head_sha": "b826e54856633d02a789fcfd5ab37071b1fa56bf",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:48:51Z"
+    },
+    {
+      "number": 1744,
+      "title": "CMRankZeroConverse: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1744",
+      "head_sha": "121e457bcf3401dae62f0494962fe06c7d72034f",
+      "base_sha": "c99407021ca54e77e61223896e876565b8c18aa4",
+      "updated_at": "2026-11-17T00:26:52Z"
+    },
+    {
+      "number": 1745,
+      "title": "HilbertModularVarietiesAndShimuraCurvesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1745",
+      "head_sha": "2fc7d25bfe8c093744fd139a67c27e9883c58524",
+      "base_sha": "ea83ad870865bea13f14c7fd058637fc46812c0d",
+      "updated_at": "2026-11-16T22:41:19Z"
+    },
+    {
+      "number": 1746,
+      "title": "AbelianSurfacesModularity: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1746",
+      "head_sha": "b20dcf84100e85146144a16befb2271ace1289c4",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-17T00:26:55Z"
+    },
+    {
+      "number": 1755,
+      "title": "ArcTopologyAndDescent: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1755",
+      "head_sha": "dfd2dd1c5cae79641691f075647ff4e89dde222d",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:56:26Z"
+    },
+    {
+      "number": 1756,
+      "title": "AutomorphicLFunctionsAndLocalFactorsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1756",
+      "head_sha": "065d15c5e89819813f2eb159b6888ca3e2438d26",
+      "base_sha": "9c6e95d911c8ef4a94a1d22116bd70e3fbcb4858",
+      "updated_at": "2026-11-16T20:49:03Z"
+    },
+    {
+      "number": 1757,
+      "title": "ScholzeFunctorAndModpCohomologyOfTheLubinTateTower: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1757",
+      "head_sha": "020986ba8eacd237047a170a6e45c3c560864159",
+      "base_sha": "9c6e95d911c8ef4a94a1d22116bd70e3fbcb4858",
+      "updated_at": "2026-11-16T22:41:25Z"
+    },
+    {
+      "number": 1758,
+      "title": "TwistedAutomorphicDescents: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1758",
+      "head_sha": "b53f3cecfb5ae2e045112f09f879e3710e20ab0c",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-16T22:41:28Z"
+    },
+    {
+      "number": 1759,
+      "title": "CstConjectureForDaggerVarieties: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1759",
+      "head_sha": "af57e66db65149ce38372e8bfd20b6d85224f598",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:49:11Z"
+    },
+    {
+      "number": 1760,
+      "title": "DeligneWeightsAndPurityPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1760",
+      "head_sha": "7268ab891ca08bebe293d4b7a366958dca609782",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:49:14Z"
+    },
+    {
+      "number": 1761,
+      "title": "AutomorphicSpectralTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1761",
+      "head_sha": "63133f5c6457a063fdb84b1dbadb963b4e342cfc",
+      "base_sha": "3f7196b9d27a77cf373bb34a8fceaacd03aa8cc9",
+      "updated_at": "2026-11-16T22:41:31Z"
+    },
+    {
+      "number": 1771,
+      "title": "Quantum foundations: operational models, reconstruction and symmetries",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1771",
+      "head_sha": "05c97bca39fd83e801c30797110b59482bc66727",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:49:19Z"
+    },
+    {
+      "number": 1772,
+      "title": "Relativistic quantum field theory and perturbative renormalization",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1772",
+      "head_sha": "564db65caf039e59f149f6cd86bd7038a5998b1d",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:49:22Z"
+    },
+    {
+      "number": 1775,
+      "title": "RepresentationTheory: modular characters and blocks",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1775",
+      "head_sha": "8379fbab8b8991aba117b742b8f590f0869d1bcd",
+      "base_sha": "641eaf3866fac3e357aaa586df38b26fb9a92849",
+      "updated_at": "2026-11-16T20:49:24Z"
+    },
+    {
+      "number": 1777,
+      "title": "OddOrderTheorem: Feit–Thompson and reusable local analysis",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1777",
+      "head_sha": "f65b2b30e283b3429e3a17a90c114b7b749534da",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T20:49:26Z"
+    },
+    {
+      "number": 1778,
+      "title": "GlaubermanZStar: isolated involutions and Brauer–Suzuki",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1778",
+      "head_sha": "d642d3efd0671f8556fd7fdcfb06f18032cea6d6",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T22:41:34Z"
+    },
+    {
+      "number": 1782,
+      "title": "LocallyConvexDuality: barrelled, bornological and (DF)-spaces, Mackey duality and nuclear spaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1782",
+      "head_sha": "4d1052c8b85081967c25ba700f14bdc3767e795a",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-15T13:01:45Z"
+    },
+    {
+      "number": 1783,
+      "title": "GrothendieckUniverses: Grothendieck universes, the inaccessible stages V_κ and the universe axiom",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1783",
+      "head_sha": "017d47110fdd661cc10901fa1dcbef4410112a38",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T09:07:10Z"
+    },
+    {
+      "number": 1791,
+      "title": "Connect neighbouring roadmaps to elementary surface topology",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1791",
+      "head_sha": "fcad6f1fff8de355243aae8f61593d44a4b20ddd",
+      "base_sha": "fa41b3747f56d4e77bd69e7099c1be4f2e4959ba",
+      "updated_at": "2026-11-06T12:54:24Z"
+    },
+    {
+      "number": 1795,
+      "title": "FilteredLocalGaloisGroups: filtered local Galois groups and their solvable quotients",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1795",
+      "head_sha": "f235b8389007efb684231f69e4aa6b3cde5f608f",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-06T12:54:27Z"
+    },
+    {
+      "number": 1796,
+      "title": "AdicCoefficientsAndComparisonsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1796",
+      "head_sha": "0ed113bd2300353bd73d1927bf436f9f66ea985a",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-16T09:56:56Z"
+    },
+    {
+      "number": 1797,
+      "title": "GeometricTopology: the house shape, on Tau Ceti's carriers",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1797",
+      "head_sha": "5cb54fcd572e73cbbeacc816e906f2f804e735d2",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-15T18:10:46Z"
+    },
+    {
+      "number": 1798,
+      "title": "DGFloer: the applications move to DGFloerPartII and the ordinary Serre theory to AlgebraicTopology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1798",
+      "head_sha": "62765e61af9185ad959dcc707445839bd7f42f65",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T13:00:12Z"
+    },
+    {
+      "number": 1799,
+      "title": "DGFloerPartII: applications of DG Floer theory to spheres, knotted hypersurfaces and bordism",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1799",
+      "head_sha": "3cc4b39577e1cefa849b4e9c76c827ae6ed342d5",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T22:41:36Z"
+    },
+    {
+      "number": 1803,
+      "title": "CircleMethodThreePrimes: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1803",
+      "head_sha": "b48dc9ca296c3ebf58ecd8a65cf9ec240ca0f757",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-17T03:05:57Z"
+    },
+    {
+      "number": 1804,
+      "title": "KatoEulerSystems: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1804",
+      "head_sha": "88ffcc3b1205ad0c872235066edfafd3dd121354",
+      "base_sha": "ea83ad870865bea13f14c7fd058637fc46812c0d",
+      "updated_at": "2026-11-17T00:26:57Z"
+    },
+    {
+      "number": 1805,
+      "title": "RankOneConverse: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1805",
+      "head_sha": "9b5c88ac32672b6e2730975f122c0ece77ce9f02",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-17T00:27:00Z"
+    },
+    {
+      "number": 1806,
+      "title": "EtaleHomotopyTypes: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1806",
+      "head_sha": "fb437a1da5f48b8691c92c54b9311d5a5d94773c",
+      "base_sha": "2248bbbb16f5758826a8a322d77cec4459a8f262",
+      "updated_at": "2026-11-16T22:41:44Z"
+    },
+    {
+      "number": 1807,
+      "title": "Cut the dependency loops among the roadmaps on main",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1807",
+      "head_sha": "618bc240b025c49112044e2be3bc99e687d09b9f",
+      "base_sha": "c1107359463a6249b47ce20bb22c66c259330d25",
+      "updated_at": "2026-11-16T12:01:07Z"
+    },
+    {
+      "number": 1809,
+      "title": "SheafConvolutionOnAbelianVarieties: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1809",
+      "head_sha": "faf245b4370945b95e50e2c86a5f997b0484f9f6",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:27:03Z"
+    },
+    {
+      "number": 1811,
+      "title": "Roadmap: local anabelian geometry (Mochizuki 1997, Hyeon 2025)",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1811",
+      "head_sha": "748d0bb03ffb6f5f1d66e4da64d24445084ad2cf",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-06T12:54:37Z"
+    },
+    {
+      "number": 1812,
+      "title": "Roadmap: the field of norms (Fontaine–Wintenberger)",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1812",
+      "head_sha": "5b260a9403f2f893bff2e80b72893b6928762a50",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-09T15:45:23Z"
+    },
+    {
+      "number": 1813,
+      "title": "Roadmap: higher local class field theory",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1813",
+      "head_sha": "4da4065f673d90955fd31cd7d279a0efc3ca1c16",
+      "base_sha": "a0ad405e151ff6e42b3c5e372ac3f24e168ad68f",
+      "updated_at": "2026-11-06T12:54:42Z"
+    },
+    {
+      "number": 1814,
+      "title": "TopologicalMirrorSymmetryForHitchinSystems: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1814",
+      "head_sha": "cd94b28c13e99e2581ed292fe4f4b96d2f3fb830",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-16T22:41:47Z"
+    },
+    {
+      "number": 1815,
+      "title": "SmoothRepresentationsOfLocalGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1815",
+      "head_sha": "9228cb04b98fcf9be5c4512899d32d291fa3d55a",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:49:49Z"
+    },
+    {
+      "number": 1816,
+      "title": "AutomorphicCongruences: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1816",
+      "head_sha": "4291999733431da30324e98a9bff86bc03ea91a0",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-17T00:27:06Z"
+    },
+    {
+      "number": 1817,
+      "title": "GSp4NonregularModularityLifting: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1817",
+      "head_sha": "449f216bbb58ada716d813bc02dd4074ec5f3395",
+      "base_sha": "caf2a38ac547f6bba94aeb2b0ab091e821f40ae3",
+      "updated_at": "2026-11-16T22:41:53Z"
+    },
+    {
+      "number": 1818,
+      "title": "EtaleMassFormula: address post-merge reviews",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1818",
+      "head_sha": "f2619f9c30be4e4df8ba7b14a6659cf684afb02f",
+      "base_sha": "c9a16a043c3bf2321c63dff75e3f709466373528",
+      "updated_at": "2026-11-06T12:54:45Z"
+    },
+    {
+      "number": 1819,
+      "title": "MassFormula: point the Bhargava long-horizon item to EtaleMassFormula",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1819",
+      "head_sha": "834b8f09d2dbb8bd01f4dee300026ebb19447cea",
+      "base_sha": "c9a16a043c3bf2321c63dff75e3f709466373528",
+      "updated_at": "2026-11-06T12:54:48Z"
+    },
+    {
+      "number": 1820,
+      "title": "EtaleMassFormula: Layer 4, wreath products S_m ≀ S_n (Kedlaya, Wood)",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1820",
+      "head_sha": "b9fab3a767314a00e1d8d83120cedc31aa09cd62",
+      "base_sha": "c9a16a043c3bf2321c63dff75e3f709466373528",
+      "updated_at": "2026-11-06T14:21:28Z"
+    },
+    {
+      "number": 1821,
+      "title": "HeightsRationalPointsAndObstructionsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1821",
+      "head_sha": "653f2ec2047ceffe1228f210a33aab9a4f2b194d",
+      "base_sha": "d1f3b7d99363daf5d081f2ae281db689b516a0c2",
+      "updated_at": "2026-11-17T00:27:08Z"
+    },
+    {
+      "number": 1822,
+      "title": "AlgebraicModularFormsAndSerreWeightsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1822",
+      "head_sha": "e1209cb1f4ac128a39e430e34ee050da21eb2227",
+      "base_sha": "c9a16a043c3bf2321c63dff75e3f709466373528",
+      "updated_at": "2026-11-16T20:50:01Z"
+    },
+    {
+      "number": 1823,
+      "title": "AutomorphicBundlesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1823",
+      "head_sha": "40ebb0af2f054a5d3371c3771a8d4b3782a0a1bd",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:50:04Z"
+    },
+    {
+      "number": 1824,
+      "title": "AutomorphyLiftingBeyondTaylorWiles: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1824",
+      "head_sha": "6f46438eea4c44355dd53010132a77b555b41e13",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-16T22:41:58Z"
+    },
+    {
+      "number": 1825,
+      "title": "RelativeFarguesFontainePartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1825",
+      "head_sha": "7c931f363774b91b15e32c977ff3931ab9232ab5",
+      "base_sha": "d1f3b7d99363daf5d081f2ae281db689b516a0c2",
+      "updated_at": "2026-11-16T22:42:01Z"
+    },
+    {
+      "number": 1828,
+      "title": "SpringerResolutionAndCharacteristicCycles: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1828",
+      "head_sha": "906b9c79796c8bc8008db8c7fac151ce0f0ae68e",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T20:50:18Z"
+    },
+    {
+      "number": 1829,
+      "title": "TriangulineVarietyAndItsLocalModel: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1829",
+      "head_sha": "c1b3c10b2112d63ed5f63eafbd46fd5cc5554ca3",
+      "base_sha": "c639cfaac5fc81c20d0a068d430f2a4119e2ccd8",
+      "updated_at": "2026-11-16T22:42:03Z"
+    },
+    {
+      "number": 1830,
+      "title": "DiamondsAndVStacksPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1830",
+      "head_sha": "ab5949134e5b1e30c9b3c3c82c8efbe4f068c3ce",
+      "base_sha": "3b51055b32da85f548435c4abb76e29881106131",
+      "updated_at": "2026-11-16T20:50:23Z"
+    },
+    {
+      "number": 1831,
+      "title": "FunctionFieldArithmeticPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1831",
+      "head_sha": "8e083f0decbcfa19837cca7e2fdf141caa68e0ac",
+      "base_sha": "3b51055b32da85f548435c4abb76e29881106131",
+      "updated_at": "2026-11-16T22:42:06Z"
+    },
+    {
+      "number": 1832,
+      "title": "ExcursionOperatorsAndSpectralActionPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1832",
+      "head_sha": "e903735d3b76b7b542ff602ce0e926346e2d2035",
+      "base_sha": "6cb4f526dff88cf475fc68737e2f111d221766f9",
+      "updated_at": "2026-11-16T20:50:28Z"
+    },
+    {
+      "number": 1833,
+      "title": "ArakelovGeometryAndAbelianHeightsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1833",
+      "head_sha": "e2a7179235b19023945e971bb6c182b4842ee119",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-17T00:27:11Z"
+    },
+    {
+      "number": 1834,
+      "title": "QuadraticFormInvariantsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1834",
+      "head_sha": "b38ee3cc308434e831fd5f08940730a21db508dd",
+      "base_sha": "01daf250606d39997d2109d4ee56840547182064",
+      "updated_at": "2026-11-16T20:50:34Z"
+    },
+    {
+      "number": 1835,
+      "title": "SmallRamificationAndAbelianVarietyBaseCasesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1835",
+      "head_sha": "f08c564f371492a0623a9034d2fb6d756a03d9ce",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-17T00:27:14Z"
+    },
+    {
+      "number": 1836,
+      "title": "GeometricSatakeAndFusionPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1836",
+      "head_sha": "46b7eae3852f2a30a23f97b2c422f072b746a181",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:50:39Z"
+    },
+    {
+      "number": 1837,
+      "title": "GlobalGaloisDeformationsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1837",
+      "head_sha": "222567a4ca7f9c5f9fc679371fd218d6c6dfc60b",
+      "base_sha": "ea83ad870865bea13f14c7fd058637fc46812c0d",
+      "updated_at": "2026-11-16T22:42:11Z"
+    },
+    {
+      "number": 1839,
+      "title": "ProfiniteCohomologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1839",
+      "head_sha": "25edc242b722df88cbef66bf4326c4c1aa11c566",
+      "base_sha": "3b51055b32da85f548435c4abb76e29881106131",
+      "updated_at": "2026-11-16T09:58:00Z"
+    },
+    {
+      "number": 1840,
+      "title": "PurityForFlatCohomology: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1840",
+      "head_sha": "a825987a7981aa0f299fba09af1295f62805a6df",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T09:58:02Z"
+    },
+    {
+      "number": 1841,
+      "title": "StableReductionPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1841",
+      "head_sha": "771fcf106f1311529d6d4c12e98846ea9d77110a",
+      "base_sha": "c9dea9d10f196fafef0566c5ad7427e396306798",
+      "updated_at": "2026-11-17T00:27:16Z"
+    },
+    {
+      "number": 1842,
+      "title": "QuantitativeOrbitMethodAndMicrolocalAnalysisOnLieGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1842",
+      "head_sha": "72888dcb68f4173fea09a63f63afec10e3250048",
+      "base_sha": "69a3eff2479304469bc5a0f2a625b1af957fb801",
+      "updated_at": "2026-11-16T22:42:14Z"
+    },
+    {
+      "number": 1843,
+      "title": "FiniteFlatGroupsAndIntegralPadicHodgeTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1843",
+      "head_sha": "18defe26faefd039c158021a6cddc3f1be43bd81",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:50:49Z"
+    },
+    {
+      "number": 1844,
+      "title": "HeckeStacksAndLocalShtukasPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1844",
+      "head_sha": "754645e3b8e6305d2f50e3995449bdd64188709f",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:50:52Z"
+    },
+    {
+      "number": 1845,
+      "title": "GlobalShtukasAndFunctionFieldLanglandsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1845",
+      "head_sha": "7a9ddebfbd7c9844919d56d359624eecf534ce4c",
+      "base_sha": "623d55d1e31b36fc09ec623cfb7ec71fc0ddd535",
+      "updated_at": "2026-11-16T22:42:17Z"
+    },
+    {
+      "number": 1854,
+      "title": "BanachSpaceTheory, SelfAdjointSpectralTheory, MorseNovikov: cut two dependency loops on main",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1854",
+      "head_sha": "57ba01723422cf120aeba5f9dbbbccd2edcadbcd",
+      "base_sha": "2c2bcf5689afd4af528dad1f99a6a198091a3223",
+      "updated_at": "2026-11-12T10:05:03Z"
+    },
+    {
+      "number": 1926,
+      "title": "LocallyPresentableCategories: locally presentable categories, Gabriel–Ulmer duality and algebraic theories",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1926",
+      "head_sha": "a051ce976751e118c6bd5ccc64ee1f932f5e948e",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-15T11:14:56Z"
+    },
+    {
+      "number": 1927,
+      "title": "TotallyDistributiveTopoi: totally distributive topoi and the infinitary exactness of sets",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1927",
+      "head_sha": "d009274fff5d1bfe13864161d049564b295bffb1",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T07:28:26Z"
+    },
+    {
+      "number": 1929,
+      "title": "FiniteEquivalenceRelations: quotients by finite equivalence relations and their effectivity",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1929",
+      "head_sha": "26fb9cc70da00e613e8717b4ac2e47b308d97a07",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-16T09:17:03Z"
+    },
+    {
+      "number": 1930,
+      "title": "QuadraticFormsOverABase: quadratic forms over a base",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1930",
+      "head_sha": "f56e7d00c4d58d18e603088f877402c583589c53",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-17T06:27:37Z"
+    },
+    {
+      "number": 1944,
+      "title": "ExplicitNumberFields: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1944",
+      "head_sha": "5deaeb7c383c664a8cac31ff3ac90acc3aec4c89",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:50:57Z"
+    },
+    {
+      "number": 1946,
+      "title": "ExplicitMultiplicativeFunctions: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1946",
+      "head_sha": "1739d7fd33c60e8404b3bdd8338b224386daca8a",
+      "base_sha": "eaf17b10d9267c0e3cdd3b62dd5e8983e47c690d",
+      "updated_at": "2026-11-16T20:51:00Z"
+    },
+    {
+      "number": 1948,
+      "title": "ExplicitCharacterSumsAndSieves: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1948",
+      "head_sha": "ebf1dc855b80e21c0743682f5935f9af6dd0df4b",
+      "base_sha": "f8836c4819db2f7152828a53d8877ddf285cfdbf",
+      "updated_at": "2026-11-16T20:51:02Z"
+    },
+    {
+      "number": 1955,
+      "title": "Add a roadmap for Painlevé equations",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1955",
+      "head_sha": "693f9f75b0e209291cb1429da3d4af24986233e1",
+      "base_sha": "3b3f7ef66ca93105a9e784b2419cfd50e427a7e7",
+      "updated_at": "2026-11-17T03:06:29Z"
+    },
+    {
+      "number": 1987,
+      "title": "Special Functions: Bessel, cylinder, spherical Bessel and Kelvin functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1987",
+      "head_sha": "cdb084767ab8a1cc95d5eb0531b0d7887aa2ba0a",
+      "base_sha": "6ee1f204d1351e56653d1027ce33dc4be63adb25",
+      "updated_at": "2026-11-16T08:04:59Z"
+    },
+    {
+      "number": 1995,
+      "title": "Special Functions: Confluent Hypergeometric, Kummer and Whittaker functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1995",
+      "head_sha": "d2983b2244d7c2b84728b9e7dbb0bbd96eaf72f9",
+      "base_sha": "c58403cba85cf6e05f49866449fc84658dc4c248",
+      "updated_at": "2026-11-16T08:05:09Z"
+    },
+    {
+      "number": 1996,
+      "title": "roadmap: construct the Behrend–Fantechi virtual fundamental class",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1996",
+      "head_sha": "f5c3e22b3a2cdbc9fc64cc5ab00b2daed9d8fa55",
+      "base_sha": "5556a3ffece53f7bd68dbfd9cfc810190afc82cf",
+      "updated_at": "2026-11-16T14:52:14Z"
+    },
+    {
+      "number": 1997,
+      "title": "ClassifyingTopoi: classifying topoi of geometric theories",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1997",
+      "head_sha": "6309116aaaeb318c359ede048c1a94e7e584be12",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T09:18:16Z"
+    },
+    {
+      "number": 1998,
+      "title": "roadmap: develop algebraic Gromov-Witten theory and quantum cohomology",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/1998",
+      "head_sha": "2457b2a157106e117570b6057f6ddbaa5a0135cc",
+      "base_sha": "b67091a792d7d686065cf35598ca0545836753d2",
+      "updated_at": "2026-11-16T14:50:39Z"
+    },
+    {
+      "number": 2012,
+      "title": "CountableModelCounting: build the prototype on the native Tau Ceti declarations at the pin",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2012",
+      "head_sha": "b79bc76c702d014e47daf3c351561c2af883b28d",
+      "base_sha": "35884a8caccb882868e161b8cf032e979476ceeb",
+      "updated_at": "2026-11-17T04:39:27Z"
+    },
+    {
+      "number": 2026,
+      "title": "ArithmeticFuchsianGroups: arithmetic Fuchsian lattices, commensurators and isospectral covers",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2026",
+      "head_sha": "a0992d0a9ceffe25ebc34bf471af363c090caf39",
+      "base_sha": "42813dd297b26ca6a75c94c5cf362e99fede5b6b",
+      "updated_at": "2026-11-16T20:51:05Z"
+    },
+    {
+      "number": 2037,
+      "title": "CyclicHomologyLieHomologyAndQuasiFreeAlgebras: cyclic homology, Lie algebra homology of matrices and quasi-free algebras",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2037",
+      "head_sha": "dea0b52f200d1ac3e15839d827278e370dd8c1e5",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-16T09:35:45Z"
+    },
+    {
+      "number": 2038,
+      "title": "ThetaInvariantsOfEuclideanLattices: theta invariants of Euclidean lattices",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2038",
+      "head_sha": "043e385515f90175f922081c4481e70d7af8b227",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-15T20:56:47Z"
+    },
+    {
+      "number": 2112,
+      "title": "Add roadmap: equidistribution, three gaps and rhythm on the circle",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2112",
+      "head_sha": "6e18a2106dd343dabbac85c6d6f683d3bed83a20",
+      "base_sha": "1bea8354d7c77b3e3afa423857720cd687006140",
+      "updated_at": "2026-11-16T13:20:52Z"
+    },
+    {
+      "number": 2119,
+      "title": "doc: keep the QuadraticCharactersAndReduction supplier names of the pinned Tau Ceti",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2119",
+      "head_sha": "03057bda2d76a79d055ad439133fe625fcfed832",
+      "base_sha": "651d08225204b26a3ef0ce99599ae7c006dc734e",
+      "updated_at": "2026-11-10T10:48:54Z"
+    },
+    {
+      "number": 2121,
+      "title": "Special Functions: Legendre and related functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2121",
+      "head_sha": "acc222374904747267f50f870aed78daaed34528",
+      "base_sha": "641eaf3866fac3e357aaa586df38b26fb9a92849",
+      "updated_at": "2026-11-16T07:35:19Z"
+    },
+    {
+      "number": 2122,
+      "title": "Logarithmic pluricanonical forms and generic fiberwise nonvanishing",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2122",
+      "head_sha": "3d4fd6537ba73b3225b2bac42b305dedd58bec82",
+      "base_sha": "fd02c5bd5024d04522fb036abe0ea558d416625e",
+      "updated_at": "2026-11-11T12:23:09Z"
+    },
+    {
+      "number": 2127,
+      "title": "SmoothBundlesConnections: build Layer 1 on Tau Ceti's principal bundles",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2127",
+      "head_sha": "c022e59bb9b280b844147e3638c0ea3228f06efa",
+      "base_sha": "e0514d83a45a4a4f3be054a04b1b95f8c9c32040",
+      "updated_at": "2026-11-16T22:21:00Z"
+    },
+    {
+      "number": 2129,
+      "title": "Special Functions: Struve, Lommel, Anger-Weber functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2129",
+      "head_sha": "9961786ae3f29436d2b76a8de85e25644814d64f",
+      "base_sha": "8101f2c83e206c439d9d85d8a6127ba71a94c5af",
+      "updated_at": "2026-11-16T07:58:54Z"
+    },
+    {
+      "number": 2130,
+      "title": "GeometricFreyMazur: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2130",
+      "head_sha": "50d33893e61e037dea7af9d6cb810168cf5175fe",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T20:51:07Z"
+    },
+    {
+      "number": 2131,
+      "title": "ReductiveGroupsPartIII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2131",
+      "head_sha": "b10dfae25a93299f2bf6e004800661f18f349ac1",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T20:51:10Z"
+    },
+    {
+      "number": 2132,
+      "title": "FourierDeligneTransform: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2132",
+      "head_sha": "e1ab460e6052bb41a4b61eeeb39b56ba33ca9953",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T23:13:02Z"
+    },
+    {
+      "number": 2134,
+      "title": "QuasiregularMaps: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2134",
+      "head_sha": "a1b21d8e8a2d56c4d853b58e32437c88be5619f4",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T20:51:12Z"
+    },
+    {
+      "number": 2135,
+      "title": "PotentialAutomorphyInfrastructurePartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2135",
+      "head_sha": "053c9486219f67369012df87ac7160e79f78d0d5",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T22:42:20Z"
+    },
+    {
+      "number": 2136,
+      "title": "Special Functions: Generalized Hypergeometric (pFq) functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2136",
+      "head_sha": "89aa8774fbf5dd2e593983c99eed40f6997f5ca5",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T07:40:07Z"
+    },
+    {
+      "number": 2137,
+      "title": "GL2ModularityLiftingPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2137",
+      "head_sha": "fdda91633baef23fa0c8c8d60e1b0fc76294361b",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T22:42:23Z"
+    },
+    {
+      "number": 2138,
+      "title": "ExponentialSumsAndCircleMethodPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2138",
+      "head_sha": "7a34cafe432b935c9cef197b62f8d13fcc4c1563",
+      "base_sha": "4ec889e8f0480e2cdb21a524eb76e48215c9ad94",
+      "updated_at": "2026-11-16T20:51:21Z"
+    },
+    {
+      "number": 2166,
+      "title": "Special Functions: Appell's two-variable F functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2166",
+      "head_sha": "6bb671269963977f9c8f1dcd1f33291b2e210d0e",
+      "base_sha": "e66bb0cff62cbb52c9f804b0e1576ceb1f59cdbe",
+      "updated_at": "2026-11-16T07:37:18Z"
+    },
+    {
+      "number": 2185,
+      "title": "EllipticCurveModularityTotallyReal: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2185",
+      "head_sha": "97464eb715ec2ef900204a211ddda8d1a09d0177",
+      "base_sha": "1d9568bcb533dc0dc69d5f7e3ea3498da4035933",
+      "updated_at": "2026-11-16T22:42:25Z"
+    },
+    {
+      "number": 2191,
+      "title": "Special Functions: Gamma, Beta, Digamma and related functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2191",
+      "head_sha": "96a40442d0575fd044734406d110734ff33fdf7c",
+      "base_sha": "87f83a6120534dcd267e11c5df8541c0d18b5e05",
+      "updated_at": "2026-11-16T07:29:06Z"
+    },
+    {
+      "number": 2192,
+      "title": "Special Functions: Orthogonal Polynomials, General Theory",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2192",
+      "head_sha": "94e88bcd4f3deffe1a1ba2b5398b247315773a60",
+      "base_sha": "9f7c032adaf1b838e8183d63ff3cfa886d061cb3",
+      "updated_at": "2026-11-16T07:36:57Z"
+    },
+    {
+      "number": 2193,
+      "title": "Add exact penalties with a unit violation gap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2193",
+      "head_sha": "4729ee92b990d03dd8ac95608a38c17bc12af84c",
+      "base_sha": "fd99c4d9b80bdf41b27203be191e477d59c6e832",
+      "updated_at": "2026-11-13T21:08:33Z"
+    },
+    {
+      "number": 2205,
+      "title": "FreeGroupsAndLimitGroups: corrections found while formalising Layers 7, 9, 10 and 11, and a headline-only Suggested.lean",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2205",
+      "head_sha": "d31b59b085db7ac48df3de9037428a43719f33e8",
+      "base_sha": "33620f6d4e481df60985db445d1079373fe0ae73",
+      "updated_at": "2026-11-15T02:26:42Z"
+    },
+    {
+      "number": 2215,
+      "title": "Roadmap: finite boxed conic-union hulls",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2215",
+      "head_sha": "3edf06d41f58d62576d7d1c795929d3298fba256",
+      "base_sha": "216ac50624bd3360e714f87c642c16440ae69c1d",
+      "updated_at": "2026-11-13T21:09:09Z"
+    },
+    {
+      "number": 2221,
+      "title": "FreeGroupsAndLimitGroups: second batch of corrections from formalising Layers 6, 7, 10 and 11",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2221",
+      "head_sha": "283843376dcf58fac60d055d9712c58e93b0672b",
+      "base_sha": "4294b153f9520163f8d4181bd522d613847caf4f",
+      "updated_at": "2026-11-15T02:15:26Z"
+    },
+    {
+      "number": 2231,
+      "title": "Add classical ergodic theory, entropy and flows roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2231",
+      "head_sha": "e3c51083ea43388488e956e68be6597047e01cea",
+      "base_sha": "2c2bcf5689afd4af528dad1f99a6a198091a3223",
+      "updated_at": "2026-11-16T22:42:28Z"
+    },
+    {
+      "number": 2232,
+      "title": "Add semi-Riemannian foundations and Lorentzian causality roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2232",
+      "head_sha": "fc070ae89fe81d601d3161f4dbf5c5ca11a67503",
+      "base_sha": "2c2bcf5689afd4af528dad1f99a6a198091a3223",
+      "updated_at": "2026-11-16T20:51:29Z"
+    },
+    {
+      "number": 2246,
+      "title": "Add roadmap: linear symmetric hyperbolic systems",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2246",
+      "head_sha": "6a5cca35d6d05140eab79a0f3c511866fd2a9856",
+      "base_sha": "7342e8fdd66944f4b6774ca84fc3ba304b4f7299",
+      "updated_at": "2026-11-14T08:48:10Z"
+    },
+    {
+      "number": 2249,
+      "title": "Add roadmap BochnerSpaces",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2249",
+      "head_sha": "9bfecd1f39364ff3daa3c5972d89d85e94e7f6ef",
+      "base_sha": "7342e8fdd66944f4b6774ca84fc3ba304b4f7299",
+      "updated_at": "2026-11-16T05:22:45Z"
+    },
+    {
+      "number": 2252,
+      "title": "Special Functions: Jacobi and Riemann Theta functions",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2252",
+      "head_sha": "fabbceab46d96ef1a1ef9c10f5b39195e2e9dc29",
+      "base_sha": "7342e8fdd66944f4b6774ca84fc3ba304b4f7299",
+      "updated_at": "2026-11-16T08:24:28Z"
+    },
+    {
+      "number": 2256,
+      "title": "EndoscopicTransferAndUnitaryTraceComparisonPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2256",
+      "head_sha": "b6cbd63930104152a6e972c6efb60cfc047ff96e",
+      "base_sha": "42813dd297b26ca6a75c94c5cf362e99fede5b6b",
+      "updated_at": "2026-11-16T20:51:32Z"
+    },
+    {
+      "number": 2257,
+      "title": "PadicHodgeParametersInLocallyAnalyticRepresentations: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2257",
+      "head_sha": "c1ff1677b1822024faac916b0a3d98ff798c7f85",
+      "base_sha": "42813dd297b26ca6a75c94c5cf362e99fede5b6b",
+      "updated_at": "2026-11-16T22:42:30Z"
+    },
+    {
+      "number": 2258,
+      "title": "LocalFieldsRamificationPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2258",
+      "head_sha": "e55f3ba27f97b4e09a5073ce2393f69cf2a974fe",
+      "base_sha": "42813dd297b26ca6a75c94c5cf362e99fede5b6b",
+      "updated_at": "2026-11-16T09:58:59Z"
+    },
+    {
+      "number": 2259,
+      "title": "PerfectoidQuotientsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2259",
+      "head_sha": "c2b521ae08d891fa3a9a3a48397408bf42ecbc6c",
+      "base_sha": "42813dd297b26ca6a75c94c5cf362e99fede5b6b",
+      "updated_at": "2026-11-16T09:59:01Z"
+    },
+    {
+      "number": 2261,
+      "title": "MetaplecticAutomorphicFormsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2261",
+      "head_sha": "cb920a78c93283540aba08573d2f0f9a88ab3cca",
+      "base_sha": "1370c6f856f5b1f002ecdf8791483d2b7928f774",
+      "updated_at": "2026-11-16T20:51:37Z"
+    },
+    {
+      "number": 2262,
+      "title": "CompletedCohomologyAndLocalGlobalCompatibilityPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2262",
+      "head_sha": "14beba28be4e48194b4a213f79bad06e1620aa1a",
+      "base_sha": "1d2aa9a6014487264f188ca66ecba4c9544c3c77",
+      "updated_at": "2026-11-16T22:42:33Z"
+    },
+    {
+      "number": 2263,
+      "title": "InverseGaloisAndArithmeticFundamentalGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2263",
+      "head_sha": "ec8fcaccf14256842d6b597c923e29df5baf8eda",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T09:59:09Z"
+    },
+    {
+      "number": 2264,
+      "title": "VectorBundlesAndIsocrystalsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2264",
+      "head_sha": "d2f7530ee9fa81bd0bffc17068de1392fcf89802",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:51:44Z"
+    },
+    {
+      "number": 2265,
+      "title": "CrystallineCohomologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2265",
+      "head_sha": "edf9add8e33cdd4cc23784f18737324cb958b408",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:51:46Z"
+    },
+    {
+      "number": 2266,
+      "title": "MappingClassGroupsAndCanonicalRepresentations: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2266",
+      "head_sha": "e7141d346c2522f4a0b1cf61be84271357f154bb",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:51:49Z"
+    },
+    {
+      "number": 2267,
+      "title": "IntegralIwasawaTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2267",
+      "head_sha": "ca0b79d2f4a37d258bb4c203c7bd4419f7413522",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:51:51Z"
+    },
+    {
+      "number": 2268,
+      "title": "OrdinaryAutomorphicFormsAndModularityLiftingPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2268",
+      "head_sha": "1c1996f0a1a27be14e0a833dc43b51396d7f5456",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:35Z"
+    },
+    {
+      "number": 2269,
+      "title": "ModelCategoryTheory: roadmap family",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2269",
+      "head_sha": "2a6d75e99edc129575a268f0a49e5741cffe2654",
+      "base_sha": "4c88848775e565af9795bb7912c6a3555df92faf",
+      "updated_at": "2026-11-16T16:52:00Z"
+    },
+    {
+      "number": 2270,
+      "title": "InfinityCategoryTheory: roadmap family",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2270",
+      "head_sha": "a6d792879dcbf10fd3ed0ec1531909b1b704b030",
+      "base_sha": "4c88848775e565af9795bb7912c6a3555df92faf",
+      "updated_at": "2026-11-16T20:18:18Z"
+    },
+    {
+      "number": 2271,
+      "title": "GaloisActionOnEtaleCohomology: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2271",
+      "head_sha": "97717c2641bc13bf81c3bc641392f5c655550f1d",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:51:57Z"
+    },
+    {
+      "number": 2272,
+      "title": "SchemeAndStackFoundationsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2272",
+      "head_sha": "f517dd797a0e6c964e0e5270c9b71c351d01df97",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-17T06:28:17Z"
+    },
+    {
+      "number": 2273,
+      "title": "NonabelianLevelStructures: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2273",
+      "head_sha": "92f0a3b874a0d1472c6c890a90cd5f1a7b3fead8",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:38Z"
+    },
+    {
+      "number": 2276,
+      "title": "LogicAndDefinabilityInNumberTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2276",
+      "head_sha": "8761a1ca77e2b8b699ac380971ce7ce1f18a8653",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:05Z"
+    },
+    {
+      "number": 2277,
+      "title": "LieHighestWeightPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2277",
+      "head_sha": "c3043117dfa4f8006778ee9382c577d27d67c991",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:08Z"
+    },
+    {
+      "number": 2278,
+      "title": "LocalGaloisDeformationRingsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2278",
+      "head_sha": "83a2083e250c295e9808e35e5220ef84d947234a",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:40Z"
+    },
+    {
+      "number": 2279,
+      "title": "MixedHodgeModulesAndIrregularHodgeTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2279",
+      "head_sha": "55c249b8c9988c4faf3547a13151e3a320fe10c3",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:14Z"
+    },
+    {
+      "number": 2280,
+      "title": "PadicFamiliesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2280",
+      "head_sha": "9138f8ff471acbe2e39d2b655fc83d7b60651e50",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:16Z"
+    },
+    {
+      "number": 2281,
+      "title": "ModularIwasawaMainConjecturesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2281",
+      "head_sha": "6fc649216bc635dd97a8a5a2ba7a3fe14ff692db",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-17T00:27:19Z"
+    },
+    {
+      "number": 2282,
+      "title": "ModpRepresentationsOfGL2OverLocalFields: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2282",
+      "head_sha": "b7dde1d5a930ae81f3365a3e0e460182aeed4dda",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:46Z"
+    },
+    {
+      "number": 2283,
+      "title": "LocallyAnalyticDistributionsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2283",
+      "head_sha": "d658fa30d686c3e672fbcbc83dc035a41a435ebf",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T09:59:49Z"
+    },
+    {
+      "number": 2284,
+      "title": "LubinTateFormalModulesAndQuasiCanonicalLifts: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2284",
+      "head_sha": "3284d4930b8165acb5be904dc0cc48167b8ee06c",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:48Z"
+    },
+    {
+      "number": 2285,
+      "title": "LevelOneAutomorphicFormsForClassicalGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2285",
+      "head_sha": "bd09c5118597e014c7d3464b9e91a4daf7d7d266",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:51Z"
+    },
+    {
+      "number": 2286,
+      "title": "PerfectoidSpacesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2286",
+      "head_sha": "10927a462868f31501d10a81d3437ce90850ebec",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T09:59:57Z"
+    },
+    {
+      "number": 2287,
+      "title": "ProetaleCohomologyOfPAdicCurvesAndTowers: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2287",
+      "head_sha": "854686f62cbf2506f9f269c4d44955f7b771f8cf",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:54Z"
+    },
+    {
+      "number": 2288,
+      "title": "VStackSheavesAndLisseCategoriesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2288",
+      "head_sha": "8b713328b257af6e948a6e2a1cb830f0a0bac835",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:33Z"
+    },
+    {
+      "number": 2289,
+      "title": "KloostermanSheavesAndBesselIsocrystals: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2289",
+      "head_sha": "0f55f759ac828fffed7bcba7657d8ba65674b581",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:42:56Z"
+    },
+    {
+      "number": 2290,
+      "title": "NonordinaryCMSpecialValues: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2290",
+      "head_sha": "36742e667300f14c4af48f880484c0700139fd8e",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-17T00:27:22Z"
+    },
+    {
+      "number": 2291,
+      "title": "PotentialAutomorphyDworkMotivesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2291",
+      "head_sha": "860f8e929453f112719a5ec691489927e8317fd8",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T22:43:02Z"
+    },
+    {
+      "number": 2294,
+      "title": "LocallyAnalyticRepresentationsOfLocalGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2294",
+      "head_sha": "4bfb6db448aa7a0d2608f45754eaf5db6d2f67be",
+      "base_sha": "45f58dbecae1651c045f8ab24464aa3fecdd51b9",
+      "updated_at": "2026-11-16T20:52:45Z"
+    },
+    {
+      "number": 2295,
+      "title": "ProjectiveModulesOverPolynomialRings: Serre's problem and the Quillen–Suslin theorem",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2295",
+      "head_sha": "e1903e999d3377fc7d5adf927e5515557c694f32",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T09:23:41Z"
+    },
+    {
+      "number": 2296,
+      "title": "PosetHomotopyAndSubgroupComplexes: homotopy of posets, finite spaces and subgroup complexes",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2296",
+      "head_sha": "c665200211387dedb92c48cf68f67b8130a3415f",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-15T15:42:36Z"
+    },
+    {
+      "number": 2297,
+      "title": "SuperconnectionsAndMathaiQuillenForms: superconnections, Quillen's character forms and Mathai–Quillen forms",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2297",
+      "head_sha": "57e450e3dec381404d9e717f4e21f57bbe165b90",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T12:22:14Z"
+    },
+    {
+      "number": 2299,
+      "title": "feat: roadmap for doubly weak double categories and mates",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2299",
+      "head_sha": "5823e4f95cd2de4472cb664c62b72bbc500b1b97",
+      "base_sha": "5907be9ca9abda0213fa76f4345802711e619452",
+      "updated_at": "2026-11-16T15:34:20Z"
+    },
+    {
+      "number": 2300,
+      "title": "PadicDifferentialEquationsAndRigidCohomologyPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2300",
+      "head_sha": "1da98b69d02e03122e9c5394685c701d48689d45",
+      "base_sha": "e1cd6a5089db8179200d8379e1256c3f930cc4ff",
+      "updated_at": "2026-11-16T20:52:48Z"
+    },
+    {
+      "number": 2301,
+      "title": "KloostermanMomentsAndPotentialAutomorphy: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2301",
+      "head_sha": "954c2942f3f7d9dee7a7a8fe6e4b8a0e58b76f70",
+      "base_sha": "e1cd6a5089db8179200d8379e1256c3f930cc4ff",
+      "updated_at": "2026-11-16T22:43:04Z"
+    },
+    {
+      "number": 2307,
+      "title": "SpectralSequencesAndConvergencePartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2307",
+      "head_sha": "b05690b121cb8b636d89f51b98f08e916676aa33",
+      "base_sha": "e4250ce3ace7661d33695bf63052fdbe3793a7b6",
+      "updated_at": "2026-11-16T10:40:50Z"
+    },
+    {
+      "number": 2337,
+      "title": "ToposTheoreticBridges: Morita equivalence of small categories, invariants of presheaf topoi, bridges between sites and between theories",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2337",
+      "head_sha": "62e6753b8dc6d521220051d503597391bce94f99",
+      "base_sha": "276e711dbbcf1c8564e9e805fa81aa8c8ca49207",
+      "updated_at": "2026-11-17T05:47:13Z"
+    },
+    {
+      "number": 2338,
+      "title": "CohomologyOfGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2338",
+      "head_sha": "6447a96218f174df93c0b8c6b0c460dea63cb067",
+      "base_sha": "4d169a92dae6edd99e8992099740dc18b25e86ab",
+      "updated_at": "2026-11-16T22:43:07Z"
+    },
+    {
+      "number": 2339,
+      "title": "RibbonKnots: ribbon discs, ribbon concordance (Gordon's lemma, Agol's theorem), Lisca's theorem",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2339",
+      "head_sha": "de19ccf974ec74f5ebc4e0deaff35bd23f19cf85",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T06:45:37Z"
+    },
+    {
+      "number": 2342,
+      "title": "HigherHidaAndColemanTheory: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2342",
+      "head_sha": "b82e0be4a4f07e6beedd5875ac804da09146060b",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T20:52:57Z"
+    },
+    {
+      "number": 2343,
+      "title": "FinitenessAndDualityOfGroups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2343",
+      "head_sha": "b7910ae056de15476130bba6ed37f5a98cb52cb2",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T22:43:09Z"
+    },
+    {
+      "number": 2346,
+      "title": "StableMatching: Gale–Shapley, deferred acceptance, Conway's lattice, McVitie–Wilson, Roth's incentive theorems",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2346",
+      "head_sha": "d461ad2fbce04049213dad93cd18e719a9457f87",
+      "base_sha": "8ad4192c1c86b1aa96810457861a358852b50a62",
+      "updated_at": "2026-11-16T11:19:39Z"
+    },
+    {
+      "number": 2401,
+      "title": "ArithmeticLocallySymmetricSpacesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2401",
+      "head_sha": "1ef5333f87e7be3f07b08e2e00c946c2984cd497",
+      "base_sha": "1a19c9fca7bc487c987aded9aaaf7fd8b672e274",
+      "updated_at": "2026-11-16T20:53:03Z"
+    },
+    {
+      "number": 2410,
+      "title": "RefinedTraceMethodsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2410",
+      "head_sha": "4e9063f7686003bd53ad320f45f1c16477c236ad",
+      "base_sha": "d1f3b7d99363daf5d081f2ae281db689b516a0c2",
+      "updated_at": "2026-11-16T22:43:12Z"
+    },
+    {
+      "number": 2411,
+      "title": "ModularCharactersAndBlocksPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2411",
+      "head_sha": "0c072e1e2e13e67f39a85ed47dd6bfa0c46b7549",
+      "base_sha": "8c39af014a9fad0f0a783fb20f94cba53f2ad220",
+      "updated_at": "2026-11-16T20:53:09Z"
+    },
+    {
+      "number": 2412,
+      "title": "PadicHodgeTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2412",
+      "head_sha": "ff399b038d892508556148caf2d529fdb98170b6",
+      "base_sha": "19ff3decd82e88ad7ac48712ee799fb1244a40b8",
+      "updated_at": "2026-11-16T20:53:11Z"
+    },
+    {
+      "number": 2413,
+      "title": "NashBlowups: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2413",
+      "head_sha": "dd3e0e3f9b4c730750dd677aa984ee0053939a98",
+      "base_sha": "eb4a735b91b57a80ce1923eb88f7eba2a92ab87c",
+      "updated_at": "2026-11-16T04:06:24Z"
+    },
+    {
+      "number": 2418,
+      "title": "CountableStructureSpacesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2418",
+      "head_sha": "6279c845493c4510b92f0ffab50a7523b16dabd3",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:14Z"
+    },
+    {
+      "number": 2420,
+      "title": "GaussianIsoperimetryAndClusters: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2420",
+      "head_sha": "c490eeb6ddc894440a4aadc561eba4d97a28c4cc",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T03:18:11Z"
+    },
+    {
+      "number": 2421,
+      "title": "SchattenClassesAndSchurMultipliers: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2421",
+      "head_sha": "cc8b39de1e79e273cab879baca24ac5719cde07d",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:17Z"
+    },
+    {
+      "number": 2422,
+      "title": "DimerModelsAndLozengeTilings: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2422",
+      "head_sha": "72bfddb237ad291475da62697baab59a4ed4caf8",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T04:17:56Z"
+    },
+    {
+      "number": 2423,
+      "title": "Add SpectralSteepestDescent roadmap: polar factors, Newton–Schulz iterations and Muon",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2423",
+      "head_sha": "dce07ed628182cb6b162fa1af303357612bca65a",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T15:19:16Z"
+    },
+    {
+      "number": 2424,
+      "title": "SchrodingerOperatorsAndSpectralTypes: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2424",
+      "head_sha": "9710150a398959dfea5cca17ab2e8c6f2ef19e4a",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:19Z"
+    },
+    {
+      "number": 2425,
+      "title": "BallQuotientsAndComplexHyperbolicLattices: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2425",
+      "head_sha": "b8bc019a59561ef3248b634ef829b6f7f5406ee6",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:22Z"
+    },
+    {
+      "number": 2426,
+      "title": "Add RobustnessCertificates roadmap: Lipschitz margins, LipSDP and bound propagation",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2426",
+      "head_sha": "dfe018c945b11546fb7c5a82d35ec0780b15863f",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T03:59:27Z"
+    },
+    {
+      "number": 2427,
+      "title": "LieGroupsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2427",
+      "head_sha": "b34c9c629228b021b9c0ca9bdcb629dd12d5efcf",
+      "base_sha": "e213fddf84b4de172cf2706a346492eac2aef872",
+      "updated_at": "2026-11-16T11:02:43Z"
+    },
+    {
+      "number": 2428,
+      "title": "Add RandomizedSmoothing roadmap: Gaussian certified radii and exact binomial confidence bounds",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2428",
+      "head_sha": "3897f41307002407045ac35a8ee3f3201c2ba3f1",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T15:14:36Z"
+    },
+    {
+      "number": 2429,
+      "title": "StackPointsAndResidualGerbes: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2429",
+      "head_sha": "8ca9dfb39e86bb4673a5482cd3f02a88ba8f879c",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T06:18:06Z"
+    },
+    {
+      "number": 2430,
+      "title": "SurfaceGroupCharacterVarieties: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2430",
+      "head_sha": "f6c8f48208b620afc1c9ab1e4b49d0520cbf2d7b",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T22:43:15Z"
+    },
+    {
+      "number": 2431,
+      "title": "DynamicalDegreesOfRationalMaps: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2431",
+      "head_sha": "2635b0ca6e1a681433e2d0c30325b5560e042276",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-17T00:27:25Z"
+    },
+    {
+      "number": 2432,
+      "title": "ConstructiveFieldTheoryPhi4: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2432",
+      "head_sha": "cb89c6ff8179269c157ac582716c986a5098aa9d",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:31Z"
+    },
+    {
+      "number": 2433,
+      "title": "ArithmeticKTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2433",
+      "head_sha": "4b4c94caa7983414d2389a6db8c898293985162c",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T22:43:20Z"
+    },
+    {
+      "number": 2434,
+      "title": "ModularFormsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2434",
+      "head_sha": "cd38aeb3ca219166aced677599b5f220633eb4cb",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T20:53:37Z"
+    },
+    {
+      "number": 2435,
+      "title": "InertAnticyclotomicCMMainConjecture: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2435",
+      "head_sha": "09efa597cf1d253d6a982915be473a53a117c7ec",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-17T00:27:27Z"
+    },
+    {
+      "number": 2436,
+      "title": "HodgeClassesForJacquetLanglands: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2436",
+      "head_sha": "71a3489e6865d4d2bf947d5c66cdc117f2844912",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T22:43:25Z"
+    },
+    {
+      "number": 2437,
+      "title": "MotivicStructuresInModuliOfCurves: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2437",
+      "head_sha": "dbadd30fb5ba825e92631eac1c208d3c6cc8c051",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-17T00:27:30Z"
+    },
+    {
+      "number": 2438,
+      "title": "LogicAndDefinabilityInNumberTheoryPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2438",
+      "head_sha": "cbf44f45be56817b7969d50cdc902287d6978b0a",
+      "base_sha": "51d880d50291e6c158a0d5a98e915242c977d5ef",
+      "updated_at": "2026-11-16T22:43:30Z"
+    },
+    {
+      "number": 2439,
+      "title": "IgusaVarietiesAndTorsionConcentrationPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2439",
+      "head_sha": "744b2d97f9a4a4b32f3e6dcda0f83499d060ff92",
+      "base_sha": "d23c53cf63f6a78034a8b0c951617fcd301578a1",
+      "updated_at": "2026-11-16T20:53:51Z"
+    },
+    {
+      "number": 2440,
+      "title": "ComplexHessianEquations: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2440",
+      "head_sha": "f6e02cc15c1072302b4608e4a55217939f3d4ea8",
+      "base_sha": "9d0f6ecbbcb29a7ab900b8a8aa6547248b1ab54d",
+      "updated_at": "2026-11-16T08:18:04Z"
+    },
+    {
+      "number": 2441,
+      "title": "HyperbolicDynamicsAndThermodynamicFormalism: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2441",
+      "head_sha": "6cc594f78692a8db85435b7f0614ce13625f9727",
+      "base_sha": "4dc1e15b7938f9ae21ca7d196b05c63029bbf06f",
+      "updated_at": "2026-11-16T22:43:33Z"
+    },
+    {
+      "number": 2442,
+      "title": "CompressibleEulerEquations: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2442",
+      "head_sha": "59271f0dbc63b61a628deb87068cef7abe99446a",
+      "base_sha": "0f9f711d18e52e147f4cc0fb79caa07b61d5137d",
+      "updated_at": "2026-11-16T20:53:56Z"
+    },
+    {
+      "number": 2443,
+      "title": "Varifolds: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2443",
+      "head_sha": "2a4c6778145ad4d7ed2ee856a2a5d3cc3ba3badc",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-16T10:18:16Z"
+    },
+    {
+      "number": 2444,
+      "title": "DiracScatteringAndNonlinearFourierTransform: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2444",
+      "head_sha": "550224ea2356b727c7630e3f34e7cd44c6d7c6ca",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-16T20:53:59Z"
+    },
+    {
+      "number": 2445,
+      "title": "EllipticCurveModularityImaginaryQuadraticPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2445",
+      "head_sha": "8aabd7a2a9f5cb66cf31127210264c272d0ffda2",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-16T22:43:35Z"
+    },
+    {
+      "number": 2446,
+      "title": "VirtualFundamentalClassPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2446",
+      "head_sha": "a2da2be1163728ba50e030f12a95a6a8dd2d92fa",
+      "base_sha": "2b9ce2140e5c28a74b32ab60c49e4bb571a5217a",
+      "updated_at": "2026-11-17T00:27:33Z"
+    },
+    {
+      "number": 2447,
+      "title": "HochschildHomologyAndHKR: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2447",
+      "head_sha": "2c1724c235c07dbc0f3b846689d0b6a022e9713d",
+      "base_sha": "76aab68a676e3ca67afc9519579ebc774c6a42ed",
+      "updated_at": "2026-11-16T22:43:38Z"
+    },
+    {
+      "number": 2448,
+      "title": "HardSphereDynamicsAndKineticLimits: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2448",
+      "head_sha": "53720278c25a055aa69bde327b2afc89222a6b3f",
+      "base_sha": "ef3d21fcae5465951a30e0bfa54e1e5ce10b1b52",
+      "updated_at": "2026-11-16T22:43:40Z"
+    },
+    {
+      "number": 2449,
+      "title": "ModularityAndLanglandsExtensionsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2449",
+      "head_sha": "5ea26252deb1bb6eaa226fac3bfae3b9222c6290",
+      "base_sha": "ef3d21fcae5465951a30e0bfa54e1e5ce10b1b52",
+      "updated_at": "2026-11-16T22:43:43Z"
+    },
+    {
+      "number": 2450,
+      "title": "QuasicoherentSheavesOnPrestacks: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2450",
+      "head_sha": "6e816c2ec8cfba54276c3f42908791469b79efa1",
+      "base_sha": "ef3d21fcae5465951a30e0bfa54e1e5ce10b1b52",
+      "updated_at": "2026-11-16T20:54:16Z"
+    },
+    {
+      "number": 2451,
+      "title": "RiemannianManifoldsWithConvexBoundary: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2451",
+      "head_sha": "689d6f5a19c72869b211f90513cbf927f1590996",
+      "base_sha": "d68af47405f95004614e1c9c4bd6b71db7e4796d",
+      "updated_at": "2026-11-16T11:02:53Z"
+    },
+    {
+      "number": 2453,
+      "title": "PELModuliPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2453",
+      "head_sha": "8a49f22c0647a84e57009e88e2cf77b4ae6bc18e",
+      "base_sha": "9e3a5b84297e76b7405cc102096132ca3a379e07",
+      "updated_at": "2026-11-16T20:54:19Z"
+    },
+    {
+      "number": 2454,
+      "title": "ZagierConjecturePolylogarithms: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2454",
+      "head_sha": "e43c93c9286e1fa3be32bf04e2bb26797583f982",
+      "base_sha": "9e3a5b84297e76b7405cc102096132ca3a379e07",
+      "updated_at": "2026-11-17T00:27:36Z"
+    },
+    {
+      "number": 2455,
+      "title": "PadicLocalLanglandsForGL2QpPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2455",
+      "head_sha": "925fea9068dec6a58a96fa1f6322e48fefae583a",
+      "base_sha": "5ff4294b1234426b2ac0236b3688580c6f89a611",
+      "updated_at": "2026-11-16T22:43:48Z"
+    },
+    {
+      "number": 2456,
+      "title": "RationalAnalyticPrismatization: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2456",
+      "head_sha": "1d7a78e9b3c2c26ef5ddb2bd7b4f40d5b86c238e",
+      "base_sha": "5ff4294b1234426b2ac0236b3688580c6f89a611",
+      "updated_at": "2026-11-16T22:43:51Z"
+    },
+    {
+      "number": 2457,
+      "title": "GrossZagierAndArithmeticHeightsPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2457",
+      "head_sha": "28467a87884f4f58bd2914a25ca3553b5f4c3474",
+      "base_sha": "e213fddf84b4de172cf2706a346492eac2aef872",
+      "updated_at": "2026-11-16T22:43:54Z"
+    },
+    {
+      "number": 2458,
+      "title": "LocalLanglandsCorrespondenceForG2: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2458",
+      "head_sha": "0d0914b9d82e506e846a84f5b84c8a6455fe7232",
+      "base_sha": "e213fddf84b4de172cf2706a346492eac2aef872",
+      "updated_at": "2026-11-16T22:43:56Z"
+    },
+    {
+      "number": 2459,
+      "title": "MotivesAndAlgebraicCyclesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2459",
+      "head_sha": "d54ace298c6e5e4c7e682e1db55f217ee5d4e215",
+      "base_sha": "2798a7fcde077e36d1ea48a2dae738865c4ce54d",
+      "updated_at": "2026-11-16T22:43:59Z"
+    },
+    {
+      "number": 2461,
+      "title": "MordellLawrenceVenkateshPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2461",
+      "head_sha": "460dec4e81903258e9e3286236e1f7e71ef76ce9",
+      "base_sha": "bf232a2568483cf2b23c2bb869a42b3d9441f335",
+      "updated_at": "2026-11-17T00:27:39Z"
+    },
+    {
+      "number": 2462,
+      "title": "RealSurfacePeriodIndex: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2462",
+      "head_sha": "3acc88c22cdbba7e8d6a6a6d197b58b13449eece",
+      "base_sha": "ad0502eda36a39827b922d62f5d2a04042c3de2c",
+      "updated_at": "2026-11-17T00:27:41Z"
+    },
+    {
+      "number": 2463,
+      "title": "ShimuraVarietiesPartII: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2463",
+      "head_sha": "25f63cbf94ec0ef078d4587c72a88a6f9b518870",
+      "base_sha": "2fd8d4f949cbfef938948e6e4196a25606b69442",
+      "updated_at": "2026-11-16T22:44:04Z"
+    },
+    {
+      "number": 2464,
+      "title": "TracesOnCStarAlgebras: roadmap",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2464",
+      "head_sha": "ce1fbe9c0b264051e88f1e046add1f9bc4f0760c",
+      "base_sha": "45c7978e3bc0333ca3cd21e734e345b13751fd99",
+      "updated_at": "2026-11-16T23:54:07Z"
+    },
+    {
+      "number": 2465,
+      "title": "FunctorOfPoints: affine test sites and scheme comparisons",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2465",
+      "head_sha": "21835185656483cb06595b68e05884e7b6b6addd",
+      "base_sha": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "updated_at": "2026-11-17T06:02:52Z"
+    },
+    {
+      "number": 2466,
+      "title": "SemiringSchemes: congruence geometry and scheme comparisons",
+      "state": "open",
+      "draft": false,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2466",
+      "head_sha": "04744a3015dbef7f9b51eff7ba8b1f30e0cf01b2",
+      "base_sha": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "updated_at": "2026-11-17T06:27:54Z"
+    },
+    {
+      "number": 2467,
+      "title": "BoltzmannGradLimitAndLanford: the Boltzmann–Grad limit and Lanford's theorem",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/pull/2467",
+      "head_sha": "6b413f7b36805d2b2c4b8678667c531ddd8da05a",
+      "base_sha": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "updated_at": "2026-11-17T06:28:05Z"
+    }
+  ],
+  "merged_transition_evidence": "open-pr-merged-during-audit.json",
+  "updated_inventory": "open-pr-inventory.json",
+  "updated_index": "open-pr-readme-index.json",
+  "main_sha": "4b6909559eb5e50a1cc8b86522723fb6e9db69bf"
+}

@@ -6,7 +6,8 @@ This records read-only inspection of the pinned sources. It does not report succ
 
 | Repository | Commit |
 | --- | --- |
-| TauCetiRoadmap | `c6ef576569501d342dec5a31a9938c9549dc6a00` |
+| TauCetiRoadmap, initial main | `c6ef576569501d342dec5a31a9938c9549dc6a00` |
+| TauCetiRoadmap, final main; relevant suppliers unchanged | `4b6909559eb5e50a1cc8b86522723fb6e9db69bf` |
 | TauCetiRoadmapWorker | `162470c202cff60e47b8d3339f2d609a6bb40d45` |
 | TauCeti | `2fd255d997f47c0b5d834ee416c7015d55444ce5` |
 | Mathlib | `1b1ccf4b088b32fa3f23f2de1127433254a81e1e` |
@@ -61,9 +62,11 @@ These are Git blob identities at the TauCeti pin, independent of local line endi
 
 Full pinned TauCeti and Mathlib source searches for quantum-affine/quantum-loop, Drinfeld-polynomial, normalized/renormalized R-matrix, and monoidal-categorification declarations found no such native carriers. TauCeti's `QuantumGroups` directory contains `QuantumInteger` and `UqSl2` implementations. This is evidence for keeping unavailable affine headlines in prose rather than inventing substitute carriers in Suggested.lean; it is not a claim that every supporting general algebra theorem is missing.
 
-On the roadmap main snapshot, `QuantumEnvelopingAlgebras` §§1.0–1.5 and §2.1 supply the generic symmetrizable algebra, Hopf structure and braid automorphisms. Its §2.2 is finite-type PBW. Its §5.3 first paragraph specifies the weight-idempotent modified algebra and Laurent form within the finite-type Frobenius layer; the affine extension and agreement with the existing finite-type construction must be stated explicitly. `KacMoody` §0 supplies the realization and lattices. `QuantumGroups` §8.5 owns the native generic finite Hopf module category. `ClusterAlgebras` §§1.2–1.3 and §2.3 supply the classical, noninverted-frozen and locally finite seed conventions. These are suppliers, not new construction targets.
+On the roadmap main snapshot, `QuantumEnvelopingAlgebras` §§1.0–1.5 and §2.1 supply the generic symmetrizable algebra, Hopf structure and braid automorphisms. Its §2.2 is finite-type PBW. Its §5.3 first paragraph specifies the weight-idempotent modified algebra and Laurent form within the finite-type Frobenius layer; it does not supply the all-symmetrizable extremal global-basis model. The revised roadmap consumes that model through the explicitly declared `extremal-global-basis-model` gap assigned to the planned KacMoodyPartII supplier. `KacMoody` §0 supplies the realization and lattices. `QuantumGroups` §8.5 owns the native generic finite Hopf module category. `ClusterAlgebras` §§1.2–1.3 and §2.3 supply the classical, noninverted-frozen and locally finite seed conventions. These are suppliers, not new construction targets.
 
-The “KacMoody, Part II” mentioned by KacMoody and QuantumEnvelopingAlgebras has no main/Completed folder at this snapshot. No general quantum global-basis or extremal-module construction target was found. An affine fundamental-module argument must therefore expose the precise local existence/classification theorem it needs; it cannot silently depend on that absent roadmap.
+The “KacMoody, Part II” mentioned by KacMoody and QuantumEnvelopingAlgebras has no main/Completed folder or supplying open PR in the audited snapshot. The earlier decision to own the general proof support locally is superseded by the author's explicit instruction to consume general theory. Five named gaps now specify precisely the required general strings, universal extremal module, regular global-basis model, Schubert strata and crystal tensor rule. A sixth gap asks QuantumEnvelopingAlgebras for the normalized completed quasi-R construction from its nilpotent pairing. Each has a matching `design/plan.json` entry. The review is conditional on those six contracts under the worker's declared-gap rules; their existence on main or implementation at the pins is not claimed.
+
+The revised primary commit is `42a40c74cd66cf8b51d8456e835db66fb392c6e8`. The final main comparison is `4b6909559eb5e50a1cc8b86522723fb6e9db69bf`; the relevant main supplier files and the pinned native libraries are unchanged from the original audit.
 
 ## Reproducible source searches
 

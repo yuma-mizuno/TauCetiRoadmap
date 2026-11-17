@@ -1,0 +1,27 @@
+{
+  "verified_on": "2026-11-17",
+  "main_sha": "4b6909559eb5e50a1cc8b86522723fb6e9db69bf",
+  "source": "GitHub get_pr_info and git show SHA256 comparison",
+  "pull_requests": [
+    {
+      "number": 872,
+      "state": "closed",
+      "merged": true,
+      "head_sha": "d046bf8610f616f21b60ef2bcfdbac271bd569ab",
+      "merge_commit_sha": "4597026c46fa3eaddd06bc79b30a45bf0ee2ce55",
+      "closed_at": "2026-11-17T07:01:13Z",
+      "merged_at": "2026-11-17T07:01:13Z"
+    },
+    {
+      "number": 879,
+      "state": "closed",
+      "merged": true,
+      "head_sha": "9a9505b7491afef2f15cfd425a52c223cafa68d5",
+      "merge_commit_sha": "3149fb25782e606fb1217fd76f2ec240a7b259ff",
+      "closed_at": "2026-11-17T07:01:13Z",
+      "merged_at": "2026-11-17T07:01:13Z"
+    }
+  ],
+  "merged_readme_and_suggested_match_initial_heads": true,
+  "relevant_main_supplier_changes": []
+}

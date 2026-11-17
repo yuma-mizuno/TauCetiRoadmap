@@ -1,0 +1,39 @@
+{
+  "method": "unmodified pinned worker overlaps.neighbours and overlaps.subject_neighbours",
+  "worker_sha": "162470c202cff60e47b8d3339f2d609a6bb40d45",
+  "main_sha": "4b6909559eb5e50a1cc8b86522723fb6e9db69bf",
+  "candidate_readme_sha256": "631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4",
+  "main_readme_count": 324,
+  "open_readme_count": 497,
+  "head_mismatches": [],
+  "missing_readmes": [],
+  "open_vocabulary": [],
+  "main_vocabulary": [
+    [
+      0.195,
+      "main",
+      "QuantumEnvelopingAlgebras"
+    ],
+    [
+      0.182,
+      "main",
+      "ClusterAlgebras"
+    ],
+    [
+      0.135,
+      "main",
+      "KacMoody"
+    ],
+    [
+      0.126,
+      "main",
+      "QuantumGroups"
+    ],
+    [
+      0.124,
+      "main",
+      "HopfologicalAlgebra"
+    ]
+  ],
+  "subject": []
+}

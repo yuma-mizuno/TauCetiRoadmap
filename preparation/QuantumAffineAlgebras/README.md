@@ -1,59 +1,78 @@
-# Quantum affine algebra roadmap — 準備・セルフレビュー記録
+# Quantum affine algebra roadmap — 修正版・セルフレビュー記録
 
-**ロードマップ本文は完成。Worker の基準に沿ったセルフレビューは accepted、修正残件 0 です。**
+**Quantum Affine Algebras を主題とする準備版の修正は完了です。レビュー判定は accepted、修正残件 0。ただし、下記 6 件の declared supplier gaps の供給を条件とします。**
 
-この記録が対象とするのは、yuma-mizuno の fork 上のコミット
-[`9f9a916`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/9f9a91680f97a98778950d2e202d1444d0b9d967) です。
-本家への PR は作成していません。これは準備段階のセルフレビューであり、Tau Ceti の公式 worker や maintainer の承認を意味しません。
+対象は fork の [`42a40c74`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/42a40c74cd66cf8b51d8456e835db66fb392c6e8) です。本家への PR、コメント、レビュー依頼は作成していません。これは著者の依頼によるセルフレビューで、公式 worker または maintainer の承認ではありません。
 
-## 本文
+## 修正済みの本文
 
-[QuantumAffineAlgebras/README.md](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/9f9a91680f97a98778950d2e202d1444d0b9d967/TauCetiRoadmap/QuantumAffineAlgebras/README.md)
+[QuantumAffineAlgebras/README.md](https://github.com/yuma-mizuno/TauCetiRoadmap/blob/42a40c74cd66cf8b51d8456e835db66fb392c6e8/TauCetiRoadmap/QuantumAffineAlgebras/README.md)
 
-一般の affine 型（twisted 型を含む）の quantum affine algebra から、Kashiwara–Kim–Oh–Park の ordinary cluster algebra に対する monoidal categorification の定義までを、9 層・28 ターゲット・95 件の Checks で構成しています。
+題名は **quantum affine algebras, finite-dimensional representations and monoidal categorification**。`QuantumEnvelopingAlgebras, Part II` という位置づけを改め、一般論を consume する独立したロードマップにしています。設計データの `parent` も `null` です。
 
-| 層 | 到達内容 |
+一般の string decomposition、universal extremal modules、crystal/global-basis theory、Schubert strata、tensor rule、completed quasi-R element は供給契約に移しました。Affine 側には、derived algebra と level zero、basic level-zero modules と period quotient、twisted を含む単純対象の分類、spectral R-matrices、exact Grothendieck ring、real-simple tensor theory、KKOP の ordinary monoidal categorification までを残しています。9 層・28 ターゲット・97 件の Checks です。
+
+## PR 中のロードマップの確認
+
+前回のレビューは open PR 全体の head を確認したものではありませんでした。今回は次の範囲を確認し、判定を更新しました。
+
+| 確認 | 結果 |
 | --- | --- |
-| 1 | Affine root datum、classical weights、derived algebra U′ と central quotient |
-| 2 | 有限次元 type-1 integrable modules、level zero、有限長・abelian・rigid tensor 構造 |
-| 3 | Spectral shifts、affinization、特殊化 |
-| 4 | Extremal modules、必要な crystal/global-basis 基礎、fundamental modules、単純対象の分類 |
-| 5 | Universal / normalized / renormalized R-matrices、denominator、非零特殊化 |
-| 6 | Exact K₀ の単純対象基底、格子特殊化、可換性、多項式環表示 |
-| 7 | Real/prime simple、strong commutation、head/socle、tensor simplicity、局所 exchange reality |
-| 8 | Serre tensor closure、fundamental spectral components と自然な部分圏 |
-| 9 | Monoidal seeds、categorical mutation、交換関係、KKOP の categorification predicate |
+| 最初の全件取得 | 453 open PR、499 README、494 Suggested.lean |
+| 最終更新（2026-11-17 07:02:57 UTC） | 451 open PR、1,400 変更ファイル、497 README、492 Suggested.lean |
+| 各 PR の head SHA | 全件取得・一致確認済み、missing/mismatch 0 |
+| main 側 | 324 ロードマップと比較 |
+| 数学的に近い候補 | 実際の所有範囲・仮定を精読し、重複・供給可否を判断 |
 
-既存の QuantumEnvelopingAlgebras、KacMoody、QuantumGroups、GrothendieckEulerForms、ClusterAlgebras を供給元として使い、所有範囲と正確な節を明記しています。A₁⁽¹⁾ の具体例では R 行列の極・rank drop と両向きの非分裂完全列を実計算し、単一の交換が成立することを確認しました。
+確認中に #872 と #879 が merge され、#117 の head が更新されたため最終データを取り直しています。全件列挙と本文検索に加え、関連候補の契約を精読した監査です。無関係な全ロードマップの数学を一行ずつ査読したという意味ではありません。
 
-## レビュー結果
+具体的には #2363・#1125 の QuantumEnvelopingAlgebras と #1124 の KacMoody は merge 済みでした。main は一般の quantum integrable module／crystal theory を将来の KacMoody Part II に割り当てていますが、その具体的なフォルダまたは供給 PR は見つかりませんでした。また #1775 の格子還元定理は有限群の modular representation theory に限られるため、任意の代数上の §6.2 をそのまま供給するものではありません。
 
-全体の判定と根拠は [self-review.md](self-review.md)、機械可読の判定は [review.json](review.json) にあります。
+詳しい根拠は [open-pr-inventory.md](open-pr-inventory.md)、全件データは [open-pr-inventory.json](open-pr-inventory.json)、所有範囲の判定は [pr-ownership-review.md](pr-ownership-review.md) にあります。
 
-| 検証 | 結果・記録 |
+## 一般論の供給条件
+
+Worker の declared supplier gap 機構に従い、README と [design/plan.json](design/plan.json) に同じ slug・担当・必要な仮定・結論を記録しました。
+
+| 担当 | 必要な一般論 |
 | --- | --- |
-| 基礎部分の再レビュー | [foundations-review-final.md](foundations-review-final.md): P1/P2/P3 残件 0 |
-| R 行列・categorification 側の再レビュー | [endpoint-review-final.md](endpoint-review-final.md): 修正残件 0 |
-| 所有範囲・原典・構造・文章独立性 | [structure-review-final.md](structure-review-final.md): 修正残件 0 |
-| Worker の full gate | [gate-result.json](gate-result.json): build、依存関係、clean tree、変更範囲を含め全 counter 0 |
-| Lean 対象ビルド | [build-log.txt](build-log.txt)、[build-summary.md](build-summary.md): exit 0 |
-| A₁⁽¹⁾ の記号計算 | [endpoint-matrix-check.py](endpoint-matrix-check.py)、[出力](endpoint-matrix-check.txt): 39 assertions 成功 |
-| Native API の所在・仮定 | [native-api-locations.md](native-api-locations.md) |
-| 原典の版・取得元・hash | [sources.toml](sources.toml): 10 原典、manifest check 0 problems |
+| KacMoodyPartII | `integrable-string-decomposition` |
+| KacMoodyPartII | `universal-extremal-module` |
+| KacMoodyPartII | `extremal-global-basis-model` |
+| KacMoodyPartII | `crystal-schubert-strata` |
+| KacMoodyPartII | `crystal-tensor-rule` |
+| QuantumEnvelopingAlgebras | `completed-canonical-element` |
 
-初回レビューの指摘は [foundations-review.md](foundations-review.md) と [endpoint-review.md](endpoint-review.md) に残しています。引用位置の修正だけでなく、標準 affine node の仮定、string decomposition の添字範囲、crystal の有理体上の構成、R 行列の非単純な因子に対する補題などを修正した履歴が追えます。
+KacMoodyPartII は main の所有範囲で指定された将来の一般論の担当です。存在する PR や番号付き定理として扱っていません。Worker はこの形の明示的な供給条件付き acceptance を認めています。準備版の完成と、供給条件がすでに実装されたことは別です。
 
-`Suggested.lean` は、現在の pin に quantum affine の carrier が存在しないことを主定理ごとに記載した documentation-only module です。Worker の規約で認められる形であり、仮の carrier や自由な命題で定理を置き換えていません。ビルド成功は、この実際に置かれたファイルの検証です。予定された数学的定理を Lean で証明し終えたという意味ではありません。
+## 再レビュー・検証
 
-K91 は画像 PDF の該当ページを目視確認し、別途ローカルの Tesseract でも転記しました。Worker の全文 OCR 処理については、予期しない telemetry 通信が自動承認レビューに拒否されたため、完了したとは記録していません。原典の取得、hash、引用定理の内容の確認は完了しています。
+総合判定は [self-review.md](self-review.md)、機械可読の判定は [review.json](review.json) です。
 
-## 進捗コミット
+| 項目 | 結果・記録 |
+| --- | --- |
+| 基礎・一般論の境界・R 正規化 | [foundations-supplier-review.md](foundations-supplier-review.md): 残件 0、6 gap を条件に accepted |
+| PR 所有範囲・原典・文章独立性 | [pr-ownership-review.md](pr-ownership-review.md): 残件 0 |
+| 構造・供給契約・設計データ対応 | [structure-review-revision.md](structure-review-revision.md): 残件 0、worker verdict validator 問題 0 |
+| Worker の full gate | [gate-result.json](gate-result.json)、[gate-log.txt](gate-log.txt): build・依存関係・clean tree・変更範囲を含む全 counter 0 |
+| 設計データ | [design-plan-validation.json](design-plan-validation.json): 9 層・28 ターゲット・97 Checks・6 gap、問題 0 |
+| Open PR を含む近隣・依存解析 | [open-pr-neighbours.md](open-pr-neighbours.md): 324 main + 497 open-head README |
+| Quasi-R の符号・completion | [quasi-r-check.py](quasi-r-check.py)、[出力](quasi-r-check.txt): 6 個の symbolic matrix checks 成功 |
+| 既存の A₁⁽¹⁾ 交換例 | [endpoint-matrix-check.py](endpoint-matrix-check.py)、[出力](endpoint-matrix-check.txt): 前回の 39 assertions の対象部分を維持 |
+| Native API | [native-api-locations.md](native-api-locations.md) |
+| 原典 | [sources.toml](sources.toml): 10 原典、manifest check 問題 0 |
+
+今回の再レビューでは、Borel 全体と nilpotent pairing の違い、raw canonical tensor と normalized quasi-R の符号、K02 から KKOP への inverse-swapped completion、ambient crystal 上の star action、full P と Pcl、generator の rescaling に伴う bar/lattice transport も修正しています。
+
+`Suggested.lean` は実際の quantum affine carrier が pin にないことを主定理ごとに示した documentation-only module です。今回の full gate でその対象ビルドを通しています。予定された数学的定理の Lean 実装はこのロードマップの後続作業です。
+
+以前の [foundations-review-final.md](foundations-review-final.md)、[endpoint-review-final.md](endpoint-review-final.md)、[structure-review-final.md](structure-review-final.md) は、それぞれに記録された前版の hash に対する履歴です。変更のない箇所の根拠として残し、今回の修正箇所と PR 探索は新しい報告で検証しています。K91 の必要な scanned pages はローカル PDF の目視と standalone offline OCR で確認しており、以前拒否された全文 OCR wrapper は再実行していません。
+
+## 今回の進捗コミット
 
 | 段階 | Commit |
 | --- | --- |
-| 範囲・依存関係の骨格 | [`d3ac19d`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/d3ac19d0a6b41289ce54bce02b4a31050a4cee42) |
-| 9 層の本文と具体例 | [`cb11664`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/cb11664a62e69e0c1d51f0c238f96e4c3f056222) |
-| 基礎・R 行列・供給契約の修正 | [`ec40b35`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/ec40b352d1227f2dfafd3e1f68e9303a38e402ef) |
-| 標準 affine node の修正と数学レビュー完了 | [`9f9a916`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/9f9a91680f97a98778950d2e202d1444d0b9d967) |
+| 主題を quantum affine に修正 | [`23ca4927`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/23ca49278737c113ab7540d9015adc2de07a176f) |
+| 一般論の消費契約化・数学的修正 | [`42a40c74`](https://github.com/yuma-mizuno/TauCetiRoadmap/commit/42a40c74cd66cf8b51d8456e835db66fb392c6e8) |
 
-本文ブランチの変更は、ロードマップの 3 ファイルだけです。この準備記録は別ブランチに置いています。原論文の PDF、画像、抽出本文はリポジトリに含めていません。
+本文の変更はロードマップの 3 ファイルです。レビュー記録は `quantum-affine-algebras-review` ブランチにまとめています。原論文の PDF・画像・抽出本文や、全 PR の README コピーは commit していません。

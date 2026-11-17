@@ -1,0 +1,653 @@
+{
+  "baseline_commit": "9f9a91680f97a98778950d2e202d1444d0b9d967",
+  "readme": "TauCetiRoadmap/QuantumAffineAlgebras/README.md",
+  "counting_rule": "Count explicit research-source locator bundles and compare a reviewed git version.\n\nOne occurrence is a source ID followed by a section/equation/theorem/remark/\nintroduction locator. A bundle listing several results counts once. Repeated\nbundles count separately. Bibliography entries and unlocated mentions do not.\nThis is an inventory, not a mathematical source-verification substitute.",
+  "baseline": {
+    "sha256": "fed2f3c086c8140fd233a88f43563deea917c008353cfa9790eede61e0a16187",
+    "counts": {
+      "KKOP20": 25,
+      "K02": 15,
+      "AK97": 7,
+      "KKOP22": 7,
+      "CP95": 6,
+      "CP98": 4,
+      "K94": 3,
+      "KKKO15": 3,
+      "K91": 1,
+      "H10": 1
+    },
+    "total": 72,
+    "hits": [
+      {
+        "source": "KKOP20",
+        "line": 67
+      },
+      {
+        "source": "K02",
+        "line": 70
+      },
+      {
+        "source": "K02",
+        "line": 223
+      },
+      {
+        "source": "KKOP20",
+        "line": 223
+      },
+      {
+        "source": "K02",
+        "line": 241
+      },
+      {
+        "source": "KKOP22",
+        "line": 241
+      },
+      {
+        "source": "KKOP20",
+        "line": 279
+      },
+      {
+        "source": "KKOP20",
+        "line": 332
+      },
+      {
+        "source": "AK97",
+        "line": 332
+      },
+      {
+        "source": "AK97",
+        "line": 380
+      },
+      {
+        "source": "KKOP20",
+        "line": 408
+      },
+      {
+        "source": "KKOP20",
+        "line": 413
+      },
+      {
+        "source": "AK97",
+        "line": 458
+      },
+      {
+        "source": "KKOP20",
+        "line": 458
+      },
+      {
+        "source": "KKOP20",
+        "line": 486
+      },
+      {
+        "source": "K02",
+        "line": 486
+      },
+      {
+        "source": "K02",
+        "line": 541
+      },
+      {
+        "source": "K02",
+        "line": 587
+      },
+      {
+        "source": "K91",
+        "line": 594
+      },
+      {
+        "source": "K94",
+        "line": 606
+      },
+      {
+        "source": "K94",
+        "line": 609
+      },
+      {
+        "source": "K02",
+        "line": 610
+      },
+      {
+        "source": "K94",
+        "line": 617
+      },
+      {
+        "source": "K02",
+        "line": 626
+      },
+      {
+        "source": "K02",
+        "line": 674
+      },
+      {
+        "source": "K02",
+        "line": 677
+      },
+      {
+        "source": "K02",
+        "line": 681
+      },
+      {
+        "source": "AK97",
+        "line": 681
+      },
+      {
+        "source": "K02",
+        "line": 689
+      },
+      {
+        "source": "AK97",
+        "line": 689
+      },
+      {
+        "source": "KKOP20",
+        "line": 690
+      },
+      {
+        "source": "AK97",
+        "line": 722
+      },
+      {
+        "source": "CP95",
+        "line": 722
+      },
+      {
+        "source": "CP98",
+        "line": 723
+      },
+      {
+        "source": "KKOP20",
+        "line": 723
+      },
+      {
+        "source": "AK97",
+        "line": 724
+      },
+      {
+        "source": "CP95",
+        "line": 730
+      },
+      {
+        "source": "CP98",
+        "line": 731
+      },
+      {
+        "source": "CP95",
+        "line": 735
+      },
+      {
+        "source": "CP98",
+        "line": 735
+      },
+      {
+        "source": "KKOP22",
+        "line": 736
+      },
+      {
+        "source": "K02",
+        "line": 790
+      },
+      {
+        "source": "KKOP20",
+        "line": 790
+      },
+      {
+        "source": "K02",
+        "line": 822
+      },
+      {
+        "source": "KKOP20",
+        "line": 823
+      },
+      {
+        "source": "KKOP20",
+        "line": 863
+      },
+      {
+        "source": "KKOP20",
+        "line": 886
+      },
+      {
+        "source": "KKOP20",
+        "line": 1013
+      },
+      {
+        "source": "CP95",
+        "line": 1050
+      },
+      {
+        "source": "CP98",
+        "line": 1051
+      },
+      {
+        "source": "KKOP20",
+        "line": 1092
+      },
+      {
+        "source": "K02",
+        "line": 1098
+      },
+      {
+        "source": "KKOP20",
+        "line": 1098
+      },
+      {
+        "source": "KKKO15",
+        "line": 1128
+      },
+      {
+        "source": "KKOP20",
+        "line": 1129
+      },
+      {
+        "source": "KKKO15",
+        "line": 1138
+      },
+      {
+        "source": "KKKO15",
+        "line": 1142
+      },
+      {
+        "source": "H10",
+        "line": 1168
+      },
+      {
+        "source": "KKOP20",
+        "line": 1168
+      },
+      {
+        "source": "KKOP20",
+        "line": 1196
+      },
+      {
+        "source": "KKOP20",
+        "line": 1240
+      },
+      {
+        "source": "KKOP22",
+        "line": 1240
+      },
+      {
+        "source": "KKOP22",
+        "line": 1264
+      },
+      {
+        "source": "KKOP22",
+        "line": 1277
+      },
+      {
+        "source": "KKOP20",
+        "line": 1328
+      },
+      {
+        "source": "KKOP22",
+        "line": 1328
+      },
+      {
+        "source": "KKOP20",
+        "line": 1371
+      },
+      {
+        "source": "KKOP20",
+        "line": 1374
+      },
+      {
+        "source": "KKOP22",
+        "line": 1414
+      },
+      {
+        "source": "KKOP20",
+        "line": 1439
+      },
+      {
+        "source": "CP95",
+        "line": 1498
+      },
+      {
+        "source": "CP95",
+        "line": 1549
+      }
+    ]
+  },
+  "current": {
+    "sha256": "631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4",
+    "counts": {
+      "KKOP20": 26,
+      "K02": 20,
+      "AK97": 7,
+      "KKOP22": 7,
+      "CP95": 6,
+      "CP98": 4,
+      "K94": 1,
+      "KKKO15": 3,
+      "K91": 3,
+      "H10": 1
+    },
+    "total": 78,
+    "hits": [
+      {
+        "source": "KKOP20",
+        "line": 77
+      },
+      {
+        "source": "K02",
+        "line": 80
+      },
+      {
+        "source": "K02",
+        "line": 186
+      },
+      {
+        "source": "K91",
+        "line": 212
+      },
+      {
+        "source": "K02",
+        "line": 223
+      },
+      {
+        "source": "K02",
+        "line": 240
+      },
+      {
+        "source": "K91",
+        "line": 242
+      },
+      {
+        "source": "K94",
+        "line": 242
+      },
+      {
+        "source": "K02",
+        "line": 254
+      },
+      {
+        "source": "K91",
+        "line": 267
+      },
+      {
+        "source": "K02",
+        "line": 268
+      },
+      {
+        "source": "K02",
+        "line": 326
+      },
+      {
+        "source": "KKOP20",
+        "line": 326
+      },
+      {
+        "source": "K02",
+        "line": 344
+      },
+      {
+        "source": "KKOP22",
+        "line": 344
+      },
+      {
+        "source": "KKOP20",
+        "line": 382
+      },
+      {
+        "source": "KKOP20",
+        "line": 435
+      },
+      {
+        "source": "AK97",
+        "line": 435
+      },
+      {
+        "source": "AK97",
+        "line": 482
+      },
+      {
+        "source": "KKOP20",
+        "line": 510
+      },
+      {
+        "source": "KKOP20",
+        "line": 515
+      },
+      {
+        "source": "AK97",
+        "line": 561
+      },
+      {
+        "source": "KKOP20",
+        "line": 561
+      },
+      {
+        "source": "KKOP20",
+        "line": 589
+      },
+      {
+        "source": "K02",
+        "line": 589
+      },
+      {
+        "source": "K02",
+        "line": 634
+      },
+      {
+        "source": "K02",
+        "line": 677
+      },
+      {
+        "source": "K02",
+        "line": 685
+      },
+      {
+        "source": "K02",
+        "line": 732
+      },
+      {
+        "source": "K02",
+        "line": 736
+      },
+      {
+        "source": "K02",
+        "line": 740
+      },
+      {
+        "source": "AK97",
+        "line": 740
+      },
+      {
+        "source": "K02",
+        "line": 748
+      },
+      {
+        "source": "AK97",
+        "line": 748
+      },
+      {
+        "source": "KKOP20",
+        "line": 749
+      },
+      {
+        "source": "AK97",
+        "line": 782
+      },
+      {
+        "source": "CP95",
+        "line": 782
+      },
+      {
+        "source": "CP98",
+        "line": 783
+      },
+      {
+        "source": "KKOP20",
+        "line": 783
+      },
+      {
+        "source": "AK97",
+        "line": 784
+      },
+      {
+        "source": "CP95",
+        "line": 790
+      },
+      {
+        "source": "CP98",
+        "line": 791
+      },
+      {
+        "source": "CP95",
+        "line": 795
+      },
+      {
+        "source": "CP98",
+        "line": 795
+      },
+      {
+        "source": "KKOP22",
+        "line": 796
+      },
+      {
+        "source": "K02",
+        "line": 844
+      },
+      {
+        "source": "KKOP20",
+        "line": 844
+      },
+      {
+        "source": "K02",
+        "line": 857
+      },
+      {
+        "source": "KKOP20",
+        "line": 857
+      },
+      {
+        "source": "K02",
+        "line": 897
+      },
+      {
+        "source": "KKOP20",
+        "line": 898
+      },
+      {
+        "source": "KKOP20",
+        "line": 938
+      },
+      {
+        "source": "KKOP20",
+        "line": 961
+      },
+      {
+        "source": "KKOP20",
+        "line": 1089
+      },
+      {
+        "source": "CP95",
+        "line": 1126
+      },
+      {
+        "source": "CP98",
+        "line": 1127
+      },
+      {
+        "source": "KKOP20",
+        "line": 1168
+      },
+      {
+        "source": "K02",
+        "line": 1174
+      },
+      {
+        "source": "KKOP20",
+        "line": 1174
+      },
+      {
+        "source": "KKKO15",
+        "line": 1204
+      },
+      {
+        "source": "KKOP20",
+        "line": 1205
+      },
+      {
+        "source": "KKKO15",
+        "line": 1214
+      },
+      {
+        "source": "KKKO15",
+        "line": 1218
+      },
+      {
+        "source": "H10",
+        "line": 1244
+      },
+      {
+        "source": "KKOP20",
+        "line": 1244
+      },
+      {
+        "source": "KKOP20",
+        "line": 1272
+      },
+      {
+        "source": "KKOP20",
+        "line": 1316
+      },
+      {
+        "source": "KKOP22",
+        "line": 1316
+      },
+      {
+        "source": "KKOP22",
+        "line": 1340
+      },
+      {
+        "source": "KKOP22",
+        "line": 1353
+      },
+      {
+        "source": "KKOP20",
+        "line": 1404
+      },
+      {
+        "source": "KKOP22",
+        "line": 1404
+      },
+      {
+        "source": "KKOP20",
+        "line": 1447
+      },
+      {
+        "source": "KKOP20",
+        "line": 1450
+      },
+      {
+        "source": "KKOP22",
+        "line": 1490
+      },
+      {
+        "source": "KKOP20",
+        "line": 1515
+      },
+      {
+        "source": "CP95",
+        "line": 1574
+      },
+      {
+        "source": "CP95",
+        "line": 1625
+      }
+    ]
+  },
+  "delta": {
+    "KKOP20": 1,
+    "K02": 5,
+    "AK97": 0,
+    "KKOP22": 0,
+    "CP95": 0,
+    "CP98": 0,
+    "K94": -2,
+    "KKKO15": 0,
+    "K91": 2,
+    "H10": 0
+  }
+}

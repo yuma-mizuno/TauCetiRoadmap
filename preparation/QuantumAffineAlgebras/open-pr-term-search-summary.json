@@ -1,0 +1,240 @@
+{
+  "terms": {
+    "quantum enveloping or affine": "QuantumEnvelopingAlgebras|QuantumAffine|quantum\\s+(?:affine|enveloping)",
+    "crystal basis": "crystal\\s+bas(?:is|es)\\b|crystalBasis",
+    "global basis": "global\\s+bas(?:is|es)\\b|globalBasis",
+    "extremal module": "extremal\\s+(?:weight|module)|extremalModule",
+    "Kac-Moody": "KacMoody|Kac.Moody",
+    "R-matrix": "\\bR[-–]matr(?:ix|ices)\\b|\\bRMatrix\\b",
+    "cluster algebra": "cluster\\s+(?:algebra|monomial|seed)|ClusterAlgebras",
+    "monoidal categorification": "monoidal\\s+categorif|monoidalCategorification",
+    "simple-class basis": "simple.class\\s+basis|simpleClassBasis",
+    "lattice reduction": "stable\\s+lattice|Brauer.Nesbitt|lattice.{0,25}independen|independen.{0,25}lattice",
+    "Kashiwara": "Kashiwara"
+  },
+  "results": {
+    "quantum enveloping or affine": {
+      "matching_files": 1,
+      "matching_lines": 5,
+      "roadmaps": [
+        "HabiroNahmSeries"
+      ]
+    },
+    "crystal basis": {
+      "matching_files": 0,
+      "matching_lines": 0,
+      "roadmaps": []
+    },
+    "global basis": {
+      "matching_files": 12,
+      "matching_lines": 20,
+      "roadmaps": [
+        "AutomorphicPadicLFunctionsPartII",
+        "CMRankZeroConverse",
+        "ColemanIntegration",
+        "EisensteinIdealAndRationalTorsion",
+        "FiniteFlatGroupsAndIntegralPadicHodgeTheoryPartII",
+        "GanGrossPrasadUnitaryGroups",
+        "HabiroRings",
+        "NoncompactQuantumSymmetry",
+        "PadicDifferentialEquationsAndRigidCohomology",
+        "PadicDifferentialEquationsAndRigidCohomologyPartII",
+        "PadicFamilies",
+        "PrismaticCohomology"
+      ]
+    },
+    "extremal module": {
+      "matching_files": 3,
+      "matching_lines": 5,
+      "roadmaps": [
+        "GeometricSatakeAndFusion",
+        "GeometricSatakeAndFusionPartII",
+        "NoncompactQuantumSymmetry"
+      ]
+    },
+    "Kac-Moody": {
+      "matching_files": 4,
+      "matching_lines": 4,
+      "roadmaps": [
+        "LocallyAnalyticRepresentationsOfLocalGroups",
+        "RepresentationTheory"
+      ]
+    },
+    "R-matrix": {
+      "matching_files": 1,
+      "matching_lines": 1,
+      "roadmaps": [
+        "PadicHodgeRegulators"
+      ],
+      "interpretation": "One irrelevant occurrence means a matrix over a ring R, not an R-matrix intertwiner."
+    },
+    "cluster algebra": {
+      "matching_files": 1,
+      "matching_lines": 1,
+      "roadmaps": [
+        "ToposTheoreticBridges"
+      ]
+    },
+    "monoidal categorification": {
+      "matching_files": 0,
+      "matching_lines": 0,
+      "roadmaps": []
+    },
+    "simple-class basis": {
+      "matching_files": 1,
+      "matching_lines": 3,
+      "roadmaps": [
+        "ModularCharactersAndBlocks"
+      ]
+    },
+    "lattice reduction": {
+      "matching_files": 133,
+      "matching_lines": 517,
+      "roadmaps": [
+        "AInfCohomology",
+        "AbelianSchemesAndArithmeticModuliPartII",
+        "AbelianVarietiesOverFiniteFields",
+        "AdmissiblePairsAndPadicHodgeStructures",
+        "AlgebraicModularFormsAndSerreWeights",
+        "AlgebraicModularFormsAndSerreWeightsPartII",
+        "ArithmeticLocallySymmetricSpacesPartII",
+        "ArithmeticStatisticsPartI",
+        "ArithmeticStatisticsPartII",
+        "ArtinRepresentations",
+        "AutomorphicBundles",
+        "AutomorphicBundlesPartII",
+        "AutomorphicCongruences",
+        "AutomorphicGaloisRepresentations",
+        "AutomorphicGaloisRepresentationsPartII",
+        "AutomorphicSpectralTheoryPartII",
+        "AutomorphyLiftingBeyondTaylorWiles",
+        "BallQuotientsAndComplexHyperbolicLattices",
+        "BianchiModularForms",
+        "CMRankZeroConverse",
+        "ClassicalAdicEtaleCohomology",
+        "ClassicalSerreModularity",
+        "CohomologyComparisons",
+        "CompactGroupsPartII",
+        "CompletedCohomologyAndLocalGlobalCompatibility",
+        "CompletedCohomologyAndLocalGlobalCompatibilityPartII",
+        "CompletedCohomologyPartII",
+        "ComplexMultiplicationAndExplicitReciprocityPartII",
+        "CongruenceSpectralGap",
+        "DeligneWeightsAndPurity",
+        "EisensteinIdealAndRationalTorsion",
+        "EllipticCurveModularity",
+        "EllipticCurveModularityImaginaryQuadratic",
+        "EllipticCurveModularityPartII",
+        "EllipticCurveModularityPartIIGL2TypeAbelianVarieties",
+        "EllipticCurveModularityTotallyReal",
+        "EllipticCurveModularityWild3Adic",
+        "EllipticCurvePeriodsAndModularParametrizations",
+        "EndoscopicTransferAndUnitaryTraceComparison",
+        "ErdosProgressionPowers",
+        "EtaleDualityAndPerverseSheaves",
+        "EulerSystemsAndKolyvaginSystems",
+        "FaltingsFinitenessAndIsogenyTheorems",
+        "FaltingsFinitenessAndIsogenyTheoremsPartII",
+        "FiniteFlatGroupsAndIntegralPadicHodgeTheory",
+        "FiniteFlatGroupsAndIntegralPadicHodgeTheoryPartII",
+        "FiniteGroupInvariants",
+        "FinitenessAndDualityOfGroups",
+        "FourierDeligneTransform",
+        "FunctionFieldArithmetic",
+        "GL2AutomorphicRepresentationsAndTransfer",
+        "GL2ModularityLifting",
+        "GSp4NonregularModularityLifting",
+        "GaloisActionOnEtaleCohomology",
+        "GaloisSectionsPadicPeriodMaps",
+        "GeometricSatakeAndFusion",
+        "GeometricSatakeAndFusionPartII",
+        "GeometricTopology",
+        "GeometryOfNumbersAndQuadraticArithmetic",
+        "GlobalGaloisDeformationsPartII",
+        "GlobalShtukasAndFunctionFieldLanglands",
+        "GrossZagierAndArithmeticHeights",
+        "HeckeStacksAndLocalShtukasPartII",
+        "HeegnerPointEulerSystems",
+        "HilbertModularVarietiesAndShimuraCurves",
+        "HilbertModularVarietiesAndShimuraCurvesPartII",
+        "HodgeClassesForJacquetLanglands",
+        "HodgeTateAndCanonicalSubgroups",
+        "IgusaVarietiesAndTorsionConcentration",
+        "IgusaVarietiesAndTorsionConcentrationPartII",
+        "IntegralIwasawaTheoryPartII",
+        "IntegralLattices",
+        "InverseGaloisAndArithmeticFundamentalGroups",
+        "K3Surfaces",
+        "KatoEulerSystems",
+        "LanglandsParameterStacks",
+        "LatticePackingsAndPerfectForms",
+        "LefschetzPencilsAndVanishingCycles",
+        "LocalGaloisDeformationRings",
+        "LocalGaloisDeformationRingsPartII",
+        "LocallyAnalyticDistributionsPartII",
+        "MappingClassGroupsAndCanonicalRepresentations",
+        "MetaplecticAutomorphicForms",
+        "MixedHodgeModulesAndIrregularHodgeTheory",
+        "ModpRepresentationsOfGL2OverLocalFields",
+        "ModularCharactersAndBlocks",
+        "ModularCharactersAndBlocksPartII",
+        "ModularCurvesPartII",
+        "ModularIwasawaMainConjectures",
+        "ModularIwasawaMainConjecturesPartII",
+        "ModularSymbolsPadicLFunctions",
+        "ModularityAndLanglandsExtensions",
+        "ModularityAndLanglandsExtensionsPartII",
+        "MordellLawrenceVenkatesh",
+        "NeronModelsAndSemistableAbelianVarieties",
+        "NonordinaryCMSpecialValues",
+        "OrdinaryAutomorphicFormsAndModularityLifting",
+        "OrdinaryAutomorphicFormsAndModularityLiftingPartII",
+        "PELModuli",
+        "PadicDifferentialEquationsAndRigidCohomology",
+        "PadicDifferentialEquationsAndRigidCohomologyPartII",
+        "PadicFamilies",
+        "PadicHodgeRegulators",
+        "PadicHodgeTheory",
+        "PadicLocalLanglandsForGL2QpPartII",
+        "PerfectoidShimuraVarieties",
+        "PeriodsAndSpecialValues",
+        "PotentialAutomorphyDworkMotivesPartII",
+        "PotentialAutomorphyInfrastructure",
+        "PotentialAutomorphyInfrastructurePartII",
+        "PotentialModularityAndCompatibleSystems",
+        "PrismaticCohomologyPartIII",
+        "ProetaleCohomologyOfPAdicCurvesAndTowers",
+        "QuaternionArithmetic",
+        "RankOneConverse",
+        "RelativeFarguesFontaine",
+        "SelmerIwasawaCohomology",
+        "SelmerIwasawaCohomologyPartII",
+        "SerreWeightAndLevelOptimisation",
+        "ShimuraCompactifications",
+        "ShimuraVarieties",
+        "ShimuraVarietiesPartII",
+        "SmallRamificationAndAbelianVarietyBaseCases",
+        "SmallRamificationAndAbelianVarietyBaseCasesPartII",
+        "SpringerResolutionAndCharacteristicCycles",
+        "TopologicalMirrorSymmetryForHitchinSystems",
+        "TorsionCohomologyInfrastructure",
+        "TriangulineVarietyAndItsLocalModel",
+        "WeightsInEtaleCohomology"
+      ]
+    },
+    "Kashiwara": {
+      "matching_files": 11,
+      "matching_lines": 48,
+      "roadmaps": [
+        "GrothendieckTopoi",
+        "GrothendieckUniverses",
+        "KloostermanMomentsAndPotentialAutomorphy",
+        "KloostermanSheavesAndBesselIsocrystals",
+        "MixedHodgeModulesAndIrregularHodgeTheory",
+        "ModularityAndLanglandsExtensions",
+        "SheafConvolutionOnAbelianVarieties",
+        "SpringerResolutionAndCharacteristicCycles"
+      ]
+    }
+  }
+}

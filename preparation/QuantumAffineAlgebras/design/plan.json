@@ -1,0 +1,1915 @@
+{
+  "roadmap": "QuantumAffineAlgebras",
+  "title": "quantum affine algebras, finite-dimensional representations and monoidal categorification",
+  "parent": null,
+  "summary": "Build the finite-dimensional integrable representation theory of\nquantum affine algebras of every affine type over a generic parameter field.\nStarting from the full-root-datum quantum enveloping algebra, construct the\nderived algebra and its level-zero representation category, spectral families,\nfundamental representations and the classification of simple objects. Construct\nrational R-matrices and their nonzero specializations, the commutative exact\nGrothendieck ring, and the tensor-product theory of real simple objects. The\nendpoint is the monoidal-categorification predicate of Kashiwara–Kim–Oh–Park\non these actual categories, together with monoidal seeds and categorical\nexchange relations. The principal theorems are level zero, fundamental-module\nexistence and classification, rational R-matrix existence, the simple-class\nbasis, Grothendieck-ring commutativity and polynomial presentation, the\nreal-simple head and socle theorem, pairwise tensor simplicity, local exchange\nreality, and the comparison of categorical and algebraic\nmutation.",
+  "baseline": {
+    "mathlib": "1b1ccf4b088b32fa3f23f2de1127433254a81e1e",
+    "tauceti": "2fd255d997f47c0b5d834ee416c7015d55444ce5"
+  },
+  "conventions": "The Cartan matrix is indecomposable and affine, with finite nonempty vertex set\nI, entries aᵢⱼ = ⟨hᵢ,αⱼ⟩, primitive positive marks aᵢ and comarks cᵢ, and a fixed\npositive integral symmetrizer dᵢ. Use the full affine weight datum with fundamental\nweights Λᵢ, primitive null root δ = Σᵢaᵢαᵢ, primitive central coroot\nc = Σᵢcᵢhᵢ, and classical weight lattice Pcl = P/ℤδ. The kernel and primitivity\nconditions making this quotient valid are part of §1.1. Choose the standard\naffine node 0 of KKOP20 §2.1: the remaining simple reflections generate the\nclassical Weyl group, a₀=1, and c₀=1 except that c₀=2 in A₂ₙ⁽²⁾, where\n0 is the long node. Put I₀=I∖{0}. The condition a₀=1 alone would not\nspecify an admissible node in every twisted type (K02 (4.15)).\n\nLet k be the algebraic closure of ℂ(q) inside the complex Puiseux-series field,\nwith q transcendental. Put qᵢ = q raised\nto dᵢ. In particular every quantum factorial used in a divided power is nonzero.\nSources that normalize root lengths by (δ,λ) = ⟨c,λ⟩ have symmetrizer cᵢ/aᵢ.\nTo compare with them, put r = aᵢdᵢ/cᵢ, independent of i, and replace their\nparameter by q raised to r, so that each qᵢ agrees. The spectral period mᵢ is\nspecified by a Weyl orbit, not identified with the symmetrizer dᵢ.\n\nAll modules are left modules and all unadorned tensor products are over k.\nRetain the supplier coproduct on Eᵢ,Fᵢ,Kᵢ. The source generators are\n`e_i = E_i K_i^-1`, `f_i = K_i F_i`, with the same Kᵢ; thus\n\n```\nΔ(e_i) = e_i ⊗ K_i^-1 + 1 ⊗ e_i,\nΔ(f_i) = f_i ⊗ 1 + K_i ⊗ f_i,\nS(e_i) = −e_i K_i,       S(f_i) = −K_i^-1 f_i.\n```\n\nWrite DₛM for the contragredient using S and DᵢM for that using S⁻¹.\nTheir evaluations have domains DₛM⊗M and M⊗DᵢM, respectively. These are the\nnative right and left duals of `FiniteHopfModuleCat`; KKOP calls the same\nobjects the left and right dual, respectively. Evaluation domains, rather than\nthese names, determine every comparison.\n\nA simple object is nonzero. Grothendieck groups impose short-exact-sequence\nrelations, including nonsplit ones. Frozen variables are not inverted.\nCluster monomials have nonnegative, finitely supported exponents, including at\nfrozen vertices. The final predicate uses the KKOP convention: a specified\nring isomorphism sends every cluster monomial to a real simple class. No\nconverse about all real simple objects is imposed.",
+  "scope_and_ownership": "The subject is quantum affine algebras and the finite-dimensional representation\ntheory needed for monoidal categorification. The general quantum enveloping\nalgebra is consumed from\n[QuantumEnvelopingAlgebras](../QuantumEnvelopingAlgebras/README.md). Its\n§§0.1, 1.0–1.5 and 2.1 own the datum, intrinsic quantum algebra, full torus,\nHopf structure, triangular decomposition, Serre presentation, Borel pairing and\nbraid operators.\nSpecialize those objects; do not introduce a second quantum\nenveloping algebra. The subalgebra without the degree direction, its central\nquotient, the finite-dimensional affine category, spectral families, normalized\nfundamental modules and R-matrices are owned here. Both untwisted and twisted\naffine types, including A₂ₙ⁽²⁾, are included.\n\n[QuantumGroups](../QuantumGroups/README.md) §8.5 owns the finite Hopf-module\ncategory and its tensor and duality structures.\n[GrothendieckEulerForms](../GrothendieckEulerForms/README.md) §§1.1–1.4 and 2.3\nown Grothendieck groups, bilinear descent and the abelian presentation. The additional simple-class\nbasis here applies to finite-dimensional modules over an algebra that need not\nbe Artinian; it is not the Artinian-ring theorem of its §4.1.\nThe local-lattice lemma in §6.2 applies to an arbitrary k-algebra and the\nspectral local ring k[z] localized at z=1; its exact-sequence proof is a\nsupporting target for affine Grothendieck-ring commutativity.\n[ClusterAlgebras](../ClusterAlgebras/README.md) §§1.1–1.4 and 2.3 own ordinary\ngeometric seeds, polynomial frozen coefficients, and locally finite classical\npatterns. No cluster-algebra construction is repeated here.\n\nGeneral type-1 integrable modules and crystal theory belong to KacMoodyPartII,\nthe quantum representation theory assigned by the scope of\n[KacMoody](../KacMoody/README.md) and QuantumEnvelopingAlgebras. The exact\ncontracts below specify the general inputs consumed here, including the required\nuniversal extremal modules and global-basis model. Layer 4 owns their\ncomparison with the derived affine algebra, the structure at basic level-zero\nweights and the periodic quotients giving fundamental modules. The completed\ncanonical element belongs to QuantumEnvelopingAlgebras; Layer 5 owns its\naffine spectral action and rational normalization. General integrable category O,\npath comparisons, integral forms and root-of-unity representation theory retain\ntheir own scopes. Drinfeld presentations and highest-ℓ-weight arguments may be used\ninside the proof of the classification target; a separate API for all their\ngenerators is not an exported endpoint of this roadmap.\n\nThe endpoint concerns an ordinary commutative cluster algebra. The quantum\nparameter of the algebra does not give the representation category a grading.\nGraded quiver Hecke categorification, quantum affine Schur–Weyl duality, numerical\nΛ-invariants, affine determinantial modules, and proofs that specified\nHernandez–Leclerc categories categorify specified cluster algebras are outside\nthis scope. Layer 9 states exactly the data and properties those applications\nmust supply.",
+  "layers": [
+    {
+      "key": "1",
+      "title": "affine lattices and the derived quantum algebra",
+      "targets": [
+        {
+          "id": "1.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Null directions, classical weights and basic weights",
+          "statement": "Specialize the supplied root datum to affine type. Construct the primitive\npositive vectors a and c satisfying Aa = 0 and cᵀA = 0, and prove that the\nroot-annihilating directions are exactly ℤδ and ℤc. Use the full weight datum\nwith P = (⊕ᵢℤΛᵢ) ⊕ ℤδ and its dual, so that Pcl identifies with the integral\nsimple-coroot eigenvalue lattice. Define level by ⟨c,λ⟩ and Pcl⁰ as its kernel.\nConstruct the finite classical Weyl group and the translation subgroup of the\naffine Weyl group (K02 §4.1, pp.11–17; KKOP20 §2.1, pp.5–6).\nFix the lifts by `α_i=Σ_j a_ji Λ_j+δ_i0 δ`; a₀=1 makes their null-root\nsum equal to δ. This pins the section used in spectral affinization.\n\nConstruct the rational symmetric form on Pcl⁰⊗ℚ characterized by\n`(cl(α_i),λ)=d_i⟨h_i,λ⟩` for i∈I₀, using the inverse finite Cartan\nmatrix. Prove nondegeneracy and Weyl invariance and verify the same formula\nfor i=0 using Σᵢaᵢcl(αᵢ)=0 and Σᵢcᵢ⟨hᵢ,λ⟩=0. This weight–weight\nform supplies the toral factor in §5.1; it is distinct from the supplied\nweight/coroot pairing.\n\nFor i∈I₀ put `π_i = (c_0 Λ_i − c_i Λ_0)/gcd(c_0,c_i)` and ϖᵢ = cl(πᵢ).\nProve these are a basis of Pcl⁰. Define a basic level-zero weight to be one whose\nclassical Weyl orbit contains a fundamental level-zero weight constructed using\na node 0∨ with c₀∨ = 1 and whose remaining reflections generate the classical\nWeyl group. Prove independence of this auxiliary node and that each πᵢ is basic.\nDefine mᵢ as the positive generator characterized by\n`Wπ_i ∩ (π_i + ℤδ) = π_i + m_iℤδ`, and prove its existence\n(K02 §5.2, (5.3), (5.6), pp.19–24; KKOP22 §2.2, pp.12–13).",
+          "hypotheses": [
+            "Finite nonempty indecomposable symmetrizable affine Cartan datum, full integral weight/coweight lattices, and the standard node specified in Conventions, including the A₂ₙ⁽²⁾ convention."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "§4.1, pp.11–17; §5.2, (5.3), (5.6), pp.19–24",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Specialize the supplied root datum to affine type. Construct the primitive\npositive vectors a and c satisfying Aa = 0 and cᵀA = 0, and prove that the\nroot-annihilating directions are exactly ℤδ and ℤc. Use the full weight datum\nwith P = (⊕ᵢℤΛᵢ) ⊕ ℤδ and its dual, so that Pcl identifies with the integral\nsimple-coroot eigenvalue lattice. Define level by ⟨c,λ⟩ and Pcl⁰ as its kernel.\nConstruct the finite classical Weyl group and the translation subgroup of the\naffine Weyl group (K02 §4.1, pp.11–17; KKOP20 §2.1, pp.5–6).\nFix the lifts by `α_i=Σ_j a_ji Λ_j+δ_i0 δ`; a₀=1 makes their null-root\nsum equal to δ. This pins the section used in spectral affinization.",
+            "For i∈I₀ put `π_i = (c_0 Λ_i − c_i Λ_0)/gcd(c_0,c_i)` and ϖᵢ = cl(πᵢ).\nProve these are a basis of Pcl⁰. Define a basic level-zero weight to be one whose\nclassical Weyl orbit contains a fundamental level-zero weight constructed using\na node 0∨ with c₀∨ = 1 and whose remaining reflections generate the classical\nWeyl group. Prove independence of this auxiliary node and that each πᵢ is basic.\nDefine mᵢ as the positive generator characterized by\n`Wπ_i ∩ (π_i + ℤδ) = π_i + m_iℤδ`, and prove its existence\n(K02 §5.2, (5.3), (5.6), pp.19–24; KKOP22 §2.2, pp.12–13)."
+          ],
+          "prerequisites": [
+            "roadmap:KacMoody §§0.1–0.3 and 2.1",
+            "mathlib:Module.reflection"
+          ],
+          "prerequisite_text": "KacMoody §§0.1–0.3 and 2.1; the supplied full lattice pairing.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the quotient map, its kernel, the weight/coroot pairing after quotient, and extensionality from all simple-coroot pairings;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the action of each simple reflection, the finite classical action and the translation formula, including its dependence on level;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the inclusion of Pcl⁰, its fundamental basis, and invariance of the basic condition and period under a Weyl change of representative."
+            }
+          ],
+          "tests": [
+            {
+              "name": "1.1-check-1",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾, a = c = (1,1), π₁ = Λ₁−Λ₀ and m₁ = 1; the class of δ is zero while δ is a nonzero element of P. With d₁=1 the classical form has `(ϖ₁,ϖ₁)=1/2`, since cl(α₁)=2ϖ₁."
+            },
+            {
+              "name": "1.1-check-2",
+              "kind": "non-example",
+              "statement": "In A₂⁽²⁾ with long node 0, `A = ((2,−1),(−4,2))`, a = (1,2), c = (2,1), π₁ = 2Λ₁−Λ₀, and s₁s₀π₁ = π₁+δ. Thus m₁ = 1. The expression Λ₁−Λ₀ has level −1 and cannot replace π₁."
+            },
+            {
+              "name": "1.1-check-3",
+              "kind": "non-example",
+              "statement": "In A₁⁽¹⁾, the nonidentity translation t=s₁s₀ satisfies `cl(tⁿΛ₀)=(1+2n)cl(Λ₀)−2n cl(Λ₁)`, so its iterates are distinct. On level zero, t fixes the classical class. Quotienting by c rather than δ would fail this comparison."
+            },
+            {
+              "name": "1.1-check-4",
+              "kind": "non-example",
+              "statement": "In D₄⁽³⁾ with marks (1,2,1) and comarks (1,2,3), the last node also has mark 1 but is not the allowed affine node. Choosing it instead would give the two proposed basis vectors (3,0,−1),(0,3,−2), which miss the level-zero vector (1,1,−1). The standard-node condition rules this out."
+            }
+          ],
+          "readme_section": "1.1"
+        },
+        {
+          "id": "1.2",
+          "kind": "construction",
+          "name": null,
+          "title": "Derived subalgebra and the level-zero quotient",
+          "statement": "Inside the supplied U define U′ as the subalgebra generated by Eᵢ,Fᵢ,Kᵢ and\nKᵢ⁻¹, for i∈I. Use triangular decomposition to identify its toral lattice as\nthe span of dᵢhᵢ and prove that the inclusion is injective. Restrict the Hopf\nstructure and prove that the antipode is bijective. The generator change in the\nConventions gives an isomorphism with the eᵢ,fᵢ presentation and the source\ncoproduct; it changes neither the underlying algebra nor its tensor theory\n(KKOP20 Definition 2.2 and (2.2), pp.6–7; QEA §§1.1–1.3a).\n\nThe central group-like element used here is `C = ∏_i K_i^(a_i)`.\nSince aᵢdᵢ = rcᵢ, it is q raised to rc in the full torus; it need not be the\nprimitive full-torus element q raised to c. Construct U⁰ = U′/(C−1) as a Hopf\nquotient. Prove its universal property and the equivalence between U⁰-modules\nand U′-modules on which C acts as 1. The center is retained in U′. The name\nquantum loop algebra refers to this central specialization with the stated\ntoral convention, not to a quotient that also kills the affine generators.",
+          "hypotheses": [
+            "The full generic quantum enveloping algebra of the supplied affine datum, with the stated symmetrizer and Hopf normalization."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Definition 2.2 and (2.2), pp.6–7",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Inside the supplied U define U′ as the subalgebra generated by Eᵢ,Fᵢ,Kᵢ and\nKᵢ⁻¹, for i∈I. Use triangular decomposition to identify its toral lattice as\nthe span of dᵢhᵢ and prove that the inclusion is injective. Restrict the Hopf\nstructure and prove that the antipode is bijective. The generator change in the\nConventions gives an isomorphism with the eᵢ,fᵢ presentation and the source\ncoproduct; it changes neither the underlying algebra nor its tensor theory\n(KKOP20 Definition 2.2 and (2.2), pp.6–7; QEA §§1.1–1.3a)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "roadmap:QuantumEnvelopingAlgebras §§1.1–1.3a",
+            "mathlib:Algebra.adjoin",
+            "mathlib:RingQuot",
+            "mathlib:ModuleCat.restrictScalars"
+          ],
+          "prerequisite_text": "§1.1; QuantumEnvelopingAlgebras §§1.1–1.3a for the algebra and Hopf\nstructure; native subalgebra and quotient APIs.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "restriction of scalars along U′→U and inflation along U′→U⁰, with identity, composition and the corresponding action formulas;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "coproduct, counit and both antipodes on every generator, and verification that the ideal generated by C−1 is a Hopf ideal;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "comparison with the supplier presentation and a generating-family extensionality principle for maps out of U′ and U⁰."
+            }
+          ],
+          "tests": [
+            {
+              "name": "1.2-check-1",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾, C = K₀K₁. In the module V(a) defined in the worked example, K₀ = K₁⁻¹, so C acts as 1 while e₀ is nonzero."
+            },
+            {
+              "name": "1.2-check-2",
+              "kind": "non-example",
+              "statement": "In A₂⁽²⁾ with d = (4,1), C = K₀K₁² = q raised to 2c; replacing it by K₀²K₁ would give a noncentral toral element."
+            },
+            {
+              "name": "1.2-check-3",
+              "kind": "compatibility",
+              "statement": "The generator adapter gives `Δ(E_i K_i^-1) = E_i K_i^-1 ⊗ K_i^-1 + 1 ⊗ E_i K_i^-1`. The unchanged choice eᵢ = Eᵢ gives a different coproduct."
+            }
+          ],
+          "readme_section": "1.2"
+        }
+      ],
+      "examples": "A₁⁽¹⁾ tests the surviving affine generator and the removed central level.\nA₂⁽²⁾ tests the separation of null-root marks, central comarks and symmetrizer.\nFinite-type Cartan matrices and an empty vertex set fail the affine hypotheses.",
+      "dependencies_text": "KacMoody §§0.1–0.3 and 2.1; QuantumEnvelopingAlgebras §§0.1 and 1.0–1.3a."
+    },
+    {
+      "key": "2",
+      "title": "finite-dimensional integrable modules",
+      "targets": [
+        {
+          "id": "2.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Type-1 weights and finite-dimensionality",
+          "statement": "For a U′-module M, define the λ-weight space by\n`K_i m = q_i^⟨h_i,λ⟩ m` for every i. Type 1 means that these subspaces, indexed\nby Pcl, form an internal direct sum equal to M. Integrability means, in addition,\nlocal nilpotence of every eᵢ and fᵢ. Define 𝒞 as the full subcategory of\n`TauCeti.FiniteHopfModuleCat k U′` with this property. Prove that for a\nfinite-dimensional type-1 module the local-nilpotence conditions follow from\nfinite weight support. This identifies the definition with KKOP's\nfinite-dimensional integrable category (KKOP20 §2.1, p.7; AK97 §1.1, pp.3–4).\n\nApply the supplied rank-one string decomposition to the i-restriction of M.\nProve that its highest-string vectors refine the integer Kᵢ-weights to\nPcl-weights and that the resulting finite strings give Weyl invariance of\nweight multiplicities. For a vector of weight λ the expression is\n`Σ_r f_i^(r)v_r`, with `r≥max(0,−⟨h_i,λ⟩)` and\n`v_r∈ker(e_i)∩M_(λ+r cl(α_i))`. This is an application to the derived\nalgebra and its quotient weight lattice; the rank-one decomposition and its\ndivided-power identities are consumed from\ngap:integrable-string-decomposition. For example, if eᵢv=0 and Kᵢv=qᵢⁿv,\nthen `e_i f_i^(r)v=[n−r+1]_i f_i^(r−1)v` for r≥1.",
+          "hypotheses": [
+            "A left U′-module; membership in 𝒞 additionally requires scalar finite dimension, the Pcl-indexed type-1 decomposition and integrability as stated."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "§2.1, p.7",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For a U′-module M, define the λ-weight space by\n`K_i m = q_i^⟨h_i,λ⟩ m` for every i. Type 1 means that these subspaces, indexed\nby Pcl, form an internal direct sum equal to M. Integrability means, in addition,\nlocal nilpotence of every eᵢ and fᵢ. Define 𝒞 as the full subcategory of\n`TauCeti.FiniteHopfModuleCat k U′` with this property. Prove that for a\nfinite-dimensional type-1 module the local-nilpotence conditions follow from\nfinite weight support. This identifies the definition with KKOP's\nfinite-dimensional integrable category (KKOP20 §2.1, p.7; AK97 §1.1, pp.3–4)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:1.2",
+            "roadmap:QuantumEnvelopingAlgebras §1.3a",
+            "tauceti:TauCeti.FiniteHopfModuleCat",
+            "mathlib:Submodule",
+            "mathlib:IsSimpleModule",
+            "gap:integrable-string-decomposition"
+          ],
+          "prerequisite_text": "Layer 1; the native finite-module category, internal direct sums and\nsubmodule APIs; QuantumEnvelopingAlgebras §1.3a for the rank-one relations;\ngap:integrable-string-decomposition from KacMoodyPartII.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "weight-space membership, uniqueness and finite support; morphisms preserve weights, and eᵢ,fᵢ shift them by cl(αᵢ),−cl(αᵢ);"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "closure under submodules, quotients, finite direct sums and isomorphisms;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the faithful exact forgetful maps and agreement of categorical simplicity with `IsSimpleModule` for the underlying U′-module."
+            }
+          ],
+          "tests": [
+            {
+              "name": "2.1-check-1",
+              "kind": "degenerate",
+              "statement": "The zero module has empty weight support and belongs to 𝒞, but is not simple; the unit has only weight 0 with multiplicity 1."
+            },
+            {
+              "name": "2.1-check-2",
+              "kind": "computation",
+              "statement": "V(a) in type A₁⁽¹⁾ has weights ϖ₁ and −ϖ₁, each of dimension 1, and e₁,f₁ each square to zero."
+            },
+            {
+              "name": "2.1-check-3",
+              "kind": "non-example",
+              "statement": "The one-dimensional representation with all Kᵢ = −1 and eᵢ = fᵢ = 0 satisfies the algebra relations but is not type 1: −1 is no integral power of a transcendental qᵢ."
+            },
+            {
+              "name": "2.1-check-4",
+              "kind": "computation",
+              "statement": "For a highest vector of i-weight 2, the r = 1 string coefficient is `[2]_i = q_i+q_i^-1`; for i-weight 0 it is 0. This detects ordinary integers substituted for quantum integers."
+            },
+            {
+              "name": "2.1-check-5",
+              "kind": "degenerate",
+              "statement": "In a rank-one highest-weight-2 module plus the unit, the lowest vector has i-weight −2 and its allowed string index is r=2. Allowing r=1 would add the invisible term fᵢ(1)=0 from the unit and destroy uniqueness."
+            }
+          ],
+          "readme_section": "2.1"
+        },
+        {
+          "id": "2.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "Level zero and finite length",
+          "statement": "Prove that every weight of every object of 𝒞 has level zero. Weyl invariance\nfrom §2.1 and the translation formula of §1.1 would otherwise give infinitely\nmany weights. Deduce that C acts as 1 and that inflation identifies 𝒞 with the\ntype-1 finite-dimensional integrable category of U⁰. The quotient comparison is\na conclusion, not an extra hypothesis (AK97 §1.2, p.5).\n\nProve finite length using scalar finite-dimensionality and the native\nNoetherian/Artinian tower theorems. Construct the abelian structure from kernels\nand cokernels inherited from modules; compute images, coimages and exact\nsequences through the forgetful functor. Prove essential smallness by replacing\na finite-dimensional carrier by k to a finite power and recording its action.\nA one-dimensional object of 𝒞 is the unit: the commutator relations force\nKᵢ² = 1, and type 1 forces Kᵢ = 1.",
+          "hypotheses": [
+            "An object of 𝒞; level zero and finite length are conclusions, not extra hypotheses."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "AK97",
+            "where": "§1.2, p.5",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Prove that every weight of every object of 𝒞 has level zero. Weyl invariance\nfrom §2.1 and the translation formula of §1.1 would otherwise give infinitely\nmany weights. Deduce that C acts as 1 and that inflation identifies 𝒞 with the\ntype-1 finite-dimensional integrable category of U⁰. The quotient comparison is\na conclusion, not an extra hypothesis (AK97 §1.2, p.5)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:1.2",
+            "target:2.1",
+            "mathlib:isNoetherian_of_tower",
+            "mathlib:isArtinian_of_tower",
+            "mathlib:CategoryTheory.Abelian",
+            "mathlib:CategoryTheory.EssentiallySmall"
+          ],
+          "prerequisite_text": "§§1.1–1.2 and 2.1; native finite-length and module-category APIs.",
+          "api": [],
+          "tests": [
+            {
+              "name": "2.2-check-1",
+              "kind": "degenerate",
+              "statement": "The unit has level 0 and length 1; the zero object has level 0 and length 0."
+            },
+            {
+              "name": "2.2-check-2",
+              "kind": "computation",
+              "statement": "V(a) has dimension 2 but length 1. Dimension is a bound on length, not its definition."
+            },
+            {
+              "name": "2.2-check-3",
+              "kind": "non-example",
+              "statement": "A nonzero positive-level integrable highest-weight module cannot be an object of 𝒞; its Weyl orbit already contradicts finite support."
+            }
+          ],
+          "readme_section": "2.2"
+        },
+        {
+          "id": "2.3",
+          "kind": "construction",
+          "name": null,
+          "title": "Biexact tensor products and duality",
+          "statement": "Restrict the native Hopf-module tensor structure to 𝒞. Prove its weight formula,\nclosure under tensor product, and exactness in each variable. Restrict Dₛ and\nDᵢ, prove exact contravariance, evaluation/coevaluation, the triangle identities\nand the tensor-dual comparison with reversed factors. Establish the\nanti-equivalences DₛDᵢ ≅ Id and DᵢDₛ ≅ Id. A double use of the same dual twists\nthe action by S² or S⁻² and is not identified with the identity without an\nadditional intertwiner (KKOP20 §2.1, p.8; QuantumGroups §8.5).\n\nProve the tensor-intersection lemma for these modules: if X⊆M₁⊗M₂ and\nY⊆M₂⊗M₃ are submodules and X⊗M₃⊆M₁⊗Y, there is a submodule\nZ⊆M₂ with X⊆M₁⊗Z and Z⊗M₃⊆Y. This uses tensor linear algebra and\nthe Hopf action, and precedes its R-matrix applications (KKOP20 Lemma 2.10).",
+          "hypotheses": [
+            "Objects and morphisms of 𝒞, with the native tensor/duality structures; for the intersection lemma the three ambient objects and the stated two submodules and containment."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "§2.1, p.8; Lemma 2.10",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Restrict the native Hopf-module tensor structure to 𝒞. Prove its weight formula,\nclosure under tensor product, and exactness in each variable. Restrict Dₛ and\nDᵢ, prove exact contravariance, evaluation/coevaluation, the triangle identities\nand the tensor-dual comparison with reversed factors. Establish the\nanti-equivalences DₛDᵢ ≅ Id and DᵢDₛ ≅ Id. A double use of the same dual twists\nthe action by S² or S⁻² and is not identified with the identity without an\nadditional intertwiner (KKOP20 §2.1, p.8; QuantumGroups §8.5).",
+            "Prove the tensor-intersection lemma for these modules: if X⊆M₁⊗M₂ and\nY⊆M₂⊗M₃ are submodules and X⊗M₃⊆M₁⊗Y, there is a submodule\nZ⊆M₂ with X⊆M₁⊗Z and Z⊗M₃⊆Y. This uses tensor linear algebra and\nthe Hopf action, and precedes its R-matrix applications (KKOP20 Lemma 2.10)."
+          ],
+          "prerequisites": [
+            "target:1.2",
+            "target:2.1",
+            "target:2.2",
+            "roadmap:QuantumGroups §8.5",
+            "tauceti:TauCeti.FiniteHopfModuleCat",
+            "mathlib:TensorProduct",
+            "mathlib:Module.Dual"
+          ],
+          "prerequisite_text": "§§1.2 and 2.1–2.2; QuantumGroups §8.5 and the native finite\nHopf-module monoidal/rigid structures; exactness of tensor over a field.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "`(M⊗N)_λ = ⊕_(μ+ν=λ) M_μ⊗N_ν` and weights of either dual obtained by negation;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the exact tensor bifunctor, tensor unit, associator, unitors and the forgetful monoidal functor on the actual subcategory;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "evaluation domains DₛM⊗M and M⊗DᵢM, and natural adjunction isomorphisms pinned by those domains rather than a left/right naming convention."
+            }
+          ],
+          "tests": [
+            {
+              "name": "2.3-check-1",
+              "kind": "computation",
+              "statement": "V(a)⊗V(b) has weight multiplicities 1,2,1 at 2ϖ₁,0,−2ϖ₁ and dimension 4."
+            },
+            {
+              "name": "2.3-check-2",
+              "kind": "non-example",
+              "statement": "For a functional φ and vector v, evaluation of φ⊗v is φ(v); using the untwisted dual action would fail U′-linearity already for e₁."
+            },
+            {
+              "name": "2.3-check-3",
+              "kind": "non-example",
+              "statement": "On source generators, `S²(e_i)=q_i^-2 e_i` and `S²(f_i)=q_i^2 f_i`. The identity map on V(a) does not identify this twist with its original action when eᵢ acts nontrivially."
+            },
+            {
+              "name": "2.3-check-4",
+              "kind": "computation",
+              "statement": "For three two-dimensional trivial modules and a line Z in the middle one, X=M₁⊗Z and Y=Z⊗M₃ give X⊗M₃=M₁⊗Y of dimension 4. The middle submodule in the intersection lemma is precisely that line."
+            }
+          ],
+          "readme_section": "2.3"
+        }
+      ],
+      "examples": "The two nonsplit four-dimensional modules in the worked example separate this\nabelian rigid category from a semisimple category. Their tensor product and\nduals remain objects of the same category.",
+      "dependencies_text": "Layer 1; QuantumGroups §8.5; gap:integrable-string-decomposition from\nKacMoodyPartII; native module, finite-dimensional and abelian APIs."
+    },
+    {
+      "key": "3",
+      "title": "spectral families and specialization",
+      "targets": [
+        {
+          "id": "3.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Spectral shifts as tensor autoequivalences",
+          "statement": "For a∈k× define the Hopf automorphism τₐ by\n`e_i ↦ a^δ(i,0)e_i`, `f_i ↦ a^-δ(i,0)f_i`, and Kᵢ↦Kᵢ.\nLet M(a) be restriction of its action along τₐ. Prove τ₁ = Id and\nτₐτᵦ = τₐᵦ and obtain exact tensor autoequivalences of 𝒞. Tensor and either dual\ncommute with the same simultaneous shift. These constructions extend to any\nfield extension and nonzero parameter there (AK97 §1.2, pp.4–5; KKOP20 §2.1,\np.7).",
+          "hypotheses": [
+            "A nonzero spectral parameter a∈k× and a U′-module in the stated category."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "AK97",
+            "where": "§1.2, pp.4–5",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For a∈k× define the Hopf automorphism τₐ by\n`e_i ↦ a^δ(i,0)e_i`, `f_i ↦ a^-δ(i,0)f_i`, and Kᵢ↦Kᵢ.\nLet M(a) be restriction of its action along τₐ. Prove τ₁ = Id and\nτₐτᵦ = τₐᵦ and obtain exact tensor autoequivalences of 𝒞. Tensor and either dual\ncommute with the same simultaneous shift. These constructions extend to any\nfield extension and nonzero parameter there (AK97 §1.2, pp.4–5; KKOP20 §2.1,\np.7)."
+          ],
+          "prerequisites": [
+            "target:1.2",
+            "target:2.3",
+            "mathlib:AlgEquiv"
+          ],
+          "prerequisite_text": "§§1.2 and 2.3; the algebra's homogeneous Serre relations.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "generator action formulas, naturality on intertwiners, unit and composition comparisons, and inverse shift a⁻¹;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "tensor comparison `(M⊗N)(a) ≅ M(a)⊗N(a)`, with coherence;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "compatibility with both dual actions and with scalar extension."
+            }
+          ],
+          "tests": [
+            {
+              "name": "3.1-check-1",
+              "kind": "compatibility",
+              "statement": "On the evaluation module V(b), shifting by a gives V(ab), since e₀ acts by ab times f₁."
+            },
+            {
+              "name": "3.1-check-2",
+              "kind": "compatibility",
+              "statement": "M(1) has the original action; two shifts a,b give ab, not a+b."
+            },
+            {
+              "name": "3.1-check-3",
+              "kind": "compatibility",
+              "statement": "At a = 0 the formula for f₀ is undefined; no zero specialization is part of this autoequivalence family."
+            }
+          ],
+          "readme_section": "3.1"
+        },
+        {
+          "id": "3.2",
+          "kind": "construction",
+          "name": null,
+          "title": "Affinization and scalar extensions",
+          "statement": "Construct the intrinsic P-graded affinization of a Pcl-weight module by taking\none copy of Mcl(λ) in each λ∈P, with the root-shifting eᵢ,fᵢ actions. Its\nU′-linear degree-δ automorphism z is the identity between corresponding copies.\nA section of P→Pcl with the source root convention identifies it with\nk[z,z⁻¹]⊗M. Compare different sections by their weightwise powers of z.\nConstruct the canonical specialization quotient by z−a and identify it with\nM(a) (KKOP20 §2.1, p.7; K02 §4.2, p.16).",
+          "hypotheses": [
+            "A Pcl-weight U′-module M; finite freeness of Laurent rank dim M uses M∈𝒞; specialization is at a≠0."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "§4.2, p.16",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Construct the intrinsic P-graded affinization of a Pcl-weight module by taking\none copy of Mcl(λ) in each λ∈P, with the root-shifting eᵢ,fᵢ actions. Its\nU′-linear degree-δ automorphism z is the identity between corresponding copies.\nA section of P→Pcl with the source root convention identifies it with\nk[z,z⁻¹]⊗M. Compare different sections by their weightwise powers of z.\nConstruct the canonical specialization quotient by z−a and identify it with\nM(a) (KKOP20 §2.1, p.7; K02 §4.2, p.16)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:2.1",
+            "target:3.1",
+            "mathlib:LaurentPolynomial",
+            "mathlib:LaurentPolynomial.eval₂",
+            "mathlib:Localization.AtPrime",
+            "mathlib:TensorProduct"
+          ],
+          "prerequisite_text": "§§1.1 and 3.1; native Laurent polynomials, localization and tensor\nbase change; the weight decomposition of §2.1.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "finite freeness over k[z,z⁻¹] of rank dim M and compatibility of the intrinsic and Laurent-coordinate actions;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "base change to k(z), k((z)), and the local ring at z = a≠0, with faithful comparisons where appropriate;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the generator formulas and specialization maps; simultaneous tensor shifts use a shared spectral variable, whereas two independent affinizations use two variables before diagonal base change."
+            }
+          ],
+          "tests": [
+            {
+              "name": "3.2-check-1",
+              "kind": "degenerate",
+              "statement": "For the unit, affinization is k[z,z⁻¹], and its quotient by z−a is k of dimension 1; affinization itself is not a finite-dimensional object of 𝒞."
+            },
+            {
+              "name": "3.2-check-2",
+              "kind": "computation",
+              "statement": "V(b) has affinization free of rank 2; specialization at a gives V(ab), with e₀ coefficient ab."
+            },
+            {
+              "name": "3.2-check-3",
+              "kind": "non-example",
+              "statement": "Independently shifting V(a) and V(b) by x and y gives parameters ax,by. Setting x=y=t gives the simultaneous tensor shift; setting only y=t does not shift the first factor."
+            }
+          ],
+          "readme_section": "3.2"
+        }
+      ],
+      "examples": "Spectral shifts distinguish infinitely many fundamental modules of A₁⁽¹⁾\nalthough all have the same ordinary weight character. The two-variable family\nrecords the ratio of their parameters.",
+      "dependencies_text": "Layers 1–2; native scalar extension, Laurent polynomial and localization APIs."
+    },
+    {
+      "key": "4",
+      "title": "fundamental modules and simple spectral data",
+      "targets": [
+        {
+          "id": "4.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Restricting extremal modules to the derived affine algebra",
+          "statement": "Specialize the supplied universal extremal module E_F₀(λ) to the full affine\ndatum over F₀=ℚ(q), and restrict its action along U′⊆U. Transport its\nnormalized extremal family through the generator comparison of §1.2.\nProve that the P-weight spaces combine to the Pcl-grading of this restriction\nand that the U-linear universal maps `E_F₀(wλ)→E_F₀(λ)` sending the cyclic\nvector to u_w are isomorphisms and restrict to U′-module maps\n(K02 §3.1, pp.8–9, and §4.1).\n\nFor t∈ℤ construct the one-dimensional full-U module χ_t with weight tδ,\non which eᵢ and fᵢ vanish. Its restriction to U′ is the unit. Use the\nsupplied universal property to construct the normalized isomorphism\n`χ_t⊗E_F₀(λ) ≅ E_F₀(λ+tδ)` and prove that these isomorphisms compose\naccording to addition of t. Thus changes of a δ-lift give specified\nU′-isomorphisms, whereas the full-U weights retain the degree difference.\nThis is the affine restriction and lift comparison for the supplied module.",
+          "hypotheses": [
+            "A full affine weight λ∈P over F₀=ℚ(q), the supplied universal integrable extremal module, and t∈ℤ for the δ-lift comparison."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "§3.1, pp.8–9; §4.1; the normalized δ-lift comparison is derived here from the supplied universal property",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Specialize the supplied universal extremal module E_F₀(λ) to the full affine\ndatum over F₀=ℚ(q), and restrict its action along U′⊆U. Transport its\nnormalized extremal family through the generator comparison of §1.2.\nProve that the P-weight spaces combine to the Pcl-grading of this restriction\nand that the U-linear universal maps `E_F₀(wλ)→E_F₀(λ)` sending the cyclic\nvector to u_w are isomorphisms and restrict to U′-module maps\n(K02 §3.1, pp.8–9, and §4.1)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:1.2",
+            "roadmap:QuantumEnvelopingAlgebras §§1.1–1.3a and 2.1",
+            "mathlib:ModuleCat.restrictScalars",
+            "gap:universal-extremal-module"
+          ],
+          "prerequisite_text": "§§1.1–1.2; QuantumEnvelopingAlgebras §§1.1–1.3a and 2.1;\ngap:universal-extremal-module from KacMoodyPartII; native restriction of scalars.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the restriction of the canonical extremal family and of each universal map, with its specified cyclic vector;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "compatibility of normalized Weyl transport with the derived action and with the change of generator normalization;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the character χ_t, the normalized δ-lift comparison, its composition law and agreement with the full-U and derived-U′ forgetful maps."
+            }
+          ],
+          "tests": [
+            {
+              "name": "4.1-check-1",
+              "kind": "degenerate",
+              "statement": "For λ = 0, every eᵢ and fᵢ kills the cyclic vector, and E(0) is the unit."
+            },
+            {
+              "name": "4.1-check-2",
+              "kind": "non-example",
+              "statement": "For n = 0 both conditions apply: eᵢu_w = fᵢu_w = 0 and u_sᵢw = u_w. Requiring only one of the two annihilations gives the wrong quotient."
+            },
+            {
+              "name": "4.1-check-3",
+              "kind": "computation",
+              "statement": "Along a rank-one string with n = 2, u_sᵢ = fᵢ²u/[2]ᵢ; replacing the divided power by fᵢ² changes the normalized extremal vector."
+            },
+            {
+              "name": "4.1-check-4",
+              "kind": "degenerate",
+              "statement": "χ₁ and the unit have the same derived action, but their full-U weights differ by δ. Forgetting the degree torus must not identify their full-U weight labels."
+            }
+          ],
+          "readme_section": "4.1"
+        },
+        {
+          "id": "4.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "Basic level-zero extremal modules and scalar extension",
+          "statement": "Use the supplied rational global-basis model of E_F₀(λ). Compare it with\nthe source normalization by transporting the algebra action, bar and lattices\nthrough §1.2's generator equivalence and the positive ramification of the\nparameter in the Conventions. Prove that the transported basis still gives\nthe stated A₀, A∞ and A lattices and balanced reduction map: this follows\ncoefficientwise in the supplied global basis. The bar fixes the transported\neᵢ,fᵢ and reverses the full-torus generators. These constructions take place\nover F₀; extension to k below requires no bar on k fixing ℂ\n(K02 §2.4, Definitions 2.2–2.3).\n\nFor basic level-zero λ prove E_F₀(λ) is nonzero and simple, with weights in\n`(λ+Q)∩conv(Wλ)`, finite-dimensional weight spaces, and multiplicity one\nat each point of Wλ. Prove the stabilizer fixes the normalized extremal\nvector and\n`wt(E_F₀(λ))∩(λ+ℤδ)=Wλ∩(λ+ℤδ)`.\nThe proof includes the basic-weight extremal-orbit and stabilizer lemmas and\nthe bounded-length Schubert covering giving finite multiplicities (K02\nTheorem 5.5, Propositions 5.8, 5.12, 5.15 and 5.16). Apply the generic\nSchubert subsets and their star/maximal-raising laws supplied by\ngap:crystal-schubert-strata; the bounded-length covering for basic affine\nweights is the target here. Deduce that every\nnonzero integrable module generated by a basic extremal vector is this\nuniversal module.\n\nProve that the linear-relations construction, normalized Weyl transport and\nperiod quotient commute with scalar extension. Prove absolute simplicity by\nnative `jacobson_density`: a simple F₀-algebra module with endomorphism\nalgebra F₀ remains simple after any field extension. Indeed density can\nisolate any one of the finitely many independent F₀-vectors in a nonzero\nextended vector. Here an endomorphism is scalar because the generating\nextremal weight space has dimension one. The same scalar-extension lemma\nis available for the finite fundamental quotient in §4.3. This gives the\nstated structural conclusions over k without assuming a valuation or a bar\non arbitrary k-modules.",
+          "hypotheses": [
+            "The supplied rational global-basis model; the simplicity, multiplicity and weight-support assertions require λ basic and level zero; the scalar-extension lemma requires scalar endomorphism algebra."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "§2.4, Definitions 2.2–2.3; Theorem 5.5, Propositions 5.8, 5.12, 5.15 and 5.16",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Use the supplied rational global-basis model of E_F₀(λ). Compare it with\nthe source normalization by transporting the algebra action, bar and lattices\nthrough §1.2's generator equivalence and the positive ramification of the\nparameter in the Conventions. Prove that the transported basis still gives\nthe stated A₀, A∞ and A lattices and balanced reduction map: this follows\ncoefficientwise in the supplied global basis. The bar fixes the transported\neᵢ,fᵢ and reverses the full-torus generators. These constructions take place\nover F₀; extension to k below requires no bar on k fixing ℂ\n(K02 §2.4, Definitions 2.2–2.3).",
+            "For basic level-zero λ prove E_F₀(λ) is nonzero and simple, with weights in\n`(λ+Q)∩conv(Wλ)`, finite-dimensional weight spaces, and multiplicity one\nat each point of Wλ. Prove the stabilizer fixes the normalized extremal\nvector and\n`wt(E_F₀(λ))∩(λ+ℤδ)=Wλ∩(λ+ℤδ)`.\nThe proof includes the basic-weight extremal-orbit and stabilizer lemmas and\nthe bounded-length Schubert covering giving finite multiplicities (K02\nTheorem 5.5, Propositions 5.8, 5.12, 5.15 and 5.16). Apply the generic\nSchubert subsets and their star/maximal-raising laws supplied by\ngap:crystal-schubert-strata; the bounded-length covering for basic affine\nweights is the target here. Deduce that every\nnonzero integrable module generated by a basic extremal vector is this\nuniversal module."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:1.2",
+            "target:4.1",
+            "mathlib:jacobson_density",
+            "mathlib:TensorProduct",
+            "gap:crystal-schubert-strata",
+            "gap:extremal-global-basis-model",
+            "gap:integrable-string-decomposition"
+          ],
+          "prerequisite_text": "§§1.1–1.2 and 4.1; gap:integrable-string-decomposition,\ngap:extremal-global-basis-model and gap:crystal-schubert-strata from\nKacMoodyPartII; native scalar extension and Jacobson density.",
+          "api": [],
+          "tests": [
+            {
+              "name": "4.2-check-1",
+              "kind": "non-example",
+              "statement": "For λ=0, the rational Laurent form, crystal lattice and global basis are A, A₀ and {1}; the balanced-triple map sends 1 to 1. This supporting check does not call 0 basic or assign it a positive δ-period."
+            },
+            {
+              "name": "4.2-check-2",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾, every orbit weight π₁+nδ of E(π₁) has dimension one, although E(π₁) is infinite-dimensional."
+            },
+            {
+              "name": "4.2-check-3",
+              "kind": "computation",
+              "statement": "In F₀u, the three lattices A₀u, A∞u and (q−1)Au span the same space, and the Laurent form is bar-stable. Their triple intersection is zero, whereas A₀u/qA₀u has dimension one. Spanning and bar stability do not imply the balanced-triple theorem."
+            },
+            {
+              "name": "4.2-check-4",
+              "kind": "computation",
+              "statement": "In A₂⁽¹⁾, λ=Λ₁−Λ₀ satisfies ⟨h₂,λ⟩=0 and s₂λ=λ. The nonidentity stabilizer element s₂ sends u to `f₂^(0)u=u`, with scalar exactly 1."
+            }
+          ],
+          "readme_section": "4.2"
+        },
+        {
+          "id": "4.3",
+          "kind": "construction",
+          "name": null,
+          "title": "Fundamental modules and spectral periodicity",
+          "statement": "For λ = πᵢ use §4.2, the weight transport of §1.1 and the module transport\nof §4.1 to construct the\nunique U′-linear automorphism zᵢ of E(πᵢ), of degree mᵢδ, sending its extremal\ngenerator to the canonical vector of weight πᵢ+mᵢδ. Define\n`F_i = E(π_i)/(z_i−1)E(π_i)`. Prove finite-dimensionality, integrability,\nsimplicity and the one-dimensional dominant extremal weight ϖᵢ. On its\nrational form prove that the inherited global basis has a finite regular\nsimple crystal: the extremal weights form one classical Weyl orbit and the\ndominant extremal weight occurs once (K02 Definition 4.9 and Theorem 5.17).\nApply the supplied crystal tensor rule to these quotient lattices. Prove the\naffine statements that tensor products of finite simple crystals are simple\nand that a finite-dimensional\nintegrable module with simple crystal is simple (K02 Lemma 4.11 and\nProposition 4.12). This is the good-module support used in §5.2. Prove the\nnormalized finite extremal-family characterization, and uniqueness of Fᵢ up\nto isomorphism, with the basic-weight transport for A₂ₙ⁽²⁾ included\n(K02 (5.6)–(5.7), Theorem 5.17, pp.24–25; AK97 §1.3, p.5).\n\nFor a,b∈k× prove\n`F_i(a) ≅ F_j(b) ↔ i=j and a^(m_i)=b^(m_i)`.\nDefine Σ as the quotient of I₀×k× by this relation, equivalently the\nisomorphism classes of fundamental spectral modules. Prove that changing\nnormalization of Fᵢ induces the corresponding relabeling of Σ. The same\nconstruction identifies every simple object with fundamental dominant extremal\nweight with a spectral shift of Fᵢ (K02 Theorem 5.17(ix); AK97 (1.7);\nKKOP20 Remark 2.3). Tensor-power simplicity is the target of §7.1.",
+          "hypotheses": [
+            "i∈I₀, the period mᵢ and basic weight πᵢ of §1.1, the extremal structure of §4.2, and nonzero a,b for spectral isomorphism."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "Definition 4.9, Lemma 4.11, Proposition 4.12, (5.6)–(5.7) and Theorem 5.17, pp.24–25",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For λ = πᵢ use §4.2, the weight transport of §1.1 and the module transport\nof §4.1 to construct the\nunique U′-linear automorphism zᵢ of E(πᵢ), of degree mᵢδ, sending its extremal\ngenerator to the canonical vector of weight πᵢ+mᵢδ. Define\n`F_i = E(π_i)/(z_i−1)E(π_i)`. Prove finite-dimensionality, integrability,\nsimplicity and the one-dimensional dominant extremal weight ϖᵢ. On its\nrational form prove that the inherited global basis has a finite regular\nsimple crystal: the extremal weights form one classical Weyl orbit and the\ndominant extremal weight occurs once (K02 Definition 4.9 and Theorem 5.17).\nApply the supplied crystal tensor rule to these quotient lattices. Prove the\naffine statements that tensor products of finite simple crystals are simple\nand that a finite-dimensional\nintegrable module with simple crystal is simple (K02 Lemma 4.11 and\nProposition 4.12). This is the good-module support used in §5.2. Prove the\nnormalized finite extremal-family characterization, and uniqueness of Fᵢ up\nto isomorphism, with the basic-weight transport for A₂ₙ⁽²⁾ included\n(K02 (5.6)–(5.7), Theorem 5.17, pp.24–25; AK97 §1.3, p.5).",
+            "For a,b∈k× prove\n`F_i(a) ≅ F_j(b) ↔ i=j and a^(m_i)=b^(m_i)`.\nDefine Σ as the quotient of I₀×k× by this relation, equivalently the\nisomorphism classes of fundamental spectral modules. Prove that changing\nnormalization of Fᵢ induces the corresponding relabeling of Σ. The same\nconstruction identifies every simple object with fundamental dominant extremal\nweight with a spectral shift of Fᵢ (K02 Theorem 5.17(ix); AK97 (1.7);\nKKOP20 Remark 2.3). Tensor-power simplicity is the target of §7.1."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:2.3",
+            "target:3.1",
+            "target:3.2",
+            "target:4.1",
+            "target:4.2",
+            "gap:crystal-tensor-rule"
+          ],
+          "prerequisite_text": "§§1.1, 3.1–3.2 and 4.1–4.2; rank-one tensor formulas from §2.3;\ngap:crystal-tensor-rule from KacMoodyPartII.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "quotient maps, the periodicity automorphism and the comparison with affinization after adjoining an mᵢ-th root of the periodic variable;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the extremal line and weight support, independence of Weyl representatives, and invariance of isomorphism classes under spectral relabeling;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "simultaneous shift on Σ, its stabilizer of mᵢ-th roots of unity, and agreement with the actual simple-object isomorphism relation."
+            }
+          ],
+          "tests": [
+            {
+              "name": "4.3-check-1",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾, F₁(a) is V(a), has dimension 2 and period m₁ = 1, and F₁(a)≅F₁(b) implies a=b."
+            },
+            {
+              "name": "4.3-check-2",
+              "kind": "compatibility",
+              "statement": "For any index with mᵢ>1 and a nontrivial mᵢ-th root of unity ζ, Fᵢ(a)≅Fᵢ(ζa) even though a≠ζa. Σ must identify these labels."
+            },
+            {
+              "name": "4.3-check-3",
+              "kind": "non-example",
+              "statement": "In A₂⁽²⁾, the basic-weight lift is 2Λ₁−Λ₀ and m₁ = 1; it is Weyl-conjugate to the basic weight from the auxiliary short node. A formula using c₀=1 would fail before a module could be constructed."
+            }
+          ],
+          "readme_section": "4.3"
+        },
+        {
+          "id": "4.4",
+          "kind": "theorem",
+          "name": null,
+          "title": "Classification by fundamental spectral data",
+          "statement": "For a finite ordered family of fundamental spectral modules, prove that its\ntensor product has a one-dimensional maximal classical weight space of weight\nthe sum of their ϖᵢ. There is exactly one simple composition factor containing\nthis weight, and its multiplicity is one. Prove that its isomorphism class is\nunchanged by permutation, and that this assignment is a bijection from finite\nmultisets in Σ to the isomorphism classes of simple objects of 𝒞. In particular\nevery simple has a unique dominant extremal weight and line\n(AK97 Theorem 1.2, p.6; CP95 Proposition 3.2, Theorem 3.3 and Proposition\n3.4, pp.8–9; CP98 Theorem 3.1 and Proposition 3.2, pp.7–8; KKOP20 §2.1,\np.7). These claims concern type-1 objects; the unqualified wording of AK97\nTheorem 1.2 does not extend the classification to sign-twisted modules.\n\nTreat surjectivity, injectivity and permutation-independence as parts of this\ntheorem, not consequences of extremal-module existence. A proof using\nhighest-ℓ-weights must construct the current realization and prove its\ncomparison with §1.2's derived algebra at central level zero (CP95 Theorem\n2.2; CP98 Theorem 1.3). Establish its induced highest-ℓ-weight modules,\nunique simple quotients and polynomial classification in both untwisted\nand folded cases. Identify elementary polynomial data with the actual\nFᵢ(a) of §4.3, including the aᵐⁱ identifications and normalization changes,\nbefore applying polynomial factorization (CP95 §§2–3; CP98 §§2–3;\nKKOP22 §2.2). The untwisted eigenvalue formula is not imposed on twisted\ntypes. No proof input here is Grothendieck-ring commutativity.",
+          "hypotheses": [
+            "A finite ordered family of actual fundamental spectral modules; the classification is of nonzero simple type-1 objects of 𝒞."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "AK97",
+            "where": "Theorem 1.2, p.6, restricted to type-1 integrable objects; all CP95/CP98 proof locators remain in the target text",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For a finite ordered family of fundamental spectral modules, prove that its\ntensor product has a one-dimensional maximal classical weight space of weight\nthe sum of their ϖᵢ. There is exactly one simple composition factor containing\nthis weight, and its multiplicity is one. Prove that its isomorphism class is\nunchanged by permutation, and that this assignment is a bijection from finite\nmultisets in Σ to the isomorphism classes of simple objects of 𝒞. In particular\nevery simple has a unique dominant extremal weight and line\n(AK97 Theorem 1.2, p.6; CP95 Proposition 3.2, Theorem 3.3 and Proposition\n3.4, pp.8–9; CP98 Theorem 3.1 and Proposition 3.2, pp.7–8; KKOP20 §2.1,\np.7). These claims concern type-1 objects; the unqualified wording of AK97\nTheorem 1.2 does not extend the classification to sign-twisted modules.",
+            "Treat surjectivity, injectivity and permutation-independence as parts of this\ntheorem, not consequences of extremal-module existence. A proof using\nhighest-ℓ-weights must construct the current realization and prove its\ncomparison with §1.2's derived algebra at central level zero (CP95 Theorem\n2.2; CP98 Theorem 1.3). Establish its induced highest-ℓ-weight modules,\nunique simple quotients and polynomial classification in both untwisted\nand folded cases. Identify elementary polynomial data with the actual\nFᵢ(a) of §4.3, including the aᵐⁱ identifications and normalization changes,\nbefore applying polynomial factorization (CP95 §§2–3; CP98 §§2–3;\nKKOP22 §2.2). The untwisted eigenvalue formula is not imposed on twisted\ntypes. No proof input here is Grothendieck-ring commutativity."
+          ],
+          "prerequisites": [
+            "target:2.1",
+            "target:2.2",
+            "target:2.3",
+            "target:4.3",
+            "tauceti:TauCeti.jordanHolderMultiplicity"
+          ],
+          "prerequisite_text": "§§2.1–2.3 and 4.3; native finite-length multiplicities. The\nhighest-ℓ-weight proof route and its folded classification are owned here.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the distinguished simple constituent and its multiplicity, independent of tensor ordering and of representatives in Σ;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "classification, the empty multiset/unit comparison and spectral shift of all labels simultaneously;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the maximal classical weight and line, with explicit comparison to normalized R-matrix vectors in §5.2."
+            }
+          ],
+          "tests": [
+            {
+              "name": "4.4-check-1",
+              "kind": "degenerate",
+              "statement": "The empty multiset gives the unit, with dominant weight 0 and multiplicity 1."
+            },
+            {
+              "name": "4.4-check-2",
+              "kind": "computation",
+              "statement": "The multisets {V(a)} and {V(b)} for a≠b in A₁⁽¹⁾ have different simple images although their ordinary weight characters coincide."
+            },
+            {
+              "name": "4.4-check-3",
+              "kind": "degenerate",
+              "statement": "For {V(a),V(aq²)}, the distinguished constituent is the three-dimensional module Z of the worked example, not the whole four-dimensional tensor product; the other constituent is the unit."
+            }
+          ],
+          "readme_section": "4.4"
+        }
+      ],
+      "examples": "The basic-weight construction includes A₂⁽²⁾ with the long-node convention.\nThe A₁⁽¹⁾ product at parameter ratio q² distinguishes a distinguished constituent\nfrom either the entire product or its head in a prescribed tensor order.",
+      "dependencies_text": "Layers 1–3; QuantumEnvelopingAlgebras §§1.1–1.3a and 2.1; the five named\nKacMoodyPartII contracts for strings, universal extremal modules, their global\nbasis, Schubert strata and the crystal tensor rule. Classification and the\nbasic affine structure remain targets of this layer."
+    },
+    {
+      "key": "5",
+      "title": "rational and specialized R-matrices",
+      "targets": [
+        {
+          "id": "5.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Affine spectral action of the completed intertwiner",
+          "statement": "Take the normalized quasi-R element supplied by\ngap:completed-canonical-element. Combine its affine specialization with the\ntoral weight factor and the flip, and choose the opposite completion by\ninverting the intertwiner with its factors swapped. This gives the KKOP\norientation whose nonconstant terms apply the negative half to M and the\npositive half to N(z); it expands at z=0. Compare explicitly with K02's\norientation, whose positive-half-first action expands in the inverse spectral\nratio (K02 §§7–8; KKOP20 §2.2, p.9). Both use the coproduct of the Conventions.\nThe toral factor on level-zero\nweights descends modulo δ. Choose a common denominator of the rational weight\npairings and a compatible root of q in k to define its powers; record how a\nchange of this choice changes the scalar normalization.\n\nFor M,N in 𝒞, construct the induced isomorphism over k((z)) from M⊗N(z) to\nN(z)⊗M. Prove that the root-graded completion acts on these spectral families:\nfor each fixed spectral degree, only finitely many terms act on any vector,\nusing finite classical weight support and nilpotence in the finite-type\npositive directions. The completion is part of the construction, not an\ninfinite sum assumed to lie in U′⊗U′. Prove naturality, the two tensor identities\nand the Yang–Baxter identity on three independent spectral families\n(K02 §7, pp.29–31; KKOP20 §2.2, (2.5)–(2.7), pp.9–10).",
+          "hypotheses": [
+            "M,N∈𝒞, an independent formal spectral variable, the supplied completed canonical element, and the specified compatible choice of roots of q for rational weight pairings."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "§7, pp.29–31",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Take the normalized quasi-R element supplied by\ngap:completed-canonical-element. Combine its affine specialization with the\ntoral weight factor and the flip, and choose the opposite completion by\ninverting the intertwiner with its factors swapped. This gives the KKOP\norientation whose nonconstant terms apply the negative half to M and the\npositive half to N(z); it expands at z=0. Compare explicitly with K02's\norientation, whose positive-half-first action expands in the inverse spectral\nratio (K02 §§7–8; KKOP20 §2.2, p.9). Both use the coproduct of the Conventions.\nThe toral factor on level-zero\nweights descends modulo δ. Choose a common denominator of the rational weight\npairings and a compatible root of q in k to define its powers; record how a\nchange of this choice changes the scalar normalization.",
+            "For M,N in 𝒞, construct the induced isomorphism over k((z)) from M⊗N(z) to\nN(z)⊗M. Prove that the root-graded completion acts on these spectral families:\nfor each fixed spectral degree, only finitely many terms act on any vector,\nusing finite classical weight support and nilpotence in the finite-type\npositive directions. The completion is part of the construction, not an\ninfinite sum assumed to lie in U′⊗U′. Prove naturality, the two tensor identities\nand the Yang–Baxter identity on three independent spectral families\n(K02 §7, pp.29–31; KKOP20 §2.2, (2.5)–(2.7), pp.9–10)."
+          ],
+          "prerequisites": [
+            "target:1.1",
+            "target:1.2",
+            "target:2.1",
+            "target:2.2",
+            "target:2.3",
+            "target:3.2",
+            "roadmap:QuantumEnvelopingAlgebras §§1.4–1.5",
+            "mathlib:LaurentSeries",
+            "gap:completed-canonical-element"
+          ],
+          "prerequisite_text": "§§1.1–1.2, 2.1–2.3 and 3.2; QuantumEnvelopingAlgebras §§1.4–1.5 for\nthe homogeneous pairing and gap:completed-canonical-element for its completion;\nnative graded products and Laurent series.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the chosen completion, convergence of its action, and compatibility with extension from Laurent polynomials to Laurent series;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the intertwining equation on eᵢ,fᵢ,Kᵢ and its extension to the algebra;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the inverse formal intertwiner, unit comparisons and tensor identities."
+            }
+          ],
+          "tests": [
+            {
+              "name": "5.1-check-1",
+              "kind": "degenerate",
+              "statement": "With either factor the unit, the canonical element acts as 1, and the intertwiner is the appropriate unitor comparison."
+            },
+            {
+              "name": "5.1-check-2",
+              "kind": "computation",
+              "statement": "In the rank-one example the rational normalized matrix displayed below has a Laurent-series expansion at z = 0; the universal matrix differs by a nonzero scalar series. Its toral factor is already incorporated in the construction of the universal matrix."
+            },
+            {
+              "name": "5.1-check-3",
+              "kind": "non-example",
+              "statement": "The imaginary-root terms have unbounded spectral degrees. They cannot be replaced by a finite element of U′⊗U′, although each coefficient of the action is defined by a finite calculation."
+            },
+            {
+              "name": "5.1-check-4",
+              "kind": "computation",
+              "statement": "In rank one the raw inverse-pairing tensor of §1.4 has degree-one term `(q−q^-1)E⊗F`, whereas the source Ξ has `−(q−q^-1)e⊗f`. Inverting and swapping gives the positive coefficient `(q−q^-1)f⊗e` in the opposite orientation. Its normalized finite-root action has middle block `((1−q^-2,q^-1),(q^-1,0))`, the z=0 value of the worked rational matrix. This checks both the normalization and the direction of the spectral completion."
+            }
+          ],
+          "readme_section": "5.1"
+        },
+        {
+          "id": "5.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "Generic simplicity and rational normalization",
+          "statement": "For simple M,N in 𝒞, prove that M⊗N(z) is simple over k(z), remains simple\nover an algebraic closure of k(z), and that M⊗N(a) is simple for all but\nfinitely many a∈k×. Establish this through the good fundamental modules of\nLayer 4: their crystal/global-basis tensor argument, their normalized formal\nintertwiners and cyclicity, followed by the simple spectral classification.\nThese are proof obligations of this target, not assumptions that arbitrary\nsimple modules are good (K02 Lemma 8.1, Theorems 9.1–9.2, Propositions 9.3–9.5;\nKKOP20 §2.2, pp.10–12).\n\nLet u and v be nonzero vectors in the dominant extremal lines of M and N.\nProve that the universal intertwiner sends u⊗v to a nonzero scalar Laurent\nseries times v⊗u. Dividing by that series gives the unique normalized\nintertwiner Rᴺₘ,ₙ(z) with Rᴺₘ,ₙ(z)(u⊗v)=v⊗u. Prove its coefficients lie in\nk(z), rather than only in k((z)): the intertwining and normalization equations\nare finite linear equations over k(z), and uniqueness after scalar extension\ndescends their solution. The definition is independent of the choices of u,v.\n\nProve the normalized Yang–Baxter identity and the inverse identity obtained\nby swapping the factors and replacing their spectral ratio by its inverse.\nProve equivariance under simultaneous shifts and isomorphisms. Distinguish\nrational normalization for simple pairs from rational renormalizability for\ngeneral nonzero pairs; do not assume the latter for every object of 𝒞.",
+          "hypotheses": [
+            "Nonzero simple M,N∈𝒞, nonzero chosen dominant extremal vectors, and the formal/field spectral extensions of §5.1."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "K02",
+            "where": "Lemma 8.1, Theorems 9.1–9.2, Propositions 9.3–9.5",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For simple M,N in 𝒞, prove that M⊗N(z) is simple over k(z), remains simple\nover an algebraic closure of k(z), and that M⊗N(a) is simple for all but\nfinitely many a∈k×. Establish this through the good fundamental modules of\nLayer 4: their crystal/global-basis tensor argument, their normalized formal\nintertwiners and cyclicity, followed by the simple spectral classification.\nThese are proof obligations of this target, not assumptions that arbitrary\nsimple modules are good (K02 Lemma 8.1, Theorems 9.1–9.2, Propositions 9.3–9.5;\nKKOP20 §2.2, pp.10–12)."
+          ],
+          "prerequisites": [
+            "target:4.2",
+            "target:4.3",
+            "target:4.4",
+            "target:5.1"
+          ],
+          "prerequisite_text": "§§4.2–4.4 and 5.1; the good-module tensor and cyclicity arguments\nexplicitly owned here; scalar descent for finite systems of linear equations.",
+          "api": [],
+          "tests": [
+            {
+              "name": "5.2-check-1",
+              "kind": "degenerate",
+              "statement": "For the unit and a simple M, Rᴺ is the unit comparison, with scalar coefficient 1 after normalization."
+            },
+            {
+              "name": "5.2-check-2",
+              "kind": "computation",
+              "statement": "For V(a),V(b), with t=b/a, the middle block is the matrix in the worked example. It fixes the top vector and has determinant `(q²t−1)/(q²−t)`; it is invertible over k(t)."
+            },
+            {
+              "name": "5.2-check-3",
+              "kind": "non-example",
+              "statement": "The same determinant vanishes at t=q⁻², and the matrix has a pole at t=q². Generic invertibility therefore cannot be specialized at every nonzero parameter."
+            }
+          ],
+          "readme_section": "5.2"
+        },
+        {
+          "id": "5.3",
+          "kind": "construction",
+          "name": null,
+          "title": "Denominators and nonzero specialization",
+          "statement": "For simple M,N define dₘ,ₙ(z) as the unique monic polynomial, with nonzero\nconstant term, generating the ideal of polynomials that clear all denominators\nof Rᴺₘ,ₙ(z) on the Laurent lattices. Equivalently, take the monic least common\nmultiple of the reduced denominators of its matrix coefficients, removing\npowers of z, and prove basis independence. Construct\n`r_M,N = (d_M,N(z) Rᴺ_M,N(z))|_(z=1)` and prove it is a nonzero U′-linear map\nM⊗N→N⊗M. Minimality of d proves that all coefficients of the cleared matrix\ncannot have a common factor z−1. Multiplication by a different Laurent unit\nchanges r by a nonzero scalar (KKOP20 §2.2, (2.8)–(2.13), pp.10–11).",
+          "hypotheses": [
+            "Simple pairs have normalized rational intertwiners by §5.2; for nonsimple pairs rational renormalizability is an explicit conditional hypothesis, with closure and nonvanishing hypotheses stated in the target."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "§2.2, (2.8)–(2.13), pp.10–11; Propositions 2.11(ii)–(iii) and 2.12",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For simple M,N define dₘ,ₙ(z) as the unique monic polynomial, with nonzero\nconstant term, generating the ideal of polynomials that clear all denominators\nof Rᴺₘ,ₙ(z) on the Laurent lattices. Equivalently, take the monic least common\nmultiple of the reduced denominators of its matrix coefficients, removing\npowers of z, and prove basis independence. Construct\n`r_M,N = (d_M,N(z) Rᴺ_M,N(z))|_(z=1)` and prove it is a nonzero U′-linear map\nM⊗N→N⊗M. Minimality of d proves that all coefficients of the cleared matrix\ncannot have a common factor z−1. Multiplication by a different Laurent unit\nchanges r by a nonzero scalar (KKOP20 §2.2, (2.8)–(2.13), pp.10–11).",
+            "Prove closure of rational renormalizability under tensoring either argument\nwhen the two constituent pairs are renormalizable, and under taking nonzero\nsubquotients of either argument (KKOP20 Propositions 2.11(ii)–(iii) and\n2.12). Prove the nonvanishing consequence of §2.3's tensor-intersection\nlemma: if M₂ is simple and φ₁:L→M₂⊗M₃, φ₂:M₁⊗M₂→L′ are nonzero,\nthen `(φ₂⊗Id)∘(Id⊗φ₁)` is nonzero. Hence, with the common crossing\nfactor simple, the specialized two-step R composition agrees with the\ntensor-product r up to a nonzero scalar (Proposition 2.11(i)–(iii)). These\nare the particular nonsimple-module intertwiners needed in Layer 7."
+          ],
+          "prerequisites": [
+            "target:2.3",
+            "target:3.1",
+            "target:3.2",
+            "target:5.1",
+            "target:5.2",
+            "mathlib:Polynomial",
+            "mathlib:Localization.AtPrime"
+          ],
+          "prerequisite_text": "§§2.3, 3.1–3.2 and 5.1–5.2; native polynomial divisibility, localization and\nfinite-dimensional linear algebra.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "denominator minimality, divisibility, change of basis and independence of chosen representatives of simple isomorphism classes;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "local specialization at any a≠0, with the order of its pole removed before evaluation, and compatibility with shifts;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "if d has degree n, the monic shift rule `d_(M(a),N(b))(z) = (a/b)^n d_M,N((b/a)z)`;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the relation between normalized rational identities and compositions of specialized maps, including the possibility that such a composition is zero. For general nonzero M,N, define rational renormalizability by existence of a nonzero scalar Laurent series c(z) such that c(z)Rᵁₘ,ₙ(z) maps the Laurent lattices into each other. When it exists, divide out the common polynomial factors of its coefficients to obtain a primitive Laurent-lattice map, unique up to a Laurent unit, with nonzero specialization at every a∈k×. Its specialization at 1 defines r up to a nonzero scalar, agreeing with the simple-pair construction above. Prove closure of rational renormalizability under tensoring either argument when the two constituent pairs are renormalizable, and under taking nonzero subquotients of either argument (KKOP20 Propositions 2.11(ii)–(iii) and 2.12). Prove the nonvanishing consequence of §2.3's tensor-intersection lemma: if M₂ is simple and φ₁:L→M₂⊗M₃, φ₂:M₁⊗M₂→L′ are nonzero, then `(φ₂⊗Id)∘(Id⊗φ₁)` is nonzero. Hence, with the common crossing factor simple, the specialized two-step R composition agrees with the tensor-product r up to a nonzero scalar (Proposition 2.11(i)–(iii)). These are the particular nonsimple-module intertwiners needed in Layer 7."
+            }
+          ],
+          "tests": [
+            {
+              "name": "5.3-check-1",
+              "kind": "compatibility",
+              "statement": "For V(1),V(1), the denominator in the second spectral variable is z−q²; its value at 1 is nonzero, and r is a nonzero scalar times the identity."
+            },
+            {
+              "name": "5.3-check-2",
+              "kind": "computation",
+              "statement": "For X=V(a), Y=V(aq²), rₓ,ᵧ has rank 1, whereas rᵧ,ₓ has rank 3. Their two composites vanish. Neither specialized map is an isomorphism."
+            },
+            {
+              "name": "5.3-check-3",
+              "kind": "non-example",
+              "statement": "With either factor the unit, d=1. Multiplying d by z−1 would give zero on specialization, so an arbitrary denominator-clearing polynomial is not a valid replacement for the minimal denominator."
+            },
+            {
+              "name": "5.3-check-4",
+              "kind": "degenerate",
+              "statement": "The pair (X⊗Y,1) is renormalizable even though X⊗Y has length 2; its map is the unitor comparison of rank 4. Its nonzero simple subquotients Z and 1 give the rank-3 and rank-1 unit comparisons."
+            }
+          ],
+          "readme_section": "5.3"
+        }
+      ],
+      "examples": "The explicit A₁⁽¹⁾ matrix tests the spectral ratio, the side of normalization,\nthe denominator and the rank drop. It also witnesses why these specialized\nmaps do not furnish a braiding on all of 𝒞.",
+      "dependencies_text": "Layers 1–4; QuantumEnvelopingAlgebras §§1.4–1.5 and\ngap:completed-canonical-element; native rational functions,\nLaurent series and polynomial ideals. Grothendieck-ring commutativity is not\nused in constructing the intertwiners."
+    },
+    {
+      "key": "6",
+      "title": "the exact Grothendieck ring",
+      "targets": [
+        {
+          "id": "6.1",
+          "kind": "theorem",
+          "name": null,
+          "title": "Simple-class coordinates without an Artinian algebra",
+          "statement": "For a unital k-algebra A, give the category of A-modules finite-dimensional\nover k its abelian and essentially small structures. Its finite length follows\nfrom the scalar tower. Descend the native module Jordan–Hölder multiplicities\nto its exact Grothendieck group, obtaining an isomorphism with the free abelian\ngroup on isomorphism classes of finite-dimensional simple A-modules. The\ninverse sends a basis vector to the class of its simple module. Prove that\nthese maps are inverse by composition-series induction and additivity of the\nnative multiplicity, not by a new Jordan–Hölder theorem.\n\nApply this to 𝒞, and to every full subcategory closed under subquotients and\nfinite sums. Prove that its simple classes are a subset of the ambient simple\nclasses, and that the exact inclusion induces an injective map of Grothendieck\ngroups. Extensions are required when constructing Serre subcategories in\nLayer 8, but are not an extra premise of this particular injectivity argument.\nIn particular K₀(𝒞)→K₀(fd U′) is injective.",
+          "hypotheses": [
+            "A unital k-algebra A, not necessarily Artinian, and A-modules finite-dimensional over k; a compared full subcategory is closed under subquotients and finite sums."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "native-TauCeti",
+            "where": "TauCeti/RingTheory/CompositionSeries/Multiplicity.lean:217; Additivity.lean:154; Algebra/Category/ModuleCat/FiniteLength.lean:30; the target descends those multiplicities, not an Artinian-ring simple-basis theorem",
+            "provenance_kind": "native-library-proof-inputs"
+          },
+          "reference_passages": [],
+          "prerequisites": [
+            "target:2.2",
+            "roadmap:GrothendieckEulerForms §§1.1–1.4",
+            "tauceti:TauCeti.jordanHolderMultiplicity",
+            "tauceti:TauCeti.jordanHolderMultiplicity_eq_add_of_exact",
+            "tauceti:ModuleCat.prop_of_isFiniteLength",
+            "tauceti:TauCeti.AbelianK0"
+          ],
+          "prerequisite_text": "§2.2; GrothendieckEulerForms §§1.1–1.4; native modulewise\nJordan–Hölder multiplicities and their exact-sequence additivity.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the multiplicity homomorphism for each simple isomorphism class, finite support of the coordinate function, and the simple-class basis equivalence;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "`[M]=Σ_S [M:S][S]`, positivity, and length as the sum of its coefficients;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "equality with a single simple class if and only if the object is isomorphic to that simple, and functoriality for the stated inclusions."
+            }
+          ],
+          "tests": [
+            {
+              "name": "6.1-check-1",
+              "kind": "degenerate",
+              "statement": "The classes of zero and the unit have coordinates 0 and one at the unit, respectively. Equality with the zero class forces the object to be zero."
+            },
+            {
+              "name": "6.1-check-2",
+              "kind": "computation",
+              "statement": "In the worked example `[X⊗Y]=[Z]+[1]` has length 2 although dimension 4; `[V(a)]` has length 1 although dimension 2."
+            },
+            {
+              "name": "6.1-check-3",
+              "kind": "non-example",
+              "statement": "A nonsplit extension of two simples has the sum of their classes. The relation cannot be restricted to direct-sum decompositions."
+            },
+            {
+              "name": "6.1-check-4",
+              "kind": "non-example",
+              "statement": "U′ is not required to be an Artinian ring. The native theorem `TauCeti.simpleClassBasis` for finitely generated modules over an Artinian ring cannot supply this instance."
+            }
+          ],
+          "readme_section": "6.1"
+        },
+        {
+          "id": "6.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "A local-lattice specialization lemma",
+          "statement": "Let A be any unital k-algebra, R=k[z] localized at the prime ideal (z−1),\nt=z−1, and F=k(z). Let L₁,L₂ be A⊗R-modules finite free over R. If their\nF-fibres are isomorphic as A⊗F-modules, prove\n`[L₁/tL₁]=[L₂/tL₂]` in K₀(fd A). The isomorphism need not extend to an\nisomorphism of lattices and the two specializations need not be isomorphic.\n\nA proof of this lemma is part of this target. Identify the generic fibres and\nmultiply one lattice by a power of t so that L₁⊆L₂. The quotient Q=L₂/L₁ is\nfinite-dimensional over k and killed by a power of t. Reduction gives an exact\nsequence\n\n```\n0 → Q[t] → L₁/tL₁ → L₂/tL₂ → Q/tQ → 0.\n```\n\nThe kernel and cokernel sequences for the A-linear endomorphism t:Q→Q give\n`[Q[t]]=[Q/tQ]`. Substitution proves the required equality. Establish the\nlattice containment, torsion bound and displayed exact sequence explicitly;\nthey are what makes generic isomorphism sufficient. This is a direct local\nalgebra argument, rather than a claim that ordinary characters distinguish\nquantum affine simples.",
+          "hypotheses": [
+            "A unital k-algebra A, R=k[z]_(z−1), t=z−1, F=k(z), two A⊗R-modules finite free over R, and an A⊗F-linear isomorphism of their generic fibres."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "authored-proof",
+            "where": "QuantumAffineAlgebras README §6.2: lattice containment, t-power torsion quotient, reduction exact sequence and kernel/cokernel equality; this is the complete authored proof, not an external-source attribution",
+            "provenance_kind": "authored-elementary-proof"
+          },
+          "reference_passages": [],
+          "prerequisites": [
+            "target:6.1",
+            "mathlib:Localization.AtPrime",
+            "tauceti:TauCeti.AbelianK0.of_shortExact"
+          ],
+          "prerequisite_text": "§6.1; native localization, finite-free modules, exact sequences and\nshort-exact-sequence relations. The proof is given in this subsection.",
+          "api": [],
+          "tests": [
+            {
+              "name": "6.2-check-1",
+              "kind": "computation",
+              "statement": "L₂=R and L₁=tR have identical one-dimensional reductions even though reduction of the inclusion is the zero map. Here Q=k, and both end terms in the displayed sequence are k."
+            },
+            {
+              "name": "6.2-check-2",
+              "kind": "compatibility",
+              "statement": "The same calculation with L₁=tⁿR, n≥1, gives Q=R/(tⁿ) and `dim Q[t]=dim Q/tQ=1`, independently of n."
+            },
+            {
+              "name": "6.2-check-3",
+              "kind": "computation",
+              "statement": "For A=k[x], let x act on R² by the matrix with rows (0,t),(0,0). The lattices R e₁⊕R e₂ and R(t e₁)⊕R e₂ have the same generic fibre. Their reductions have x acting by zero and by a nonzero nilpotent Jordan block, respectively. They are not isomorphic, but both classes are twice the class of the simple module with x=0."
+            }
+          ],
+          "readme_section": "6.2"
+        },
+        {
+          "id": "6.3",
+          "kind": "theorem",
+          "name": null,
+          "title": "Multiplication and commutativity",
+          "statement": "Install the native exact-K₀ ring on 𝒞 using §2.3's biexact tensor product.\nFor simple M,N, apply §6.2 to the Laurent lattices of M⊗N(z) and N(z)⊗M,\nlocalized at z=1, and their generic isomorphism Rᴺ. Injectivity from §6.1 gives\n`[M⊗N]=[N⊗M]` in K₀(𝒞). Extend by composition-series additivity and tensor\nexactness to all objects, and prove commutativity for all ring elements.\nConstruct the commutative-ring structure from this proof. No braided structure\non 𝒞 is an input (KKOP20 §2.1, p.7, for the resulting commutative ring;\n§§6.1–6.2 here provide the specialization proof).",
+          "hypotheses": [
+            "The actual abelian, essentially small, biexact tensor category 𝒞, with simple-class coordinates and rational generic intertwiners; no braiding is assumed."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "§2.1, p.7, for the resulting commutative ring; the local-lattice proof is the authored argument of §§6.1–6.2",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Install the native exact-K₀ ring on 𝒞 using §2.3's biexact tensor product.\nFor simple M,N, apply §6.2 to the Laurent lattices of M⊗N(z) and N(z)⊗M,\nlocalized at z=1, and their generic isomorphism Rᴺ. Injectivity from §6.1 gives\n`[M⊗N]=[N⊗M]` in K₀(𝒞). Extend by composition-series additivity and tensor\nexactness to all objects, and prove commutativity for all ring elements.\nConstruct the commutative-ring structure from this proof. No braided structure\non 𝒞 is an input (KKOP20 §2.1, p.7, for the resulting commutative ring;\n§§6.1–6.2 here provide the specialization proof)."
+          ],
+          "prerequisites": [
+            "target:2.3",
+            "target:5.2",
+            "target:6.1",
+            "target:6.2",
+            "roadmap:GrothendieckEulerForms §§1.1–1.4 and 2.3",
+            "tauceti:TauCeti.ExactK0.instRing",
+            "tauceti:TauCeti.ExactK0.liftRingHom",
+            "tauceti:TauCeti.ExactK0.mapRingHom"
+          ],
+          "prerequisite_text": "§§2.3, 5.2 and 6.1–6.2; the native exact-K₀ ring and ring-map\ninterfaces of GrothendieckEulerForms §§1.1–1.4 and 2.3.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "`[M][N]=[M⊗N]`, `[1]=1`, exact additivity, and the forgetful dimension ring homomorphism K₀(𝒞)→ℤ;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the ring homomorphisms induced by exact tensor functors, especially shifts and the subcategory inclusions of Layer 8;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "symmetry of tensor simplicity for simple M,N, and then `M⊗N ≅ N⊗M` when either tensor product is simple, by simple-class coordinates. Equality of arbitrary classes does not imply isomorphism."
+            }
+          ],
+          "tests": [
+            {
+              "name": "6.3-check-1",
+              "kind": "non-example",
+              "statement": "`[X][Y]=[Y][X]=[Z]+1`, but X⊗Y and Y⊗X in the worked example are nonisomorphic. Ring commutativity does not lift to a braiding."
+            },
+            {
+              "name": "6.3-check-2",
+              "kind": "computation",
+              "statement": "The dimension homomorphism sends that equation to `2·2=3+1`."
+            },
+            {
+              "name": "6.3-check-3",
+              "kind": "compatibility",
+              "statement": "If `[M⊗N]` is the class of a simple S, both tensor orders have length 1 and are isomorphic to S. This uses positivity of composition multiplicities."
+            }
+          ],
+          "readme_section": "6.3"
+        },
+        {
+          "id": "6.4",
+          "kind": "theorem",
+          "name": null,
+          "title": "Fundamental generators and the integral-domain property",
+          "statement": "Construct the ring homomorphism from the polynomial ring over ℤ in variables\nindexed by Σ to K₀(𝒞), sending a variable to its fundamental simple class.\nProve it is an isomorphism. For a monomial, §4.4 gives one distinguished simple\nconstituent of multiplicity one, labeled by exactly that finite multiset.\nEvery other constituent has strictly smaller dominant classical weight. The\nfinite-type dominance order on dominant weights has finite lower intervals;\nuse induction in this order to obtain a unitriangular change between monomials\nand the simple-class basis. This proves both generation and independence,\nincluding for the infinite set Σ.\n\nThis argument is the Grothendieck-ring consequence of §4.4's classification and\nmultiplicativity of highest spectral data (CP95 Proposition 3.4 and Corollary\n3.5; CP98 Proposition 3.2 and Corollary 3.3); those corollaries state the\nconstituent property, rather than being mislabeled as polynomial-ring theorems.\nDeduce that K₀(𝒞) is an integral domain. The variables are actual isomorphism\nclasses Σ, so spectral periods in twisted types do not create duplicate\npolynomial variables.",
+          "hypotheses": [
+            "Σ is the set of actual fundamental spectral isomorphism classes; the exact commutative ring, classifier and lower-weight constituent statements have been constructed."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "CP95",
+            "where": "Proposition 3.4 and Corollary 3.5 for the triangular constituent input; the polynomial-ring presentation is deduced in this target",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "This argument is the Grothendieck-ring consequence of §4.4's classification and\nmultiplicativity of highest spectral data (CP95 Proposition 3.4 and Corollary\n3.5; CP98 Proposition 3.2 and Corollary 3.3); those corollaries state the\nconstituent property, rather than being mislabeled as polynomial-ring theorems.\nDeduce that K₀(𝒞) is an integral domain. The variables are actual isomorphism\nclasses Σ, so spectral periods in twisted types do not create duplicate\npolynomial variables."
+          ],
+          "prerequisites": [
+            "target:4.4",
+            "target:6.1",
+            "target:6.2",
+            "target:6.3",
+            "mathlib:MvPolynomial"
+          ],
+          "prerequisite_text": "§§4.4 and 6.1–6.3; native multivariate polynomials with finitely\nsupported monomials; finite-type dominance from §1.1.",
+          "api": [],
+          "tests": [
+            {
+              "name": "6.4-check-1",
+              "kind": "degenerate",
+              "statement": "The empty monomial is the class of the unit and its leading simple is the unit. A single variable is already a basis class."
+            },
+            {
+              "name": "6.4-check-2",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾ the monomial labeled {V(a),V(aq²)} equals `[Z]+1`; the lower-weight correction is essential to the basis change."
+            },
+            {
+              "name": "6.4-check-3",
+              "kind": "compatibility",
+              "statement": "Distinct parameters a,b give distinct polynomial variables when m₁=1, even though the ordinary weight characters of V(a),V(b) coincide."
+            },
+            {
+              "name": "6.4-check-4",
+              "kind": "compatibility",
+              "statement": "If mᵢ>1, labels a and ζa with ζᵐⁱ=1 give the same variable. Treating I₀×k× itself as the independent-variable set would make injectivity false."
+            }
+          ],
+          "readme_section": "6.4"
+        }
+      ],
+      "examples": "The local-lattice calculation separates equality in the exact Grothendieck\ngroup from isomorphism of special fibres. The A₁⁽¹⁾ exchange separates the\nsimple-class basis from the monomial basis in fundamental generators.",
+      "dependencies_text": "Layers 2, 4 and 5; GrothendieckEulerForms §§1.1–1.4 and 2.3; native module\nJordan–Hölder theory and polynomial rings."
+    },
+    {
+      "key": "7",
+      "title": "real simple objects and tensor-product structure",
+      "targets": [
+        {
+          "id": "7.1",
+          "kind": "definition",
+          "name": null,
+          "title": "Reality, primeness and strong commutation",
+          "statement": "For a simple M define reality by simplicity of M⊗M. For simple M,N define\nstrong commutation by simplicity of M⊗N, and commutation by the existence of\nan isomorphism M⊗N≅N⊗M. Define a prime simple to be a nonunit simple whose\nfactorization as a tensor product of simple objects has a unit factor.\nReality and primeness are distinct predicates. Prove their invariance under\nisomorphisms, shifts and either dual. Prove symmetry of strong commutation\nusing §6.3; strong commutation implies commutation (KKOP20 §2.1, p.9).\n\nUsing the good-module crystal and tensor results in §§4.2 and 5.2, prove that\nevery Fᵢ(a) is real and that all its tensor powers are simple. The tensor\nproduct of simple crystals and the global basis supply this assertion for the\nunshifted rational model; simultaneous shift supplies it for arbitrary a∈k×\n(K02 Lemma 4.11, Proposition 4.12, Theorem 5.17; KKOP20 Definition 2.4 and the\nparagraph following it, p.9).",
+          "hypotheses": [
+            "The predicates are on nonzero simple objects of 𝒞; the unit is excluded from prime objects; realness is simplicity of the tensor square."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Definition 2.4 and following paragraph, p.9",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For a simple M define reality by simplicity of M⊗M. For simple M,N define\nstrong commutation by simplicity of M⊗N, and commutation by the existence of\nan isomorphism M⊗N≅N⊗M. Define a prime simple to be a nonunit simple whose\nfactorization as a tensor product of simple objects has a unit factor.\nReality and primeness are distinct predicates. Prove their invariance under\nisomorphisms, shifts and either dual. Prove symmetry of strong commutation\nusing §6.3; strong commutation implies commutation (KKOP20 §2.1, p.9).",
+            "Using the good-module crystal and tensor results in §§4.2 and 5.2, prove that\nevery Fᵢ(a) is real and that all its tensor powers are simple. The tensor\nproduct of simple crystals and the global basis supply this assertion for the\nunshifted rational model; simultaneous shift supplies it for arbitrary a∈k×\n(K02 Lemma 4.11, Proposition 4.12, Theorem 5.17; KKOP20 Definition 2.4 and the\nparagraph following it, p.9)."
+          ],
+          "prerequisites": [
+            "target:2.2",
+            "target:2.3",
+            "target:3.1",
+            "target:4.2",
+            "target:4.3",
+            "target:5.2",
+            "target:6.3"
+          ],
+          "prerequisite_text": "§§2.2–2.3, 3.1, 4.2–4.3, 5.2 and 6.3; the source's simple-crystal\ntensor and irreducibility arguments, with their scalar-extension comparison.",
+          "api": [],
+          "tests": [
+            {
+              "name": "7.1-check-1",
+              "kind": "degenerate",
+              "statement": "The unit is real and strongly commutes with every simple; it is not prime under the stated nonunit convention."
+            },
+            {
+              "name": "7.1-check-2",
+              "kind": "degenerate",
+              "statement": "V(a) is real and prime. Primeness follows from dimension 2 and the fact that every one-dimensional object is the unit."
+            },
+            {
+              "name": "7.1-check-3",
+              "kind": "non-example",
+              "statement": "V(a)⊗V(a) is a real simple of dimension 4 but is not prime. Reality alone does not characterize a cluster variable."
+            },
+            {
+              "name": "7.1-check-4",
+              "kind": "degenerate",
+              "statement": "V(a),V(aq²) do not strongly commute: their tensor product has length 2. In fact they do not commute, as the unit-submodule calculation below shows."
+            }
+          ],
+          "readme_section": "7.1"
+        },
+        {
+          "id": "7.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "The real-simple head and socle theorem",
+          "statement": "For a finite-length object, construct its head as the maximal semisimple\nquotient and its socle as the sum of its simple subobjects; prove their\nuniversal characterizations and compatibility with exact duality. If M,N are\nsimple and at least one is real, prove:\n\n- M⊗N and N⊗M have simple head and simple socle;\n- the image of rₘ,ₙ is the head of M⊗N and the socle of N⊗M;\n- Hom(M⊗N,N⊗M) is the one-dimensional span of rₘ,ₙ;\n- if the head and socle of M⊗N are isomorphic, then M⊗N is simple.\n\nThese statements include nonzero images and uniqueness, not just the\nexistence of some simple quotient (KKKO15 Theorem 3.12 and Corollary 3.16;\nKKOP20 Theorem 2.13, p.15). For the Hom statement, KKOP20 explicitly notes\nthat it is not proved in the cited KKKO15 theorem: this target includes the\nadditional tensor-intersection argument, rather than attributing that proof\nto the wrong theorem.\n\nUse the tensor-intersection lemma of §2.3 and the renormalizability and\nnonvanishing composition results of §5.3. The supporting argument owns\nfactorization of specialized R-matrices through images and the\ncriterion that a simple M is real if and only if its nonzero rₘ,ₘ is scalar.\nFor the reverse implication use KKKO15 Theorem 3.12 with its actual scalar\nself-R hypothesis, without assuming reality first. Prove these statements on\nthe actual tensor modules. Prove also that for real simple M the maps sending a simple N to\nthe head of M⊗N, and to the head of N⊗M, are injective on isomorphism\nclasses (KKKO15 Corollary 3.14). Deduce that if one of M,N is real,\ncommutation is equivalent to strong commutation.",
+          "hypotheses": [
+            "M is real simple and N is simple for the main head/socle theorem; the self-R criterion is separately stated with its scalar-self-map hypothesis."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKKO15",
+            "where": "Theorem 3.12 and Corollaries 3.14, 3.16; the extra Hom-dimension proof is the target’s stated KKOP20 Theorem 2.13 argument",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "These statements include nonzero images and uniqueness, not just the\nexistence of some simple quotient (KKKO15 Theorem 3.12 and Corollary 3.16;\nKKOP20 Theorem 2.13, p.15). For the Hom statement, KKOP20 explicitly notes\nthat it is not proved in the cited KKKO15 theorem: this target includes the\nadditional tensor-intersection argument, rather than attributing that proof\nto the wrong theorem.",
+            "Use the tensor-intersection lemma of §2.3 and the renormalizability and\nnonvanishing composition results of §5.3. The supporting argument owns\nfactorization of specialized R-matrices through images and the\ncriterion that a simple M is real if and only if its nonzero rₘ,ₘ is scalar.\nFor the reverse implication use KKKO15 Theorem 3.12 with its actual scalar\nself-R hypothesis, without assuming reality first. Prove these statements on\nthe actual tensor modules. Prove also that for real simple M the maps sending a simple N to\nthe head of M⊗N, and to the head of N⊗M, are injective on isomorphism\nclasses (KKKO15 Corollary 3.14). Deduce that if one of M,N is real,\ncommutation is equivalent to strong commutation."
+          ],
+          "prerequisites": [
+            "target:2.2",
+            "target:2.3",
+            "target:5.3",
+            "target:6.1",
+            "target:7.1"
+          ],
+          "prerequisite_text": "§§2.2–2.3, 5.3, 6.1 and 7.1; the explicit finite-length head/socle\nand tensor-intersection constructions in this target.",
+          "api": [],
+          "tests": [
+            {
+              "name": "7.2-check-1",
+              "kind": "degenerate",
+              "statement": "For X=V(a),Y=V(aq²), the image of rₓ,ᵧ is the unit, which is the head of X⊗Y and the socle of Y⊗X. The reverse image is Z of dimension 3."
+            },
+            {
+              "name": "7.2-check-2",
+              "kind": "computation",
+              "statement": "For M=N=V(a), the whole tensor square is simple, so its head and socle equal the whole four-dimensional module and r is a scalar identity."
+            },
+            {
+              "name": "7.2-check-3",
+              "kind": "degenerate",
+              "statement": "With M the unit, the head operation is N↦N and its cancellation statement is literally equality of simple isomorphism classes."
+            },
+            {
+              "name": "7.2-check-4",
+              "kind": "compatibility",
+              "statement": "A nontrivial self-extension of a simple in an arbitrary finite-length category can have isomorphic head and socle. The final conclusion above is a theorem about these real-factor tensor products, not such categories in general."
+            }
+          ],
+          "readme_section": "7.2"
+        },
+        {
+          "id": "7.3",
+          "kind": "theorem",
+          "name": null,
+          "title": "Pairwise simplicity and simple tensor monomials",
+          "statement": "For any finite ordered list of simple objects M₁,…,Mₙ prove that its tensor\nproduct is simple if and only if each two-factor subproduct with distinct\npositions is simple. Every permutation is then isomorphic to that simple\nproduct. The forward implication uses exact faithful tensoring by a nonzero\nfinite-dimensional module and the adjacent intertwiners; the reverse\nimplication is the pairwise simplicity theorem (H10 Theorem 1.1; KKOP20 §2.1,\np.9, which states it for the generic field and category used here). The\ncomplex-parameter statement of H10 is not silently applied to a different\nbase field; the generic statement in KKOP20 is the source contract.\n\nDeduce that for any family of pairwise strongly commuting real simples, every\nfinitely supported tensor monomial, with repetitions allowed, is real simple\nand independent of the ordering up to isomorphism. Treat n=0 and n=1\nexplicitly. A countable seed needs only this finite construction, not an\ninfinite tensor product.",
+          "hypotheses": [
+            "A finite family of nonzero simple objects of 𝒞; pairwise tensor simplicity is the criterion; repeated factors in real tensor monomials satisfy realness."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "H10",
+            "where": "Theorem 1.1; generic-field formulation explicitly taken from KKOP20 §2.1, p.9",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For any finite ordered list of simple objects M₁,…,Mₙ prove that its tensor\nproduct is simple if and only if each two-factor subproduct with distinct\npositions is simple. Every permutation is then isomorphic to that simple\nproduct. The forward implication uses exact faithful tensoring by a nonzero\nfinite-dimensional module and the adjacent intertwiners; the reverse\nimplication is the pairwise simplicity theorem (H10 Theorem 1.1; KKOP20 §2.1,\np.9, which states it for the generic field and category used here). The\ncomplex-parameter statement of H10 is not silently applied to a different\nbase field; the generic statement in KKOP20 is the source contract."
+          ],
+          "prerequisites": [
+            "target:2.3",
+            "target:5.2",
+            "target:5.3",
+            "target:6.3",
+            "target:7.1",
+            "target:7.2"
+          ],
+          "prerequisite_text": "§§2.3, 5.2–5.3, 6.3 and 7.1–7.2; the generic pairwise theorem\nproved in this target with the cited all-affine source contract.",
+          "api": [],
+          "tests": [
+            {
+              "name": "7.3-check-1",
+              "kind": "degenerate",
+              "statement": "For the empty list the product is the real simple unit; for a one-element list simplicity is the hypothesis and pairwise conditions are vacuous."
+            },
+            {
+              "name": "7.3-check-2",
+              "kind": "compatibility",
+              "statement": "Every V(a) to a nonnegative tensor power is real simple. Repetitions use reality; conditions only on distinct isomorphism classes would not suffice."
+            },
+            {
+              "name": "7.3-check-3",
+              "kind": "computation",
+              "statement": "In the rank-one exchange, X,Z and Y,Z each strongly commute, so Xʳ⊗Zˢ and Yʳ⊗Zˢ are real simple for all r,s≥0. The pair X,Y fails the criterion."
+            }
+          ],
+          "readme_section": "7.3"
+        },
+        {
+          "id": "7.4",
+          "kind": "theorem",
+          "name": null,
+          "title": "Reality from a length-two exchange",
+          "statement": "Let X,Y,M,N be simple objects and let\n`0→X→M⊗N→Y→0` be exact. Assume X⊗N and Y⊗N are simple and M is real.\nProve N is real. This is a local tensor theorem, without an assumption that\nan entire seed remains admissible after every mutation (KKOP20 Proposition\n4.9(ii), p.27).\n\nThe proof obligations include the tensor-intersection argument used for the\nlength-two sequence, the scalar criterion for rₙ,ₙ from §7.2, and cancellation\nof nonzero classes in the integral domain K₀(𝒞) from §6.4. In particular,\nthe simple head/socle theorem implies X≇Y: otherwise M⊗N would be simple.\nCancellation then gives X⊗N≇Y⊗N. The length-two R-matrix argument for these\ndistinct simple products gives a scalar nonzero rₙ,ₙ and hence reality.\nNo numerical Λ-invariant is an unmentioned proof input.",
+          "hypotheses": [
+            "An exact sequence 0→X→M⊗N→Y→0 with M,N,X,Y simple, M real, and X⊗N and Y⊗N simple."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Proposition 4.9(ii), p.27",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Let X,Y,M,N be simple objects and let\n`0→X→M⊗N→Y→0` be exact. Assume X⊗N and Y⊗N are simple and M is real.\nProve N is real. This is a local tensor theorem, without an assumption that\nan entire seed remains admissible after every mutation (KKOP20 Proposition\n4.9(ii), p.27)."
+          ],
+          "prerequisites": [
+            "target:5.3",
+            "target:6.4",
+            "target:7.2",
+            "target:7.3"
+          ],
+          "prerequisite_text": "§§5.3, 6.4 and 7.2–7.3; the length-two tensor argument explicitly\nowned here.",
+          "api": [],
+          "tests": [
+            {
+              "name": "7.4-check-1",
+              "kind": "compatibility",
+              "statement": "Take M=X₀=V(a), N=Y₀=V(aq²), X=Z and Y=1 in the worked example. Both Z⊗Y₀ and 1⊗Y₀ are simple, and the conclusion says Y₀ is real."
+            },
+            {
+              "name": "7.4-check-2",
+              "kind": "non-example",
+              "statement": "An exact sequence with both end terms equal to the unit cannot have the stated real M: the head/socle conclusion would contradict length 2."
+            },
+            {
+              "name": "7.4-check-3",
+              "kind": "degenerate",
+              "statement": "If N is the unit, M⊗N is already simple, so no such exact sequence with two nonzero simple end terms exists. The nonzero convention is essential."
+            }
+          ],
+          "readme_section": "7.4"
+        }
+      ],
+      "examples": "The rank-one exchange tests both possible R-images and a nonprime real\nsimple. The unit tests the empty-product and nonzero conventions used later\nfor exchange monomials.",
+      "dependencies_text": "Layers 2–6; the simple-crystal and generic pairwise results at the exact\nlocators above. No grading or quiver Hecke category is introduced."
+    },
+    {
+      "key": "8",
+      "title": "natural Serre tensor subcategories",
+      "targets": [
+        {
+          "id": "8.1",
+          "kind": "construction",
+          "name": null,
+          "title": "Closure generated by a family of modules",
+          "statement": "For a family of objects of 𝒞, construct the smallest replete full subcategory\ncontaining it and the unit and closed under finite direct sums, subquotients,\nextensions and tensor products. Use intersection of all such object\nproperties and prove its universal property. Construct its inherited abelian,\nessentially small and monoidal structures and the biexact inclusion into 𝒞.\nAn independent requirement of closure under either dual is not part of this\nconstruction (KKOP20 §6, p.32; KKOP22 §7.2, p.64).\n\nProve that simple objects and finite-length coordinates are inherited,\nand that the induced ring homomorphism into K₀(𝒞) is injective. Realness and\nstrong commutation computed inside the subcategory agree with the ambient\npredicates, because subobjects of its objects are retained. Prove monotonicity\nin the generating family and invariance under replacing generators by\nisomorphic objects or applying a simultaneous spectral shift.",
+          "hypotheses": [
+            "An arbitrary generating family in 𝒞; the closure contains the unit and is replete and closed under the operations specified in the statement."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "§6, p.32",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "For a family of objects of 𝒞, construct the smallest replete full subcategory\ncontaining it and the unit and closed under finite direct sums, subquotients,\nextensions and tensor products. Use intersection of all such object\nproperties and prove its universal property. Construct its inherited abelian,\nessentially small and monoidal structures and the biexact inclusion into 𝒞.\nAn independent requirement of closure under either dual is not part of this\nconstruction (KKOP20 §6, p.32; KKOP22 §7.2, p.64)."
+          ],
+          "prerequisites": [
+            "target:2.1",
+            "target:2.2",
+            "target:2.3",
+            "target:6.1",
+            "target:6.3",
+            "target:7.1",
+            "mathlib:CategoryTheory.ObjectProperty.FullSubcategory"
+          ],
+          "prerequisite_text": "§§2.1–2.3, 6.1, 6.3 and 7.1; native full-subcategory interfaces.",
+          "api": [],
+          "tests": [
+            {
+              "name": "8.1-check-1",
+              "kind": "degenerate",
+              "statement": "With no generators, the closure consists of finite sums of the unit. An extension of such objects has only weight 0; eᵢ,fᵢ must act by zero, so the extension splits. Its Grothendieck ring is ℤ."
+            },
+            {
+              "name": "8.1-check-2",
+              "kind": "compatibility",
+              "statement": "If V(a) is a generator, V(a)⊗V(a) and all its subquotients belong to the closure, without declaring the ambient category semisimple."
+            },
+            {
+              "name": "8.1-check-3",
+              "kind": "compatibility",
+              "statement": "Taking the full generating family of objects of 𝒞 returns 𝒞, and the Grothendieck-ring inclusion is the identity."
+            }
+          ],
+          "readme_section": "8.1"
+        },
+        {
+          "id": "8.2",
+          "kind": "construction",
+          "name": null,
+          "title": "Fundamental spectral components",
+          "statement": "On Σ, join two distinct fundamental classes when their modules do not\ncommute. This is a well-defined undirected graph (KKOP22 §2.2, pp.12–14).\nSince fundamental modules are real, §7.2 identifies its edges with nonsimple\ntensor products. Prove these are exactly the pairs for which at least one\nof dₘ,ₙ(1),dₙ,ₘ(1) vanishes. If both are nonzero, the normalized inverse\nidentity specializes to an isomorphism, and §7.2 gives simplicity. Conversely,\nif the tensor is simple, the nonzero primitive r is an isomorphism; its value\non the dominant extremal tensor is d(1) times a nonzero vector, so d(1)≠0\nin both orders. This proof applies to all shifted fundamental classes and\nrequires no unproved good-dual hypothesis. The quotient Σ includes the\ntwisted spectral identifications.\n\nFor a chosen connected component σ₀, define 𝒞⁰ by the Serre tensor closure\nof its fundamental modules. This is the category denoted 𝒞ᵍ⁰, with its chosen\nspectral component, in KKOP22 §2.2. Prove finite valency using the finitely\nmany nonzero roots of the denominator polynomials and the finite number of\nfundamental types. Thus each connected component is countable. A simultaneous\nspectral shift maps a component isomorphically to its image and induces an\nexact tensor equivalence of the associated categories.",
+          "hypotheses": [
+            "Actual fundamental classes Σ including twisted spectral identifications; the edge relation concerns distinct vertices, and a connected component σ₀ is chosen."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP22",
+            "where": "§2.2, pp.12–14",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "On Σ, join two distinct fundamental classes when their modules do not\ncommute. This is a well-defined undirected graph (KKOP22 §2.2, pp.12–14).\nSince fundamental modules are real, §7.2 identifies its edges with nonsimple\ntensor products. Prove these are exactly the pairs for which at least one\nof dₘ,ₙ(1),dₙ,ₘ(1) vanishes. If both are nonzero, the normalized inverse\nidentity specializes to an isomorphism, and §7.2 gives simplicity. Conversely,\nif the tensor is simple, the nonzero primitive r is an isomorphism; its value\non the dominant extremal tensor is d(1) times a nonzero vector, so d(1)≠0\nin both orders. This proof applies to all shifted fundamental classes and\nrequires no unproved good-dual hypothesis. The quotient Σ includes the\ntwisted spectral identifications.",
+            "For a chosen connected component σ₀, define 𝒞⁰ by the Serre tensor closure\nof its fundamental modules. This is the category denoted 𝒞ᵍ⁰, with its chosen\nspectral component, in KKOP22 §2.2. Prove finite valency using the finitely\nmany nonzero roots of the denominator polynomials and the finite number of\nfundamental types. Thus each connected component is countable. A simultaneous\nspectral shift maps a component isomorphically to its image and induces an\nexact tensor equivalence of the associated categories."
+          ],
+          "prerequisites": [
+            "target:4.3",
+            "target:5.2",
+            "target:5.3",
+            "target:7.1",
+            "target:7.2",
+            "target:8.1",
+            "mathlib:Polynomial"
+          ],
+          "prerequisite_text": "§§4.3, 5.2–5.3, 7.1–7.2 and 8.1; finite-root bounds for nonzero\npolynomials and finite paths in a locally finite graph.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "independence of spectral representatives and a graph-equivalence statement for simultaneous shifts;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "the denominator criterion in both orders, the component membership relation and countability;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "inclusion of generators and unit, the Serre tensor universal property, and the injective map K₀(𝒞⁰)→K₀(𝒞)."
+            }
+          ],
+          "tests": [
+            {
+              "name": "8.2-check-1",
+              "kind": "computation",
+              "statement": "In A₁⁽¹⁾, the component containing V(a) consists of V(aq²ⁿ), n∈ℤ. Its edges join consecutive powers; the denominator roots give exactly the ratios q² and q⁻²."
+            },
+            {
+              "name": "8.2-check-2",
+              "kind": "non-example",
+              "statement": "There is no loop at V(a), because its square is simple. A zero-denominator or a rule testing only one tensor order would give the wrong graph."
+            },
+            {
+              "name": "8.2-check-3",
+              "kind": "compatibility",
+              "statement": "For mᵢ>1, the vertices labeled (i,a) and (i,ζa), with ζᵐⁱ=1, are the same vertex. They must not be counted as different neighbors."
+            }
+          ],
+          "readme_section": "8.2"
+        }
+      ],
+      "examples": "A component category and a closure generated by only part of that component\nhave different universal properties. Frozen modules in such a smaller closure\nneed not be tensor-invertible and do not force a localization of its ring.",
+      "dependencies_text": "Layers 2 and 4–7; native graph connectivity and full-subcategory constructions."
+    },
+    {
+      "key": "9",
+      "title": "monoidal seeds and the categorification predicate",
+      "targets": [
+        {
+          "id": "9.1",
+          "kind": "definition",
+          "name": null,
+          "title": "Monoidal seeds and finite tensor monomials",
+          "statement": "Let 𝒟 be a subcategory as in §8.1. Use a finite or countable vertex set J,\na specified subset Jex of mutable vertices, and an integer matrix B with rows\nJ and columns Jex. Its principal part is skew-symmetric and each column has\nfinite support, exactly as in the classical seed supplier.\n\nA monoidal seed is a family Mⱼ, j∈J, of pairwise strongly commuting real\nsimple objects of 𝒟 together with B.\nConstruct its tensor monomial for every finitely supported function J→ℕ,\nprove real simplicity, independence of ordering up to isomorphism, and the\nGrothendieck-ring monomial formula (KKOP20 Definition 6.1, p.32; KKOP22\nDefinition 7.2, p.64). Algebraic independence of the classes is a separate\ncondition on a realization in a cluster algebra; it is not part of this\nmonoidal-seed definition.",
+          "hypotheses": [
+            "𝒟 is as in §8.1, J is finite or countable, Jex⊆J, the exchange matrix has finite column supports and skew-symmetric principal part, and its objects are pairwise strongly commuting real simples."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Definition 6.1, p.32",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "A monoidal seed is a family Mⱼ, j∈J, of pairwise strongly commuting real\nsimple objects of 𝒟 together with B.\nConstruct its tensor monomial for every finitely supported function J→ℕ,\nprove real simplicity, independence of ordering up to isomorphism, and the\nGrothendieck-ring monomial formula (KKOP20 Definition 6.1, p.32; KKOP22\nDefinition 7.2, p.64). Algebraic independence of the classes is a separate\ncondition on a realization in a cluster algebra; it is not part of this\nmonoidal-seed definition."
+          ],
+          "prerequisites": [
+            "target:7.1",
+            "target:7.3",
+            "target:8.1",
+            "roadmap:ClusterAlgebras §§1.1–1.4 and 2.3"
+          ],
+          "prerequisite_text": "§§7.1, 7.3 and 8.1; the exact classical matrix and monomial contracts\nof ClusterAlgebras §§1.1–1.4 and 2.3.",
+          "api": [
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "frozen/mutable decomposition, finite supports of positive and negative exchange columns, and empty monomials;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "replacement of a seed by isomorphic representatives and transport under exact tensor equivalences;"
+            },
+            {
+              "name": null,
+              "role": "target API",
+              "statement": "comparison of its matrix data and monomials with ClusterAlgebras §§1.1–1.4 and 2.3, with the frozen inverse set empty."
+            }
+          ],
+          "tests": [
+            {
+              "name": "9.1-check-1",
+              "kind": "degenerate",
+              "statement": "An empty seed has only the unit monomial and no mutable directions."
+            },
+            {
+              "name": "9.1-check-2",
+              "kind": "non-example",
+              "statement": "A family consisting of two copies of the unit satisfies the categorical family condition, but its classes are algebraically dependent. It cannot realize a two-variable algebraic cluster."
+            },
+            {
+              "name": "9.1-check-3",
+              "kind": "compatibility",
+              "statement": "For X=V(a),Z from the worked example, take J=(x,z), Jex={x} and the column (0,1). This gives a monoidal seed, with Z frozen."
+            }
+          ],
+          "readme_section": "9.1"
+        },
+        {
+          "id": "9.2",
+          "kind": "theorem",
+          "name": null,
+          "title": "Categorical mutation and admissibility",
+          "statement": "For a mutable k put\n`T₊=⊗_(b_ik>0) M_i^(⊗b_ik)` and\n`T₋=⊗_(b_ik<0) M_i^(⊗(−b_ik))`.\nThe products are finite, and an empty product is the unit. A categorical\nmutation consists of a simple replacement M′ₖ, the two exact sequences\n\n```\n0 → T₊ → M_k ⊗ M′_k → T₋ → 0,\n0 → T₋ → M′_k ⊗ M_k → T₊ → 0,\n```\n\nand the assertion that replacing Mₖ by M′ₖ and B by its matrix mutation\nagain gives a monoidal seed. In particular M′ₖ is real and strongly\ncommutes with the unchanged variables. Define admissibility by the existence,\nfor every mutable k, of only the first sequence with M′ₖ simple and commuting\nwith each Mᵢ for i≠k (KKOP20 Definitions 6.2–6.3, pp.32–33).\n\nProve admissibility is equivalent to the existence of categorical mutations\nin all directions of this seed (KKOP20 Proposition 6.4(i)). For the nontrivial\nimplication, the unchanged Mᵢ are real, so commutation gives strong\ncommutation. Section 7.3 makes T₊⊗M′ₖ and T₋⊗M′ₖ simple; §7.4 makes\nM′ₖ real. The head/socle theorem and equality of the two tensor classes then\ngive the reversed exact sequence. Prove uniqueness of the replacement up to\nisomorphism by real-head cancellation and prove involutivity of a single\ncategorical mutation up to isomorphism. This theorem does not assert that a\nnew seed is automatically admissible in every direction.",
+          "hypotheses": [
+            "A monoidal seed and a mutable vertex; categorical mutation requires the stated replacement and two exact sequences, while admissibility assumes only the first sequence with a simple replacement commuting with unchanged objects."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Definitions 6.2–6.3 and Proposition 6.4(i), pp.32–33",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "and the assertion that replacing Mₖ by M′ₖ and B by its matrix mutation\nagain gives a monoidal seed. In particular M′ₖ is real and strongly\ncommutes with the unchanged variables. Define admissibility by the existence,\nfor every mutable k, of only the first sequence with M′ₖ simple and commuting\nwith each Mᵢ for i≠k (KKOP20 Definitions 6.2–6.3, pp.32–33).",
+            "Prove admissibility is equivalent to the existence of categorical mutations\nin all directions of this seed (KKOP20 Proposition 6.4(i)). For the nontrivial\nimplication, the unchanged Mᵢ are real, so commutation gives strong\ncommutation. Section 7.3 makes T₊⊗M′ₖ and T₋⊗M′ₖ simple; §7.4 makes\nM′ₖ real. The head/socle theorem and equality of the two tensor classes then\ngive the reversed exact sequence. Prove uniqueness of the replacement up to\nisomorphism by real-head cancellation and prove involutivity of a single\ncategorical mutation up to isomorphism. This theorem does not assert that a\nnew seed is automatically admissible in every direction."
+          ],
+          "prerequisites": [
+            "target:6.1",
+            "target:6.3",
+            "target:7.2",
+            "target:7.3",
+            "target:7.4",
+            "target:9.1",
+            "roadmap:ClusterAlgebras §1.1"
+          ],
+          "prerequisite_text": "§§6.1, 6.3, 7.2–7.4 and 9.1; classical matrix mutation and its\ninvolutivity from ClusterAlgebras §1.1.",
+          "api": [],
+          "tests": [
+            {
+              "name": "9.2-check-1",
+              "kind": "computation",
+              "statement": "The rank-one pair of sequences has T₊=Z and T₋=1. It mutates X to Y, and the column becomes (0,−1). Mutation back interchanges the two sequences."
+            },
+            {
+              "name": "9.2-check-2",
+              "kind": "non-example",
+              "statement": "A zero exchange column has T₊=T₋=1. It admits no categorical mutation: the two-factor product would have isomorphic head and socle but length 2, contradicting §7.2. Thus the definition does not promise mutations for every matrix/family pair."
+            },
+            {
+              "name": "9.2-check-3",
+              "kind": "non-example",
+              "statement": "Taking M′ₖ=1 cannot meet a nontrivial exchange sequence with two simple end terms, since Mₖ⊗1 is already simple."
+            }
+          ],
+          "readme_section": "9.2"
+        },
+        {
+          "id": "9.3",
+          "kind": "theorem",
+          "name": null,
+          "title": "Decategorification and algebraic mutation",
+          "statement": "For a categorical mutation prove the exact exchange identity\n`[M_k][M′_k]=[T₊]+[T₋]` in K₀(𝒟). Suppose a ring realization of the\nclassical cluster algebra identifies the current cluster variables with the\nclasses [Mᵢ], and that this realization is injective. Compare the categorical\nreplacement with the algebraic exchange variable in the fraction field.\nCancellation by the nonzero class [Mₖ] is justified by the domain property\ninherited from K₀(𝒞); it is not an assumption that [Mₖ] is a unit of K₀(𝒟).\nProve equality with the exchange variable and transport the matrix mutation.\n\nMore intrinsically, when [Mᵢ] are algebraically independent, construct the\nembedding of the rational function field in these classes into the fraction\nfield of K₀(𝒟), and show that a categorical mutation realizes the supplier's\nexchange formula there. Extend this comparison by induction over a finite\nmutation word for which categorical mutations have been supplied. Countably\nmany vertices introduce no infinite product into a fixed exchange or word\n(KKOP22 §7.1 and Definition 7.3; the exchange comparison follows from the two\nexact sequences).",
+          "hypotheses": [
+            "A supplied categorical mutation and an injective ring realization identifying the seed classes, or the stated algebraic independence; finite-word comparison assumes the corresponding mutations exist."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP22",
+            "where": "§7.1 and Definition 7.3; the exchange comparison is deduced from the stated exact sequences",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "More intrinsically, when [Mᵢ] are algebraically independent, construct the\nembedding of the rational function field in these classes into the fraction\nfield of K₀(𝒟), and show that a categorical mutation realizes the supplier's\nexchange formula there. Extend this comparison by induction over a finite\nmutation word for which categorical mutations have been supplied. Countably\nmany vertices introduce no infinite product into a fixed exchange or word\n(KKOP22 §7.1 and Definition 7.3; the exchange comparison follows from the two\nexact sequences)."
+          ],
+          "prerequisites": [
+            "target:6.3",
+            "target:6.4",
+            "target:8.1",
+            "target:9.1",
+            "target:9.2",
+            "roadmap:ClusterAlgebras §§1.1–1.4 and 2.3"
+          ],
+          "prerequisite_text": "§§6.3–6.4, 8.1 and 9.1–9.2; the classical exchange-field and\nfinite-word pattern contracts of ClusterAlgebras §§1.1–1.4 and 2.3.",
+          "api": [],
+          "tests": [
+            {
+              "name": "9.3-check-1",
+              "kind": "compatibility",
+              "statement": "In the example, the formula is `x y=z+1`, so y=(z+1)/x in the fraction field. The categorical module Y lies in 𝒟 even though X is not invertible as a module."
+            },
+            {
+              "name": "9.3-check-2",
+              "kind": "non-example",
+              "statement": "The frozen class [Z] is not a unit: its dimension is 3, which is not a unit in ℤ. Its inclusion as a frozen variable therefore does not invert it."
+            },
+            {
+              "name": "9.3-check-3",
+              "kind": "non-example",
+              "statement": "Two unit variables from §9.1 do not provide an injective polynomial realization. The matrix data alone cannot make them algebraically independent or define the required rational-function embedding."
+            }
+          ],
+          "readme_section": "9.3"
+        },
+        {
+          "id": "9.4",
+          "kind": "definition",
+          "name": null,
+          "title": "Monoidal categorification in the KKOP sense",
+          "statement": "Let 𝒜 be an ordinary geometric cluster algebra supplied by ClusterAlgebras,\nwith the frozen inverse set empty, and let 𝒟 be as in §8.1. Define a monoidal\ncategorification to be a specified ring isomorphism\n`Φ : 𝒜 ≅ K₀(𝒟)` such that for every cluster monomial m there exists a real\nsimple object L of 𝒟 with Φ(m)=[L]. The quantifier includes all seeds reached\nby finite mutation words, all finitely supported nonnegative exponents and\nthe empty monomial (KKOP20 Introduction, pp.2–3).\n\nProve invariance of this property under exact tensor equivalence of 𝒟 and\nunder a specified isomorphism of cluster patterns. Given a family of\ncategorical seeds realizing every finite mutation word from an initial seed,\nand a ring isomorphism identifying its initial variables, use §9.3 and then\n§7.3 to prove the categorification property. The required ring isomorphism\nand existence of all the categorical mutations remain explicit application\ndata; a single exchange sequence does not supply them.\n\nProve uniqueness up to isomorphism of the real simple L representing a given\ncluster monomial, by the simple-class basis. Distinguish this predicate from\nthe stronger convention that all real simple classes are cluster monomials,\nor that all prime real simple classes are cluster variables. Neither converse\nbelongs to the stated KKOP definition. A grading and a quantum cluster\nparameter would require additional structures outside this endpoint.",
+          "hypotheses": [
+            "An ordinary geometric cluster algebra with noninverted frozen coefficients, 𝒟 as in §8.1, and a specified ring isomorphism; the sufficient criterion explicitly assumes categorical mutation coverage for every finite word."
+          ],
+          "standing_hypotheses": "Conventions, reproduced in the top-level conventions field",
+          "locator": {
+            "source": "KKOP20",
+            "where": "Introduction, pp.2–3",
+            "provenance_kind": "primary-publication"
+          },
+          "reference_passages": [
+            "Let 𝒜 be an ordinary geometric cluster algebra supplied by ClusterAlgebras,\nwith the frozen inverse set empty, and let 𝒟 be as in §8.1. Define a monoidal\ncategorification to be a specified ring isomorphism\n`Φ : 𝒜 ≅ K₀(𝒟)` such that for every cluster monomial m there exists a real\nsimple object L of 𝒟 with Φ(m)=[L]. The quantifier includes all seeds reached\nby finite mutation words, all finitely supported nonnegative exponents and\nthe empty monomial (KKOP20 Introduction, pp.2–3)."
+          ],
+          "prerequisites": [
+            "target:6.1",
+            "target:7.3",
+            "target:8.1",
+            "target:9.1",
+            "target:9.2",
+            "target:9.3",
+            "roadmap:ClusterAlgebras §§1.1–1.4 and 2.3"
+          ],
+          "prerequisite_text": "§§6.1, 7.3, 8.1 and 9.1–9.3; the supplied ordinary cluster algebra,\nits full finite-word pattern and its cluster-monomial predicate.",
+          "api": [],
+          "tests": [
+            {
+              "name": "9.4-check-1",
+              "kind": "degenerate",
+              "statement": "The empty monomial maps to 1=[1], and the unit is real simple."
+            },
+            {
+              "name": "9.4-check-2",
+              "kind": "degenerate",
+              "statement": "For the cluster algebra ℤ on the empty vertex set and the category of finite sums of the unit, the dimension/class isomorphism is a monoidal categorification. This checks a complete case, not just an exchange."
+            },
+            {
+              "name": "9.4-check-3",
+              "kind": "computation",
+              "statement": "The worked A₁⁽¹⁾ exchange verifies §9.2 and its two adjacent clusters. It is not, by itself, a proof of a ring isomorphism or a categorification theorem for the full component category 𝒞⁰."
+            },
+            {
+              "name": "9.4-check-4",
+              "kind": "compatibility",
+              "statement": "The real but nonprime V(a)⊗V(a) can represent a square of a cluster variable. Requiring every monomial to be prime would contradict this case."
+            }
+          ],
+          "readme_section": "9.4"
+        }
+      ],
+      "examples": "The empty categorification tests the unit and ring conventions. The nontrivial\nrank-one exchange tests frozen coefficients, both tensor orders, exactness and\nrealness without assuming a global mutation theorem.",
+      "dependencies_text": "Layers 6–8; ClusterAlgebras §§1.1–1.4 and 2.3. The output is a predicate and\nits comparison API on actual quantum affine categories, together with the\nlocal mutation theorem, not a supplied categorification of every such category."
+    }
+  ],
+  "suppliers": [
+    {
+      "roadmap": "QuantumEnvelopingAlgebras",
+      "sections": [
+        "§§1.1–1.3a",
+        "§1.3a",
+        "§§1.1–1.3a and 2.1",
+        "§§1.4–1.5"
+      ],
+      "what": "Consume §§0.1 and 1.0–1.3a for the full datum, intrinsic generic algebra, Hopf\nstructure, triangular decomposition and Serre comparison; §§1.4–1.5 for the\nhomogeneous nilpotent/Borel pairings; and §2.1 for braid operators.\n\nWhat QuantumEnvelopingAlgebras must provide (gap:completed-canonical-element):\nfor every finite-rank symmetrizable datum over ℚ(q), construct from the\ndegreewise nondegenerate nilpotent pairing the normalized quasi-R element Ξ\nin `∏_(β∈Q⁺) U(e)⁺_β⊗U(f)⁻_(-β)`, characterized by Ξ₀=1 and\n`Ξ Δ(x)=barΔ(x) Ξ`, with its completed coproduct identities.\nHere the halves U(e)⁺ and U(f)⁻ are generated by the source eᵢ and fᵢ,\nand `barΔ=(bar⊗bar)∘Δ∘bar`. The construction includes the comparison\nwith the degreewise canonical tensors of the pairing in §1.4, their basis\nindependence, and the precise normalization and generator transport giving Ξ.\nThe raw inverse-pairing tensor is not identified with Ξ without that\ncomparison. The Borel extension in §1.5 supplies the algebraic identities;\nits infinite degree-zero torus is not part of the finite-dimensional dual\npairs. Section 5.1 constructs the affine spectral action, toral factor and\nscalar extension (K02 §7, (7.1)–(7.6), pp.29–31).",
+      "declared_gaps": [
+        "completed-canonical-element"
+      ]
+    },
+    {
+      "roadmap": "KacMoody",
+      "sections": [
+        "§§0.1–0.3 and 2.1"
+      ],
+      "what": "Consume §§0.1–0.3 for the realization, lattices and root-annihilating directions,\nand §2.1 for its Weyl group. Section 1.1 here supplies the affine null directions,\nfinite classical Weyl group and translations. No quantum crystal statement is\nimported from a classical path-crystal construction.",
+      "declared_gaps": []
+    },
+    {
+      "roadmap": "KacMoodyPartII",
+      "sections": [],
+      "what": "Use the general quantum representation theory assigned to this supplier by the\nscope of KacMoody and QuantumEnvelopingAlgebras. The following named contracts\nare the required inputs. They use the generic full-root-datum algebra; the\nderived affine algebra, the Pcl-graded category and the periodic fundamental\nquotients remain constructions of this roadmap.\n\nWhat KacMoodyPartII must provide (gap:integrable-string-decomposition): for\nevery type-1 integrable rank-one module over ℚ(q) or a field extension, with\nparameter `q_i=q^(d_i)`, provide the unique finite decomposition\n`v=Σ_(r≥max(0,−n)) f_i^(r)v_r` of each Kᵢ-weight-n vector, where\n`e_i v_r=0` and `K_i v_r=q_i^(n+2r)v_r`, in the specified generator\nnormalization.\nThe rank-one module need not be finite-dimensional. Apply the theorem to an\ni-restriction of either a full-P module or a Pcl-graded U′-module; no extension\nof a finite-dimensional evaluation module to the degree torus is required\n(K91 §2.2, (2.2.1)–(2.2.4), journal p.473).\n\nWhat KacMoodyPartII must provide (gap:universal-extremal-module): for every\nfinite-rank symmetrizable full root datum and λ∈P over ℚ(q), provide the\nuniversal integrable module E(λ) representing extremal vectors, with its\ncanonical normalized extremal family.\nFor n=⟨hᵢ,wλ⟩ the family satisfies\n`e_i u_w=0, f_i^(n)u_w=u_(s_i w)` when n≥0, and\n`f_i u_w=0, e_i^(-n)u_w=u_(s_i w)` when n≤0; both annihilations hold at\nn=0. The zero extremal vector is allowed. The contract is the linear-relations\nconstruction and its universal property, not a choice of an unspecified\nmodule (K02 §3.1, (3.1)–(3.3), pp.8–9).\n\nWhat KacMoodyPartII must provide (gap:extremal-global-basis-model): for each\nsuch E(λ), provide its balanced rational lower global-basis model as the\nstar-extremal quotient of the all-symmetrizable modified algebra, with the regular\nordinary and star structures on the ambient modified crystal, normalized Weyl\ntransport and compatibility\nwith the rank-one divided-power filtrations.\nHere F₀=ℚ(q), A₀ consists of rational functions regular at 0, A∞=bar(A₀),\nA=ℚ[q,q⁻¹] and bar(q)=q⁻¹. The Laurent form E_A(λ) and crystal lattice\nL(λ) satisfy that\n`L(λ) ∩ bar(L(λ)) ∩ E_A(λ) → L(λ)/qL(λ)` is an isomorphism of ℚ-vector\nspaces; its inverse on the crystal basis is the global basis. The sector\ncrystal is `B(∞)⊗T_λ⊗B(−∞)`, and the quotient keeps precisely the elements\nwhose star is extremal. Regularity and the commuting ordinary/star structures\nare asserted on the ambient modified crystal; the star Weyl maps compare the\nextremal models at λ and wλ, rather than preserving every fixed λ-sector\n(K02 §§2.2 and 3.1). The general half/highest-weight bases, modified-sector\nconstruction and star-extremal quotient are supplier proof obligations of this\nmodel (K91 Theorems 2, 4, 6 and 7; K94 Proposition 2.1.1, Theorems 2.1.2,\n3.1.1 and 4.3.2, Lemma 8.2.1 and Proposition 8.2.2). The finite-type\nconstruction of QuantumEnvelopingAlgebras §5.3 alone is not this contract.\n\nWhat KacMoodyPartII must provide (gap:crystal-schubert-strata): for the\nnegative-half crystal of every finite-rank symmetrizable datum, provide the\nBruhat-indexed Schubert subsets and disjoint strata with reduced-word\nindependence, star inversion and the maximal-raising identities.\nIn particular `B_w(∞)` is the set of lowering words along a reduced expression\nof w, `B^w(∞)=B_w(∞)∖⋃_(v<w)B_v(∞)`, the strata partition B(∞),\n`B^w(∞)*=B^(w^-1)(∞)`, and for sᵢw<w one has\n`eTilde_i^max B^w(∞)⊆B^(s_i w)(∞)` and `fTilde_i B^w(∞)⊆B^w(∞)` for the crystal\noperators (K02 §2.3, (2.7)–(2.9), pp.6–7). Section 4.2 proves the affine\nbounded-length covering and finite-multiplicity consequences of these inputs.\n\nWhat KacMoodyPartII must provide (gap:crystal-tensor-rule): for type-1\nintegrable modules over ℚ(q) with crystal bases graded by P or by a quotient\nPbar on which every simple-coroot pairing descends, provide the\ncrystal-lattice tensor-product theorem and its\nsignature rule for the specified coproduct and generator normalization.\nThe tensor lattice is the A₀-tensor product of the two crystal lattices;\nits crystal is the tensor product of the two bases with the corresponding\nKashiwara operators. The affine application uses Pbar=Pcl. Section 4.3\nsupplies the affine finite simple-crystal\ntheorems and the fundamental quotient to which this rule applies\n(K91 §2.4, Theorem 1 and (2.4.3), journal pp.475–476, with the coproduct\nΔ₋ of (1.4.3), p.472; K02 §4.2 for affinization of the crystal basis).\n\nThese contracts use rational forms. In comparing conventions, the generators\n`eHat_i=K_i^-1 E_i`, `fHat_i=F_i K_i` of QuantumEnvelopingAlgebras §1.2\nand those here satisfy `e_i=q_i^2 eHat_i`, `f_i=q_i^-2 fHat_i`. Transport\nthe module, bar and lattices through this algebra equivalence; the bar is\nconjugated by the equivalence, and the crystal lattices are transported with\nit. Module actions are transported together with the lattices; §4.3 identifies\nany induced spectral relabeling of the fundamental modules. Section 4.2\nalso compares the positive ramification of the source parameter before\nextending scalars to k.",
+      "declared_gaps": [
+        "integrable-string-decomposition",
+        "universal-extremal-module",
+        "extremal-global-basis-model",
+        "crystal-schubert-strata",
+        "crystal-tensor-rule"
+      ]
+    },
+    {
+      "roadmap": "QuantumGroups",
+      "sections": [
+        "§8.5"
+      ],
+      "what": "Consume §8.5 only for the general finite Hopf-module category and tensor/dual\ninterfaces just listed. Its complex rank-one algebra is not substituted for\nthe generic-parameter affine algebra. Section 2.1 applies the supplied string\nidentities to the rank-one subalgebras of the latter over k.",
+      "declared_gaps": []
+    },
+    {
+      "roadmap": "GrothendieckEulerForms",
+      "sections": [
+        "§§1.1–1.4",
+        "§§1.1–1.4 and 2.3"
+      ],
+      "what": "Consume §§1.1–1.4 for generators, relations, choice independence and bilinear\ndescent, and §2.3 for abelian Grothendieck groups. No Artinian-ring or semisimplicity hypothesis is\nadded to the quantum affine algebra.",
+      "declared_gaps": []
+    },
+    {
+      "roadmap": "ClusterAlgebras",
+      "sections": [
+        "§§1.1–1.4 and 2.3",
+        "§1.1"
+      ],
+      "what": "Consume §§1.1–1.4 for column matrix mutation, ordinary geometric seeds,\nfinite-word patterns and their cluster algebras with the chosen frozen inverse\nset empty. Section 2.3's locally finite classical patterns supplies the extension\nto arbitrary mutable index sets with finite column supports. Restrict to\ncountable indices and skew-symmetric principal part for the KKOP interface.\nThe cluster-algebra ring realization is supplied by §§1.3 and 1.6; the\ncategorical lift and its comparison are constructed in Layer 9.",
+      "declared_gaps": []
+    }
+  ],
+  "consumers": [
+    {
+      "roadmap": null,
+      "what": "Constructions of Hernandez–Leclerc subcategories can use §8.1 to define their actual closure and §8.2 for spectral components, then supply a specific seed, ring isomorphism and mutation family to §9.4."
+    },
+    {
+      "roadmap": null,
+      "what": "Quantum affine Schur–Weyl functors can use the intrinsic source algebra, spectral families, denominator and exact tensor interfaces. An exact tensor functor induces the native map of Grothendieck rings in §6.3."
+    },
+    {
+      "roadmap": null,
+      "what": "Studies of R-matrix invariants can start from the formal scalar coefficient, rational normalization and local pole orders in Layer 5. Their further integer invariants are not prerequisites for the predicate defined here."
+    },
+    {
+      "roadmap": null,
+      "what": "Categorifications with a grading or a quantum cluster parameter must add their grading, shift action and quantum multiplication comparison. They do not arise by relabeling q in the ordinary endpoint above."
+    }
+  ],
+  "gaps": [
+    {
+      "slug": "completed-canonical-element",
+      "title": "completed canonical element extending the homogeneous pairings of §§1.4–1.5",
+      "neededBy": [
+        "5.1"
+      ],
+      "detail": "for every finite-rank symmetrizable datum over ℚ(q), construct from the\ndegreewise nondegenerate nilpotent pairing the normalized quasi-R element Ξ\nin `∏_(β∈Q⁺) U(e)⁺_β⊗U(f)⁻_(-β)`, characterized by Ξ₀=1 and\n`Ξ Δ(x)=barΔ(x) Ξ`, with its completed coproduct identities.\nHere the halves U(e)⁺ and U(f)⁻ are generated by the source eᵢ and fᵢ,\nand `barΔ=(bar⊗bar)∘Δ∘bar`. The construction includes the comparison\nwith the degreewise canonical tensors of the pairing in §1.4, their basis\nindependence, and the precise normalization and generator transport giving Ξ.\nThe raw inverse-pairing tensor is not identified with Ξ without that\ncomparison. The Borel extension in §1.5 supplies the algebraic identities;\nits infinite degree-zero torus is not part of the finite-dimensional dual\npairs. Section 5.1 constructs the affine spectral action, toral factor and\nscalar extension (K02 §7, (7.1)–(7.6), pp.29–31).",
+      "needs": "for every finite-rank symmetrizable datum over ℚ(q), construct from the degreewise nondegenerate nilpotent pairing the normalized quasi-R element Ξ in `∏_(β∈Q⁺) U(e)⁺_β⊗U(f)⁻_(-β)`, characterized by Ξ₀=1 and `Ξ Δ(x)=barΔ(x) Ξ`, with its completed coproduct identities.",
+      "supplier": "QuantumEnvelopingAlgebras",
+      "section": "Proposed target: completed canonical element extending the homogeneous pairings of §§1.4–1.5",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "ff19039bab0bfb2ba7a3355526dde57321ad2eb6af971e5cc2956a09495cf432"
+    },
+    {
+      "slug": "integrable-string-decomposition",
+      "title": "type-1 integrable rank-one strings",
+      "neededBy": [
+        "2.1",
+        "4.2"
+      ],
+      "detail": "for\nevery type-1 integrable rank-one module over ℚ(q) or a field extension, with\nparameter `q_i=q^(d_i)`, provide the unique finite decomposition\n`v=Σ_(r≥max(0,−n)) f_i^(r)v_r` of each Kᵢ-weight-n vector, where\n`e_i v_r=0` and `K_i v_r=q_i^(n+2r)v_r`, in the specified generator\nnormalization.\nThe rank-one module need not be finite-dimensional. Apply the theorem to an\ni-restriction of either a full-P module or a Pcl-graded U′-module; no extension\nof a finite-dimensional evaluation module to the degree torus is required\n(K91 §2.2, (2.2.1)–(2.2.4), journal p.473).",
+      "needs": "for every type-1 integrable rank-one module over ℚ(q) or a field extension, with parameter `q_i=q^(d_i)`, provide the unique finite decomposition `v=Σ_(r≥max(0,−n)) f_i^(r)v_r` of each Kᵢ-weight-n vector, where `e_i v_r=0` and `K_i v_r=q_i^(n+2r)v_r`, in the specified generator normalization.",
+      "supplier": "KacMoodyPartII",
+      "section": "Proposed target: type-1 integrable rank-one strings",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "319055945f91f7894c98c83c81c73951f3fa46acdaacec19cfa1ecf8d5c97da7"
+    },
+    {
+      "slug": "universal-extremal-module",
+      "title": "universal integrable extremal modules",
+      "neededBy": [
+        "4.1"
+      ],
+      "detail": "for every\nfinite-rank symmetrizable full root datum and λ∈P over ℚ(q), provide the\nuniversal integrable module E(λ) representing extremal vectors, with its\ncanonical normalized extremal family.\nFor n=⟨hᵢ,wλ⟩ the family satisfies\n`e_i u_w=0, f_i^(n)u_w=u_(s_i w)` when n≥0, and\n`f_i u_w=0, e_i^(-n)u_w=u_(s_i w)` when n≤0; both annihilations hold at\nn=0. The zero extremal vector is allowed. The contract is the linear-relations\nconstruction and its universal property, not a choice of an unspecified\nmodule (K02 §3.1, (3.1)–(3.3), pp.8–9).",
+      "needs": "for every finite-rank symmetrizable full root datum and λ∈P over ℚ(q), provide the universal integrable module E(λ) representing extremal vectors, with its canonical normalized extremal family.",
+      "supplier": "KacMoodyPartII",
+      "section": "Proposed target: universal integrable extremal modules",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "b0f4553e7e46445f5789e0081eb006d912bdda26f52c9ca93ba6ac2d4918c478"
+    },
+    {
+      "slug": "extremal-global-basis-model",
+      "title": "rational global-basis models of extremal modules",
+      "neededBy": [
+        "4.2"
+      ],
+      "detail": "for each\nsuch E(λ), provide its balanced rational lower global-basis model as the\nstar-extremal quotient of the all-symmetrizable modified algebra, with the regular\nordinary and star structures on the ambient modified crystal, normalized Weyl\ntransport and compatibility\nwith the rank-one divided-power filtrations.\nHere F₀=ℚ(q), A₀ consists of rational functions regular at 0, A∞=bar(A₀),\nA=ℚ[q,q⁻¹] and bar(q)=q⁻¹. The Laurent form E_A(λ) and crystal lattice\nL(λ) satisfy that\n`L(λ) ∩ bar(L(λ)) ∩ E_A(λ) → L(λ)/qL(λ)` is an isomorphism of ℚ-vector\nspaces; its inverse on the crystal basis is the global basis. The sector\ncrystal is `B(∞)⊗T_λ⊗B(−∞)`, and the quotient keeps precisely the elements\nwhose star is extremal. Regularity and the commuting ordinary/star structures\nare asserted on the ambient modified crystal; the star Weyl maps compare the\nextremal models at λ and wλ, rather than preserving every fixed λ-sector\n(K02 §§2.2 and 3.1). The general half/highest-weight bases, modified-sector\nconstruction and star-extremal quotient are supplier proof obligations of this\nmodel (K91 Theorems 2, 4, 6 and 7; K94 Proposition 2.1.1, Theorems 2.1.2,\n3.1.1 and 4.3.2, Lemma 8.2.1 and Proposition 8.2.2). The finite-type\nconstruction of QuantumEnvelopingAlgebras §5.3 alone is not this contract.",
+      "needs": "for each such E(λ), provide its balanced rational lower global-basis model as the star-extremal quotient of the all-symmetrizable modified algebra, with the regular ordinary and star structures on the ambient modified crystal, normalized Weyl transport and compatibility with the rank-one divided-power filtrations.",
+      "supplier": "KacMoodyPartII",
+      "section": "Proposed target: rational global-basis models of extremal modules",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "b0c7fabbe7e30c00f5cd359c7fe9abb7ce293c2f7fd4fd33d7ac19ffbd51f474"
+    },
+    {
+      "slug": "crystal-schubert-strata",
+      "title": "Schubert strata of the negative-half crystal",
+      "neededBy": [
+        "4.2"
+      ],
+      "detail": "for the\nnegative-half crystal of every finite-rank symmetrizable datum, provide the\nBruhat-indexed Schubert subsets and disjoint strata with reduced-word\nindependence, star inversion and the maximal-raising identities.\nIn particular `B_w(∞)` is the set of lowering words along a reduced expression\nof w, `B^w(∞)=B_w(∞)∖⋃_(v<w)B_v(∞)`, the strata partition B(∞),\n`B^w(∞)*=B^(w^-1)(∞)`, and for sᵢw<w one has\n`eTilde_i^max B^w(∞)⊆B^(s_i w)(∞)` and `fTilde_i B^w(∞)⊆B^w(∞)` for the crystal\noperators (K02 §2.3, (2.7)–(2.9), pp.6–7). Section 4.2 proves the affine\nbounded-length covering and finite-multiplicity consequences of these inputs.",
+      "needs": "for the negative-half crystal of every finite-rank symmetrizable datum, provide the Bruhat-indexed Schubert subsets and disjoint strata with reduced-word independence, star inversion and the maximal-raising identities.",
+      "supplier": "KacMoodyPartII",
+      "section": "Proposed target: Schubert strata of the negative-half crystal",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "081afebd8dd6a631c1ea5ee2364e6b50ad7c4ce217578136365bafc21220bddc"
+    },
+    {
+      "slug": "crystal-tensor-rule",
+      "title": "tensor products of crystal lattices",
+      "neededBy": [
+        "4.3"
+      ],
+      "detail": "for type-1\nintegrable modules over ℚ(q) with crystal bases graded by P or by a quotient\nPbar on which every simple-coroot pairing descends, provide the\ncrystal-lattice tensor-product theorem and its\nsignature rule for the specified coproduct and generator normalization.\nThe tensor lattice is the A₀-tensor product of the two crystal lattices;\nits crystal is the tensor product of the two bases with the corresponding\nKashiwara operators. The affine application uses Pbar=Pcl. Section 4.3\nsupplies the affine finite simple-crystal\ntheorems and the fundamental quotient to which this rule applies\n(K91 §2.4, Theorem 1 and (2.4.3), journal pp.475–476, with the coproduct\nΔ₋ of (1.4.3), p.472; K02 §4.2 for affinization of the crystal basis).",
+      "needs": "for type-1 integrable modules over ℚ(q) with crystal bases graded by P or by a quotient Pbar on which every simple-coroot pairing descends, provide the crystal-lattice tensor-product theorem and its signature rule for the specified coproduct and generator normalization.",
+      "supplier": "KacMoodyPartII",
+      "section": "Proposed target: tensor products of crystal lattices",
+      "status": "declared supplier contract, not an assertion that a target exists",
+      "readme_contract_sha256": "e338a38f93eb20e3778a051176a31732c41fdcbf0b69582b5fd79cbec3a979c2"
+    }
+  ],
+  "native_contracts": {
+    "Mathlib": "- `ModuleCat`, `ModuleCat.restrictScalars`,\n  `CategoryTheory.ObjectProperty.FullSubcategory`, `CategoryTheory.Abelian`,\n  `CategoryTheory.Simple` and `CategoryTheory.EssentiallySmall`: the native\n  category, subcategory, exactness, simplicity and size notions.\n- `TensorProduct`, `LinearMap`, `Module.Dual`, `Module.Finite`, `FiniteDimensional`,\n  `Submodule`, `IsNoetherian`, `IsArtinian` and `CompositionSeries`:\n  algebraic module operations and finite-length inputs.\n  `isNoetherian_of_tower` in `RingTheory/Noetherian/Basic.lean` and\n  `isArtinian_of_tower` in `RingTheory/Artinian/Module.lean` pass finite length\n  from a scalar field to an algebra action. `IsFiniteLength` is a proposition,\n  not a typeclass.\n- `LaurentPolynomial`, `LaurentPolynomial.eval₂`, `Polynomial`, `RatFunc`,\n  `Localization.AtPrime`, `PowerSeries` and `LaurentSeries`: the scalar\n  carriers for spectral families, local lattices and formal intertwiners.\n- `Algebra.adjoin`, `RingQuot`, `AlgHom`, `AlgEquiv`, `AddMonoidAlgebra` and\n  finitely supported functions: subalgebras, quotients, comparison maps and\n  graded constructions. A new mathematical structure is installed on these\n  carriers only after its defining laws are proved.\n- `jacobson_density` in `RingTheory/SimpleModule/Basic.lean`: interpolation\n  on a finite set by an algebra element for a semisimple module, for maps\n  linear over its endomorphism ring. Section 4.2 uses it to prove absolute\n  simplicity of the rational models with scalar endomorphisms.",
+    "Tau Ceti": "- `TauCeti.FiniteHopfModuleCat` in\n  `Algebra/Category/FiniteHopfModuleCat/Basic.lean` is the full subcategory of\n  algebra modules finite-dimensional over the scalar field; the carrier itself\n  needs only an algebra, despite its name. Its `incl`, `ofShrink` and\n  `ofShrinkEquiv` provide inclusion and universe comparison. `Monoidal.lean`\n  supplies tensor through a bialgebra coproduct. `RightRigid.lean` supplies\n  `dual` and its evaluation; `Rigid.lean` supplies `leftDual` and\n  `rigidCategory` with an explicit proof that the antipode is bijective.\n- `TauCeti.AbelianK0` and `TauCeti.AbelianK0.of_shortExact` in\n  `CategoryTheory/GrothendieckGroup/Abelian.lean`: the native exact Grothendieck\n  group of an essentially small abelian category.\n  `TauCeti.ExactK0.instRing`, `TauCeti.ExactK0.of_mul_of`,\n  `TauCeti.ExactK0.liftRingHom` and `TauCeti.ExactK0.mapRingHom` in\n  `CategoryTheory/GrothendieckGroup/Monoidal/Exact.lean` supply the ring and its\n  functoriality for a biexact monoidal category. Its braided-category\n  commutativity instance is not an input here.\n- `TauCeti.jordanHolderMultiplicity` in\n  `RingTheory/CompositionSeries/Multiplicity.lean` and\n  `TauCeti.jordanHolderMultiplicity_eq_add_of_exact` in\n  `RingTheory/CompositionSeries/Additivity.lean` apply to finite-length modules\n  over an arbitrary ring. `ModuleCat.prop_of_isFiniteLength` in\n  `Algebra/Category/ModuleCat/FiniteLength.lean` supplies induction through\n  simple objects and short exact sequences. Layer 6 descends these actual\n  multiplicities; it does not rebuild Jordan–Hölder theory."
+  },
+  "worked_compatibility_test": "This calculation fixes the coproduct, parameter and tensor-order conventions\nused throughout. With d₀=d₁=1, let V(a) have basis v₊,v₋ and actions\n\n```\nK₁ = diag(q,q⁻¹),        K₀ = K₁⁻¹,\ne₁ v₋ = v₊,             e₁ v₊ = 0,\nf₁ v₊ = v₋,             f₁ v₋ = 0,\ne₀ = a f₁,              f₀ = a⁻¹ e₁.\n```\n\nVerify the Cartan, commutator and affine Serre relations in these matrices.\nThe module is simple, type 1 and level zero. These identities define the\nparameter a used here; a source with a different evaluation map must be\ncompared through these actions (CP95 §4, Propositions 4.1–4.2).\n\nFor the normalized intertwiner V(a)⊗V(b)→V(b)⊗V(a), put t=b/a. In the\nfactor-labeled ordered bases (++,+−,−+,−−), its top and bottom entries are\n1 and its middle block is\n\n```\n                 1       [ q²−1        q(1−t)   ]\n              -------    [                       ].\n               q²−t      [ q(1−t)      t(q²−1)  ]\n```\n\nMultiplying these matrices with the generator actions on both tensor orders\nverifies the intertwining equations; the value on ++ fixes normalization.\nThe determinant of the full matrix is `(q²t−1)/(q²−t)`, and the monic\nminimal denominator is t−q². At t=q² the denominator-cleared matrix has rank\n1. At t=q⁻² the normalized matrix is regular of rank 3. At t=1 it is the\nidentity in these factor-labeled bases. Thus invertibility over k(t) does not\nsupply invertibility at all spectral values.\n\nThe vector `u=+−−q(−+)` is killed by e₁ and f₁. Direct substitution gives\n\n```\ne₀u = (a/q−qb) --,       f₀u = (1/(bq)−q/a) ++.\n```\n\nIt spans a unit submodule precisely when b/a=q⁻². The functional with row\n`(0,1,−q,0)` is a quotient map to the unit precisely when b/a=q².\nFor X=V(a), Y=V(aq²), the kernel Z of this functional on X⊗Y is\nthree-dimensional, spanned by ++, q(+−)+(−+), and --. It is simple: its\nfinite-type restriction is the irreducible highest-weight-2 module. The\ncomputed actions give the evaluation parameter aq in this normalization.\nConsequently there are nonsplit exact sequences\n\n```\n0 → Z → X⊗Y → 1 → 0,\n0 → 1 → Y⊗X → Z → 0.\n```\n\nThey do not split because the tensor order with the unit quotient has no unit\nsubmodule, and the opposite order has no unit quotient. In particular\n`Hom(1,X⊗Y)=0` and `dim Hom(1,Y⊗X)=1`, proving X⊗Y≇Y⊗X. The images\nof the two specialized R-matrices are the unit and Z, respectively. This\nsimultaneously checks §5.3, the head/socle orientation of §7.2 and the absence\nof a braiding on the full category.\n\nFor completeness, the rank-one simplicity test uses the q-segment\n`Q_r(c)={c q^(−r+1),c q^(−r+3),…,c q^(r−1)}` of the r+1-dimensional\nsimple evaluation module. Two segments are in general position when their\nunion is not a segment or one contains the other. A tensor of the corresponding\nrank-one simples is simple exactly when the segments are pairwise in general\nposition (CP95 Proposition 4.2 and Theorem 4.3). Here X,Y,Z correspond to\n{a}, {aq²}, {a,aq²}. Thus X⊗Z and Y⊗Z are simple, and X,Y,Z are real.\n\nTake X as the mutable object, Z as the frozen object, and B the column (0,1).\nThe two exact sequences give the mutation to Y and the relation\n`[X][Y]=[Z]+1`. The monomials Xʳ⊗Zˢ are distinct simple objects: their\nspectral multisets have r+s copies of a and s copies of aq². Their classes\nare therefore linearly independent, which proves algebraic independence of\n[X],[Z]. The same argument applies to [Y],[Z]. Finally [Z] is not invertible,\nsince the dimension homomorphism sends it to 3. These facts verify a local\ncategorical exchange and its algebraic realization. A claim about an entire\ncluster algebra still requires the ring isomorphism and mutation coverage in\n§9.4.",
+  "references": "- **K91.** Masaki Kashiwara, *On crystal bases of the q-analogue of universal\n  enveloping algebras*, Duke Mathematical Journal 63 (1991), 465–516;\n  [author PDF](https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/duke-crystal.pdf).\n  Theorems 2, 4, 6 and 7 give the half and highest-weight crystal/global-basis\n  inputs to the general extremal-basis supplier contract.\n- **K94.** Masaki Kashiwara, *Crystal bases of modified quantized enveloping\n  algebra*, Duke Mathematical Journal 73 (1994), 383–413;\n  [author PDF](https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/enveloping.pdf).\n  Proposition 2.1.1 and Theorem 2.1.2 supply the modified-basis existence;\n  Theorems 3.1.1 and 4.3.2 and §5 supply the modified crystal constructions;\n  Lemma 8.2.1 and Proposition 8.2.2 give the extremal quotient and its\n  inherited global basis. These are the sources of the general basis-model\n  contract consumed in Layer 4.\n- **K02.** Masaki Kashiwara, *On level-zero representations of quantized affine\n  algebras*, Duke Mathematical Journal 112 (2002), 117–175;\n  [arXiv math/0010293v2](https://arxiv.org/abs/math/0010293v2).\n  Use the revised text: §§2–5 for extremal and fundamental modules,\n  §§7–9 for completed intertwiners, good modules and generic simplicity.\n- **AK97.** Tatsuya Akasaka and Masaki Kashiwara, *Finite-dimensional\n  representations of quantum affine algebras*, Publications of RIMS 33\n  (1997), 839–867;\n  [author PDF](https://www.kurims.kyoto-u.ac.jp/~kenkyubu/kashiwara/akasaka.pdf).\n  Sections 1.1–1.3 and Theorem 1.2 give the representation-theory setup;\n  Appendices A–B discuss R-matrices. Its conjectural general cyclicity\n  statements are used only through the proved results in K02 §§8–9.\n- **CP95.** Vyjayanthi Chari and Andrew Pressley, *Quantum affine algebras and\n  their representations*, in *Representations of groups* (Banff, 1994),\n  CMS Conference Proceedings 16 (1995), 59–78;\n  [arXiv hep-th/9411145v1](https://arxiv.org/abs/hep-th/9411145v1).\n  Section 3 gives classification and multiplicativity of highest spectral\n  data; §4 supplies the rank-one segment tests.\n- **CP98.** Vyjayanthi Chari and Andrew Pressley, *Twisted quantum affine\n  algebras*, Communications in Mathematical Physics 196 (1998), 461–476;\n  [arXiv q-alg/9611002v2](https://arxiv.org/abs/q-alg/9611002v2).\n  Theorem 1.3 supplies the presentation comparison used in its proof;\n  Theorem 3.1, Proposition 3.2 and Corollary 3.3 give the twisted\n  classification and tensor highest-data statements.\n- **H10.** David Hernandez, *Simple tensor products*, Inventiones Mathematicae\n  181 (2010), 649–675;\n  [arXiv 0907.3002v2](https://arxiv.org/abs/0907.3002v2).\n  Theorem 1.1 is the all-affine pairwise simplicity theorem; its generic-field\n  formulation used here is stated in KKOP20 §2.1.\n- **KKKO15.** Seok-Jin Kang, Masaki Kashiwara, Myungho Kim and Se-Jin Oh,\n  *Simplicity of heads and socles of tensor products*, Compositio Mathematica\n  151 (2015), 377–396;\n  [arXiv 1404.4125v2](https://arxiv.org/abs/1404.4125v2).\n  Theorem 3.12 and Corollaries 3.14 and 3.16 supply the quantum affine\n  real-simple head/socle, cancellation and commutation results.\n- **KKOP20.** Masaki Kashiwara, Myungho Kim, Se-Jin Oh and Euiyong Park,\n  *Monoidal categorification and quantum affine algebras*;\n  [arXiv 1910.08307v2](https://arxiv.org/abs/1910.08307v2).\n  Sections 2.1–2.2 give the generic quantum affine category and R-matrices;\n  Theorem 2.13 gives the real-simple conclusions, Proposition 4.9 the local\n  reality theorem, and Definitions 6.1–6.3 and Proposition 6.4(i) the\n  ordinary categorical seed and mutation interface.\n- **KKOP22.** Masaki Kashiwara, Myungho Kim, Se-Jin Oh and Euiyong Park,\n  *Monoidal categorification and quantum affine algebras II*;\n  [arXiv 2103.10067v3](https://arxiv.org/abs/2103.10067v3).\n  Section 2.2 specifies the spectral-component categories; §§7.1–7.2 give\n  the countable classical seed and monoidal-mutation conventions. Its\n  Λ-categorification Definition 7.7 is stronger data than the ordinary\n  predicate used here.",
+  "provenance": {
+    "primary_commit": "42a40c74cd66cf8b51d8456e835db66fb392c6e8",
+    "main_ownership_snapshot": "4b6909559eb5e50a1cc8b86522723fb6e9db69bf",
+    "readme_sha256": "631c9c628b1d25a07322f959a8d7f7b79d804525a106c4877b24502fcb6581d4",
+    "external_source_ids": [
+      "AK97",
+      "CP95",
+      "CP98",
+      "H10",
+      "K02",
+      "K91",
+      "K94",
+      "KKKO15",
+      "KKOP20",
+      "KKOP22"
+    ],
+    "external_manifest": "../sources.toml",
+    "internal_locator_sources": {
+      "native-TauCeti": {
+        "kind": "pinned-library-proof-inputs",
+        "pin": "2fd255d997f47c0b5d834ee416c7015d55444ce5",
+        "description": "Native modulewise multiplicity/additivity/induction inputs; the finite-dimensional categorical descent is the owned target."
+      },
+      "authored-proof": {
+        "kind": "authored-elementary-proof",
+        "section": "6.2",
+        "description": "Complete local-lattice proof in this roadmap; not a fetched or externally attributed source."
+      }
+    },
+    "locator_policy": "External publication locators use the ten sources.toml IDs. The two explicitly typed internal proof locators are not fictitious publications and are not added to the external-source acquisition manifest.",
+    "name_policy": "No Lean declaration names are invented for the unavailable affine carriers; null name fields denote prose targets only.",
+    "supplier_gap_policy": "A proposed named target is a missing contract, not an installed numbered supplier section. KacMoodyPartII is the quantum successor named by main KacMoody and QuantumEnvelopingAlgebras scopes."
+  }
+}

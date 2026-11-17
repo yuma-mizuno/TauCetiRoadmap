@@ -1,5 +1,11 @@
 # Targeted Lean validation report
 
+## Current supplier-boundary revision
+
+The unmodified full worker gate reran `lake build TauCetiRoadmap.QuantumAffineAlgebras.Suggested` on clean commit `42a40c74cd66cf8b51d8456e835db66fb392c6e8` and passed with `build=0`, overall exit 0. The actual file SHA256 is `fea5fbc078c55a7410222589b3da47976749bbb8d2d162392d718c655c3bc389`. See `gate-result.json` and `gate-log.txt` for the current run. The checker retains compiler output only on failure; no new standalone build-output transcript is claimed. Native dependency revisions and toolchain listed below are unchanged.
+
+The remainder of this document records the original cache preparation and target build; its earlier commit and file hash are historical, not the current revision's identity. `build-log.txt` is that historical output.
+
 Status: targeted module build passed with exit code 0. This is an import/docstring-only namespace module; no absent mathematical declaration was elaborated or checked.
 
 ## Environment

@@ -2,13 +2,13 @@
 
 **Summary.** 複素数 q を 0 < |q| ≠ 1 の範囲で固定し、任意の有限階数の有理 q 接続、その局所分類、大域接続データ、接続データを保存する離散変形を構成する。基本対象は有理関数体上の q 差分加群と、射影直線上のベクトル束 E に備わる有理型同型 A : E ⇢ σ_q*E である。σ_q(z) = qz とする。行列表現 Y(qz) = A(z)Y(z) は、この対象に基底を選んだ表示である。
 
-局所分類の主定理は、共鳴と非半単純な正則特異部分を許し、有理数の傾きを持つ任意の局所 q 差分加群を扱う。傾きフィルトレーションと形式分類を構成し、指定した形式型とその同一視を持つ解析的同型類を、楕円曲線 E_q = ℂ×/q^ℤ 上の q-Stokes 層の第一非可換コホモロジーで分類する。整数傾きでは正規形と有限次元アフィン空間を与え、有限分岐と降下を通じて有理傾きへ進む。
+局所分類の主定理は、共鳴と非半単純な正則特異部分を許し、有理数の傾きを持つ任意の局所 q 差分加群を扱う。傾きフィルトレーションと形式分類を構成し、指定した形式型とその同一視を持つ解析的同型類を、楕円曲線 E_q = ℂ×/q^ℤ 上の q-Stokes 層の第一非可換コホモロジーで分類する。整数傾きでは正規形を与え、有限分岐と降下を通じて有理傾きへ進む。指定形式型の marked functor を有限次元アフィン空間で表し、その標識を忘れた係数族を商スタックで記述する。さらに、全局所解析加群の圏を、有理傾斜の anti-Harder–Narasimhan filtration を持つ楕円曲線束の圏と比較する。
 
-大域比較の主定理は、0 と ∞ の局所解析 q 差分加群を保持し、それぞれの楕円曲線上の実現を結ぶ有理型同型を接続データとする。有理 q 差分加群の圏と、この接続データの圏の同値を、局所 Laurent 模型の延長、有理型行列の分解、射の貼り合わせから構成する。正則特異の場合には、局所定数行列と Birkhoff 接続行列による分類を得る。この比較は複素数上の対象と射についての定理であり、族についての正則性は別に仮定と結論を与える。
+大域比較の主定理は、0 と ∞ の局所解析 q 差分加群を保持し、それぞれの楕円曲線上の実現を結ぶ有理型同型を接続データとする。有理 q 差分加群の圏と、この接続データの圏の同値を、局所 Laurent 模型の延長、有理型行列の分解、射の貼り合わせから構成する。正則特異の場合には、局所定数行列と Birkhoff 接続行列による分類を得る。この比較は複素数上の対象と射についての定理である。相対 q 接続は非被約な代数的・解析的基底上で有限局所自由層と有限極によって定義し、局所条件・格子・標識とその基底変換を保持する。端点の有限 pole 条件の下で、解析 germ への局所化と jet からの形式完備化を構成し、係数変換および completed pullback と比較する。族についての解析的な存在・正則性は、個別の仮定と結論を与える。
 
 変形の主定理は、時間 groupoid に沿う接続データの同型を、合成と両立する有理 horizontal gauge へ持ち上げる。複数方向では、各方向の q 零曲率方程式と方向間の cocycle 条件の両方を扱う。さらに任意階数・任意次数の多項式 q 接続について、特異点のスペクトル群が q^ℤ によって分離される一般初期値から、可換な離散 Schlesinger 変換を構成する。その存在範囲は、任意に指定した有限の時間範囲に対する非空 Zariski 開集合として述べる。
 
-近接するロードマップとの位置付けは次の通りである。[PainleveEquations](../PainleveEquations/README.md) の一般接続・等モノドロミー理論を微分方程式側の比較対象とし、[FormalLaurentPuiseux](../FormalLaurentPuiseux/README.md) の形式局所体、[AlgebraicVectorBundles](../AlgebraicVectorBundles/README.md) の束と引戻し、[ComplexKahlerGeometry](../ComplexKahlerGeometry/README.md) の解析的 germ・束・コホモロジー、[SpecialFunctionsTheta](../SpecialFunctionsTheta/README.md) の theta 関数を利用する。Layer 0–1 は対象・射・局所格子、Layer 2–4 は正則特異・形式・Stokes 分類、Layer 5 は大域比較、Layer 6 は変形と族、Layer 7 は具体的な可換変換を扱う。
+近接するロードマップとの位置付けは次の通りである。[PainleveEquations](../PainleveEquations/README.md) の一般接続・等モノドロミー理論を微分方程式側の比較対象とし、[FormalLaurentPuiseux](../FormalLaurentPuiseux/README.md) の形式局所体、[AlgebraicVectorBundles](../AlgebraicVectorBundles/README.md) の束と引戻し、[ComplexKahlerGeometry](../ComplexKahlerGeometry/README.md) の解析的 germ・束・コホモロジー、[SpecialFunctionsTheta](../SpecialFunctionsTheta/README.md) の theta 関数を利用する。Layer 0–1 は対象・全水平射・相対族・局所格子と装飾、Layer 2–4 は正則特異・形式・Stokes 分類、Layer 5 は大域比較、Layer 6 は変形と族、Layer 7 は具体的な可換変換を扱う。
 
 ## Conventions
 
@@ -191,22 +191,124 @@ q 接続をこの同値へ運び、A_p が Λ_p を σ_X*Λ の p 成分へど�
 
 *Needs:* 1.2–1.4; 局所 Smith 型、単純零点の核直線、有限長 quotient と次数。
 
-### 1.6 相対 q 接続、base change、descent
+### 1.6 相対 q 接続の圏、base change、descent
 
-**構成・定理。** スキーム S、単元 q ∈ Γ(S,O_S)×、X = ℙ¹_S、S 上の自己同型 σ_q を取る。D ⊂ X を任意の base change 後も effective Cartier divisor となる相対 divisor とし、U = X ∖ D とする。対象を有限局所自由層 E と O_U 線形同型
+**構成・定理。** 基底 B とその単元 q を固定し、各 B 上の試験基底 S に対して X_S = ℙ¹_S と σ_q を取る。D ⊂ X_S は任意の許容 base change 後も effective Cartier divisor となる相対 divisor とする。有限局所自由層 E の D に沿う局所化を、既存の Cartier divisor の可逆層と層の filtered colimit を用いて
 
-    A : E|_U ≅ (σ_q*E)|_U
+    O_X(*D) = colim_(m≥0) O_X(mD),
+    E(*D) = E ⊗_(O_X) O_X(*D)
 
-で定め、正則な horizontal な束同型を射とする。D を拡大する比較、および有限 pole bound を指定した部分問題も与える。非被約 S 上で関数体 Frac(O_S) を導入せず、層と開部分上の同型を用いる。
+と定め、相対 q 接続を O_X(*D) 線形同型
 
-S′ → S に沿う pullback は相対 q 接続を保ち、恒等・合成・tensor・determinant と整合する。固定された (X,D,σ_q) に対するこのgroupoid は fpqc descent を満たす。証明は、有限局所自由層、U 上の同型、horizontal な可換図式を順に降下する。このgroupoid の構成から、有限型・平滑な Artin stack、安定な粗モジュライ空間の存在を結論しない。（[K16], Definition 1.5 の相対化; descent は SchemeAndStackFoundations §1.1 の供給契約の適用。）
+    A : E(*D) ≅ (σ_q*E)(*D)
 
-- Nilpotent を含む基底、成分ごとに異なる階数、相対 Cartier divisor の pullback を扱う。
-- 局所フレームでの gauge descent と、束の descent を比較する。
-- Marking、端点の格子、相対直和因子としての flag を追加したgroupoid への忘却関手を構成する。
-- 相対 modification では kernel・quotient が必要な局所自由性を持つ開部分を明示し、点ごとの階数条件だけで全基底の flatness を仮定しない。
+とする。A と A⁻¹ がともに局所的に有限の pole bound を持つことを、この局所化によって保持する。D は許容する極の上界であり、実際の特異 divisor と等しいとは要求しない。D を固定した圏を Q_D(S) と書く。D≤D′ による係数局所化で Q_D(S)→Q_D′(S) を構成し、同じ正則水平射を持つ充満忠実な関手であることを証明する。異なる上界で表示された同じ q 接続は共通の上界で比較する。A・A⁻¹ の pole bound を別々に指定する部分問題も構成する。
 
-*Needs:* 1.1–1.4; native の有限局所自由層と pullback coherence; AlgebraicVectorBundles §§1.1–1.2、2.1–2.2; SchemeAndStackFoundations §§1.1、1.18。
+代数的基底ではスキーム上の有限局所自由層を用いる。解析的基底では、非被約な場合を含む複素解析空間上の正則構造層の有限局所自由加群を用いる。解析的分類を適用するときは q ∈ ℂ× を固定する。代数的な Cartier complement U = X ∖ D 上の同型と上の局所化による定義を比較する。解析的には U 上の正則同型だけでは有限 pole bound は従わず、上の局所化を定義の一部として保持する。非被約基底上で Frac(O_S) を使わず、両設定とも層とその局所化で定義する。（[K16], Definition 1.5 の相対化; 局所化は Cartier divisor の通常の構成。代数側の相対 divisor の base change と和は [SPD], Lemmas 31.19.1、31.19.3。）
+
+射は全ての正則な層の射 f:E→F で、局所化後に (σ_q*f)A_E=A_Ff を満たすものとする。この圏の core を相対 q 接続の moduli groupoid とする。moduli の同型射と、線形代数・拡大・複体に使う一般の水平射を同じ圏の上で比較する。Underlying な有限局所自由層の短完全列により exact structure を定め、局所的分裂から、任意の base change が admissible な短完全列を保つことを証明する。
+
+f:S′→S に対し、X_S′→X_S の pullback は、D の pullback を D′ として f*O_X(*D)≅O_X′(*D′) と有限局所自由層の pullback を用いて q 接続と水平射を運ぶ。恒等・合成の比較同型、三重合成の coherence、直和・tensor・dual・determinant との比較を既存の pullback API から構成する。σ_q*O_X(*D)≅O_X(*σ_q⁻¹D) を明記し、反復・水平式・合成では必要な divisor とその q pullback の有限和へ bound を拡大する。D が q 不変であるとは仮定しない。
+
+固定した B 上の幾何データと divisor D_B を引き戻して得られる S↦Q_(D_B×_B S)(S) は圏に値を持つ pseudofunctor となり、その core は groupoid に値を持つ。代数側では fpqc descent、解析側では開被覆による descent を証明する。有限局所自由層、局所化後の q 同型、水平な可換図式を順に降下する。（SchemeAndStackFoundations §§1.1、1.18 の既存 descent・stack carrier の適用。）
+
+- 局所フレームでの全水平行列と gauge groupoid を、それぞれ上の圏と core へ比較する。
+- Nilpotent を含む基底、成分ごとに異なる階数、相対 Cartier divisor と pole bound の pullback を扱う。
+- 端点・指定 section への正則な制限、determinant、framing、相対直和因子の flag を扱うための忘却関手を構成する。追加条件の組合せは1.7の2-fibre productへ渡す。
+- 相対 modification に用いる kernel・quotient は必要な局所自由性を持つ locus で構成し、点ごとの階数だけを flatness の代用にしない。
+- 局所有限型 ℂ スキームと代数的な束・divisor・q 同型に対し、解析化した相対 q 接続を構成する。有限 pole bound ごとに coherent analytification を適用し、水平射、合成、tensor、base change と比較する。解析化の関手を、一般基底での圏同値とはしない。
+
+*Needs:* 1.1–1.4; native の有限局所自由層と pullback coherence; AlgebraicVectorBundles §§1.1–1.2、2.1–2.2; SchemeAndStackFoundations §§1.1、1.18; ComplexComparisonPartII C-1.1、C0.1–C0.2、C0.4 の複素解析空間、構造層・coherent sheaves、analytification。一般の非被約解析基底は層の carrier で扱い、manifold の bundle 辞書を無条件に適用しない。
+
+
+### 1.7 局所条件、装飾、modification の groupoid
+
+**構成・定理。** 1.6 の指定した pole bound に対する moduli groupoid Q(S)、既に構成されたデータの groupoid L(S)、許容データの groupoid P(S) と、base change に整合する関手 r:Q→L、p:P→L を取る。条件を付けた q 接続の groupoid を既存の2-fibre product
+
+    Q_P(S) = Q(S) ×^h_(L(S)) P(S)
+
+で定める。対象は (E,A,η,α) で η∈P(S)、α:r(E,A)≅p(η)、射は水平な束同型 f と P(S) の射 h で α′r(f)=p(h)α を満たすものとする。射の合成、恒等、逆、pullback と比較同型を成分ごとに記述し、2-fibre product の普遍性を既存 API から受け取る。対象の等式を要求する strict fibre に置き換えない。Q、L、P が同じ site の stack である範囲では、この構成も stack となる。（[SPF], Lemma 8.5.6, Tag 02ZL; 2-fibre の対象・射は同節が参照する Categories, Lemma 4.35.7 の記述。）
+
+Determinant の指定では r を階数一 q 接続への determinant 関手とし、P を終対象 groupoid、p(*) を指定した階数一接続として、それとの同型 α をデータにする。section a:S→X_S 上の framing では r(E,A)=a*E、P を終対象 groupoid、p(*)=O_Sⁿ とし、α:a*E≅O_Sⁿ をデータにする。いずれも P の射は恒等のみであり、指定した標識を変える自己同型で商を取らない。相対 divisor や section への制限上の flag では、P を有限局所自由な successive quotient を持つ submodule filtration とその同型の groupoid、p を filtration の忘却とする。これらの具体例で、射は指定した同型・flag を保つ水平射となることを証明する。0・∞ の解析局所型、形式型、graded marking に対しては、対応する係数環・局所化関手が構成された範囲で同じ construction を適用する。固定模型との同型をデータとして与える marked fibre と、自己同型を保持する unmarked な型の groupoid を区別する。許容型の groupoid を変えるときの pullback・忘却・標識変更を構成する。
+
+全ての許容 divisor D に対する相対 q 接続の表示 (E,D,A) を取り、共通の上界への拡大によって同じ A を表すものを比較する。この対象に局所的に有限 pole bound を持つ水平射を許す圏 Q_mer(S) を定める。各固定上界の圏 Q_D(S) からこの圏への関手を構成する。射 H の極はある相対 divisor D_H で抑え、D_H の拡大による同じ局所化射を同一視する。水平式に必要な q pullback と二つの接続の pole divisor を含めた共通の bound で等式を確認する。可逆射では H⁻¹ にも有限 pole bound を要求する。これにより正則射の圏からの忘却関手 u と、base change・合成・逆の比較を得る。
+
+二つの許容データ α、β に対する q 接続の groupoid Q_α、Q_β を用い、modification の groupoid を
+
+    Mod(α,β)(S) = Q_α(S) ×^h_(Q_mer(S)^×) Q_β(S)
+
+と定める。その対象は二つの装飾付き相対 q 接続と、それらの underlying q 接続の水平な meromorphic 同型 B である。射は正則な同型の対 (f,f′) で f′B=B′f を満たすものとする。異なる pole bound は和で比較し、恒等 modification、逆、合成と base change の整合を証明する。追加装飾が移動する規則は、α と β の関係および B に課す条件として指定する。
+
+- 代数側の S=Spec ℂ では1.1の generic-fibre equivalence により Q_mer(ℂ)^× を有理 q 差分加群の core と比較し、1.2の全局所格子による modification の記述を回復する。
+- 共通の pole divisor D で E と E′ を局所化へ埋める。B が正則同型へ延長することは、B(E)=E′ という O_X 部分層の等式と同値である。体上の滑らかな曲線では1.2により全閉点の局所格子の等式へ帰着する。一般基底でもこの部分層による条件を使い、各閉点に DVR があるとは仮定しない。
+- 同じ出力型を持つ modification 全体を時間写像の graph と同一視しない。特定の規則で始点から輸送を定めるには、その規則の groupoid からの始点射影が本質的全射かつ充満忠実であること、同値に各始点上の2-fibreが終対象 groupoidと同値であることを証明し、quasi-inverse によって時間変換を構成する。終点射影も同値なら時間変換は圏同値となり、逆 modification がその逆を与える。
+- 1.5の elementary modification の局所式、kernel・quotient の局所自由性、相対 divisor の pullback を照合する。
+
+*Needs:* 1.1–1.6; SchemeAndStackFoundations §1.18 の2-fibre productとstrong transformations; native の categorical pullback、core、圏同値。一般の stack carrier や2-fibre productを重複して定義せず、q 接続の対象・射・比較関手を実体化する。
+### 1.8 端点への相対局所化と形式完備化
+
+**構成・定理。** 1.6の相対 q 接続について、0・∞への局所化を、試験基底上の係数の層とその加群として構成する。解析側では非被約な場合を含む複素解析空間 S、代数側ではスキーム S を許す。0-section を i₀:S→X_S、その ideal を I₀、0 の標準座標を z とする。接続の pole bound を、S 上局所的に
+
+    D = m₀[0] + m_∞[∞] + D_fin
+
+へ拡大できると仮定する。m₀、m_∞ は非負整数であり、D_fin は任意の許容 base change 後も effective Cartier divisor となり、0-section・∞-sectionの両方と交わらないものとする。D は上界なので、端点の実際の divisor が m₀[0] や m_∞[∞] に等しい必要はない。この条件により A と A⁻¹ は、端点の近傍でそれぞれ z または w=z⁻¹ の有限冪を掛けて正則化できる。以下の construction は、この有限冪による正則化を持つ族に適用する。
+
+**解析的な係数と加群。** 0-sectionに沿う解析的 germ の係数層と、その punctured 局所化を
+
+    R_an,0(S) = i₀⁻¹O_(X_S),
+    K_an,0(S) = R_an,0(S)[z⁻¹],
+    M_an,0(E) = (i₀⁻¹E) ⊗_(R_an,0(S)) K_an,0(S)
+
+と定める。ここで i₀⁻¹ は層の inverse image であり、i₀*E≅i₀⁻¹(E/I₀E) という section 上への通常の制限とは異なる。O_S は射影 X_S→S によって R_an,0(S) に作用する。q-shift は0-sectionを固定するので、係数層上に z↦qz の自己同型を誘導する。AとA⁻¹の有限極を反転し、M_an,0(E) 上に1.6と同じ差分構造を与える。有限局所自由性は局所フレームから従う。係数層を、Sの点ごとの局所体の直積で置き換えない。
+
+**形式的な係数と加群。** 代数側・解析側の両方で、まず有限 jet の層
+
+    R_(0,m)(S) = i₀⁻¹(O_(X_S)/I₀^(m+1)),
+    M_(0,m)(E) = i₀⁻¹(E/I₀^(m+1)E)
+
+を構成する。標準座標による R_(0,m)(S)≅O_S[z]/(z^(m+1)) と、次数を下げる transition map を明示する。係数の層と E の完備化を
+
+    R̂₀(S) = lim_m R_(0,m)(S),
+    M̂₀(E) = lim_m M_(0,m)(E)
+
+とし、その後に
+
+    K̂₀(S) = R̂₀(S)[z⁻¹],
+    M_for,0(E) = M̂₀(E) ⊗_(R̂₀(S)) K̂₀(S)
+
+を取る。逆極限は層の圏で取り、stalkとの交換を仮定しない。M̂₀(E) は R̂₀(S) 上で有限局所自由であり、M̂₀(E)/z^(m+1)M̂₀(E)≅M_(0,m)(E) を局所フレームで証明する。代数側の jet 系と完備化は SchemeAndStackFoundations §§4.7–4.8 の formal completion・coherent formal module と比較する。解析側は同じ jet の層と inverse system によって構成する。
+
+q-shift は各 I₀^(m+1) を保つので、jet 系とその逆極限に自己同型を与える。Aを jet 上の可逆射とすることは要求しない。zᴺAを正則化してから各jetへ移し、逆極限を取り、最後にzᴺを反転して M_for,0(E) の差分構造を得る。A⁻¹についても同じ構成を行い、両者が逆であることと N の選択に依存しないことを証明する。解析的 germ からその jet 系への写像は、M_an,0(E)→M_for,0(E) の係数変換と両立する比較を与える。
+
+**Base change。** 基底の射 f:S′→S が誘導する射を f_X:X_(S′)→X_S と書く。解析的な f に対しては、構造層の pullback から得る係数準同型
+
+    f⁻¹K_an,0(S) → K_an,0(S′)
+
+に沿う scalar extension を使う。これにより
+
+    K_an,0(S′) ⊗_(f⁻¹K_an,0(S)) f⁻¹M_an,0(E)
+      ≅ M_an,0(f_X*E)
+
+を構成する。通常の O_S 加群としての pullback が、解析 germ の係数層そのものを同型で運ぶとは仮定しない。形式側では、代数的・解析的いずれの f:S′→S に対しても、各 jet level の pullback
+
+    R_(0,m)(S′) ⊗_(f⁻¹R_(0,m)(S)) f⁻¹M_(0,m)(E)
+      ≅ M_(0,m)(f_X*E)
+
+をまず構成し、その逆極限を completed pullback の比較として用いる。その後 z を反転する。通常の pullback と無限逆極限が交換するとは仮定しない。両構成は水平射、恒等・合成、三重合成の coherence と両立する。有限局所自由な E に対するこれらの比較は局所フレームと有限 jet の比較で証明し、一般 coherent module の完備化の完全性を任意基底へ拡張しない。
+
+∞ では i_∞ と w=z⁻¹ を使って同じ構成を行う。元の作用は w↦q⁻¹w である。局所フレームで raw な系が Z(q⁻¹w)=C(w)Z(w) のとき、作用を逆転して q-shift に戻した系は
+
+    Z(qw)=D(w)Z(w),
+    D(w)=C(qw)⁻¹
+
+となる。この式を analytic germ、形式完備化、水平射、base change の全てで比較する。z の同じフレームから C(w)=A(1/w) を得る場合は、D(w)=A(1/(qw))⁻¹ となる。
+
+- 全ての正則 horizontal な射を局所化・完備化してから、core上の関手を得る。Meromorphic な水平同型に対しては、その同型と逆にも端点で有限冪による正則化を持つという条件を課して同じ比較を構成する。
+- 直和、tensor、dual、determinant と比較する。有限局所自由層の admissible な短完全列は局所的に分裂するので、この範囲の exactness は各 jet、germ、完備化、punctured 局所化で保存される。一般の coherent modules の jet reduction が完全であるとはしない。
+- 解析的 germ から形式完備化への比較は q-shift・base change・tensor と両立する。Sが複素数上の一点なら、K_an,0=ℂ({z})、K̂₀=ℂ((z)) となり、代数的な有理系からの写像を含めて0.4の係数体の比較を回復する。
+- 端点の局所化を0・∞の局所加群の対への関手としてまとめる。この節の基底変換則に整合する指定局所模型との同型を、1.7の2-fibre productの標識データとして与える。形式模型についても同様に構成する。これにより、固定局所型の条件と標識を忘れる操作を試験基底上で記述する。局所化・完備化の構成を、相対局所分類や相対 Riemann–Hilbert 同値と同一視しない。
+
+*Needs:* 0.1–0.4; 1.6–1.7; native の構造層・inverse image・tensor・局所化・層の極限; AlgebraicVectorBundles §§1.1–1.2 の pullback と有限局所自由層; SchemeAndStackFoundations §§4.7–4.8 の jet 系・formal completion・coherent formal module; ComplexComparisonPartII C-1.1、C0.1–C0.2、C0.4 の非被約解析空間・coherent module・局所構造層と解析化。SchemeAndStackFoundations §4.8 の一般 coherent completion に関する Noetherian 仮定は保持し、本節の有限局所自由層の比較は局所フレームで証明する。
 
 ### Examples
 
@@ -214,9 +316,18 @@ S′ → S に沿う pullback は相対 q 接続を保ち、恒等・合成・te
 
 E = O(d∞) で e_∞ = zᵈe₀ とし、0 側の行列を定数 c とすると、∞ 側は A_∞ = q⁻ᵈc である。これは同じ有理差分加群にも異なる次数の束の模型があることと、局所指数の q 整数冪による変化を示す。S = Spec ℂ[ε]/(ε²)、A = I では 1 + εH は任意の定数行列 H に対して自己同型となり、族を閉点だけの集合に置き換えるとこのデータを失う。
 
+
+解析的な X=ℙ¹、D={0} に対して、階数一の A(z)=exp(1/z) は X∖D 上で正則可逆であるが、0 に有限 pole bound を持たない。したがって1.6の q 接続には含まれない。この例により、解析的な punctured complement 上の同型と meromorphic な q 接続を区別する。
+
+R=ℂ[ε]/(ε²) 上の階数一系 A=1+ε と A₀=1 は全ての幾何学的 fibre で一致するが、相対有理 gauge 同値ではない。G:A₀→A を相対有理 gauge とすると、G(qz)=(1+ε)G(z) である。G=g₀+εg₁ と書くと g₀ は非零定数となり、h=g₁/g₀ は h(qz)−h(z)=1 を満たす。z=0 の Laurent 展開の定数係数は左辺0、右辺1となり矛盾する。基底を閉点の集合へ置き換えると失われるデータには、自己同型だけでなくこの一次変形も含まれる。
+
+Sをs座標の小円板、0-sectionの座標をzとすると、1/(z−s)は X_S 上の相対 meromorphic 関数であり、各sにおけるz=0のgermは有理型である。しかし(s,z)=(0,0)近傍で、どの有限冪zᴺを掛けても正則にはならない。正則化できればzᴺがz−sで割り切れ、z=sを代入してsᴺ=0となるためである。したがって、この族はR_an,0(S)[z⁻¹]に入らない。有限特異点が端点へ衝突する族に、1.8の端点局所化を無条件で適用できないことを検証する。
+
+各有限jet R[z]/(z^(m+1))で先にzを反転すると零環になる。一方、逆極限を取ってから反転すればR[[z]][z⁻¹]を得る。R=ℂでは後者がℂ((z))である。この例は、形式完備化とpunctured局所化の順序を検証する。
+
 ### Dependencies
 
-0.1–0.4 と既存の曲線・ベクトル束の carrier を用いる。1.1 の generic fibre、1.2 の格子比較、1.3 の特異型を順に構成してから、1.4–1.5 の modification を扱う。1.6 は同じ定義を相対化し、既存の fpqc descent を使用する。局所解析分類、モジュライ空間の表現可能性、特定階数の安定性定理を前提にしない。
+0.1–0.4 と既存の曲線・ベクトル束の carrier を用いる。1.1 の generic fibre、1.2 の格子比較、1.3 の特異型を順に構成してから、1.4–1.5 の modification を扱う。1.6 は層の局所化によって相対化し、代数側の fpqc descent と解析側の開被覆 descent を使用する。1.7 は既存の2-fibre productに具体的な局所条件・装飾・meromorphic modification を載せる。局所解析分類、モジュライ空間の表現可能性、特定階数の安定性定理を前提にしない。
 
 ## Layer 2: 楕円曲線、theta 関数、正則特異分類
 
@@ -453,7 +564,7 @@ pure slope μ、rank r の P に対し、V(P) の rank は r、degree は rμ �
 - μ<0 の pure P に対し H⁰(E_q,V(P))=0 を、Laurent coefficient の q 差分 equation から証明する。この結論は arbitrary negative-degree bundle だけからは推論しない。
 - Dolbeault cohomology と CR operator の index を比較し、E_q の genus が 1 であることから χ(V(P))=deg V(P) を得る。複素一次元なので coherent H² は零、従って μ<0 なら dim H¹(E_q,V(P))=−rμ となる。
 - integral positive gap μ_j−μ_i に対応する Hom block の bundle は rank r_i r_j、degree r_i r_j(μ_i−μ_j) を持つ。§3.5 の差分 Γ¹ と bundle の H¹ の comparison を構成する。（[VPR07], Lemma 2.1, Theorem 2.5；[RSZ13], §§6.2–6.3。）
-- filtration を忘れた bundle functor と局所加群を区別する。一般の bundle map は局所加群の射とは限らない。integer-slope mixed modules の filtered fully faithful comparison は §4.7 で構成する。
+- filtration を忘れた bundle functor と局所加群を区別する。一般の bundle map は局所加群の射とは限らない。同一 slope の pure/semistable 圏同値は3.8、整数 slope の filtered fully faithful comparison は4.7、任意有理 slope の filtered 圏同値は5.3で構成する。
 
 **Checks.**
 
@@ -463,13 +574,44 @@ pure slope μ、rank r の P に対し、V(P) の rank は r、degree は rμ �
 
 *Needs:* §§3.1–3.6；Layer 2 の E_q、theta と factor of automorphy；ComplexKahlerGeometry §4.1 の holomorphic bundles と section sheaves、§2.5 の bundle-valued Dolbeault 比較、§5.10 の finite-dimensional cohomology と Serre duality、§7.6 の complex tori；PseudoholomorphicCurveAnalysis §§6.3–6.4 の ∂̄ kernel/cokernel 比較と §7.2 の arbitrary-rank CR operator の index。q automorphy factor から Chern degree への符号の adapter と negative pure slope の H⁰ vanishing はこの節で所有する。
 
+### 3.8 pure 加群と semistable 楕円曲線束の圏同値
+
+**定理。** E_q 上の非零正則ベクトル束 V が slope μ で semistable であることを、deg V = μ rank V と、任意の非零正則部分束 W に対する deg W / rank W ≤ μ によって定める。各 μ∈ℚ に対し、零対象も含む slope μ の pure analytic q 差分加群の圏から、slope μ の semistable 正則束の圏への3.7の関手 V は圏同値である。射はすべての horizontal な加群射、およびすべての正則束射とする。同型類だけの全単射でなく、quasi-inverse、単位・余単位と三角恒等式を構成する。（[VPR07], Theorem 2.3 の証明とその直後の別証明；[M19], §10.1.3, p.78。）
+
+同一 slope の pure models の間の正則束射は、3.6の finite-orbit characterization を ℂ* 上の正則切断へ適用することで、一意に Laurent model の射に戻る。pure models の像が semistable であり、同じ slope の semistable 束を尽くすことは、次の順序で証明する。一般の Harder–Narasimhan 分解や Atiyah の完全分類を前提にしない。
+
+**次数零の入力。** 任意の次数零 indecomposable 楕円曲線束 W は、次数零の線束 L と、各 graded quotient が O である部分束の有限 filtration を持つ U によって W≅L⊗U と書ける。この補題は [A57], Lemma 11, p.428 を次数一の線束で tensor して得る。原文の splitting は直和分解でなく部分束 filtration である。部分束の飽和化と線束の位数、Riemann–Roch、Serre duality による Ext¹ と逆向き Hom の比較、および rank 帰納法を用い、同文献 Lemma 2, pp.420–421、Lemma 5 と Lemma 6′, pp.422–423、Lemmas 8–11, pp.427–428 の補題を既存の束と層コホモロジーの上で展開する。一般の束 carrier を追加しない。
+
+**有限 isogeny と indecomposable 成分。** 非零 indecomposable 束 V の rank と degree を nr、tr、n,r>0、gcd(n,t)=1 と書き、degree n の cyclic isogeny π:E_p→E_q を取る。pullback E=π*V の indecomposable 成分の rank と degree はすべて等しく、各成分の slope は t である。この主張は、選んだ直和成分の和がそのまま deck-invariant であるとは仮定せず、以下の有限次元環の議論で証明する。
+
+正則束の圏は ℂ 線形、Hom 有限で、有限直和と idempotent の分裂を持つ。Krull–Schmidt と Fitting を適用し、B=End(E)、J=rad(B)、deck group G と置く。相異なる indecomposable 同型型を W_i、重複度を m_i とすると、categorical radical の matrix 記述と有限次元 ℂ 上の division algebra の自明性から B/J≅∏ᵢ Mat_(m_i)(ℂ) となる。G はこの quotient の中心 primitive idempotents を置換し、その置換は W_i の同型型に対する pullback 作用と一致する。rank と degree はこの作用で不変である。有限 étale descent により B^G≅End(V)、Fitting によりこの環は local である。J は G に安定であり、Reynolds 平均から B^G→(B/J)^G は全射となる。同型型の軌道が二つ以上なら、軌道ごとの中心 idempotent の和が (B/J)^G に非自明な idempotent を与える。しかし local ring の quotient は local なので矛盾する。したがって作用は推移的となる。この部分は Hom 有限 Krull–Schmidt 圏における有限群の descent 補題として述べ、楕円曲線に適用する。
+
+**定数係数と Laurent model の実現。** degree −t の線束で E を tensor すると、各 indecomposable 成分 W_i^0 は次数零となる。上の入力により W_i^0≅L_i⊗U_i とする。ComplexKahlerGeometry §7.8 の次数零線束と unitary character の対応を、2.1の乗法表示に移し、L_i を定数 c_i の rank-one factor から実現する。U_i の ℂ* への pullback は、O の逐次拡大が ℂ* 上で分裂することから上三角・対角成分1の factor を持つ。この分裂には ComplexKahlerGeometry §§2.3、2.5 の平面領域上の ∂̄ 可解性と Dolbeault 比較から H¹(ℂ*,O)=0 を用いる。Laurent expansion によって O(ℂ*) 上の σ_p−1 の cokernel が定数項の ℂ であることを示し、superdiagonal に関する帰納法で factor の全係数を定数にする。非零 Laurent power の係数を p^k−1 で割る操作が ℂ* 上の正則性を保つことも証明する。得られる定数 block は c_iU_i であり、次数零の線束因子 c_i を落とさない。degree t の線束を戻すと、E は slope t の pure model から実現される。
+
+この ℂ* 上の holomorphic difference module N の中で、T=s^tΦ の powers が有限次元 ℂ 空間を張る元全体を N₀ とする。3.6の Laurent coefficient と generalized eigenspace による証明を O(ℂ*) の切断にも適用し、N₀ が構成した ℂ[s,s⁻¹] 上の finite free model と一致することを示す。deck transformation s↦ζs は Φ と可換で T を非零定数倍 ζ^tT へ移すため、この intrinsic な N₀ を保つ。有限 Galois descent により N₀^G は ℂ[z,z⁻¹] 上の finite projective module となり、scalar extension で N₀ を回復する。Laurent 多項式環の PID 性から finite freeness を得る。Φ、Φ⁻¹ も下降し、3.4の ramification 比較から局所 slope は t/n となる。選んだ Laurent basis や個々の generalized eigenvalue が deck action で固定されるとは仮定しない。
+
+これで任意の束の indecomposable 成分が pure model の像となる。pure V(P) の部分束 W を indecomposable に分解すると、slope ν>μ の成分から V(P) への射は3.7の負 slope の pure Hom 束の H⁰ 消滅により零となる。したがってすべての成分で ν≤μ となり、V(P) は semistable である。逆に semistable 束の direct summands は全て平均と同じ slope を持つので、指定 slope の pure model から実現される。
+
+- 各 μ の同値は短完全列と全 Hom を保つ。異なる μ,ν に属する対象の tensor 比較は slope μ+ν の同値へ、dual 比較は slope −μ の同値へ渡す。
+- 3.5の Ext¹(P_j,P_i) と束の H¹(Hom(V(P_j),V(P_i))) の比較を、μ_i<μ_j の全有理 slopes について構成する。有限分岐、有限群作用、graded model の同型についての自然性を与える。
+- すべての split modules とすべての束との同型類の全単射を、異なる slopes 間の全 Hom を保つ圏同値へ強めない。一般の mixed module には5.3の指定した filtration が必要となる。
+
+**Checks.**
+
+- rank 2、slope 1/2 の pure model は rank 2、degree 1 の semistable 束に対応する。整数 slope の line twist だけではこの対象を扱えない。
+- L=V(A=z) は degree 1 で、Θ_q は O→L の非零正則束射を与える。slope 0 と1の pure 加群間の Hom は零であり、同一 slope の圏同値を全 slopes の裸の束圏に拡張できない。
+- E=U⊕U の二つの選択した summands は GL₂(ℂ) によって混ざる。一方、End(E)/rad End(E) の中心 block は intrinsic である。descent の証明には後者を用いる。
+- degree-zero の非自明な線束 L に対応する cU の c を除くと、L の同型型を失う。n=2、t=1 のとき deck transformation s↦−s は T=sΦ を −T に移すが、finite-orbit condition は変わらない。
+
+*Needs:* 2.1–2.5; 3.1–3.7; RepresentationTheory/ArtinAlgebras §§0.1–0.4 の Fitting・Krull–Schmidt と §0.6 の categorical radical; RepresentationTheory/SemisimpleAlgebras Layer 0 の radical quotient、Layers 1–2 の algebraically closed field 上の division-ring collapse と中心 blocks; ComplexKahlerGeometry §§2.3、2.5、4.1、5.10、7.8 の ∂̄、束、有限次元 Hom、Serre duality と次数零線束; PseudoholomorphicCurveAnalysis §7.2 の任意 rank の Riemann–Roch; finite isogeny に沿う bundle descent。[A57] の次数零 filtration 補題、Reynolds 平均と中心 block による descent 補題、および pure/semistable の比較を上記 carrier と API 上で証明する。一般の Jacobson radical、Krull–Schmidt、Picard carrier は再定義しない。
+
 ### Examples
 
 rank-one monomial 系は符号と次数を固定する。行列 (0,z;1,0) は slope 1/2 を持つ非分岐体上の rank-two module であり、ramification 後の整数 slope と descent の区別を示す。行列 (1,1;0,z) は形式的には分裂するが解析的には分裂しない extension であり、次の層の Stokes class が検出する対象である。
 
 ### Dependencies
 
-Layer 0 の差分代数、Layer 2 の正則特異局所解析と theta、Laurent 付値、有限 Galois descent を用いる。楕円曲線上の束の一般論は ComplexKahlerGeometry の holomorphic bundle・complex torus の契約から受け取る。局所 q 差分 factorization、slope filtration、pure classification、q 差分 extension の index はこの層で証明する。
+Layer 0 の差分代数、Layer 2 の正則特異局所解析と theta、Laurent 付値、有限 Galois descent を用いる。楕円曲線上の束の一般論は ComplexKahlerGeometry の holomorphic bundle・complex torus の契約から受け取る。局所 q 差分 factorization、slope filtration、pure classification、q 差分 extension の index、pure/semistable の比較はこの層で証明する。3.8の補助入力には一般の Fitting・Krull–Schmidt・半単純 quotient と、楕円曲線上の次数零 filtration 補題を用いる。
 
 ## Layer 4: q-Stokes データと局所解析分類
 
@@ -589,26 +731,40 @@ ramification が誘導する二つの写像 `F(A₀)→F(A₀′)^μ_r` と `H¹
 
 *Needs:* §§3.3–3.6、§§4.1–4.5；Layer 2 の E_q と有限 isogeny の quotient 比較；finite Galois descent；SchemeAndStackFoundations §2.3 の torsor pullback；[S24] §3.3 の q-specific unipotent descent をこの節で証明。
 
-### 4.7 射、marking の変更、係数拡張との整合
+### 4.7 射、標識変更と固定形式型の商スタック
 
 graded isomorphism h:M₀→N₀ に対し、(M,g)↦(M,hg) と horizontal automorphism sheaf の h による conjugation が、§4.6 の分類写像を通じて可換になることを証明する。analytically isomorphic な local models の比較、summation directions の変更、ramification の refinement についても comparison maps の composition と identity を保つ。（[S24], Lemma 3.8 と §3.2.2 の変数スケールに対する図式；[RSZ13], Remark 2.3.2 と Theorem 2.2.4。）
 
 形式型 M₀ を固定し marking を忘れた analytic modules の groupoid は、Aut(M₀) の F(M₀) への作用 groupoid と同値になる。具体的には、二つの marked representatives の間の unmarked isomorphism の graded map が h を定め、h による marked classes の一致が同じ isomorphism を一意に回復する。これにより automorphism を保ったまま local Stokes classes を大域接続データへ渡す。
 
-整数 slopes の mixed module については §4.2 の BG model を ℂ* 上の factor of automorphy として用い、slope filtration を持つ正則 bundle を構成する。filtration を保つ holomorphic bundle map が一意に局所加群の射へ戻ることを証明し、この filtered functor を exact、fully faithful、tensor-compatible とする。（[S09], §2.3.2, Theorem 2.4, Lemma 2.5。）この filtration を Harder–Narasimhan filtration と同一視しない（同文献 §2.3.3）。一般有理 slopes の接続データでは local module とその射を保持し、整数 slope のこの定理を全 filtered bundles の essential surjectivity へ強めない。
+整数 slopes の mixed module については §4.2 の BG model を ℂ* 上の factor of automorphy として用い、slope filtration を持つ正則 bundle を構成する。filtration を保つ holomorphic bundle map が一意に局所加群の射へ戻ることを証明し、この filtered functor を exact、fully faithful、tensor-compatible とする。（[S09], §2.3.2, Theorem 2.4, Lemma 2.5。）この filtration を Harder–Narasimhan filtration と同一視しない（同文献 §2.3.3）。任意有理 slope での本質的全射性を含む比較は5.3で証明し、この整数 slope の定理をその充満忠実性の入力とする。
 
 - marked-isomorphism の存在を native H¹ の equality と比較し、存在すれば唯一であることを gr の faithfulness から証明する。
 - unmarked automorphism group が Aut(M₀) の該当 class の stabilizer になることを証明する。coarse orbit set と groupoid を別に返す。
 - §4.1–4.2 の functor は任意 commutative ℂ-algebra R の scalar extension と整合する。§4.3–4.6 の解析 sheaf と分類写像は複素点上の主張として使用する。
-- 任意の解析 parameter base 上で joint holomorphic な inverse、coarse moduli space の smoothness、または moduli stack の同値はこの点の分類からは導かない。必要な族の定理には、その定理固有の解析仮定と parameter ring を付ける。
+- 任意の解析 parameter base 上で joint holomorphic な inverse、coarse moduli space の smoothness、または相対解析 Riemann–Hilbert stack equivalence はこの点の分類からは導かない。必要な族の定理には、その定理固有の解析仮定と parameter ring を付ける。
+
+
+**固定 graded type の係数族と quotient stack。** 4.1 の commutative ℂ-algebra R に対する分類を、同型類の集合に加えて対象と同型の groupoid として保持する。係数環は K_R=R⊗_ℂK、graded object は R⊗_ℂM₀ である。marking を保つ同型の一意性は、異なる pure slopes 間の Hom vanishing を R⊗_ℂ− で拡張して証明する。従って marked groupoid は4.2の表現可能な functor F(M₀) の discrete groupoid と自然同値になる。
+
+B=End_diff(M₀) とし、G(R)=(R⊗_ℂB)× とする。B は有限次元 ℂ-algebra であり、R が ℂ 上 flat であることから、差分 Hom を定める ℂ-linear operator の kernel と係数拡張が可換する。従って G(R)=Aut_diff(R⊗_ℂM₀) を自然に同定する。G は B の affine space の中で左乗法の determinant が可逆となる開部分により表される affine group scheme である。G の F(M₀) への作用は、各 R で marking を g↦hg に変える作用であり、Yoneda によって scheme の作用となる。
+
+ℂ 上の scheme S に対し、affine open Spec R 上では K_R を係数環とする有限生成射影差分加群と、graded factors が fppf 局所的に R⊗P_i と同型になる有限 filtration を対象とする。射は filtration を保つ horizontal な同型である。これらを S 上で降下させた groupoid は、既存の quotient stack [F(M₀)/G] と自然同値になる。対応は、対象 M の graded marking の G-torsor と、その torsor 上で得る F(M₀) への equivariant map を送るものであり、逆方向は marked family を torsor に沿って降下する。（[RSZ13], §3.1.2、Theorem 3.1.4、Appendix A.5–A.6 の係数 functor と、[SPQ], Proposition 95.15.3 と SchemeAndStackFoundations §1.21 の quotient stack の torsor 表示を組み合わせた整理。）
+
+- 任意の基底変換 S′→S に対する比較同型を構成し、恒等・合成・三重合成の coherence を与える。K_R→K_R′ は R→R′ の base change であり、σ_q は R を固定する。有限局所自由加群、horizontal な同型、filtration と graded identification の effective descent は、既存の fpqc descent を用いる。
+- G(R)⋉F(M₀)(R) は、graded object が R 全体で trivialize できる対象の groupoid と同値になる。一般の S 上の全対象には非自明な graded-marking torsor を含め、quotient stack の S-valued points をこの objectwise action groupoid で置き換えない。
+- 複素点では G(ℂ)-torsor は trivial なので、既存の Aut(M₀)⋉F(M₀) による unmarked local module groupoid の比較を回収する。stabilizer は各対象の自己同型群と一致する。
+- この stack が扱うのは、明示した K_R=R⊗_ℂK による固定 graded-type の係数族である。E_q×S 上の共同正則な族に対する q-Stokes correspondence は、この quotient-stack 構成からは結論しない。
+
 
 **Checks.**
 
-- split graded object の class は Aut(M₀) 全体で固定され、その unmarked automorphism group は Aut(M₀) となる。marked automorphism は identity のみなので、両者を同一視できない。
-- slopes 0,1 の rank-one blocks の非零 extension class u に対し、graded automorphism (a,b) が class を固定する条件は a/b=1。split class u=0 の stabilizer (ℂ*)² と、u≠0 の diagonal ℂ* を区別する。
-- R=ℂ[ε]/(ε²) の二つの classes 0,ε は、複素点の Stokes class だけでは区別できない。点の全単射から非被約 base 上の分類を主張することはできない。
+- M₀ が simple pure module なら F(M₀) は一点、G=𝔾_m であり、unmarked family stack は B𝔾_m となる。S=ℙ¹_ℂ の O_S(1)⊗M₀ は局所的に定数族だが、constant family への horizontal Hom sheaf は O_S(−1) であり、非零の大域切断を持たない。従って K_S=O_S⊗_ℂK を用いた後も global graded marking は存在せず、global marking を持つ作用 groupoid だけではこの大域対象を表せない。
+- 二つの rank-one graded factors、slopes 0,1 では F=𝔸¹、G=(𝔾_m)²、作用は u↦(a/b)u。u=0 の stabilizer は G 全体、u≠0 では diagonal 𝔾_m である。
+- R=ℂ[ε]/(ε²) の classes 0 と ε は異なる R-valued objects を与える。reduced closed point の分類だけでは、この差を失う。
 
-*Needs:* §§3.2、3.6、4.1–4.6；native の `CategoryTheory.ActionCategory` の Groupoid 構造と `ActionCategory.stabilizerIsoEnd`；SchemeAndStackFoundations §2.3 の torsor と NonabelianH1 の同型類比較。local module の同型 groupoid と作用 groupoid の同値、および filtered bundle functor の充満忠実性は本節の q 固有の比較として証明する。
+
+*Needs:* §§3.2、3.6、4.1–4.6；native の `CategoryTheory.ActionCategory` の Groupoid 構造と `ActionCategory.stabilizerIsoEnd`；SchemeAndStackFoundations §§1.1、1.13–1.15、1.18、1.21、2.3 の group schemes、torsor、action quotient、effective descent と NonabelianH1 の同型類比較。local module の同型 groupoid と作用 groupoid の同値、固定 graded-type の marking torsor による係数族の分類、および整数 slope の filtered bundle functor の充満忠実性は本節の q 固有の比較として証明する。
 
 ### Examples
 
@@ -654,22 +810,30 @@ Global pure な商を持ち、その傾きが 0 で狭義に増加する有限 f
 
 *Needs:* 1.1 の generic fibre と有限局所自由層; ComplexManifolds Milestones 3・5・7 の射影直線・貼り合わせ・束; ComplexComparisonPartII C0.3–C0.4、C1.9、C2.2 の coherent GAGA と束・切断比較; AlgebraicCurves §§1.1–1.2、3.1–3.2 の有理関数と有限 divisor。
 
-### 5.3 局所解析データの楕円曲線上の実現
+### 5.3 局所解析加群と有理 slope filtration を持つ楕円曲線束
 
-**構成・定理。** 5.1 で選んだ Laurent 模型 B を 2.1 により E_q 上の正則束 V(B) へ降下する。局所加群 L の模型と局所同型をデータに含めた圏をまず用い、模型変更の一意な比較を降下して、選択に依存しない関手 V₀、V_∞ を自然同型の意味で構成する。0 と ∞ のいずれも、ℂ× 上の同じ z 座標と同じ q 作用へ戻して降下する。（[VPR07], Theorem 4.3 と §2 の bundle construction の組合せ。）
+**構成・定理。** E_q 上の正則ベクトル束 V に、部分束の有限 flag 0=F₀V⊂F₁V⊂…⊂F_kV=V と、厳密に増加する有理数 μ₁<…<μ_k を与える。各 F_iV/F_(i−1)V は非零で、slope μ_i の semistable 束とする。零束には空の flag を用いる。V_≤μ は μ_i≤μ を満たす最大の i に対する F_iV とし、そのような i がないとき零とする。この式によって有限 jump の exhaustive・separated な ℚ 添字の増大 filtration を定め、dense な添字集合上の cut の選択を残さない。射は filtration を保つ正則束射である。この圏を、既存の束・部分束・filtered-object carrier 上に定義する。これは Q-anti-Harder–Narasimhan filtration 付き束の圏であり、underlying bundle の通常の Harder–Narasimhan filtration と同一視しない。
 
-局所 horizontal な射を Laurent 模型間の射へ延長してから束の正則な射とする。この関手は exact で tensor、dual、determinant と整合する。ただし、局所加群を忘れて裸の正則束だけを残す関手が充満であるとは主張しない。局所の射であるという条件を、接続データの射の定義に残す。
+任意の有限次元 local analytic q 差分加群の圏は、この filtered-bundle 圏と exact symmetric monoidal な圏同値を持つ。正則特異・共鳴・非半単純部分をすべて許し、slope を整数に限定しない。加群の slope filtration を束の指定した filtration に送り、gr と 3.8 の pure equivalences の図式を自然同型で可換にする。（[M19], §10.1.3, p.78; §1.5.1, pp.7–8; [S09], Theorem 2.4 と Lemma 2.5; [VPR07], Theorems 2.3、2.5; [RSZ13], Theorem 4.4.1; 有理 slope の比較は 3.4 と4.6 の下降を用いる。）
 
-- 模型・基底・局所同型の変更に対する自然比較を構成し、三つの選択の cocycle を証明する。
-- 直接和、tensor、dual と比較する同型は局所での比較から一意に延長し、monoidal coherence を満たす。
-- 対象間の有理型束同型 φ : V₀(L₀) ⇢ V_∞(L_∞) は、pullback 後の行列 R で
+Forward functor は5.1の Laurent model を2.1により降下し、3.2の slope filtration を束の filtration へ送るものとする。まず模型と局所同型を保持した圏を用い、模型・基底・局所同型の変更には5.1の射の比較による一意な自然同型を与える。identity と三つの選択の cocycle を証明する。0 と ∞ のいずれも、ℂ* 上の同じ z 座標と同じ q 作用へ戻して降下する。得られる filtered functors を V₀、V_∞ とし、文脈に応じてその underlying bundles にも同じ記号を用いる。整数 slope では4.2のBG modelによる構成と一致し、4.7のfiltered fully faithful comparisonを用いる。一般の有理 slope の充満忠実性は、共通分母rのramification後に整数の場合を適用し、3.4のGalois-equivarianceと有限被覆E_p→E_qのdescentにより示す。根・分母の選択変更には自然比較を構成し、identity・composition・refinement の法則を与える。
 
-      (σ_qR)B₀ = B_∞R
+本質的全射性では、与えられた filtered bundle の graded quotients を3.8により pure local modules P_i から実現する。局所的な filtered splitting と graded identification の選択が、split bundle ⊕V(P_i) の gr 上恒等な自己同型の層に関する torsor を与える。この層は4.4・4.6の q-Stokes sheaf である。4.3の summation gauge F_c は対応する開集合 U_c 上で極を持たず、V(M₀) から V(M) への局所 filtered trivialization を与え、その transition は F_c⁻¹F_d となる。これにより Laurent model からの forward functor と Stokes 分類の構成を比較する。4.5・4.6の実現定理で local analytic module を復元し、torsor の同型から元の filtered bundle との同型を得る。これを4.7の射の復元と合わせ、quasi-inverse、単位・余単位、三角恒等式を構成する。束の同型類の個数や次元の一致から本質的全射性を結論しない。
 
-  を満たすものと同値である。R の変更と φ のフレーム変更を比較する。
-- 局所差分加群の射から延長された Laurent 多項式行列の kernel・cokernel を用いる。その cokernel の torsion の support は ℂ× の有限集合かつ q 不変なので零である。したがって R = ℂ[z,z⁻¹] 上の該当加群は有限自由となり、短完全列は underlying R 加群として分裂する。解析化と descent によって束の完全列を得る。任意の正則同変写像にこの有限 support の議論を適用しない。
+- 任意の filtration-preserving 正則射が、復元された加群の一意な horizontal 射に対応することを示す。これらの射が filtration に strict であり、核・余核・像が同じ圏に入ることも比較する。
+- Exactness は Laurent 模型上でも確認する。局所射から一意に延長した Laurent 多項式行列の cokernel の torsion support は、ℂ* の有限集合かつ q 不変なので空である。kernel・cokernel は Laurent 環上で有限自由となり、短完全列は underlying Laurent 加群として分裂する。解析化と descent で束の完全列を得る。任意の正則同変写像にこの有限 support の議論を適用しない。
+- Tensor filtration は μ+ν により添字を足し、dual filtration は添字の符号を反転する。結合子・単位子・対称性は underlying bundles の既存の比較であり、局所加群の比較と可換にする。直和・determinant の比較も含める。
+- 有理型束同型 φ:V₀(L₀)⇢V_∞(L_∞) は、pullback 後の行列 R が (σ_qR)B₀=B_∞R を満たすことと同値である。局所模型・フレームの変更による R と φ の変換を比較する。この接続同型 φ には、両端の指定された filtrations を保つ条件を課さない。
+- 整数 μ の normalized local system A=z^μC は degree/rank=μ の pure graded bundle に対応する。有理 μ では共通分母 r の ramification 後に A=w^(rμ)C として比較し、E_p→E_q の degree r の下降で元の slope μ を回復する。q の作用の反転と z↦z⁻¹ の座標変更を0.3–0.4に従って分けて扱い、∞ の正規化へ渡す際には raw slope と正規化後の slope を区別する。
+- この同値は複素数上の対象とすべての射についてのものとする。4.1の R⊗_ℂK による係数族、または z と parameter に共同正則な族への延長には、その族の対応と自然性を別に証明する。
 
-*Needs:* 2.1; 3.6–3.7 の pure 束の比較; 5.1; 正則ベクトル束の descent、tensor、exact sequence。
+**Checks.**
+
+- Pure slope 0 の O と pure slope 1 の L の間の Θ_q による O→L は、指定された filtration を保たない。filtered Hom は零となり、局所差分加群の Hom と一致する。
+- 非零な extension 0→O→V→L→0、deg L=1、は rank 2、degree 1 の stable 束である。実際、degree ≥1 の line subbundle があれば L への射を通じて extension が分裂するか、negative-degree Hom の消滅に反する。従って underlying V 自体は3.8の pure slope 1/2 の模型にも対応する。しかし元の filtration の jumps は0,1であり、pure 模型の一つの jump 1/2とは異なる。underlying bundleだけを返す分類では、この二つの異なる局所形式型が識別できない。
+- split object には split filtration が対応し、Stokes torsor の triviality は filtration を保った分裂と同値となる。
+
+*Needs:* 3.2–3.8; 4.1–4.7; 5.1; finite isogeny に沿う bundle descent、filtered locally free sheaves とその局所 splitting、native torsor carrier とその morphisms。一般の HN 理論、任意 parameter base 上の相対 Riemann–Hilbert 同値をこの主張の前提や帰結にしない。
 
 ### 5.4 全有理 q 差分加群と接続データの圏同値
 
@@ -678,6 +842,8 @@ Global pure な商を持ち、その傾きが 0 で狭義に増加する有限 f
     φ′ V₀(f₀) = V_∞(f_∞) φ
 
 を満たすものとする。この圏と、ℂ(z) 上の有限次元 q 差分加群の圏との ℂ 線形な exact tensor 圏同値を構成する。共鳴、非半単純部分、任意の有理傾きを許す。これは [VPR07], Theorem 4.3 と 5.2 の有理型 Birkhoff 分解を組み合わせた帰結であり、[S03] の正則特異分類だけを一般不確定特異点の定理として引用しない。
+
+**幾何学的な同値表示。** 5.3により、接続データを ((V₀,F₀),(V_∞,F_∞),φ) としても表せる。各 (V_j,F_j) は有理 slopes の anti-Harder–Narasimhan filtration 付き楕円曲線束であり、φ は underlying bundles の有理型同型である。射は filtration を保つ正則束射の対で、φ との可換条件を満たすものとする。φ 自体が二つの filtrations を保つとは要求しない。この表示と局所加群による表示の間に、単位・余単位、射、tensor、dual、両端の局所型の比較と整合する圏同値を与える。裸の楕円曲線束だけでは5.3の例の異なる局所形式型を区別できない。
 
 **本質的全射の構成。** L₀、L_∞ の模型 B₀、B_∞ を選び、φ の lift を R とする。R = F_∞⁻¹F₀ と分解すると
 
@@ -696,7 +862,9 @@ Global pure な商を持ち、その傾きが 0 で狭義に増加する有限 f
 - Direct sum、tensor、dual、kernel・cokernel、短完全列を比較する。Tensor の coherence は局所模型の一意な比較を通じて証明する。
 - この圏同値は generic な有理差分加群を分類する。元の束の次数・局所格子・framing を回復するには Layer 1 の追加データを保持する。
 
-*Needs:* 0.1–0.4; 1.1; 5.1–5.3。証明の順序は局所模型、接続同型の降下、Birkhoff 分解、射の貼り合わせであり、等モノドロミー変形は前提としない。
+- 0・∞ の局所化と5.4の接続データの両端への射影を結ぶ自然同型を構成する。形式完備化、slope graded、determinant など既に定義された局所データの関手を合成しても、この比較が成り立つ。したがって、その局所条件を1.7の2-fibre productで指定した部分問題への制限も圏同値となる。標識の同型と自己同型群を保持する。
+
+*Needs:* 0.1–0.4; 1.1、1.7; 5.1–5.3。証明の順序は局所模型、接続同型の降下、Birkhoff 分解、射の貼り合わせであり、等モノドロミー変形は前提としない。
 
 ### 5.5 正則特異の場合の Birkhoff 接続行列
 
@@ -731,7 +899,13 @@ Global pure な商を持ち、その傾きが 0 で狭義に増加する有限 f
 - P のみの忘却では分類できないことを、q = 2、定数系 A = 1 と A′ = 3 で示す。両端に同じ基本解を用いれば両者の P は 1 だが、3 ∉ 2^ℤ なので有理 gauge 同値ではない。
 - 形式型の marking を忘れる際の自己同型群の作用を 4.7 と比較し、代表を選ぶ操作と quotient を取る操作を分ける。
 
-*Needs:* 1.2、1.4; 2.2、2.5; 3.7; 4.7; 5.3–5.5。
+- Q_α、Q_β を1.7の複素数上の二つの許容型の groupoid、G を有理 q 差分加群の core、C を5.4の接続データの core とする。比較 D:G≃C は
+
+      Q_α ×^h_G Q_β ≃ Q_α ×^h_C Q_β
+
+  を誘導する。左の対象 (E,E′,B) を右の (E,E′,D(B)) に送り、逆は5.4の充満忠実性で与える。射、合成可能な modification、単位・逆について両構成が一致することを証明する。束の格子と装飾は両辺の Q_α、Q_β に残るので、generic な接続データへ移る際にも消えない。
+
+*Needs:* 1.2、1.4、1.7; 2.2、2.5; 3.7; 4.7; 5.3–5.5。
 
 ### Examples
 
@@ -741,7 +915,7 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 
 ### Dependencies
 
-5.1 は formal/pure 分類と解析的 filtered-extension 分類から Laurent 模型を得る。5.2 は一般の曲線・bundle GAGA と有理型貼り合わせを用い、5.3 の descent と合わせて 5.4 の圏同値を証明する。5.5 は正則特異部分圏への特殊化、5.6 は忘却関手の性質である。大域比較の本質的全射と充満忠実性を別々に証明し、族の正則性をこの層から自動的に結論しない。
+5.1 は formal/pure 分類と解析的 filtered-extension 分類から Laurent 模型を得る。5.2は一般の曲線・bundle GAGA と有理型貼り合わせを用いる。5.3は3.8の pure/semistable 比較と4.4–4.7の Stokes 分類を使って有理 filtered bundle の圏同値を構成し、5.4では両端の局所データと有理型接続同型を貼り合わせる。5.5 は正則特異部分圏への特殊化、5.6 は忘却関手の性質である。大域比較の本質的全射と充満忠実性を別々に証明し、族の正則性をこの層から自動的に結論しない。
 
 ## Layer 6: 接続保存変形と整合する時間輸送
 
@@ -756,7 +930,10 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 - 同じ同型類という条件だけでは b_g の選択と合成則が与えられないことを明示する。
 - 対象の自己同型群は時間の stabilizer の作用先として保持し、無条件の一意な等モノドロミー輸送を主張しない。
 
-*Needs:* 0.1–0.3; 5.4; native の圏、groupoid、関手、自然同型。groupoid一般の transport を所有し直さず、q の比較関手による持ち上げとその式を本節で与える。
+- 1.7の modification groupoid の合成により、束の模型と許容型を保持した時間輸送を構成する。generic な B_g の持ち上げと、指定された格子変更規則が与える時間変換を比較する。
+- 試験基底 S 上の相対 q 接続についても、各時間射を1.7の meromorphic horizontal 同型とすることで輸送を定義する。引戻しは単位・合成・逆・自然同型を保つ。ある基底の範囲で接続データへの充満忠実な関手 D_S と、恒等・合成に整合する base-change 自然同型が構成されているときは、指定された対象間の輸送の持ち上げも base change に自然となる。対象自身を接続データから持ち上げる場合には D_S が圏同値であることを要する。この適用は D_S の実際の定義域に限定する。
+
+*Needs:* 0.1–0.3; 1.6–1.7; 5.4; native の圏、groupoid、関手、自然同型。groupoid一般の transport を所有し直さず、q の比較関手による持ち上げとその式を本節で与える。
 
 ### 6.2 可換な時間方向と q 零曲率方程式
 
@@ -777,7 +954,15 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 - 部分格子、一方向、周期的な時間の商への制限を扱う。周期の輸送を恒等とするには、その周期に対する追加の関係が必要である。
 - 6.1 の抽象輸送と、この行列表現の相互変換を構成する。
 
-*Needs:* 0.3; 6.1; 整数格子・群の presentation と有限積。有理写像の定義域に関する制限は Layer 7 の有限範囲の存在定理で具体化する。
+- パラメータ空間 S の可換な自己同型 T_i と、1.6の相対 q 接続 E を取る。q は各 T_i によって保たれるとする。相対時間射を、1.7の meromorphic な水平同型 B_i:E⇢T_i*E と定める。E の許容 divisor を D とすると T_i*E の許容 divisor は T_i*D である。式ごとに D、T_i*D、B_i とその逆の pole divisor、および必要な q pullback を含む共通の有限上界へ移す。正確な水平式と square identity を
+
+      (σ_q*B_i)A = (T_i*A)B_i,
+      (T_i*B_j)B_i = (T_j*B_i)B_j
+
+  とする。二重 pullback 間の既存比較同型を挿入して同じ始点・終点の射として読む。局所フレームで6.2の二つの行列式を回復する。任意の f:S′→S に沿っては f*B_i:f*E⇢(T_i∘f)*E として引き戻す。S′ 自身の時間自己同型 T′_i による輸送と読むときは f∘T′_i=T_i∘f を仮定する。これらの比較と cocycle が、さらに試験基底を引き戻す操作と両立することを証明する。
+- より一般の時間には、代数側では SchemeAndStackFoundations §1.14 の groupoid object T₁⇉T₀ を用いる。解析側では ComplexComparisonPartII C-1.1 の fibre products 上に与えた source、target、単位、逆、合成から、T↦(T₀(T),T₁(T)) という groupoid-valued presheaf を取り、SchemeAndStackFoundations §1.18 の一般 site 上の carrier に渡す。§1.14 の代数空間の carrier を解析空間そのものと同一視しない。q の source・target pullback が一致すると仮定し、T₀ 上の相対 q 接続 E と、T₁ 上の meromorphic な水平同型 B:s*E⇢t*E を使う。q が固定された複素数なら、この一致は自動的である。単位への制限は恒等とする。composable pair は (h,g)∈T₁×_(s,T₀,t)T₁、m(h,g)=h∘g、pr₁=h、pr₂=g の規約とし、m*B=(pr₁*B)(pr₂*B) を同じ pullback coherence によって定義する。任意の f:S′→T₀ に対する base change では、S′×_(T₀,s)T₁×_(t,T₀)S′⇉S′ という inverse-image groupoid と f*E を用いる。一般の groupoid-valued presheaf の理論は既存 API を用い、q 水平性、有限 pole bound、matrix chart との一致を本節で示す。
+
+*Needs:* 0.3; 1.6–1.7; 6.1; 整数格子・群の presentation と有限積; SchemeAndStackFoundations §§1.14、1.18 の代数的 groupoid・一般 site 上の groupoid-valued presheaf と pullback coherence; ComplexComparisonPartII C-1.1 の解析空間の fibre products。有理写像の定義域に関する制限は Layer 7 の有限範囲の存在定理で具体化する。
 
 ### 6.3 束の模型・格子・framing と輸送の一意性
 
@@ -820,7 +1005,7 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 
 ### 6.6 端点比較の貼り合わせと相対的な有限 pole bound
 
-**構成。** 複素多様体 S 上では、X = ℙ¹ × S の正則有限階数 bundle と section sheaf、有限平坦な相対 effective Cartier divisor D_A、および X ∖ D_A 上の正則同型 A : E ≅ σ_q*E を用いて、解析的な相対 q 接続の groupoid を構成する。射は正則 horizontal な束同型とする。有理型同型による modification も、この解析的な層の上で定める。これは 1.6 と同じ q 構造の定義を解析的 carrier に適用したものであり、一般の S をスキームとして扱うものではない。
+**設定。** 相対 q 接続の圏と moduli groupoid は1.6の解析的な層による定義を用いる。以下の解析的な有理表示の定理では S を複素多様体に限定し、有限平坦な相対 effective Cartier divisor による pole bound を指定する。A・A⁻¹ は定義から有限 pole bound を持ち、任意の punctured neighborhood 上の正則同型で代用しない。
 
 **定理。** S を複素多様体とし、この解析的相対 q 接続の行列表現を与えた二つの族 A、A′ を取る。0 側・∞ 側の比較行列 B₀、B_∞ が、それぞれ (ℙ¹ ∖ {∞}) × S と (ℙ¹ ∖ {0}) × S 上で jointly meromorphic であり、重なり ℂ× × S 上で一致し、それぞれ horizontal 式を満たすとする。B と B⁻¹ の極が、それぞれ ℙ¹ × S 上の有限平坦な相対 effective Cartier divisor D、D′ によって重複度を含めて一様に抑えられると仮定する。正確には、貼り合わされた B の各成分が O(D) の正則切断、B⁻¹ の各成分が O(D′) の正則切断であるという、全空間上の条件を課す。
 
@@ -830,10 +1015,10 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 
 - 局所的な有理表示の変更、holomorphic base change、合成、逆を比較する。
 - 6.2 の square identity が族の正則な射の等式として貼り合わさることを示す。
-- 指定した divisor と格子に整合する B を、上の解析的な相対 groupoid の同型または modification として比較する。1.6 との比較は、滑らかな分離的有限型 ℂ 基底と代数的な束・divisor・q 同型を与え、それらを analytification する場合に限って構成する。
+- 指定した divisor と格子に整合する B を、1.6の相対 q 接続の同型または1.7の modification として比較する。代数側との比較は1.6の coherent analytification による。定義の比較は局所有限型 ℂ 基底上で行い、この節の一様評価による定理を適用する際に S が複素多様体であるという仮定を用いる。
 - 一般の点ごとの 5.4 の圏同値から、上の jointly meromorphic な比較や一様 pole bound が自動的に選べるとは主張しない。非被約基底の一般論は 1.6 の層による定義を用い、本節の点と holomorphic function による証明の対象に含めない。
 
-*Needs:* 5.2、5.4; ComplexKahlerGeometry §§3.1–3.2 のパラメータ解析と Weierstrass preparation、§§4.1・4.4 の正則 bundle と section sheaf; ComplexManifolds Milestone 7 の解析的 pullback と gluing; 相対 Cartier divisor、有限平坦な零 divisor、球面上の有理関数。スキーム版との比較には 1.6 と ComplexComparisonPartII C0.3–C0.4 の analytification を用いる。相対極を消す上の有限次元表示と base change の補題は本節で証明する。
+*Needs:* 5.2、5.4; ComplexKahlerGeometry §§3.1–3.2 のパラメータ解析と Weierstrass preparation、§§4.1・4.4 の正則 bundle と section sheaf; ComplexManifolds Milestone 7 の解析的 pullback と gluing; 相対 Cartier divisor、有限平坦な零 divisor、球面上の有理関数。スキーム版との比較には 1.6 と ComplexComparisonPartII C-1.1、C0.4 の analytification を用いる。相対極を消す上の有限次元表示と base change の補題は本節で証明する。
 
 ### 6.7 解析的に定値化された族と連続時間の整合式
 
@@ -1060,25 +1245,30 @@ Layer 0 の差分加群・行列表示・horizontal gauge、Layer 1 の有理 q 
 
 個別の q 差分等モノドロミー系は、Layer 1 の束・特異型・modification、Layer 4 の局所解析不変量、Layer 5 の接続データ、Layer 6 の時間輸送、Layer 7 の多項式変換を入力として利用できる。特定の階数や特異型への制限、安定性条件、座標の選択、moduli space の幾何、非線形方程式への消去は、それぞれの消費側で別の定理として与える。
 
-局所分類だけを使う消費側は Layers 0、2–4 で閉じる。大域接続データの保存を使う消費側は Layer 5 の対象と射を保持する。束の次数や特異点の配置を追跡する消費側は、generic module の分類に Layer 1 の局所格子を併せる。
+局所加群の分類だけを使う消費側は Layers 0、2–4 で閉じる。局所型を楕円曲線束として使う消費側は3.8と5.3の filtration を含む同値を、大域接続データの保存を使う消費側は5.4の対象とすべての射を用いる。束の次数や特異点の配置を追跡する場合は、generic module の分類に Layer 1 の局所格子を併せる。
+
+試験基底上の問題では1.6の相対圏、1.8の端点局所化・形式完備化、1.7の2-fibre productによる局所条件と装飾を共通の入口とする。Modification の correspondence は1.7と5.6で接続データの同型へ渡し、6.1–6.2で時間の合成則を保持する。固定 graded-type の R⊗_ℂK 係数族には4.7の quotient stack を使えるが、共同解析的な族について同じ分類や相対 Riemann–Hilbert 同値を必要とする消費側は、その比較・解析的存在・基底変換を別の定理として証明する。
 
 ## Scope and ownership
 
 本ロードマップは、q 差分加群とその操作、束上の有理 q 接続、q 差分の Newton slope と形式分類、q-Stokes 層と局所解析分類、局所解析データを保持した大域接続データ、接続保存変形、q 差分 Schlesinger 変換を所有する。数学的な一般性は、任意有限階数、共鳴、非半単純部分、有理数の傾きを含む。具体的な多項式変換では、その存在に必要なスペクトル分離と一般初期値の条件を Layer 7 に限って課す。
 
-既知の結果をその文献の仮定の下で述べ、複数の結果を組み合わせた契約では構成と依存関係を記載する。特に 5.4 は局所 Laurent 模型と有理型 Birkhoff 分解を組み合わせる比較、6.1 はその圏同値による coherent な輸送、6.5–6.7 は指定した解析的仮定の下での族の帰結である。任意の基底上の q Riemann–Hilbert stack equivalence、任意の特異型の平滑モジュライ空間、その symplectic 構造、coarse moduli の存在は含めない。
+既知の結果をその文献の仮定の下で述べ、複数の結果を組み合わせた契約では構成と依存関係を記載する。特に3.8と5.3は既知の pure/semistable および filtered-bundle 分類を射・選択変更まで展開する契約、5.4 は局所 Laurent 模型と有理型 Birkhoff 分解を組み合わせる比較、6.1 はその圏同値による coherent な輸送、6.5–6.7 は指定した解析的仮定の下での族の帰結である。4.7 の固定 graded-type・係数環 R⊗_ℂK に対する quotient stack は、marked functor と descent の整理として構成する。任意の解析基底上の q Riemann–Hilbert stack equivalence、任意の特異型の平滑モジュライ空間、その symplectic 構造、coarse moduli の存在は含めない。
 
 一般の半線形写像、加群、skew monoid algebra、有限局所自由層、引戻し、曲線の divisor、形式 Laurent 体、解析 germ、複素多様体の商、theta 関数、非可換 H¹ の carrier は既存の供給元を用いる。q 構造を持たない同じ対象を別の carrier として定義し直さない。q の同変条件、作用の方向、選択の比較、q 固有の分類と変形をこれらの上に加える。
 
 | 対象 | 所有する供給元 | 本ロードマップで加える内容 |
 | --- | --- | --- |
+| 半線形写像・Skew Laurent 環 | Mathlib LinearMap・LinearEquiv・SkewMonoidAlgebra | 可逆差分作用、Ore-module 表示と q 係数変換 |
 | 形式係数体・有限分岐 | FormalLaurentPuiseux Layers 1・4・6 | q 自己同型、差分 Newton polygon、slope、q と Galois descent の互換性 |
+| 相対 jet・formal completion | SchemeAndStackFoundations §§4.7–4.8 | 端点 q 局所化、完備化後の有限極の反転と completed pullback |
 | 代数的束・引戻し・determinant | native Tau Ceti; AlgebraicVectorBundles §§1.1–1.2、2.1–2.2、3.1–3.2 | 有理 q 同型、局所格子、特異軌道、modification |
-| 解析 germ・正則束・Dolbeault 比較 | ComplexKahlerGeometry §§2.5、3.1–3.3、4.1、4.4、5.10 | q シフト、純 q 束の次数とコホモロジー、局所 gauge の解析 |
+| 解析 germ・正則束・Dolbeault・次数零線束 | ComplexKahlerGeometry §§2.3、2.5、3.1–3.3、4.1、4.4、5.10、7.8 | q シフト、pure/semistable 比較、指定 slope filtration と局所 gauge |
+| Fitting・Krull–Schmidt・radical・中心 blocks | native Tau Ceti; RepresentationTheory/ArtinAlgebras §§0.1–0.4、0.6; RepresentationTheory/SemisimpleAlgebras Layers 0–2 | isogeny の deck 作用による成分の比較と pure model の下降 |
 | 解析的商・lattice quotient・束の gluing | ComplexManifolds Milestones 3–5・7; ComplexTori Milestones 1・3 | E_q、有限 isogeny、q 同変な接続データの降下 |
 | Theta の一般解析 | SpecialFunctionsTheta §§1.1–1.3、4.1–4.2、5.1 | 乗法的規約、q-character、q-logarithm、q 基本解 |
-| Sheaf descent・torsor・非可換 H¹ | SchemeAndStackFoundations §§1.1、1.15、1.18、2.3; TopologicalSheafCohomology §§1.1–1.3 | q-Stokes sheaf、gap filtration、分類と降下 |
-| Coherent GAGA | ComplexComparisonPartII C0.3–C0.4、C1.9、C2.2 | 有理型 Birkhoff 分解への適用と有理 q 系の復元 |
+| Sheaf descent・2-fibre product・quotient stack・torsor・非可換 H¹ | SchemeAndStackFoundations §§1.1、1.15、1.18、1.21、2.3; TopologicalSheafCohomology §§1.1–1.3 | 局所条件・装飾、q-Stokes、標識を忘れた係数族と modification correspondence |
+| 複素解析空間・coherent sheaves・analytification・GAGA | ComplexComparisonPartII C-1.1、C0.1–C0.4、C1.9、C2.2 | 相対 q 接続、有限 pole、Birkhoff 分解と有理 q 系の復元 |
 | 閉曲面上の一般 CR index | PseudoholomorphicCurveAnalysis §§6.2–6.4、7.2 | E_q 上の pure q 束の次数・H⁰ 消滅と H¹ の次元 |
 | 微分接続・微分時間の等モノドロミー | PainleveEquations Layers 0–2 | 差分の半線形作用、q 接続データ、時間 cocycle を別の理論として構成 |
 
@@ -1140,6 +1330,8 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 供給元: [projective presentation と Ext¹](https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Algebra/Homology/Ext/Presentation.lean)、[projective presentation による短完全列の実現](https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Algebra/Homology/Ext/Realization.lean)、[自由加群の categorical projectivity](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/Category/ModuleCat/Projective.lean)、[native Baer 和](https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/Algebra/Homology/Ext/BaerSum.lean)。
 
+**Fitting と Krull–Schmidt の入力。** `TauCeti.isLocalRing_end_of_indecomposable` は、commutative Artinian R 上の線形 preadditive 圏、binary biproducts、idempotent completeness、End(X) の R 上の有限生成性の下で、indecomposable X の End(X) が local であることを与える。`TauCeti.exists_isLocalRing_end_sum_comp_eq_id` は、同じ有限性と idempotent completeness の下で、local End を持つ W_j と a_j:X→W_j、b_j:W_j→X、Σa_jb_j=id を返す。この結論自体は有限和の retract 表現であり、直和分解とその一意性は ArtinAlgebras §§0.2–0.4 の契約を通じて利用する。3.8では正則束の Hom 有限性と idempotent の像・核が再び束となることを確認して適用する。供給元: [indecomposable と local End](https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/CategoryTheory/Preadditive/Indecomposable.lean)、[local End を持つ対象による retract 表現](https://github.com/TauCetiProject/TauCeti/blob/2fd255d997f47c0b5d834ee416c7015d55444ce5/TauCeti/CategoryTheory/Preadditive/KrullSchmidt.lean)。
+
 ### From TauCetiRoadmap.FormalLaurentPuiseux
 
 [Layers 1・4・6](../FormalLaurentPuiseux/README.md) から、K[[z]] と K((z)) の係数・付値・有限主部、形式代入と座標自己同型、z = uʳ の bounded-denominator levels、基底 1,u,…,uʳ⁻¹、transition maps、付値の rescaling、有限分岐体の Galois 群 μ_r と基底の比較を受け取る。q ≠ 0 の z ↦ qz をこの代入へ特殊化する。q_rʳ = q を伴う差分体拡大、deck action と半線形作用の可換性、解析的係数分解の収束と解析体の Galois 構造は 0.4、差分加群の下降の可換性は 3.4 で証明する。一般の Newton–Puiseux 定理を、差分作用素の Newton slope theorem と同一視しない。
@@ -1168,6 +1360,16 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 [§§7.6–7.8](../ComplexKahlerGeometry/README.md) から複素 torus・曲面の向きと Chern 数の比較、E_q の genus 一、degree-zero line の lattice character 表示を受け取る。Θ_q の零 divisor と q automorphy factor の degree がこの Chern degree に一致すること、および負の pure q-slope の H⁰ 消滅は 3.7 で証明する。
 
+[§§2.3、2.5](../ComplexKahlerGeometry/README.md) の平面領域上の ∂̄ 可解性と Dolbeault 比較を ℂ* に適用して H¹(ℂ*,O)=0 を得る。3.8ではこれにより unipotent bundle の pullback の filtered trivialization を構成する。§7.8の次数零線束の全射的な character 表示を用いて L_i を定数 q factor c_i に移し、[A57] の次数零 indecomposable filtration 補題を上記の束・cohomology 上で展開する。次数零線束の分類や一般の ∂̄ solver は重複して構築しない。
+
+### From TauCetiRoadmap.RepresentationTheory.ArtinAlgebras
+
+[§§0.1–0.4](../RepresentationTheory/ArtinAlgebras/README.md) から、Hom 有限で idempotent complete な ℂ 線形圏に対する Fitting、Krull–Schmidt 分解の存在と一意性を受け取る。§0.6の categorical radical の matrix 記述を用い、End(E)/rad End(E) の blocks を E の indecomposable 同型型と比較する。3.8の deck 作用にはこの intrinsic な quotient を使い、選んだ summands を canonical としない。一般の radical ideal、indecomposable carrier、分解の一意性はこの供給元が所有する。
+
+### From TauCetiRoadmap.RepresentationTheory.SemisimpleAlgebras
+
+[Layer 0](../RepresentationTheory/SemisimpleAlgebras/README.md) の有限次元代数の Jacobson radical と半単純 quotient、Layers 1–2 の algebraically closed field 上の matrix block 分解、division algebra の ℂ への縮退、中心 primitive idempotent と blocks の対応を受け取る。3.8の B/J≅∏Mat_(m_i)(ℂ)、有限群作用による中心 blocks の置換、Reynolds 平均からの invariant quotient の全射性をこれらの API 上で組み立てる。一般の Wedderburn 分解や Jacobson radical を再定義しない。
+
 ### From TauCetiRoadmap.PseudoholomorphicCurveAnalysis
 
 [§§6.2–6.4](../PseudoholomorphicCurveAnalysis/README.md) の滑らかな Cauchy–Riemann operator の Sobolev realization、楕円正則性、kernel・cokernel の比較と、[§7.2](../PseudoholomorphicCurveAnalysis/README.md) の閉曲面上の任意複素 rank r の index formula
@@ -1182,9 +1384,13 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 ### From TauCetiRoadmap.SchemeAndStackFoundations
 
-[§1.1](../SchemeAndStackFoundations/README.md) の quasi-coherent sheaf と射の descent、§1.18 の groupoid に値を持つ stack と 2-fibre product を、1.6 の有限局所自由層・開部分上の q 同型・その可換図式へ適用する。有限局所自由性と同型であることは適切な局所性によって降下する。ここから q の stable moduli や Artin representability を供給されたものとは扱わない。
+[§1.1](../SchemeAndStackFoundations/README.md) の quasi-coherent sheaf と射の descent、§1.18 の category-valued pseudofunctor・core・generic site 上の stackification・2-fibre product を用いる。1.6 の有限局所自由層、Cartier divisor に沿う局所化後の q 同型、全水平射の可換図式を降下する。代数側には fpqc descent、解析側には複素解析空間の開被覆 site に対する同じ一般 stack carrier を適用する。1.7 の対象 (E,A,η,α) と射の互換式、5.4–5.6 の比較、6.1–6.2 の相対輸送は、この既存の `Stack.twoFibreProduct`、strong transformation、modification、fibrewise equivalence の q 固有の適用である。
+
+[§§1.14–1.16、1.21](../SchemeAndStackFoundations/README.md) の groupoid、torsor、twisting、action quotient と、その S-valued objects を torsor と equivariant map で記述する比較を受け取る。一般の quotient stack を本ロードマップで構築し直さず、4.7 の固定 graded type の係数族と具体的に比較する。有限局所自由性と可逆性の descent は、q の安定モジュライの Artin representability を自動的に与えるものではない。
 
 [§§1.15、2.3](../SchemeAndStackFoundations/README.md) から、群の層の torsor、native な NonabelianH1、torsor の同型類との比較、群の層の射による map、base pullback、trivial torsor の class を受け取る。4.4–4.6 ではこの carrier 上に q-Stokes cocycle と分類写像を構成する。既存の abelian な H¹ と非可換 torsor class を同じ加群として扱わない。
+
+[§§4.7–4.8](../SchemeAndStackFoundations/README.md) の I^(m+1) による有限 jet、formal completion、coherent formal module と transition maps を1.8の section ideal に適用する。一般 coherent completion の Noetherian 仮定を保持し、任意基底上の有限局所自由 E について必要な同型は局所フレームによって構成する。解析側では同じ jet の層の逆極限を使い、通常の pullback や stalk と無限逆極限の交換を仮定しない。q-shift が各 jet を保つこと、有限 pole を最後に反転すること、completed pullback との coherence は1.8で所有する。
 
 ### From TauCetiRoadmap.TopologicalSheafCohomology
 
@@ -1192,7 +1398,9 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 ### From TauCetiRoadmap.ComplexComparisonPartII
 
-[C0.3–C0.4](../ComplexComparisonPartII/README.md) の coherent module・有限局所自由束の analytification、C1.9 の proper/projective coherent GAGA、C2.2 の束・切断・射の比較を受け取る。5.2 では、解析的に貼り合わせた ℙ¹ 上の束を代数化し、generic fibre の有理基底を解析側の有理型フレームへ戻す。微分接続の Riemann–Hilbert 比較はこの用途に含めない。q の接続行列と有理系の復元は 5.3–5.5 で証明する。
+[C-1.1](../ComplexComparisonPartII/README.md) の複素解析空間を、native な locally ringed space の full subcategory として用いる。nilpotent を保つ局所モデル、構造層、開制限、開貼り合わせ、fibre products を受け取る。C0.1–C0.2 の coherent analytic module とその操作、native な有限局所自由性を使い、1.6の解析的 q 接続と1.8の section に沿う germ・jet をこの同じ sheaf carrier 上で定義する。複素多様体に特殊化したときだけ C0.3 の正則 bundle と section sheaf の辞書を使う。
+
+[C-1.1、C0.4](../ComplexComparisonPartII/README.md) の局所有限型 ℂ スキームの analytification と coherent sheaf の analytification、射・tensor・pullback との比較を、1.6 の有限 pole bound ごとの q 同型へ適用する。C1.9 の proper/projective coherent GAGA、C2.2 の束・切断・射の比較は5.2で用い、解析的に貼り合わせた ℙ¹ 上の束を代数化して、その generic fibre の有理基底を解析側の有理型フレームへ戻す。微分接続の Riemann–Hilbert 比較はこの用途に含めない。q の接続データと有理系の比較は5.3–5.5で証明する。
 
 ### Relation to TauCetiRoadmap.PainleveEquations
 
@@ -1208,13 +1416,23 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 - **[S09]** Jacques Sauloy, [Équations aux q-différences et fibrés vectoriels holomorphes sur la courbe elliptique ℂ×/q^ℤ](https://www.numdam.org/item/AST_2009__323__397_0/), *Astérisque* **323** (2009), 397–429. 刊行版。§2.3.2、Theorem 2.4、Lemma 2.5 の整数傾きの filtered bundle 比較、§2.3.3 の q slope filtration と bundle filtration の区別を用いる。
 
-- **[RSZ13]** Jean-Pierre Ramis, Jacques Sauloy, Changgui Zhang, [Local analytic classification of q-difference equations](https://www.numdam.org/item/AST_2013__355__R1_0/), *Astérisque* **355** (2013). 刊行版。Lemma 2.1.1、Proposition 2.1.3、Theorems 2.2.1・2.2.4、Definition 2.3.1、Theorems 3.1.1・3.1.4、Remark 3.1.5、§3.3 の Birkhoff–Guenther normal form、Theorem 4.4.1、Chapters 5–6、Appendices A.6–A.7 を用いる。R ⊗_ℂ ℂ({z}) による marked functor と、任意解析基底の共同解析的な族を区別する。
+- **[RSZ13]** Jean-Pierre Ramis, Jacques Sauloy, Changgui Zhang, [Local analytic classification of q-difference equations](https://www.numdam.org/item/AST_2013__355__R1_0/), *Astérisque* **355** (2013). 刊行版。Lemma 2.1.1、Proposition 2.1.3、Theorems 2.2.1・2.2.4、Definition 2.3.1、Theorems 3.1.1・3.1.4、Remark 3.1.5、§3.3 の Birkhoff–Guenther normal form、Theorem 4.4.1、Chapters 5–6、Appendices A.5–A.7 を用いる。R ⊗_ℂ ℂ({z}) による marked functor と、任意解析基底の共同解析的な族を区別する。
 
 - **[S24]** Jacques Sauloy, [Classification analytique locale des équations aux q-différences de pentes arbitraires](https://www.numdam.org/item/10.5802/afst.1784/), *Annales de la Faculté des Sciences de Toulouse*, 6e série, **33** (2024), no. 3, 647–679. 刊行版。Theorem 3.1 の summation、Theorem 3.5 と §3.2.2 の整数傾きの q-Birkhoff–Malgrange–Sibuya 対応と affine structure、Propositions 3.9–3.11 と Theorem 3.13 の任意有理傾きへの降下を用いる。Hom block の bundle degree は、その rank を含めて determinant から計算する。
 
 - **[B04]** Alexei Borodin, [Isomonodromy transformations of linear systems of difference equations](https://annals.math.princeton.edu/2004/160-3/p08), *Annals of Mathematics* **160** (2004), 1141–1182; [arXiv:math/0209144v2](https://arxiv.org/abs/math/0209144v2). Introduction (3q)–(7q)、Lemmas 3.2–3.4・3.11・4.2–4.3、§4(a)–(c)、Proposition 4.8、Theorem 4.9、Remark 4.14 を用いる。これらの番号は当該 preprint と刊行版で一致する。q 版は一般の再分解定理と Remark 4.14 の構成から展開し、加法差分の定理をそのまま q の定理として引用しない。
 
 - **[K16]** Alisa Knizel, [Moduli spaces of q-connections and gap probabilities](https://doi.org/10.1093/imrn/rnv366), *International Mathematics Research Notices* **2016** (2016), no. 22, 6921–6954; [arXiv:1506.06718v2](https://arxiv.org/abs/1506.06718v2). 本文の Definition 1.5、Definition 1.6、Definition 1.7、Remark 1.8、equation (1.3) はこの arXiv 版の番号を用いる。一般の q 接続・零点と極・modification・gauge の定義のみを利用し、同論文の特定階数の moduli や非線形方程式は本ロードマップに取り込まない。
+
+- **[A57]** M. F. Atiyah, [Vector bundles over an elliptic curve](https://math.berkeley.edu/~nadler/atiyah.classification.pdf), *Proceedings of the London Mathematical Society*, (3) **7** (1957), 414–452. 刊行版の大学公開 scan。Lemma 2, pp.420–421、Lemma 5 と Lemma 6′, pp.422–423、Lemmas 8–11, pp.427–428 を3.8の次数零 indecomposable の filtration 補題に用いる。Lemma 11 の rank r・degree r の主張は次数一線束の tensor を介して次数零へ移す。ここで splitting は部分束 filtration であり、直和分解を意味しない。
+
+- **[M19]** Takuro Mochizuki, [Doubly periodic monopoles and q-difference modules](https://arxiv.org/abs/1902.03551v1), arXiv:1902.03551v1 (2019). Definition 2.8 と Remark 2.9, p.13 の slope 規約、§10.1.2, p.77 の filtration と符号、§10.1.3, p.78 と §1.5.1, pp.7–8 の pure/semistable および全局所解析加群と有理 anti-Harder–Narasimhan filtered bundle の自然圏同値を用いる。この引用を任意 parameter base 上の相対分類へ拡張しない。
+
+- **[SPF]** The Stacks Project, [Stacks in groupoids, Section 8.5, Tag 02ZH](https://stacks.math.columbia.edu/tag/02ZH). Lemma 8.5.6, Tag 02ZL の2-fibre productと、その対象・射の記述を用いる。一般の構成は SchemeAndStackFoundations §1.18 から受け取る。
+
+- **[SPQ]** The Stacks Project, [Quotients by group actions, Section 95.15, Tag 04UV](https://stacks.math.columbia.edu/tag/04UV). Proposition 95.15.3 の quotient stack の torsor と equivariant map による記述を用いる。一般の構成は SchemeAndStackFoundations §1.21 から受け取る。
+
+- **[SPD]** The Stacks Project, [Relative effective Cartier divisors, Section 31.19, Tag 056P](https://stacks.math.columbia.edu/tag/056P). Lemmas 31.19.1、31.19.3 の base change と和の安定性を用いる。
 
 [S00]: https://www.numdam.org/item/AIF_2000__50_4_1021_0.pdf
 [S03]: https://www.numdam.org/item/10.1016/j.ansens.2002.10.001.pdf
@@ -1224,3 +1442,9 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 [S24]: https://www.numdam.org/item/10.5802/afst.1784.pdf
 [B04]: https://arxiv.org/abs/math/0209144v2
 [K16]: https://arxiv.org/abs/1506.06718v2
+[SPF]: https://stacks.math.columbia.edu/tag/02ZH
+[SPQ]: https://stacks.math.columbia.edu/tag/04UV
+[SPD]: https://stacks.math.columbia.edu/tag/056P
+
+[A57]: https://math.berkeley.edu/~nadler/atiyah.classification.pdf
+[M19]: https://arxiv.org/abs/1902.03551v1

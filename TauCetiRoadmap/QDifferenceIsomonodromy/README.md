@@ -87,17 +87,22 @@ q が無限位数なら、これら三つの体の σ_q 不変部分は ℂ で�
 
 *Needs:* 0.2; native の RatFunc、LaurentSeries、有理型 germ と局所双正則 pullback; FormalLaurentPuiseux Layers 1・4・6; ComplexKahlerGeometry §§3.2–3.3。
 
-### 0.5 Ore 表示と cyclic vector
+### 0.5 Skew Laurent 表示と cyclic vector
 
-**構成・定理。** 差分環 (R,σ) に対し、記号 Φ の関係 Φa = σ(a)Φ を持つ skew Laurent 環を用いて、可逆半線形作用付き R 加群とこの環の加群を比較する。正・負の冪、作用素の積、係数の移動規則を固定し、既存の加群 carrier との比較を与える。
+**構成・定理。** 可換環 R と自己同型 σ に対し、整数 n の R 上の作用を σⁿ とする。この明示的な作用を持つ native `SkewMonoidAlgebra R (Multiplicative ℤ)` を D として用いる。環構造、有限支持、係数、単項式と積の法則は既存 API から受け取り、環の carrier や結合律を再構築しない。係数の埋め込みは `SkewMonoidAlgebra.singleOneRingHom`、Φ は指数 1 の `SkewMonoidAlgebra.of` の値であり、`single_mul_single` により Φa = σ(a)Φ、Φ⁻¹a = σ⁻¹(a)Φ⁻¹ を得る。σ を変える構成にはその作用を明示的に渡し、R に q に依存する大域 instance を設けない。
 
-K = ℂ(z)、ℂ({z})、ℂ((z))、q が無限位数、dim_K M = n ≥ 1 とする。任意の差分加群 M は cyclic vector e を持ち、e, Φe, …, Φⁿ⁻¹e が基底になる。したがって、次数 n、最高係数 1、定数係数非零の skew polynomial P により M ≅ K[Φ,Φ⁻¹]/K[Φ,Φ⁻¹]P と表示できる。作用素から companion matrix への比較とその逆を与える。表示の選択自体を不変量とはしない。（[RSZ13], Lemma 2.1.1; [S03], §1.1 冒頭の cyclic vector lemma の説明。[VPR07], Lemma 4.1 は後の Laurent 多項式模型における対応物。）
+可逆な σ 半線形作用付き R 加群と全左 D 加群の圏同値を構成する。前者からは aΦⁿ が m を aΦ_Mⁿ(m) へ送る作用を、後者からは R と Φ の作用を取り出す。射の条件、二つの合成の自然同型、有限生成射影および体上の有限次元という underlying R 加群の条件を比較する。R の D への埋め込みが中心に入るとは仮定しない。σ が可換係数環 k を固定する場合に限り、k 線形構造を用いる。
 
-- 基底付き行列系・cyclic vector 付き差分加群・scalar operator の間の相互構成を与える。
+非負指数の部分は native `SkewPolynomial R` と比較する。ℕ→ℤ による単項式の埋め込みが単射な環準同型であり、全 Laurent 環は Φ を可逆にする普遍性を持つことを、`SkewMonoidAlgebra.liftNCRingHom` によって証明する。通常の可換環の localization として取り扱わない。
+
+K = ℂ(z)、ℂ({z})、ℂ((z))、q が無限位数、dim_K M = n ≥ 1 とする。任意の差分加群 M は cyclic vector e を持ち、e, Φe, …, Φⁿ⁻¹e が基底になる。したがって、次数 n、最高係数 1、定数係数非零の skew polynomial P により M ≅ D/DP と表示できる。作用素から companion matrix への比較とその逆を与える。表示の選択自体を不変量とはしない。（[RSZ13], Lemma 2.1.1; [S03], §1.1 冒頭の cyclic vector lemma。[VPR07], Lemma 4.1 は後の Laurent 多項式模型における対応物。）
+
+- 基底付き行列系・cyclic vector 付き差分加群・scalar operator の相互構成を与える。
 - 最小作用素の次数が n であり、定数係数非零が Φ の可逆性に対応することを証明する。
-- cyclic vector を変えたときの加群同型を与え、Layer 3 の Newton slope の不変性へ接続する。
+- Cyclic vector の変更を加群同型に送り、Layer 3 の Newton slope の不変性へ接続する。
+- σ を σ⁻¹ へ変える操作は指数 n↦−n による環同型と対応し、0.3 の作用の反転と整合する。
 
-*Needs:* 0.1、0.3–0.4; Ore 積の有限和による構成、体上の有限次元線形代数。skew polynomial に関する q 固有の cyclic vector の補題は本節で所有する。
+*Needs:* 0.1–0.4; native の `SkewMonoidAlgebra`、`SkewPolynomial`、`single_mul_single`、`singleOneRingHom`、`of`、`mapDomainRingHom`、`liftNCRingHom`。差分加群との圏同値、可逆生成元の普遍性の特殊化、q 固有の cyclic vector の補題を本節で所有する。
 
 ### Examples
 
@@ -1063,7 +1068,7 @@ Layer 0 の差分加群・行列表示・horizontal gauge、Layer 1 の有理 q 
 
 既知の結果をその文献の仮定の下で述べ、複数の結果を組み合わせた契約では構成と依存関係を記載する。特に 5.4 は局所 Laurent 模型と有理型 Birkhoff 分解を組み合わせる比較、6.1 はその圏同値による coherent な輸送、6.5–6.7 は指定した解析的仮定の下での族の帰結である。任意の基底上の q Riemann–Hilbert stack equivalence、任意の特異型の平滑モジュライ空間、その symplectic 構造、coarse moduli の存在は含めない。
 
-一般の半線形写像、加群、有限局所自由層、引戻し、曲線の divisor、形式 Laurent 体、解析 germ、複素多様体の商、theta 関数、非可換 H¹ の carrier は既存の供給元を用いる。q 構造を持たない同じ対象を別の carrier として定義し直さない。q の同変条件、作用の方向、選択の比較、q 固有の分類と変形をこれらの上に加える。
+一般の半線形写像、加群、skew monoid algebra、有限局所自由層、引戻し、曲線の divisor、形式 Laurent 体、解析 germ、複素多様体の商、theta 関数、非可換 H¹ の carrier は既存の供給元を用いる。q 構造を持たない同じ対象を別の carrier として定義し直さない。q の同変条件、作用の方向、選択の比較、q 固有の分類と変形をこれらの上に加える。
 
 | 対象 | 所有する供給元 | 本ロードマップで加える内容 |
 | --- | --- | --- |
@@ -1084,6 +1089,8 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 以下では carrier、写像、同型とその法則を供給契約として記す。Native source は固定 commit のリンクで指定し、ロードマップの契約は現存する節を参照する。上の各層は、それらに q 構造と必要な可換図式を加える。
 
 ### From Mathlib
+
+**Skew Laurent 環の carrier。** 明示的な自己同型 σ の整数冪による `MulSemiringAction (Multiplicative ℤ) R` を固定し、`SkewMonoidAlgebra R (Multiplicative ℤ)` の既存の環構造を用いる。`single_mul_single` は (aΦᵐ)(bΦⁿ)=aσᵐ(b)Φᵐ⁺ⁿ を与える。`singleOneRingHom` は係数の環埋め込み、`of` は指数群から乗法モノイドへの写像、`liftNCRingHom` は係数写像 f と指数群の写像 g が f(σⁿ(a))g(n)=g(n)f(a) を満たす場合の環準同型を与える。`mapDomainRingHom` により ℕ→ℤ と作用に整合する指数の変更を扱う。非負指数の carrier は `SkewPolynomial R` であり、これは `SkewMonoidAlgebra R (Multiplicative ℕ)` の既存の略記である。σ に依存する作用は各構成で明示し、基礎環上の中心性を追加しない。供給元: [SkewMonoidAlgebra の環構造と普遍性](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/SkewMonoidAlgebra/Basic.lean)、[作用に整合する写像と比較](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/SkewMonoidAlgebra/Lift.lean)、[SkewPolynomial](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/SkewPolynomial/Basic.lean)。
 
 **半線形写像。** 可換環 R とその環自己同型 σ に対し、加群、R 線形射、σ 半線形射、可逆な σ 半線形射には Mathlib の `Module`、`LinearMap`、`LinearEquiv` を用いる。`LinearEquiv` の σ と逆写像に関する仮定は、σ と σ⁻¹ が両順序で逆であることを要求する `RingHomInvPair` である。恒等写像、合成、逆写像および underlying function の合成法則をこの API から受け取る。環上では有限生成射影性を、体 K 上では有限次元性を underlying module の条件とし、q 差分加群の射には基礎環上の線形性と半線形構造を可換にする条件を加える。既存の半線形写像の carrier を再定義しない。供給元: [LinearMap の定義](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/Module/LinearMap/Defs.lean)、[LinearEquiv の定義と合成・逆](https://github.com/leanprover-community/mathlib4/blob/1b1ccf4b088b32fa3f23f2de1127433254a81e1e/Mathlib/Algebra/Module/Equiv/Defs.lean)。
 

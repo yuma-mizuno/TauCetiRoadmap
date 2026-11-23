@@ -603,7 +603,7 @@ pure slope μ、rank r の P に対し、V(P) の rank は r、degree は rμ �
 - E=U⊕U の二つの選択した summands は GL₂(ℂ) によって混ざる。一方、End(E)/rad End(E) の中心 block は intrinsic である。descent の証明には後者を用いる。
 - degree-zero の非自明な線束 L に対応する cU の c を除くと、L の同型型を失う。n=2、t=1 のとき deck transformation s↦−s は T=sΦ を −T に移すが、finite-orbit condition は変わらない。
 
-*Needs:* 2.1–2.5; 3.1–3.7; RepresentationTheory/ArtinAlgebras §§0.1–0.4 の Fitting・Krull–Schmidt と §0.6 の categorical radical; RepresentationTheory/SemisimpleAlgebras Layer 0 の radical quotient、Layers 1–2 の algebraically closed field 上の division-ring collapse と中心 blocks; ComplexKahlerGeometry §§2.3、2.5、4.1、5.10、7.8 の ∂̄、束、有限次元 Hom、Serre duality と次数零線束; PseudoholomorphicCurveAnalysis §7.2 の任意 rank の Riemann–Roch; finite isogeny に沿う bundle descent。[A57] の次数零 filtration 補題、Reynolds 平均と中心 block による descent 補題、および pure/semistable の比較を上記 carrier と API 上で証明する。一般の Jacobson radical、Krull–Schmidt、Picard carrier は再定義しない。
+*Needs:* 2.1–2.5; 3.1–3.7; ArtinAlgebras §§0.1–0.4 の Fitting・Krull–Schmidt と §0.6 の categorical radical; SemisimpleAlgebras Layer 0 の radical quotient、Layers 1–2 の algebraically closed field 上の division-ring collapse と中心 blocks; ComplexKahlerGeometry §§2.3、2.5、4.1、5.10、7.8 の ∂̄、束、有限次元 Hom、Serre duality と次数零線束; PseudoholomorphicCurveAnalysis §7.2 の任意 rank の Riemann–Roch; finite isogeny に沿う bundle descent。[A57] の次数零 filtration 補題、Reynolds 平均と中心 block による descent 補題、および pure/semistable の比較を上記 carrier と API 上で証明する。一般の Jacobson radical、Krull–Schmidt、Picard carrier は再定義しない。
 
 ### Examples
 
@@ -960,7 +960,7 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
       (T_i*B_j)B_i = (T_j*B_i)B_j
 
   とする。二重 pullback 間の既存比較同型を挿入して同じ始点・終点の射として読む。局所フレームで6.2の二つの行列式を回復する。任意の f:S′→S に沿っては f*B_i:f*E⇢(T_i∘f)*E として引き戻す。S′ 自身の時間自己同型 T′_i による輸送と読むときは f∘T′_i=T_i∘f を仮定する。これらの比較と cocycle が、さらに試験基底を引き戻す操作と両立することを証明する。
-- より一般の時間には、代数側では SchemeAndStackFoundations §1.14 の groupoid object T₁⇉T₀ を用いる。解析側では ComplexComparisonPartII C-1.1 の fibre products 上に与えた source、target、単位、逆、合成から、T↦(T₀(T),T₁(T)) という groupoid-valued presheaf を取り、SchemeAndStackFoundations §1.18 の一般 site 上の carrier に渡す。§1.14 の代数空間の carrier を解析空間そのものと同一視しない。q の source・target pullback が一致すると仮定し、T₀ 上の相対 q 接続 E と、T₁ 上の meromorphic な水平同型 B:s*E⇢t*E を使う。q が固定された複素数なら、この一致は自動的である。単位への制限は恒等とする。composable pair は (h,g)∈T₁×_(s,T₀,t)T₁、m(h,g)=h∘g、pr₁=h、pr₂=g の規約とし、m*B=(pr₁*B)(pr₂*B) を同じ pullback coherence によって定義する。任意の f:S′→T₀ に対する base change では、S′×_(T₀,s)T₁×_(t,T₀)S′⇉S′ という inverse-image groupoid と f*E を用いる。一般の groupoid-valued presheaf の理論は既存 API を用い、q 水平性、有限 pole bound、matrix chart との一致を本節で示す。
+- より一般の時間には、代数側では SchemeAndStackFoundations §1.14 の groupoid object T₁⇉T₀ を用いる。解析側では ComplexComparisonPartII C-1.1 の fibre products 上に与えた、groupoid の法則を満たす source、target、単位、逆、合成から、T↦(T₀(T),T₁(T)) という groupoid-valued presheaf を取り、SchemeAndStackFoundations §1.18 の一般 site 上の carrier に渡す。§1.14 の代数空間の carrier を解析空間そのものと同一視しない。q の source・target pullback が一致すると仮定し、T₀ 上の相対 q 接続 E と、T₁ 上の meromorphic な水平同型 B:s*E⇢t*E を使う。q が固定された複素数なら、この一致は自動的である。単位への制限は恒等とする。composable pair は (h,g)∈T₁×_(s,T₀,t)T₁、m(h,g)=h∘g、pr₁=h、pr₂=g の規約とし、m*B=(pr₁*B)(pr₂*B) を同じ pullback coherence によって定義する。任意の f:S′→T₀ に対する base change では、S′×_(T₀,s)T₁×_(t,T₀)S′⇉S′ という inverse-image groupoid と f*E を用いる。一般の groupoid-valued presheaf の理論は既存 API を用い、q 水平性、有限 pole bound、matrix chart との一致を本節で示す。
 
 *Needs:* 0.3; 1.6–1.7; 6.1; 整数格子・群の presentation と有限積; SchemeAndStackFoundations §§1.14、1.18 の代数的 groupoid・一般 site 上の groupoid-valued presheaf と pullback coherence; ComplexComparisonPartII C-1.1 の解析空間の fibre products。有理写像の定義域に関する制限は Layer 7 の有限範囲の存在定理で具体化する。
 
@@ -1264,7 +1264,7 @@ Layer 0 の差分加群・行列表示・horizontal gauge、Layer 1 の有理 q 
 | 相対 jet・formal completion | SchemeAndStackFoundations §§4.7–4.8 | 端点 q 局所化、完備化後の有限極の反転と completed pullback |
 | 代数的束・引戻し・determinant | native Tau Ceti; AlgebraicVectorBundles §§1.1–1.2、2.1–2.2、3.1–3.2 | 有理 q 同型、局所格子、特異軌道、modification |
 | 解析 germ・正則束・Dolbeault・次数零線束 | ComplexKahlerGeometry §§2.3、2.5、3.1–3.3、4.1、4.4、5.10、7.8 | q シフト、pure/semistable 比較、指定 slope filtration と局所 gauge |
-| Fitting・Krull–Schmidt・radical・中心 blocks | native Tau Ceti; RepresentationTheory/ArtinAlgebras §§0.1–0.4、0.6; RepresentationTheory/SemisimpleAlgebras Layers 0–2 | isogeny の deck 作用による成分の比較と pure model の下降 |
+| Fitting・Krull–Schmidt・radical・中心 blocks | native Tau Ceti; ArtinAlgebras §§0.1–0.4、0.6; SemisimpleAlgebras Layers 0–2 | isogeny の deck 作用による成分の比較と pure model の下降 |
 | 解析的商・lattice quotient・束の gluing | ComplexManifolds Milestones 3–5・7; ComplexTori Milestones 1・3 | E_q、有限 isogeny、q 同変な接続データの降下 |
 | Theta の一般解析 | SpecialFunctionsTheta §§1.1–1.3、4.1–4.2、5.1 | 乗法的規約、q-character、q-logarithm、q 基本解 |
 | Sheaf descent・2-fibre product・quotient stack・torsor・非可換 H¹ | SchemeAndStackFoundations §§1.1、1.15、1.18、1.21、2.3; TopologicalSheafCohomology §§1.1–1.3 | 局所条件・装飾、q-Stokes、標識を忘れた係数族と modification correspondence |
@@ -1362,11 +1362,11 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 [§§2.3、2.5](../ComplexKahlerGeometry/README.md) の平面領域上の ∂̄ 可解性と Dolbeault 比較を ℂ* に適用して H¹(ℂ*,O)=0 を得る。3.8ではこれにより unipotent bundle の pullback の filtered trivialization を構成する。§7.8の次数零線束の全射的な character 表示を用いて L_i を定数 q factor c_i に移し、[A57] の次数零 indecomposable filtration 補題を上記の束・cohomology 上で展開する。次数零線束の分類や一般の ∂̄ solver は重複して構築しない。
 
-### From TauCetiRoadmap.RepresentationTheory.ArtinAlgebras
+### From ArtinAlgebras
 
 [§§0.1–0.4](../RepresentationTheory/ArtinAlgebras/README.md) から、Hom 有限で idempotent complete な ℂ 線形圏に対する Fitting、Krull–Schmidt 分解の存在と一意性を受け取る。§0.6の categorical radical の matrix 記述を用い、End(E)/rad End(E) の blocks を E の indecomposable 同型型と比較する。3.8の deck 作用にはこの intrinsic な quotient を使い、選んだ summands を canonical としない。一般の radical ideal、indecomposable carrier、分解の一意性はこの供給元が所有する。
 
-### From TauCetiRoadmap.RepresentationTheory.SemisimpleAlgebras
+### From SemisimpleAlgebras
 
 [Layer 0](../RepresentationTheory/SemisimpleAlgebras/README.md) の有限次元代数の Jacobson radical と半単純 quotient、Layers 1–2 の algebraically closed field 上の matrix block 分解、division algebra の ℂ への縮退、中心 primitive idempotent と blocks の対応を受け取る。3.8の B/J≅∏Mat_(m_i)(ℂ)、有限群作用による中心 blocks の置換、Reynolds 平均からの invariant quotient の全射性をこれらの API 上で組み立てる。一般の Wedderburn 分解や Jacobson radical を再定義しない。
 

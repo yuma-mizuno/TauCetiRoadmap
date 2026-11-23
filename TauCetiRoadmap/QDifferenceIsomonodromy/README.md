@@ -1,6 +1,6 @@
 # Roadmap: q 差分方程式と等モノドロミー変形
 
-**Summary.** 複素数 q を 0 < |q| ≠ 1 の範囲で固定し、任意の有限階数の有理 q 接続、その局所分類、大域接続データ、接続データを保存する離散変形を構成する。基本対象は有理関数体上の q 差分加群と、射影直線上のベクトル束 E に備わる有理型同型 A : E ⇢ σ_q*E である。σ_q(z) = qz とする。行列表現 Y(qz) = A(z)Y(z) は、この対象に基底を選んだ表示である。
+**Summary.** 複素数 q を |q| > 1 として固定し、任意の有限階数の有理 q 接続、その局所分類、大域接続データ、接続データを保存する離散変形を構成する。基本対象は有理関数体上の q 差分加群と、射影直線上のベクトル束 E に備わる有理型同型 A : E ⇢ σ_q*E である。σ_q(z) = qz とする。行列表現 Y(qz) = A(z)Y(z) は、この対象に基底を選んだ表示である。0 < |q₀| < 1 の系には、0.3の作用の反転によってこの解析的規約を適用する。差分代数と多項式変換については、各節で明記するより弱い仮定の下でも述べる。
 
 局所分類の主定理は、共鳴と非半単純な正則特異部分を許し、有理数の傾きを持つ任意の局所 q 差分加群を扱う。傾きフィルトレーションと形式分類を構成し、指定した形式型とその同一視を持つ解析的同型類を、楕円曲線 E_q = ℂ×/q^ℤ 上の q-Stokes 層の第一非可換コホモロジーで分類する。整数傾きでは正規形を与え、有限分岐と降下を通じて有理傾きへ進む。指定形式型の marked functor を有限次元アフィン空間で表し、その標識を忘れた係数族を商スタックで記述する。さらに、全局所解析加群の圏を、有理傾斜の anti-Harder–Narasimhan filtration を持つ楕円曲線束の圏と比較する。
 
@@ -14,13 +14,23 @@
 
 代数的定義は可換環 R と環自己同型 σ の上で与える。有限階数の差分加群では underlying module を有限生成射影とし、体上では有限次元とする。階数零を圏の零対象として含め、スペクトル・cyclic vector・多項式因子の主張では n ≥ 1 を明記する。一般基底上の束の階数は局所定数でよく、必要な成分ごとに固定階数へ制限する。
 
-複素解析の主張では |q| > 1 とする。0 < |q| < 1 の方程式は、q を q⁻¹、A(z) を A(q⁻¹z)⁻¹ に取り替える同値によって扱う。q = 0、|q| = 1、根付き一の q は解析的分類の仮定に含まれない。代数的な q シフトの定義には q ≠ 0 で十分であり、無限位数を用いる定理ではその条件を追加する。q は変形の間も固定する。
+**q の仮定。** 複素解析を伴う局所分類・楕円曲線束・接続データの比較では、一貫して |q| > 1 を用いる。q = 0 および |q| = 1 の系をこれらの解析的定理に含めない。一般の差分代数は上の (R,σ) に対して述べ、q シフトの代数的構成には q ≠ 0、定数体・cyclic vector・Layer 7 の代数的変換には明記した無限位数性を用いる。解析基底上の q 接続を層として定義するだけの構成も、解析的分類の定理とは区別する。q は変形の間固定する。
+
+0 < |q₀| < 1 の入力 Y(q₀z)=A₀(z)Y(z) は、q=q₀⁻¹、A(z)=A₀(qz)⁻¹ として本稿の規約へ移す。これは係数を含めた反転関手であり、q だけを書き換える操作ではない。射、局所化、特異 divisor、時間輸送との比較は0.3、1.6、6.2で与える。多項式行列の反転は一般に有理行列となるため、Layer 7 の多項式部分圏をこの反転で保つとはしない。同層の代数的定理は元の q に対して直接述べる。
 
 σ_qf(z) = f(qz) とし、列ベクトルの方程式を σ_qY = AY、その半線形作用素を Φ_A = A⁻¹σ_q と書く。Y′ = GY による gauge は A′ = (σ_qG)AG⁻¹ である。A から A′ への長方形行列 H の horizontal 条件は (σ_qH)A = A′H とする。束の向きは A : E ⇢ σ_q*E、すなわち E_z ⇢ E_qz である。
 
-0 の局所解析体は収束 Laurent 級数体 ℂ({z})、形式体は ℂ((z)) とする。前者は 0 における有理型 germ の既存の体を、Laurent 展開で表示したものである。∞ の座標は w = z⁻¹ であり、σ_q は w ↦ q⁻¹w と作用する。したがって ∞ で局所分類を用いる際には、座標変換と必要な作用の逆転をともに記録する。形式係数体の分岐 z = uʳ には q_rʳ = q を選び、σ_(q_r)u = q_ru とする。選択変更と有限群による降下は Layer 3–4 で扱う。
+0 の局所解析体は収束 Laurent 級数体 ℂ({z})、形式体は ℂ((z)) とする。前者は 0 における有理型 germ の既存の体を、Laurent 展開で表示したものである。∞ の座標は w = z⁻¹ であり、元の σ_q は w ↦ q⁻¹w と作用する。局所フレームで Z(q⁻¹w)=C_∞(w)Z(w) と書いた後、局所分類には D_∞(w)=C_∞(qw)⁻¹ による Z(qw)=D_∞(w)Z(w) を用いる。以後、∞ の「局所解析 q 差分加群」とその slope は、この作用を反転した表示を指す。元の作用での Newton slope を使う箇所では raw と明記する。形式係数体の分岐 z = uʳ には q_rʳ = q を選び、σ_(q_r)u = q_ru とする。|q|>1 なら |q_r|>1 であり、選択変更と有限群による降下は Layer 3–4 で扱う。
 
-特異集合には A の極と A⁻¹ の極をともに含める。行列式だけが正則であっても A が正則同型とは限らない。局所格子、形式型の marking、基本解の正規化、時間方向の同型は互いに異なるデータとして保持する。正則特異は q 差分加群の傾きがすべて零であることと同値になる。傾きの符号は A = z^μC が傾き μ となる規約を用いる。
+特異集合には A の極と A⁻¹ の極をともに含める。行列式だけが正則であっても A が正則同型とは限らない。局所格子、形式型の marking、基本解の正規化、時間方向の同型は互いに異なるデータとして保持する。正則特異は q 差分加群の傾きがすべて零であることと同値になる。整数 μ の系 A = z^μC が傾き μ となる規約を用い、有理 slope は3.1–3.4の Newton polygon と有限分岐で定義する。
+
+座標の変更と作用の反転は別々に追跡する。rank-one の系 A(z)=czᵐ、m∈ℤ、c≠0 では次の表を規約の検算とする。行列式の局所位数 v_∞(det A) は元の有理接続の位数であり、作用反転後の slope と同じ記号で表さない。
+
+| 表示 | 座標のシフト | 系の係数 | Newton slope |
+| --- | --- | --- | --- |
+| 0 の局所表示 | z↦qz | czᵐ | m |
+| ∞ の座標変更のみ | w↦q⁻¹w | cw⁻ᵐ | raw slope −m |
+| ∞ の局所分類に使う表示 | w↦qw | qᵐc⁻¹wᵐ | 正規化した slope m |
 
 時間の作用 T は σ_q と可換とする。輸送 Y(z,Tt) = B(z,t)Y(z,t) の整合式は A(z,Tt)B(z,t) = B(qz,t)A(z,t) である。「接続データの保存」は指定された同型とその合成法則を意味する。「同じ同型類」と「選ばれた同型」を区別し、framing がないところで輸送の一意性を仮定しない。
 
@@ -47,7 +57,7 @@
 
 とする。内部 Hom にも Φ(f) = Φ_N ∘ f ∘ Φ_M⁻¹ を与える。この式が R 線形写像を R 線形写像へ送り、その空間上では σ 半線形になることを確認する。
 
-f : R → S が τf = fσ を満たすとき、係数変換を S ⊗ᵣ M と s ⊗ m ↦ τ(s) ⊗ Φ_Mm で定める。有限生成射影性の保存に flatness は不要である。任意の完全列と核の保存には S の R 上の flatness を課す。一方、有限生成射影 quotient を持つ admissible 短完全列は underlying R 加群として分裂するため、任意の係数変換で完全性を保つ。ここでは splitting が horizontal である必要はない。体の拡大に対してはこの条件が満たされる。 また S 上の差分加群を R 上へ restriction of scalars できる。S が R 上有限生成射影なら有限生成射影性を保ち、体の拡大の次数が d、S 上の階数が n なら R 上の階数は dn となる。（[RSZ13], §2.1.1; 一般の tensor・係数変換の coherence は既存 API の特殊化。）
+別の差分環 (S,τ)、すなわち可換環 S と環自己同型 τ、および τ∘f = f∘σ を満たす環準同型 f : R → S を取る。係数変換を S ⊗ᵣ M と s ⊗ m ↦ τ(s) ⊗ Φ_Mm で定める。有限生成射影性の保存に flatness は不要である。任意の完全列と核の保存には S の R 上の flatness を課す。一方、有限生成射影 quotient を持つ admissible 短完全列は underlying R 加群として分裂するため、任意の係数変換で完全性を保つ。ここでは splitting が horizontal である必要はない。体の拡大に対してはこの条件が満たされる。また S 上の差分加群を R 上へ restriction of scalars できる。S が R 上有限生成射影なら有限生成射影性を保ち、体の拡大の次数が d、S 上の階数が n なら R 上の階数は dn となる。（[RSZ13], §2.1.1; 一般の tensor・係数変換の coherence は既存 API の特殊化。）
 
 - 評価・余評価、結合子、単位子、対称性が horizontal であり、rigidity と coherence の等式を満たす。
 - Horizontal な内部 Hom の元と差分加群の射を同一視する。
@@ -68,8 +78,18 @@ f : R → S が τf = fσ を満たすとき、係数変換を S ⊗ᵣ M と s 
 
 - 直和は block diagonal、テンソルは Kronecker 積、双対は A の逆転置、determinant は det A に対応する。
 - horizontal な射の base change と行列成分の係数変換が一致する。
-- q を q⁻¹ に変える関手は A(z) ↦ A(q⁻¹z)⁻¹ であり、二度適用すると元へ戻る。射とテンソル構造についても比較する。
-- 基底の存在は体上で用いる。一般環上の有限生成射影差分加群は局所的な行列表示を貼り合わせる。
+- 基底の存在は体上で用いる。一般環上の有限生成射影差分加群は、M と σ に沿う twist の局所フレーム間の線形同型として行列表示し、共通の開集合上で貼り合わせる。任意の局所化 R_f に σ が自己同型として降りるとは仮定しない。同じ局所差分環上の行列として扱う場合には、その局所化の σ 安定性を要求する。
+
+**作用の反転。** この構成は一般の (R,σ) に対して行う。(M,Φ)↦(M,Φ⁻¹)、f↦f は σ 差分加群と σ⁻¹ 差分加群の exact symmetric monoidal な圏同値を与え、二度の反転は元へ戻る。行列表示は
+
+    A^rev = σ⁻¹(A)⁻¹,
+    A^rev(z) = A(r⁻¹z)⁻¹    (σ=σ_r、任意の r∈ℂ×)
+
+であり、horizontal な射 H と gauge G は同じ行列のまま反転後の水平式を満たす。係数変換・tensor・dual・determinant との自然比較も与える。双対は σ を固定して A を逆転置へ送る操作なので、この反転関手とは区別する。
+
+0 < |r| < 1 の場合には q=r⁻¹ として解析的分類を適用する。z を固定したまま作用だけを反転すると、A=czᵐ は A^rev=c⁻¹rᵐz⁻ᵐ となる。同じ Newton polygon の規約で比較した slope の符号も反転することは3.1で証明する。数値のラベルを据え置いたまま同じ解析的 filtration とする操作は用いない。
+
+**Checks.** r=1/2、A(z)=z−1 では、反転後は q=2、A^rev(z)=1/(2z−1) となる。反転を再度適用すると z−1 に戻る。有限特異点は1から1/2へ移り、多項式という条件は保たれない。一方、元の系と反転後の系は同じ解と同じ水平射を持つ。
 
 *Needs:* 0.1–0.2; 有限次元基底、行列と線形写像、determinant の native API。
 
@@ -150,7 +170,7 @@ q 接続をこの同値へ運び、A_p が Λ_p を σ_X*Λ の p 成分へど�
 
     Σ_p [k(p):k] d_A(p) = 0
 
-を得る。ℙ¹_ℂ では ℂ× の q 軌道に沿う有限支持の divisor と、端点 0、∞ の寄与を分ける。|q|>1 では各非零 q 軌道そのものは無限集合である。
+を得る。ℙ¹_ℂ では ℂ× の q 軌道に沿う有限支持の divisor と、端点 0、∞ の寄与を分ける。q が無限位数なら各非零 q 軌道そのものは無限集合であり、|q|>1 の標準規約はこの条件を満たす。
 
 - Direct sum は Smith exponents の多重集合和、dual は符号を反転して順序を逆にする。
 - 正則フレーム間の gauge は各局所 Smith 型を保つ。有理 gauge は束の模型の変更を伴う。
@@ -204,7 +224,7 @@ q 接続をこの同値へ運び、A_p が Λ_p を σ_X*Λ の p 成分へど�
 
 とする。A と A⁻¹ がともに局所的に有限の pole bound を持つことを、この局所化によって保持する。D は許容する極の上界であり、実際の特異 divisor と等しいとは要求しない。D を固定した圏を Q_D(S) と書く。D≤D′ による係数局所化で Q_D(S)→Q_D′(S) を構成し、同じ正則水平射を持つ充満忠実な関手であることを証明する。異なる上界で表示された同じ q 接続は共通の上界で比較する。A・A⁻¹ の pole bound を別々に指定する部分問題も構成する。
 
-代数的基底ではスキーム上の有限局所自由層を用いる。解析的基底では、非被約な場合を含む複素解析空間上の正則構造層の有限局所自由加群を用いる。解析的分類を適用するときは q ∈ ℂ× を固定する。代数的な Cartier complement U = X ∖ D 上の同型と上の局所化による定義を比較する。解析的には U 上の正則同型だけでは有限 pole bound は従わず、上の局所化を定義の一部として保持する。非被約基底上で Frac(O_S) を使わず、両設定とも層とその局所化で定義する。（[K16], Definition 1.5 の相対化; 局所化は Cartier divisor の通常の構成。代数側の相対 divisor の base change と和は [SPD], Lemmas 31.19.1、31.19.3。）
+代数的基底ではスキーム上の有限局所自由層を用いる。解析的基底では、非被約な場合を含む複素解析空間上の正則構造層の有限局所自由加群を用いる。この対象と基底変換の定義には基底上の単元 q で十分であり、後の解析的分類を適用する箇所では |q|>1 を満たす定数 q∈ℂ を固定する。代数的な Cartier complement U = X ∖ D 上の同型と上の局所化による定義を比較する。解析的には U 上の正則同型だけでは有限 pole bound は従わず、上の局所化を定義の一部として保持する。非被約基底上で Frac(O_S) を使わず、両設定とも層とその局所化で定義する。（[K16], Definition 1.5 の相対化; 局所化は Cartier divisor の通常の構成。代数側の相対 divisor の base change と和は [SPD], Lemmas 31.19.1、31.19.3。）
 
 射は全ての正則な層の射 f:E→F で、局所化後に (σ_q*f)A_E=A_Ff を満たすものとする。この圏の core を相対 q 接続の moduli groupoid とする。moduli の同型射と、線形代数・拡大・複体に使う一般の水平射を同じ圏の上で比較する。Underlying な有限局所自由層の短完全列により exact structure を定め、局所的分裂から、任意の base change が admissible な短完全列を保つことを証明する。
 
@@ -213,6 +233,7 @@ f:S′→S に対し、X_S′→X_S の pullback は、D の pullback を D′ �
 固定した B 上の幾何データと divisor D_B を引き戻して得られる S↦Q_(D_B×_B S)(S) は圏に値を持つ pseudofunctor となり、その core は groupoid に値を持つ。代数側では fpqc descent、解析側では開被覆による descent を証明する。有限局所自由層、局所化後の q 同型、水平な可換図式を順に降下する。（SchemeAndStackFoundations §§1.1、1.18 の既存 descent・stack carrier の適用。）
 
 - 局所フレームでの全水平行列と gauge groupoid を、それぞれ上の圏と core へ比較する。
+- 0.3の作用の反転を束上でも比較する。τ=σ_q⁻¹ とすると A^rev=τ*(A⁻¹):E⇢τ*E であり、τ*σ_q*E≅E の既存比較を挿入する。許容 divisor は D^rev=τ*D で、その support は σ_q(Supp D) となる。基底変換、水平射、標識、有限 pole bound の拡大と反転が可換することを証明する。
 - Nilpotent を含む基底、成分ごとに異なる階数、相対 Cartier divisor と pole bound の pullback を扱う。
 - 端点・指定 section への正則な制限、determinant、framing、相対直和因子の flag を扱うための忘却関手を構成する。追加条件の組合せは1.7の2-fibre productへ渡す。
 - 相対 modification に用いる kernel・quotient は必要な局所自由性を持つ locus で構成し、点ごとの階数だけを flatness の代用にしない。
@@ -344,6 +365,7 @@ B ∈ GLₙ(O(ℂ×)) が正則かつ逆も正則なら、(z,v) ↦ (qz,B(z)v) �
 - 乗法的商と additive lattice quotient の比較を、射と pullback に対して自然にする。
 - G ∈ GLₙ(O(ℂ×))、B′ = (σG)BG⁻¹ から正則な束同型を作り、G の合成と一致させる。G が有理型の場合には有理型束同型を得る。
 - Tensor、dual、determinant、短完全列の降下を既存の bundle descent と比較する。
+- E_q と E_(q⁻¹) は同じ部分群 q^ℤ による商である。q^ℤ 作用の生成元を逆にすると係数は B^rev(z)=B(q⁻¹z)⁻¹ となり、降下した束は元の V_B と自然に同型になる。これは0.3の作用反転との比較であり、q だけを変えて B を据え置いた束を同一視しない。
 - ℳ(E_q) ≅ ℳ(ℂ×)^(σ_q) を証明し、0.4 の定数体の区別を回収する。
 
 *Needs:* 0.3–0.4; ComplexManifolds Milestones 4・7; ComplexTori Milestone 1; ComplexKahlerGeometry §§4.1、4.4。本節は商・束の一般理論を q 作用へ適用する。
@@ -427,24 +449,28 @@ q = 2 のとき Θ_q(3z)Θ_q(5z)/(Θ_q(z)Θ_q(15z)) は q 周期的な有理型�
 
 ## Layer 3: 局所 slope と形式型
 
-局所解析体 K=ℂ({z})、形式体 K̂=ℂ((z))、|q|>1 を用いる。系 σ_qY=A Y に対応する加群は Φ_A=A⁻¹σ_q であり、系 A=z^μ C の slope を μ とする。slope の異なる成分の分離は形式分類を与え、その間の解析的 extension が次の層の q-Stokes データになる。
+局所解析体 K=ℂ({z})、形式体 K̂=ℂ((z))、|q|>1 を用いる。系 σ_qY=A Y に対応する加群は Φ_A=A⁻¹σ_q であり、整数 μ の系 A=z^μ C の slope を μ とする。有理 slope は次の Newton polygon で定義する。slope の異なる成分の分離は形式分類を与え、その間の解析的 extension が次の層の q-Stokes データになる。
 
 ### 3.1 Newton polygon と次数
 
-有限次元差分加群 M の cyclic presentation を skew Laurent 環 D=K⟨σ_q,σ_q⁻¹⟩ 上で取り、annihilator P=Σ a_i σ_q^i の係数の付値から Newton polygon を定義する。両端の係数を非零とし、点 (i,v₀(a_i)) の上方半直線の凸包の下辺を取る。P を単元倍して生じる平行移動を同一視し、有限支持の multiplicity function r_M:ℚ→ℕ を不変量とする。cyclic vector と presentation に依存しないことを証明する。零加群では支持を空集合とする。（[RSZ13], §2.2.1, Theorem 2.2.1。）
+有限次元差分加群 M の cyclic presentation を skew Laurent 環 D=K[Φ,Φ⁻¹;σ_q] 上で取り、annihilator P=Σ a_i Φ^i の係数の付値から Newton polygon を定義する。Φ は加群に作用する環の生成元であり、係数体の自己同型 σ_q と区別する。両端の係数を非零とし、点 (i,v₀(a_i)) の上方半直線の凸包の下辺を取る。P を単元倍して生じる平行移動を同一視し、有限支持の multiplicity function r_M:ℚ→ℕ を不変量とする。cyclic vector と presentation に依存しないことを証明する。零加群では支持を空集合とする。（[RSZ13], §2.2.1, Theorem 2.2.1。）
 
 この定義は加群の annihilator に対するものなので、元のスカラー方程式の作用素の Newton polygon と区別する。スカラー方程式の解を並べた系から Φ_A=A⁻¹σ_q を作る操作には双対が入り、二つの slope は符号が逆になる。（[RSZ13], Example 2.2.2 とその前の説明。）
+
+**[VPR07] との規約比較。** 同文献のパラメータを p、0<|p|<1、半線形作用を Ψ=M(z)σ_p と書く。q=p⁻¹、Φ=Ψ⁻¹ とすると、本稿の系は A(z)=M(qz) となる。同文献 §1.3 の Newton polygon は (i,−v₀(a_i)) から作る上辺であり、本稿の下辺とは符号が逆である。作用の反転と polygon の規約変更をともに行うため、同文献の pure slope λ は本稿の slope λ に対応する。例えば Ψ(e)=czᵐe は A(z)=cqᵐzᵐ に移り、両文献での slope は m である。この比較を3.3、3.6、5.1の引用にも用い、作用だけの反転と混同しない。
 
 - 短完全列 0→M′→M→M″→0 に対し r_M=r_M′+r_M″。従って総 multiplicity は rank M に等しい。
 - テンソル積について `r_(M⊗N)(λ)=Σ_(μ+ν=λ) r_M(μ)r_N(ν)`、双対について `r_(M∨)(μ)=r_M(−μ)` を証明する。内部 Hom では二つの slope の差が現れる。
 - degree を `deg M=Σ_μ μ r_M(μ)` と定め、行列表示では `deg M=v₀(det A)∈ℤ` であることを証明する。各 slope の denominator は対応する multiplicity を割り切る。
 - z=wʳ、pʳ=q による scalar extension では multiplicity を変えず slope を r 倍する。単に q を qʳ に取り替える操作とは区別する。
+- 同じ付値・下辺の規約で0.3の作用反転を比較すると、r_(M^rev)(λ)=r_M(−λ)、deg(M^rev)=−deg(M) となる。これは σ と σ⁻¹ を入れ替えた二つの係数差分体間の比較である。解析的な filtration は |q|>1 へ移した後の slope で添字付け、反転前の数値をそのまま使わない。
 
 **Checks.**
 
-- rank one の系 A=c zᵐ、c≠0、m∈ℤ では Φ_A(e)=c⁻¹z⁻ᵐe。加群の作用素 σ_q−c⁻¹z⁻ᵐ の Newton polygon は (0,−m) と (1,0) を結ぶので、slope は m、degree は m である。元の解の方程式 σ_qf−c zᵐf=0 の作用素なら slope は −m となる。
+- rank one の系 A=c zᵐ、c≠0、m∈ℤ では Φ_A(e)=c⁻¹z⁻ᵐe。加群の作用素 Φ−c⁻¹z⁻ᵐ の Newton polygon は (0,−m) と (1,0) を結ぶので、slope は m、degree は m である。元の解の方程式 σ_qf−c zᵐf=0 の作用素なら slope は −m となる。
 - A=diag(z⁻¹,z²) では slope は −1,2、degree は 1。双対の slope は 1,−2、degree は −1。テンソル平方の slope multiplicity は −2 に 1、1 に 2、4 に 1 となる。
-- A が二行二列行列 `(0,z;1,0)` の場合、Φ_A²(e₁)=q⁻¹z⁻¹e₁ である。cyclic operator は σ_q²−q⁻¹z⁻¹、slope は 1/2 が二回、degree は 1。整数 slope のみを定義域とする実装ではこの加群を表せない。
+- A が二行二列行列 `(0,z;1,0)` の場合、Φ_A²(e₁)=q⁻¹z⁻¹e₁ である。cyclic operator は Φ²−q⁻¹z⁻¹、slope は 1/2 が二回、degree は 1。整数 slope のみを定義域とする実装ではこの加群を表せない。
+- r=1/2 の系 Y(rz)=zY(z) は q=2 の系 Y(2z)=(2z)⁻¹Y(z) に対応する。作用の反転後の本稿の slope は −1 であり、正規化後の楕円曲線束の degree も −1 となる。反転前の係数の指数1を、そのまま本稿の slope として用いない。
 
 *Needs:* Layer 0 の差分加群、cyclic vector、skew Laurent 作用素、行列との比較、双対とテンソル積；K と K̂ の付値・Laurent 展開；Mathlib の有限次元線形代数と有理数。
 
@@ -471,7 +497,7 @@ q = 2 のとき Θ_q(3z)Θ_q(5z)/(Θ_q(z)Θ_q(15z)) は q 周期的な有理型�
 
 整数 μ に対して、pure analytic 加群は系 A=z^μ C、C∈GLₙ(ℂ) に解析同型である。C の固有値を基本 annulus `1≤|c|<|q|` に取り、その上では C の相似類が加群の同型類を決める。Jordan block を含め、対角化可能性や固有値の相異性を仮定しない。（[RSZ13], §2.2.2.1。）
 
-有理 slope μ=a/r、r≥1、gcd(a,r)=1 については、pʳ=q と z=wʳ を選び、K_r=ℂ({w}) 上の rank-one 系 σ_p y=c wᵃy を K 上へ restriction of scalars した加群 E(r,a,c) を用いる。これは rank r の simple pure 加群である。p を固定すれば、その同型型は r,a と cʳ の ℂ*/q^ℤ における class により決まる。すべての nonzero indecomposable pure 加群は E(r,a,c)⊗U_m の形であり、U_m は eigenvalue 1 の一つの Jordan block に対応する rank m の正則特異加群である。rank は rm、degree は am、slope は a/r となる。pure 加群はこれらの有限直和へ、summand の並べ替えと同型を除いて一意に分解する。（[RSZ13], §2.2.2.2；[VPR07], Proposition 1.3, Corollaries 1.5–1.7。[VPR07] の semilinear operator の逆を取って本書の系の規約へ移す。）
+有理 slope μ=a/r、r≥1、gcd(a,r)=1 については、pʳ=q と z=wʳ を選び、K_r=ℂ({w}) 上の rank-one 系 σ_p y=c wᵃy を K 上へ restriction of scalars した加群 E(r,a,c) を用いる。これは rank r の simple pure 加群である。p を固定すれば、その同型型は r,a と cʳ の ℂ*/q^ℤ における class により決まる。すべての nonzero indecomposable pure 加群は E(r,a,c)⊗U_m の形であり、U_m は eigenvalue 1 の一つの Jordan block に対応する rank m の正則特異加群である。rank は rm、degree は am、slope は a/r となる。pure 加群はこれらの有限直和へ、summand の並べ替えと同型を除いて一意に分解する。（[RSZ13], §2.2.2.2；[VPR07], Proposition 1.3, Corollaries 1.5–1.7。後者の半線形作用と polygon は3.1の規約比較を通して用いる。）
 
 - monomial rank-one 加群との tensor による slope の平行移動と、正則特異部分の tensor・dual の比較を与える。
 - pure normal form の formal 同型が収束することを証明し、解析分類と形式分類の一致を射についても与える。
@@ -538,7 +564,7 @@ z=wʳ、pʳ=q を固定する。0.4 の係数体比較により、K_r/K は基�
 
 ### 3.6 pure 加群の Laurent 多項式モデル
 
-R=ℂ[z,z⁻¹] とする。pure analytic 加群 P の slope μ=a/r、r≥1、gcd(a,r)=1 に対し、Laurent model P_global⊂P を構成する。これは R 上で finite free、Φ と Φ⁻¹ に安定であり、K⊗_R P_global→P が同型となる。本書の Φ_A=A⁻¹σ_q では、P_global は zᵃΦʳ の powers により有限次元の ℂ-vector space を張る元全体として特徴付けられる。非零の定数倍をした operator も同じ有限性条件を与える。（[VPR07], Definition 1.8；同文献の |q|<1 の semilinear operator を反転して規約を移す。）
+R=ℂ[z,z⁻¹] とする。pure analytic 加群 P の slope μ=a/r、r≥1、gcd(a,r)=1 に対し、Laurent model P_global⊂P を構成する。これは R 上で finite free、Φ と Φ⁻¹ に安定であり、K⊗_R P_global→P が同型となる。本書の Φ_A=A⁻¹σ_q では、P_global は zᵃΦʳ の powers により有限次元の ℂ-vector space を張る元全体として特徴付けられる。非零の定数倍をした operator も同じ有限性条件を与える。（[VPR07], Definition 1.8；規約は3.1で比較する。原文の Ψ=Φ⁻¹ に対する T_old=z⁻ᵃΨʳ とは zᵃΦʳ=q^(−ar)T_old⁻¹ の関係にあり、可逆作用素の有限次元 orbit span という条件は反転と非零定数倍で不変である。）
 
 この特徴付けは、§3.3 の pure normal form の generalized eigenspaces から構成する。整数 slope の場合は normal form z^μC の Laurent basis であり、有理 slope の場合は ramified pure model を restriction of scalars し、その intrinsic な特徴付けにより選択独立性を示す。split object M₀=⊕P_i に対しては各 P_i,global の直和を取る。
 
@@ -778,7 +804,7 @@ Layer 3 の local slope、extension、pure Laurent model と Layer 2 の theta�
 
 ### 5.1 局所解析加群の Laurent 多項式模型と延長
 
-**定理。** R = ℂ[z,z⁻¹] 上で有限自由、可逆な半線形作用を持つ差分加群を考える。0 と ∞ の局所化がともに pure で、0 の傾きが μ、∞ の座標 w = z⁻¹ における元の作用 w ↦ q⁻¹w に対する Newton slope が −μ となるものを global pure model と呼ぶ。∞ で作用を逆転して |q| > 1 の規約に戻すと、数値的な傾きはさらに符号が反転して μ となる。元の作用では傾きの降順に現れる同じ underlying subobjects を、正規化後の傾きの昇順で添字付ける。この二つの操作を区別する。
+**定理。** R = ℂ[z,z⁻¹] 上で有限自由、可逆な半線形作用を持つ差分加群を考える。0 と ∞ の局所化がともに pure で、0 の傾きが μ、∞ の座標 w = z⁻¹ における元の作用 w ↦ q⁻¹w に対する raw Newton slope が −μ となるものを global pure model と呼ぶ。∞ で作用を逆転して |q| > 1 の規約に戻すと、数値的な傾きはさらに符号が反転して μ となる。元の作用では raw slope の降順に現れる同じ underlying subobjects を、正規化後の傾きの昇順で添字付ける。この二つの操作を区別する。
 
 Global pure な商を持ち、その傾きが 0 で狭義に増加する有限 filtration を備えた R 上の差分加群の圏から、ℂ({z}) 上の局所解析差分加群の圏への scalar extension は圏同値である。任意の有理傾きを含む。フィルトレーションを持たない任意の Laurent 多項式加群まで同じ圏とすることはない。（[VPR07], §4, Lemma 4.2, Theorem 4.3, Observations 4.5。原文の半線形作用・Newton polygon の符号は、3.1 の規約へ変換する。）
 
@@ -837,7 +863,7 @@ Forward functor は5.1の Laurent model を2.1により降下し、3.2の slope 
 
 ### 5.4 全有理 q 差分加群と接続データの圏同値
 
-**定理。** 接続データの対象を (L₀,φ,L_∞) とする。L₀ と L_∞ はそれぞれ 0 と ∞ の局所解析 q 差分加群であり、φ : V₀(L₀) ⇢ V_∞(L_∞) は有理型束同型である。二つの対象間の射は局所 horizontal な射の対 (f₀,f_∞) で
+**定理。** 接続データの対象を (L₀,φ,L_∞) とする。L₀ と L_∞ はそれぞれ 0 と ∞ の局所解析 q 差分加群であり、∞ では Conventions と1.8の作用反転を施した表示を用いる。φ : V₀(L₀) ⇢ V_∞(L_∞) は有理型束同型である。二つの対象間の射は局所 horizontal な射の対 (f₀,f_∞) で
 
     φ′ V₀(f₀) = V_∞(f_∞) φ
 
@@ -909,7 +935,9 @@ Forward functor は5.1の Laurent model を2.1により降下し、3.2の slope 
 
 ### Examples
 
-A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では元の作用に対する slope は −m であり、作用を逆転すると係数 qᵐwᵐ、slope m となる。行列 [[0,z],[1,0]] とその逆も Laurent 行列であり、傾き 1/2 の階数二の局所模型を含む。
+A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では元の作用に対する raw slope は −m であり、作用を逆転すると係数 qᵐwᵐ、slope m となる。行列 [[0,z],[1,0]] とその逆も Laurent 行列であり、傾き 1/2 の階数二の局所模型を含む。
+
+一般の有理系では、0 と正規化後の ∞ の slope が等しいとは限らない。A(z)=z−a、a≠0 では0の slope は0、∞の raw slope は−1である。正規化後は D_∞(w)=qw/(1−aqw) となり、∞の slope は1となる。このため5.4の接続同型 φ に両端の slope filtration を保つ条件を課さない。
 
 階数一の正則特異三つ組では M(qz)c₀ = c_∞M(z) となる。c₀ = c_∞ のとき M は任意の非零な楕円有理型関数でよく、5.2–5.4 はこの接続データから有理係数系を復元する。5.6 の例は、局所加群・基本解の正規化・束の格子をそれぞれ保持する理由を与える。
 
@@ -951,6 +979,7 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 
 - 正・負の経路、二方向の square、単位経路、三方向の再順序付けの一致を証明する。
 - 時間依存の gauge G(z,t) に対し B′_i = G(z,T_it)B_iG(z,t)⁻¹ とし、二種類の互換式の不変性を示す。
+- 0.3の作用反転は、A^rev(z,t)=A(q⁻¹z,t)⁻¹、B_i^rev(z,t)=B_i(z,t) として輸送へ延長する。空間シフトは q⁻¹ へ変わるが T_i と格子の正方向は変えず、同じ B_i が反転後の Lax 式と square identity を満たす。相対束では1.6の反転と pullback coherence を用い、q を保つ時間作用および基底変換との整合性を証明する。
 - 部分格子、一方向、周期的な時間の商への制限を扱う。周期の輸送を恒等とするには、その周期に対する追加の関係が必要である。
 - 6.1 の抽象輸送と、この行列表現の相互変換を構成する。
 
@@ -994,6 +1023,8 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 
 **定理。** S を複素多様体とし、A(z,s) が { |z| < ρ } × S 上 jointly holomorphic、C(s) = A(0,s) ∈ GLₙ(ℂ) とする。すべての s と m ≥ 1 について線形作用素 X ↦ qᵐXC(s) − C(s)X が可逆であると仮定する。このとき S の各点の近傍で、z の共通の正の半径を取り、H(0,s) = I、σ_qH · C = AH を満たす一意な jointly holomorphic gauge H(z,s) を構成する。
 
+ここで q は |q|>1 の標準規約に従う。0<|r|<1 の入力からは q=r⁻¹、A(z,s)↦A(r⁻¹z,s)⁻¹、C(s)↦C(s)⁻¹ として適用する。必要に応じて近傍を縮めると同じ H が正規化後の式を満たし、非共鳴作用素の可逆性も対応する。係数 A と定数項 C を据え置いたまま q だけを反転しない。
+
 証明は 2.4 の recurrence をパラメータ付きで行う。S のコンパクト部分上では C と C⁻¹ が有界であり、大きな m について逆作用素の評価は O(|q|⁻ᵐ) となる。残る有限個の m は非共鳴仮定とコンパクト性で一様に評価する。A の Cauchy estimate と majorant series により H の局所一様収束を得る。これは [S00], §§1.1.1、1.1.3 の定数化の証明を、明示した一様評価の下で族へ拡張する補題である。
 
 - 重複固有値と Jordan 部分を許す。固有ベクトルをパラメータに正則に選ぶことを前提としない。
@@ -1036,6 +1067,7 @@ A = zᵐ は Laurent 模型としてそれ自身を選べる。w = z⁻¹ では
 逆方向は、上の整合式を満たす Ω_i の積分が、指定した端点で jointly meromorphic な基本行列 B と一様な有限 pole bound を持つと仮定して述べる。その B は、基点での恒等式と積分の一意性により上の q horizontal 式を満たし、6.6 によって有理な輸送となる。具体的には B(qz,s)⁻¹A(z,s)B(z,s) の各パラメータ微分が零であることを計算し、連結な近傍で基点の値と一致させる。Flatness だけから端点の有理型性や有理な B を結論しない。
 
 - 離散時間の 6.2 と連続パラメータの整合式を、同じ q 接続を保つ二つの輸送として比較する。
+- q を固定した0.3の作用反転では B と Ω_i を変えず、A を A(q⁻¹z,s)⁻¹ へ移す。反転後の空間シフトに対しても二つの微分式が成り立つことを示す。
 - 基本行列の右側のパラメータ独立な変更、基点変更、局所定値化の重なりの cocycle を扱う。
 - 連結な U 上で「同じ同型類」という点ごとの条件と、ここで指定した解析的定値化を区別する。
 - 本節は q 接続の族の帰結であり、微分方程式側の局所 Levelt–Turrittin 分類や differential Riemann–Hilbert 対応を前提にしない。
@@ -1058,7 +1090,7 @@ A = I₂、時間作用 T₁ = T₂ = id とし
     A(z,s) = 4(z² − s)/(4z² − s),
     Ω(z,s) = 1/(z² − s)
 
-を取る。A(z,0) = B(z,0) = 1、AB = B(2z)、∂_sA = (Ω(2z,s) − Ω(z,s))A となる。B の pole bound は z² − s = 0 という次数二の有限平坦 divisor、B⁻¹ の bound は 2[0] である。s = 0 で根が衝突しても、6.6 の全空間上の仮定を満たす。
+を取る。A(z,0) = B(z,0) = 1、AB = B(2z)、∂_sA = (Ω(2z,s) − Ω(z,s))A となる。B の pole bound は z² − s = 0 という次数二の有限平坦 divisor、B⁻¹ の bound は 2[0] である。s = 0 で根が衝突しても、6.6 の全空間上の仮定を満たす。一方、(z,s)=(0,0) の近傍では、どの固定した有限冪 zᴺ を掛けても 1/(z²−s) は正則にならない。この例は1.8の端点回避条件や6.5の共同正則な局所 gauge の仮定を満たす例としては用いない。
 
 右 Maurer–Cartan 式の非可換な例として、標準行列単位 E₁₂、E₂₁ と B = (I + sE₁₂)(I + tE₂₁) を取る。Ω_s = E₁₂、Ω_t = [[s,−s²],[1,−s]] となり、∂_sΩ_t − ∂_tΩ_s = [[1,−2s],[0,−1]] = [Ω_s,Ω_t] を得る。
 
@@ -1068,7 +1100,7 @@ A = I₂、時間作用 T₁ = T₂ = id とし
 
 ## Layer 7: 多項式 q 接続の離散 Schlesinger 変換
 
-任意の階数 n ≥ 1 と次数 d ≥ 1 について、最高次係数 L ∈ GLₙ(ℂ) を固定した多項式 q 接続を考える。有限特異点を d 個の群に分け、群ごとの q シフトを可換な双有理変換として構成する。この層の代数的結果には q ∈ ℂ× の無限位数性で十分であり、解析的接続データとの比較では |q| ≠ 1 を用いる。
+任意の階数 n ≥ 1 と次数 d ≥ 1 について、最高次係数 L ∈ GLₙ(ℂ) を固定した多項式 q 接続を考える。有限特異点を d 個の群に分け、群ごとの q シフトを可換な双有理変換として構成する。この層の代数的結果は q ∈ ℂ× が無限位数であるときに、元の q に対して直接述べる。解析的接続データとの比較は |q|>1 で Layer 5–6 を適用する。0<|q|<1 では0.3・6.2の反転によって得た有理系と同じ時間輸送に比較を適用し、反転後も多項式系であるとは仮定しない。|q|=1 の無限位数の場合には、この層の代数的定理だけを適用する。
 
 根のラベル aᵢ,α ∈ ℂ×（1 ≤ i ≤ d, 1 ≤ α ≤ n）を固定し、異なるラベルの比が q^ℤ に入らないとする。この特異型の条件は本層の具体的変形定理に課す。一般の局所分類・大域分類には遡及させず、L の対角化可能性も仮定しない。[B04] の一般再分解定理と q の場合の構成（Remark 4.14）から、以下の目標を得る。
 
@@ -1193,7 +1225,7 @@ Rᵢ(z,k) = I − z⁻¹Bᵢ(k) に対して、最初の二式は
 
     Rₖ₊ₗ(z,t) = Rₖ(z,Tₗt) Rₗ(z,t)
 
-を満たす。Layer 5 の大域比較関手を適用すると、これらは大域接続データの coherent な同型になる。方向の選択を格子の元として扱い、任意の部分群や一方向への制限を構成する。（[B04], Theorem 4.9 と Remark 4.14; 接続データとの比較は Layer 5–6 からの帰結。）
+を満たす。|q|>1 のとき Layer 5 の大域比較関手を適用すると、これらは大域接続データの coherent な同型になる。0<|q|<1 のときは、本層冒頭の反転で正規化した有理系へ同じ Rₖ を適用してこの結論を得る。時間作用 Tₖ と根の移動 q^(−kᵢ)aᵢ は元の多項式表示での意味を保つ。方向の選択を格子の元として扱い、任意の部分群や一方向への制限を構成する。（[B04], Theorem 4.9 と Remark 4.14; 接続データとの比較は Layer 5–6 からの帰結。）
 
 この作用はシフトした特異型の間の変換である。端点 0 の固有値には q^(−Σᵢkᵢ) が掛かり、L は固定される。接続データの保存は有理 horizontal gauge と大域比較から証明するので、解析的基本解の対角化や非共鳴を追加する必要はない。
 
@@ -1247,11 +1279,11 @@ Layer 0 の差分加群・行列表示・horizontal gauge、Layer 1 の有理 q 
 
 局所加群の分類だけを使う消費側は Layers 0、2–4 で閉じる。局所型を楕円曲線束として使う消費側は3.8と5.3の filtration を含む同値を、大域接続データの保存を使う消費側は5.4の対象とすべての射を用いる。束の次数や特異点の配置を追跡する場合は、generic module の分類に Layer 1 の局所格子を併せる。
 
-試験基底上の問題では1.6の相対圏、1.8の端点局所化・形式完備化、1.7の2-fibre productによる局所条件と装飾を共通の入口とする。Modification の correspondence は1.7と5.6で接続データの同型へ渡し、6.1–6.2で時間の合成則を保持する。固定 graded-type の R⊗_ℂK 係数族には4.7の quotient stack を使えるが、共同解析的な族について同じ分類や相対 Riemann–Hilbert 同値を必要とする消費側は、その比較・解析的存在・基底変換を別の定理として証明する。
+試験基底上の問題では1.6の相対圏、適用条件を満たす範囲での1.8の端点局所化・形式完備化、1.7の2-fibre productによる局所条件と装飾を共通の入口とする。Modification の correspondence と6.1–6.2の時間合成則はこの相対圏で扱う。5.6による接続データの同型への比較は複素数上の対象についての定理であり、任意の試験基底へ自動的に拡張しない。基底 S 上でもこの比較を使う場合は、6.1の D_S と coherent な base-change 比較を別途与える。固定 graded-type の R⊗_ℂK 係数族には4.7の quotient stack を使えるが、共同解析的な族について同じ分類や相対 Riemann–Hilbert 同値を必要とする消費側は、その比較・解析的存在・基底変換を別の定理として証明する。
 
 ## Scope and ownership
 
-本ロードマップは、q 差分加群とその操作、束上の有理 q 接続、q 差分の Newton slope と形式分類、q-Stokes 層と局所解析分類、局所解析データを保持した大域接続データ、接続保存変形、q 差分 Schlesinger 変換を所有する。数学的な一般性は、任意有限階数、共鳴、非半単純部分、有理数の傾きを含む。具体的な多項式変換では、その存在に必要なスペクトル分離と一般初期値の条件を Layer 7 に限って課す。
+本ロードマップは、q 差分加群とその操作、束上の有理 q 接続、q 差分の Newton slope と形式分類、q-Stokes 層と局所解析分類、局所解析データを保持した大域接続データ、接続保存変形、q 差分 Schlesinger 変換を所有する。数学的な一般性は、任意有限階数、共鳴、非半単純部分、有理数の傾きを含む。解析的な標準規約は |q|>1 とし、0<|q|<1 の入力は係数を含む作用反転で扱う。差分代数と Layer 7 の代数的結果の、より弱い q の仮定は各節の明記に従う。具体的な多項式変換では、その存在に必要なスペクトル分離と一般初期値の条件を Layer 7 に限って課す。
 
 既知の結果をその文献の仮定の下で述べ、複数の結果を組み合わせた契約では構成と依存関係を記載する。特に3.8と5.3は既知の pure/semistable および filtered-bundle 分類を射・選択変更まで展開する契約、5.4 は局所 Laurent 模型と有理型 Birkhoff 分解を組み合わせる比較、6.1 はその圏同値による coherent な輸送、6.5–6.7 は指定した解析的仮定の下での族の帰結である。4.7 の固定 graded-type・係数環 R⊗_ℂK に対する quotient stack は、marked functor と descent の整理として構成する。任意の解析基底上の q Riemann–Hilbert stack equivalence、任意の特異型の平滑モジュライ空間、その symplectic 構造、coarse moduli の存在は含めない。
 
@@ -1412,7 +1444,7 @@ PainleveEquations の Levelt–Turrittin 分解、微分 Riemann–Hilbert 対�
 
 - **[S03]** Jacques Sauloy, [Galois theory of fuchsian q-difference equations](https://www.numdam.org/item/10.1016/j.ansens.2002.10.001/), *Annales scientifiques de l’École Normale Supérieure*, 4e série, **36** (2003), no. 6, 925–968. 刊行版。§1.1 の差分加群・行列系・cyclic vector、§1.2 の基本解、Lemma 2.1.3.2 の局所射、Proposition 3.1.1.3 の大域正則特異圏同値、§3.2.1 の tensor の比較を用いる。
 
-- **[VPR07]** Marius van der Put and Marc Reversat, [Galois theory of q-difference equations](https://www.numdam.org/item/AFST_2007_6_16_3_665_0/), *Annales de la Faculté des Sciences de Toulouse*, 6e série, **16** (2007), no. 3, 665–718. 刊行版。Proposition 1.3、Corollaries 1.5–1.7 の pure 分類、Definition 1.8 の pure Laurent 模型、Proposition 1.9 の finite-level descent、§2 の楕円曲線上の束、Lemma 4.2・Theorem 4.3・Observations 4.5 の一般 Laurent 模型を用いる。原文は 0 < |q| < 1 を採り、半線形作用と Newton polygon の符号を本ロードマップの規約へ移す。
+- **[VPR07]** Marius van der Put and Marc Reversat, [Galois theory of q-difference equations](https://www.numdam.org/item/AFST_2007_6_16_3_665_0/), *Annales de la Faculté des Sciences de Toulouse*, 6e série, **16** (2007), no. 3, 665–718. 刊行版。§1.3 の Newton polygon の規約、Proposition 1.3、Corollaries 1.5–1.7 の pure 分類、Definition 1.8 の pure Laurent 模型、Proposition 1.9 の finite-level descent、§2 の楕円曲線上の束、Lemma 4.2・Theorem 4.3・Observations 4.5 の一般 Laurent 模型を用いる。原文は 0 < |q| < 1 を採る。本文3.1の対照により、半線形作用の反転と Newton polygon の符号変更を両方行い、同文献の slope の数値を本稿の slope へ対応させる。
 
 - **[S09]** Jacques Sauloy, [Équations aux q-différences et fibrés vectoriels holomorphes sur la courbe elliptique ℂ×/q^ℤ](https://www.numdam.org/item/AST_2009__323__397_0/), *Astérisque* **323** (2009), 397–429. 刊行版。§2.3.2、Theorem 2.4、Lemma 2.5 の整数傾きの filtered bundle 比較、§2.3.3 の q slope filtration と bundle filtration の区別を用いる。
 
